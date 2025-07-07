@@ -107,12 +107,14 @@
                 "URL-TEST",
                 "🇪🇸 ES | 🟢 | trojan | @argo_vpn1 | 7",
                 "🇰🇷 KR | 🟢 | trojan | @configfa | 15",
-                "🇰🇷 KR | 🟢 | trojan | @configshubplus | 19",
+                "🇸🇪 SE | 🔴 | trojan | @configshubplus | 18",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
+                "🇷🇺 RU | 🔴 | trojan | @entrynet | 19",
                 "🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 12",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 9",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
@@ -131,6 +133,7 @@
                 "🇨🇭 CH | 🟢 | trojan | @v2rayo7ybv67i76 | 12",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 15",
+                "🇮🇷 IR | 🟢 | trojan | @v2rayweb | 15",
                 "🇺🇸 US | 🟢 | trojan | @vpntrt | 2",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4",
                 "🇹🇼 TW | 🟢 | trojan | @wxgmrjdcc | 17",
@@ -143,12 +146,14 @@
             "outbounds": [
                 "🇪🇸 ES | 🟢 | trojan | @argo_vpn1 | 7",
                 "🇰🇷 KR | 🟢 | trojan | @configfa | 15",
-                "🇰🇷 KR | 🟢 | trojan | @configshubplus | 19",
+                "🇸🇪 SE | 🔴 | trojan | @configshubplus | 18",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
+                "🇷🇺 RU | 🔴 | trojan | @entrynet | 19",
                 "🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 12",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 9",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
@@ -167,6 +172,7 @@
                 "🇨🇭 CH | 🟢 | trojan | @v2rayo7ybv67i76 | 12",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 15",
+                "🇮🇷 IR | 🟢 | trojan | @v2rayweb | 15",
                 "🇺🇸 US | 🟢 | trojan | @vpntrt | 2",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4",
                 "🇹🇼 TW | 🟢 | trojan | @wxgmrjdcc | 17",
@@ -232,18 +238,16 @@
             }
         },
         {
-            "tag": "🇰🇷 KR | 🟢 | trojan | @configshubplus | 19",
+            "tag": "🇸🇪 SE | 🔴 | trojan | @configshubplus | 18",
             "type": "trojan",
-            "server": "218.151.99.167",
-            "server_port": 50000,
-            "password": "Aimer",
-            "tls": {
-                "enabled": true,
-                "server_name": "ngepy.ambercc.filegear-sg.me",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
+            "server": "109.120.132.80",
+            "server_port": 2025,
+            "password": "vpn",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "109.120.132.80"
                 }
             }
         },
@@ -303,6 +307,13 @@
             }
         },
         {
+            "tag": "🇷🇺 RU | 🔴 | trojan | @entrynet | 19",
+            "type": "trojan",
+            "server": "178.250.159.120",
+            "server_port": 2053,
+            "password": "Aimer"
+        },
+        {
             "tag": "🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95",
             "type": "trojan",
             "server": "13.213.142.42",
@@ -340,6 +351,13 @@
                     "Host": "sdf.986986.shop"
                 }
             }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
+            "type": "trojan",
+            "server": "3.230.207.59",
+            "server_port": 8443,
+            "password": "Aimer"
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 9",
@@ -667,6 +685,13 @@
                     "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "🇮🇷 IR | 🟢 | trojan | @v2rayweb | 15",
+            "type": "trojan",
+            "server": "93.113.238.32",
+            "server_port": 226,
+            "password": "S7UE4ko6Al"
         },
         {
             "tag": "🇺🇸 US | 🟢 | trojan | @vpntrt | 2",
