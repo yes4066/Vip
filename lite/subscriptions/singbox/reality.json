@@ -107,14 +107,13 @@
                 "URL-TEST",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 2",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 92",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇰🇿 KZ | 🟢 | vless | @configshubplus | 19",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 0",
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
-                "🇩🇪 DE | 🟢 | vless | @entrynet | 19",
                 "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 6",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇩🇪 DE | 🟢 | vless | @fastshovpn | 0",
@@ -130,6 +129,7 @@
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 4",
                 "🇩🇪 DE | 🟢 | vless | @imhdiyvp | 8",
+                "🇩🇪 DE | 🟢 | vless | @ip_cf_config | 15",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 10",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇳🇱 NL | 🟢 | vless | @ipv2ray | 3",
@@ -221,14 +221,13 @@
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 2",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 92",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇰🇿 KZ | 🟢 | vless | @configshubplus | 19",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 0",
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
-                "🇩🇪 DE | 🟢 | vless | @entrynet | 19",
                 "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 6",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇩🇪 DE | 🟢 | vless | @fastshovpn | 0",
@@ -244,6 +243,7 @@
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 4",
                 "🇩🇪 DE | 🟢 | vless | @imhdiyvp | 8",
+                "🇩🇪 DE | 🟢 | vless | @ip_cf_config | 15",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 10",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇳🇱 NL | 🟢 | vless | @ipv2ray | 3",
@@ -399,6 +399,29 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 92",
+            "type": "vless",
+            "server": "3.133.150.220",
+            "server_port": 4433,
+            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
+                    "short_id": "f785b38130e64177"
+                }
+            }
+        },
+        {
             "tag": "🇫🇷 FR | 🟢 | vless | @configasli | 6",
             "type": "vless",
             "server": "172.232.33.18",
@@ -418,29 +441,6 @@
                     "enabled": true,
                     "public_key": "PTlW40u-tHGDlObhSKFN4tntrfHLgNPlHqg1oYqyY1o",
                     "short_id": "b5ecd44d"
-                }
-            }
-        },
-        {
-            "tag": "🇰🇿 KZ | 🟢 | vless | @configshubplus | 19",
-            "type": "vless",
-            "server": "176.120.72.63",
-            "server_port": 38339,
-            "uuid": "481c5606-b586-44d7-bc2e-d8ef30d67f62",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "dl.google.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "o0MFuznHh_Wztg0FTAMhFXm3hjAqOJAJIIVNn-_A9WA",
-                    "short_id": "e16883e511"
                 }
             }
         },
@@ -565,29 +565,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "/tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @entrynet | 19",
-            "type": "vless",
-            "server": "uk.panelmarzban.com",
-            "server_port": 3033,
-            "uuid": "31fac0ed-95e9-4e0d-843a-9939d607177f",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
-                    "short_id": ""
-                }
             }
         },
         {
@@ -952,6 +929,29 @@
                     "enabled": true,
                     "public_key": "xathCJgbYrFPzIZmJ-iqUz2UdrbGiyyt098V4Wt4S0E",
                     "short_id": "72741b02"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @ip_cf_config | 15",
+            "type": "vless",
+            "server": "91.99.166.65",
+            "server_port": 80,
+            "uuid": "0e2c33de-0882-4c7a-9343-b05d204216ba",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "aider.chat",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "nuNgT0HxAJ7YZPfM5uYM_-8aDKvCmr9jQpxBUMRjJRE",
+                    "short_id": "39f0afc3"
                 }
             }
         },
@@ -2076,7 +2076,7 @@
         {
             "tag": "🇺🇸 US | 🟢 | vless | @v2raych | 18",
             "type": "vless",
-            "server": "35.85.63.40",
+            "server": "52.41.74.62",
             "server_port": 4433,
             "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
             "flow": "xtls-rprx-vision",
