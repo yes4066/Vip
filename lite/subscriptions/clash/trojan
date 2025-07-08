@@ -61,15 +61,43 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50 
-    use:
-      - All-Proxies
+    proxies:
+      - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
+      - '🇩🇪 DE | 🟢 | trojan | @directvpn | 13'
+      - '🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95'
+      - '❔ XX | 🟢 | trojan | @maradona_vpn | 8'
+      - '🇸🇬 SG | 🟢 | trojan | @mpmehi | 0'
+      - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14'
+      - '🇩🇪 DE | 🟢 | trojan | @privatevpns | 13'
+      - '🇫🇷 FR | 🟢 | trojan | @proxyfn | 18'
+      - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
+      - '🇩🇪 DE | 🟢 | trojan | @v2ray_extractor | 19'
+      - '🇺🇸 US | 🟢 | trojan | @v2ray_team | 19'
+      - '🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45'
+      - '🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 15'
+      - '🇺🇸 US | 🟢 | trojan | @webhube | 4'
+      - '🇫🇷 FR | 🔴 | trojan | @yxjnode | 23'
 
   - name: 📉 Fallback
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
-    use:
-      - All-Proxies
+    proxies:
+      - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
+      - '🇩🇪 DE | 🟢 | trojan | @directvpn | 13'
+      - '🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95'
+      - '❔ XX | 🟢 | trojan | @maradona_vpn | 8'
+      - '🇸🇬 SG | 🟢 | trojan | @mpmehi | 0'
+      - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14'
+      - '🇩🇪 DE | 🟢 | trojan | @privatevpns | 13'
+      - '🇫🇷 FR | 🟢 | trojan | @proxyfn | 18'
+      - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
+      - '🇩🇪 DE | 🟢 | trojan | @v2ray_extractor | 19'
+      - '🇺🇸 US | 🟢 | trojan | @v2ray_team | 19'
+      - '🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45'
+      - '🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 15'
+      - '🇺🇸 US | 🟢 | trojan | @webhube | 4'
+      - '🇫🇷 FR | 🔴 | trojan | @yxjnode | 23'
       
   - name: All-Proxies
     type: select

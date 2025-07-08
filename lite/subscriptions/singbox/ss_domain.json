@@ -122,7 +122,8 @@
                 "❔ XX | 🟢 | ss | @v2raytel | 2",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 13",
-                "🇨🇳 CN | 🟢 | ss | @wxdy666 | 0"
+                "🇨🇳 CN | 🟢 | ss | @wxdy666 | 0",
+                "🇳🇱 NL | 🟢 | ss | @zerobaipiao | 34"
             ]
         },
         {
@@ -146,7 +147,8 @@
                 "❔ XX | 🟢 | ss | @v2raytel | 2",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 13",
-                "🇨🇳 CN | 🟢 | ss | @wxdy666 | 0"
+                "🇨🇳 CN | 🟢 | ss | @wxdy666 | 0",
+                "🇳🇱 NL | 🟢 | ss | @zerobaipiao | 34"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -311,6 +313,14 @@
             "server_port": 62018,
             "method": "aes-256-gcm",
             "password": "4c26faa1-da91-4e8e-b81e-407aa948a9f5"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | ss | @zerobaipiao | 34",
+            "type": "shadowsocks",
+            "server": "beesyar.org",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "4a2rfixophdjffa8KVA4Aa"
         }
     ],
     "route": {
