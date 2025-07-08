@@ -7,6 +7,7 @@ declare(strict_types=1);
  * - Reads channel data and cached HTML from Stage 1.
  * - Extracts proxy configs from the cached HTML files.
  * - Processes, enriches, and saves the final subscription files.
+ * - Removes channels from channelsAssets.json if they no longer provide valid configs.
  */
 
 // --- Setup ---
@@ -74,12 +75,17 @@ foreach ($sourcesArray as $source => $sourceData) {
 }
 echo PHP_EOL . "Extraction complete. Found configs from " . count($configsList) . " sources." . PHP_EOL;
 
-echo "4. Processing and enriching all configs..." . PHP_EOL;
+// --- 3. Process and Enrich Configs ---
+
+echo "3. Processing and enriching all configs..." . PHP_EOL;
 
 // This cache will store IP info to avoid repeated API calls for the same IP.
 $ipInfoCache = [];
 $finalOutput = [];
 $locationBased = [];
+
+// *** NEW: Array to track sources that provide at least one valid config.
+$sourcesWithValidConfigs = [];
 
 // Mapping of config types to their respective IP/Host and Name/Hash fields.
 $configFields = [
@@ -162,12 +168,20 @@ foreach ($configsList as $source => $configs) {
 
         $finalOutput[] = $cleanConfig;
         $locationBased[$countryCode][] = $cleanConfig;
+
+        // *** NEW: If we reached here, the config is valid. Mark the source.
+        // We use the source name as a key to avoid duplicates.
+        if (!isset($sourcesWithValidConfigs[$source])) {
+            $sourcesWithValidConfigs[$source] = true;
+        }
     }
 }
 
 echo PHP_EOL . "Processing complete." . PHP_EOL;
 
-echo "5. Writing subscription files..." . PHP_EOL;
+// --- 4. Write Subscription Files ---
+
+echo "4. Writing subscription files..." . PHP_EOL;
 
 // Clean up old directories and create new ones
 if (is_dir(LOCATION_DIR)) {
@@ -188,5 +202,36 @@ foreach ($locationBased as $location => $configs) {
 
 // Write the final combined config file
 file_put_contents(FINAL_CONFIG_FILE, implode(PHP_EOL, $finalOutput));
+
+// --- 5. Clean up channelsAssets.json ---
+
+echo "5. Cleaning up channelsAssets.json..." . PHP_EOL;
+
+$originalSourceCount = count($sourcesArray);
+
+// Filter the original sources array, keeping only the keys (source names)
+// that exist in our list of sources with valid configs.
+$updatedSourcesArray = array_filter(
+    $sourcesArray,
+    function ($key) use ($sourcesWithValidConfigs) {
+        return isset($sourcesWithValidConfigs[$key]);
+    },
+    ARRAY_FILTER_USE_KEY
+);
+
+$finalSourceCount = count($updatedSourcesArray);
+$removedCount = $originalSourceCount - $finalSourceCount;
+
+if ($removedCount > 0) {
+    echo "Removed $removedCount source(s) with no valid configs." . PHP_EOL;
+    // Overwrite the assets file with the cleaned-up array.
+    // Using pretty print to keep the file human-readable.
+    file_put_contents(
+        ASSETS_FILE,
+        json_encode($updatedSourcesArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
+    );
+} else {
+    echo "No sources needed to be removed. All provided valid configs." . PHP_EOL;
+}
 
 echo "Done! All files have been generated successfully." . PHP_EOL;
