@@ -21,14 +21,14 @@ define('SCAN_DIRECTORIES', [
 // --- Data Mapping for Visuals ---
 // SVG icons with proper viewBox for consistent sizing.
 const CLIENT_ICONS = [
-    'clash' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12.75 3.03v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-1.5 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-1.5 3a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM7.875 6a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm4.125-2.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM15 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 20.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9.75 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM8.25 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Z M4.5 9a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 4.5 9Z" clip-rule="evenodd" /></svg>',
-    'meta' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12.75 3.03v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-1.5 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-1.5 3a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM7.875 6a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm4.125-2.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM15 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 20.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9.75 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM8.25 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Z M4.5 9a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 4.5 9Z" clip-rule="evenodd" /></svg>',
-    'singbox' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.882 0-1.6.718-1.6 1.6 0 .882.718 1.6 1.6 1.6.882 0 1.6-.718 1.6-1.6 0-.882-.718-1.6-1.6-1.6ZM8.25 12c0-.882.718-1.6 1.6-1.6.882 0 1.6.718 1.6 1.6s-.718 1.6-1.6 1.6c-.882 0-1.6-.718-1.6-1.6Zm3.828 4.083c-1.61 0-2.917-1.306-2.917-2.917 0-1.61 1.307-2.917 2.917-2.917 1.61 0 2.917 1.307 2.917 2.917 0 1.61-1.307 2.917-2.917 2.917Z" clip-rule="evenodd" /></svg>',
-    'surfboard' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M14.625 2.25a.75.75 0 0 1 .75.75v18a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75Z" /><path d="M5.969 4.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 1 1-1.06-1.06l4.72-4.72-4.72-4.72a.75.75 0 0 1 0-1.06Z" /></svg>',
-    'warp' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 0 0-1.071 1.052A9.75 9.75 0 0 1 18.635 12a.75.75 0 0 1-1.5 0 8.25 8.25 0 0 0-7.22-8.224.75.75 0 0 0-1.052-1.071Zm-3.182 2.859A.75.75 0 0 1 11.25 6a8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-1.5 0A6.75 6.75 0 0 0 11.25 7.5a.75.75 0 0 1-.47-1.355Z" clip-rule="evenodd" /></svg>',
-    'xray' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm1.823 12.34a.75.75 0 0 1-1.196-.935l.23-.46a.75.75 0 0 1 .936-1.196l-.23.46a.75.75 0 0 1 .266 1.631Zm-3.23.22a.75.75 0 0 1-1.197-.936l.231-.46a.75.75 0 0 1 .936-1.196l-.23.46a.75.75 0 0 1 .26 1.632Zm3.242-3.834a.75.75 0 0 1-1.061-1.06l.472-.472a.75.75 0 1 1 1.06 1.06l-.47.47Zm-3.415-3.415a.75.75 0 0 1-1.06-1.061l.47-.472a.75.75 0 1 1 1.06 1.06l-.47.472Z" /></svg>',
-    'location' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a23.525 23.525 0 0 0 4.28-2.28.816.816 0 0 0-.001-1.442l-3.636-2.09A.75.75 0 0 0 12 16.5v-3.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 0 .742-.723l.025-1.08a.75.75 0 0 0-.742-.777H12a.75.75 0 0 0-.75.75v5.25a.75.75 0 0 0 .44 1.33l3.182 1.836-2.923 1.68a21.998 21.998 0 0 1-2.613-1.63c-.22-.178-.484-.308-.758-.358V3a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 1 0 1.5H12v5.128a1.26 1.26 0 0 1 .099-.517l.01-.03a.75.75 0 0 1 .49-.495l1.023-.417a.75.75 0 0 0 .49-.495l.01-.03c.09-.236.19-.487.29-.728a.75.75 0 0 0-.25-1.011l-3.628-2.093a.818.818 0 0 0-1.444.001l-3.636 2.09A.75.75 0 0 0 4.5 5.25v3.75a.75.75 0 0 0 .75.75h.008a.75.75 0 0 1 .742.723l.025 1.08a.75.75 0 0 1-.742.777H6a.75.75 0 0 1-.75-.75V5.128c.09-.235.19-.486.29-.728a.75.75 0 0 1 .49-.495l1.024-.417a.75.75 0 0 0 .49-.495l.01-.03c.036-.089.07-.178.1-.266A.816.816 0 0 1 9.458 1.65L12 3.472l2.542-1.822a.818.818 0 0 1 1.444-.001l3.636 2.09a.75.75 0 0 1 .25 1.01l-.001.002c-.1.242-.2.493-.29.728l-.01.03a.75.75 0 0 0-.49.495l-1.023.417a.75.75 0 0 1-.49.495l-.01.03a1.26 1.26 0 0 1-.099.517V15a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H12V9.872c-.09.235-.19.486-.29.728a.75.75 0 0 1-.49.495l-1.024.417a.75.75 0 0 0-.49.495l-.01.03c-.09.236-.19.487-.29.728a.75.75 0 0 0 .25 1.011l3.628 2.093a.818.818 0 0 0 1.444-.001l3.636-2.09A.75.75 0 0 1 19.5 15V9.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 0 .742-.723l.025-1.08a.75.75 0 0 0-.742-.777H20a.75.75 0 0 0-.75.75v5.25a.75.75 0 0 0 .44 1.33l3.182 1.836a2.25 2.25 0 0 1 .002 3.992l-4.281 2.28-4.28-2.28a.815.815 0 0 0-.724 0l-.028.015-.07.04Z" clip-rule="evenodd" /></svg>',
-    'default' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M11.998 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.383 2.25 11.998 2.25Zm.925 8.243a.75.75 0 0 0-1.85 0l-4.25 2.5a.75.75 0 0 0 .425 1.375l2.218-.475a.75.75 0 0 1 .633.262l1.75 2.5a.75.75 0 0 0 1.3-.913l-1.354-3.16a.75.75 0 0 1 .236-.904l3.013-2.125a.75.75 0 0 0-.5-1.312l-2.438.525a.75.75 0 0 1-.737-.55l-1-3.5a.75.75 0 0 0-1.424-.413l-1 3.5a.75.75 0 0 1-.737.55l-2.438-.525a.75.75 0 0 0-.5 1.312l3.013 2.125a.75.75 0 0 1 .236.904l-1.354 3.16a.75.75 0 0 0 1.3.913l1.75-2.5a.75.75 0 0 1 .633-.262l2.218.475a.75.75 0 0 0 .425-1.375l-4.25-2.5Z" clip-rule="evenodd" /></svg>',
+    'clash' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12.75 3.03v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-1.5 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-1.5 3a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM7.875 6a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm4.125-2.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM15 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 20.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9.75 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM8.25 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Z M4.5 9a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 4.5 9Z" clip-rule="evenodd" />',
+    'meta' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12.75 3.03v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-1.5 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-1.5 3a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM7.875 6a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm4.125-2.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM15 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 20.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9.75 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM8.25 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Z M4.5 9a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 4.5 9Z" clip-rule="evenodd" />',
+    'singbox' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.882 0-1.6.718-1.6 1.6 0 .882.718 1.6 1.6 1.6.882 0 1.6-.718 1.6-1.6 0-.882-.718-1.6-1.6-1.6ZM8.25 12c0-.882.718-1.6 1.6-1.6.882 0 1.6.718 1.6 1.6s-.718 1.6-1.6 1.6c-.882 0-1.6-.718-1.6-1.6Zm3.828 4.083c-1.61 0-2.917-1.306-2.917-2.917 0-1.61 1.307-2.917 2.917-2.917 1.61 0 2.917 1.307 2.917 2.917 0 1.61-1.307 2.917-2.917 2.917Z" clip-rule="evenodd" />',
+    'surfboard' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M14.625 2.25a.75.75 0 0 1 .75.75v18a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75Z" /><path d="M5.969 4.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 1 1-1.06-1.06l4.72-4.72-4.72-4.72a.75.75 0 0 1 0-1.06Z" />',
+    'warp' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 0 0-1.071 1.052A9.75 9.75 0 0 1 18.635 12a.75.75 0 0 1-1.5 0 8.25 8.25 0 0 0-7.22-8.224.75.75 0 0 0-1.052-1.071Zm-3.182 2.859A.75.75 0 0 1 11.25 6a8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-1.5 0A6.75 6.75 0 0 0 11.25 7.5a.75.75 0 0 1-.47-1.355Z" clip-rule="evenodd" />',
+    'xray' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm1.823 12.34a.75.75 0 0 1-1.196-.935l.23-.46a.75.75 0 0 1 .936-1.196l-.23.46a.75.75 0 0 1 .266 1.631Zm-3.23.22a.75.75 0 0 1-1.197-.936l.231-.46a.75.75 0 0 1 .936-1.196l-.23.46a.75.75 0 0 1 .26 1.632Zm3.242-3.834a.75.75 0 0 1-1.061-1.06l.472-.472a.75.75 0 1 1 1.06 1.06l-.47.47Zm-3.415-3.415a.75.75 0 0 1-1.06-1.061l.47-.472a.75.75 0 1 1 1.06 1.06l-.47.472Z" />',
+    'location' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a23.525 23.525 0 0 0 4.28-2.28.816.816 0 0 0-.001-1.442l-3.636-2.09A.75.75 0 0 0 12 16.5v-3.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 0 .742-.723l.025-1.08a.75.75 0 0 0-.742-.777H12a.75.75 0 0 0-.75.75v5.25a.75.75 0 0 0 .44 1.33l3.182 1.836-2.923 1.68a21.998 21.998 0 0 1-2.613-1.63c-.22-.178-.484-.308-.758-.358V3a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 1 0 1.5H12v5.128a1.26 1.26 0 0 1 .099-.517l.01-.03a.75.75 0 0 1 .49-.495l1.023-.417a.75.75 0 0 0 .49-.495l.01-.03c.09-.236.19-.487.29-.728a.75.75 0 0 0-.25-1.011l-3.628-2.093a.818.818 0 0 0-1.444.001l-3.636 2.09A.75.75 0 0 0 4.5 5.25v3.75a.75.75 0 0 0 .75.75h.008a.75.75 0 0 1 .742.723l.025 1.08a.75.75 0 0 1-.742.777H6a.75.75 0 0 1-.75-.75V5.128c.09-.235.19-.486.29-.728a.75.75 0 0 1 .49-.495l1.024-.417a.75.75 0 0 0 .49-.495l.01-.03c.036-.089.07-.178.1-.266A.816.816 0 0 1 9.458 1.65L12 3.472l2.542-1.822a.818.818 0 0 1 1.444-.001l3.636 2.09a.75.75 0 0 1 .25 1.01l-.001.002c-.1.242-.2.493-.29.728l-.01.03a.75.75 0 0 0-.49.495l-1.023.417a.75.75 0 0 1-.49.495l-.01.03a1.26 1.26 0 0 1-.099.517V15a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H12V9.872c-.09.235-.19.486-.29.728a.75.75 0 0 1-.49.495l-1.024.417a.75.75 0 0 0-.49.495l-.01.03c-.09.236-.19.487-.29.728a.75.75 0 0 0 .25 1.011l3.628 2.093a.818.818 0 0 0 1.444-.001l3.636-2.09A.75.75 0 0 1 19.5 15V9.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 0 .742-.723l.025-1.08a.75.75 0 0 0-.742-.777H20a.75.75 0 0 0-.75.75v5.25a.75.75 0 0 0 .44 1.33l3.182 1.836a2.25 2.25 0 0 1 .002 3.992l-4.281 2.28-4.28-2.28a.815.815 0 0 0-.724 0l-.028.015-.07.04Z" clip-rule="evenodd" />',
+    'default' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M11.998 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.383 2.25 11.998 2.25Zm.925 8.243a.75.75 0 0 0-1.85 0l-4.25 2.5a.75.75 0 0 0 .425 1.375l2.218-.475a.75.75 0 0 1 .633.262l1.75 2.5a.75.75 0 0 0 1.3-.913l-1.354-3.16a.75.75 0 0 1 .236-.904l3.013-2.125a.75.75 0 0 0-.5-1.312l-2.438.525a.75.75 0 0 1-.737-.55l-1-3.5a.75.75 0 0 0-1.424-.413l-1 3.5a.75.75 0 0 1-.737.55l-2.438-.525a.75.75 0 0 0-.5 1.312l3.013 2.125a.75.75 0 0 1 .236.904l-1.354 3.16a.75.75 0 0 0 1.3.913l1.75-2.5a.75.75 0 0 1 .633-.262l2.218.475a.75.75 0 0 0 .425-1.375l-4.25-2.5Z" clip-rule="evenodd" />',
 ];
 
 const PROTOCOL_COLORS = [
@@ -42,11 +42,17 @@ const PROTOCOL_COLORS = [
 function scan_directory(string $dir): array {
     if (!is_dir($dir)) return [];
     $files = [];
-    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS), RecursiveIteratorIterator::SELF_FIRST);
-    $ignoreExtensions = ['php', 'md', 'json', 'yml', 'yaml', 'ini'];
+    // Use RecursiveDirectoryIterator for deep scanning
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+    $ignoreExtensions = ['php', 'md', 'json', 'yml', 'yaml', 'ini']; // Extensions to ignore
+
     foreach ($iterator as $file) {
         if ($file->isFile() && !in_array($file->getExtension(), $ignoreExtensions)) {
-            $relativePath = str_replace(PROJECT_ROOT . '/', '', $file->getRealPath());
+            // Get the path relative to the PROJECT_ROOT
+            $relativePath = str_replace(PROJECT_ROOT . DIRECTORY_SEPARATOR, '', $file->getRealPath());
             $files[] = $relativePath;
         }
     }
@@ -62,31 +68,31 @@ function getFlags(string $country_code): string {
     return $char1 . $char2;
 }
 
-function process_files_to_structure(array $files): array {
+function process_files_to_structure(array $files_by_category): array {
     $structure = [];
     foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
-        // Get the base directory for this category (e.g., 'PROJECT_ROOT/subscriptions')
-        $base_dir_relative = str_replace(PROJECT_ROOT . '/', '', $category_dir_path);
-        
-        if (!isset($files[$category_key])) {
+        // Get the base directory for this category (e.g., 'subscriptions' or 'lite/subscriptions')
+        $base_dir_relative = str_replace(PROJECT_ROOT . DIRECTORY_SEPARATOR, '', $category_dir_path);
+
+        if (!isset($files_by_category[$category_key])) {
             continue; // Skip if no files found for this category
         }
 
-        foreach ($files[$category_key] as $path) { // $path is like 'subscriptions/clash/my-config.txt'
-            // Remove the base directory prefix to get the path relative to 'subscriptions'
+        foreach ($files_by_category[$category_key] as $path) { // $path is like 'subscriptions/clash/my-config.txt'
+            // Remove the base directory prefix to get the path relative to the category's base
             // Example: $path = 'subscriptions/location/us.txt'
             // $base_dir_relative = 'subscriptions'
             // $relative_path_from_base = 'location/us.txt'
-            $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
-            
-            $parts = explode('/', $relative_path_from_base);
-            
+            $relative_path_from_base = str_replace($base_dir_relative . DIRECTORY_SEPARATOR, '', $path);
+
+            $parts = explode(DIRECTORY_SEPARATOR, $relative_path_from_base);
+
             if (empty($parts[0])) continue; // Ensure there's at least a type folder
 
             $type = $parts[0]; // The first part is always the type (e.g., 'clash', 'location', 'xray')
             $name = pathinfo($path, PATHINFO_FILENAME); // The actual filename is the name
 
-            $url = GITHUB_REPO_URL . '/' . $path;
+            $url = GITHUB_REPO_URL . '/' . str_replace(DIRECTORY_SEPARATOR, '/', $path); // Ensure forward slashes for URL
             $structure[$category_key][$type][$name] = $url;
         }
     }
@@ -98,69 +104,18 @@ function process_files_to_structure(array $files): array {
     return $structure;
 }
 
-function generate_html_section(string $type, array $links): string
-{
-    $icon = CLIENT_ICONS[$type] ?? CLIENT_ICONS['default'];
-    $title = ucwords(str_replace(['-', '_'], ' ', $type)); // e.g., 'xray' -> 'Xray', 'clash' -> 'Clash'
-
-    $html = "<section class='mb-8 sm:mb-10'>\n"; // Adjusted margin-bottom for small screens
-    $html .= "    <h2 class='text-xl sm:text-2xl font-semibold mb-4 sm:mb-5 flex items-center gap-2 sm:gap-3'>" . $icon . " " . htmlspecialchars($title) . "</h2>\n"; // Adjusted font size and margin-bottom for small screens
-    // Adjusted grid: more columns on larger screens, smaller gap
-    $html .= "    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4'>\n";
-
-    foreach ($links as $name => $url) {
-        $visual = '';
-        $displayName = ucwords(str_replace(['-', '_'], ' ', $name));
-        // Reduced card padding for small screens, default for larger
-        $card_class = 'bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-slate-200';
-        
-        if ($type === 'location') {
-            $flag = getFlags($name);
-            $visual = "<span class='flag text-lg sm:text-xl'>{$flag}</span>"; // Adjusted flag size for small screens
-            $displayName = strtoupper($name); // Display country code in uppercase
-        } elseif ($type === 'xray') {
-            // For Xray, the 'name' is the protocol (vless, reality, mix, etc.)
-            $color_class = PROTOCOL_COLORS[$name] ?? 'bg-slate-200 text-slate-800';
-            $visual = "<span class='tag text-xs sm:text-sm font-semibold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md {$color_class}'>" . strtoupper($name) . "</span>"; // Adjusted tag size/padding for small screens
-            $displayName = "Base64 Encoded"; // Fixed display name for Xray links
-        }
-        
-        $html .= "        <div class='{$card_class}'>\n";
-        $html .= "            <div class='flex items-center gap-2 sm:gap-3 font-medium mb-2 sm:mb-3 text-sm sm:text-base'>{$visual}" . htmlspecialchars($displayName) . "</div>\n"; // Adjusted font size and margin-bottom for card header
-        $html .= "            <div class='flex items-center'>\n";
-        $html .= "                <input type='text' readonly value='" . htmlspecialchars($url) . "'\n";
-        $html .= "                    class='flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />\n"; // Adjusted input font size and padding for small screens
-        $html .= "                <button class='copy-btn flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'\n"; // Adjusted button size for small screens
-        $html .= "                    data-url='" . htmlspecialchars($url) . "' title='Copy URL'>\n";
-        $html .= "                    <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>\n"; // Adjusted icon size for small screens
-        $html .= "                        <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />\n";
-        $html .= "                        <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />\n";
-        $html .= "                    </svg>\n";
-        $html .= "                    <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>\n"; // Adjusted icon size for small screens
-        $html .= "                        <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />\n";
-        $html .= "                    </svg>\n";
-        $html .= "                </button>\n";
-        $html .= "            </div>\n";
-        $html .= "        </div>\n";
-    }
-
-    $html .= "    </div>\n</section>\n";
-    return $html;
-}
-
-
 function generate_full_html(array $structured_data): string
 {
-    $universal_link_plain = GITHUB_REPO_URL . '/config.txt';
-    $universal_link_b64 = GITHUB_REPO_URL . '/subscriptions/xray/base64/mix';
-    
+    // Encode the PHP structured data into a JSON string for JavaScript
+    $json_structured_data = json_encode($structured_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+
     $html = <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSG - Subscription Links</title>
+    <title>Dynamic Subscription Links</title>
     <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -186,7 +141,7 @@ function generate_full_html(array $structured_data): string
             line-height: 1;
             flex-shrink: 0; /* Prevent flags from shrinking */
         }
-        /* Specific Tailwind-like color classes from original PHP, ensuring they are available */
+        /* Specific Tailwind-like color classes for protocol tags */
         .bg-sky-100 { background-color: #e0f2fe; } .text-sky-800 { color: #075985; }
         .bg-emerald-100 { background-color: #d1fae5; } .text-emerald-800 { color: #065f46; }
         .bg-blue-100 { background-color: #dbeafe; } .text-blue-800 { color: #1e40af; }
@@ -200,76 +155,64 @@ function generate_full_html(array $structured_data): string
 <body class="bg-slate-50 text-slate-900 leading-relaxed">
     <div class="container max-w-6xl mx-auto px-4 py-8">
         <header class="text-center mb-10">
-            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-0">Proxy Subscription Generator</h1>
-            <p class="text-base sm:text-lg text-slate-500 mt-2">A collection of automatically generated subscription links.</p>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-0">Dynamic Subscription Links</h1>
+            <p class="text-base sm:text-lg text-slate-500 mt-2">Select your preferences to get the corresponding subscription link and QR code.</p>
         </header>
 
         <main>
-            <!-- Universal Subscriptions Section -->
-            <section class='mb-8 sm:mb-10'>
-                <h2 class='text-xl sm:text-2xl font-semibold mb-4 sm:mb-5 flex items-center gap-2 sm:gap-3'>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
-                        <path d="M11.998 2.25a.75.75 0 0 1 .53 1.28l-3.25 3.25a.75.75 0 0 1-1.06 0l-1.5-1.5a.75.75 0 1 1 1.06-1.06l.97.97L11.998 2.25ZM11.25 9.75A2.25 2.25 0 1 0 13.5 12a2.25 2.25 0 0 0-2.25-2.25ZM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.44 1.93a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Zm-11.94-1.06a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06-1.06l-1.5-1.5ZM12 21.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008ZM7.06 17.44a.75.75 0 1 0-1.06 1.06l1.5 1.5a.75.75 0 1 0 1.06 1.06l-1.5-1.5Zm9.88 0a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Z" />
-                    </svg>
-                    Universal Subscriptions
-                </h2>
-                <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4'>
-                    <div class='bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-slate-200'>
-                        <div class='flex items-center gap-2 sm:gap-3 font-medium mb-2 sm:mb-3 text-sm sm:text-base'>
-                            <span class='tag text-xs sm:text-sm font-semibold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Plain Text
-                        </div>
-                        <div class='flex items-center'>
-                            <input type='text' readonly value='{$universal_link_plain}'
-                                class='flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />
-                            <button class='copy-btn flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
-                                data-url='{$universal_link_plain}' title='Copy URL'>
-                                <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                                    <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
-                                    <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
-                                </svg>
-                                <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                                    <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />
-                                </svg>
-                            </button>
-                        </div>
+            <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-slate-200 mb-8 sm:mb-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
+                    <!-- Config Type Selection -->
+                    <div>
+                        <label for="configType" class="block text-sm font-medium text-slate-700 mb-2">Config Type:</label>
+                        <select id="configType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100">
+                            <option value="">Select Config Type</option>
+                        </select>
                     </div>
-                    <div class='bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-slate-200'>
-                        <div class='flex items-center gap-2 sm:gap-3 font-medium mb-2 sm:mb-3 text-sm sm:text-base'>
-                            <span class='tag text-xs sm:text-sm font-semibold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Base64
-                        </div>
-                        <div class='flex items-center'>
-                            <input type='text' readonly value='{$universal_link_b64}'
-                                class='flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />
-                            <button class='copy-btn flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
-                                data-url='{$universal_link_b64}' title='Copy URL'>
-                                <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                                    <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
-                                    <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
-                                </svg>
-                                <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                                    <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />
-                                </svg>
-                            </button>
-                        </div>
+
+                    <!-- IP Type Selection -->
+                    <div>
+                        <label for="ipType" class="block text-sm font-medium text-slate-700 mb-2">IP Type:</label>
+                        <select id="ipType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100" disabled>
+                            <option value="">Select IP Type</option>
+                        </select>
+                    </div>
+
+                    <!-- Other Elements Selection -->
+                    <div>
+                        <label for="otherElement" class="block text-sm font-medium text-slate-700 mb-2">Other Elements:</label>
+                        <select id="otherElement" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100" disabled>
+                            <option value="">Select Element</option>
+                        </select>
                     </div>
                 </div>
-            </section>
-HTML;
 
-    // --- Generate sections from structured data ---
-    foreach ($structured_data as $prefix => $categories) {
-        if(empty($categories)) continue;
-        $html .= "<h1 class='text-2xl sm:text-3xl font-semibold mt-6 sm:mt-8 mb-4 sm:mb-6 pl-2 sm:pl-3 border-l-2 sm:border-l-4 border-indigo-600'>" . htmlspecialchars($prefix) . " Subscriptions</h1>\n"; // Adjusted font size and margins for small screens
-        foreach ($categories as $type => $links) {
-            $html .= generate_html_section($type, $links);
-        }
-    }
-
-    $html .= <<<HTML
+                <!-- Display Area for URL and QR Code -->
+                <div id="resultArea" class="hidden bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200">
+                    <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-4">Your Subscription Link:</h3>
+                    <div class="flex items-center mb-4">
+                        <input type="text" id="subscriptionUrl" readonly
+                            class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
+                        <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100" title="Copy URL">
+                            <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
+                                <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
+                            </svg>
+                            <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <p class="text-sm text-slate-600 mb-2">Scan the QR code:</p>
+                        <div id="qrcode" class="p-2 bg-white border border-slate-300 rounded-lg shadow-inner"></div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="text-center mt-12 sm:mt-16 py-6 sm:py-8 border-t border-slate-200 text-slate-500 text-sm sm:text-base">
-            <p>Generated by <a href="https://github.com/itsyebekhe/PSG" target="_blank" rel="noopener noreferrer" class="text-indigo-600 no-underline font-medium hover:underline">PSG (Proxy Subscription Generator)</a>. Use at your own risk.</p>
+            <p>Generated by a dynamic subscription link tool. Use at your own risk.</p>
         </footer>
     </div>
 
@@ -281,8 +224,46 @@ HTML;
         </div>
     </div>
 
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+
     <script>
-        // Function to show custom message box
+        // Data mapping for visuals
+        const GITHUB_REPO_URL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main'; // This is still here for consistency, though PHP generates URLs
+
+        const CLIENT_ICONS = {
+            'clash': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12.75 3.03v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-1.5 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-1.5 3a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM7.875 6a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm4.125-2.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM15 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 20.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9.75 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM8.25 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Z M4.5 9a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 4.5 9Z" clip-rule="evenodd" />',
+            'meta': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12.75 3.03v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-1.5 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-1.5 3a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM7.875 6a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm4.125-2.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM15 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 20.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9.75 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM8.25 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Z M4.5 9a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 4.5 9Z" clip-rule="evenodd" />',
+            'singbox': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.882 0-1.6.718-1.6 1.6 0 .882.718 1.6 1.6 1.6.882 0 1.6-.718 1.6-1.6 0-.882-.718-1.6-1.6-1.6ZM8.25 12c0-.882.718-1.6 1.6-1.6.882 0 1.6.718 1.6 1.6s-.718 1.6-1.6 1.6c-.882 0-1.6-.718-1.6-1.6Zm3.828 4.083c-1.61 0-2.917-1.306-2.917-2.917 0-1.61 1.307-2.917 2.917-2.917 1.61 0 2.917 1.307 2.917 2.917 0 1.61-1.307 2.917-2.917 2.917Z" clip-rule="evenodd" />',
+            'surfboard': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M14.625 2.25a.75.75 0 0 1 .75.75v18a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75Z" /><path d="M5.969 4.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 1 1-1.06-1.06l4.72-4.72-4.72-4.72a.75.75 0 0 1 0-1.06Z" />',
+            'warp': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 0 0-1.071 1.052A9.75 9.75 0 0 1 18.635 12a.75.75 0 0 1-1.5 0 8.25 8.25 0 0 0-7.22-8.224.75.75 0 0 0-1.052-1.071Zm-3.182 2.859A.75.75 0 0 1 11.25 6a8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-1.5 0A6.75 6.75 0 0 0 11.25 7.5a.75.75 0 0 1-.47-1.355Z" clip-rule="evenodd" />',
+            'xray': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm1.823 12.34a.75.75 0 0 1-1.196-.935l.23-.46a.75.75 0 0 1 .936-1.196l-.23.46a.75.75 0 0 1 .266 1.631Zm-3.23.22a.75.75 0 0 1-1.197-.936l.231-.46a.75.75 0 0 1 .936-1.196l-.23.46a.75.75 0 0 1 .26 1.632Zm3.242-3.834a.75.75 0 0 1-1.061-1.06l.472-.472a.75.75 0 1 1 1.06 1.06l-.47.47Zm-3.415-3.415a.75.75 0 0 1-1.06-1.061l.47-.472a.75.75 0 1 1 1.06 1.06l-.47.472Z" />',
+            'location': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a23.525 23.525 0 0 0 4.28-2.28.816.816 0 0 0-.001-1.442l-3.636-2.09A.75.75 0 0 0 12 16.5v-3.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 0 .742-.723l.025-1.08a.75.75 0 0 0-.742-.777H12a.75.75 0 0 0-.75.75v5.25a.75.75 0 0 0 .44 1.33l3.182 1.836-2.923 1.68a21.998 21.998 0 0 1-2.613-1.63c-.22-.178-.484-.308-.758-.358V3a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 1 0 1.5H12v5.128a1.26 1.26 0 0 1 .099-.517l.01-.03a.75.75 0 0 1 .49-.495l1.023-.417a.75.75 0 0 0 .49-.495l.01-.03c.09-.236.19-.487.29-.728a.75.75 0 0 0-.25-1.011l-3.628-2.093a.818.818 0 0 0-1.444.001l-3.636 2.09A.75.75 0 0 0 4.5 5.25v3.75a.75.75 0 0 0 .75.75h.008a.75.75 0 0 1 .742.723l.025 1.08a.75.75 0 0 1-.742.777H6a.75.75 0 0 1-.75-.75V5.128c.09-.235.19-.486.29-.728a.75.75 0 0 1 .49-.495l1.024-.417a.75.75 0 0 0 .49-.495l.01-.03c.036-.089.07-.178.1-.266A.816.816 0 0 1 9.458 1.65L12 3.472l2.542-1.822a.818.818 0 0 1 1.444-.001l3.636 2.09a.75.75 0 0 1 .25 1.01l-.001.002c-.1.242-.2.493-.29.728l-.01.03a.75.75 0 0 0-.49.495l-1.023.417a.75.75 0 0 1-.49.495l-.01.03a1.26 1.26 0 0 1-.099.517V15a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H12V9.872c-.09.235-.19.486-.29.728a.75.75 0 0 1-.49.495l-1.024.417a.75.75 0 0 0-.49.495l-.01.03c-.09.236-.19.487-.29.728a.75.75 0 0 0 .25 1.011l3.628 2.093a.818.818 0 0 0 1.444-.001l3.636-2.09A.75.75 0 0 1 19.5 15V9.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 0 .742-.723l.025-1.08a.75.75 0 0 0-.742-.777H20a.75.75 0 0 0-.75.75v5.25a.75.75 0 0 0 .44 1.33l3.182 1.836a2.25 2.25 0 0 1 .002 3.992l-4.281 2.28-4.28-2.28a.815.815 0 0 0-.724 0l-.028.015-.07.04Z" clip-rule="evenodd" />',
+            'default' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path fill-rule="evenodd" d="M11.998 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.383 2.25 11.998 2.25Zm.925 8.243a.75.75 0 0 0-1.85 0l-4.25 2.5a.75.75 0 0 0 .425 1.375l2.218-.475a.75.75 0 0 1 .633.262l1.75 2.5a.75.75 0 0 0 1.3-.913l-1.354-3.16a.75.75 0 0 1 .236-.904l3.013-2.125a.75.75 0 0 0-.5-1.312l-2.438.525a.75.75 0 0 1-.737-.55l-1-3.5a.75.75 0 0 0-1.424-.413l-1 3.5a.75.75 0 0 1-.737.55l-2.438-.525a.75.75 0 0 0-.5 1.312l3.013 2.125a.75.75 0 0 1 .236.904l-1.354 3.16a.75.75 0 0 0 1.3.913l1.75-2.5a.75.75 0 0 1 .633-.262l2.218.475a.75.75 0 0 0 .425-1.375l-4.25-2.5Z" clip-rule="evenodd" />',
+        };
+
+        const PROTOCOL_COLORS = {
+            'vless': 'bg-sky-100 text-sky-800', 'reality': 'bg-emerald-100 text-emerald-800',
+            'vmess': 'bg-blue-100 text-blue-800', 'trojan': 'bg-red-100 text-red-800',
+            'ss': 'bg-purple-100 text-purple-800', 'hy2': 'bg-pink-100 text-pink-800',
+            'tuic': 'bg-yellow-100 text-yellow-800', 'mix': 'bg-slate-200 text-slate-800',
+        };
+
+        // Dynamically injected structured data from PHP
+        const structuredData = {$json_structured_data};
+
+        // DOM elements
+        const configTypeSelect = document.getElementById('configType');
+        const ipTypeSelect = document.getElementById('ipType');
+        const otherElementSelect = document.getElementById('otherElement');
+        const resultArea = document.getElementById('resultArea');
+        const subscriptionUrlInput = document.getElementById('subscriptionUrl');
+        const copyButton = document.getElementById('copyButton');
+        const qrcodeDiv = document.getElementById('qrcode');
+
+        let qrcodeInstance = null; // To store the QR code instance
+
+        // Function to show custom message box (replaces alert/confirm)
         function showMessageBox(message) {
             const messageBox = document.getElementById('messageBox');
             const messageBoxText = document.getElementById('messageBoxText');
@@ -303,10 +284,143 @@ HTML;
             };
         }
 
-        document.addEventListener('click', function(e) {
-            const button = e.target.closest('.copy-btn');
-            if (button) {
-                const url = button.dataset.url;
+        /**
+         * Populates a select element with options from an array or object keys.
+         * @param {HTMLSelectElement} selectElement - The select element to populate.
+         * @param {Array|Object} data - The data to use for options.
+         * @param {string} defaultOptionText - The default text for the first option.
+         * @param {boolean} disable - Whether to disable the select element after populating.
+         */
+        function populateSelect(selectElement, data, defaultOptionText, disable = false) {
+            selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
+            const keys = Array.isArray(data) ? data : Object.keys(data);
+            keys.forEach(key => {
+                const option = document.createElement('option');
+                option.value = key;
+                // Determine the 'type' for formatDisplayName based on the select element's ID
+                let formatType = null;
+                if (selectElement.id === 'ipType') {
+                    // For ipType, the key itself is the type (e.g., 'clash', 'xray', 'location')
+                    formatType = key;
+                } else if (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') {
+                    // If otherElement and ipType is 'location', then the key is a country code
+                    formatType = 'location';
+                } else if (selectElement.id === 'otherElement' && ipTypeSelect.value === 'xray') {
+                    // If otherElement and ipType is 'xray', then the key is a protocol
+                    formatType = 'xray';
+                }
+                option.textContent = formatDisplayName(key, formatType);
+                selectElement.appendChild(option);
+            });
+            selectElement.disabled = disable;
+        }
+
+        /**
+         * Formats the display name for options.
+         * @param {string} name - The original name (e.g., 'us', 'vless', 'config1').
+         * @param {string|null} type - The type of the element (e.g., 'location', 'xray') for specific formatting.
+         * @returns {string} The formatted display name.
+         */
+        function formatDisplayName(name, type = null) {
+            if (type === 'location') {
+                return name.toUpperCase() + ' ' + getFlagEmoji(name); // For country codes, add flag
+            } else if (type === 'xray') {
+                return name.toUpperCase(); // For protocol names like vless, reality, mix
+            }
+            // Default formatting: Capitalize words, replace hyphens/underscores
+            return name.split(/[-_]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        }
+
+        /**
+         * Generates a country flag emoji from a 2-letter country code.
+         * @param {string} countryCode - The 2-letter ISO country code (e.g., "US", "DE").
+         * @returns {string} The flag emoji or a default white flag if invalid.
+         */
+        function getFlagEmoji(countryCode) {
+            if (typeof countryCode !== 'string' || countryCode.length !== 2 || !/^[A-Z]{2}$/.test(countryCode)) {
+                return '🏳️'; // White flag for invalid codes
+            }
+            const regionalOffset = 0x1F1E6 - 0x41; // Offset for regional indicator symbols
+            const char1 = String.fromCodePoint(countryCode.charCodeAt(0) + regionalOffset);
+            const char2 = String.fromCodePoint(countryCode.charCodeAt(1) + regionalOffset);
+            return char1 + char2;
+        }
+
+        /**
+         * Updates the QR code.
+         * @param {string} url - The URL to encode in the QR code.
+         */
+        function updateQRCode(url) {
+            qrcodeDiv.innerHTML = ''; // Clear previous QR code
+            if (url) {
+                // Initialize QRCode if not already
+                if (!qrcodeInstance) {
+                    qrcodeInstance = new QRCode(qrcodeDiv, {
+                        text: url,
+                        width: 128,
+                        height: 128,
+                        colorDark: "#000000",
+                        colorLight: "#ffffff",
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+                } else {
+                    qrcodeInstance.makeCode(url); // Update existing QR code
+                }
+            }
+        }
+
+        // Event Listeners
+        configTypeSelect.addEventListener('change', () => {
+            const selectedConfigType = configTypeSelect.value;
+            ipTypeSelect.value = ''; // Reset IP Type
+            otherElementSelect.value = ''; // Reset Other Elements
+            resultArea.classList.add('hidden'); // Hide result area
+
+            if (selectedConfigType && structuredData[selectedConfigType]) {
+                populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select IP Type');
+                otherElementSelect.disabled = true;
+            } else {
+                populateSelect(ipTypeSelect, [], 'Select IP Type', true); // Disable IP Type
+                populateSelect(otherElementSelect, [], 'Select Element', true); // Disable Other Elements
+            }
+        });
+
+        ipTypeSelect.addEventListener('change', () => {
+            const selectedConfigType = configTypeSelect.value;
+            const selectedIpType = ipTypeSelect.value;
+            otherElementSelect.value = ''; // Reset Other Elements
+            resultArea.classList.add('hidden'); // Hide result area
+
+            if (selectedConfigType && selectedIpType && structuredData[selectedConfigType][selectedIpType]) {
+                populateSelect(otherElementSelect, structuredData[selectedConfigType][selectedIpType], 'Select Element');
+            } else {
+                populateSelect(otherElementSelect, [], 'Select Element', true); // Disable Other Elements
+            }
+        });
+
+        otherElementSelect.addEventListener('change', () => {
+            const selectedConfigType = configTypeSelect.value;
+            const selectedIpType = ipTypeSelect.value;
+            const selectedOtherElement = otherElementSelect.value;
+
+            if (selectedConfigType && selectedIpType && selectedOtherElement &&
+                structuredData[selectedConfigType] &&
+                structuredData[selectedConfigType][selectedIpType] &&
+                structuredData[selectedConfigType][selectedIpType][selectedOtherElement]) {
+                const url = structuredData[selectedConfigType][selectedIpType][selectedOtherElement];
+                subscriptionUrlInput.value = url;
+                updateQRCode(url);
+                resultArea.classList.remove('hidden');
+            } else {
+                resultArea.classList.add('hidden');
+                subscriptionUrlInput.value = '';
+                updateQRCode(''); // Clear QR code
+            }
+        });
+
+        copyButton.addEventListener('click', () => {
+            const url = subscriptionUrlInput.value;
+            if (url) {
                 // Use document.execCommand('copy') as navigator.clipboard.writeText() might not work in some iframe environments
                 const tempInput = document.createElement('textarea');
                 tempInput.value = url;
@@ -314,8 +428,8 @@ HTML;
                 tempInput.select();
                 try {
                     document.execCommand('copy');
-                    const copyIcon = button.querySelector('.copy-icon');
-                    const checkIcon = button.querySelector('.check-icon');
+                    const copyIcon = copyButton.querySelector('.copy-icon');
+                    const checkIcon = copyButton.querySelector('.check-icon');
                     copyIcon.classList.add('hidden');
                     checkIcon.classList.remove('hidden');
                     setTimeout(() => {
@@ -328,7 +442,14 @@ HTML;
                 } finally {
                     document.body.removeChild(tempInput);
                 }
+            } else {
+                showMessageBox('No URL to copy. Please select a subscription link first.');
             }
+        });
+
+        // Initialize the first dropdown on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            populateSelect(configTypeSelect, structuredData, 'Select Config Type');
         });
     </script>
 </body>
@@ -339,6 +460,11 @@ HTML;
 }
 
 // --- Main Execution ---
+// You would typically run this PHP script from a web server or via CLI
+// For example, if this file is named `generate_page.php`, you could run:
+// php generate_page.php
+// Or access it via a web browser if configured correctly.
+
 echo "Starting modern subscription page generator..." . PHP_EOL;
 
 $all_files = [];
@@ -358,3 +484,4 @@ echo "Found and categorized {$file_count} subscription files.\n";
 $final_html = generate_full_html($structured_data);
 file_put_contents(OUTPUT_HTML_FILE, $final_html);
 echo "Successfully generated modern page at: " . OUTPUT_HTML_FILE . "\n";
+
