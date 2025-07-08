@@ -1,10 +1,105 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Modern Subscription Page Generator for PSG
+ *
+ * Scans subscription directories and generates a modern, fully functional index.html.
+ * This script uses a NOWDOC to prevent PHP/JS conflicts and ensures all JS logic
+ * runs after the DOM is loaded.
+ */
+
+// --- Configuration ---
+define('PROJECT_ROOT', __DIR__);
+define('GITHUB_REPO_URL', 'https://raw.githubusercontent.com/itsyebekhe/PSG/main');
+define('OUTPUT_HTML_FILE', PROJECT_ROOT . '/index.html');
+define('SCAN_DIRECTORIES', [
+    'Standard' => PROJECT_ROOT . '/subscriptions',
+    'Lite' => PROJECT_ROOT . '/lite/subscriptions',
+]);
+
+/**
+ * Scans a directory recursively for subscription files.
+ * @param string $dir The directory to scan.
+ * @return array A list of relative file paths.
+ */
+function scan_directory(string $dir): array
+{
+    if (!is_dir($dir)) return [];
+    
+    $files = [];
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+    $ignoreExtensions = ['php', 'md', 'json', 'yml', 'yaml', 'ini'];
+
+    foreach ($iterator as $file) {
+        if ($file->isFile() && !in_array(strtolower($file->getExtension()), $ignoreExtensions)) {
+            $relativePath = str_replace(PROJECT_ROOT . DIRECTORY_SEPARATOR, '', $file->getRealPath());
+            // Ensure consistent use of forward slashes for cross-platform compatibility
+            $files[] = str_replace(DIRECTORY_SEPARATOR, '/', $relativePath);
+        }
+    }
+    return $files;
+}
+
+/**
+ * Processes a list of file paths into a structured, hierarchical array for the frontend.
+ * @param array $files_by_category Files grouped by category ('Standard', 'Lite').
+ * @return array The structured data.
+ */
+function process_files_to_structure(array $files_by_category): array
+{
+    $structure = [];
+    foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
+        $base_dir_relative = str_replace(DIRECTORY_SEPARATOR, '/', str_replace(PROJECT_ROOT, '', $category_dir_path));
+        // Remove leading slash if present
+        $base_dir_relative = ltrim($base_dir_relative, '/');
+
+        if (!isset($files_by_category[$category_key])) {
+            continue;
+        }
+
+        foreach ($files_by_category[$category_key] as $path) {
+            $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
+            $parts = explode('/', $relative_path_from_base);
+
+            if (count($parts) < 2) continue; // Must have at least a type folder and a file
+
+            $type = array_shift($parts); // The first part is the type (e.g., 'clash', 'location')
+            $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME); // The rest forms the name
+
+            $url = GITHUB_REPO_URL . '/' . $path;
+            $structure[$category_key][$type][$name] = $url;
+        }
+    }
+
+    // Sort the structure for predictable dropdown order
+    foreach ($structure as &$categories) {
+        ksort($categories); // Sort types alphabetically (clash, location, xray)
+        foreach ($categories as &$elements) {
+            ksort($elements); // Sort elements alphabetically (countries, protocols)
+        }
+    }
+    ksort($structure); // Sort top-level categories (Lite, Standard)
+
+    return $structure;
+}
+
+/**
+ * Generates the complete HTML page with embedded data and correct JavaScript.
+ * @param array $structured_data The hierarchical data for the dropdowns.
+ * @return string The complete HTML content.
+ */
 function generate_full_html(array $structured_data): string
 {
-    // Encode the PHP structured data into a JSON string for JavaScript
+    // Encode the PHP data into a JSON string for JavaScript
     $json_structured_data = json_encode($structured_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
-    // Using a HEREDOC for the HTML template. The '$' in JS template literals must be escaped.
-    return <<<HTML
+    // Use a NOWDOC (note the single quotes around 'HTML') to prevent PHP from parsing '$' in JS.
+    $html_template = <<<'HTML'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,33 +113,9 @@ function generate_full_html(array $structured_data): string
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for icons and specific elements not covered by Tailwind */
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        /* Ensure icons have a fixed size to prevent distortion */
-        .icon {
-            width: 24px;
-            height: 24px;
-            color: #4f46e5; /* Accent color for icons */
-            flex-shrink: 0; /* Prevent icons from shrinking */
-        }
-        .flag {
-            font-size: 1.5rem;
-            line-height: 1;
-            flex-shrink: 0; /* Prevent flags from shrinking */
-        }
-        /* Specific Tailwind-like color classes for protocol tags */
-        .bg-sky-100 { background-color: #e0f2fe; } .text-sky-800 { color: #075985; }
-        .bg-emerald-100 { background-color: #d1fae5; } .text-emerald-800 { color: #065f46; }
-        .bg-blue-100 { background-color: #dbeafe; } .text-blue-800 { color: #1e40af; }
-        .bg-red-100 { background-color: #fee2e2; } .text-red-800 { color: #991b1b; }
-        .bg-purple-100 { background-color: #f3e8ff; } .text-purple-800 { color: #6b21a8; }
-        .bg-pink-100 { background-color: #fce7f3; } .text-pink-800 { color: #9d174d; }
-        .bg-yellow-100 { background-color: #fef9c3; } .text-yellow-800 { color: #854d0e; }
-        .bg-slate-200 { background-color: #e2e8f0; } .text-slate-800 { color: #1e293b; }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .icon { width: 24px; height: 24px; color: #4f46e5; flex-shrink: 0; }
+        .flag { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 leading-relaxed">
@@ -60,25 +131,19 @@ function generate_full_html(array $structured_data): string
                     <!-- Config Type Selection -->
                     <div>
                         <label for="configType" class="block text-sm font-medium text-slate-700 mb-2">Config Type:</label>
-                        <select id="configType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100">
-                            <option value="">Select Config Type</option>
-                        </select>
+                        <select id="configType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100"></select>
                     </div>
 
-                    <!-- IP Type Selection -->
+                    <!-- Type Selection -->
                     <div>
-                        <label for="ipType" class="block text-sm font-medium text-slate-700 mb-2">IP Type:</label>
-                        <select id="ipType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100" disabled>
-                            <option value="">Select IP Type</option>
-                        </select>
+                        <label for="ipType" class="block text-sm font-medium text-slate-700 mb-2">Type:</label>
+                        <select id="ipType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100" disabled></select>
                     </div>
 
-                    <!-- Other Elements Selection -->
+                    <!-- Element Selection -->
                     <div>
-                        <label for="otherElement" class="block text-sm font-medium text-slate-700 mb-2">Other Elements:</label>
-                        <select id="otherElement" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100" disabled>
-                            <option value="">Select Element</option>
-                        </select>
+                        <label for="otherElement" class="block text-sm font-medium text-slate-700 mb-2">Element:</label>
+                        <select id="otherElement" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100" disabled></select>
                     </div>
                 </div>
 
@@ -89,13 +154,8 @@ function generate_full_html(array $structured_data): string
                         <input type="text" id="subscriptionUrl" readonly
                             class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
                         <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100" title="Copy URL">
-                            <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                                <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
-                                <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
-                            </svg>
-                            <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                                <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />
-                            </svg>
+                            <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zM-1 7a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H-0.5A.5.5 0 0 1-1 7z"/></svg>
+                            <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
                         </button>
                     </div>
                     <div class="flex flex-col items-center justify-center">
@@ -125,8 +185,7 @@ function generate_full_html(array $structured_data): string
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Data and Constants ---
-            // Data is injected by PHP and available here
-            const structuredData = {$json_structured_data};
+            const structuredData = __JSON_DATA_PLACEHOLDER__;
 
             // --- DOM Elements (safe to access now) ---
             const configTypeSelect = document.getElementById('configType');
@@ -136,142 +195,102 @@ function generate_full_html(array $structured_data): string
             const subscriptionUrlInput = document.getElementById('subscriptionUrl');
             const copyButton = document.getElementById('copyButton');
             const qrcodeDiv = document.getElementById('qrcode');
-            let qrcodeInstance = null; // To store the QR code instance
+            let qrcodeInstance = null;
 
             // --- Helper Functions ---
-            
-            // Function to show custom message box
             function showMessageBox(message) {
-                const messageBox = document.getElementById('messageBox');
-                const messageBoxText = document.getElementById('messageBoxText');
-                const messageBoxClose = document.getElementById('messageBoxClose');
-
-                messageBoxText.textContent = message;
-                messageBox.classList.remove('hidden');
-
-                messageBoxClose.onclick = () => messageBox.classList.add('hidden');
-                messageBox.onclick = (e) => {
-                    if (e.target === messageBox) messageBox.classList.add('hidden');
-                };
+                const box = document.getElementById('messageBox');
+                document.getElementById('messageBoxText').textContent = message;
+                box.classList.remove('hidden');
+                document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
             }
 
-            // Populates a select element
-            function populateSelect(selectElement, data, defaultOptionText, disable = false) {
-                selectElement.innerHTML = `<option value="">\${defaultOptionText}</option>`;
-                const keys = Array.isArray(data) ? data : Object.keys(data);
-                keys.forEach(key => {
-                    const option = document.createElement('option');
-                    option.value = key;
-
-                    let formatType = null;
-                    if (selectElement.id === 'ipType') {
-                        formatType = key;
-                    } else if (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') {
-                        formatType = 'location';
-                    } else if (selectElement.id === 'otherElement' && (ipTypeSelect.value === 'xray' || ipTypeSelect.value === 'meta')) {
-                         formatType = 'protocol';
-                    }
-
-                    option.textContent = formatDisplayName(key, formatType);
-                    selectElement.appendChild(option);
-                });
-                selectElement.disabled = disable;
+            function populateSelect(selectElement, data, defaultOptionText, disable = true) {
+                selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
+                const keys = Object.keys(data);
+                if (keys.length > 0) {
+                    keys.forEach(key => {
+                        const option = document.createElement('option');
+                        option.value = key;
+                        let formatType = (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') ? 'location' : 'default';
+                        option.textContent = formatDisplayName(key, formatType);
+                        selectElement.appendChild(option);
+                    });
+                    selectElement.disabled = false;
+                } else {
+                    selectElement.disabled = true;
+                }
             }
-
-            // Formats display names for options
-            function formatDisplayName(name, type = null) {
+            
+            function formatDisplayName(name, type = 'default') {
                 if (type === 'location') {
                     return name.toUpperCase() + ' ' + getFlagEmoji(name);
-                } else if (type === 'protocol') {
-                    // Capitalize only the first letter for protocols
-                     return name.charAt(0).toUpperCase() + name.slice(1).replace(/_/g, ' ');
                 }
-                // Default: Capitalize words, replace underscores
                 return name.split(/[-_]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
             }
             
-            // Generates a country flag emoji
             function getFlagEmoji(countryCode) {
-                if (typeof countryCode !== 'string' || countryCode.length !== 2 || !/^[A-Z]{2}$/i.test(countryCode)) {
-                    return '🏳️';
-                }
-                countryCode = countryCode.toUpperCase();
-                const regionalOffset = 0x1F1E6 - 0x41;
-                const char1 = String.fromCodePoint(countryCode.charCodeAt(0) + regionalOffset);
-                const char2 = String.fromCodePoint(countryCode.charCodeAt(1) + regionalOffset);
-                return char1 + char2;
+                if (typeof countryCode !== 'string' || !/^[a-zA-Z]{2}$/.test(countryCode)) return '🏳️';
+                const code = countryCode.toUpperCase();
+                return String.fromCodePoint(code.charCodeAt(0) + 127397) + String.fromCodePoint(code.charCodeAt(1) + 127397);
             }
 
-            // Updates the QR code
             function updateQRCode(url) {
                 qrcodeDiv.innerHTML = '';
                 if (url) {
                     if (!qrcodeInstance) {
-                        qrcodeInstance = new QRCode(qrcodeDiv, {
-                            text: url, width: 128, height: 128,
-                            colorDark: "#000000", colorLight: "#ffffff",
-                            correctLevel: QRCode.CorrectLevel.H
-                        });
+                        qrcodeInstance = new QRCode(qrcodeDiv, { text: url, width: 128, height: 128 });
                     } else {
                         qrcodeInstance.makeCode(url);
                     }
                 }
             }
+            
+            function resetSelect(selectElement, defaultText) {
+                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+                selectElement.disabled = true;
+            }
 
             // --- Event Listeners ---
             configTypeSelect.addEventListener('change', () => {
                 const selectedConfigType = configTypeSelect.value;
-                ipTypeSelect.value = '';
-                otherElementSelect.value = '';
+                resetSelect(ipTypeSelect, 'Select Type');
+                resetSelect(otherElementSelect, 'Select Element');
                 resultArea.classList.add('hidden');
 
                 if (selectedConfigType && structuredData[selectedConfigType]) {
-                    populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type');
-                    otherElementSelect.disabled = true;
-                } else {
-                    populateSelect(ipTypeSelect, [], 'Select Type', true);
-                    populateSelect(otherElementSelect, [], 'Select Element', true);
+                    populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type', false);
                 }
             });
 
             ipTypeSelect.addEventListener('change', () => {
                 const selectedConfigType = configTypeSelect.value;
                 const selectedIpType = ipTypeSelect.value;
-                otherElementSelect.value = '';
+                resetSelect(otherElementSelect, 'Select Element');
                 resultArea.classList.add('hidden');
 
-                if (selectedConfigType && selectedIpType && structuredData[selectedConfigType][selectedIpType]) {
-                    populateSelect(otherElementSelect, structuredData[selectedConfigType][selectedIpType], 'Select Element');
-                } else {
-                    populateSelect(otherElementSelect, [], 'Select Element', true);
+                if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
+                    populateSelect(otherElementSelect, structuredData[selectedConfigType][selectedIpType], 'Select Element', false);
                 }
             });
 
             otherElementSelect.addEventListener('change', () => {
-                const selectedConfigType = configTypeSelect.value;
-                const selectedIpType = ipTypeSelect.value;
-                const selectedOtherElement = otherElementSelect.value;
-
-                if (selectedConfigType && selectedIpType && selectedOtherElement &&
-                    structuredData[selectedConfigType]?.[selectedIpType]?.[selectedOtherElement]) {
-                    const url = structuredData[selectedConfigType][selectedIpType][selectedOtherElement];
+                const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value] || null;
+                if (url) {
                     subscriptionUrlInput.value = url;
                     updateQRCode(url);
                     resultArea.classList.remove('hidden');
                 } else {
                     resultArea.classList.add('hidden');
-                    subscriptionUrlInput.value = '';
-                    updateQRCode('');
                 }
             });
 
             copyButton.addEventListener('click', () => {
-                const url = subscriptionUrlInput.value;
-                if (!url) {
-                    showMessageBox('No URL to copy. Please select a subscription link first.');
+                if (!subscriptionUrlInput.value) {
+                    showMessageBox('No URL to copy.');
                     return;
                 }
-                navigator.clipboard.writeText(url).then(() => {
+                navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => {
                     const copyIcon = copyButton.querySelector('.copy-icon');
                     const checkIcon = copyButton.querySelector('.check-icon');
                     copyIcon.classList.add('hidden');
@@ -280,18 +299,49 @@ function generate_full_html(array $structured_data): string
                         copyIcon.classList.remove('hidden');
                         checkIcon.classList.add('hidden');
                     }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy URL: ', err);
-                    showMessageBox('Failed to copy URL. Please copy manually.');
-                });
+                }).catch(() => showMessageBox('Failed to copy URL.'));
             });
 
             // --- Initializer ---
-            // Populate the first dropdown on page load
-            populateSelect(configTypeSelect, structuredData, 'Select Config Type');
+            populateSelect(configTypeSelect, structuredData, 'Select Config Type', false);
+            resetSelect(ipTypeSelect, 'Select Type');
+            resetSelect(otherElementSelect, 'Select Element');
         });
     </script>
 </body>
 </html>
 HTML;
+
+    // Inject the dynamic JSON data into the placeholder and return the final HTML
+    return str_replace('__JSON_DATA_PLACEHOLDER__', $json_structured_data, $html_template);
 }
+
+// --- Main Execution ---
+echo "Starting modern subscription page generator..." . PHP_EOL;
+
+$all_files = [];
+foreach (SCAN_DIRECTORIES as $category => $dir) {
+    if (is_dir($dir)) {
+        echo "Scanning directory: {$dir}" . PHP_EOL;
+        $all_files[$category] = scan_directory($dir);
+    } else {
+        echo "Warning: Directory not found, skipping: {$dir}" . PHP_EOL;
+    }
+}
+
+if (empty($all_files)) {
+    die("Error: No scannable directories found. Exiting." . PHP_EOL);
+}
+
+$structured_data = process_files_to_structure($all_files);
+if (empty($structured_data)) {
+    die("Error: No subscription files were found to generate the page. Please check your 'subscriptions' directories. Exiting." . PHP_EOL);
+}
+
+$file_count = array_sum(array_map('count', $all_files));
+echo "Found and categorized {$file_count} subscription files." . PHP_EOL;
+
+$final_html = generate_full_html($structured_data);
+file_put_contents(OUTPUT_HTML_FILE, $final_html);
+
+echo "Successfully generated modern page at: " . realpath(OUTPUT_HTML_FILE) . PHP_EOL;
