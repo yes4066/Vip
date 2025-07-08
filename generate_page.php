@@ -106,7 +106,7 @@ function generate_html_section(string $type, array $links): string
     $html = "<section class='mb-8 sm:mb-10'>\n"; // Adjusted margin-bottom for small screens
     $html .= "    <h2 class='text-xl sm:text-2xl font-semibold mb-4 sm:mb-5 flex items-center gap-2 sm:gap-3'>" . $icon . " " . htmlspecialchars($title) . "</h2>\n"; // Adjusted font size and margin-bottom for small screens
     // Adjusted grid: more columns on larger screens, smaller gap
-    $html .= "    <div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4'>\n"; // Changed to 2 columns on extra small, 3 on small, etc.
+    $html .= "    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4'>\n";
 
     foreach ($links as $name => $url) {
         $visual = '';
@@ -213,7 +213,7 @@ function generate_full_html(array $structured_data): string
                     </svg>
                     Universal Subscriptions
                 </h2>
-                <div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4'>
+                <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4'>
                     <div class='bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-slate-200'>
                         <div class='flex items-center gap-2 sm:gap-3 font-medium mb-2 sm:mb-3 text-sm sm:text-base'>
                             <span class='tag text-xs sm:text-sm font-semibold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Plain Text
