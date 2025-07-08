@@ -233,7 +233,7 @@ function isEncrypted(string $input): bool
 function getFlags(string $country_code): string
 {
     $country_code = strtoupper(trim($country_code));
-    if (strlen($country_code) !== 2 || !ctype_alpha($country_code) || $country_code === XX) {
+    if (strlen($country_code) !== 2 || !ctype_alpha($country_code) || $country_code === "XX") {
         return '🏳️'; // Return a default flag for invalid codes.
     }
 
