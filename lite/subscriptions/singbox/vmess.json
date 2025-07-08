@@ -109,6 +109,7 @@
                 "❔ XX | 🔴 | vmess | @armodchannel | 62",
                 "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
                 "❔ XX | 🟢 | vmess | @cattvpn | 0",
+                "🇬🇧 GB | 🔴 | vmess | @config_proxy | 88",
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
                 "🇩🇪 DE | 🟢 | vmess | @configsstore | 2",
                 "❔ XX | 🔴 | vmess | @dailyv2ray | 30",
@@ -175,7 +176,7 @@
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
                 "❔ XX | 🔴 | vmess | @vpray3 | 3",
-                "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 25"
+                "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 26"
             ]
         },
         {
@@ -186,6 +187,7 @@
                 "❔ XX | 🔴 | vmess | @armodchannel | 62",
                 "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
                 "❔ XX | 🟢 | vmess | @cattvpn | 0",
+                "🇬🇧 GB | 🔴 | vmess | @config_proxy | 88",
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
                 "🇩🇪 DE | 🟢 | vmess | @configsstore | 2",
                 "❔ XX | 🔴 | vmess | @dailyv2ray | 30",
@@ -252,7 +254,7 @@
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
                 "❔ XX | 🔴 | vmess | @vpray3 | 3",
-                "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 25"
+                "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 26"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -332,6 +334,15 @@
                     "Host": "alvvin.click"
                 }
             }
+        },
+        {
+            "tag": "🇬🇧 GB | 🔴 | vmess | @config_proxy | 88",
+            "type": "vmess",
+            "server": "51.38.64.209",
+            "server_port": 44023,
+            "uuid": "7da457da-ed0f-437d-c81d-6c35885bbea3",
+            "security": "auto",
+            "alter_id": 0
         },
         {
             "tag": "❔ XX | 🔴 | vmess | @configforvpn | 9",
@@ -1315,18 +1326,18 @@
             "alter_id": 0
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 25",
+            "tag": "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 26",
             "type": "vmess",
-            "server": "wWSxcdFR5.999834.XYz",
-            "server_port": 80,
-            "uuid": "cdec9d57-661d-456a-bbf2-b4c38e9c6711",
+            "server": "s1.db-link01.top",
+            "server_port": 8880,
+            "uuid": "05881d43-e9da-3d65-8cbe-fb0459b78557",
             "security": "auto",
             "alter_id": 0,
             "transport": {
                 "type": "ws",
-                "path": "/9dZlJLjHHrL0VwSolbqFpg",
+                "path": "/dabai.in104.20.224.3",
                 "headers": {
-                    "Host": "wWSxcdFR5.999834.XYz"
+                    "Host": "s1.db-link01.top"
                 }
             }
         }

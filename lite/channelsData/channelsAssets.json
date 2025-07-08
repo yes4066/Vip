@@ -552,9 +552,9 @@
     "config_proxy": {
         "types": [
             "vless",
+            "vmess",
             "trojan",
-            "ss",
-            "vmess"
+            "ss"
         ],
         "title": "Proxy | V2ray | Config | Vpn | Hiddify | Nekobox | Segaro | پروکسی | فیلترشکن | ایرانسل | همراه اول | رایتل | سامانتل | مخابرات|",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/config_proxy.jpg"
@@ -671,6 +671,7 @@
     },
     "configshubplus": {
         "types": [
+            "trojan",
             "vless"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
@@ -727,7 +728,6 @@
     },
     "confing_chanel": {
         "types": [
-            "trojan",
             "ss",
             "vless"
         ],
@@ -1092,7 +1092,8 @@
     "entrynet": {
         "types": [
             "vless",
-            "vmess"
+            "vmess",
+            "trojan"
         ],
         "title": ".::entryNET::. Free v2ray vpn &amp; proxy | وی پی ان و پروکسی رایگان",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/entrynet.jpg"
@@ -1984,9 +1985,8 @@
     },
     "hope_net": {
         "types": [
-            "ss",
-            "trojan",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/hope_net.jpg"
@@ -2076,10 +2076,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vmess",
-            "trojan",
             "ss",
-            "vless"
+            "trojan",
+            "vless",
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/ip_cf_config.jpg"
@@ -3666,9 +3666,9 @@
     },
     "proxy_mtproto_vpns_free": {
         "types": [
+            "vmess",
             "vless",
-            "ss",
-            "vmess"
+            "ss"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/proxy_mtproto_vpns_free.jpg"
@@ -5025,8 +5025,9 @@
     },
     "v2ray_configs_pool": {
         "types": [
+            "ss",
             "vless",
-            "vmess"
+            "trojan"
         ],
         "title": "V2RAY_CONFIGS_POOL",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2ray_configs_pool.jpg"
@@ -5366,9 +5367,9 @@
     },
     "v2rayfree": {
         "types": [
+            "vmess",
             "vless",
-            "ss",
-            "vmess"
+            "ss"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayfree.jpg"
@@ -5958,6 +5959,7 @@
     },
     "v2rayweb": {
         "types": [
+            "trojan",
             "vless"
         ],
         "title": "V2ray | VPN",
@@ -6097,8 +6099,8 @@
     },
     "v2source": {
         "types": [
-            "vless",
             "ss",
+            "vless",
             "trojan"
         ],
         "title": "Free V2ray",
@@ -6182,9 +6184,11 @@
         "logo": ""
     },
     "vaiking_vpn": {
-        "types": [],
-        "title": "Unknown Title",
-        "logo": ""
+        "types": [
+            "vless"
+        ],
+        "title": "Vaiking Vpn|💣|وایکینگ وی پی",
+        "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/vaiking_vpn.jpg"
     },
     "vasl_bashim": {
         "types": [],
@@ -7490,9 +7494,9 @@
     },
     "zerobaipiao": {
         "types": [
-            "trojan",
             "ss",
-            "vmess"
+            "vmess",
+            "trojan"
         ],
         "title": "免费节点 🏆【1小时前更新】",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/zerobaipiao.jpg"

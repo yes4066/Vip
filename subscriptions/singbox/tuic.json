@@ -107,13 +107,6 @@
                 "URL-TEST",
                 "🇫🇮 FI | 🟢 | tuic | @goodbyefiltering | 5",
                 "❔ XX | 🟢 | tuic | @goodbyefiltering | 6",
-                "🇬🇧 GB | 🟢 | tuic | @noforcedheaven | 0",
-                "🇬🇧 GB | 🟢 | tuic | @vipv2rey | 25",
-                "🇬🇧 GB | 🟢 | tuic | @vipv2rey | 26",
-                "❔ XX | 🟢 | tuic | @vipv2rey | 27",
-                "🇩🇪 DE | 🟢 | tuic | @vipv2rey | 28",
-                "🇸🇪 SE | 🟢 | tuic | @vipv2rey | 30",
-                "🇸🇪 SE | 🟢 | tuic | @vipv2rey | 31",
                 "🇳🇱 NL | 🟢 | tuic | @vipv2rey | 35",
                 "🇸🇪 SE | 🟢 | tuic | @vipv2rey | 36"
             ]
@@ -124,13 +117,6 @@
             "outbounds": [
                 "🇫🇮 FI | 🟢 | tuic | @goodbyefiltering | 5",
                 "❔ XX | 🟢 | tuic | @goodbyefiltering | 6",
-                "🇬🇧 GB | 🟢 | tuic | @noforcedheaven | 0",
-                "🇬🇧 GB | 🟢 | tuic | @vipv2rey | 25",
-                "🇬🇧 GB | 🟢 | tuic | @vipv2rey | 26",
-                "❔ XX | 🟢 | tuic | @vipv2rey | 27",
-                "🇩🇪 DE | 🟢 | tuic | @vipv2rey | 28",
-                "🇸🇪 SE | 🟢 | tuic | @vipv2rey | 30",
-                "🇸🇪 SE | 🟢 | tuic | @vipv2rey | 31",
                 "🇳🇱 NL | 🟢 | tuic | @vipv2rey | 35",
                 "🇸🇪 SE | 🟢 | tuic | @vipv2rey | 36"
             ],
@@ -185,137 +171,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "[2a12:5940:71f8::2]",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | tuic | @noforcedheaven | 0",
-            "type": "tuic",
-            "server": "134.209.28.89.sslip.io",
-            "server_port": 54773,
-            "uuid": "2f77527e-678c-4af6-9a0a-30823885bd53",
-            "password": "2f77527e-678c-4af6-9a0a-30823885bd53",
-            "congestion_control": "cubic",
-            "udp_relay_mode": "native",
-            "tls": {
-                "enabled": true,
-                "server_name": "134.209.28.89.sslip.io",
-                "insecure": false,
-                "alpn": [
-                    "h3"
-                ]
-            }
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | tuic | @vipv2rey | 25",
-            "type": "tuic",
-            "server": "64.176.186.193",
-            "server_port": 443,
-            "uuid": "d1bb3aae-ace9-4b0f-9ae5-85ab73acbb43",
-            "password": "Mahsaamini",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "tls": {
-                "enabled": true,
-                "server_name": "64.176.186.193",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | tuic | @vipv2rey | 26",
-            "type": "tuic",
-            "server": "64.176.191.133",
-            "server_port": 443,
-            "uuid": "d1bb3aae-ace9-4b0f-9ae5-85ab73acbb43",
-            "password": "Mahsaamini",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "tls": {
-                "enabled": true,
-                "server_name": "64.176.191.133",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | tuic | @vipv2rey | 27",
-            "type": "tuic",
-            "server": "tuic4.cpionline.us",
-            "server_port": 443,
-            "uuid": "d1bb3aae-ace9-4b0f-9ae5-85ab73acbb43",
-            "password": "Mahsaamini",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "tls": {
-                "enabled": true,
-                "server_name": "tuic4.cpionline.us",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | tuic | @vipv2rey | 28",
-            "type": "tuic",
-            "server": "136.244.88.153",
-            "server_port": 443,
-            "uuid": "38e38f61-b1dd-4b34-90d0-f6222fd7393f",
-            "password": "e7b1c11f0d40cc95",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.apple.com",
-                "insecure": true,
-                "alpn": [
-                    "h3"
-                ]
-            }
-        },
-        {
-            "tag": "🇸🇪 SE | 🟢 | tuic | @vipv2rey | 30",
-            "type": "tuic",
-            "server": "70.34.197.98",
-            "server_port": 443,
-            "uuid": "87bc1693-8860-41d7-acf4-e6edf49abbbb",
-            "password": "crivAv10hAdr-fop4Lne",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "tls": {
-                "enabled": true,
-                "server_name": "70.34.197.98",
-                "insecure": true,
-                "alpn": [
-                    "h3",
-                    "spdy/3.1"
-                ]
-            }
-        },
-        {
-            "tag": "🇸🇪 SE | 🟢 | tuic | @vipv2rey | 31",
-            "type": "tuic",
-            "server": "70.34.208.3",
-            "server_port": 443,
-            "uuid": "87bc1693-8860-41d7-acf4-e6edf49abbbb",
-            "password": "crivAv10hAdr-fop4Lne",
-            "congestion_control": "bbr",
-            "udp_relay_mode": "native",
-            "tls": {
-                "enabled": true,
-                "server_name": "70.34.208.3",
                 "insecure": true,
                 "alpn": [
                     "h3",

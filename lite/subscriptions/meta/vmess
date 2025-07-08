@@ -70,7 +70,6 @@ proxies:
   - {"name":"🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8","type":"vmess","server":"194.9.172.65","port":443,"cipher":"auto","uuid":"8d90c129-4156-4d6c-9115-24df25f26a02","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"\/linkws","headers":{"Host":"beyonddbc.sbs"}}}
   - {"name":"🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27","type":"vmess","server":"195.85.59.21","port":443,"cipher":"auto","uuid":"f24bba0f-8656-44f8-b21e-a0e3a190c4c5","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"\/www.31000oooowe2.bf\/df97b21e-3943-4865-af18-b5ea9676b037","headers":{"Host":"ury-unit-c030ehei8.poget71138.workers.dev"}}}
   - {"name":"❔ XX | 🔴 | vmess | @vpray3 | 3","type":"vmess","server":"tun.aloshamsi.fun","port":22452,"cipher":"auto","uuid":"f730a0a8-437d-455a-b898-f5c9ff9f8d16","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 US | 🔴 | vmess | @zerobaipiao | 25","type":"vmess","server":"wWSxcdFR5.999834.XYz","port":80,"cipher":"auto","uuid":"cdec9d57-661d-456a-bbf2-b4c38e9c6711","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"\/9dZlJLjHHrL0VwSolbqFpg","headers":{"Host":"wwsxcdfr5.999834.xyz"}}}
 
 proxy-groups:
   - name: PSG-MANUAL
@@ -131,7 +130,6 @@ proxy-groups:
     - '🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8'
     - '🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27'
     - '❔ XX | 🔴 | vmess | @vpray3 | 3'
-    - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 25'
 
   - name: PSG-AUTO
     type: url-test
@@ -191,7 +189,6 @@ proxy-groups:
     - '🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8'
     - '🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27'
     - '❔ XX | 🔴 | vmess | @vpray3 | 3'
-    - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 25'
 
   - name: PSG-FALLBACK
     type: fallback
@@ -251,7 +248,6 @@ proxy-groups:
     - '🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8'
     - '🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27'
     - '❔ XX | 🔴 | vmess | @vpray3 | 3'
-    - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 25'
 
 rule-providers:
   ir_domains: {type: http, format: text, behavior: domain, path: ./ruleset/ir.txt, url: https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ir.txt, interval: 86400}

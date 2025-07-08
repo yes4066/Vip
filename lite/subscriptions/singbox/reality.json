@@ -106,11 +106,11 @@
             "outbounds": [
                 "URL-TEST",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 98",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 0",
+                "🇺🇸 US | 🟢 | vless | @entrynet | 17",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇩🇪 DE | 🟢 | vless | @fastshovpn | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
@@ -169,11 +169,11 @@
             "type": "urltest",
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 98",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 0",
+                "🇺🇸 US | 🟢 | vless | @entrynet | 17",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇩🇪 DE | 🟢 | vless | @fastshovpn | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
@@ -270,29 +270,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 98",
-            "type": "vless",
-            "server": "3.128.181.167",
-            "server_port": 4433,
-            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "stackoverflow.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "random"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
-                    "short_id": "f785b38130e64177"
-                }
-            }
-        },
-        {
             "tag": "🇫🇷 FR | 🟢 | vless | @configasli | 6",
             "type": "vless",
             "server": "172.232.33.18",
@@ -385,6 +362,29 @@
                     "enabled": true,
                     "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
                     "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @entrynet | 17",
+            "type": "vless",
+            "server": "34.216.114.245",
+            "server_port": 4433,
+            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
+                    "short_id": "f785b38130e64177"
                 }
             }
         },
