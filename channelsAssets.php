@@ -23,7 +23,7 @@ const FINAL_ASSETS_DIR = __DIR__ . '/channelsData';
 const TEMP_BUILD_DIR = __DIR__ . '/temp_build';
 const HTML_CACHE_DIR = TEMP_BUILD_DIR . '/html_cache';
 const LOGOS_DIR_NAME = 'logos';
-const GITHUB_LOGO_BASE_URL = 'https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos';
+const GITHUB_LOGO_BASE_URL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos';
 
 // --- 1. Initial Checks and Setup ---
 
