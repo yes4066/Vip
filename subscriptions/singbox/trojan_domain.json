@@ -107,13 +107,11 @@
                 "URL-TEST",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇺🇸 US | 🟢 | trojan | @configshubplus | 16",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 15",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "❔ XX | 🔴 | trojan | @hacknashid | 0",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 11",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -126,7 +124,8 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @tenzovpn | 0",
-                "❔ XX | 🟢 | trojan | @v2rayngconfig | 41"
+                "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
+                "❔ XX | 🟢 | trojan | @xrayzxn | 4"
             ]
         },
         {
@@ -135,13 +134,11 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇺🇸 US | 🟢 | trojan | @configshubplus | 16",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 15",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "❔ XX | 🔴 | trojan | @hacknashid | 0",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 11",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -154,7 +151,8 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @tenzovpn | 0",
-                "❔ XX | 🟢 | trojan | @v2rayngconfig | 41"
+                "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
+                "❔ XX | 🟢 | trojan | @xrayzxn | 4"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -210,29 +208,6 @@
                 "path": "/trojan-ntls",
                 "headers": {
                     "Host": "asia.artunnel57.host"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @configshubplus | 16",
-            "type": "trojan",
-            "server": "arvind.ns.cloudflare.com",
-            "server_port": 443,
-            "password": "Aimer",
-            "tls": {
-                "enabled": true,
-                "server_name": "epml.ambercc.filegear-sg.me",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "epml.ambercc.filegear-sg.me"
                 }
             }
         },
@@ -318,29 +293,6 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 11",
-            "type": "trojan",
-            "server": "104.21.25.480",
-            "server_port": 443,
-            "password": "o9p0q1r2-3456-7bcd-8abc-9012abcdef56",
-            "tls": {
-                "enabled": true,
-                "server_name": "104.21.25.480",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/trojan",
-                "headers": {
-                    "Host": "104.21.25.480"
                 }
             }
         },
@@ -592,6 +544,29 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🟢 | trojan | @xrayzxn | 4",
+            "type": "trojan",
+            "server": "amin.karkas1.ir",
+            "server_port": 443,
+            "password": "11ae0edd-2f63-4495-8683-037abbda9986",
+            "tls": {
+                "enabled": true,
+                "server_name": "amin.karkas1.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/6vuNVgOFnqUEvj0sNkGkxxW7",
+                "headers": {
+                    "Host": "amin.karkas1.ir"
                 }
             }
         }

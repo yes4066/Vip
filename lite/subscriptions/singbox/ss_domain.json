@@ -105,12 +105,13 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
+                "🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 7",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
+                "🇬🇧 GB | 🟢 | ss | @fastkanfig | 14",
                 "🇬🇧 GB | 🟢 | ss | @freeiranianv2rey | 16",
-                "🇬🇧 GB | 🟢 | ss | @kanfig_majani | 11",
+                "🇺🇸 US | 🟢 | ss | @freenettir | 24",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 2",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
-                "🇬🇧 GB | 🟢 | ss | @proxy_v2box | 1",
                 "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
                 "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
                 "🇵🇱 PL | 🟢 | ss | @shadowsockskeys | 16",
@@ -126,12 +127,13 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
+                "🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 7",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
+                "🇬🇧 GB | 🟢 | ss | @fastkanfig | 14",
                 "🇬🇧 GB | 🟢 | ss | @freeiranianv2rey | 16",
-                "🇬🇧 GB | 🟢 | ss | @kanfig_majani | 11",
+                "🇺🇸 US | 🟢 | ss | @freenettir | 24",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 2",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
-                "🇬🇧 GB | 🟢 | ss | @proxy_v2box | 1",
                 "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
                 "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
                 "🇵🇱 PL | 🟢 | ss | @shadowsockskeys | 16",
@@ -163,12 +165,28 @@
             "type": "dns"
         },
         {
+            "tag": "🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 7",
+            "type": "shadowsocks",
+            "server": "series-a2-me.varzesh360.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Bog0ELmMM9DSxDdQ"
+        },
+        {
             "tag": "❔ XX | 🟢 | ss | @chestertm | 12",
             "type": "shadowsocks",
             "server": "freakconfig94.usecharge.ir",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "W74XFALLLuw6m5IA"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @fastkanfig | 14",
+            "type": "shadowsocks",
+            "server": "series-a2.samanehha.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "mps3FwmDjLrWaOVg"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @freeiranianv2rey | 16",
@@ -179,12 +197,12 @@
             "password": "WstuSnlu4ieA9M0L"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @kanfig_majani | 11",
+            "tag": "🇺🇸 US | 🟢 | ss | @freenettir | 24",
             "type": "shadowsocks",
-            "server": "series-a2.samanehha.co",
-            "server_port": 443,
+            "server": "h110vpnus.outlinekeys.net",
+            "server_port": 9483,
             "method": "chacha20-ietf-poly1305",
-            "password": "mps3FwmDjLrWaOVg"
+            "password": "CGH2Enq5gPYcMZUBOIiTvu"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 2",
@@ -201,14 +219,6 @@
             "server_port": 8388,
             "method": "chacha20-ietf-poly1305",
             "password": "NTdkZ"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @proxy_v2box | 1",
-            "type": "shadowsocks",
-            "server": "series-a2-me.varzesh360.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "Bog0ELmMM9DSxDdQ"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
