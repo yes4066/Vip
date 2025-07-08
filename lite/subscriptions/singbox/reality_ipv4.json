@@ -112,6 +112,7 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇫🇷 FR | 🟢 | vless | @freeconfigsplus | 19",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
+                "🇫🇷 FR | 🟢 | vless | @getconfigir | 18",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
@@ -129,7 +130,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇩🇪 DE | 🟢 | vless | @vpnkafing | 1",
-                "🇩🇪 DE | 🟢 | vless | @vpnstable | 19",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @x4azadi | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
@@ -146,6 +146,7 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇫🇷 FR | 🟢 | vless | @freeconfigsplus | 19",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
+                "🇫🇷 FR | 🟢 | vless | @getconfigir | 18",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
@@ -163,7 +164,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇩🇪 DE | 🟢 | vless | @vpnkafing | 1",
-                "🇩🇪 DE | 🟢 | vless | @vpnstable | 19",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @x4azadi | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
@@ -350,6 +350,29 @@
                     "enabled": true,
                     "public_key": "GGlKs0cQDaQoDkiDlpeIWE-h0K3ohsHr7u9B3A9GODU",
                     "short_id": "17ce7de25d262bbe"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | vless | @getconfigir | 18",
+            "type": "vless",
+            "server": "103.249.133.79",
+            "server_port": 58440,
+            "uuid": "656ddb02-25f9-4a85-a452-0e637e347f45",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.latimes.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "9qIfswg5ImAKqsb7k_8Zlyj-EcPacIvEfZnhEkYktHg",
+                    "short_id": "3bba58385bf1ad"
                 }
             }
         },
@@ -773,29 +796,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray,@ArV2ray"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vpnstable | 19",
-            "type": "vless",
-            "server": "51.38.98.69",
-            "server_port": 443,
-            "uuid": "6b690c69-7301-44c4-81e8-9d5d7e8263a6",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "-3sZE2OPDhkNtxufF2YqPmoa5hqVna5zalfJfrUiMm0",
-                    "short_id": "ecd6615548c2bddb"
-                }
             }
         },
         {

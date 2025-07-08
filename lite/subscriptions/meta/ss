@@ -1,13 +1,3 @@
-# --------------------------------------------------
-#          CLASH META - UNIVERSAL TEMPLATE
-# --------------------------------------------------
-# This template is structurally correct and efficient for both
-# Clash and Clash.Meta clients. It avoids repetition by using
-# the 'use' keyword, which is a Clash.Meta feature. Standard
-# Clash clients will simply ignore it and fall back to the full
-# proxy list where it's defined.
-# --------------------------------------------------
-
 mixed-port: 7890
 allow-lan: true
 mode: rule
@@ -26,7 +16,6 @@ dns:
   use-hosts: true
   nameserver: [8.8.4.4, 1.0.0.1, "https://1.0.0.1/dns-query"]
 
-# The placeholder for your full list of proxies.
 proxies:
   {"name":"🇩🇪 DE | 🟢 | ss | @argo_vpn1 | 8","type":"ss","server":"89.35.119.87","port":5904,"password":"5TZnwPb23pQS39lIucspJw","cipher":"chacha20-ietf-poly1305"}
   {"name":"🇦🇹 AT | 🟢 | ss | @arv2ra | 7","type":"ss","server":"45.138.74.160","port":7261,"password":"pZvwP17Nlz2z6jsYnVgZgf","cipher":"chacha20-ietf-poly1305"}
@@ -77,43 +66,37 @@ proxies:
   {"name":"🇳🇱 NL | 🟢 | ss | @vpnfreeaccounts | 4","type":"ss","server":"172.233.46.80","port":80,"password":"M899a8syUTvFqQJCLpAZP8","cipher":"chacha20-ietf-poly1305"}
   {"name":"🇨🇳 CN | 🟢 | ss | @wxdy666 | 0","type":"ss","server":"cdn.ljr.li","port":62018,"password":"4c26faa1-da91-4e8e-b81e-407aa948a9f5","cipher":"aes-256-gcm"}
 
-# This section defines external rule files to keep the main config clean.
 rule-providers:
   ir_domains:
     type: http
     behavior: domain
     url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ir.txt"
     path: ./ruleset/ir.txt
-    interval: 86400 # Update once a day
+    interval: 86400
   ir_cidr:
     type: http
     behavior: ipcidr
     url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ircidr.txt"
     path: ./ruleset/ircidr.txt
-    interval: 86400 # Update once a day
+    interval: 86400
 
 proxy-groups:
-  # This is the main group you will interact with in your Clash client.
   - name: 🚀 PROXY
     type: select
     proxies:
       - ♻️ AUTO
       - 📉 Fallback
       - DIRECT
-      - All-Proxies # A sub-group to manually select any server
+      - All-Proxies
 
-  # Automatic test to select the server with the lowest latency.
   - name: ♻️ AUTO
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50 # Prevents switching for minor latency changes
-    # 'use' is a Clash.Meta feature to include all proxies from the 'All-Proxies' group.
-    # This is much more efficient than listing them all again.
+    tolerance: 50 
     use:
       - All-Proxies
 
-  # Automatic fallback to a working server if the current one fails.
   - name: 📉 Fallback
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -121,8 +104,6 @@ proxy-groups:
     use:
       - All-Proxies
       
-  # This group is a container for all your proxies.
-  # This avoids repeating the full proxy list multiple times.
   - name: All-Proxies
     type: select
     proxies:
@@ -175,20 +156,13 @@ proxy-groups:
       - '🇳🇱 NL | 🟢 | ss | @vpnfreeaccounts | 4'
       - '🇨🇳 CN | 🟢 | ss | @wxdy666 | 0'
 
-# Routing rules are processed from top to bottom.
 rules:
-  # --- Essential Direct Rules (Keep at the top) ---
   - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
   - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve  # Clash Fake-IP range
-  
-  # --- Rules for Iranian traffic (using the providers defined above) ---
   - RULE-SET,ir_domains,DIRECT
   - RULE-SET,ir_cidr,DIRECT
   - GEOIP,IR,DIRECT
-  
-  # --- Final catch-all rule ---
-  # All other traffic that doesn't match the rules above will be handled by the main proxy group.
   - MATCH,🚀 PROXY

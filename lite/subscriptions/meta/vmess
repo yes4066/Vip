@@ -1,13 +1,3 @@
-# --------------------------------------------------
-#          CLASH META - UNIVERSAL TEMPLATE
-# --------------------------------------------------
-# This template is structurally correct and efficient for both
-# Clash and Clash.Meta clients. It avoids repetition by using
-# the 'use' keyword, which is a Clash.Meta feature. Standard
-# Clash clients will simply ignore it and fall back to the full
-# proxy list where it's defined.
-# --------------------------------------------------
-
 mixed-port: 7890
 allow-lan: true
 mode: rule
@@ -26,7 +16,6 @@ dns:
   use-hosts: true
   nameserver: [8.8.4.4, 1.0.0.1, "https://1.0.0.1/dns-query"]
 
-# The placeholder for your full list of proxies.
 proxies:
   {"name":"🇮🇷 IR | 🔴 | vmess | @angus_vpn | 6","type":"vmess","server":"tu.shoptx.sbs","port":15400,"cipher":"auto","uuid":"cc660614-1172-4988-9647-3846502d0e4f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   {"name":"❔ XX | 🔴 | vmess | @armodchannel | 62","type":"vmess","server":"asia.artunnel57.host","port":80,"cipher":"auto","uuid":"65e44501-defd-4609-a4e3-7028dc417b50","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess-ntls","headers":{"Host":"asia.artunnel57.host"}}}
@@ -83,43 +72,37 @@ proxies:
   {"name":"🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27","type":"vmess","server":"195.85.59.21","port":443,"cipher":"auto","uuid":"f24bba0f-8656-44f8-b21e-a0e3a190c4c5","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/www.31000oooowe2.bf/df97b21e-3943-4865-af18-b5ea9676b037","headers":{"Host":"ury-unit-c030ehei8.poget71138.workers.dev"}}}
   {"name":"❔ XX | 🔴 | vmess | @vpray3 | 3","type":"vmess","server":"tun.aloshamsi.fun","port":22452,"cipher":"auto","uuid":"f730a0a8-437d-455a-b898-f5c9ff9f8d16","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
 
-# This section defines external rule files to keep the main config clean.
 rule-providers:
   ir_domains:
     type: http
     behavior: domain
     url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ir.txt"
     path: ./ruleset/ir.txt
-    interval: 86400 # Update once a day
+    interval: 86400
   ir_cidr:
     type: http
     behavior: ipcidr
     url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ircidr.txt"
     path: ./ruleset/ircidr.txt
-    interval: 86400 # Update once a day
+    interval: 86400
 
 proxy-groups:
-  # This is the main group you will interact with in your Clash client.
   - name: 🚀 PROXY
     type: select
     proxies:
       - ♻️ AUTO
       - 📉 Fallback
       - DIRECT
-      - All-Proxies # A sub-group to manually select any server
+      - All-Proxies
 
-  # Automatic test to select the server with the lowest latency.
   - name: ♻️ AUTO
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50 # Prevents switching for minor latency changes
-    # 'use' is a Clash.Meta feature to include all proxies from the 'All-Proxies' group.
-    # This is much more efficient than listing them all again.
+    tolerance: 50 
     use:
       - All-Proxies
 
-  # Automatic fallback to a working server if the current one fails.
   - name: 📉 Fallback
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -127,8 +110,6 @@ proxy-groups:
     use:
       - All-Proxies
       
-  # This group is a container for all your proxies.
-  # This avoids repeating the full proxy list multiple times.
   - name: All-Proxies
     type: select
     proxies:
@@ -187,20 +168,13 @@ proxy-groups:
       - '🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27'
       - '❔ XX | 🔴 | vmess | @vpray3 | 3'
 
-# Routing rules are processed from top to bottom.
 rules:
-  # --- Essential Direct Rules (Keep at the top) ---
   - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
   - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve  # Clash Fake-IP range
-  
-  # --- Rules for Iranian traffic (using the providers defined above) ---
   - RULE-SET,ir_domains,DIRECT
   - RULE-SET,ir_cidr,DIRECT
   - GEOIP,IR,DIRECT
-  
-  # --- Final catch-all rule ---
-  # All other traffic that doesn't match the rules above will be handled by the main proxy group.
   - MATCH,🚀 PROXY
