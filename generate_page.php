@@ -64,46 +64,33 @@ function getFlags(string $country_code): string {
 
 function process_files_to_structure(array $files): array {
     $structure = [];
-    foreach ($files as $category => $paths) {
-        foreach ($paths as $path) {
-            $parts = explode('/', $path);
-            // Ensure the path has enough parts to determine type and name
-            // Example: subscriptions/clash/my-config.txt -> type=clash, name=my-config
-            // Example: subscriptions/xray/base64/mix -> type=xray, name=mix (if base64 is a subfolder)
-            // We need to adjust this logic if 'base64' is part of the type, not a subfolder.
-            // For now, let's assume the structure is always category/type/name.
-            // If 'base64' is a protocol, it needs to be handled differently.
-            // Based on the example, 'xray/base64/mix', 'mix' is the name and 'xray' is the type.
-            // The 'base64' part is an intermediary directory.
+    foreach ($files as $category_key => $paths) { // $category_key is 'Standard' or 'Lite'
+        // Get the base directory for this category (e.g., 'PROJECT_ROOT/subscriptions')
+        $base_dir_relative = str_replace(PROJECT_ROOT . '/', '', SCAN_DIRECTORIES[$category_key]);
+        
+        foreach ($paths as $path) { // $path is like 'subscriptions/clash/my-config.txt'
+            // Remove the base directory prefix to get the path relative to 'subscriptions'
+            // Example: $path = 'subscriptions/location/us.txt'
+            // $base_dir_relative = 'subscriptions'
+            // $relative_path_from_base = 'location/us.txt'
+            $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
             
-            // Let's refine how type and name are extracted based on the structure.
-            // If path is like 'subscriptions/xray/base64/mix', we want type 'xray' and name 'mix'.
-            // If path is like 'subscriptions/clash/my-clash-config', we want type 'clash' and name 'my-clash-config'.
+            $parts = explode('/', $relative_path_from_base);
             
-            $relative_to_category_dir = str_replace(dirname(SCAN_DIRECTORIES[$category]) . '/', '', $path);
-            $path_segments = explode('/', $relative_to_category_dir);
+            if (empty($parts[0])) continue; // Ensure there's at least a type folder
 
-            if (count($path_segments) >= 2) {
-                // The type is usually the first directory after the category root
-                // e.g., 'subscriptions/clash/my-config' -> 'clash' is type
-                $type = $path_segments[1]; 
-                $name = pathinfo($path, PATHINFO_FILENAME);
+            $type = $parts[0]; // The first part is always the type (e.g., 'clash', 'location', 'xray')
+            $name = pathinfo($path, PATHINFO_FILENAME); // The actual filename is the name
 
-                // Special handling for 'xray' where protocol is the 'name' and 'base64' is a folder
-                if ($type === 'xray' && count($path_segments) >= 3 && $path_segments[2] === 'base64') {
-                    $name = pathinfo($path, PATHINFO_FILENAME); // e.g., 'mix'
-                } elseif ($type === 'location') {
-                    $name = pathinfo($path, PATHINFO_FILENAME); // e.g., 'us'
-                } else {
-                    $name = pathinfo($path, PATHINFO_FILENAME);
-                }
-
-                $url = GITHUB_REPO_URL . '/' . $path;
-                $structure[$category][$type][$name] = $url;
-            }
+            $url = GITHUB_REPO_URL . '/' . $path;
+            $structure[$category_key][$type][$name] = $url;
         }
     }
-    foreach ($structure as &$categories) { ksort($categories); } // Sort types alphabetically
+    // Sort categories (e.g., 'Standard', 'Lite') and then types within each category
+    foreach ($structure as &$categories) {
+        ksort($categories); // Sort types alphabetically (clash, location, xray)
+    }
+    ksort($structure); // Sort top-level categories (Standard, Lite)
     return $structure;
 }
 
@@ -250,7 +237,7 @@ function generate_full_html(array $structured_data): string
                             <button class='copy-btn flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
                                 data-url='{$universal_link_b64}' title='Copy URL'>
                                 <svg class='copy-icon w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                                    <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
+                                    <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
                                     <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
                                 </svg>
                                 <svg class='check-icon w-5 h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
@@ -264,6 +251,7 @@ function generate_full_html(array $structured_data): string
 HTML;
 
     // --- Generate sections from structured data ---
+    // This loop will now dynamically generate all sections (Standard, Lite, and their types)
     foreach ($structured_data as $prefix => $categories) {
         if(empty($categories)) continue;
         $html .= "<h1 class='text-3xl font-semibold mt-8 mb-6 pl-3 border-l-4 border-indigo-600'>" . htmlspecialchars($prefix) . " Subscriptions</h1>\n";
