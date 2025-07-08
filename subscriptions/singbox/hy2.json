@@ -105,18 +105,14 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "🇫🇮 FI | 🟢 | hy2 | @noforcedheaven | 13",
-                "🇳🇱 NL | 🟢 | hy2 | @vipv2rey | 11",
-                "🇬🇧 GB | 🟢 | hy2 | @vipv2rey | 18"
+                "🇫🇮 FI | 🟢 | hy2 | @noforcedheaven | 13"
             ]
         },
         {
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "🇫🇮 FI | 🟢 | hy2 | @noforcedheaven | 13",
-                "🇳🇱 NL | 🟢 | hy2 | @vipv2rey | 11",
-                "🇬🇧 GB | 🟢 | hy2 | @vipv2rey | 18"
+                "🇫🇮 FI | 🟢 | hy2 | @noforcedheaven | 13"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -151,44 +147,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "46.62.152.236",
-                "insecure": true,
-                "alpn": [
-                    "h3"
-                ]
-            }
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | hy2 | @vipv2rey | 11",
-            "type": "hysteria2",
-            "server": "45.32.234.211",
-            "server_port": 443,
-            "password": "y0qochAspE u-HLfrip-",
-            "obfs": {
-                "type": "salamander",
-                "password": "2pU!"
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "Google.com",
-                "insecure": true,
-                "alpn": [
-                    "h3"
-                ]
-            }
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | hy2 | @vipv2rey | 18",
-            "type": "hysteria2",
-            "server": "66.245.192.15",
-            "server_port": 443,
-            "password": "9f73c619627d6a5d",
-            "obfs": {
-                "type": "salamander",
-                "password": "bd7f765e"
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "www.apple.com",
                 "insecure": true,
                 "alpn": [
                     "h3"
