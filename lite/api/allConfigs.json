@@ -392,8 +392,8 @@
             "title": "Proxy | V2ray | Config | Vpn | Hiddify | Nekobox | Segaro | پروکسی | فیلترشکن | ایرانسل | همراه اول | رایتل | سامانتل | مخابرات|",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/config_proxy.jpg"
         },
-        "type": "vmess",
-        "config": "vmess://eyJhZGQiOiIxMjcuMC4wLjEiLCJhaWQiOiIwIiwiaG9zdCI6IiIsImlkIjoiYWJiYWFjYy1iY2FhLWFiYWMtY2FiZC1iYmNiY2NhYmFjYWEiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6MTA4MCwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZmYzXHVmZTBmICB8IFx1ZDgzZFx1ZGQzNCB8IHZtZXNzIHwgQGNvbmZpZ19wcm94eSB8IDg2In0"
+        "type": "vless",
+        "config": "vless://09c6831b-5c68-428b-ddc5-ca0424a398b9@151.101.66.219:443?security=tls&sni=speedtest.net&type=ws&host=i-am-melo.com&path=%2F%40melov2ray%2Fws%3Fed%3D2048&alpn=h2%2Chttp%2F1.1#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40config_proxy%20%7C%2081"
     },
     {
         "channel": {
@@ -465,7 +465,7 @@
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/configshubplus.jpg"
         },
         "type": "vless",
-        "config": "vless://7fc993f5-7cd7-4485-9e6f-1f7c5160c910@18.220.23.41:2222?encryption=none&security=none&type=tcp&headerType=none#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40configshubplus%20%7C%2019"
+        "config": "vless://ea286109-d20f-415e-849e-4af20ab04b65@135.148.152.107:443?security=tls&sni=147135001195.sec22org.com&type=tcp&alpn=h2%2Chttp%2F1.1&allowInsecure=1#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40configshubplus%20%7C%2019"
     },
     {
         "channel": {
@@ -1311,7 +1311,7 @@
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/getconfigir.jpg"
         },
         "type": "vless",
-        "config": "vless://TELEGRAM-NUFiLTER@104.18.26.90:8080?path=%2Ftelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%2Ctelegram-NUFiLTER%3Fed%3D8880&security=none&encryption=none&host=kk25.4qwertyuiopasdfghjklzxcvbnmmnbvcxzlkjhgfdsapoiuytrewq1234567890.pro.&type=ws#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40getconfigir%20%7C%2017"
+        "config": "vless://d1237c01-58b5-48f9-8a27-8a396b7f5422@104.18.209.108:80?path=%2F%3Fed%3D2560&security=none&encryption=none&host=ey.nazanin.dpdns.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40getconfigir%20%7C%2018"
     },
     {
         "channel": {
@@ -1450,6 +1450,15 @@
     },
     {
         "channel": {
+            "username": "hope_net",
+            "title": "🕊 Hope Net",
+            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/hope_net.jpg"
+        },
+        "type": "vmess",
+        "config": "vmess://eyJhZGQiOiI4NS4xMzMuMjUzLjE4MyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJhYmIwYjA1ZC00NjgzLTQyZjEtOTgxZi1mMzUzNzAyNmFjMmQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcLyIsInBvcnQiOiIxNDA4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiItLS0iLCJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZGVlXHVkODNjXHVkZGY3IElSIHwgXHVkODNkXHVkZDM0IHwgdm1lc3MgfCBAaG9wZV9uZXQgfCAyMCJ9"
+    },
+    {
+        "channel": {
             "username": "hopev2ray",
             "title": "𝐇𝐨𝐩𝐞 𝐯𝟐𝐫𝐚𝐲",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/hopev2ray.jpg"
@@ -1535,8 +1544,8 @@
             "title": "IP_CF | V2ray Config Pool",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/ip_cf_config.jpg"
         },
-        "type": "vless",
-        "config": "vless://109cb8f9-64b3-4e7b-9d0a-005d2ef49f2f@uk1.lemoex.blog:443?encryption=none&security=tls&sni=uk1.lemoex.blog&fp=random&type=ws&host=uk1.lemoex.blog&path=%2F22780%2Fwsmmad#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40ip_cf_config%20%7C%2013"
+        "type": "ss",
+        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2OU1VaWk3VkR3TXFoN0h6@admin.c4.webramz.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40ip_cf_config%20%7C%2013"
     },
     {
         "channel": {
@@ -1932,7 +1941,7 @@
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/lranonline_new.jpg"
         },
         "type": "vless",
-        "config": "vless://62dcd14e-5828-4a02-a888-b67a91c3e488@151.101.3.8:80?mode=auto&path=%2FTelegram--ip_configs--Join--ip_configs--Telegram--ip_configs--Join--ip_configs--Telegram--ip_configs--Join--ip_configs--Telegram--ip_configs--Join--ip_configs--Telegram--ip_configs--Join--ip_configs&security=none&encryption=none&host=arasan.io&type=xhttp#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40lranonline_new%20%7C%208"
+        "config": "vless://62dcd14e-5828-4a02-a888-b67a91c3e488@151.101.3.8:80?mode=auto&path=%2FTelegram--ip_configs--Join--ip_configs--Telegram--ip_configs--Join--ip_configs--Telegram--ip_configs--Join--ip_configs--Telegram--ip_configs--Join--ip_configs--Telegram--ip_configs--Join--ip_configs&security=none&encryption=none&host=arasan.io&type=xhttp#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40lranonline_new%20%7C%207"
     },
     {
         "channel": {
@@ -2688,7 +2697,7 @@
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/proxy_hiddfy.jpg"
         },
         "type": "vless",
-        "config": "vless://f73e9865-80c3-45ba-8391-597139c37bdc@91.99.129.82:443?security=none&encryption=none&host=exo.ir&headerType=http&type=tcp#%F0%9F%87%A9%F0%9F%87%AA%20DE%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40proxy_hiddfy%20%7C%205"
+        "config": "vless://f73e9865-80c3-45ba-8391-597139c37bdc@91.99.129.82:443?security=none&encryption=none&host=exo.ir&headerType=http&type=tcp#%F0%9F%87%A9%F0%9F%87%AA%20DE%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40proxy_hiddfy%20%7C%204"
     },
     {
         "channel": {
@@ -2714,8 +2723,8 @@
             "title": "VPNs Proxy Mtproto",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/proxy_mtproto_vpns_free.jpg"
         },
-        "type": "ss",
-        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a1.samanehha.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40proxy_mtproto_vpns_free%20%7C%208"
+        "type": "reality",
+        "config": "vless://b163c030-ca39-4117-bfbd-895c124d5551@real-all3.sdcards.ir:8501?security=reality&encryption=none&pbk=OJ0wA5wp55uZdD16dutlTZvx1x-rbMMXmiO9D_MMCHI&headerType=none&fp=firefox&type=tcp&sni=tgju.org&sid=e701a013553059ba#%F0%9F%87%A9%F0%9F%87%AA%20DE%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40proxy_mtproto_vpns_free%20%7C%209"
     },
     {
         "channel": {
@@ -3022,15 +3031,6 @@
         },
         "type": "vless",
         "config": "vless://4088e698-69fd-4d15-98bc-f1fe4c071642@104.21.73.239:443?path=%2F4McLR3NKFOydbxDs%2FMTguMTk5LjIxMy4yMDE&security=tls&alpn=http%2F1.1&encryption=none&host=digitalscientificresearchgroup.ir&fp=randomized&type=ws&sni=DigITALsciENTIfiCrESeARCHGRoup.IR#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40server_housing03%20%7C%202"
-    },
-    {
-        "channel": {
-            "username": "server_nekobox",
-            "title": "فیلتر شکن v2ray",
-            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/server_nekobox.jpg"
-        },
-        "type": "ss",
-        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2OU1VaWk3VkR3TXFoN0h6@admin.c4.webramz.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40server_nekobox%20%7C%2013"
     },
     {
         "channel": {
@@ -3579,7 +3579,7 @@
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2ray_configs_pool.jpg"
         },
         "type": "vless",
-        "config": "vless://003bbc5c-6a2f-46d4-a484-feb67f305a4e@109.122.241.46:2099?security=none&encryption=none&host=speedtest.net&headerType=http&type=tcp#%F0%9F%87%AE%F0%9F%87%B7%20IR%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40v2ray_configs_pool%20%7C%2017"
+        "config": "vless://89b3cbba-e6ac-485a-9481-976a0415eab9@45.12.30.101:80?encryption=none&security=none&type=ws&host=uuhUHYygEsdFGH.UYHJHGvgFcjGUJhbUIlbVFDxDxM.xyz&path=Telegram%3A%40ShadowProxy66%2F%3Fed%3D2560#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40v2ray_configs_pool%20%7C%209"
     },
     {
         "channel": {
@@ -3745,6 +3745,24 @@
     },
     {
         "channel": {
+            "username": "v2rayang201",
+            "title": "🚀وی پی ان / V2rayNG🚀",
+            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayang201.jpg"
+        },
+        "type": "ss",
+        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a1.samanehha.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40v2rayang201%20%7C%207"
+    },
+    {
+        "channel": {
+            "username": "v2raybe",
+            "title": "خریدوفروش فیلتر شکن V2RAY",
+            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2raybe.jpg"
+        },
+        "type": "ss",
+        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1MTdUM0J2cFlhYWl1VzJj@series-a2-mec.samanehha.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40v2raybe%20%7C%206"
+    },
+    {
+        "channel": {
             "username": "v2raycg",
             "title": "𝗩𝟮𝗿𝗮𝘆 𝗖𝗚",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2raycg.jpg"
@@ -3758,8 +3776,8 @@
             "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2raych.jpg"
         },
-        "type": "reality",
-        "config": "vless://08f7c98e-506c-4aca-a3ab-6fc99d015555@148.113.143.109:2053?security=reality&sni=sourceforge.net&type=grpc&serviceName=2053vless&fp=chrome&pbk=nr4qs7JSJShNXIpWKNGReZXaFw910k1X93NDevapa0E&sid=5640288dca4f8519#%F0%9F%87%A8%F0%9F%87%A6%20CA%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40v2raych%20%7C%2019"
+        "type": "vless",
+        "config": "vless://09c6831b-5c68-428b-ddc5-ca0424a398b9@151.101.194.219:443?security=tls&sni=speedtest.net&type=ws&host=i-am-melo.com&path=%2F%40melov2ray%2Fws%3Fed%3D2048&alpn=h2%2Chttp%2F1.1#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40v2raych%20%7C%2019"
     },
     {
         "channel": {
@@ -3785,8 +3803,8 @@
             "title": "v2ray_freeserver پروکسی",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayfree_server.jpg"
         },
-        "type": "ss",
-        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptcHMzRndtRGpMcldhT1Zn@series-a2.varzesh360.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40v2rayfree_server%20%7C%2010"
+        "type": "vmess",
+        "config": "vmess://eyJhZGQiOiI1Mi42My4xOTYuMTU4IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6IjkwMDAzZTNiLTQ3MzctNDA3OS1hYWVjLTU5NjM5MDBmYWRjYiIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMzkyOTIiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiIsInBzIjoiXHVkODNjXHVkZGU2XHVkODNjXHVkZGZhIEFVIHwgXHVkODNkXHVkZDM0IHwgdm1lc3MgfCBAdjJyYXlmcmVlX3NlcnZlciB8IDExIn0"
     },
     {
         "channel": {
@@ -3822,7 +3840,7 @@
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayng_fast.jpg"
         },
         "type": "vless",
-        "config": "vless://1f431db3-1918-4e7b-a855-c93485e11694@104.16.104.151:80?path=%2F%3Fed%3D2560&security=&encryption=none&host=pari.parinazz.dpdns.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40v2rayng_fast%20%7C%201"
+        "config": "vless://1f431db3-1918-4e7b-a855-c93485e11694@104.16.104.151:80?path=%2F%3Fed%3D2560&security=&encryption=none&host=pari.parinazz.dpdns.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40v2rayng_fast%20%7C%200"
     },
     {
         "channel": {
@@ -4069,15 +4087,6 @@
     },
     {
         "channel": {
-            "username": "v2rayport",
-            "title": "V2ray | Xray - فیلترشکن",
-            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayport.jpg"
-        },
-        "type": "ss",
-        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxeE8yY3FQYXpxakdmQ2Zk@admin.c1.webramz.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40v2rayport%20%7C%2013"
-    },
-    {
-        "channel": {
             "username": "v2rayprotocol",
             "title": "V2raynG |outline | foxray | streisand | Nv | fair |رفع فیلتر",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayprotocol.jpg"
@@ -4258,15 +4267,6 @@
     },
     {
         "channel": {
-            "username": "v2source",
-            "title": "Free V2ray",
-            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2source.jpg"
-        },
-        "type": "vless",
-        "config": "vless://d2961a22-e833-4834-bac2-73e69a8b7830@type1.zdshop.ir:2095?path=%2F&security=none&encryption=none&host=tadrisonlin-tadrisonlin-tadrisonlin-tadrisonlin-tadrisonlinCD1.kiWiJuiCe.IR&type=httpupgrade#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40v2source%20%7C%2018"
-    },
-    {
-        "channel": {
             "username": "v2starvip",
             "title": "️Ｖ２ｓｔａｒ",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2starvip.jpg"
@@ -4424,8 +4424,8 @@
             "title": "Vista Pc (It _ja)",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/vistav2ray.jpg"
         },
-        "type": "vmess",
-        "config": "vmess://eyJhZGQiOiJuZXR0OTEuc2VydmVybmV0dC5zaG9wIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJ2YXJ6ZXNoMy5jb20iLCJpZCI6IjBiNjFjOTVjLTNhNzAtNDY1Mi04NGE4LTgzZDIxZjJiMWI4ZCIsIm5ldCI6InRjcCIsInBhdGgiOiJcLyIsInBvcnQiOiIxMDE5MCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiaHR0cCIsInYiOiIyIiwicHMiOiJcdWQ4M2NcdWRkZWVcdWQ4M2NcdWRkZjcgSVIgfCBcdWQ4M2RcdWRkMzQgfCB2bWVzcyB8IEB2aXN0YXYycmF5IHwgMTQifQ"
+        "type": "vless",
+        "config": "vless://6f690965-3be3-43bb-9331-3ead6efb20aa@104.18.26.90:80?encryption=none&security=none&type=ws&host=sib.sibzamini.dpdns.org&path=%2F%3Fed%3D2560#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40vistav2ray%20%7C%2013"
     },
     {
         "channel": {
@@ -4444,6 +4444,15 @@
         },
         "type": "vless",
         "config": "vless://153ee04c-dcc1-4ef8-a146-8fb31cec1f48@91.99.205.121:443?security=none&encryption=none&host=zula.ir&headerType=http&type=tcp#%F0%9F%87%A9%F0%9F%87%AA%20DE%20%7C%20%F0%9F%94%B4%20%7C%20vless%20%7C%20%40vmess_ir%20%7C%2019"
+    },
+    {
+        "channel": {
+            "username": "vmess_iran",
+            "title": "Vmess For Iran",
+            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/vmess_iran.jpg"
+        },
+        "type": "ss",
+        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxeE8yY3FQYXpxakdmQ2Zk@admin.c1.webramz.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40vmess_iran%20%7C%200"
     },
     {
         "channel": {
@@ -4825,15 +4834,6 @@
     },
     {
         "channel": {
-            "username": "vpnplusee_free",
-            "title": "Free vpn | V2rayng | Napsternetv",
-            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/vpnplusee_free.jpg"
-        },
-        "type": "vless",
-        "config": "vless://c9a57eb1-91d6-449a-9ce9-0c64277e6a39@ie1.lemoex.blog:443?encryption=none&security=tls&sni=ie1.lemoex.blog&fp=random&type=ws&host=ie1.lemoex.blog&path=%2F46077%2Fwsmmad#%F0%9F%87%AE%F0%9F%87%AA%20IE%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40vpnplusee_free%20%7C%2017"
-    },
-    {
-        "channel": {
             "username": "vpnserverrr",
             "title": "Vpnserver",
             "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/vpnserverrr.jpg"
@@ -4849,6 +4849,15 @@
         },
         "type": "reality",
         "config": "vless://6897c181-24b1-4880-8660-e6c5c7ee13c7@92.60.78.221:443?security=reality&encryption=none&pbk=pkIWxbuPAasjatPaHnAaTnCxVj1RkDFsJEWpLUTOcWY&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.tradingview.com&sid=9917d2350096#%F0%9F%87%AB%F0%9F%87%AE%20FI%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40vpnstable%20%7C%2019"
+    },
+    {
+        "channel": {
+            "username": "vpnstorefast",
+            "title": "Vpn Store",
+            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/vpnstorefast.jpg"
+        },
+        "type": "reality",
+        "config": "vless://ae942900-cae6-425e-94b0-21f086e6d7b1@iran.mr-cloud.ir:443?security=reality&alpn=http%2F1.1&encryption=none&pbk=__6BhtO3Rhjw4wnAmzklhquVvIngjhfnB8dhDVtj0Vs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=275f34#%F0%9F%87%AB%F0%9F%87%AE%20FI%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40vpnstorefast%20%7C%2015"
     },
     {
         "channel": {
@@ -5083,15 +5092,6 @@
         },
         "type": "reality",
         "config": "vless://1c4f8319-2482-4295-8d6a-27cf36c6504d@static.25.243.217.95.clients.your-server.de:443?hiddify=1&sni=start.ubuntu.com&type=grpc&alpn=h2&path=JOWQNkKKWpMvAz5cfTbq&serviceName=JOWQNkKKWpMvAz5cfTbq&mode=gun&encryption=none&fp=chrome&headerType=None&security=reality&pbk=wSvGzCaRiOiLdFWxZiC0PIFW-WyG0ZHHEk6SBj2jVFs&sid=ca#%F0%9F%87%AB%F0%9F%87%AE%20FI%20%7C%20%F0%9F%9F%A2%20%7C%20vless%20%7C%20%40xyzquantvpn%20%7C%200"
-    },
-    {
-        "channel": {
-            "username": "yejoriconfig",
-            "title": "یه جوری وصل شیم🤷‍♂️",
-            "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/yejoriconfig.jpg"
-        },
-        "type": "ss",
-        "config": "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1MTdUM0J2cFlhYWl1VzJj@series-a2-mec.samanehha.co:443#%F0%9F%87%AC%F0%9F%87%A7%20GB%20%7C%20%F0%9F%9F%A2%20%7C%20ss%20%7C%20%40yejoriconfig%20%7C%207"
     },
     {
         "channel": {

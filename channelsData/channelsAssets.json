@@ -318,8 +318,7 @@
     },
     "binner_iran": {
         "types": [
-            "vless",
-            "ss"
+            "vless"
         ],
         "title": "پروکسی رایگان ملی / فیلترشکن",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/binner_iran.jpg"
@@ -671,10 +670,9 @@
     },
     "configshubplus": {
         "types": [
-            "vless",
-            "trojan",
+            "ss",
             "vmess",
-            "ss"
+            "vless"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/configshubplus.jpg"
@@ -1317,7 +1315,9 @@
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/fire_vpn_channel.jpg"
     },
     "fitnessreza": {
-        "types": [],
+        "types": [
+            "vless"
+        ],
         "title": "fitness",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/fitnessreza.jpg"
     },
@@ -2079,10 +2079,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
-            "trojan",
+            "vless",
             "vmess",
-            "vless"
+            "ss",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/ip_cf_config.jpg"
@@ -3669,7 +3669,6 @@
     },
     "proxy_mtproto_vpns_free": {
         "types": [
-            "vmess",
             "vless",
             "ss"
         ],
@@ -4486,8 +4485,8 @@
     },
     "sourcevipn": {
         "types": [],
-        "title": "Unknown Title",
-        "logo": ""
+        "title": "SOURCE&quot;VPN&quot;",
+        "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/sourcevipn.jpg"
     },
     "spcware": {
         "types": [],
@@ -4851,9 +4850,12 @@
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2_fast.jpg"
     },
     "v2ang": {
-        "types": [],
-        "title": "Unknown Title",
-        "logo": ""
+        "types": [
+            "ss",
+            "vless"
+        ],
+        "title": "v2ray رایگان | v2aNG ∞",
+        "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2ang.jpg"
     },
     "v2aryng_vpn": {
         "types": [
@@ -5301,8 +5303,7 @@
     "v2raych": {
         "types": [
             "vless",
-            "vmess",
-            "trojan"
+            "vmess"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2raych.jpg"
@@ -5369,7 +5370,6 @@
     },
     "v2rayfree": {
         "types": [
-            "vmess",
             "vless",
             "ss"
         ],
@@ -5379,7 +5379,8 @@
     "v2rayfree_server": {
         "types": [
             "vless",
-            "ss"
+            "ss",
+            "vmess"
         ],
         "title": "v2ray_freeserver پروکسی",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayfree_server.jpg"
@@ -5961,8 +5962,8 @@
     },
     "v2rayweb": {
         "types": [
-            "trojan",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "V2ray | VPN",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayweb.jpg"
