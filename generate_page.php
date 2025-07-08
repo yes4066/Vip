@@ -19,6 +19,7 @@ define('SCAN_DIRECTORIES', [
 ]);
 
 // --- Data Mapping for Visuals ---
+// SVG icons with proper viewBox for consistent sizing.
 const CLIENT_ICONS = [
     'clash' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12.75 3.03v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-1.5 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-1.5 3a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM7.875 6a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm4.125-2.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM15 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 20.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9.75 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM8.25 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Z M4.5 9a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 4.5 9Z" clip-rule="evenodd" /></svg>',
     'meta' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M12.75 3.03v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-1.5 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm-1.5 3a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM7.875 6a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 8.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Zm4.125-2.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM15 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM12.75 20.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9.75 17.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM8.25 14.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75ZM9 11.25a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75a.75.75 0 0 1-.75-.75Z M4.5 9a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 0 1.5h-.75A.75.75 0 0 1 4.5 9Z" clip-rule="evenodd" /></svg>',
@@ -38,7 +39,6 @@ const PROTOCOL_COLORS = [
 ];
 
 // --- Helper Functions ---
-// `scan_directory` remains the same as before.
 function scan_directory(string $dir): array {
     if (!is_dir($dir)) return [];
     $files = [];
@@ -52,7 +52,7 @@ function scan_directory(string $dir): array {
     }
     return $files;
 }
-// `getFlags` from your main functions.php is needed here.
+
 function getFlags(string $country_code): string {
     if (strlen($country_code) !== 2 || !ctype_alpha($country_code)) return '🏳️';
     $country_code = strtoupper($country_code);
@@ -61,58 +61,97 @@ function getFlags(string $country_code): string {
     $char2 = mb_convert_encoding('&#' . ($regional_offset + ord($country_code[1])) . ';', 'UTF-8', 'HTML-ENTITIES');
     return $char1 . $char2;
 }
+
 function process_files_to_structure(array $files): array {
     $structure = [];
     foreach ($files as $category => $paths) {
         foreach ($paths as $path) {
             $parts = explode('/', $path);
-            if (count($parts) < 2) continue;
-            $type = $parts[count($parts) - 2];
-            $name = pathinfo($path, PATHINFO_FILENAME);
-            $url = GITHUB_REPO_URL . '/' . $path;
-            $structure[$category][$type][$name] = $url;
+            // Ensure the path has enough parts to determine type and name
+            // Example: subscriptions/clash/my-config.txt -> type=clash, name=my-config
+            // Example: subscriptions/xray/base64/mix -> type=xray, name=mix (if base64 is a subfolder)
+            // We need to adjust this logic if 'base64' is part of the type, not a subfolder.
+            // For now, let's assume the structure is always category/type/name.
+            // If 'base64' is a protocol, it needs to be handled differently.
+            // Based on the example, 'xray/base64/mix', 'mix' is the name and 'xray' is the type.
+            // The 'base64' part is an intermediary directory.
+            
+            // Let's refine how type and name are extracted based on the structure.
+            // If path is like 'subscriptions/xray/base64/mix', we want type 'xray' and name 'mix'.
+            // If path is like 'subscriptions/clash/my-clash-config', we want type 'clash' and name 'my-clash-config'.
+            
+            $relative_to_category_dir = str_replace(dirname(SCAN_DIRECTORIES[$category]) . '/', '', $path);
+            $path_segments = explode('/', $relative_to_category_dir);
+
+            if (count($path_segments) >= 2) {
+                // The type is usually the first directory after the category root
+                // e.g., 'subscriptions/clash/my-config' -> 'clash' is type
+                $type = $path_segments[1]; 
+                $name = pathinfo($path, PATHINFO_FILENAME);
+
+                // Special handling for 'xray' where protocol is the 'name' and 'base64' is a folder
+                if ($type === 'xray' && count($path_segments) >= 3 && $path_segments[2] === 'base64') {
+                    $name = pathinfo($path, PATHINFO_FILENAME); // e.g., 'mix'
+                } elseif ($type === 'location') {
+                    $name = pathinfo($path, PATHINFO_FILENAME); // e.g., 'us'
+                } else {
+                    $name = pathinfo($path, PATHINFO_FILENAME);
+                }
+
+                $url = GITHUB_REPO_URL . '/' . $path;
+                $structure[$category][$type][$name] = $url;
+            }
         }
     }
-    foreach ($structure as &$categories) { ksort($categories); }
+    foreach ($structure as &$categories) { ksort($categories); } // Sort types alphabetically
     return $structure;
 }
 
 function generate_html_section(string $type, array $links): string
 {
     $icon = CLIENT_ICONS[$type] ?? CLIENT_ICONS['default'];
-    $title = ucwords(str_replace(['-', '_'], ' ', $type));
-    $html = "<section class='category-section'>\n";
-    $html .= "  <h2 class='category-title'>" . $icon . " " . htmlspecialchars($title) . "</h2>\n";
-    $html .= "  <div class='grid'>\n";
+    $title = ucwords(str_replace(['-', '_'], ' ', $type)); // e.g., 'xray' -> 'Xray', 'clash' -> 'Clash'
+
+    $html = "<section class='mb-12'>\n";
+    $html .= "    <h2 class='text-2xl font-semibold mb-6 flex items-center gap-3'>" . $icon . " " . htmlspecialchars($title) . "</h2>\n";
+    $html .= "    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>\n";
 
     foreach ($links as $name => $url) {
         $visual = '';
         $displayName = ucwords(str_replace(['-', '_'], ' ', $name));
-        $card_class = 'card';
+        $card_class = 'bg-white rounded-xl p-6 shadow-lg border border-slate-200';
         
         if ($type === 'location') {
             $flag = getFlags($name);
             $visual = "<span class='flag'>{$flag}</span>";
-            $displayName = strtoupper($name);
+            $displayName = strtoupper($name); // Display country code in uppercase
         } elseif ($type === 'xray') {
+            // For Xray, the 'name' is the protocol (vless, reality, mix, etc.)
             $color_class = PROTOCOL_COLORS[$name] ?? 'bg-slate-200 text-slate-800';
-            $visual = "<span class='tag {$color_class}'>" . strtoupper($name) . "</span>";
-            $displayName = "Base64 Encoded";
+            $visual = "<span class='tag text-xs font-semibold px-2 py-1 rounded-md {$color_class}'>" . strtoupper($name) . "</span>";
+            $displayName = "Base64 Encoded"; // Fixed display name for Xray links
         }
         
-        $html .= "    <div class='{$card_class}'>\n";
-        $html .= "      <div class='card-header'>{$visual}" . htmlspecialchars($displayName) . "</div>\n";
-        $html .= "      <div class='input-group'>\n";
-        $html .= "          <input type='text' readonly value='" . htmlspecialchars($url) . "'>\n";
-        $html .= "          <button class='copy-btn' data-url='" . htmlspecialchars($url) . "' title='Copy URL'>\n";
-        $html .= "              <svg class='copy-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' /><path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' /></svg>";
-        $html .= "              <svg class='check-icon' style='display:none;' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' /></svg>";
-        $html .= "          </button>\n";
-        $html .= "      </div>\n";
-        $html .= "    </div>\n";
+        $html .= "        <div class='{$card_class}'>\n";
+        $html .= "            <div class='flex items-center gap-3 font-medium mb-4'>{$visual}" . htmlspecialchars($displayName) . "</div>\n";
+        $html .= "            <div class='flex items-center'>\n";
+        $html .= "                <input type='text' readonly value='" . htmlspecialchars($url) . "'\n";
+        $html .= "                    class='flex-grow font-mono text-sm py-2.5 px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />\n";
+        $html .= "                <button class='copy-btn flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'\n";
+        $html .= "                    data-url='" . htmlspecialchars($url) . "' title='Copy URL'>\n";
+        $html .= "                    <svg class='copy-icon w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>\n";
+        $html .= "                        <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />\n";
+        $html .= "                        <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />\n";
+        $html .= "                    </svg>\n";
+        $html .= "                    <svg class='check-icon w-5 h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>\n";
+        $html .= "                        <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />\n";
+        $html .= "                    </svg>\n";
+        $html .= "                </button>\n";
+        $html .= "            </div>\n";
+        $html .= "        </div>\n";
     }
 
-    $html .= "  </div>\n</section>\n";
+    $html .= "    </div>\n</section>\n";
     return $html;
 }
 
@@ -129,30 +168,32 @@ function generate_full_html(array $structured_data): string
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSG - Subscription Links</title>
+    <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --bg-color: #f8fafc; --card-bg: #ffffff; --text-color: #0f172a; --text-light: #64748b; --accent-color: #4f46e5; --accent-hover: #4338ca; --border-color: #e2e8f0; --shadow-color: rgba(149, 157, 165, 0.1); }
-        body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-        header { text-align: center; margin-bottom: 3rem; }
-        h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.025em; margin: 0; }
-        header p { font-size: 1.125rem; color: var(--text-light); margin-top: 0.5rem; }
-        .main-title { font-size: 2rem; font-weight: 600; margin-top: 2rem; margin-bottom: 2rem; padding-left: 0.5rem; border-left: 4px solid var(--accent-color); }
-        .category-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
-        .category-section { margin-bottom: 3rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-        .card { background-color: var(--card-bg); border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 4px 12px var(--shadow-color); border: 1px solid var(--border-color); }
-        .card-header { display: flex; align-items: center; gap: 0.75rem; font-weight: 500; margin-bottom: 1rem; }
-        .input-group { display: flex; align-items: center; }
-        .input-group input { flex-grow: 1; font-family: monospace; font-size: 0.8rem; padding: 0.6rem 0.75rem; background-color: #f1f5f9; border: 1px solid var(--border-color); border-right: none; border-radius: 0.5rem 0 0 0.5rem; outline: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .copy-btn { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background-color: #eef2ff; color: var(--accent-color); border: 1px solid var(--accent-color); border-radius: 0 0.5rem 0.5rem 0; cursor: pointer; transition: background-color 0.2s ease; }
-        .copy-btn:hover { background-color: #e0e7ff; }
-        .copy-icon, .check-icon { width: 20px; height: 20px; }
-        .icon { width: 24px; height: 24px; color: var(--accent-color); }
-        .flag { font-size: 1.5rem; line-height: 1; }
-        .tag { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 0.375rem; }
+        /* Custom styles for icons and specific elements not covered by Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Ensure icons have a fixed size to prevent distortion */
+        .icon {
+            width: 24px;
+            height: 24px;
+            color: #4f46e5; /* Accent color for icons */
+            flex-shrink: 0; /* Prevent icons from shrinking */
+        }
+        .flag {
+            font-size: 1.5rem;
+            line-height: 1;
+            flex-shrink: 0; /* Prevent flags from shrinking */
+        }
+        /* Specific Tailwind-like color classes from original PHP, ensuring they are available */
         .bg-sky-100 { background-color: #e0f2fe; } .text-sky-800 { color: #075985; }
         .bg-emerald-100 { background-color: #d1fae5; } .text-emerald-800 { color: #065f46; }
         .bg-blue-100 { background-color: #dbeafe; } .text-blue-800 { color: #1e40af; }
@@ -161,41 +202,62 @@ function generate_full_html(array $structured_data): string
         .bg-pink-100 { background-color: #fce7f3; } .text-pink-800 { color: #9d174d; }
         .bg-yellow-100 { background-color: #fef9c3; } .text-yellow-800 { color: #854d0e; }
         .bg-slate-200 { background-color: #e2e8f0; } .text-slate-800 { color: #1e293b; }
-        footer { text-align: center; margin-top: 4rem; padding: 2rem 0; border-top: 1px solid var(--border-color); color: var(--text-light); }
-        footer a { color: var(--accent-color); text-decoration: none; font-weight: 500; }
-        footer a:hover { text-decoration: underline; }
-        @media (max-width: 640px) { h1 { font-size: 1.75rem; } .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Proxy Subscription Generator</h1>
-            <p>A collection of automatically generated subscription links.</p>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+    <div class="container max-w-6xl mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold tracking-tight mb-0">Proxy Subscription Generator</h1>
+            <p class="text-lg text-slate-500 mt-2">A collection of automatically generated subscription links.</p>
         </header>
+
         <main>
-            <section class='category-section'>
-                <h2 class='category-title'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon"><path d="M11.998 2.25a.75.75 0 0 1 .53 1.28l-3.25 3.25a.75.75 0 0 1-1.06 0l-1.5-1.5a.75.75 0 1 1 1.06-1.06l.97.97L11.998 2.25ZM11.25 9.75A2.25 2.25 0 1 0 13.5 12a2.25 2.25 0 0 0-2.25-2.25ZM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.44 1.93a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Zm-11.94-1.06a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06-1.06l-1.5-1.5ZM12 21.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008ZM7.06 17.44a.75.75 0 1 0-1.06 1.06l1.5 1.5a.75.75 0 1 0 1.06-1.06l-1.5-1.5Zm9.88 0a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Z" /></svg> Universal Subscriptions</h2>
-                <div class='grid'>
-                    <div class='card'>
-                      <div class='card-header'><span class='tag bg-slate-200 text-slate-800'>MIX</span>Plain Text</div>
-                      <div class='input-group'>
-                          <input type='text' readonly value='{$universal_link_plain}'>
-                          <button class='copy-btn' data-url='{$universal_link_plain}' title='Copy URL'>
-                            <svg class='copy-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' /><path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' /></svg>
-                            <svg class='check-icon' style='display:none;' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' /></svg>
-                          </button>
-                      </div>
+            <!-- Universal Subscriptions Section -->
+            <section class='mb-12'>
+                <h2 class='text-2xl font-semibold mb-6 flex items-center gap-3'>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                        <path d="M11.998 2.25a.75.75 0 0 1 .53 1.28l-3.25 3.25a.75.75 0 0 1-1.06 0l-1.5-1.5a.75.75 0 1 1 1.06-1.06l.97.97L11.998 2.25ZM11.25 9.75A2.25 2.25 0 1 0 13.5 12a2.25 2.25 0 0 0-2.25-2.25ZM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.44 1.93a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Zm-11.94-1.06a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06-1.06l-1.5-1.5ZM12 21.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008ZM7.06 17.44a.75.75 0 1 0-1.06 1.06l1.5 1.5a.75.75 0 1 0 1.06-1.06l-1.5-1.5Zm9.88 0a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Z" />
+                    </svg>
+                    Universal Subscriptions
+                </h2>
+                <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                    <div class='bg-white rounded-xl p-6 shadow-lg border border-slate-200'>
+                        <div class='flex items-center gap-3 font-medium mb-4'>
+                            <span class='tag text-xs font-semibold px-2 py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Plain Text
+                        </div>
+                        <div class='flex items-center'>
+                            <input type='text' readonly value='{$universal_link_plain}'
+                                class='flex-grow font-mono text-sm py-2.5 px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />
+                            <button class='copy-btn flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
+                                data-url='{$universal_link_plain}' title='Copy URL'>
+                                <svg class='copy-icon w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                    <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
+                                    <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
+                                </svg>
+                                <svg class='check-icon w-5 h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                    <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    <div class='card'>
-                      <div class='card-header'><span class='tag bg-slate-200 text-slate-800'>MIX</span>Base64</div>
-                      <div class='input-group'>
-                          <input type='text' readonly value='{$universal_link_b64}'>
-                          <button class='copy-btn' data-url='{$universal_link_b64}' title='Copy URL'>
-                            <svg class='copy-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' /><path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' /></svg>
-                            <svg class='check-icon' style='display:none;' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' /></svg>
-                          </button>
-                      </div>
+                    <div class='bg-white rounded-xl p-6 shadow-lg border border-slate-200'>
+                        <div class='flex items-center gap-3 font-medium mb-4'>
+                            <span class='tag text-xs font-semibold px-2 py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Base64
+                        </div>
+                        <div class='flex items-center'>
+                            <input type='text' readonly value='{$universal_link_b64}'
+                                class='flex-grow font-mono text-sm py-2.5 px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />
+                            <button class='copy-btn flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
+                                data-url='{$universal_link_b64}' title='Copy URL'>
+                                <svg class='copy-icon w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                    <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
+                                    <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
+                                </svg>
+                                <svg class='check-icon w-5 h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                    <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -204,7 +266,7 @@ HTML;
     // --- Generate sections from structured data ---
     foreach ($structured_data as $prefix => $categories) {
         if(empty($categories)) continue;
-        $html .= "<h1 class='main-title'>" . htmlspecialchars($prefix) . " Subscriptions</h1>\n";
+        $html .= "<h1 class='text-3xl font-semibold mt-8 mb-6 pl-3 border-l-4 border-indigo-600'>" . htmlspecialchars($prefix) . " Subscriptions</h1>\n";
         foreach ($categories as $type => $links) {
             $html .= generate_html_section($type, $links);
         }
@@ -212,28 +274,67 @@ HTML;
 
     $html .= <<<HTML
         </main>
-        <footer>
-            <p>Generated by <a href="https://github.com/itsyebekhe/PSG" target="_blank" rel="noopener noreferrer">PSG (Proxy Subscription Generator)</a>. Use at your own risk.</p>
+
+        <footer class="text-center mt-16 py-8 border-t border-slate-200 text-slate-500">
+            <p>Generated by <a href="https://github.com/itsyebekhe/PSG" target="_blank" rel="noopener noreferrer" class="text-indigo-600 no-underline font-medium hover:underline">PSG (Proxy Subscription Generator)</a>. Use at your own risk.</p>
         </footer>
     </div>
+
+    <!-- Message Box HTML -->
+    <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg p-6 shadow-xl max-w-sm w-full text-center">
+            <p id="messageBoxText" class="text-lg font-semibold text-slate-800 mb-4"></p>
+            <button id="messageBoxClose" class="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">OK</button>
+        </div>
+    </div>
+
     <script>
+        // Function to show custom message box
+        function showMessageBox(message) {
+            const messageBox = document.getElementById('messageBox');
+            const messageBoxText = document.getElementById('messageBoxText');
+            const messageBoxClose = document.getElementById('messageBoxClose');
+
+            messageBoxText.textContent = message;
+            messageBox.classList.remove('hidden');
+
+            messageBoxClose.onclick = () => {
+                messageBox.classList.add('hidden');
+            };
+
+            // Close if clicked outside the box
+            messageBox.onclick = (e) => {
+                if (e.target === messageBox) {
+                    messageBox.classList.add('hidden');
+                }
+            };
+        }
+
         document.addEventListener('click', function(e) {
             const button = e.target.closest('.copy-btn');
             if (button) {
                 const url = button.dataset.url;
-                navigator.clipboard.writeText(url).then(() => {
+                // Use document.execCommand('copy') as navigator.clipboard.writeText() might not work in some iframe environments
+                const tempInput = document.createElement('textarea');
+                tempInput.value = url;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                try {
+                    document.execCommand('copy');
                     const copyIcon = button.querySelector('.copy-icon');
                     const checkIcon = button.querySelector('.check-icon');
-                    copyIcon.style.display = 'none';
-                    checkIcon.style.display = 'inline-block';
+                    copyIcon.classList.add('hidden');
+                    checkIcon.classList.remove('hidden');
                     setTimeout(() => {
-                        copyIcon.style.display = 'inline-block';
-                        checkIcon.style.display = 'none';
+                        copyIcon.classList.remove('hidden');
+                        checkIcon.classList.add('hidden');
                     }, 2000);
-                }).catch(err => {
+                } catch (err) {
                     console.error('Failed to copy URL: ', err);
-                    alert('Failed to copy URL.');
-                });
+                    showMessageBox('Failed to copy URL. Please copy manually.');
+                } finally {
+                    document.body.removeChild(tempInput);
+                }
             }
         });
     </script>
@@ -264,3 +365,4 @@ echo "Found and categorized {$file_count} subscription files.\n";
 $final_html = generate_full_html($structured_data);
 file_put_contents(OUTPUT_HTML_FILE, $final_html);
 echo "Successfully generated modern page at: " . OUTPUT_HTML_FILE . "\n";
+
