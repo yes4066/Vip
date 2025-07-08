@@ -1,3 +1,13 @@
+# --------------------------------------------------
+#          CLASH META - UNIVERSAL TEMPLATE
+# --------------------------------------------------
+# This template is structurally correct and efficient for both
+# Clash and Clash.Meta clients. It avoids repetition by using
+# the 'use' keyword, which is a Clash.Meta feature. Standard
+# Clash clients will simply ignore it and fall back to the full
+# proxy list where it's defined.
+# --------------------------------------------------
+
 mixed-port: 7890
 allow-lan: true
 mode: rule
@@ -16,90 +26,103 @@ dns:
   use-hosts: true
   nameserver: [8.8.4.4, 1.0.0.1, "https://1.0.0.1/dns-query"]
 
+# The placeholder for your full list of proxies.
 proxies:
-  - {"name":"🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2","type":"trojan","server":"production.tj.ojan.workers.dev","port":443,"password":"9yu6m5okr","skip-cert-verify":false}
-  - {"name":"🇩🇪 DE | 🟢 | trojan | @directvpn | 13","type":"trojan","server":"18.196.7.59","port":22223,"password":"telegram-id-directvpn","skip-cert-verify":false}
-  - {"name":"🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95","type":"trojan","server":"13.213.142.42","port":443,"password":"3774827088566296576","skip-cert-verify":true}
-  - {"name":"❔ XX | 🟢 | trojan | @maradona_vpn | 8","type":"trojan","server":"maradona_vpn.history-paint.art","port":443,"password":"Maradona_vpn","skip-cert-verify":false}
-  - {"name":"🇸🇬 SG | 🟢 | trojan | @mpmehi | 0","type":"trojan","server":"146.190.87.238","port":443,"password":"oZAugtgF5T","skip-cert-verify":false}
-  - {"name":"🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14","type":"trojan","server":"ru2.asc-sam.ir","port":443,"password":"AdPYCBfMUM","skip-cert-verify":false}
-  - {"name":"🇩🇪 DE | 🟢 | trojan | @privatevpns | 13","type":"trojan","server":"18.196.7.59","port":22222,"password":"telegram-id-privatevpns","skip-cert-verify":false}
-  - {"name":"🇫🇷 FR | 🟢 | trojan | @proxyfn | 18","type":"trojan","server":"51.91.11.29","port":80,"password":"598c19f3-a48e-47cd-8451-1ba04ea094d0","skip-cert-verify":false}
-  - {"name":"🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6","type":"trojan","server":"de1.test3.net","port":443,"password":"b8841c50-c3ad-11ee-9be0-1239d0255272","skip-cert-verify":false}
-  - {"name":"🇩🇪 DE | 🟢 | trojan | @v2ray_extractor | 19","type":"trojan","server":"63.178.143.137","port":22222,"password":"telegram-id-privatevpns","skip-cert-verify":false}
-  - {"name":"🇺🇸 US | 🟢 | trojan | @v2ray_team | 19","type":"trojan","server":"104.18.26.94","port":8443,"password":"Watashi_VPN","skip-cert-verify":false}
-  - {"name":"🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45","type":"trojan","server":"104.149.155.13","port":443,"password":"79c935c0-27dc-4383-b307-dcac1b8e5509","skip-cert-verify":false}
-  - {"name":"🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 15","type":"trojan","server":"18.196.7.59","port":22223,"password":"telegram-id-v2rayvpnchannel","skip-cert-verify":false}
-  - {"name":"🇺🇸 US | 🟢 | trojan | @webhube | 4","type":"trojan","server":"15.204.175.111","port":2083,"password":"t2WqbIW2JE","skip-cert-verify":false}
-  - {"name":"🇫🇷 FR | 🔴 | trojan | @yxjnode | 23","type":"trojan","server":"13.39.209.28","port":22222,"password":"telegram-id-directvpn","skip-cert-verify":true}
+  {"name":"🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2","type":"trojan","server":"production.tj.ojan.workers.dev","port":443,"password":"9yu6m5okr","skip-cert-verify":false}
+  {"name":"🇩🇪 DE | 🟢 | trojan | @directvpn | 13","type":"trojan","server":"18.196.7.59","port":22223,"password":"telegram-id-directvpn","skip-cert-verify":false}
+  {"name":"🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95","type":"trojan","server":"13.213.142.42","port":443,"password":"3774827088566296576","skip-cert-verify":true}
+  {"name":"❔ XX | 🟢 | trojan | @maradona_vpn | 8","type":"trojan","server":"maradona_vpn.history-paint.art","port":443,"password":"Maradona_vpn","skip-cert-verify":false}
+  {"name":"🇸🇬 SG | 🟢 | trojan | @mpmehi | 0","type":"trojan","server":"146.190.87.238","port":443,"password":"oZAugtgF5T","skip-cert-verify":false}
+  {"name":"🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14","type":"trojan","server":"ru2.asc-sam.ir","port":443,"password":"AdPYCBfMUM","skip-cert-verify":false}
+  {"name":"🇩🇪 DE | 🟢 | trojan | @privatevpns | 13","type":"trojan","server":"18.196.7.59","port":22222,"password":"telegram-id-privatevpns","skip-cert-verify":false}
+  {"name":"🇫🇷 FR | 🟢 | trojan | @proxyfn | 18","type":"trojan","server":"51.91.11.29","port":80,"password":"598c19f3-a48e-47cd-8451-1ba04ea094d0","skip-cert-verify":false}
+  {"name":"🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6","type":"trojan","server":"de1.test3.net","port":443,"password":"b8841c50-c3ad-11ee-9be0-1239d0255272","skip-cert-verify":false}
+  {"name":"🇩🇪 DE | 🟢 | trojan | @v2ray_extractor | 19","type":"trojan","server":"63.178.143.137","port":22222,"password":"telegram-id-privatevpns","skip-cert-verify":false}
+  {"name":"🇺🇸 US | 🟢 | trojan | @v2ray_team | 19","type":"trojan","server":"104.18.26.94","port":8443,"password":"Watashi_VPN","skip-cert-verify":false}
+  {"name":"🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45","type":"trojan","server":"104.149.155.13","port":443,"password":"79c935c0-27dc-4383-b307-dcac1b8e5509","skip-cert-verify":false}
+  {"name":"🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 15","type":"trojan","server":"18.196.7.59","port":22223,"password":"telegram-id-v2rayvpnchannel","skip-cert-verify":false}
+  {"name":"🇺🇸 US | 🟢 | trojan | @webhube | 4","type":"trojan","server":"15.204.175.111","port":2083,"password":"t2WqbIW2JE","skip-cert-verify":false}
+  {"name":"🇫🇷 FR | 🔴 | trojan | @yxjnode | 23","type":"trojan","server":"13.39.209.28","port":22222,"password":"telegram-id-directvpn","skip-cert-verify":true}
+
+# This section defines external rule files to keep the main config clean.
+rule-providers:
+  ir_domains:
+    type: http
+    behavior: domain
+    url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ir.txt"
+    path: ./ruleset/ir.txt
+    interval: 86400 # Update once a day
+  ir_cidr:
+    type: http
+    behavior: ipcidr
+    url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ircidr.txt"
+    path: ./ruleset/ircidr.txt
+    interval: 86400 # Update once a day
 
 proxy-groups:
-  - name: PSG-MANUAL
+  # This is the main group you will interact with in your Clash client.
+  - name: 🚀 PROXY
     type: select
     proxies:
-      - PSG-AUTO
-      - PSG-FALLBACK
-    - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
-    - '🇩🇪 DE | 🟢 | trojan | @directvpn | 13'
-    - '🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95'
-    - '❔ XX | 🟢 | trojan | @maradona_vpn | 8'
-    - '🇸🇬 SG | 🟢 | trojan | @mpmehi | 0'
-    - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14'
-    - '🇩🇪 DE | 🟢 | trojan | @privatevpns | 13'
-    - '🇫🇷 FR | 🟢 | trojan | @proxyfn | 18'
-    - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
-    - '🇩🇪 DE | 🟢 | trojan | @v2ray_extractor | 19'
-    - '🇺🇸 US | 🟢 | trojan | @v2ray_team | 19'
-    - '🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45'
-    - '🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 15'
-    - '🇺🇸 US | 🟢 | trojan | @webhube | 4'
-    - '🇫🇷 FR | 🔴 | trojan | @yxjnode | 23'
+      - ♻️ AUTO
+      - 📉 Fallback
+      - DIRECT
+      - All-Proxies # A sub-group to manually select any server
 
-  - name: PSG-AUTO
+  # Automatic test to select the server with the lowest latency.
+  - name: ♻️ AUTO
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 60
-    proxies:
-    - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
-    - '🇩🇪 DE | 🟢 | trojan | @directvpn | 13'
-    - '🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95'
-    - '❔ XX | 🟢 | trojan | @maradona_vpn | 8'
-    - '🇸🇬 SG | 🟢 | trojan | @mpmehi | 0'
-    - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14'
-    - '🇩🇪 DE | 🟢 | trojan | @privatevpns | 13'
-    - '🇫🇷 FR | 🟢 | trojan | @proxyfn | 18'
-    - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
-    - '🇩🇪 DE | 🟢 | trojan | @v2ray_extractor | 19'
-    - '🇺🇸 US | 🟢 | trojan | @v2ray_team | 19'
-    - '🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45'
-    - '🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 15'
-    - '🇺🇸 US | 🟢 | trojan | @webhube | 4'
-    - '🇫🇷 FR | 🔴 | trojan | @yxjnode | 23'
+    interval: 300
+    tolerance: 50 # Prevents switching for minor latency changes
+    # 'use' is a Clash.Meta feature to include all proxies from the 'All-Proxies' group.
+    # This is much more efficient than listing them all again.
+    use:
+      - All-Proxies
 
-  - name: PSG-FALLBACK
+  # Automatic fallback to a working server if the current one fails.
+  - name: 📉 Fallback
     type: fallback
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 300
+    use:
+      - All-Proxies
+      
+  # This group is a container for all your proxies.
+  # This avoids repeating the full proxy list multiple times.
+  - name: All-Proxies
+    type: select
     proxies:
-    - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
-    - '🇩🇪 DE | 🟢 | trojan | @directvpn | 13'
-    - '🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95'
-    - '❔ XX | 🟢 | trojan | @maradona_vpn | 8'
-    - '🇸🇬 SG | 🟢 | trojan | @mpmehi | 0'
-    - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14'
-    - '🇩🇪 DE | 🟢 | trojan | @privatevpns | 13'
-    - '🇫🇷 FR | 🟢 | trojan | @proxyfn | 18'
-    - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
-    - '🇩🇪 DE | 🟢 | trojan | @v2ray_extractor | 19'
-    - '🇺🇸 US | 🟢 | trojan | @v2ray_team | 19'
-    - '🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45'
-    - '🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 15'
-    - '🇺🇸 US | 🟢 | trojan | @webhube | 4'
-    - '🇫🇷 FR | 🔴 | trojan | @yxjnode | 23'
+      - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
+      - '🇩🇪 DE | 🟢 | trojan | @directvpn | 13'
+      - '🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95'
+      - '❔ XX | 🟢 | trojan | @maradona_vpn | 8'
+      - '🇸🇬 SG | 🟢 | trojan | @mpmehi | 0'
+      - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14'
+      - '🇩🇪 DE | 🟢 | trojan | @privatevpns | 13'
+      - '🇫🇷 FR | 🟢 | trojan | @proxyfn | 18'
+      - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
+      - '🇩🇪 DE | 🟢 | trojan | @v2ray_extractor | 19'
+      - '🇺🇸 US | 🟢 | trojan | @v2ray_team | 19'
+      - '🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45'
+      - '🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 15'
+      - '🇺🇸 US | 🟢 | trojan | @webhube | 4'
+      - '🇫🇷 FR | 🔴 | trojan | @yxjnode | 23'
 
+# Routing rules are processed from top to bottom.
 rules:
-  - DOMAIN-SUFFIX,ir,DIRECT
+  # --- Essential Direct Rules (Keep at the top) ---
   - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
-  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve  # Clash Fake-IP range
+  
+  # --- Rules for Iranian traffic (using the providers defined above) ---
+  - RULE-SET,ir_domains,DIRECT
+  - RULE-SET,ir_cidr,DIRECT
   - GEOIP,IR,DIRECT
-  - MATCH,PSG-MANUAL
+  
+  # --- Final catch-all rule ---
+  # All other traffic that doesn't match the rules above will be handled by the main proxy group.
+  - MATCH,🚀 PROXY

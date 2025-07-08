@@ -104,13 +104,16 @@
             "tag": "proxy",
             "type": "selector",
             "outbounds": [
-                "URL-TEST"
+                "URL-TEST",
+                "🇭🇰 HK | 🟢 | hy2 | @shadowproxy66 | 3"
             ]
         },
         {
             "tag": "URL-TEST",
             "type": "urltest",
-            "outbounds": [],
+            "outbounds": [
+                "🇭🇰 HK | 🟢 | hy2 | @shadowproxy66 | 3"
+            ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
             "tolerance": 50
@@ -130,6 +133,25 @@
         {
             "tag": "dns-out",
             "type": "dns"
+        },
+        {
+            "tag": "🇭🇰 HK | 🟢 | hy2 | @shadowproxy66 | 3",
+            "type": "hysteria2",
+            "server": "62.72.163.159",
+            "server_port": 13563,
+            "password": "0c4c1a89-5645-4fc2-9e3b-ab09aa44e933",
+            "obfs": {
+                "type": "salamander",
+                "password": "rPvCrCom7ETCNOvA"
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "h2.gzcloud.shop",
+                "insecure": false,
+                "alpn": [
+                    "h3"
+                ]
+            }
         }
     ],
     "route": {
