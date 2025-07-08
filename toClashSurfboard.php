@@ -112,7 +112,8 @@ class ClashProfile extends ProfileGenerator {
             if ($proxyData['type'] === 'vless') return null;
             if (isset($proxyData['reality-opts'])) return null;
         }
-        return '  ' . json_encode($proxyData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        // CORRECTED: Added "- " to format as a YAML list item.
+        return '  - ' . json_encode($proxyData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     }
 
     public function generate(): string {
