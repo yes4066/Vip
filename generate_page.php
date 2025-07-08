@@ -64,11 +64,15 @@ function getFlags(string $country_code): string {
 
 function process_files_to_structure(array $files): array {
     $structure = [];
-    foreach ($files as $category_key => $paths) { // $category_key is 'Standard' or 'Lite'
+    foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
         // Get the base directory for this category (e.g., 'PROJECT_ROOT/subscriptions')
-        $base_dir_relative = str_replace(PROJECT_ROOT . '/', '', SCAN_DIRECTORIES[$category_key]);
+        $base_dir_relative = str_replace(PROJECT_ROOT . '/', '', $category_dir_path);
         
-        foreach ($paths as $path) { // $path is like 'subscriptions/clash/my-config.txt'
+        if (!isset($files[$category_key])) {
+            continue; // Skip if no files found for this category
+        }
+
+        foreach ($files[$category_key] as $path) { // $path is like 'subscriptions/clash/my-config.txt'
             // Remove the base directory prefix to get the path relative to 'subscriptions'
             // Example: $path = 'subscriptions/location/us.txt'
             // $base_dir_relative = 'subscriptions'
@@ -99,14 +103,16 @@ function generate_html_section(string $type, array $links): string
     $icon = CLIENT_ICONS[$type] ?? CLIENT_ICONS['default'];
     $title = ucwords(str_replace(['-', '_'], ' ', $type)); // e.g., 'xray' -> 'Xray', 'clash' -> 'Clash'
 
-    $html = "<section class='mb-12'>\n";
-    $html .= "    <h2 class='text-2xl font-semibold mb-6 flex items-center gap-3'>" . $icon . " " . htmlspecialchars($title) . "</h2>\n";
-    $html .= "    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>\n";
+    $html = "<section class='mb-10'>\n"; // Slightly reduced margin-bottom for sections
+    $html .= "    <h2 class='text-2xl font-semibold mb-5 flex items-center gap-3'>" . $icon . " " . htmlspecialchars($title) . "</h2>\n"; // Slightly reduced margin-bottom for titles
+    // Adjusted grid: more columns on larger screens, smaller gap
+    $html .= "    <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>\n";
 
     foreach ($links as $name => $url) {
         $visual = '';
         $displayName = ucwords(str_replace(['-', '_'], ' ', $name));
-        $card_class = 'bg-white rounded-xl p-6 shadow-lg border border-slate-200';
+        // Reduced card padding from p-6 to p-4
+        $card_class = 'bg-white rounded-xl p-4 shadow-lg border border-slate-200';
         
         if ($type === 'location') {
             $flag = getFlags($name);
@@ -120,7 +126,7 @@ function generate_html_section(string $type, array $links): string
         }
         
         $html .= "        <div class='{$card_class}'>\n";
-        $html .= "            <div class='flex items-center gap-3 font-medium mb-4'>{$visual}" . htmlspecialchars($displayName) . "</div>\n";
+        $html .= "            <div class='flex items-center gap-3 font-medium mb-3'>{$visual}" . htmlspecialchars($displayName) . "</div>\n"; // Reduced margin-bottom for card header
         $html .= "            <div class='flex items-center'>\n";
         $html .= "                <input type='text' readonly value='" . htmlspecialchars($url) . "'\n";
         $html .= "                    class='flex-grow font-mono text-sm py-2.5 px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />\n";
@@ -200,16 +206,16 @@ function generate_full_html(array $structured_data): string
 
         <main>
             <!-- Universal Subscriptions Section -->
-            <section class='mb-12'>
-                <h2 class='text-2xl font-semibold mb-6 flex items-center gap-3'>
+            <section class='mb-10'>
+                <h2 class='text-2xl font-semibold mb-5 flex items-center gap-3'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
                         <path d="M11.998 2.25a.75.75 0 0 1 .53 1.28l-3.25 3.25a.75.75 0 0 1-1.06 0l-1.5-1.5a.75.75 0 1 1 1.06-1.06l.97.97L11.998 2.25ZM11.25 9.75A2.25 2.25 0 1 0 13.5 12a2.25 2.25 0 0 0-2.25-2.25ZM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.44 1.93a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Zm-11.94-1.06a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06-1.06l-1.5-1.5ZM12 21.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008ZM7.06 17.44a.75.75 0 1 0-1.06 1.06l1.5 1.5a.75.75 0 1 0 1.06-1.06l-1.5-1.5Zm9.88 0a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Z" />
                     </svg>
                     Universal Subscriptions
                 </h2>
-                <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    <div class='bg-white rounded-xl p-6 shadow-lg border border-slate-200'>
-                        <div class='flex items-center gap-3 font-medium mb-4'>
+                <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
+                    <div class='bg-white rounded-xl p-4 shadow-lg border border-slate-200'>
+                        <div class='flex items-center gap-3 font-medium mb-3'>
                             <span class='tag text-xs font-semibold px-2 py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Plain Text
                         </div>
                         <div class='flex items-center'>
@@ -218,7 +224,7 @@ function generate_full_html(array $structured_data): string
                             <button class='copy-btn flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
                                 data-url='{$universal_link_plain}' title='Copy URL'>
                                 <svg class='copy-icon w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                                    <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
+                                    <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
                                     <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
                                 </svg>
                                 <svg class='check-icon w-5 h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
@@ -227,8 +233,8 @@ function generate_full_html(array $structured_data): string
                             </button>
                         </div>
                     </div>
-                    <div class='bg-white rounded-xl p-6 shadow-lg border border-slate-200'>
-                        <div class='flex items-center gap-3 font-medium mb-4'>
+                    <div class='bg-white rounded-xl p-4 shadow-lg border border-slate-200'>
+                        <div class='flex items-center gap-3 font-medium mb-3'>
                             <span class='tag text-xs font-semibold px-2 py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Base64
                         </div>
                         <div class='flex items-center'>
@@ -251,7 +257,6 @@ function generate_full_html(array $structured_data): string
 HTML;
 
     // --- Generate sections from structured data ---
-    // This loop will now dynamically generate all sections (Standard, Lite, and their types)
     foreach ($structured_data as $prefix => $categories) {
         if(empty($categories)) continue;
         $html .= "<h1 class='text-3xl font-semibold mt-8 mb-6 pl-3 border-l-4 border-indigo-600'>" . htmlspecialchars($prefix) . " Subscriptions</h1>\n";
