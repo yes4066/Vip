@@ -120,7 +120,6 @@
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
                 "🇮🇷 IR | 🔴 | vmess | @grizzlyvpn | 7",
-                "🇮🇷 IR | 🔴 | vmess | @hope_net | 20",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -159,7 +158,7 @@
                 "🇯🇵 JP | 🔴 | vmess | @v2ray_free_conf | 19",
                 "❔ XX | 🔴 | vmess | @v2ray_n | 19",
                 "🇦🇺 AU | 🔴 | vmess | @v2rayfree_server | 11",
-                "🇳🇱 NL | 🔴 | vmess | @v2raying | 15",
+                "🇳🇱 NL | 🔴 | vmess | @v2raying | 14",
                 "🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6",
                 "🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3",
                 "🇩🇪 DE | 🟢 | vmess | @v2rayngchannelll | 5",
@@ -171,7 +170,7 @@
                 "🇺🇸 US | 🟢 | vmess | @vein_vpn | 4",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8",
-                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
+                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 16",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
@@ -199,7 +198,6 @@
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
                 "🇮🇷 IR | 🔴 | vmess | @grizzlyvpn | 7",
-                "🇮🇷 IR | 🔴 | vmess | @hope_net | 20",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -238,7 +236,7 @@
                 "🇯🇵 JP | 🔴 | vmess | @v2ray_free_conf | 19",
                 "❔ XX | 🔴 | vmess | @v2ray_n | 19",
                 "🇦🇺 AU | 🔴 | vmess | @v2rayfree_server | 11",
-                "🇳🇱 NL | 🔴 | vmess | @v2raying | 15",
+                "🇳🇱 NL | 🔴 | vmess | @v2raying | 14",
                 "🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6",
                 "🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3",
                 "🇩🇪 DE | 🟢 | vmess | @v2rayngchannelll | 5",
@@ -250,7 +248,7 @@
                 "🇺🇸 US | 🟢 | vmess | @vein_vpn | 4",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8",
-                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
+                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 16",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
@@ -488,22 +486,6 @@
             "uuid": "d3fb5051-8469-46b0-8208-4b83a31dadbb",
             "security": "auto",
             "alter_id": 0
-        },
-        {
-            "tag": "🇮🇷 IR | 🔴 | vmess | @hope_net | 20",
-            "type": "vmess",
-            "server": "85.133.253.183",
-            "server_port": 1408,
-            "uuid": "abb0b05d-4683-42f1-981f-f3537026ac2d",
-            "security": "auto",
-            "alter_id": 0,
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": ""
-                }
-            }
         },
         {
             "tag": "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
@@ -1063,7 +1045,7 @@
             "alter_id": 0
         },
         {
-            "tag": "🇳🇱 NL | 🔴 | vmess | @v2raying | 15",
+            "tag": "🇳🇱 NL | 🔴 | vmess | @v2raying | 14",
             "type": "vmess",
             "server": "channel.dollardoon.com",
             "server_port": 15709,
@@ -1242,7 +1224,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
+            "tag": "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 16",
             "type": "vmess",
             "server": "vc.fly.dev",
             "server_port": 443,
