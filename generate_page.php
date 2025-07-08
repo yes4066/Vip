@@ -31,7 +31,7 @@ function scan_directory(string $dir): array
         new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS),
         RecursiveIteratorIterator::SELF_FIRST
     );
-    $ignoreExtensions = ['php', 'md', 'json', 'yml', 'yaml', 'ini'];
+    $ignoreExtensions = ['php', 'md', 'yml', 'yaml', 'ini'];
 
     foreach ($iterator as $file) {
         if ($file->isFile() && !in_array(strtolower($file->getExtension()), $ignoreExtensions)) {
