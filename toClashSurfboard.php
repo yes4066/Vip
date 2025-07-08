@@ -7,9 +7,9 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-require_once __DIR__ . '/functions.php'; // Includes ConfigWrapper
-// Re-use the ConfigWrapper from the sing-box optimization. If not present, add it here or in functions.php
-if (!class_exists('ConfigWrapper')) { die('Error: ConfigWrapper class not found. Please include it from previous optimizations.'); }
+// Ensure the helper functions and ConfigWrapper class are available
+require_once __DIR__ . '/functions.php';
+if (!class_exists('ConfigWrapper')) { die('Error: ConfigWrapper class not found in functions.php'); }
 
 // --- Configuration Constants ---
 const INPUT_DIR = __DIR__ . '/subscriptions/xray/base64';
@@ -49,8 +49,8 @@ function vlessToProxyData(ConfigWrapper $c): ?array {
     if (!is_valid_uuid($c->getUuid())) return null;
     $proxy = [
         "name" => $c->getTag(), "type" => "vless", "server" => $c->getServer(), "port" => $c->getPort(),
-        "uuid" => $c->getUuid(), "tls" => $c->getParam('security') === 'tls', "network" => $c->getParam('type', 'tcp'),
-        "client-fingerprint" => "chrome", "udp" => true,
+        "uuid" => $c->getUuid(), "tls" => $c->getParam('security') === 'tls' || $c->getParam('security') === 'reality',
+        "network" => $c->getParam('type', 'tcp'), "client-fingerprint" => "chrome", "udp" => true,
     ];
     if ($c->getParam('sni')) $proxy["servername"] = $c->getParam('sni');
     if ($c->getParam('flow')) $proxy["flow"] = 'xtls-rprx-vision';
@@ -58,11 +58,9 @@ function vlessToProxyData(ConfigWrapper $c): ?array {
         $proxy["ws-opts"] = ["path" => $c->getPath(), "headers" => ["Host" => $c->getParam('host', $c->getServer())]];
     } elseif ($proxy['network'] === "grpc" && $c->getParam('serviceName')) {
         $proxy["grpc-opts"] = ["grpc-service-name" => $c->getParam('serviceName')];
-        $proxy["tls"] = true;
     }
     if ($c->getParam('security') === 'reality') {
         if (in_array(strtolower($c->getParam('fp', '')), ["android", "ios", "random"])) return null;
-        $proxy["tls"] = true;
         $proxy["client-fingerprint"] = $c->getParam('fp');
         $proxy["reality-opts"] = ["public-key" => $c->getParam('pbk')];
         if ($c->getParam('sid')) $proxy["reality-opts"]["short-id"] = $c->getParam('sid');
@@ -86,7 +84,6 @@ function ssToProxyData(ConfigWrapper $c): ?array {
     ];
 }
 
-
 // #############################################################################
 // Profile Generator Classes
 // #############################################################################
@@ -108,23 +105,32 @@ abstract class ProfileGenerator {
 class ClashProfile extends ProfileGenerator {
     private string $type; // 'clash' or 'meta'
     public function __construct(string $type) { $this->type = $type; }
+    
     protected function formatProxy(array $proxyData): ?string {
-        if ($this->type === 'clash' && $proxyData['type'] === 'vless') return null;
-        return '  - ' . json_encode($proxyData, JSON_UNESCAPED_UNICODE);
+        // Standard Clash doesn't support VLESS or REALITY. Filter them out.
+        if ($this->type === 'clash') {
+            if ($proxyData['type'] === 'vless') return null;
+            if (isset($proxyData['reality-opts'])) return null;
+        }
+        return '  ' . json_encode($proxyData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     }
+
     public function generate(): string {
         $template = file_get_contents(TEMPLATES_DIR . '/clash.yaml');
+        
         $proxies_yaml = implode("\n", $this->proxies);
-        $proxy_names_yaml = "    - " . implode("\n    - ", array_map(fn($n) => "'$n'", $this->proxyNames));
+        
+        // Correctly format the list of proxy names with proper indentation
+        $proxy_names_yaml = '';
+        foreach ($this->proxyNames as $name) {
+            $proxy_names_yaml .= "      - '" . str_replace("'", "''", $name) . "'\n";
+        }
+        $proxy_names_yaml = rtrim($proxy_names_yaml); // Remove last newline
+
+        // Replace placeholders
         $final_yaml = str_replace('##PROXIES##', $proxies_yaml, $template);
         $final_yaml = str_replace('##PROXY_NAMES##', $proxy_names_yaml, $final_yaml);
-
-        if ($this->type === 'meta') {
-            $meta_additions = file_get_contents(TEMPLATES_DIR . '/meta_additions.yaml');
-            $meta_parts = explode("meta_rules:", $meta_additions, 2);
-            $final_yaml = str_replace("rules:", $meta_parts[0] . "\nrules:", $final_yaml);
-            $final_yaml = str_replace("  - MATCH,PSG-MANUAL", trim($meta_parts[1]) . "\n  - MATCH,PSG-MANUAL", $final_yaml);
-        }
+        
         return $final_yaml;
     }
 }
@@ -132,17 +138,19 @@ class ClashProfile extends ProfileGenerator {
 class SurfboardProfile extends ProfileGenerator {
     private string $configUrl;
     public function __construct(string $configUrl) { $this->configUrl = $configUrl; }
+    
     protected function formatProxy(array $proxyData): ?string {
         $type = $proxyData['type'];
+        // Surfboard doesn't support VLESS or newer SS ciphers
         if ($type === 'vless' || ($type === 'ss' && $proxyData['cipher'] === '2022-blake3-aes-256-gcm')) return null;
 
-        $parts = [$proxyData['name'] . " = " . $type, $proxyData['server'], $proxyData['port']];
+        $name = str_replace(',', ' ', $proxyData['name']); // Commas are delimiters
+        $parts = ["{$name} = {$type}", $proxyData['server'], $proxyData['port']];
+        
         if ($type === 'vmess') {
-            $aead = ($proxyData['alterId'] ?? 0) == 0;
             $parts[] = "username = " . $proxyData['uuid'];
             $parts[] = "ws = " . ($proxyData['network'] === 'ws' ? 'true' : 'false');
             $parts[] = "tls = " . ($proxyData['tls'] ? 'true' : 'false');
-            $parts[] = "vmess-aead = " . ($aead ? 'true' : 'false');
             if ($proxyData['network'] === 'ws') {
                 $parts[] = "ws-path = " . $proxyData['ws-opts']['path'];
                 $parts[] = 'ws-headers = Host:"' . $proxyData['ws-opts']['headers']['Host'] . '"';
@@ -157,20 +165,21 @@ class SurfboardProfile extends ProfileGenerator {
         }
         return implode(", ", $parts);
     }
+    
     public function generate(): string {
         $template = file_get_contents(TEMPLATES_DIR . '/surfboard.ini');
         $proxies_ini = implode("\n", $this->proxies);
-        $proxy_names_ini = implode(", ", $this->proxyNames);
+        $proxy_names_ini = implode(", ", array_map(fn($name) => str_replace(',', ' ', $name), $this->proxyNames));
+        
         $final_ini = str_replace('##CONFIG_URL##', $this->configUrl, $template);
         $final_ini = str_replace('##PROXIES##', $proxies_ini, $final_ini);
         return str_replace('##PROXY_NAMES##', $proxy_names_ini, $final_ini);
     }
 }
 
-
 // --- Main Script Execution ---
 
-echo "Starting conversion to Clash, Meta, and Surfboard formats..." . PHP_EOL;
+echo "Starting subscription conversions..." . PHP_EOL;
 
 $files_to_process = glob(INPUT_DIR . '/*');
 
@@ -180,6 +189,11 @@ foreach ($files_to_process as $filepath) {
     
     $base64_data = file_get_contents($filepath);
     $configs = file(sprintf('data:text/plain;base64,%s', $base64_data), FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    
+    if (empty($configs)) {
+        echo "  -> Skipping {$inputType}, no configs found." . PHP_EOL;
+        continue;
+    }
     
     // Convert all configs to a neutral format once
     $proxyDataList = [];
@@ -205,14 +219,12 @@ foreach ($files_to_process as $filepath) {
             $outputDir = OUTPUT_DIR_BASE . '/' . $outputType;
             if (!is_dir($outputDir)) mkdir($outputDir, 0775, true);
 
-            if ($outputType === 'clash' || $outputType === 'meta') {
-                $generator = new ClashProfile($outputType);
-            } elseif ($outputType === 'surfboard') {
-                $url = GITHUB_BASE_URL . '/subscriptions/surfboard/' . $inputType;
-                $generator = new SurfboardProfile($url);
-            } else {
-                continue;
-            }
+            $generator = match($outputType) {
+                'clash', 'meta' => new ClashProfile($outputType),
+                'surfboard' => new SurfboardProfile(GITHUB_BASE_URL . '/subscriptions/surfboard/' . $inputType),
+                default => null
+            };
+            if (!$generator) continue;
 
             foreach($proxyDataList as $proxyData) {
                 $generator->addProxy($proxyData);
