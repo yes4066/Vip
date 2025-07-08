@@ -170,7 +170,6 @@
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "❔ XX | 🟢 | vless | @v2rayport | 10",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
-                "🇩🇪 DE | 🟢 | vless | @v2rayweb | 12",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "❔ XX | 🟢 | vless | @v2rayzone | 12",
@@ -192,17 +191,7 @@
                 "🇫🇷 FR | 🟢 | vless | @vpn_bal0uch | 4",
                 "🇰🇷 KR | 🟢 | vless | @vpn_sts | 4",
                 "❔ XX | 🟢 | vless | @vpnbigbang | 7",
-                "❔ XX | 🟢 | vless | @vpnbigbang | 8",
-                "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
-                "❔ XX | 🟢 | vless | @vpnwlf | 10",
-                "❔ XX | 🟢 | vless | @webshecan | 9",
-                "❔ XX | 🟢 | vless | @webshecan | 10",
-                "❔ XX | 🟢 | vless | @webshecan | 11",
-                "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 12",
-                "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 13",
-                "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 14",
-                "❔ XX | 🟢 | vless | @xsv2ray | 6",
-                "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0"
+                "❔ XX | 🟢 | vless | @vpnbigbang | 8"
             ]
         },
         {
@@ -274,7 +263,6 @@
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "❔ XX | 🟢 | vless | @v2rayport | 10",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
-                "🇩🇪 DE | 🟢 | vless | @v2rayweb | 12",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "❔ XX | 🟢 | vless | @v2rayzone | 12",
@@ -296,17 +284,7 @@
                 "🇫🇷 FR | 🟢 | vless | @vpn_bal0uch | 4",
                 "🇰🇷 KR | 🟢 | vless | @vpn_sts | 4",
                 "❔ XX | 🟢 | vless | @vpnbigbang | 7",
-                "❔ XX | 🟢 | vless | @vpnbigbang | 8",
-                "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
-                "❔ XX | 🟢 | vless | @vpnwlf | 10",
-                "❔ XX | 🟢 | vless | @webshecan | 9",
-                "❔ XX | 🟢 | vless | @webshecan | 10",
-                "❔ XX | 🟢 | vless | @webshecan | 11",
-                "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 12",
-                "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 13",
-                "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 14",
-                "❔ XX | 🟢 | vless | @xsv2ray | 6",
-                "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0"
+                "❔ XX | 🟢 | vless | @vpnbigbang | 8"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -1943,29 +1921,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayweb | 12",
-            "type": "vless",
-            "server": "dgrns1.vertalist.ir",
-            "server_port": 7005,
-            "uuid": "d2961a22-e833-4834-bac2-73e69a8b7830",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "BEgwKAxJOC_U3JNvu1psNSkcbSUL9p8g5nMEOtHY4Sc",
-                    "short_id": "c3537867431956f6"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
             "type": "vless",
             "server": "accpremium.outlineprivate.store",
@@ -2493,240 +2448,6 @@
                     "public_key": "FdMFSpgEwT0nhczf37d-Z8gFgJtwyV4C_pJlnOTScUA",
                     "short_id": "a1"
                 }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
-            "type": "vless",
-            "server": "iran.mr-cloud.ir",
-            "server_port": 443,
-            "uuid": "ae942900-cae6-425e-94b0-21f086e6d7b1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.cloudflare.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "__6BhtO3Rhjw4wnAmzklhquVvIngjhfnB8dhDVtj0Vs",
-                    "short_id": "275f34"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @vpnwlf | 10",
-            "type": "vless",
-            "server": "WLF-V-P-N-ID2.dnsfree.one",
-            "server_port": 443,
-            "uuid": "---WLFVPN---",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "GAUjNf1wQnDm5ziCGqRmb3yVfU9bg_UPwZ2_QU4JWRU",
-                    "short_id": "6bb85179e30d4fc2"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @webshecan | 9",
-            "type": "vless",
-            "server": "webshecan.webredirect.org",
-            "server_port": 2087,
-            "uuid": "f6b91664-0903-4063-8e15-dba1bc9ee9a2",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.speedtest.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "2M6UwPCIFyRuf41xzoiHRo_5DUDNBs8lfe-sK3c8-Dw",
-                    "short_id": "53242a95"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @webshecan | 10",
-            "type": "vless",
-            "server": "webshecan.webredirect.org",
-            "server_port": 2083,
-            "uuid": "89eeb27d-1a8c-4d84-9ca4-75d614d19900",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.theverge.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "TTyvgA7WXFTrzGfnc3n2thNNEcWc_GWReVsvs5Gd9D4",
-                    "short_id": "7f321171"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @webshecan | 11",
-            "type": "vless",
-            "server": "webshecan.webredirect.org",
-            "server_port": 2087,
-            "uuid": "8f646a01-2cc1-4270-ad43-f87e157e4d44",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.speedtest.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "2M6UwPCIFyRuf41xzoiHRo_5DUDNBs8lfe-sK3c8-Dw",
-                    "short_id": "53242a95"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 12",
-            "type": "vless",
-            "server": "situnes.wlftest.xyz",
-            "server_port": 443,
-            "uuid": "77540057-4504-43f7-b229-765f9b7bf35d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "search.itunes.apple.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "ios"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "9D4FoKRukUuWRV8jx5ya5HHTmKC4sYH2Tk5RGWjGSmI",
-                    "short_id": "ce"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 13",
-            "type": "vless",
-            "server": "game.wlftest.xyz",
-            "server_port": 443,
-            "uuid": "77540057-4504-43f7-b229-765f9b7bf35d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "game",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "ios"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "9D4FoKRukUuWRV8jx5ya5HHTmKC4sYH2Tk5RGWjGSmI",
-                    "short_id": "ce"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @womanlifefreedomvpn | 14",
-            "type": "vless",
-            "server": "icloud.wlftest.xyz",
-            "server_port": 443,
-            "uuid": "85399fea-2ee3-51b5-ad4e-d8b78a2cf1d9",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.icloud.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "ios"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "9D4FoKRukUuWRV8jx5ya5HHTmKC4sYH2Tk5RGWjGSmI",
-                    "short_id": "ce"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @xsv2ray | 6",
-            "type": "vless",
-            "server": "cvvmtfin.fekoli.com",
-            "server_port": 2095,
-            "uuid": "Anty_Vpn-Anty_Vpn-Anty_Vpn",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "277HDYaNIvLYS9CMSr1CbkcTaahPEUCymW_0Ad17p2M",
-                    "short_id": "f2"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0",
-            "type": "vless",
-            "server": "static.25.243.217.95.clients.your-server.de",
-            "server_port": 443,
-            "uuid": "1c4f8319-2482-4295-8d6a-27cf36c6504d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "start.ubuntu.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "wSvGzCaRiOiLdFWxZiC0PIFW-WyG0ZHHEk6SBj2jVFs",
-                    "short_id": "ca"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "JOWQNkKKWpMvAz5cfTbq"
             }
         }
     ],
