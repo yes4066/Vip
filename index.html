@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Subscription Links</title>
+    <title>Proxy Subscription Generator (PSG)</title>
     <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 <body class="bg-slate-50 text-slate-900 leading-relaxed">
     <div class="container max-w-6xl mx-auto px-4 py-8">
         <header class="text-center mb-10">
-            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-0">Dynamic Subscription Links</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-0">Proxy Subscription Generator (PSG)</h1>
             <p class="text-base sm:text-lg text-slate-500 mt-2">Select your preferences to get the corresponding subscription link and QR code.</p>
         </header>
 
@@ -52,8 +52,8 @@
                         <input type="text" id="subscriptionUrl" readonly
                             class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
                         <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100" title="Copy URL">
-                            <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zM-1 7a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H-0.5A.5.5 0 0 1-1 7z"/></svg>
-                            <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                            <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' /><path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' /></svg>
+                            <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' /></svg>
                         </button>
                     </div>
                     <div class="flex flex-col items-center justify-center">
@@ -82,7 +82,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Data and Constants ---
             const structuredData = {
     "Lite": {
         "clash": {
@@ -267,7 +266,6 @@
     }
 };
 
-            // --- DOM Elements (safe to access now) ---
             const configTypeSelect = document.getElementById('configType');
             const ipTypeSelect = document.getElementById('ipType');
             const otherElementSelect = document.getElementById('otherElement');
@@ -275,9 +273,7 @@
             const subscriptionUrlInput = document.getElementById('subscriptionUrl');
             const copyButton = document.getElementById('copyButton');
             const qrcodeDiv = document.getElementById('qrcode');
-            let qrcodeInstance = null;
 
-            // --- Helper Functions ---
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
                 document.getElementById('messageBoxText').textContent = message;
@@ -285,27 +281,24 @@
                 document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
             }
 
-            function populateSelect(selectElement, data, defaultOptionText, disable = true) {
+            function populateSelect(selectElement, data, defaultOptionText) {
                 selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
-                const keys = Object.keys(data);
-                if (keys.length > 0) {
-                    keys.forEach(key => {
-                        const option = document.createElement('option');
-                        option.value = key;
-                        let formatType = (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') ? 'location' : 'default';
-                        option.textContent = formatDisplayName(key, formatType);
-                        selectElement.appendChild(option);
-                    });
-                    selectElement.disabled = false;
-                } else {
-                    selectElement.disabled = true;
-                }
+                Object.keys(data).forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    const formatType = (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') ? 'location' : 'default';
+                    option.textContent = formatDisplayName(key, formatType);
+                    selectElement.appendChild(option);
+                });
             }
             
+            function resetSelect(selectElement, defaultText) {
+                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+                selectElement.disabled = true;
+            }
+
             function formatDisplayName(name, type = 'default') {
-                if (type === 'location') {
-                    return name.toUpperCase() + ' ' + getFlagEmoji(name);
-                }
+                if (type === 'location') return name.toUpperCase() + ' ' + getFlagEmoji(name);
                 return name.split(/[-_]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
             }
             
@@ -316,21 +309,20 @@
             }
 
             function updateQRCode(url) {
-                qrcodeDiv.innerHTML = '';
+                qrcodeDiv.innerHTML = ''; // Always clear previous QR code
                 if (url) {
-                    if (!qrcodeInstance) {
-                        qrcodeInstance = new QRCode(qrcodeDiv, { text: url, width: 128, height: 128 });
-                    } else {
-                        qrcodeInstance.makeCode(url);
-                    }
+                    // Create a new QRCode instance every time to avoid state issues
+                    new QRCode(qrcodeDiv, {
+                        text: url,
+                        width: 128,
+                        height: 128,
+                        colorDark: "#000000",
+                        colorLight: "#ffffff",
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
                 }
             }
             
-            function resetSelect(selectElement, defaultText) {
-                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
-                selectElement.disabled = true;
-            }
-
             // --- Event Listeners ---
             configTypeSelect.addEventListener('change', () => {
                 const selectedConfigType = configTypeSelect.value;
@@ -339,7 +331,8 @@
                 resultArea.classList.add('hidden');
 
                 if (selectedConfigType && structuredData[selectedConfigType]) {
-                    populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type', false);
+                    populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type');
+                    ipTypeSelect.disabled = false;
                 }
             });
 
@@ -350,7 +343,8 @@
                 resultArea.classList.add('hidden');
 
                 if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
-                    populateSelect(otherElementSelect, structuredData[selectedConfigType][selectedIpType], 'Select Element', false);
+                    populateSelect(otherElementSelect, structuredData[selectedConfigType][selectedIpType], 'Select Element');
+                    otherElementSelect.disabled = false;
                 }
             });
 
@@ -383,9 +377,8 @@
             });
 
             // --- Initializer ---
-            populateSelect(configTypeSelect, structuredData, 'Select Config Type', false);
-            resetSelect(ipTypeSelect, 'Select Type');
-            resetSelect(otherElementSelect, 'Select Element');
+            populateSelect(configTypeSelect, structuredData, 'Select Config Type');
+            configTypeSelect.disabled = false;
         });
     </script>
 </body>
