@@ -105,9 +105,10 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "🇬🇧 GB | 🟢 | trojan | @configshubplus | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
+                "🇮🇪 IE | 🟢 | trojan | @entrynet | 19",
                 "🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95",
+                "🏳️  | 🟢 | trojan | @hope_net | 19",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
@@ -123,9 +124,10 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "🇬🇧 GB | 🟢 | trojan | @configshubplus | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
+                "🇮🇪 IE | 🟢 | trojan | @entrynet | 19",
                 "🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95",
+                "🏳️  | 🟢 | trojan | @hope_net | 19",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
@@ -157,14 +159,14 @@
             "type": "dns"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | trojan | @configshubplus | 19",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
             "type": "trojan",
-            "server": "51.38.65.155",
-            "server_port": 443,
-            "password": "03bb7640-df39-11ef-a9b1-1239d0255272",
+            "server": "13.36.23.189",
+            "server_port": 22223,
+            "password": "telegram-id-directvpn",
             "tls": {
                 "enabled": true,
-                "server_name": "uk1.test3.net",
+                "server_name": "trojan.burgerip.co.uk",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -173,10 +175,10 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
+            "tag": "🇮🇪 IE | 🟢 | trojan | @entrynet | 19",
             "type": "trojan",
-            "server": "13.36.23.189",
-            "server_port": 22223,
+            "server": "54.246.95.141",
+            "server_port": 22222,
             "password": "telegram-id-directvpn",
             "tls": {
                 "enabled": true,
@@ -197,6 +199,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "exotic-bengal.treefrog761.one",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🏳️  | 🟢 | trojan | @hope_net | 19",
+            "type": "trojan",
+            "server": "127.0.0.1",
+            "server_port": 1080,
+            "password": "aaabccb-caab-caab-dcba-bcaabccbaacb",
+            "tls": {
+                "enabled": true,
+                "server_name": "127.0.0.1",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
