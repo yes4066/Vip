@@ -107,11 +107,12 @@
                 "URL-TEST",
                 "🇪🇸 ES | 🟢 | trojan | @argo_vpn1 | 7",
                 "🇰🇷 KR | 🟢 | trojan | @configfa | 15",
+                "🇺🇸 US | 🟢 | trojan | @configshubplus | 17",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95",
-                "a@104.18.26.90:443?path=/trUXByA1rnbs4YQ1Xw?ed=2560&security=tls&alpn=h3,h2,http/1.1&host=s1.mitivpn.workers.dev&fp=randomized&type=ws&sni=S1.mitivpN.wOrKeRS.DEV#🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 9",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
@@ -142,11 +143,12 @@
             "outbounds": [
                 "🇪🇸 ES | 🟢 | trojan | @argo_vpn1 | 7",
                 "🇰🇷 KR | 🟢 | trojan | @configfa | 15",
+                "🇺🇸 US | 🟢 | trojan | @configshubplus | 17",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇸🇬 SG | 🟢 | trojan | @filter_breaker | 95",
-                "a@104.18.26.90:443?path=/trUXByA1rnbs4YQ1Xw?ed=2560&security=tls&alpn=h3,h2,http/1.1&host=s1.mitivpn.workers.dev&fp=randomized&type=ws&sni=S1.mitivpN.wOrKeRS.DEV#🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 9",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
@@ -230,6 +232,22 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | trojan | @configshubplus | 17",
+            "type": "trojan",
+            "server": "161.145.150.14",
+            "server_port": 443,
+            "password": "Aimer",
+            "tls": {
+                "enabled": true,
+                "server_name": "acepo.ambercc.filegear-sg.me",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
             "type": "trojan",
             "server": "production.tj.ojan.workers.dev",
@@ -301,11 +319,27 @@
             }
         },
         {
-            "tag": "a@104.18.26.90:443?path=/trUXByA1rnbs4YQ1Xw?ed=2560&security=tls&alpn=h3,h2,http/1.1&host=s1.mitivpn.workers.dev&fp=randomized&type=ws&sni=S1.mitivpN.wOrKeRS.DEV#🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
             "type": "trojan",
-            "server": "Xa4^l(;.;B",
-            "server_port": 0,
-            "password": ""
+            "server": "172.67.187.28",
+            "server_port": 443,
+            "password": "a94fafdb-10d6-46c2-be8a-5c2e8358fbb0",
+            "tls": {
+                "enabled": true,
+                "server_name": "dddDdDdDDFfFf.iran2035.dPdNS.ORG",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/xa846InEcmjyiKVby2Lp",
+                "headers": {
+                    "Host": "dddDdDdDDFfFf.iran2035.dPdNS.ORG"
+                }
+            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 9",

@@ -113,6 +113,7 @@
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 0",
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
+                "🇺🇸 US | 🟢 | vless | @entrynet | 19",
                 "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 6",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇩🇪 DE | 🟢 | vless | @fastshovpn | 0",
@@ -184,6 +185,7 @@
                 "🇫🇮 FI | 🟢 | vless | @v2rng_free1 | 17",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2turbo | 0",
+                "🇫🇮 FI | 🟢 | vless | @vaslvip | 18",
                 "🇫🇷 FR | 🟢 | vless | @vipfastspeed | 5",
                 "🇷🇺 RU | 🟢 | vless | @vipnetmeli | 1",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
@@ -223,6 +225,7 @@
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 0",
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
+                "🇺🇸 US | 🟢 | vless | @entrynet | 19",
                 "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 6",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇩🇪 DE | 🟢 | vless | @fastshovpn | 0",
@@ -294,6 +297,7 @@
                 "🇫🇮 FI | 🟢 | vless | @v2rng_free1 | 17",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2turbo | 0",
+                "🇫🇮 FI | 🟢 | vless | @vaslvip | 18",
                 "🇫🇷 FR | 🟢 | vless | @vipfastspeed | 5",
                 "🇷🇺 RU | 🟢 | vless | @vipnetmeli | 1",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
@@ -534,6 +538,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "/tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers"
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @entrynet | 19",
+            "type": "vless",
+            "server": "18.220.10.185",
+            "server_port": 4433,
+            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
+                    "short_id": "f785b38130e64177"
+                }
             }
         },
         {
@@ -2277,6 +2304,29 @@
                     "enabled": true,
                     "public_key": "rxVIa6O2a0Liyy9nSil5D-pwadYR7q7Ap3yKWhpvFQk",
                     "short_id": "46a0e1ff63f33c78"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @vaslvip | 18",
+            "type": "vless",
+            "server": "193.164.155.188",
+            "server_port": 6565,
+            "uuid": "98ad4415-95da-4f89-bf41-409b6a9e47b7",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "tgju.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "rNRdBK8OH1KwN1ObGsMyVAM7YjYme8BYwZB-kqYLRj4",
+                    "short_id": "a5"
                 }
             }
         },

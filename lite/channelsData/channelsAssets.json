@@ -525,8 +525,8 @@
     },
     "club_profsor": {
         "types": [
-            "vless",
             "ss",
+            "vless",
             "vmess"
         ],
         "title": "VPN | Professor Club",
@@ -552,9 +552,9 @@
     "config_proxy": {
         "types": [
             "vless",
+            "vmess",
             "ss",
-            "trojan",
-            "vmess"
+            "trojan"
         ],
         "title": "Proxy | V2ray | Config | Vpn | Hiddify | Nekobox | Segaro | پروکسی | فیلترشکن | ایرانسل | همراه اول | رایتل | سامانتل | مخابرات|",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/config_proxy.jpg"
@@ -672,8 +672,9 @@
     "configshubplus": {
         "types": [
             "vless",
-            "ss",
-            "trojan"
+            "trojan",
+            "vmess",
+            "ss"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/configshubplus.jpg"
@@ -1095,6 +1096,7 @@
         "types": [
             "vless",
             "trojan",
+            "vmess",
             "ss"
         ],
         "title": ".::entryNET::. Free v2ray vpn &amp; proxy | وی پی ان و پروکسی رایگان",
@@ -1988,10 +1990,10 @@
     },
     "hope_net": {
         "types": [
+            "vmess",
             "vless",
             "trojan",
-            "ss",
-            "vmess"
+            "ss"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/hope_net.jpg"
@@ -2081,10 +2083,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
-            "ss",
             "vmess",
-            "trojan"
+            "ss",
+            "trojan",
+            "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/ip_cf_config.jpg"
@@ -2614,9 +2616,7 @@
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/lranonline_new.jpg"
     },
     "lrnbymaa": {
-        "types": [
-            "vless"
-        ],
+        "types": [],
         "title": "Lrn By MAA",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/lrnbymaa.jpg"
     },
@@ -2628,7 +2628,9 @@
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/luckyvpn.jpg"
     },
     "m_android": {
-        "types": [],
+        "types": [
+            "vless"
+        ],
         "title": "M_android",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/m_android.jpg"
     },
@@ -3797,8 +3799,8 @@
     },
     "proxypj": {
         "types": [],
-        "title": "Unknown Title",
-        "logo": ""
+        "title": "‌ Proxy PJ | ویتوری رایگان",
+        "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/proxypj.jpg"
     },
     "proxyporsoat": {
         "types": [],
@@ -4442,11 +4444,9 @@
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/soalvajavaab.jpg"
     },
     "sobi_vpn": {
-        "types": [
-            "vless"
-        ],
-        "title": "SobiVpn",
-        "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/sobi_vpn.jpg"
+        "types": [],
+        "title": "Unknown Title",
+        "logo": ""
     },
     "sobyv2ray": {
         "types": [
@@ -5032,8 +5032,9 @@
     },
     "v2ray_configs_pool": {
         "types": [
+            "trojan",
             "vless",
-            "trojan"
+            "ss"
         ],
         "title": "V2RAY_CONFIGS_POOL",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2ray_configs_pool.jpg"
@@ -5305,9 +5306,10 @@
     },
     "v2raych": {
         "types": [
-            "vless",
             "trojan",
-            "ss"
+            "vless",
+            "ss",
+            "vmess"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2raych.jpg"
@@ -5959,13 +5961,16 @@
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayvpnclub.jpg"
     },
     "v2rayvx": {
-        "types": [],
-        "title": "Unknown Title",
-        "logo": ""
+        "types": [
+            "vless"
+        ],
+        "title": "سرور و کانفیگ وکس 😍",
+        "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayvx.jpg"
     },
     "v2rayweb": {
         "types": [
-            "vless"
+            "vless",
+            "trojan"
         ],
         "title": "V2ray | VPN",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2rayweb.jpg"
@@ -6105,7 +6110,7 @@
     "v2source": {
         "types": [
             "vless",
-            "trojan"
+            "ss"
         ],
         "title": "Free V2ray",
         "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/v2source.jpg"
@@ -6208,8 +6213,8 @@
     },
     "vaslvip": {
         "types": [
-            "vless",
             "vmess",
+            "vless",
             "ss"
         ],
         "title": "دور زدن نت ملی/همیشه وصل بمون/کانفیک رایگان",
@@ -6262,8 +6267,8 @@
     },
     "vip_free_vpn02": {
         "types": [],
-        "title": "Unknown Title",
-        "logo": ""
+        "title": "𝐕𝐈𝐏 - 𝐅𝐑𝐄𝐄_𝐕𝐏𝐍02",
+        "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/vip_free_vpn02.jpg"
     },
     "vip_freevpn1": {
         "types": [
@@ -7212,8 +7217,8 @@
     },
     "wolf_vpn02": {
         "types": [],
-        "title": "𝑾𝑶𝑳𝑭 𝑽𝑷𝑵🐺",
-        "logo": "https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/logos/wolf_vpn02.jpg"
+        "title": "Unknown Title",
+        "logo": ""
     },
     "womanlifefreedomvpn": {
         "types": [
