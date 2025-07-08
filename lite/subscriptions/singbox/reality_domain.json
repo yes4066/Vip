@@ -107,7 +107,6 @@
                 "URL-TEST",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇩🇪 DE | 🟢 | vless | @entrynet | 18",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iseqaro | 4",
@@ -124,7 +123,7 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayng_fast | 1",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇩🇪 DE | 🟢 | vless | @vaynora | 9",
+                "🇩🇪 DE | 🟢 | vless | @vaynora | 8",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
@@ -139,7 +138,6 @@
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇩🇪 DE | 🟢 | vless | @entrynet | 18",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iseqaro | 4",
@@ -156,7 +154,7 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayng_fast | 1",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇩🇪 DE | 🟢 | vless | @vaynora | 9",
+                "🇩🇪 DE | 🟢 | vless | @vaynora | 8",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
@@ -232,29 +230,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram:"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @entrynet | 18",
-            "type": "vless",
-            "server": "parmis.crocodileserver.ir",
-            "server_port": 443,
-            "uuid": "30939f46-144d-4652-9c8e-543fad8c1931",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sw.crocodileserver.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "bNqWVghgIlng83CQFziNhIA8TTKUFsv0gHkVxbBOmh8",
-                    "short_id": "1da8d08f24e92861"
-                }
             }
         },
         {
@@ -650,7 +625,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vaynora | 9",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vaynora | 8",
             "type": "vless",
             "server": "PARMIS.CROCODILESERVER.IR",
             "server_port": 443,
