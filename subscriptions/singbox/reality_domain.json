@@ -134,10 +134,6 @@
                 "🇳🇱 NL | 🟢 | vless | @jokerrvpn | 0",
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
-                "❔ XX | 🟢 | vless | @mt_team_iran | 0",
-                "❔ XX | 🟢 | vless | @mt_team_iran | 1",
-                "❔ XX | 🟢 | vless | @mt_team_iran | 2",
-                "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "❔ XX | 🟢 | vless | @mtpv2ray | 7",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -170,7 +166,6 @@
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "❔ XX | 🟢 | vless | @v2rayzone | 12",
-                "🇩🇪 DE | 🟢 | vless | @v2turbo | 0",
                 "🇷🇺 RU | 🟢 | vless | @vipfastspeed | 3",
                 "🇫🇷 FR | 🟢 | vless | @vipfastspeed | 5",
                 "❔ XX | 🟢 | vless | @vmessraygan | 7",
@@ -234,10 +229,6 @@
                 "🇳🇱 NL | 🟢 | vless | @jokerrvpn | 0",
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
-                "❔ XX | 🟢 | vless | @mt_team_iran | 0",
-                "❔ XX | 🟢 | vless | @mt_team_iran | 1",
-                "❔ XX | 🟢 | vless | @mt_team_iran | 2",
-                "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "❔ XX | 🟢 | vless | @mtpv2ray | 7",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -270,7 +261,6 @@
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "❔ XX | 🟢 | vless | @v2rayzone | 12",
-                "🇩🇪 DE | 🟢 | vless | @v2turbo | 0",
                 "🇷🇺 RU | 🟢 | vless | @vipfastspeed | 3",
                 "🇫🇷 FR | 🟢 | vless | @vipfastspeed | 5",
                 "❔ XX | 🟢 | vless | @vmessraygan | 7",
@@ -1059,114 +1049,6 @@
             }
         },
         {
-            "tag": "❔ XX | 🟢 | vless | @mt_team_iran | 0",
-            "type": "vless",
-            "server": "free.zayn2012vip2.top",
-            "server_port": 8080,
-            "uuid": "a1cb5aca-32f0-4b07-ab28-16b486de44d3",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "OUonXvWLzJQhQlc3BWmDKDSX2DNfB2-oVgdWgiblGSs",
-                    "short_id": "af2f1628"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN"
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @mt_team_iran | 1",
-            "type": "vless",
-            "server": "mr.zayn2012.sbs",
-            "server_port": 2096,
-            "uuid": "f2b9d220-71e1-41d6-bede-c1f79579411b",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "znbQEeL-2d3Qh3Ze_y-rHJF1cgq5eY7ZlQf9b6GieRs",
-                    "short_id": "ae938db8"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN"
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @mt_team_iran | 2",
-            "type": "vless",
-            "server": "mr.zayn2012.sbs",
-            "server_port": 2096,
-            "uuid": "e32949ce-4b17-4759-b916-ffa8d820e0a5",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "znbQEeL-2d3Qh3Ze_y-rHJF1cgq5eY7ZlQf9b6GieRs",
-                    "short_id": "ae938db8"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN"
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @mt_team_iran | 4",
-            "type": "vless",
-            "server": "mr.zayn2012.sbs",
-            "server_port": 2096,
-            "uuid": "569af5c4-0d06-4808-819d-e28f87354256",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "znbQEeL-2d3Qh3Ze_y-rHJF1cgq5eY7ZlQf9b6GieRs",
-                    "short_id": "ae938db8"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN_MT_TEAM_IRAN"
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @mtpv2ray | 7",
             "type": "vless",
             "server": "day.mtpmio.com",
@@ -1940,29 +1822,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "s14.norbertpro.site"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2turbo | 0",
-            "type": "vless",
-            "server": "de7.v2turbo1.blog",
-            "server_port": 10239,
-            "uuid": "c86049a4-8185-48e1-ba45-4dfce0cedd52",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "todoist.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "rxVIa6O2a0Liyy9nSil5D-pwadYR7q7Ap3yKWhpvFQk",
-                    "short_id": "46a0e1ff63f33c78"
-                }
             }
         },
         {
