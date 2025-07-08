@@ -103,40 +103,40 @@ function generate_html_section(string $type, array $links): string
     $icon = CLIENT_ICONS[$type] ?? CLIENT_ICONS['default'];
     $title = ucwords(str_replace(['-', '_'], ' ', $type)); // e.g., 'xray' -> 'Xray', 'clash' -> 'Clash'
 
-    $html = "<section class='mb-10'>\n"; // Slightly reduced margin-bottom for sections
-    $html .= "    <h2 class='text-2xl font-semibold mb-5 flex items-center gap-3'>" . $icon . " " . htmlspecialchars($title) . "</h2>\n"; // Slightly reduced margin-bottom for titles
+    $html = "<section class='mb-8 sm:mb-10'>\n"; // Adjusted margin-bottom for small screens
+    $html .= "    <h2 class='text-xl sm:text-2xl font-semibold mb-4 sm:mb-5 flex items-center gap-2 sm:gap-3'>" . $icon . " " . htmlspecialchars($title) . "</h2>\n"; // Adjusted font size and margin-bottom for small screens
     // Adjusted grid: more columns on larger screens, smaller gap
-    $html .= "    <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>\n";
+    $html .= "    <div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4'>\n"; // Changed to 2 columns on extra small, 3 on small, etc.
 
     foreach ($links as $name => $url) {
         $visual = '';
         $displayName = ucwords(str_replace(['-', '_'], ' ', $name));
-        // Reduced card padding from p-6 to p-4
-        $card_class = 'bg-white rounded-xl p-4 shadow-lg border border-slate-200';
+        // Reduced card padding for small screens, default for larger
+        $card_class = 'bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-slate-200';
         
         if ($type === 'location') {
             $flag = getFlags($name);
-            $visual = "<span class='flag'>{$flag}</span>";
+            $visual = "<span class='flag text-lg sm:text-xl'>{$flag}</span>"; // Adjusted flag size for small screens
             $displayName = strtoupper($name); // Display country code in uppercase
         } elseif ($type === 'xray') {
             // For Xray, the 'name' is the protocol (vless, reality, mix, etc.)
             $color_class = PROTOCOL_COLORS[$name] ?? 'bg-slate-200 text-slate-800';
-            $visual = "<span class='tag text-xs font-semibold px-2 py-1 rounded-md {$color_class}'>" . strtoupper($name) . "</span>";
+            $visual = "<span class='tag text-xs sm:text-sm font-semibold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md {$color_class}'>" . strtoupper($name) . "</span>"; // Adjusted tag size/padding for small screens
             $displayName = "Base64 Encoded"; // Fixed display name for Xray links
         }
         
         $html .= "        <div class='{$card_class}'>\n";
-        $html .= "            <div class='flex items-center gap-3 font-medium mb-3'>{$visual}" . htmlspecialchars($displayName) . "</div>\n"; // Reduced margin-bottom for card header
+        $html .= "            <div class='flex items-center gap-2 sm:gap-3 font-medium mb-2 sm:mb-3 text-sm sm:text-base'>{$visual}" . htmlspecialchars($displayName) . "</div>\n"; // Adjusted font size and margin-bottom for card header
         $html .= "            <div class='flex items-center'>\n";
         $html .= "                <input type='text' readonly value='" . htmlspecialchars($url) . "'\n";
-        $html .= "                    class='flex-grow font-mono text-sm py-2.5 px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />\n";
-        $html .= "                <button class='copy-btn flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'\n";
+        $html .= "                    class='flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />\n"; // Adjusted input font size and padding for small screens
+        $html .= "                <button class='copy-btn flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'\n"; // Adjusted button size for small screens
         $html .= "                    data-url='" . htmlspecialchars($url) . "' title='Copy URL'>\n";
-        $html .= "                    <svg class='copy-icon w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>\n";
-        $html .= "                        <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375Zm6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />\n";
+        $html .= "                    <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>\n"; // Adjusted icon size for small screens
+        $html .= "                        <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />\n";
         $html .= "                        <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />\n";
         $html .= "                    </svg>\n";
-        $html .= "                    <svg class='check-icon w-5 h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>\n";
+        $html .= "                    <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>\n"; // Adjusted icon size for small screens
         $html .= "                        <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />\n";
         $html .= "                    </svg>\n";
         $html .= "                </button>\n";
@@ -199,54 +199,54 @@ function generate_full_html(array $structured_data): string
 </head>
 <body class="bg-slate-50 text-slate-900 leading-relaxed">
     <div class="container max-w-6xl mx-auto px-4 py-8">
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold tracking-tight mb-0">Proxy Subscription Generator</h1>
-            <p class="text-lg text-slate-500 mt-2">A collection of automatically generated subscription links.</p>
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-0">Proxy Subscription Generator</h1>
+            <p class="text-base sm:text-lg text-slate-500 mt-2">A collection of automatically generated subscription links.</p>
         </header>
 
         <main>
             <!-- Universal Subscriptions Section -->
-            <section class='mb-10'>
-                <h2 class='text-2xl font-semibold mb-5 flex items-center gap-3'>
+            <section class='mb-8 sm:mb-10'>
+                <h2 class='text-xl sm:text-2xl font-semibold mb-4 sm:mb-5 flex items-center gap-2 sm:gap-3'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
-                        <path d="M11.998 2.25a.75.75 0 0 1 .53 1.28l-3.25 3.25a.75.75 0 0 1-1.06 0l-1.5-1.5a.75.75 0 1 1 1.06-1.06l.97.97L11.998 2.25ZM11.25 9.75A2.25 2.25 0 1 0 13.5 12a2.25 2.25 0 0 0-2.25-2.25ZM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.44 1.93a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Zm-11.94-1.06a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06-1.06l-1.5-1.5ZM12 21.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008ZM7.06 17.44a.75.75 0 1 0-1.06 1.06l1.5 1.5a.75.75 0 1 0 1.06-1.06l-1.5-1.5Zm9.88 0a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Z" />
+                        <path d="M11.998 2.25a.75.75 0 0 1 .53 1.28l-3.25 3.25a.75.75 0 0 1-1.06 0l-1.5-1.5a.75.75 0 1 1 1.06-1.06l.97.97L11.998 2.25ZM11.25 9.75A2.25 2.25 0 1 0 13.5 12a2.25 2.25 0 0 0-2.25-2.25ZM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.44 1.93a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Zm-11.94-1.06a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06-1.06l-1.5-1.5ZM12 21.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008ZM7.06 17.44a.75.75 0 1 0-1.06 1.06l1.5 1.5a.75.75 0 1 0 1.06 1.06l-1.5-1.5Zm9.88 0a.75.75 0 1 0-1.06-1.06l-1.5 1.5a.75.75 0 1 0 1.06 1.06l1.5-1.5Z" />
                     </svg>
                     Universal Subscriptions
                 </h2>
-                <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
-                    <div class='bg-white rounded-xl p-4 shadow-lg border border-slate-200'>
-                        <div class='flex items-center gap-3 font-medium mb-3'>
-                            <span class='tag text-xs font-semibold px-2 py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Plain Text
+                <div class='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4'>
+                    <div class='bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-slate-200'>
+                        <div class='flex items-center gap-2 sm:gap-3 font-medium mb-2 sm:mb-3 text-sm sm:text-base'>
+                            <span class='tag text-xs sm:text-sm font-semibold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Plain Text
                         </div>
                         <div class='flex items-center'>
                             <input type='text' readonly value='{$universal_link_plain}'
-                                class='flex-grow font-mono text-sm py-2.5 px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />
-                            <button class='copy-btn flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
+                                class='flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />
+                            <button class='copy-btn flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
                                 data-url='{$universal_link_plain}' title='Copy URL'>
-                                <svg class='copy-icon w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
                                     <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
                                     <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
                                 </svg>
-                                <svg class='check-icon w-5 h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
                                     <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />
                                 </svg>
                             </button>
                         </div>
                     </div>
-                    <div class='bg-white rounded-xl p-4 shadow-lg border border-slate-200'>
-                        <div class='flex items-center gap-3 font-medium mb-3'>
-                            <span class='tag text-xs font-semibold px-2 py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Base64
+                    <div class='bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-slate-200'>
+                        <div class='flex items-center gap-2 sm:gap-3 font-medium mb-2 sm:mb-3 text-sm sm:text-base'>
+                            <span class='tag text-xs sm:text-sm font-semibold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-md bg-slate-200 text-slate-800'>MIX</span>Base64
                         </div>
                         <div class='flex items-center'>
                             <input type='text' readonly value='{$universal_link_b64}'
-                                class='flex-grow font-mono text-sm py-2.5 px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />
-                            <button class='copy-btn flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
+                                class='flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-slate-100 border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis' />
+                            <button class='copy-btn flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100'
                                 data-url='{$universal_link_b64}' title='Copy URL'>
-                                <svg class='copy-icon w-5 h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
                                     <path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' />
                                     <path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' />
                                 </svg>
-                                <svg class='check-icon w-5 h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                                <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
                                     <path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' />
                                 </svg>
                             </button>
@@ -259,7 +259,7 @@ HTML;
     // --- Generate sections from structured data ---
     foreach ($structured_data as $prefix => $categories) {
         if(empty($categories)) continue;
-        $html .= "<h1 class='text-3xl font-semibold mt-8 mb-6 pl-3 border-l-4 border-indigo-600'>" . htmlspecialchars($prefix) . " Subscriptions</h1>\n";
+        $html .= "<h1 class='text-2xl sm:text-3xl font-semibold mt-6 sm:mt-8 mb-4 sm:mb-6 pl-2 sm:pl-3 border-l-2 sm:border-l-4 border-indigo-600'>" . htmlspecialchars($prefix) . " Subscriptions</h1>\n"; // Adjusted font size and margins for small screens
         foreach ($categories as $type => $links) {
             $html .= generate_html_section($type, $links);
         }
@@ -268,7 +268,7 @@ HTML;
     $html .= <<<HTML
         </main>
 
-        <footer class="text-center mt-16 py-8 border-t border-slate-200 text-slate-500">
+        <footer class="text-center mt-12 sm:mt-16 py-6 sm:py-8 border-t border-slate-200 text-slate-500 text-sm sm:text-base">
             <p>Generated by <a href="https://github.com/itsyebekhe/PSG" target="_blank" rel="noopener noreferrer" class="text-indigo-600 no-underline font-medium hover:underline">PSG (Proxy Subscription Generator)</a>. Use at your own risk.</p>
         </footer>
     </div>
