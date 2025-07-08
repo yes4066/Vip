@@ -1,0 +1,524 @@
+//profile-title: base64:UFNHIHwgU1NfSVBWNA==
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+//support-url: https://t.me/yebekhe
+//profile-web-page-url: ithub.com/itsyebekhe/PSG
+{
+    "log": {
+        "disabled": false,
+        "level": "fatal",
+        "timestamp": true
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "0.0.0.0:9090",
+            "external_ui": "yacd",
+            "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+            "external_ui_download_detour": "direct",
+            "secret": "",
+            "default_mode": "rule"
+        }
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "tcp://185.228.168.9",
+                "address_resolver": "dns-direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "tcp://185.228.168.9",
+                "address_resolver": "dns-local",
+                "detour": "direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "local",
+                "detour": "direct",
+                "tag": "dns-local"
+            },
+            {
+                "address": "rcode://success",
+                "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "outbound": "direct",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            },
+            {
+                "outbound": "any",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            }
+        ],
+        "reverse_mapping": true,
+        "strategy": "ipv4_only",
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "listen_port": 6450,
+            "override_address": "8.8.8.8",
+            "override_port": 53,
+            "tag": "dns-in",
+            "type": "direct"
+        },
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "domain_strategy": "",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1/30",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": false
+        },
+        {
+            "domain_strategy": "",
+            "listen": "0.0.0.0",
+            "listen_port": 2080,
+            "sniff": true,
+            "sniff_override_destination": false,
+            "tag": "mixed-in",
+            "type": "mixed"
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "type": "selector",
+            "outbounds": [
+                "URL-TEST",
+                "🇩🇪 DE | 🟢 | ss | @argo_vpn1 | 8",
+                "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
+                "🇬🇧 GB | 🟢 | ss | @asak_vpn | 8",
+                "🇬🇧 GB | 🟢 | ss | @bislullproxy | 6",
+                "🇬🇧 GB | 🟢 | ss | @elfv2ray | 5",
+                "🇳🇱 NL | 🟢 | ss | @free1ss | 15",
+                "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
+                "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
+                "🇩🇪 DE | 🟢 | ss | @jiedianf | 10",
+                "🇬🇧 GB | 🟢 | ss | @key_outline | 19",
+                "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
+                "🇺🇸 US | 🟢 | ss | @mester_v2ray | 17",
+                "🇵🇱 PL | 🟢 | ss | @msv2flyng | 13",
+                "🇬🇧 GB | 🟢 | ss | @novinology | 16",
+                "🇩🇪 DE | 🟢 | ss | @outlineopenkey | 7",
+                "🇹🇷 TR | 🟢 | ss | @outlinereleasedkey | 18",
+                "🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9",
+                "🇬🇧 GB | 🟢 | ss | @prrofile_purple | 122",
+                "🇨🇦 CA | 🟢 | ss | @shadowsocksserv | 2",
+                "🇺🇸 US | 🟢 | ss | @slamvpn | 2",
+                "🇩🇪 DE | 🟢 | ss | @srv2ray | 0",
+                "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
+                "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
+                "🇩🇪 DE | 🟢 | ss | @v2freenet | 19",
+                "🇩🇪 DE | 🟢 | ss | @v2ray_free_conf | 19",
+                "🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27",
+                "🇮🇩 ID | 🟢 | ss | @vipoutline | 20",
+                "🇵🇱 PL | 🟢 | ss | @vipufovpn | 9",
+                "🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19",
+                "🇸🇪 SE | 🟢 | ss | @vmessx | 4",
+                "🇳🇱 NL | 🟢 | ss | @vpnaloo | 12",
+                "🇳🇱 NL | 🟢 | ss | @vpnfreeaccounts | 4"
+            ]
+        },
+        {
+            "tag": "URL-TEST",
+            "type": "urltest",
+            "outbounds": [
+                "🇩🇪 DE | 🟢 | ss | @argo_vpn1 | 8",
+                "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
+                "🇬🇧 GB | 🟢 | ss | @asak_vpn | 8",
+                "🇬🇧 GB | 🟢 | ss | @bislullproxy | 6",
+                "🇬🇧 GB | 🟢 | ss | @elfv2ray | 5",
+                "🇳🇱 NL | 🟢 | ss | @free1ss | 15",
+                "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
+                "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
+                "🇩🇪 DE | 🟢 | ss | @jiedianf | 10",
+                "🇬🇧 GB | 🟢 | ss | @key_outline | 19",
+                "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
+                "🇺🇸 US | 🟢 | ss | @mester_v2ray | 17",
+                "🇵🇱 PL | 🟢 | ss | @msv2flyng | 13",
+                "🇬🇧 GB | 🟢 | ss | @novinology | 16",
+                "🇩🇪 DE | 🟢 | ss | @outlineopenkey | 7",
+                "🇹🇷 TR | 🟢 | ss | @outlinereleasedkey | 18",
+                "🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9",
+                "🇬🇧 GB | 🟢 | ss | @prrofile_purple | 122",
+                "🇨🇦 CA | 🟢 | ss | @shadowsocksserv | 2",
+                "🇺🇸 US | 🟢 | ss | @slamvpn | 2",
+                "🇩🇪 DE | 🟢 | ss | @srv2ray | 0",
+                "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
+                "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
+                "🇩🇪 DE | 🟢 | ss | @v2freenet | 19",
+                "🇩🇪 DE | 🟢 | ss | @v2ray_free_conf | 19",
+                "🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27",
+                "🇮🇩 ID | 🟢 | ss | @vipoutline | 20",
+                "🇵🇱 PL | 🟢 | ss | @vipufovpn | 9",
+                "🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19",
+                "🇸🇪 SE | 🟢 | ss | @vmessx | 4",
+                "🇳🇱 NL | 🟢 | ss | @vpnaloo | 12",
+                "🇳🇱 NL | 🟢 | ss | @vpnfreeaccounts | 4"
+            ],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "bypass",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | ss | @argo_vpn1 | 8",
+            "type": "shadowsocks",
+            "server": "89.35.119.87",
+            "server_port": 5904,
+            "method": "chacha20-ietf-poly1305",
+            "password": "5TZnwPb23pQS39lIucspJw"
+        },
+        {
+            "tag": "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
+            "type": "shadowsocks",
+            "server": "45.138.74.160",
+            "server_port": 7261,
+            "method": "chacha20-ietf-poly1305",
+            "password": "pZvwP17Nlz2z6jsYnVgZgf"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @asak_vpn | 8",
+            "type": "shadowsocks",
+            "server": "74.177.207.175",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "u17T3BvpYaaiuW2c"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @bislullproxy | 6",
+            "type": "shadowsocks",
+            "server": "4.250.60.151",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "WstuSnlu4ieA9M0L"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @elfv2ray | 5",
+            "type": "shadowsocks",
+            "server": "74.177.202.58",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "69MUii7VDwMqh7Hz"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | ss | @free1ss | 15",
+            "type": "shadowsocks",
+            "server": "178.130.43.225",
+            "server_port": 2222,
+            "method": "chacha20-ietf-poly1305",
+            "password": "qscavF5UviIL-8V-E4raBA"
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
+            "type": "shadowsocks",
+            "server": "86.104.74.243",
+            "server_port": 14255,
+            "method": "chacha20-ietf-poly1305",
+            "password": "fDDmH4QefmWqMJ8UURZrGh"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
+            "type": "shadowsocks",
+            "server": "51.142.171.150",
+            "server_port": 49499,
+            "method": "chacha20-ietf-poly1305",
+            "password": "kTjlLxrncKx4i2HIjxfA3M"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | ss | @jiedianf | 10",
+            "type": "shadowsocks",
+            "server": "138.124.115.157",
+            "server_port": 1080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "M-nffO40KlclwbCX9CV1DQ"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @key_outline | 19",
+            "type": "shadowsocks",
+            "server": "78.129.140.11",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "2ruerET80WXozQEBPC7Xrq"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
+            "type": "shadowsocks",
+            "server": "85.210.120.237",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Bog0ELmMM9DSxDdQ"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | ss | @mester_v2ray | 17",
+            "type": "shadowsocks",
+            "server": "45.87.175.192",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "4a2rfixophdjffa8KVA4Aa"
+        },
+        {
+            "tag": "🇵🇱 PL | 🟢 | ss | @msv2flyng | 13",
+            "type": "shadowsocks",
+            "server": "23.27.24.181",
+            "server_port": 40030,
+            "method": "chacha20-ietf-poly1305",
+            "password": "7905a32b-012c-4711-89e2-73b6713eca75"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @novinology | 16",
+            "type": "shadowsocks",
+            "server": "13.87.74.71",
+            "server_port": 14564,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Q1qlRknoN9PwGeExWVyTKg"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | ss | @outlineopenkey | 7",
+            "type": "shadowsocks",
+            "server": "81.19.141.45",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "1PRi11zoil3xDSYINHmlxt"
+        },
+        {
+            "tag": "🇹🇷 TR | 🟢 | ss | @outlinereleasedkey | 18",
+            "type": "shadowsocks",
+            "server": "83.217.9.128",
+            "server_port": 2222,
+            "method": "chacha20-ietf-poly1305",
+            "password": "qscavF5UviIL-8V-E4raBA"
+        },
+        {
+            "tag": "🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9",
+            "type": "shadowsocks",
+            "server": "217.138.193.10",
+            "server_port": 808,
+            "method": "chacha20-ietf-poly1305",
+            "password": "G!yBwPWH3Vao"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @prrofile_purple | 122",
+            "type": "shadowsocks",
+            "server": "131.145.34.231",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Bog0ELmMM9DSxDdQ"
+        },
+        {
+            "tag": "🇨🇦 CA | 🟢 | ss | @shadowsocksserv | 2",
+            "type": "shadowsocks",
+            "server": "38.111.114.246",
+            "server_port": 9102,
+            "method": "aes-256-gcm",
+            "password": "e4FCWrgpkji3QY"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | ss | @slamvpn | 2",
+            "type": "shadowsocks",
+            "server": "45.87.175.178",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "cvII85TrW6n0OGyfpHVS1u"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | ss | @srv2ray | 0",
+            "type": "shadowsocks",
+            "server": "5.182.87.210",
+            "server_port": 35961,
+            "method": "aes-256-gcm",
+            "password": "wDZtxfIk3UhacKHrho7lxw"
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
+            "type": "shadowsocks",
+            "server": "45.12.135.36",
+            "server_port": 47076,
+            "method": "chacha20-ietf-poly1305",
+            "password": "WrNAsbtcuoeEEQdoSOcPgO"
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
+            "type": "shadowsocks",
+            "server": "51.103.32.8",
+            "server_port": 666,
+            "method": "chacha20-ietf-poly1305",
+            "password": "427395387a9379ca"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | ss | @v2freenet | 19",
+            "type": "shadowsocks",
+            "server": "3.121.98.210",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "AuirfT6Se/T5YFhqCNidSOfJc7g5y5DC+mDiIsNAYzI="
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | ss | @v2ray_free_conf | 19",
+            "type": "shadowsocks",
+            "server": "146.19.247.183",
+            "server_port": 8388,
+            "method": "chacha20-ietf-poly1305",
+            "password": "ZTUxOTQ5"
+        },
+        {
+            "tag": "🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27",
+            "type": "shadowsocks",
+            "server": "94.131.123.147",
+            "server_port": 7383,
+            "method": "chacha20-ietf-poly1305",
+            "password": "eSHEdJz96rqNkOCAzd5Csv"
+        },
+        {
+            "tag": "🇮🇩 ID | 🟢 | ss | @vipoutline | 20",
+            "type": "shadowsocks",
+            "server": "154.205.159.100",
+            "server_port": 990,
+            "method": "chacha20-ietf-poly1305",
+            "password": "f8f7aCzcPKbsF8p3"
+        },
+        {
+            "tag": "🇵🇱 PL | 🟢 | ss | @vipufovpn | 9",
+            "type": "shadowsocks",
+            "server": "54.36.174.181",
+            "server_port": 5601,
+            "method": "aes-256-gcm",
+            "password": "Y6R9pAtvxxzmGC"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19",
+            "type": "shadowsocks",
+            "server": "45.87.175.10",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+        },
+        {
+            "tag": "🇸🇪 SE | 🟢 | ss | @vmessx | 4",
+            "type": "shadowsocks",
+            "server": "45.8.147.88",
+            "server_port": 45961,
+            "method": "aes-256-gcm",
+            "password": "Y5Y2Rmq9TT33hli3GKnV5c"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | ss | @vpnaloo | 12",
+            "type": "shadowsocks",
+            "server": "45.158.171.150",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "4a2rfixophdjffa8KVA4Aa"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | ss | @vpnfreeaccounts | 4",
+            "type": "shadowsocks",
+            "server": "172.233.46.80",
+            "server_port": 80,
+            "method": "chacha20-ietf-poly1305",
+            "password": "M899a8syUTvFqQJCLpAZP8"
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "proxy",
+        "geoip": {
+            "download_url": "https://github.com/MiSaturo/sing-box-geoip-ir/releases/latest/download/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/iran-geosite.db",
+            "download_detour": "direct"
+        },
+        "rules": [
+            {
+                "outbound": "dns-out",
+                "port": [
+                    53
+                ]
+            },
+            {
+                "inbound": [
+                    "dns-in"
+                ],
+                "outbound": "dns-out"
+            },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geoip": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geosite": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "other"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "ads"
+                ],
+                "outbound": "block"
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0/3",
+                    "ff00::/8"
+                ],
+                "outbound": "block",
+                "source_ip_cidr": [
+                    "224.0.0.0/3",
+                    "ff00::/8"
+                ]
+            }
+        ]
+    }
+}

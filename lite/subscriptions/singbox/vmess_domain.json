@@ -1,0 +1,1388 @@
+//profile-title: base64:UFNHIHwgVk1FU1NfRE9NQUlO
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+//support-url: https://t.me/yebekhe
+//profile-web-page-url: ithub.com/itsyebekhe/PSG
+{
+    "log": {
+        "disabled": false,
+        "level": "fatal",
+        "timestamp": true
+    },
+    "experimental": {
+        "clash_api": {
+            "external_controller": "0.0.0.0:9090",
+            "external_ui": "yacd",
+            "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+            "external_ui_download_detour": "direct",
+            "secret": "",
+            "default_mode": "rule"
+        }
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "tcp://185.228.168.9",
+                "address_resolver": "dns-direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-remote"
+            },
+            {
+                "address": "tcp://185.228.168.9",
+                "address_resolver": "dns-local",
+                "detour": "direct",
+                "strategy": "ipv4_only",
+                "tag": "dns-direct"
+            },
+            {
+                "address": "local",
+                "detour": "direct",
+                "tag": "dns-local"
+            },
+            {
+                "address": "rcode://success",
+                "tag": "dns-block"
+            }
+        ],
+        "rules": [
+            {
+                "domain_suffix": [
+                    ".ir"
+                ],
+                "server": "dns-direct"
+            },
+            {
+                "outbound": "direct",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            },
+            {
+                "outbound": "any",
+                "server": "dns-direct",
+                "rewrite_ttl": 20
+            }
+        ],
+        "reverse_mapping": true,
+        "strategy": "ipv4_only",
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "listen_port": 6450,
+            "override_address": "8.8.8.8",
+            "override_port": 53,
+            "tag": "dns-in",
+            "type": "direct"
+        },
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "domain_strategy": "",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1/30",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": false
+        },
+        {
+            "domain_strategy": "",
+            "listen": "0.0.0.0",
+            "listen_port": 2080,
+            "sniff": true,
+            "sniff_override_destination": false,
+            "tag": "mixed-in",
+            "type": "mixed"
+        }
+    ],
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "type": "selector",
+            "outbounds": [
+                "URL-TEST",
+                "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 6",
+                "❔ XX | 🔴 | vmess | @armodchannel | 62",
+                "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
+                "❔ XX | 🟢 | vmess | @cattvpn | 0",
+                "❔ XX | 🔴 | vmess | @configforvpn | 9",
+                "🇩🇪 DE | 🟢 | vmess | @configsstore | 2",
+                "❔ XX | 🔴 | vmess | @dailyv2ray | 30",
+                "🇺🇸 US | 🔴 | vmess | @diamondproxytm | 2",
+                "🇩🇪 DE | 🔴 | vmess | @father_vpn | 5",
+                "🇦🇹 AT | 🔴 | vmess | @freakconfig | 0",
+                "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
+                "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
+                "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
+                "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
+                "🇮🇷 IR | 🔴 | vmess | @grizzlyvpn | 7",
+                "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
+                "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
+                "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
+                "❔ XX | 🔴 | vmess | @jedal_vpn | 4",
+                "🇮🇷 IR | 🔴 | vmess | @jetupnet | 1",
+                "🇬🇧 GB | 🔴 | vmess | @khoneproxy | 14",
+                "🇮🇷 IR | 🔴 | vmess | @komail315 | 3",
+                "🇳🇱 NL | 🔴 | vmess | @lazarus2050 | 2",
+                "🇩🇪 DE | 🔴 | vmess | @magickey_shop | 1",
+                "🇩🇪 DE | 🟢 | vmess | @mahanfix | 18",
+                "🇫🇷 FR | 🟢 | vmess | @mahsaproxy | 3",
+                "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
+                "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
+                "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇳🇱 NL | 🔴 | vmess | @mowjproxy | 5",
+                "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
+                "🇷🇺 RU | 🔴 | vmess | @pgkj666 | 1",
+                "🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1",
+                "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
+                "❔ XX | 🟢 | vmess | @prooxyk | 4",
+                "🇳🇱 NL | 🔴 | vmess | @proxysee | 0",
+                "🇮🇷 IR | 🔴 | vmess | @proxyvpnvip | 0",
+                "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
+                "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
+                "🇺🇸 US | 🔴 | vmess | @royal_shop87 | 17",
+                "🇧🇷 BR | 🔴 | vmess | @rsv2ray | 18",
+                "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
+                "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
+                "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4",
+                "🇺🇸 US | 🔴 | vmess | @sinavm | 1",
+                "🇺🇸 US | 🔴 | vmess | @tawanaclub | 2",
+                "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
+                "🇮🇷 IR | 🔴 | vmess | @toucan_vpn | 1",
+                "🇬🇧 GB | 🔴 | vmess | @v222ray | 9",
+                "🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7",
+                "🇺🇸 US | 🟢 | vmess | @v2ray_fd | 0",
+                "❔ XX | 🔴 | vmess | @v2ray_n | 19",
+                "🇦🇺 AU | 🔴 | vmess | @v2rayfree_server | 11",
+                "🇳🇱 NL | 🔴 | vmess | @v2raying | 14",
+                "🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6",
+                "🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3",
+                "🇩🇪 DE | 🟢 | vmess | @v2rayngchannelll | 5",
+                "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
+                "🇮🇷 IR | 🔴 | vmess | @v2rayngvpn_1 | 8",
+                "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
+                "🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10",
+                "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
+                "🇺🇸 US | 🟢 | vmess | @vein_vpn | 4",
+                "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
+                "🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8",
+                "🇮🇳 IN | 🔴 | vmess | @vpnfail_v2ray | 15",
+                "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
+                "🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27",
+                "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
+                "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
+                "❔ XX | 🔴 | vmess | @vpray3 | 3",
+                "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 24"
+            ]
+        },
+        {
+            "tag": "URL-TEST",
+            "type": "urltest",
+            "outbounds": [
+                "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 6",
+                "❔ XX | 🔴 | vmess | @armodchannel | 62",
+                "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
+                "❔ XX | 🟢 | vmess | @cattvpn | 0",
+                "❔ XX | 🔴 | vmess | @configforvpn | 9",
+                "🇩🇪 DE | 🟢 | vmess | @configsstore | 2",
+                "❔ XX | 🔴 | vmess | @dailyv2ray | 30",
+                "🇺🇸 US | 🔴 | vmess | @diamondproxytm | 2",
+                "🇩🇪 DE | 🔴 | vmess | @father_vpn | 5",
+                "🇦🇹 AT | 🔴 | vmess | @freakconfig | 0",
+                "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
+                "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
+                "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
+                "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
+                "🇮🇷 IR | 🔴 | vmess | @grizzlyvpn | 7",
+                "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
+                "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
+                "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
+                "❔ XX | 🔴 | vmess | @jedal_vpn | 4",
+                "🇮🇷 IR | 🔴 | vmess | @jetupnet | 1",
+                "🇬🇧 GB | 🔴 | vmess | @khoneproxy | 14",
+                "🇮🇷 IR | 🔴 | vmess | @komail315 | 3",
+                "🇳🇱 NL | 🔴 | vmess | @lazarus2050 | 2",
+                "🇩🇪 DE | 🔴 | vmess | @magickey_shop | 1",
+                "🇩🇪 DE | 🟢 | vmess | @mahanfix | 18",
+                "🇫🇷 FR | 🟢 | vmess | @mahsaproxy | 3",
+                "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
+                "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
+                "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇳🇱 NL | 🔴 | vmess | @mowjproxy | 5",
+                "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
+                "🇷🇺 RU | 🔴 | vmess | @pgkj666 | 1",
+                "🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1",
+                "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
+                "❔ XX | 🟢 | vmess | @prooxyk | 4",
+                "🇳🇱 NL | 🔴 | vmess | @proxysee | 0",
+                "🇮🇷 IR | 🔴 | vmess | @proxyvpnvip | 0",
+                "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
+                "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
+                "🇺🇸 US | 🔴 | vmess | @royal_shop87 | 17",
+                "🇧🇷 BR | 🔴 | vmess | @rsv2ray | 18",
+                "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
+                "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
+                "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4",
+                "🇺🇸 US | 🔴 | vmess | @sinavm | 1",
+                "🇺🇸 US | 🔴 | vmess | @tawanaclub | 2",
+                "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
+                "🇮🇷 IR | 🔴 | vmess | @toucan_vpn | 1",
+                "🇬🇧 GB | 🔴 | vmess | @v222ray | 9",
+                "🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7",
+                "🇺🇸 US | 🟢 | vmess | @v2ray_fd | 0",
+                "❔ XX | 🔴 | vmess | @v2ray_n | 19",
+                "🇦🇺 AU | 🔴 | vmess | @v2rayfree_server | 11",
+                "🇳🇱 NL | 🔴 | vmess | @v2raying | 14",
+                "🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6",
+                "🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3",
+                "🇩🇪 DE | 🟢 | vmess | @v2rayngchannelll | 5",
+                "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
+                "🇮🇷 IR | 🔴 | vmess | @v2rayngvpn_1 | 8",
+                "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
+                "🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10",
+                "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
+                "🇺🇸 US | 🟢 | vmess | @vein_vpn | 4",
+                "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
+                "🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8",
+                "🇮🇳 IN | 🔴 | vmess | @vpnfail_v2ray | 15",
+                "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
+                "🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27",
+                "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
+                "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
+                "❔ XX | 🔴 | vmess | @vpray3 | 3",
+                "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 24"
+            ],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": "3m",
+            "tolerance": 50
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "bypass",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 6",
+            "type": "vmess",
+            "server": "tu.shoptx.sbs",
+            "server_port": 15400,
+            "uuid": "cc660614-1172-4988-9647-3846502d0e4f",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "❔ XX | 🔴 | vmess | @armodchannel | 62",
+            "type": "vmess",
+            "server": "asia.artunnel57.host",
+            "server_port": 80,
+            "uuid": "65e44501-defd-4609-a4e3-7028dc417b50",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/vmess-ntls",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
+            "type": "vmess",
+            "server": "discord.noonetry.shop",
+            "server_port": 35165,
+            "uuid": "73d9dbf6-6202-4b19-8670-02a3b47e7785",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "❔ XX | 🟢 | vmess | @cattvpn | 0",
+            "type": "vmess",
+            "server": "alvvin.click",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 1,
+            "tls": {
+                "enabled": true,
+                "server_name": "alvvin.click",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkvws",
+                "headers": {
+                    "Host": "alvvin.click"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | vmess | @configforvpn | 9",
+            "type": "vmess",
+            "server": "shahinnet-freenetcdn.melodyshopone2.ir",
+            "server_port": 8080,
+            "uuid": "96588912-3bcb-491c-8ce3-7a965bbec07f",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vmess | @configsstore | 2",
+            "type": "vmess",
+            "server": "51.116.101.88",
+            "server_port": 8081,
+            "uuid": "03a21309-c2aa-4382-8f8f-6ed9313a6c2c",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "❔ XX | 🔴 | vmess | @dailyv2ray | 30",
+            "type": "vmess",
+            "server": "tr.gamecentervip.site",
+            "server_port": 443,
+            "uuid": "d49e2bf0-c652-4a72-b153-b122ab2f23d6",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @diamondproxytm | 2",
+            "type": "vmess",
+            "server": "107.148.192.156",
+            "server_port": 41911,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @father_vpn | 5",
+            "type": "vmess",
+            "server": "91.99.191.110",
+            "server_port": 48252,
+            "uuid": "ab65e694-c044-46cf-802e-301dc9998c41",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇦🇹 AT | 🔴 | vmess | @freakconfig | 0",
+            "type": "vmess",
+            "server": "prone.marfanet.com",
+            "server_port": 56320,
+            "uuid": "c4ec67a8-1dcc-471d-a6d7-4d9b9ec1726d",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
+            "type": "vmess",
+            "server": "51.79.102.253",
+            "server_port": 80,
+            "uuid": "58fe1542-5290-40ad-815a-77707a81afe5",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/IOebhLMhl1CTbFHbL95myfRX2",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
+            "type": "vmess",
+            "server": "37.143.129.238",
+            "server_port": 6616,
+            "uuid": "003f1279-c55d-427c-8327-9f71f8b1cc0b",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "37.143.129.238"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
+            "type": "vmess",
+            "server": "cloudgetservice.mcloudservice.site",
+            "server_port": 443,
+            "uuid": "5428dcc2-9950-4404-b8a5-9dac82acb210",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "cloudgetservice.mcloudservice.site",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkws",
+                "headers": {
+                    "Host": "cloudgetservice.mcloudservice.site"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
+            "type": "vmess",
+            "server": "167.235.204.122",
+            "server_port": 80,
+            "uuid": "2aac77de-b3e4-4017-845c-ca1380f2e8d0",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/telegram-id-@privatevpns",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @grizzlyvpn | 7",
+            "type": "vmess",
+            "server": "85.133.195.84",
+            "server_port": 3530,
+            "uuid": "d3fb5051-8469-46b0-8208-4b83a31dadbb",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
+            "type": "vmess",
+            "server": "89.116.38.184",
+            "server_port": 3456,
+            "uuid": "32e49539-f569-403d-b4b6-a8978c040d5d",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
+            "type": "vmess",
+            "server": "1000site.ir",
+            "server_port": 80,
+            "uuid": "e37f970a-052c-4c4d-9983-3c3b93f6c22c",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
+            "type": "vmess",
+            "server": "mute-math-d64e.0e503992ad7026.WOrKERs.deV",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "mute-math-d64e.0e503992ad7026.woRKERS.DeV",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/aveiror.com:443/linkvws",
+                "headers": {
+                    "Host": "mute-math-d64e.0e503992ad7026.woRKERS.DeV"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | vmess | @jedal_vpn | 4",
+            "type": "vmess",
+            "server": "ge-6.jedalvip.site",
+            "server_port": 17305,
+            "uuid": "6546c678-3f22-4a32-899b-84035ce40199",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @jetupnet | 1",
+            "type": "vmess",
+            "server": "46.38.146.68",
+            "server_port": 38585,
+            "uuid": "e3cc1286-8401-4b1f-b110-dac3a2b15050",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇬🇧 GB | 🔴 | vmess | @khoneproxy | 14",
+            "type": "vmess",
+            "server": "144.126.224.206",
+            "server_port": 9020,
+            "uuid": "5f45e8d6-62a9-441d-89bc-fc5eeaf3e56b",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @komail315 | 3",
+            "type": "vmess",
+            "server": "sv20.warzone1.in",
+            "server_port": 31195,
+            "uuid": "72bf75d0-eecd-cc57-8d87-3ef7d6c0cf22",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇳🇱 NL | 🔴 | vmess | @lazarus2050 | 2",
+            "type": "vmess",
+            "server": "93.115.172.175",
+            "server_port": 12540,
+            "uuid": "056d3d35-a729-4ab4-bbae-d71d8458af19",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @magickey_shop | 1",
+            "type": "vmess",
+            "server": "168.119.174.229",
+            "server_port": 443,
+            "uuid": "6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vmess | @mahanfix | 18",
+            "type": "vmess",
+            "server": "57.129.28.69",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkvws",
+                "headers": {
+                    "Host": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | vmess | @mahsaproxy | 3",
+            "type": "vmess",
+            "server": "152.228.229.14",
+            "server_port": 443,
+            "uuid": "b28bd4c0-86e3-11ed-ae56-e341819d545b",
+            "security": "auto",
+            "alter_id": 100,
+            "tls": {
+                "enabled": true,
+                "server_name": "snappfood.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
+            "type": "vmess",
+            "server": "183.236.51.38",
+            "server_port": 49302,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "security": "auto",
+            "alter_id": 64
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
+            "type": "vmess",
+            "server": "104.21.15.212",
+            "server_port": 443,
+            "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "glweidf.sbs",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkws",
+                "headers": {
+                    "Host": "glweidf.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+            "type": "vmess",
+            "server": "151.101.66.219",
+            "server_port": 443,
+            "uuid": "2d94dff9-fb62-44c6-8ce8-78eb663f20cd",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "speedtest.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=1024",
+                "headers": {
+                    "Host": "speedtest.net"
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🔴 | vmess | @mowjproxy | 5",
+            "type": "vmess",
+            "server": "194.87.77.97",
+            "server_port": 5730,
+            "uuid": "f3f64284-35d9-4e11-a84d-20837b741c36",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
+            "type": "vmess",
+            "server": "adsl.stylebender209.ir",
+            "server_port": 1010,
+            "uuid": "471db8a5-8715-4fcb-9522-fdd78d2c1904",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇷🇺 RU | 🔴 | vmess | @pgkj666 | 1",
+            "type": "vmess",
+            "server": "46.29.163.177",
+            "server_port": 20073,
+            "uuid": "6424a140-a37e-480a-96b8-7bc8beab2c09",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1",
+            "type": "vmess",
+            "server": "de.speedhunter.top",
+            "server_port": 21257,
+            "uuid": "692cf949-bcf2-4cad-8067-2762b8e24874",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
+            "type": "vmess",
+            "server": "185.143.233.120",
+            "server_port": 2095,
+            "uuid": "d7f9bd84-3d1d-4b4a-d2b8-5ae8b42e76aa",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/ArsalanTauBot",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🟢 | vmess | @prooxyk | 4",
+            "type": "vmess",
+            "server": "channel.v1-amironetwork.site",
+            "server_port": 443,
+            "uuid": "5f1bacc3-be67-4480-8f32-7abd0e25894a",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "join.v1-amironetwork.site",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/20334",
+                "headers": {
+                    "Host": "join.v1-amironetwork.site"
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🔴 | vmess | @proxysee | 0",
+            "type": "vmess",
+            "server": "nnl1-tu.mobstore.store",
+            "server_port": 2082,
+            "uuid": "91f0c0c3-5a4b-72cc-d73e-acc8511e5f71",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @proxyvpnvip | 0",
+            "type": "vmess",
+            "server": "185.58.243.177",
+            "server_port": 808,
+            "uuid": "@ProxyVPNVip-ChannelTelegram",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
+            "type": "vmess",
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "1f7e2947-c4a5-4e3c-b284-777ff73a086e",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
+            "type": "vmess",
+            "server": "45.138.74.173",
+            "server_port": 13700,
+            "uuid": "f38a5500-77de-4384-86f5-54d7ab5de2c8",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "grpc",
+                "service_name": "Telegram@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci"
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @royal_shop87 | 17",
+            "type": "vmess",
+            "server": "188.114.96.113",
+            "server_port": 80,
+            "uuid": "7022982f-da4c-48c9-c660-b2315abdcf7e",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2048",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇧🇷 BR | 🔴 | vmess | @rsv2ray | 18",
+            "type": "vmess",
+            "server": "95.164.4.140",
+            "server_port": 52937,
+            "uuid": "71820e62-7b99-4ed9-a836-1e0f814c33a1",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
+            "type": "vmess",
+            "server": "ir.svgspeedtest.net",
+            "server_port": 38960,
+            "uuid": "41c91b85-66bb-4aa7-a7f5-e30ec82cffab",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
+            "type": "vmess",
+            "server": "hexsen.com",
+            "server_port": 443,
+            "uuid": "de04add9-5c68-8bab-950c-08cd5320df18",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "arthur-experienced-hate-maiden.trycloudflare.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/argo-vmess?ed=2048",
+                "headers": {
+                    "Host": "arthur-experienced-hate-maiden.trycloudflare.com"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4",
+            "type": "vmess",
+            "server": "120.233.248.133",
+            "server_port": 30514,
+            "uuid": "02f0d2ec-086c-4ca2-a229-7ee75e9a73b6",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @sinavm | 1",
+            "type": "vmess",
+            "server": "npmjs.com",
+            "server_port": 8080,
+            "uuid": "dnlqfaqqrn",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/hetzner/cdn",
+                "headers": {
+                    "Host": "npmjs.com"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @tawanaclub | 2",
+            "type": "vmess",
+            "server": "173.245.59.168",
+            "server_port": 8080,
+            "uuid": "27848739-7e62-4138-9fd3-938a63964b6b",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/KTR",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
+            "type": "vmess",
+            "server": "199.247.30.45",
+            "server_port": 8080,
+            "uuid": "ca80451e-768a-469f-9913-57a27268fd70",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "199.247.30.45"
+                }
+            }
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @toucan_vpn | 1",
+            "type": "vmess",
+            "server": "188.121.123.118",
+            "server_port": 26210,
+            "uuid": "a0a7f23d-9600-4d4c-9398-b80adcc3a3f0",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇬🇧 GB | 🔴 | vmess | @v222ray | 9",
+            "type": "vmess",
+            "server": "5.180.30.85",
+            "server_port": 18598,
+            "uuid": "bf26f2fb-9d2a-49b6-8527-82e8aba3a9a9",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7",
+            "type": "vmess",
+            "server": "91.107.160.240",
+            "server_port": 15795,
+            "uuid": "7ca6c13a-e450-49fa-9b9c-b49a6eda5b79",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vmess | @v2ray_fd | 0",
+            "type": "vmess",
+            "server": "www.speedtest.net",
+            "server_port": 443,
+            "uuid": "0f102dbe-1eff-48a1-d2fb-584b25880c3b",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "0-1panel0-1.net-work-plus.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/0f102dbe-1eff-48a1-d2fb-584b25880c3b",
+                "headers": {
+                    "Host": "0-1panel0-1.net-work-plus.ir"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | vmess | @v2ray_n | 19",
+            "type": "vmess",
+            "server": "tr1.iranz.me",
+            "server_port": 443,
+            "uuid": "1145b8f1-72b9-4e3c-aede-1b884f56537d",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "tr1.iranz.me",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "tr1.iranz.me"
+                }
+            }
+        },
+        {
+            "tag": "🇦🇺 AU | 🔴 | vmess | @v2rayfree_server | 11",
+            "type": "vmess",
+            "server": "52.63.196.158",
+            "server_port": 39292,
+            "uuid": "90003e3b-4737-4079-aaec-5963900fadcb",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇳🇱 NL | 🔴 | vmess | @v2raying | 14",
+            "type": "vmess",
+            "server": "channel.dollardoon.com",
+            "server_port": 15709,
+            "uuid": "4ac39e8a-6d5c-48bb-b0d0-f633c829113e",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6",
+            "type": "vmess",
+            "server": "5.180.30.85",
+            "server_port": 18598,
+            "uuid": "bf26f2fb-9d2a-49b6-8527-82e8aba3a9a9",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3",
+            "type": "vmess",
+            "server": "57.129.7.139",
+            "server_port": 60240,
+            "uuid": "84e92b93-93d0-40e4-8b2b-123801eeda44",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vmess | @v2rayngchannelll | 5",
+            "type": "vmess",
+            "server": "185.219.221.128",
+            "server_port": 22793,
+            "uuid": "5c94031b-48c8-4276-d8b5-80fa3e89da38",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
+            "type": "vmess",
+            "server": "85.208.253.91",
+            "server_port": 16939,
+            "uuid": "486387bb-8e15-4dbb-8f4c-7ccb6ee5c06c",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @v2rayngvpn_1 | 8",
+            "type": "vmess",
+            "server": "ir.holy3buy.website",
+            "server_port": 18743,
+            "uuid": "d2ce98a0-2bdc-4d48-b1f3-4cdd17cb1e13",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
+            "type": "vmess",
+            "server": "162.55.174.135",
+            "server_port": 80,
+            "uuid": "4d9aa6db-705a-4bfa-b05b-8f442c839557",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/graphql",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10",
+            "type": "vmess",
+            "server": "65.109.128.177",
+            "server_port": 443,
+            "uuid": "6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "65.109.128.177",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
+            "type": "vmess",
+            "server": "144.48.81.134",
+            "server_port": 443,
+            "uuid": "73ed2e06-4833-4626-9746-b056668a2101",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vmess | @vein_vpn | 4",
+            "type": "vmess",
+            "server": "www.unpkg.com",
+            "server_port": 443,
+            "uuid": "03ca874f-d1fb-40fe-98c2-fcd2e6cd3b70",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "dll92.animationkidsart.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "dll92.animationkidsart.ir"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
+            "type": "vmess",
+            "server": "176.120.17.67",
+            "server_port": 42270,
+            "uuid": "3c0f9cf4-6a0c-42f3-a6de-89c79d4af8e3",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | vmess | @vpn_kade01 | 8",
+            "type": "vmess",
+            "server": "194.9.172.65",
+            "server_port": 443,
+            "uuid": "8d90c129-4156-4d6c-9115-24df25f26a02",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "beyonddbc.sbs",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkws",
+                "headers": {
+                    "Host": "beyonddbc.sbs"
+                }
+            }
+        },
+        {
+            "tag": "🇮🇳 IN | 🔴 | vmess | @vpnfail_v2ray | 15",
+            "type": "vmess",
+            "server": "94.136.185.230",
+            "server_port": 10534,
+            "uuid": "b01c7ef9-33ec-41f6-bfbf-77ddc4d21649",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
+            "type": "vmess",
+            "server": "5.78.103.249",
+            "server_port": 3389,
+            "uuid": "9c050a86-d612-48f1-ec32-e573df08a1b7",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇨🇾 CY | 🟢 | vmess | @vpnsupportfast | 27",
+            "type": "vmess",
+            "server": "195.85.59.21",
+            "server_port": 443,
+            "uuid": "f24bba0f-8656-44f8-b21e-a0e3a190c4c5",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "ury-unit-c030ehei8.poget71138.workers.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/www.31000oooowe2.bf/df97b21e-3943-4865-af18-b5ea9676b037",
+                "headers": {
+                    "Host": "ury-unit-c030ehei8.poget71138.workers.dev"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
+            "type": "vmess",
+            "server": "sinaazizpor.cozwao.worKERs.dEv",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "sinaazizpor.cozwao.wORKeRs.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/nelly.homes/linkvws",
+                "headers": {
+                    "Host": "sinaazizpor.cozwao.wORKeRs.dev"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
+            "type": "vmess",
+            "server": "45.77.141.170",
+            "server_port": 2087,
+            "uuid": "d5350465-ab63-4d30-ebda-5cbe0751cbd6",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": ""
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | vmess | @vpray3 | 3",
+            "type": "vmess",
+            "server": "tun.aloshamsi.fun",
+            "server_port": 22452,
+            "uuid": "f730a0a8-437d-455a-b898-f5c9ff9f8d16",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 24",
+            "type": "vmess",
+            "server": "s1.db-link01.top",
+            "server_port": 8880,
+            "uuid": "05881d43-e9da-3d65-8cbe-fb0459b78557",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/dabai.in104.20.224.3",
+                "headers": {
+                    "Host": "s1.db-link01.top"
+                }
+            }
+        }
+    ],
+    "route": {
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "proxy",
+        "geoip": {
+            "download_url": "https://github.com/MiSaturo/sing-box-geoip-ir/releases/latest/download/geoip.db",
+            "download_detour": "direct"
+        },
+        "geosite": {
+            "download_url": "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/iran-geosite.db",
+            "download_detour": "direct"
+        },
+        "rules": [
+            {
+                "outbound": "dns-out",
+                "port": [
+                    53
+                ]
+            },
+            {
+                "inbound": [
+                    "dns-in"
+                ],
+                "outbound": "dns-out"
+            },
+            {
+                "domain_suffix": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geoip": [
+                    "ir"
+                ],
+                "outbound": "bypass"
+            },
+            {
+                "geosite": [
+                    "ir"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "other"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "ads"
+                ],
+                "outbound": "block"
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0/3",
+                    "ff00::/8"
+                ],
+                "outbound": "block",
+                "source_ip_cidr": [
+                    "224.0.0.0/3",
+                    "ff00::/8"
+                ]
+            }
+        ]
+    }
+}
