@@ -105,21 +105,21 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 4",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 13",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 2",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 1",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
+                "🇬🇧 GB | 🟢 | ss | @proxy_v2box | 1",
                 "🇺🇸 US | 🟢 | ss | @prrofile_purple | 123",
-                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
+                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
                 "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
                 "🇵🇱 PL | 🟢 | ss | @shadowsockskeys | 16",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "🇬🇧 GB | 🟢 | ss | @v2rayport | 13",
                 "❔ XX | 🟢 | ss | @v2raytel | 2",
-                "🇬🇧 GB | 🟢 | ss | @vmess_ir | 19",
+                "🇬🇧 GB | 🟢 | ss | @v2rayvpn2 | 3",
                 "🇬🇧 GB | 🟢 | ss | @vmessorg | 14",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 14",
@@ -130,21 +130,21 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 4",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 13",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 2",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 1",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
+                "🇬🇧 GB | 🟢 | ss | @proxy_v2box | 1",
                 "🇺🇸 US | 🟢 | ss | @prrofile_purple | 123",
-                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
+                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
                 "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
                 "🇵🇱 PL | 🟢 | ss | @shadowsockskeys | 16",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "🇬🇧 GB | 🟢 | ss | @v2rayport | 13",
                 "❔ XX | 🟢 | ss | @v2raytel | 2",
-                "🇬🇧 GB | 🟢 | ss | @vmess_ir | 19",
+                "🇬🇧 GB | 🟢 | ss | @v2rayvpn2 | 3",
                 "🇬🇧 GB | 🟢 | ss | @vmessorg | 14",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 14",
@@ -169,14 +169,6 @@
         {
             "tag": "dns-out",
             "type": "dns"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 4",
-            "type": "shadowsocks",
-            "server": "series-a2-me.varzesh360.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "Bog0ELmMM9DSxDdQ"
         },
         {
             "tag": "❔ XX | 🟢 | ss | @chestertm | 12",
@@ -219,6 +211,14 @@
             "password": "NTdkZ"
         },
         {
+            "tag": "🇬🇧 GB | 🟢 | ss | @proxy_v2box | 1",
+            "type": "shadowsocks",
+            "server": "series-a2-me.varzesh360.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "Bog0ELmMM9DSxDdQ"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | ss | @prrofile_purple | 123",
             "type": "shadowsocks",
             "server": "h110vpnus.outlinekeys.net",
@@ -227,12 +227,12 @@
             "password": "CGH2Enq5gPYcMZUBOIiTvu"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
+            "tag": "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
             "type": "shadowsocks",
-            "server": "admin.c4.webramz.co",
+            "server": "freakconfig.usecharge.ir",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
-            "password": "69MUii7VDwMqh7Hz"
+            "password": "Bog0ELmMM9DSxDdQ"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
@@ -283,12 +283,12 @@
             "password": "W74XFALLLuw6m5IA"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @vmess_ir | 19",
+            "tag": "🇬🇧 GB | 🟢 | ss | @v2rayvpn2 | 3",
             "type": "shadowsocks",
-            "server": "admin.c2.havij.co",
+            "server": "admin.c4.webramz.co",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
-            "password": "AcGFEsMR6c07Txux"
+            "password": "69MUii7VDwMqh7Hz"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @vmessorg | 14",
