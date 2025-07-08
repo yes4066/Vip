@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Modern Subscription Page Generator for PSG
+ * Proxy Subscription Generator (PSG) Page Builder
  *
  * Scans subscription directories and generates a modern, fully functional index.html.
  * This script uses a NOWDOC to prevent PHP/JS conflicts and ensures all JS logic
@@ -38,7 +38,6 @@ function scan_directory(string $dir): array
     foreach ($iterator as $file) {
         if ($file->isFile() && !in_array(strtolower($file->getExtension()), $ignoreExtensions)) {
             $relativePath = str_replace(PROJECT_ROOT . DIRECTORY_SEPARATOR, '', $file->getRealPath());
-            // Ensure consistent use of forward slashes for cross-platform compatibility
             $files[] = str_replace(DIRECTORY_SEPARATOR, '/', $relativePath);
         }
     }
@@ -54,36 +53,31 @@ function process_files_to_structure(array $files_by_category): array
 {
     $structure = [];
     foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
-        $base_dir_relative = str_replace(DIRECTORY_SEPARATOR, '/', str_replace(PROJECT_ROOT, '', $category_dir_path));
-        // Remove leading slash if present
-        $base_dir_relative = ltrim($base_dir_relative, '/');
+        $base_dir_relative = ltrim(str_replace(DIRECTORY_SEPARATOR, '/', str_replace(PROJECT_ROOT, '', $category_dir_path)), '/');
 
-        if (!isset($files_by_category[$category_key])) {
-            continue;
-        }
+        if (!isset($files_by_category[$category_key])) continue;
 
         foreach ($files_by_category[$category_key] as $path) {
             $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
             $parts = explode('/', $relative_path_from_base);
 
-            if (count($parts) < 2) continue; // Must have at least a type folder and a file
+            if (count($parts) < 2) continue;
 
-            $type = array_shift($parts); // The first part is the type (e.g., 'clash', 'location')
-            $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME); // The rest forms the name
+            $type = array_shift($parts);
+            $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
 
             $url = GITHUB_REPO_URL . '/' . $path;
             $structure[$category_key][$type][$name] = $url;
         }
     }
 
-    // Sort the structure for predictable dropdown order
     foreach ($structure as &$categories) {
-        ksort($categories); // Sort types alphabetically (clash, location, xray)
+        ksort($categories);
         foreach ($categories as &$elements) {
-            ksort($elements); // Sort elements alphabetically (countries, protocols)
+            ksort($elements);
         }
     }
-    ksort($structure); // Sort top-level categories (Lite, Standard)
+    ksort($structure);
 
     return $structure;
 }
@@ -95,17 +89,15 @@ function process_files_to_structure(array $files_by_category): array
  */
 function generate_full_html(array $structured_data): string
 {
-    // Encode the PHP data into a JSON string for JavaScript
     $json_structured_data = json_encode($structured_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
-    // Use a NOWDOC (note the single quotes around 'HTML') to prevent PHP from parsing '$' in JS.
     $html_template = <<<'HTML'
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Subscription Links</title>
+    <title>Proxy Subscription Generator (PSG)</title>
     <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,7 +113,7 @@ function generate_full_html(array $structured_data): string
 <body class="bg-slate-50 text-slate-900 leading-relaxed">
     <div class="container max-w-6xl mx-auto px-4 py-8">
         <header class="text-center mb-10">
-            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-0">Dynamic Subscription Links</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-0">Proxy Subscription Generator (PSG)</h1>
             <p class="text-base sm:text-lg text-slate-500 mt-2">Select your preferences to get the corresponding subscription link and QR code.</p>
         </header>
 
@@ -154,8 +146,8 @@ function generate_full_html(array $structured_data): string
                         <input type="text" id="subscriptionUrl" readonly
                             class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
                         <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100" title="Copy URL">
-                            <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zM-1 7a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H-0.5A.5.5 0 0 1-1 7z"/></svg>
-                            <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                            <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' /><path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' /></svg>
+                            <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' /></svg>
                         </button>
                     </div>
                     <div class="flex flex-col items-center justify-center">
@@ -184,10 +176,8 @@ function generate_full_html(array $structured_data): string
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Data and Constants ---
             const structuredData = __JSON_DATA_PLACEHOLDER__;
 
-            // --- DOM Elements (safe to access now) ---
             const configTypeSelect = document.getElementById('configType');
             const ipTypeSelect = document.getElementById('ipType');
             const otherElementSelect = document.getElementById('otherElement');
@@ -195,9 +185,7 @@ function generate_full_html(array $structured_data): string
             const subscriptionUrlInput = document.getElementById('subscriptionUrl');
             const copyButton = document.getElementById('copyButton');
             const qrcodeDiv = document.getElementById('qrcode');
-            let qrcodeInstance = null;
 
-            // --- Helper Functions ---
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
                 document.getElementById('messageBoxText').textContent = message;
@@ -205,27 +193,24 @@ function generate_full_html(array $structured_data): string
                 document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
             }
 
-            function populateSelect(selectElement, data, defaultOptionText, disable = true) {
+            function populateSelect(selectElement, data, defaultOptionText) {
                 selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
-                const keys = Object.keys(data);
-                if (keys.length > 0) {
-                    keys.forEach(key => {
-                        const option = document.createElement('option');
-                        option.value = key;
-                        let formatType = (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') ? 'location' : 'default';
-                        option.textContent = formatDisplayName(key, formatType);
-                        selectElement.appendChild(option);
-                    });
-                    selectElement.disabled = false;
-                } else {
-                    selectElement.disabled = true;
-                }
+                Object.keys(data).forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    const formatType = (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') ? 'location' : 'default';
+                    option.textContent = formatDisplayName(key, formatType);
+                    selectElement.appendChild(option);
+                });
             }
             
+            function resetSelect(selectElement, defaultText) {
+                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+                selectElement.disabled = true;
+            }
+
             function formatDisplayName(name, type = 'default') {
-                if (type === 'location') {
-                    return name.toUpperCase() + ' ' + getFlagEmoji(name);
-                }
+                if (type === 'location') return name.toUpperCase() + ' ' + getFlagEmoji(name);
                 return name.split(/[-_]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
             }
             
@@ -236,21 +221,20 @@ function generate_full_html(array $structured_data): string
             }
 
             function updateQRCode(url) {
-                qrcodeDiv.innerHTML = '';
+                qrcodeDiv.innerHTML = ''; // Always clear previous QR code
                 if (url) {
-                    if (!qrcodeInstance) {
-                        qrcodeInstance = new QRCode(qrcodeDiv, { text: url, width: 128, height: 128 });
-                    } else {
-                        qrcodeInstance.makeCode(url);
-                    }
+                    // Create a new QRCode instance every time to avoid state issues
+                    new QRCode(qrcodeDiv, {
+                        text: url,
+                        width: 128,
+                        height: 128,
+                        colorDark: "#000000",
+                        colorLight: "#ffffff",
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
                 }
             }
             
-            function resetSelect(selectElement, defaultText) {
-                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
-                selectElement.disabled = true;
-            }
-
             // --- Event Listeners ---
             configTypeSelect.addEventListener('change', () => {
                 const selectedConfigType = configTypeSelect.value;
@@ -259,7 +243,8 @@ function generate_full_html(array $structured_data): string
                 resultArea.classList.add('hidden');
 
                 if (selectedConfigType && structuredData[selectedConfigType]) {
-                    populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type', false);
+                    populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type');
+                    ipTypeSelect.disabled = false;
                 }
             });
 
@@ -270,7 +255,8 @@ function generate_full_html(array $structured_data): string
                 resultArea.classList.add('hidden');
 
                 if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
-                    populateSelect(otherElementSelect, structuredData[selectedConfigType][selectedIpType], 'Select Element', false);
+                    populateSelect(otherElementSelect, structuredData[selectedConfigType][selectedIpType], 'Select Element');
+                    otherElementSelect.disabled = false;
                 }
             });
 
@@ -303,21 +289,19 @@ function generate_full_html(array $structured_data): string
             });
 
             // --- Initializer ---
-            populateSelect(configTypeSelect, structuredData, 'Select Config Type', false);
-            resetSelect(ipTypeSelect, 'Select Type');
-            resetSelect(otherElementSelect, 'Select Element');
+            populateSelect(configTypeSelect, structuredData, 'Select Config Type');
+            configTypeSelect.disabled = false;
         });
     </script>
 </body>
 </html>
 HTML;
 
-    // Inject the dynamic JSON data into the placeholder and return the final HTML
     return str_replace('__JSON_DATA_PLACEHOLDER__', $json_structured_data, $html_template);
 }
 
 // --- Main Execution ---
-echo "Starting modern subscription page generator..." . PHP_EOL;
+echo "Starting PSG page generator..." . PHP_EOL;
 
 $all_files = [];
 foreach (SCAN_DIRECTORIES as $category => $dir) {
@@ -329,19 +313,15 @@ foreach (SCAN_DIRECTORIES as $category => $dir) {
     }
 }
 
-if (empty($all_files)) {
-    die("Error: No scannable directories found. Exiting." . PHP_EOL);
-}
-
-$structured_data = process_files_to_structure($all_files);
-if (empty($structured_data)) {
+$file_count = array_sum(array_map('count', $all_files));
+if ($file_count === 0) {
     die("Error: No subscription files were found to generate the page. Please check your 'subscriptions' directories. Exiting." . PHP_EOL);
 }
 
-$file_count = array_sum(array_map('count', $all_files));
 echo "Found and categorized {$file_count} subscription files." . PHP_EOL;
+$structured_data = process_files_to_structure($all_files);
 
 $final_html = generate_full_html($structured_data);
 file_put_contents(OUTPUT_HTML_FILE, $final_html);
 
-echo "Successfully generated modern page at: " . realpath(OUTPUT_HTML_FILE) . PHP_EOL;
+echo "Successfully generated page at: " . realpath(OUTPUT_HTML_FILE) . PHP_EOL;
