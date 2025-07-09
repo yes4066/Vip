@@ -105,7 +105,6 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 101",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
@@ -115,11 +114,12 @@
                 "🇫🇷 FR | 🟢 | vless | @freeconfigsplus | 19",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇺🇸 US | 🟢 | vless | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇺🇸 US | 🟢 | vless | @mowjproxy | 6",
+                "🇺🇸 US | 🟢 | vless | @proxy_mtproto_vpns_free | 19",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇫🇮 FI | 🟢 | vless | @qeshmserver | 13",
                 "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
@@ -143,7 +143,6 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 101",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
@@ -153,11 +152,12 @@
                 "🇫🇷 FR | 🟢 | vless | @freeconfigsplus | 19",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇺🇸 US | 🟢 | vless | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇺🇸 US | 🟢 | vless | @mowjproxy | 6",
+                "🇺🇸 US | 🟢 | vless | @proxy_mtproto_vpns_free | 19",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇫🇮 FI | 🟢 | vless | @qeshmserver | 13",
                 "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
@@ -195,29 +195,6 @@
         {
             "tag": "dns-out",
             "type": "dns"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 101",
-            "type": "vless",
-            "server": "44.242.228.233",
-            "server_port": 4433,
-            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "stackoverflow.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "random"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
-                    "short_id": "f785b38130e64177"
-                }
-            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -431,6 +408,29 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | vless | @hope_net | 19",
+            "type": "vless",
+            "server": "18.216.210.139",
+            "server_port": 4433,
+            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
+                    "short_id": "f785b38130e64177"
+                }
+            }
+        },
+        {
             "tag": "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
             "type": "vless",
             "server": "188.165.122.11",
@@ -527,16 +527,16 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @mowjproxy | 6",
+            "tag": "🇺🇸 US | 🟢 | vless | @proxy_mtproto_vpns_free | 19",
             "type": "vless",
-            "server": "31.44.6.96",
+            "server": "77.110.124.171",
             "server_port": 8080,
-            "uuid": "236844c3-c69d-4d13-8092-23877c0659c7",
+            "uuid": "4bfaf9c2-314e-4a4c-bff9-f8e2721ba324",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "Arxx.farzadyek.ir",
+                "server_name": "speedtest.net",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -544,9 +544,13 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "26_N5LcQd3E7H7gv4nI0fJeCd-xaTO5ArtiURh-CBks",
-                    "short_id": "10aa8d6e9ddfe5"
+                    "public_key": "_OWPQD2bI_dcWxQcswkC3sQJ-GXFg4rKAlCGSMLu3D8",
+                    "short_id": "4a12d1"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "KARINGVPN"
             }
         },
         {
