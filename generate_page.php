@@ -106,7 +106,7 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-0">Proxy Subscription Generator</h1>
                 <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mt-2">Select your preferences to get a subscription link.</p>
             </div>
-            <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400">
+            <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 relative z-10">
                 <i data-lucide="sun" class="block dark:hidden h-5 w-5"></i>
                 <i data-lucide="moon" class="hidden dark:block h-5 w-5"></i>
                 <span class="sr-only">Toggle dark mode</span>
@@ -188,6 +188,7 @@ function generate_full_html(array $structured_data, string $generation_timestamp
 
             // --- Dark Mode Toggle Logic (Simple and Correct) ---
             themeToggleButton.addEventListener('click', () => {
+                console.log('Theme toggle button clicked!'); // Added for debugging
                 document.documentElement.classList.toggle('dark');
                 localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
                 if (!resultArea.classList.contains('hidden')) {
