@@ -70,8 +70,21 @@ function generate_full_html(array $structured_data, string $generation_timestamp
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Using the CORRECT Tailwind v4 CDN URL you provided. -->
+    <!-- Using the CORRECT Tailwind v4 CDN URL. -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CSS configuration for dark mode and font family -->
+    <script type="text/javascript">
+      tailwind.config = {
+        darkMode: 'class', // This is crucial for the 'dark' class to work
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
     
     <!-- Theme Initializer: This runs immediately to prevent the page from flashing. -->
     <script>
@@ -203,11 +216,19 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 selectElement.disabled = true;
             }
             function formatDisplayName(name, type = 'default') {
-                if (type === 'location') return name.toUpperCase() + ' ' + getFlagEmoji(name);
                 let baseName = name, suffix = '';
                 if (name.endsWith('_ipv4')) { baseName = name.slice(0, -5); suffix = ' (IPv4)'; } 
                 else if (name.endsWith('_ipv6')) { baseName = name.slice(0, -5); suffix = ' (IPv6)'; } 
                 else if (name.endsWith('_domain')) { baseName = name.slice(0, -7); suffix = ' (Domain)'; }
+                
+                // Special handling for 'location' type to ensure flag emoji is always appended if applicable
+                if (type === 'location') {
+                    // Check if baseName is a 2-letter country code
+                    if (/^[a-zA-Z]{2}$/.test(baseName)) {
+                        return baseName.toUpperCase() + ' ' + getFlagEmoji(baseName);
+                    }
+                }
+                
                 return baseName.split(/[-_]/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') + suffix;
             }
             function getFlagEmoji(countryCode) {
@@ -275,16 +296,22 @@ function generate_full_html(array $structured_data, string $generation_timestamp
             });
             copyButton.addEventListener('click', () => {
                 if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
-                navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => {
-                    const copyIcon = copyButton.querySelector('.copy-icon');
-                    const checkIcon = copyButton.querySelector('.check-icon');
-                    copyIcon.classList.add('hidden');
-                    checkIcon.classList.remove('hidden');
-                    setTimeout(() => {
-                        copyIcon.classList.remove('hidden');
-                        checkIcon.classList.add('hidden');
-                    }, 2000);
-                }).catch(() => showMessageBox('Failed to copy URL.'));
+                document.execCommand('copy'); // Using document.execCommand for clipboard operations
+                const copyIcon = copyButton.querySelector('.copy-icon');
+                const checkIcon = copyButton.querySelector('.check-icon');
+                copyIcon.classList.add('hidden');
+                checkIcon.classList.remove('hidden');
+                setTimeout(() => {
+                    copyIcon.classList.remove('hidden');
+                    checkIcon.classList.add('hidden');
+                }, 2000);
+            });
+            // Ensure copy functionality works even if navigator.clipboard.writeText is not available
+            document.addEventListener('copy', (event) => {
+                if (subscriptionUrlInput.value && event.clipboardData) {
+                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value);
+                    event.preventDefault(); // Prevent default copy behavior
+                }
             });
             populateSelect(configTypeSelect, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
