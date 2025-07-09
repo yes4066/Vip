@@ -105,8 +105,8 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
+                "❔ XX | 🔴 | trojan | @configshubplus | 19",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 13",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
@@ -117,8 +117,8 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
+                "❔ XX | 🔴 | trojan | @configshubplus | 19",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 13",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
@@ -145,6 +145,13 @@
             "type": "dns"
         },
         {
+            "tag": "❔ XX | 🔴 | trojan | @configshubplus | 19",
+            "type": "trojan",
+            "server": "gy.58n.net",
+            "server_port": 25238,
+            "password": "8b164756-ebc6-3906-bec0-52b5583ccb24"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
             "type": "trojan",
             "server": "production.tj.ojan.workers.dev",
@@ -166,13 +173,6 @@
                     "Host": "production.tj.ojan.workers.dev"
                 }
             }
-        },
-        {
-            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 13",
-            "type": "trojan",
-            "server": "13c2c931-swin40-swy6li-tni2.cu.plebai.net",
-            "server_port": 15229,
-            "password": "5e2f888c-68ef-11ef-96ca-f23c9164ca5d"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @maradona_vpn | 8",

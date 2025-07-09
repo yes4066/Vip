@@ -113,7 +113,6 @@
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
-                "🇪🇸 ES | 🟢 | trojan | @v2rayweb | 18",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
             ]
         },
@@ -129,7 +128,6 @@
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
-                "🇪🇸 ES | 🟢 | trojan | @v2rayweb | 18",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -291,29 +289,6 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇪🇸 ES | 🟢 | trojan | @v2rayweb | 18",
-            "type": "trojan",
-            "server": "109.234.211.66",
-            "server_port": 8443,
-            "password": "trojan",
-            "tls": {
-                "enabled": true,
-                "server_name": "store.timimi.dpdns.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "store.timimi.dpdns.org"
                 }
             }
         },
