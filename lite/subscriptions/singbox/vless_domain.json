@@ -117,10 +117,10 @@
                 "❔ XX | 🟢 | vless | @catvpns | 11",
                 "❔ XX | 🟢 | vless | @cconfig_v2ray | 10",
                 "❔ XX | 🔴 | vless | @ch_a2l | 5",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
                 "🇺🇸 US | 🔴 | vless | @config_proxy_ir | 18",
                 "❔ XX | 🟢 | vless | @config_vip7 | 3",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
-                "🇺🇸 US | 🔴 | vless | @configshubplus | 19",
                 "🇮🇷 IR | 🔴 | vless | @configtrapi | 27",
                 "❔ XX | 🔴 | vless | @confingv2raay | 1",
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
@@ -253,8 +253,10 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvl | 6",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
+                "🇩🇪 DE | 🔴 | vless | @v2rayweb | 19",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇮🇷 IR | 🔴 | vless | @v2rez | 4",
+                "🇫🇮 FI | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🔴 | vless | @v_2rayngvpn | 7",
                 "🇮🇷 IR | 🔴 | vless | @vaynora | 11",
                 "🇮🇷 IR | 🔴 | vless | @vezzevpn | 5",
@@ -306,10 +308,10 @@
                 "❔ XX | 🟢 | vless | @catvpns | 11",
                 "❔ XX | 🟢 | vless | @cconfig_v2ray | 10",
                 "❔ XX | 🔴 | vless | @ch_a2l | 5",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
                 "🇺🇸 US | 🔴 | vless | @config_proxy_ir | 18",
                 "❔ XX | 🟢 | vless | @config_vip7 | 3",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
-                "🇺🇸 US | 🔴 | vless | @configshubplus | 19",
                 "🇮🇷 IR | 🔴 | vless | @configtrapi | 27",
                 "❔ XX | 🔴 | vless | @confingv2raay | 1",
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
@@ -442,8 +444,10 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvl | 6",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
+                "🇩🇪 DE | 🔴 | vless | @v2rayweb | 19",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇮🇷 IR | 🔴 | vless | @v2rez | 4",
+                "🇫🇮 FI | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🔴 | vless | @v_2rayngvpn | 7",
                 "🇮🇷 IR | 🔴 | vless | @vaynora | 11",
                 "🇮🇷 IR | 🔴 | vless | @vezzevpn | 5",
@@ -692,6 +696,15 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
+            "type": "vless",
+            "server": "cdn.dominicpv.shop",
+            "server_port": 80,
+            "uuid": "d8ce911d-107c-41fd-aae0-0d0a1b0f9197",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @config_proxy_ir | 18",
             "type": "vless",
             "server": "www.speedtest.net",
@@ -735,15 +748,6 @@
             "server": "2sudo.winapp3.ir",
             "server_port": 80,
             "uuid": "5b0e1347-1e9b-4b83-a27b-468e3dafb69b",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @configshubplus | 19",
-            "type": "vless",
-            "server": "mtn.venzo.com.tr",
-            "server_port": 2095,
-            "uuid": "2066c2f3-bde1-429f-b083-fcfc7aee14b5",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -2928,6 +2932,15 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🔴 | vless | @v2rayweb | 19",
+            "type": "vless",
+            "server": "web.bandarhp.ir",
+            "server_port": 666,
+            "uuid": "ff8fffd7-3546-488b-a5f2-a74896da74a2",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
             "type": "vless",
             "server": "www.canva.com",
@@ -2965,6 +2978,29 @@
                 "path": "/",
                 "headers": {
                     "Host": "srv5.raykaservers.com"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @v2source | 19",
+            "type": "vless",
+            "server": "online-chat.webboosterpro.co.uk",
+            "server_port": 443,
+            "uuid": "6e2b8615-4a92-4d17-83de-d927d357ece4",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.fastly.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U",
+                    "short_id": "1eaf5214"
                 }
             }
         },
