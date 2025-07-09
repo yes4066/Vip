@@ -37,7 +37,6 @@ proxies:
   - {"name":"🇮🇷 IR | 🔴 | vmess | @jetupnet | 1","type":"vmess","server":"46.38.146.68","port":38585,"cipher":"auto","uuid":"e3cc1286-8401-4b1f-b110-dac3a2b15050","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇬🇧 GB | 🔴 | vmess | @khoneproxy | 14","type":"vmess","server":"144.126.224.206","port":9020,"cipher":"auto","uuid":"5f45e8d6-62a9-441d-89bc-fc5eeaf3e56b","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇳🇱 NL | 🔴 | vmess | @lazarus2050 | 2","type":"vmess","server":"93.115.172.175","port":12540,"cipher":"auto","uuid":"056d3d35-a729-4ab4-bbae-d71d8458af19","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇳🇱 NL | 🔴 | vmess | @lexernet | 12","type":"vmess","server":"channel.dollardoon.com","port":15709,"cipher":"auto","uuid":"4ac39e8a-6d5c-48bb-b0d0-f633c829113e","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇩🇪 DE | 🔴 | vmess | @magickey_shop | 1","type":"vmess","server":"168.119.174.229","port":443,"cipher":"auto","uuid":"6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇨🇳 CN | 🔴 | vmess | @mftizi | 19","type":"vmess","server":"183.236.51.38","port":49302,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":"64","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2","type":"vmess","server":"104.21.15.212","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"Host":"glweidf.sbs"}}}
@@ -45,6 +44,7 @@ proxies:
   - {"name":"❔ XX | 🔴 | vmess | @net_azad_1 | 12","type":"vmess","server":"adsl.stylebender209.ir","port":1010,"cipher":"auto","uuid":"471db8a5-8715-4fcb-9522-fdd78d2c1904","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1","type":"vmess","server":"de.speedhunter.top","port":21257,"cipher":"auto","uuid":"692cf949-bcf2-4cad-8067-2762b8e24874","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"❔ XX | 🟢 | vmess | @prooxyk | 4","type":"vmess","server":"channel.v1-amironetwork.site","port":443,"cipher":"auto","uuid":"5f1bacc3-be67-4480-8f32-7abd0e25894a","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/20334","headers":{"Host":"join.v1-amironetwork.site"}}}
+  - {"name":"🇮🇷 IR | 🟢 | vmess | @proxy_mtproto_vpns_free | 15","type":"vmess","server":"sr4.voaxn1.xyz","port":80,"cipher":"auto","uuid":"9b7c2fcf-03e8-4bbf-ba3b-b398ded54391","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸 US | 🔴 | vmess | @proxyy | 4","type":"vmess","server":"151.101.3.8","port":80,"cipher":"auto","uuid":"1f7e2947-c4a5-4e3c-b284-777ff73a086e","alterId":"0","tls":false,"skip-cert-verify":true,"network":"xhttp"}
   - {"name":"❔ XX | 🔴 | vmess | @pydriclub | 4","type":"vmess","server":"mtnn.pydarshop.ir","port":8880,"cipher":"auto","uuid":"30793c95-6a82-40fd-9af3-6130ac49835b","alterId":"0","tls":false,"skip-cert-verify":true,"network":"httpupgrade"}
   - {"name":"🇦🇹 AT | 🔴 | vmess | @rnrifci | 5","type":"vmess","server":"45.138.74.173","port":13700,"cipher":"auto","uuid":"f38a5500-77de-4384-86f5-54d7ab5de2c8","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","grpc-opts":{"grpc-service-name":"Telegram@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci@Rnrifci","grpc-mode":"none"}}
@@ -61,12 +61,11 @@ proxies:
   - {"name":"🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20","type":"vmess","server":"85.208.253.91","port":16939,"cipher":"auto","uuid":"486387bb-8e15-4dbb-8f4c-7ccb6ee5c06c","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":""}}}
   - {"name":"🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18","type":"vmess","server":"162.55.174.135","port":80,"cipher":"auto","uuid":"4d9aa6db-705a-4bfa-b05b-8f442c839557","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/graphql","headers":{"Host":""}}}
   - {"name":"🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10","type":"vmess","server":"65.109.128.177","port":443,"cipher":"auto","uuid":"6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇮🇷 IR | 🔴 | vmess | @v2rayweb | 13","type":"vmess","server":"host-speed.net","port":2083,"cipher":"auto","uuid":"0a160f08-0536-4740-8be9-ce69c239f8c8","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13","type":"vmess","server":"144.48.81.134","port":443,"cipher":"auto","uuid":"73ed2e06-4833-4626-9746-b056668a2101","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0","type":"vmess","server":"176.120.17.67","port":42270,"cipher":"auto","uuid":"3c0f9cf4-6a0c-42f3-a6de-89c79d4af8e3","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3","type":"vmess","server":"193.233.133.59","port":33,"cipher":"auto","uuid":"0dc0d22c-68e5-440a-9465-97cad8d1cf33","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"❔ XX | 🔴 | vmess | @vpnstable | 15","type":"vmess","server":"pro2.prgame.xyz","port":59442,"cipher":"auto","uuid":"03547ff5-c16f-4b5f-b75c-48e9e0685716","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3","type":"vmess","server":"gr1.nspay.top","port":35600,"cipher":"auto","uuid":"4465948c-ea8b-4df8-b59a-279b12d2ae41","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 US | 🔴 | vmess | @zerobaipiao | 51","type":"vmess","server":"172.67.209.79","port":80,"cipher":"auto","uuid":"512d9674-db12-44ca-a1b5-654244549b65","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/uiAxvH6OkVk0VCfa7dX3JIrYk7zm","headers":{"Host":"xcccvvbnmj.999834.xyz"}}}
+  - {"name":"🇨🇳 CN | 🔴 | vmess | @zerobaipiao | 51","type":"vmess","server":"120.232.153.63","port":37755,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
 
 rule-providers:
   ir_domains:
@@ -117,7 +116,6 @@ proxy-groups:
       - '🇮🇷 IR | 🔴 | vmess | @jetupnet | 1'
       - '🇬🇧 GB | 🔴 | vmess | @khoneproxy | 14'
       - '🇳🇱 NL | 🔴 | vmess | @lazarus2050 | 2'
-      - '🇳🇱 NL | 🔴 | vmess | @lexernet | 12'
       - '🇩🇪 DE | 🔴 | vmess | @magickey_shop | 1'
       - '🇨🇳 CN | 🔴 | vmess | @mftizi | 19'
       - '🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2'
@@ -125,6 +123,7 @@ proxy-groups:
       - '❔ XX | 🔴 | vmess | @net_azad_1 | 12'
       - '🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1'
       - '❔ XX | 🟢 | vmess | @prooxyk | 4'
+      - '🇮🇷 IR | 🟢 | vmess | @proxy_mtproto_vpns_free | 15'
       - '🇺🇸 US | 🔴 | vmess | @proxyy | 4'
       - '❔ XX | 🔴 | vmess | @pydriclub | 4'
       - '🇦🇹 AT | 🔴 | vmess | @rnrifci | 5'
@@ -141,12 +140,11 @@ proxy-groups:
       - '🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20'
       - '🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18'
       - '🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10'
+      - '🇮🇷 IR | 🔴 | vmess | @v2rayweb | 13'
       - '🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13'
       - '🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0'
       - '🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3'
-      - '❔ XX | 🔴 | vmess | @vpnstable | 15'
-      - '🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3'
-      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 51'
+      - '🇨🇳 CN | 🔴 | vmess | @zerobaipiao | 51'
 
   - name: 📉 Fallback
     type: fallback
@@ -173,7 +171,6 @@ proxy-groups:
       - '🇮🇷 IR | 🔴 | vmess | @jetupnet | 1'
       - '🇬🇧 GB | 🔴 | vmess | @khoneproxy | 14'
       - '🇳🇱 NL | 🔴 | vmess | @lazarus2050 | 2'
-      - '🇳🇱 NL | 🔴 | vmess | @lexernet | 12'
       - '🇩🇪 DE | 🔴 | vmess | @magickey_shop | 1'
       - '🇨🇳 CN | 🔴 | vmess | @mftizi | 19'
       - '🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2'
@@ -181,6 +178,7 @@ proxy-groups:
       - '❔ XX | 🔴 | vmess | @net_azad_1 | 12'
       - '🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1'
       - '❔ XX | 🟢 | vmess | @prooxyk | 4'
+      - '🇮🇷 IR | 🟢 | vmess | @proxy_mtproto_vpns_free | 15'
       - '🇺🇸 US | 🔴 | vmess | @proxyy | 4'
       - '❔ XX | 🔴 | vmess | @pydriclub | 4'
       - '🇦🇹 AT | 🔴 | vmess | @rnrifci | 5'
@@ -197,12 +195,11 @@ proxy-groups:
       - '🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20'
       - '🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18'
       - '🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10'
+      - '🇮🇷 IR | 🔴 | vmess | @v2rayweb | 13'
       - '🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13'
       - '🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0'
       - '🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3'
-      - '❔ XX | 🔴 | vmess | @vpnstable | 15'
-      - '🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3'
-      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 51'
+      - '🇨🇳 CN | 🔴 | vmess | @zerobaipiao | 51'
       
   - name: All-Proxies
     type: select
@@ -227,7 +224,6 @@ proxy-groups:
       - '🇮🇷 IR | 🔴 | vmess | @jetupnet | 1'
       - '🇬🇧 GB | 🔴 | vmess | @khoneproxy | 14'
       - '🇳🇱 NL | 🔴 | vmess | @lazarus2050 | 2'
-      - '🇳🇱 NL | 🔴 | vmess | @lexernet | 12'
       - '🇩🇪 DE | 🔴 | vmess | @magickey_shop | 1'
       - '🇨🇳 CN | 🔴 | vmess | @mftizi | 19'
       - '🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2'
@@ -235,6 +231,7 @@ proxy-groups:
       - '❔ XX | 🔴 | vmess | @net_azad_1 | 12'
       - '🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1'
       - '❔ XX | 🟢 | vmess | @prooxyk | 4'
+      - '🇮🇷 IR | 🟢 | vmess | @proxy_mtproto_vpns_free | 15'
       - '🇺🇸 US | 🔴 | vmess | @proxyy | 4'
       - '❔ XX | 🔴 | vmess | @pydriclub | 4'
       - '🇦🇹 AT | 🔴 | vmess | @rnrifci | 5'
@@ -251,12 +248,11 @@ proxy-groups:
       - '🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20'
       - '🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18'
       - '🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10'
+      - '🇮🇷 IR | 🔴 | vmess | @v2rayweb | 13'
       - '🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13'
       - '🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0'
       - '🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3'
-      - '❔ XX | 🔴 | vmess | @vpnstable | 15'
-      - '🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3'
-      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 51'
+      - '🇨🇳 CN | 🔴 | vmess | @zerobaipiao | 51'
 
 rules:
   - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve

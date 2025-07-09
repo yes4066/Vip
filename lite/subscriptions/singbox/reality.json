@@ -112,6 +112,7 @@
                 "❔ XX | 🟢 | vless | @iseqaro | 4",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
+                "🇩🇪 DE | 🟢 | vless | @lexernet | 12",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
@@ -144,7 +145,6 @@
                 "🇩🇪 DE | 🟢 | vless | @psiphonf | 15",
                 "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
                 "🇹🇷 TR | 🟢 | vless | @sinavm | 2",
-                "🇩🇪 DE | 🟢 | vless | @v2ray_free_conf | 19",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
                 "🇩🇪 DE | 🟢 | vless | @v2rayo7ybv67i76 | 13",
@@ -153,6 +153,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 9",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
+                "🇵🇱 PL | 🟢 | vless | @vpnstable | 15",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @x4azadi | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1",
@@ -170,6 +171,7 @@
                 "❔ XX | 🟢 | vless | @iseqaro | 4",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
+                "🇩🇪 DE | 🟢 | vless | @lexernet | 12",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
@@ -202,7 +204,6 @@
                 "🇩🇪 DE | 🟢 | vless | @psiphonf | 15",
                 "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
                 "🇹🇷 TR | 🟢 | vless | @sinavm | 2",
-                "🇩🇪 DE | 🟢 | vless | @v2ray_free_conf | 19",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
                 "🇩🇪 DE | 🟢 | vless | @v2rayo7ybv67i76 | 13",
@@ -211,6 +212,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 9",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
+                "🇵🇱 PL | 🟢 | vless | @vpnstable | 15",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @x4azadi | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1",
@@ -407,6 +409,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "1300vless"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @lexernet | 12",
+            "type": "vless",
+            "server": "freeconfig.fergalvpnmod.com",
+            "server_port": 14198,
+            "uuid": "ed0321a3-7b82-4da7-9d98-64fd689edba3",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.cloudflare.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "qfF7mYWCQ6jqSotcRjXCtIXFALrVjTbOd_2YqKD0WnI",
+                    "short_id": "7e5efedc"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Hossien"
             }
         },
         {
@@ -1174,33 +1203,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2ray_free_conf | 19",
-            "type": "vless",
-            "server": "91.99.195.6",
-            "server_port": 80,
-            "uuid": "91a5d5b3-4b88-4359-aeec-e1532f535fd6",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "ZO276Z5WXIqCmNLXT8Lewzjhhgm365JUJXAKyKq8Rz4",
-                    "short_id": "bc063769cb"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "refersion.com"
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
             "type": "vless",
             "server": "168.119.184.138",
@@ -1401,6 +1403,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "chessgame"
+            }
+        },
+        {
+            "tag": "🇵🇱 PL | 🟢 | vless | @vpnstable | 15",
+            "type": "vless",
+            "server": "146.59.15.81",
+            "server_port": 443,
+            "uuid": "c14b2731-7db6-49ee-9271-b1efc56c2630",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "dl.google.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "l8HS4g_h8xPWlhQm8hmj5ohKNMrMCBcoHSNBFij79Sk",
+                    "short_id": "5bb805"
+                }
             }
         },
         {
