@@ -10,10 +10,9 @@
     
     <!-- Using the CORRECT Tailwind v4 CDN URL. -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Tailwind CSS configuration for dark mode and font family -->
+    <!-- Tailwind CSS configuration for font family (dark mode config removed) -->
     <script type="text/javascript">
       tailwind.config = {
-        darkMode: 'class', // This is crucial for the 'dark' class to work
         theme: {
           extend: {
             fontFamily: {
@@ -24,96 +23,86 @@
       }
     </script>
     
-    <!-- Theme Initializer: This runs immediately to prevent the page from flashing. -->
-    <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    </script>
-    
     <style>
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     </style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-300 leading-relaxed transition-colors duration-300">
+<body class="bg-slate-50 text-slate-800 leading-relaxed transition-colors duration-300">
     <div class="container max-w-6xl mx-auto px-4 py-8">
         <header class="flex justify-between items-center mb-10">
             <div class="text-left">
-                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-0">Proxy Subscription Generator</h1>
-                <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mt-2">Select your preferences to get a subscription link.</p>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-0">Proxy Subscription Generator</h1>
+                <p class="text-base sm:text-lg text-slate-500 mt-2">Select your preferences to get a subscription link.</p>
             </div>
-            <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 relative z-10">
-                <!-- Using simple text/emojis instead of Lucide icons for debugging -->
-                <span class="block dark:hidden" style="font-size: 1.25rem;">☀️</span>
-                <span class="hidden dark:block" style="font-size: 1.25rem;">🌙</span>
-                <span class="sr-only">Toggle dark mode</span>
-            </button>
+            <!-- Dark mode toggle button removed -->
         </header>
 
         <main>
-            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 sm:p-8 shadow-lg border border-slate-200 dark:border-slate-700 mb-8 sm:mb-10">
+            <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-slate-200 mb-8 sm:mb-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
                     <div>
-                        <label for="configType" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Config Type:</label>
-                        <select id="configType" class="block w-full rounded-md border-slate-300 dark:border-slate-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 dark:bg-slate-700 dark:text-slate-200"></select>
+                        <label for="configType" class="block text-sm font-medium text-slate-700 mb-2">Config Type:</label>
+                        <select id="configType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800"></select>
                     </div>
                     <div>
-                        <label for="ipType" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Type:</label>
-                        <select id="ipType" class="block w-full rounded-md border-slate-300 dark:border-slate-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 dark:bg-slate-700 dark:text-slate-200" disabled></select>
+                        <label for="ipType" class="block text-sm font-medium text-slate-700 mb-2">Type:</label>
+                        <select id="ipType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800" disabled></select>
                     </div>
                     <div>
-                        <label for="otherElement" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Element:</label>
-                        <input type="search" id="searchBar" placeholder="Filter elements..." class="block w-full rounded-md border-slate-300 dark:border-slate-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 mb-2 bg-slate-100 dark:bg-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500" disabled>
-                        <select id="otherElement" class="block w-full rounded-md border-slate-300 dark:border-slate-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 dark:bg-slate-700 dark:text-slate-200" disabled></select>
+                        <label for="otherElement" class="block text-sm font-medium text-slate-700 mb-2">Element:</label>
+                        <input type="search" id="searchBar" placeholder="Filter elements..." class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 mb-2 bg-slate-100 text-slate-800 placeholder-slate-400" disabled>
+                        <select id="otherElement" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800" disabled></select>
                     </div>
                 </div>
-                <div id="resultArea" class="hidden bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 sm:p-6 border border-slate-200 dark:border-slate-700">
-                    <h3 class="text-lg sm:text-xl font-semibold text-slate-800 dark:text-slate-200 mb-4">Your Subscription Link:</h3>
+                <div id="resultArea" class="hidden bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200">
+                    <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-4">Your Subscription Link:</h3>
                     <div class="flex items-center mb-4">
-                        <input type="text" id="subscriptionUrl" readonly class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
-                        <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 border border-l-0 border-indigo-600 dark:border-indigo-500 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100 dark:hover:bg-indigo-800" title="Copy URL">
-                            <!-- Using simple text/emojis instead of Lucide icons for debugging -->
-                            <span class="copy-icon" style="font-size: 1.25rem;">📋</span>
-                            <span class="check-icon hidden" style="font-size: 1.25rem;">✅</span>
+                        <input type="text" id="subscriptionUrl" readonly class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
+                        <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-l-0 border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100" title="Copy URL">
+                            <i data-lucide="copy" class="copy-icon w-5 h-5"></i>
+                            <i data-lucide="check" class="check-icon w-5 h-5 hidden"></i>
                         </button>
                     </div>
                     <div class="flex flex-col items-center justify-center">
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">Scan the QR code:</p>
-                        <div id="qrcode" class="p-2 bg-white border border-slate-300 dark:border-slate-600 rounded-lg shadow-inner">
-                            <!-- QR code generation temporarily disabled for debugging -->
-                            <p class="text-xs text-slate-400 dark:text-slate-500">QR code will appear here (currently disabled for debugging)</p>
-                        </div>
+                        <p class="text-sm text-slate-600 mb-2">Scan the QR code:</p>
+                        <div id="qrcode" class="p-2 bg-white border border-slate-300 rounded-lg shadow-inner"></div>
                     </div>
                 </div>
             </div>
         </main>
-        <footer class="text-center mt-12 sm:mt-16 py-6 sm:py-8 border-t border-slate-200 dark:border-slate-700">
-            <div class="flex justify-center items-center gap-x-6 text-slate-500 dark:text-slate-400 text-sm">
+        <footer class="text-center mt-12 sm:mt-16 py-6 sm:py-8 border-t border-slate-200">
+            <div class="flex justify-center items-center gap-x-6 text-slate-500 text-sm">
                 <p>Created with ❤️ by YEBEKHE</p>
                 <div class="flex items-center gap-x-3">
-                    <!-- Using simple text/emojis instead of Lucide icons for debugging -->
-                    <a href="https://t.me/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="Telegram"><span style="font-size: 1.25rem;">✈️</span></a>
-                    <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="X (Twitter)"><span style="font-size: 1.25rem;">✖️</span></a>
+                    <a href="https://t.me/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="Telegram"><i data-lucide="send" class="h-5 w-5"></i></a>
+                    <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">Last Generated: 2025-07-09 09:00:38 UTC</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-09 12:36:18 +0330</p>
         </footer>
     </div>
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
-        <div class="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-xl max-w-sm w-full text-center">
-            <p id="messageBoxText" class="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4"></p>
+        <div class="bg-white rounded-lg p-6 shadow-xl max-w-sm w-full text-center">
+            <p id="messageBoxText" class="text-lg font-semibold text-slate-800 mb-4"></p>
             <button id="messageBoxClose" class="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">OK</button>
         </div>
     </div>
     
-    <!-- Scripts for Lucide and QRCode.js are removed for debugging -->
-    <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script> -->
+    <!-- Scripts moved to the end of the body for guaranteed DOM readiness -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // This event ensures all HTML is parsed before we try to find elements.
+            
+            // Render all Lucide icons on the page.
+            try {
+                lucide.createIcons();
+            } catch (error) {
+                console.error('Lucide icons initialization failed:', error);
+            }
+
             const structuredData = {
     "Lite": {
         "clash": {
@@ -354,17 +343,12 @@
             const subscriptionUrlInput = document.getElementById('subscriptionUrl');
             const copyButton = document.getElementById('copyButton');
             const qrcodeDiv = document.getElementById('qrcode');
-            const themeToggleButton = document.getElementById('theme-toggle');
+            // themeToggleButton is no longer needed
 
-            // --- Dark Mode Toggle Logic (Simple and Correct) ---
-            themeToggleButton.addEventListener('click', () => {
-                console.log('Theme toggle button clicked!'); // Still logging for confirmation
-                document.documentElement.classList.toggle('dark');
-                localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-                // QR code update and Lucide icon rendering logic are removed for this test
-            });
+            // --- Dark Mode Toggle Logic removed ---
+            // The theme toggle button and its event listener are removed.
             
-            // --- All other functions (QR code related functions are simplified/removed) ---
+            // --- All other functions ---
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
                 document.getElementById('messageBoxText').textContent = message;
@@ -405,11 +389,21 @@
                 const code = countryCode.toUpperCase();
                 return String.fromCodePoint(code.charCodeAt(0) + 127397) + String.fromCodePoint(code.charCodeAt(1) + 127397);
             }
-            // updateQRCode function is now a placeholder as QRCode.js is removed
             function updateQRCode(url) {
-                qrcodeDiv.innerHTML = '<p class="text-xs text-slate-400 dark:text-slate-500">QR code will appear here (currently disabled for debugging)</p>';
+                qrcodeDiv.innerHTML = '';
+                if (url) {
+                    try {
+                        new QRCode(qrcodeDiv, {
+                            text: url, width: 128, height: 128,
+                            colorDark: "#000000", // Always black now
+                            colorLight: "#00000000",
+                            correctLevel: QRCode.CorrectLevel.H
+                        });
+                    } catch (error) {
+                        console.error('QR code initialization failed:', error);
+                    }
+                }
             }
-
             function updateOtherElementOptions() {
                 const selectedConfigType = configTypeSelect.value;
                 const selectedIpType = ipTypeSelect.value;
@@ -451,7 +445,7 @@
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value] || null;
                 if (url) {
                     subscriptionUrlInput.value = url;
-                    updateQRCode(url); // This will now call the placeholder function
+                    updateQRCode(url);
                     resultArea.classList.remove('hidden');
                 } else {
                     resultArea.classList.add('hidden');
