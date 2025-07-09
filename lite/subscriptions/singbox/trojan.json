@@ -115,7 +115,6 @@
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
@@ -135,7 +134,6 @@
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
@@ -335,29 +333,6 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
-            "type": "trojan",
-            "server": "104.18.26.94",
-            "server_port": 8443,
-            "password": "Watashi_VPN",
-            "tls": {
-                "enabled": true,
-                "server_name": "t-watashi-r-jacket-o-people-jan.watashi-java.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "t-watashi-r-jacket-o-people-jan.watashi-java.ir"
                 }
             }
         },

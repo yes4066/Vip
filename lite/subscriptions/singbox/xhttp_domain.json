@@ -105,7 +105,6 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "🇺🇸 US | 🔴 | vless | @argooo_vpn | 12",
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -119,6 +118,7 @@
                 "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
+                "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ]
         },
@@ -126,7 +126,6 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "🇺🇸 US | 🔴 | vless | @argooo_vpn | 12",
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -140,6 +139,7 @@
                 "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
+                "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -161,15 +161,6 @@
         {
             "tag": "dns-out",
             "type": "dns"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @argooo_vpn | 12",
-            "type": "vless",
-            "server": "test.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "0c594034-4210-49c0-99ab-b52ec0df0f6c",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
@@ -294,6 +285,15 @@
             "server": "viop.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
+            "type": "vless",
+            "server": "speedtest.net",
+            "server_port": 80,
+            "uuid": "bf3c99e7-68b4-4bad-b110-ebaf2ecab772",
             "flow": "",
             "packet_encoding": "xudp"
         },
