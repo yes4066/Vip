@@ -106,6 +106,7 @@
             "outbounds": [
                 "URL-TEST",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -120,7 +121,7 @@
                 "❔ XX | 🟢 | vless | @tehron98 | 13",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇨🇦 CA | 🟢 | vless | @v2ray_melli | 5",
-                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 18",
+                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayng_fast | 1",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
@@ -137,6 +138,7 @@
             "type": "urltest",
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -151,7 +153,7 @@
                 "❔ XX | 🟢 | vless | @tehron98 | 13",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇨🇦 CA | 🟢 | vless | @v2ray_melli | 5",
-                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 18",
+                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayng_fast | 1",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
@@ -202,6 +204,29 @@
                     "enabled": true,
                     "public_key": "QYWJdS4JDdSmQKeMkJfPshFuz0bC3jhm9yW3uJfQFmw",
                     "short_id": "b4"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
+            "type": "vless",
+            "server": "real-all3.sdcards.ir",
+            "server_port": 8501,
+            "uuid": "9666ee62-d1f3-4f6e-8881-c17fee524e31",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "tgju.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "OJ0wA5wp55uZdD16dutlTZvx1x-rbMMXmiO9D_MMCHI",
+                    "short_id": "e701a013553059ba"
                 }
             }
         },
@@ -552,7 +577,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 18",
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 17",
             "type": "vless",
             "server": "de1.serverfreedom.com",
             "server_port": 3030,
