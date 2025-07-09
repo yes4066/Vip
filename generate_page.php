@@ -113,7 +113,6 @@ function generate_full_html(array $structured_data, string $generation_timestamp
     
     <style>
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        .lucide { width: 20px; height: 20px; stroke-width: 2; } /* Default Lucide icon size */
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-300 leading-relaxed transition-colors duration-300">
@@ -124,9 +123,9 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mt-2">Select your preferences to get a subscription link.</p>
             </div>
             <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400">
-                <!-- CORRECTED: Using Tailwind dark: variants to toggle icons -->
-                <i data-lucide="sun" class="sun-icon block dark:hidden"></i>
-                <i data-lucide="moon" class="moon-icon hidden dark:block"></i>
+                <!-- THIS IS THE CORRECTED HTML -->
+                <i data-lucide="sun" class="block dark:hidden h-5 w-5"></i>
+                <i data-lucide="moon" class="hidden dark:block h-5 w-5"></i>
                 <span class="sr-only">Toggle dark mode</span>
             </button>
         </header>
@@ -172,10 +171,10 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 <p>Created with ❤️ by YEBEKHE</p>
                 <div class="flex items-center gap-x-3">
                     <a href="https://t.me/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="Telegram">
-                        <i data-lucide="send"></i>
+                        <i data-lucide="send" class="h-5 w-5"></i>
                     </a>
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="X (Twitter)">
-                        <i data-lucide="twitter"></i>
+                        <i data-lucide="twitter" class="h-5 w-5"></i>
                     </a>
                 </div>
             </div>
@@ -196,6 +195,8 @@ function generate_full_html(array $structured_data, string $generation_timestamp
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons(); // Run Lucide first to create all SVGs
+            
             const structuredData = __JSON_DATA_PLACEHOLDER__;
 
             // Element References
@@ -257,8 +258,8 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 if (url) {
                     new QRCode(qrcodeDiv, {
                         text: url, width: 128, height: 128,
-                        colorDark: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#000000', // slate-200 for dark, black for light
-                        colorLight: "#ffffff00", // Transparent background
+                        colorDark: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#000000',
+                        colorLight: "#00000000", // Transparent background
                         correctLevel: QRCode.CorrectLevel.H
                     });
                 }
@@ -333,8 +334,9 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                     return;
                 }
                 navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => {
-                    const copyIcon = copyButton.querySelector('.copy-icon');
-                    const checkIcon = copyButton.querySelector('.check-icon');
+                    // We select the SVGs directly now
+                    const copyIcon = copyButton.querySelector('.lucide-copy');
+                    const checkIcon = copyButton.querySelector('.lucide-check');
                     copyIcon.classList.add('hidden');
                     checkIcon.classList.remove('hidden');
                     
@@ -345,29 +347,25 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 }).catch(() => showMessageBox('Failed to copy URL.'));
             });
 
-            // --- Dark Mode Handler (CORRECTED & SIMPLIFIED) ---
+            // --- Dark Mode Handler (FINAL & CORRECTED) ---
             themeToggleButton.addEventListener('click', () => {
-                // 1. Toggle the 'dark' class on the <html> element
+                // 1. Toggle 'dark' class on the <html> element
                 document.documentElement.classList.toggle('dark');
 
-                // 2. Update localStorage with the new state
+                // 2. Update localStorage
                 if (document.documentElement.classList.contains('dark')) {
                     localStorage.theme = 'dark';
                 } else {
                     localStorage.theme = 'light';
                 }
 
-                // 3. Re-generate QR code if it exists, to match new theme
+                // 3. Update QR code color if it's visible
                 if (!resultArea.classList.contains('hidden')) {
                     updateQRCode(subscriptionUrlInput.value);
                 }
             });
 
             // --- Initial Page Setup ---
-            // Render all Lucide icons first
-            lucide.createIcons();
-
-            // Populate the first dropdown
             populateSelect(configTypeSelect, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
         });
