@@ -5,7 +5,8 @@ declare(strict_types=1);
 /**
  * This script reads a list of proxy configurations, sorts them by protocol type
  * AND address type (IPv4, IPv6, Domain), and generates separate subscription
- * files for each combination. It also includes a special category for "reality" configs.
+ * files for each combination. It also includes a special category for "reality" configs
+ * AND a main subscription (IPv4+IPv6+Domain) for each protocol.
  */
 
 // --- Setup ---
@@ -21,7 +22,7 @@ const CONFIG_FILE = __DIR__ . '/config.txt';
 const SUBS_DIR_NORMAL = __DIR__ . '/subscriptions/xray/normal';
 const SUBS_DIR_BASE64 = __DIR__ . '/subscriptions/xray/base64';
 
-// NEW: Helper function to determine the address type (IPv4, IPv6, or Domain).
+// Helper function to determine the address type (IPv4, IPv6, or Domain).
 // It's good practice to place this in your functions.php, but for clarity, it's here.
 /**
  * Detects if the host in a config URI is an IPv4, IPv6, or a domain name.
@@ -74,7 +75,7 @@ echo "Loaded " . count($configsArray) . " configs." . PHP_EOL;
 
 echo "2. Sorting configs by protocol and address type..." . PHP_EOL;
 
-// MODIFIED: The structure is now a nested array: $sortedConfigs[protocol][address_type]
+// The structure is a nested array: $sortedConfigs[protocol][address_type]
 $sortedConfigs = [];
 
 foreach ($configsArray as $config) {
@@ -84,7 +85,7 @@ foreach ($configsArray as $config) {
     }
 
     $configType = detect_type($config);
-    // NEW: Detect the address type (ipv4, ipv6, or domain)
+    // Detect the address type (ipv4, ipv6, or domain)
     $addressType = get_address_type($config);
 
     // Skip any malformed or unknown lines
@@ -92,13 +93,13 @@ foreach ($configsArray as $config) {
         continue;
     }
 
-    // MODIFIED: Add the config to its nested group
+    // Add the config to its nested group
     // The urldecode is kept as it was in the original script's intent
     $sortedConfigs[$configType][$addressType][] = urldecode($config);
 
     // **Optimization**: Only check for 'reality' if the type is 'vless'.
     if ($configType === 'vless' && is_reality($config)) {
-        // MODIFIED: Also sort 'reality' configs by their address type
+        // Also sort 'reality' configs by their address type
         $sortedConfigs['reality'][$addressType][] = urldecode($config);
     }
 }
@@ -119,13 +120,17 @@ if (!is_dir(SUBS_DIR_BASE64)) {
 }
 
 $filesWritten = 0;
-// MODIFIED: Nested loops to handle the new structure [protocol][address_type]
+// Nested loops to handle the new structure [protocol][address_type]
 foreach ($sortedConfigs as $type => $addressGroups) {
+    // Array to hold all configs for the current type (e.g., all 'vless' configs)
+    $allConfigsForType = [];
+
+    // --- First, create the specific files (ipv4, ipv6, domain) ---
     foreach ($addressGroups as $addressType => $configs) {
-        // NEW: Create a combined filename like 'vless_ipv4', 'trojan_domain', etc.
+        // Create a combined filename like 'vless_ipv4', 'trojan_domain', etc.
         $fileName = "{$type}_{$addressType}";
         
-        // NEW: Create a more descriptive header for the subscription file
+        // Create a more descriptive header for the subscription file
         $header = hiddifyHeader("PSG | " . strtoupper($type) . " " . strtoupper($addressType));
         
         $plainTextContent = $header . implode(PHP_EOL, $configs);
@@ -136,6 +141,31 @@ foreach ($sortedConfigs as $type => $addressGroups) {
         $base64FilePath = SUBS_DIR_BASE64 . '/' . $fileName;
 
         // Write both the plain text and Base64 encoded files
+        file_put_contents($normalFilePath, $plainTextContent);
+        file_put_contents($base64FilePath, $base64Content);
+        
+        $filesWritten++;
+
+        // Add these configs to the all-in-one collection for this type
+        $allConfigsForType = array_merge($allConfigsForType, $configs);
+    }
+
+    // --- Second, create the main subscription for this type ---
+    if (!empty($allConfigsForType)) {
+        // MODIFIED: Create a filename like 'vless', 'trojan', etc.
+        $fileName = $type;
+        
+        // MODIFIED: Create a simple header for the main subscription file
+        $header = hiddifyHeader("PSG | " . strtoupper($type));
+        
+        $plainTextContent = $header . implode(PHP_EOL, $allConfigsForType);
+        $base64Content = base64_encode($plainTextContent);
+        
+        // Define file paths
+        $normalFilePath = SUBS_DIR_NORMAL . '/' . $fileName;
+        $base64FilePath = SUBS_DIR_BASE64 . '/' . $fileName;
+
+        // Write both files
         file_put_contents($normalFilePath, $plainTextContent);
         file_put_contents($base64FilePath, $base64Content);
         
