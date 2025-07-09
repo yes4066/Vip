@@ -96,8 +96,18 @@ function generate_full_html(array $structured_data, string $generation_timestamp
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
+    
+    <!-- *** THIS IS THE FIX *** -->
+    <!-- 1. Add Tailwind config to enable class-based dark mode -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
+    
+    <!-- 2. Load the main Tailwind script AFTER the config -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
@@ -123,7 +133,6 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mt-2">Select your preferences to get a subscription link.</p>
             </div>
             <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400">
-                <!-- THIS IS THE CORRECTED HTML -->
                 <i data-lucide="sun" class="block dark:hidden h-5 w-5"></i>
                 <i data-lucide="moon" class="hidden dark:block h-5 w-5"></i>
                 <span class="sr-only">Toggle dark mode</span>
@@ -195,11 +204,9 @@ function generate_full_html(array $structured_data, string $generation_timestamp
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons(); // Run Lucide first to create all SVGs
+            lucide.createIcons();
             
             const structuredData = __JSON_DATA_PLACEHOLDER__;
-
-            // Element References
             const configTypeSelect = document.getElementById('configType');
             const ipTypeSelect = document.getElementById('ipType');
             const otherElementSelect = document.getElementById('otherElement');
@@ -210,7 +217,6 @@ function generate_full_html(array $structured_data, string $generation_timestamp
             const qrcodeDiv = document.getElementById('qrcode');
             const themeToggleButton = document.getElementById('theme-toggle');
 
-            // --- Helper Functions ---
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
                 document.getElementById('messageBoxText').textContent = message;
@@ -259,34 +265,25 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                     new QRCode(qrcodeDiv, {
                         text: url, width: 128, height: 128,
                         colorDark: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#000000',
-                        colorLight: "#00000000", // Transparent background
+                        colorLight: "#00000000",
                         correctLevel: QRCode.CorrectLevel.H
                     });
                 }
             }
 
-            // --- Main Application Logic ---
             function updateOtherElementOptions() {
                 const selectedConfigType = configTypeSelect.value;
                 const selectedIpType = ipTypeSelect.value;
                 const searchTerm = searchBar.value.toLowerCase();
-
                 resetSelect(otherElementSelect, 'Select Element');
                 resultArea.classList.add('hidden');
-
                 if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
                     const allElements = structuredData[selectedConfigType][selectedIpType];
-                    
                     const filteredElements = Object.keys(allElements)
                         .filter(key => formatDisplayName(key, (selectedIpType === 'location' ? 'location' : 'default')).toLowerCase().includes(searchTerm))
-                        .reduce((obj, key) => {
-                            obj[key] = allElements[key];
-                            return obj;
-                        }, {});
-
+                        .reduce((obj, key) => { (obj[key] = allElements[key]); return obj; }, {});
                     populateSelect(otherElementSelect, filteredElements, Object.keys(filteredElements).length > 0 ? 'Select Element' : 'No matches found');
                     otherElementSelect.disabled = false;
-                    
                     const options = Object.keys(filteredElements);
                     if (options.length === 1) {
                         otherElementSelect.value = options[0];
@@ -302,7 +299,6 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 resultArea.classList.add('hidden');
                 searchBar.value = '';
                 searchBar.disabled = true;
-
                 if (selectedConfigType && structuredData[selectedConfigType]) {
                     populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type');
                     ipTypeSelect.disabled = false;
@@ -334,12 +330,10 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                     return;
                 }
                 navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => {
-                    // We select the SVGs directly now
-                    const copyIcon = copyButton.querySelector('.lucide-copy');
-                    const checkIcon = copyButton.querySelector('.lucide-check');
+                    const copyIcon = copyButton.querySelector('.copy-icon');
+                    const checkIcon = copyButton.querySelector('.check-icon');
                     copyIcon.classList.add('hidden');
                     checkIcon.classList.remove('hidden');
-                    
                     setTimeout(() => {
                         copyIcon.classList.remove('hidden');
                         checkIcon.classList.add('hidden');
@@ -347,25 +341,18 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 }).catch(() => showMessageBox('Failed to copy URL.'));
             });
 
-            // --- Dark Mode Handler (FINAL & CORRECTED) ---
             themeToggleButton.addEventListener('click', () => {
-                // 1. Toggle 'dark' class on the <html> element
                 document.documentElement.classList.toggle('dark');
-
-                // 2. Update localStorage
                 if (document.documentElement.classList.contains('dark')) {
                     localStorage.theme = 'dark';
                 } else {
                     localStorage.theme = 'light';
                 }
-
-                // 3. Update QR code color if it's visible
                 if (!resultArea.classList.contains('hidden')) {
                     updateQRCode(subscriptionUrlInput.value);
                 }
             });
 
-            // --- Initial Page Setup ---
             populateSelect(configTypeSelect, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
         });
