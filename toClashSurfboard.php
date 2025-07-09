@@ -20,9 +20,9 @@ const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main';
 const ALLOWED_SS_METHODS = ["chacha20-ietf-poly1305", "aes-256-gcm"];
 // Define which input files can be converted to which output formats
 const OUTPUT_MAPPING = [
-    'clash' => ['mix', 'vmess', 'trojan', 'ss'],
-    'meta' => ['mix', 'vmess', 'vless', 'reality', 'trojan', 'ss'],
-    'surfboard' => ['mix', 'vmess', 'trojan', 'ss'],
+    'clash' => ['mix', 'vmess', 'vmess_ipv4', 'vmess_ipv6', 'vmess_domain', 'trojan', 'trojan_ipv4', 'trojan_ipv6', 'trojan_domain', 'ss', 'ss_ipv4', 'ss_ipv6', 'ss_domain'],
+    'meta' => ['mix', 'vmess', 'vmess_ipv4', 'vmess_ipv6', 'vmess_domain', 'vless', 'vless_ipv4', 'vless_ipv6', 'vless_domain', 'reality', 'reality_ipv4', 'reality_ipv6', 'reality_domain', 'trojan', 'trojan_ipv4', 'trojan_ipv6', 'trojan_domain', 'ss', 'ss_ipv4', 'ss_ipv6', 'ss_domain'],
+    'surfboard' => ['mix', 'vmess', 'vmess_ipv4', 'vmess_ipv6', 'vmess_domain', 'trojan', 'trojan_ipv4', 'trojan_ipv6', 'trojan_domain', 'ss', 'ss_ipv4', 'ss_ipv6', 'ss_domain'],
 ];
 
 // #############################################################################
