@@ -107,8 +107,9 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mt-2">Select your preferences to get a subscription link.</p>
             </div>
             <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 relative z-10">
-                <i data-lucide="sun" class="block dark:hidden h-5 w-5"></i>
-                <i data-lucide="moon" class="hidden dark:block h-5 w-5"></i>
+                <!-- Temporarily using text instead of Lucide icons for debugging -->
+                <span class="block dark:hidden">☀️</span>
+                <span class="hidden dark:block">🌙</span>
                 <span class="sr-only">Toggle dark mode</span>
             </button>
         </header>
@@ -173,7 +174,12 @@ function generate_full_html(array $structured_data, string $generation_timestamp
             // This event ensures all HTML is parsed before we try to find elements.
             
             // Render all Lucide icons on the page.
-            lucide.createIcons();
+            // Temporarily commented out for debugging.
+            // try {
+            //     lucide.createIcons();
+            // } catch (error) {
+            //     console.error('Lucide icons initialization failed:', error);
+            // }
 
             const structuredData = __JSON_DATA_PLACEHOLDER__;
             const configTypeSelect = document.getElementById('configType');
@@ -191,9 +197,10 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 console.log('Theme toggle button clicked!'); // Added for debugging
                 document.documentElement.classList.toggle('dark');
                 localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-                if (!resultArea.classList.contains('hidden')) {
-                    updateQRCode(subscriptionUrlInput.value);
-                }
+                // Temporarily commented out QR code update on theme change for debugging.
+                // if (!resultArea.classList.contains('hidden')) {
+                //     updateQRCode(subscriptionUrlInput.value);
+                // }
             });
             
             // --- All other functions ---
@@ -240,12 +247,16 @@ function generate_full_html(array $structured_data, string $generation_timestamp
             function updateQRCode(url) {
                 qrcodeDiv.innerHTML = '';
                 if (url) {
-                    new QRCode(qrcodeDiv, {
-                        text: url, width: 128, height: 128,
-                        colorDark: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#000000',
-                        colorLight: "#00000000",
-                        correctLevel: QRCode.CorrectLevel.H
-                    });
+                    try {
+                        new QRCode(qrcodeDiv, {
+                            text: url, width: 128, height: 128,
+                            colorDark: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#000000',
+                            colorLight: "#00000000",
+                            correctLevel: QRCode.CorrectLevel.H
+                        });
+                    } catch (error) {
+                        console.error('QR code initialization failed:', error);
+                    }
                 }
             }
             function updateOtherElementOptions() {
