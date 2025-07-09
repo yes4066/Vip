@@ -31,77 +31,185 @@ define('SCAN_DIRECTORIES', [
 function get_client_info(): array
 {
     return [
-        'clash' => [
-            'windows' => [
-                ['name' => 'Clash Verge', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest'],
-                ['name' => 'Clash for Windows', 'url' => 'https://github.com/Fndroid/clash_for_windows_pkg/releases/latest'],
+    'clash' => [
+        'windows' => [
+            [
+                'name' => 'Clash Verge (Rev) - x64 Installer',
+                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'
             ],
-            'macos' => [
-                ['name' => 'Clash Verge', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest'],
-                ['name' => 'ClashX', 'url' => 'https://github.com/yichengchen/clashX/releases/latest'],
+            [
+                'name' => 'Clash Verge (Rev) - ARM64 Installer',
+                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi'
             ],
-            'android' => [
-                ['name' => 'Clash for Android', 'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest'],
-            ],
-            'ios' => [
-                ['name' => 'Stash', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349'],
-            ],
-            'linux' => [
-                ['name' => 'Clash Verge', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest'],
+            [
+                'name' => 'Clash for Windows - x64 Installer',
+                'url' => 'https://github.com/Fndroid/clash_for_windows_pkg/releases/latest/download/Clash.for.Windows.Setup.0.20.39.exe'
             ]
         ],
-        'sing-box' => [
-            'windows' => [
-                ['name' => 'NekoRay', 'url' => 'https://github.com/MatsuriDayo/nekoray/releases/latest'],
-                ['name' => 'Hiddify-Next', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest'],
+        'macos' => [
+            [
+                'name' => 'Clash Verge (Rev) - Apple Silicon',
+                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg'
             ],
-            'macos' => [
-                ['name' => 'NekoRay', 'url' => 'https://github.com/MatsuriDayo/nekoray/releases/latest'],
-                ['name' => 'Hiddify-Next', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest'],
+            [
+                'name' => 'Clash Verge (Rev) - Intel',
+                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64.dmg'
             ],
-            'android' => [
-                ['name' => 'NekoBox', 'url' => 'https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/latest'],
-                ['name' => 'Hiddify-Next', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest'],
-            ],
-            'ios' => [
-                ['name' => 'Stash', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349'],
-                ['name' => 'Streisand', 'url' => 'https://apps.apple.com/us/app/streisand/id6450534064'],
-            ],
-            'linux' => [
-                ['name' => 'NekoRay', 'url' => 'https://github.com/MatsuriDayo/nekoray/releases/latest'],
-                ['name' => 'Hiddify-Next', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest'],
+            [
+                'name' => 'ClashX - Universal',
+                'url' => 'https://github.com/yichengchen/clashX/releases/latest/download/ClashX.dmg'
             ]
         ],
-        'v2ray' => [ // For V2Ray/Xray-core compatible subscription links (standard base64)
-            'windows' => [
-                ['name' => 'v2rayN', 'url' => 'https://github.com/2dust/v2rayN/releases/latest'],
-                ['name' => 'NekoRay', 'url' => 'https://github.com/MatsuriDayo/nekoray/releases/latest'],
+        'android' => [
+            [
+                'name' => 'Clash for Android (CFA) - arm64-v8a',
+                'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk'
             ],
-            'macos' => [
-                ['name' => 'V2RayU', 'url' => 'https://github.com/yanue/V2rayU/releases/latest'],
-                ['name' => 'NekoRay', 'url' => 'https://github.com/MatsuriDayo/nekoray/releases/latest'],
-            ],
-            'android' => [
-                ['name' => 'v2rayNG', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest'],
-                ['name' => 'NekoBox', 'url' => 'https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/latest'],
-            ],
-            'ios' => [
-                ['name' => 'Shadowrocket', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118'],
-                ['name' => 'Stash', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349'],
-                ['name' => 'Streisand', 'url' => 'https://apps.apple.com/us/app/streisand/id6450534064'],
-            ],
-            'linux' => [
-                ['name' => 'NekoRay', 'url' => 'https://github.com/MatsuriDayo/nekoray/releases/latest'],
-                ['name' => 'Qv2ray', 'url' => 'https://github.com/Qv2ray/Qv2ray/releases/latest'],
+            [
+                'name' => 'Clash for Android (CFA) - armeabi-v7a',
+                'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-armeabi-v7a-release.apk'
             ]
         ],
-        'surfboard' => [
-            'android' => [
-                ['name' => 'Surfboard', 'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard'],
+        'ios' => [
+            [
+                'name' => 'Stash (Recommended for Clash)',
+                'url' => 'https://apps.apple.com/us/app/stash/id1596063349'
+            ],
+            [
+                'name' => 'Shadowrocket',
+                'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118'
             ]
         ],
-        // Add other cores like 'hysteria2', 'tuic', etc. here as needed
-    ];
+        'linux' => [
+            [
+                'name' => 'Clash Verge (Rev) - amd64 (.deb)',
+                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb'
+            ],
+            [
+                'name' => 'Clash Verge (Rev) - amd64 (.AppImage)',
+                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_amd64.AppImage'
+            ]
+        ]
+    ],
+    'singbox' => [
+        'windows' => [
+            [
+                'name' => 'Hiddify-Next - x64 Installer',
+                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe'
+            ],
+            [
+                'name' => 'NekoRay - x64',
+                'url' => 'https://github.com/MatsuriDayo/nekoray/releases/latest/download/nekoray-3.28-2024-03-10-windows64.zip'
+            ]
+        ],
+        'macos' => [
+            [
+                'name' => 'Hiddify-Next - Universal',
+                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg'
+            ]
+        ],
+        'android' => [
+            [
+                'name' => 'Hiddify-Next - Universal',
+                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk'
+            ],
+            [
+                'name' => 'NekoBox - Universal',
+                'url' => 'https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/latest/download/NB4A-1.2.8-foss.apk'
+            ]
+        ],
+        'ios' => [
+            [
+                'name' => 'Streisand (Recommended for Sing-Box)',
+                'url' => 'https://apps.apple.com/us/app/streisand/id6450534064'
+            ],
+            [
+                'name' => 'FoXray',
+                'url' => 'https://apps.apple.com/us/app/foxray/id6448898396'
+            ],
+            [
+                'name' => 'Stash',
+                'url' => 'https://apps.apple.com/us/app/stash/id1596063349'
+            ]
+        ],
+        'linux' => [
+            [
+                'name' => 'Hiddify-Next - x64 (.AppImage)',
+                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage'
+            ],
+            [
+                'name' => 'NekoRay - x64',
+                'url' => 'https://github.com/MatsuriDayo/nekoray/releases/latest/download/nekoray-3.28-2024-03-10-linux64.zip'
+            ]
+        ]
+    ],
+    'xray' => [
+        'windows' => [
+            [
+                'name' => 'v2rayN (with Xray core)',
+                'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip'
+            ]
+        ],
+        'macos' => [
+            [
+                'name' => 'V2RayU - Universal',
+                'url' => 'https://github.com/yanue/V2rayU/releases/latest/download/V2rayU.dmg'
+            ]
+        ],
+        'android' => [
+            [
+                'name' => 'v2rayNG - arm64-v8a',
+                'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk'
+            ],
+            [
+                'name' => 'v2rayNG - armeabi-v7a',
+                'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_armeabi-v7a.apk'
+            ]
+        ],
+        'ios' => [
+            [
+                'name' => 'Shadowrocket (Classic Choice)',
+                'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118'
+            ],
+            [
+                'name' => 'FoXray',
+                'url' => 'https://apps.apple.com/us/app/foxray/id6448898396'
+            ],
+            [
+                'name' => 'Stash',
+                'url' => 'https://apps.apple.com/us/app/stash/id1596063349'
+            ],
+            [
+                'name' => 'Streisand',
+                'url' => 'https://apps.apple.com/us/app/streisand/id6450534064'
+            ]
+        ],
+        'linux' => [
+            [
+                'name' => 'Qv2ray - x86_64 (.AppImage) (Archived)',
+                'url' => 'https://github.com/Qv2ray/Qv2ray/releases/download/v2.7.0/Qv2ray.v2.7.0.linux-x64.AppImage'
+            ]
+        ]
+    ],
+    'surfboard' => [
+        'android' => [
+            [
+                'name' => 'Surfboard (Google Play)',
+                'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard'
+            ],
+            [
+                'name' => 'Surfboard (Github Release)',
+                'url' => 'https://github.com/getsurfboard/surfboard/releases/latest/download/surfboard-2.22.0.apk'
+            ]
+        ],
+        'ios' => [
+            [
+                'name' => 'Not Available (Use Shadowrocket or Stash)',
+                'url' => ''
+            ]
+        ]
+    ]
+];
 }
 
 
