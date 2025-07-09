@@ -64,7 +64,7 @@ proxies:
   - {"name":"🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0","type":"vmess","server":"176.120.17.67","port":42270,"cipher":"auto","uuid":"3c0f9cf4-6a0c-42f3-a6de-89c79d4af8e3","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3","type":"vmess","server":"193.233.133.59","port":33,"cipher":"auto","uuid":"0dc0d22c-68e5-440a-9465-97cad8d1cf33","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3","type":"vmess","server":"gr1.nspay.top","port":35600,"cipher":"auto","uuid":"4465948c-ea8b-4df8-b59a-279b12d2ae41","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 US | 🔴 | vmess | @zerobaipiao | 53","type":"vmess","server":"eEEeeeeEeEEDFFghy.444752.xYZ","port":80,"cipher":"auto","uuid":"7701ddf5-6a48-401b-a3ec-8af52b6deb48","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/mlyR5tmcKx3hweBopuhWEbIX","headers":{"Host":""}}}
+  - {"name":"🇺🇸 US | 🔴 | vmess | @zerobaipiao | 52","type":"vmess","server":"ip.sb","port":443,"cipher":"auto","uuid":"c9ddb489-7b5e-49ed-8b21-749f4a0ed56d","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/c9ddb489-7b5e-49ed-8b21-749f4a0ed56d-vmess","headers":{"Host":"usshs.atlen.dpdns.org"}}}
 
 rule-providers:
   ir_domains:
@@ -142,7 +142,7 @@ proxy-groups:
       - '🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0'
       - '🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3'
       - '🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3'
-      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 53'
+      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 52'
 
   - name: 📉 Fallback
     type: fallback
@@ -196,7 +196,7 @@ proxy-groups:
       - '🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0'
       - '🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3'
       - '🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3'
-      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 53'
+      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 52'
       
   - name: All-Proxies
     type: select
@@ -248,7 +248,7 @@ proxy-groups:
       - '🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0'
       - '🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3'
       - '🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3'
-      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 53'
+      - '🇺🇸 US | 🔴 | vmess | @zerobaipiao | 52'
 
 rules:
   - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve

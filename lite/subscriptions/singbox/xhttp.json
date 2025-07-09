@@ -115,7 +115,8 @@
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 6",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
-                "🇺🇸 US | 🔴 | vless | @nufilter | 14",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
+                "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @v2rayfree_server | 13",
@@ -126,11 +127,11 @@
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 13",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 36",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
-                "🇺🇸 US | 🔴 | vless | @lranonline_new | 7",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
+                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇺🇸 US | 🔴 | vless | @sstpvpn | 8"
             ]
         },
         {
@@ -147,7 +148,8 @@
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 6",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
-                "🇺🇸 US | 🔴 | vless | @nufilter | 14",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
+                "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @v2rayfree_server | 13",
@@ -158,11 +160,11 @@
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 13",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 36",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
-                "🇺🇸 US | 🔴 | vless | @lranonline_new | 7",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
+                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇺🇸 US | 🔴 | vless | @sstpvpn | 8"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -284,11 +286,20 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @nufilter | 14",
+            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
             "type": "vless",
-            "server": "test.fast.hosting-ip.com",
+            "server": "bot.nimeshab-nabod.info",
             "server_port": 80,
-            "uuid": "c8151eb6-706c-471d-b22c-aa88b3c64582",
+            "uuid": "itsproxy",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
+            "type": "vless",
+            "server": "HydroVpn.quantumflow.ir",
+            "server_port": 80,
+            "uuid": "d6983651-cd66-4da5-a943-3de14557eaf4",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -324,7 +335,7 @@
             "type": "vless",
             "server": "HydroVpn.quantumflow.ir",
             "server_port": 80,
-            "uuid": "8173eaac-d5ad-4407-afb5-512911d8bf0f",
+            "uuid": "d6983651-cd66-4da5-a943-3de14557eaf4",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -397,15 +408,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @lranonline_new | 7",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "04327cef-1084-431a-d595-cfcf9593cbc3",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
             "type": "vless",
             "server": "49.13.199.174",
@@ -468,6 +470,24 @@
             "uuid": "qeshmserver",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @sstpvpn | 8",
+            "type": "vless",
+            "server": "108.61.224.94",
+            "server_port": 443,
+            "uuid": "306e217d-e75e-45b2-8a78-da78f13e3e2d",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "108.61.224.94",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         }
     ],
     "route": {
