@@ -1,0 +1,21 @@
+#!MANAGED-CONFIG https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/ss_ipv6 interval=3600 strict=false
+
+[General]
+loglevel = notify
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
+ipv6 = true
+dns-server = system, 223.5.5.5
+enhanced-mode-by-rule = true
+
+[Proxy]
+DIRECT = direct
+❔ XX | 🟢 | ss | @free_omega | 4 = ss, [2a01:4f8:c012:42dc::1], 2060, encrypt-method = chacha20-ietf-poly1305, password = DU7nmmEPs5eGoqrt_SwBEQ
+
+[Proxy Group]
+PSG-MANUAL = select, PSG-AUTO, PSG-FALLBACK, ❔ XX | 🟢 | ss | @free_omega | 4
+PSG-AUTO = url-test, ❔ XX | 🟢 | ss | @free_omega | 4
+PSG-FALLBACK = fallback, ❔ XX | 🟢 | ss | @free_omega | 4
+
+[Rule]
+GEOIP,IR,DIRECT
+FINAL,PSG-MANUAL

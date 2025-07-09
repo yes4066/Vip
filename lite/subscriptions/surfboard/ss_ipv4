@@ -1,0 +1,51 @@
+#!MANAGED-CONFIG https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/ss_ipv4 interval=3600 strict=false
+
+[General]
+loglevel = notify
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
+ipv6 = true
+dns-server = system, 223.5.5.5
+enhanced-mode-by-rule = true
+
+[Proxy]
+DIRECT = direct
+🇩🇪 DE | 🟢 | ss | @argo_vpn1 | 6 = ss, 45.144.54.33, 34803, encrypt-method = chacha20-ietf-poly1305, password = DyguaItzBfN9Yjv42WgIWb
+🇦🇹 AT | 🟢 | ss | @arv2ra | 7 = ss, 45.138.74.160, 7261, encrypt-method = chacha20-ietf-poly1305, password = pZvwP17Nlz2z6jsYnVgZgf
+🇬🇧 GB | 🟢 | ss | @bislullproxy | 18 = ss, 4.250.60.151, 443, encrypt-method = chacha20-ietf-poly1305, password = WstuSnlu4ieA9M0L
+🇩🇪 DE | 🟢 | ss | @connect_sho | 29 = ss, 194.87.71.220, 2222, encrypt-method = chacha20-ietf-poly1305, password = qscavF5UviIL-8V-E4raBA
+🇩🇪 DE | 🟢 | ss | @free1ss | 16 = ss, 94.159.96.245, 11902, encrypt-method = chacha20-ietf-poly1305, password = 1HHikeFxGXavR6c08XczIR
+🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7 = ss, 86.104.74.243, 14255, encrypt-method = chacha20-ietf-poly1305, password = fDDmH4QefmWqMJ8UURZrGh
+🇬🇧 GB | 🟢 | ss | @injectormconf | 39 = ss, 51.142.171.150, 49499, encrypt-method = chacha20-ietf-poly1305, password = kTjlLxrncKx4i2HIjxfA3M
+🇩🇪 DE | 🟢 | ss | @jiedianf | 9 = ss, 138.124.115.157, 1080, encrypt-method = chacha20-ietf-poly1305, password = M-nffO40KlclwbCX9CV1DQ
+🇬🇧 GB | 🟢 | ss | @key_outline | 19 = ss, 78.129.140.11, 443, encrypt-method = chacha20-ietf-poly1305, password = Kzyale6Kv041SlyD53bsML
+🇩🇪 DE | 🟢 | ss | @m_android | 2 = ss, 91.99.201.235, 80, encrypt-method = aes-256-gcm, password = 7bgifu8UsiF/RdGesX5zjW6kEqHYKhslGqaccf2HyLA=
+🇬🇧 GB | 🟢 | ss | @megavpn_link | 14 = ss, 85.210.120.237, 443, encrypt-method = chacha20-ietf-poly1305, password = Bog0ELmMM9DSxDdQ
+🇺🇸 US | 🟢 | ss | @mester_v2ray | 18 = ss, 45.87.175.192, 8080, encrypt-method = chacha20-ietf-poly1305, password = 4a2rfixophdjffa8KVA4Aa
+🇬🇧 GB | 🟢 | ss | @novinology | 16 = ss, 13.87.74.71, 14564, encrypt-method = chacha20-ietf-poly1305, password = Q1qlRknoN9PwGeExWVyTKg
+🇬🇧 GB | 🟢 | ss | @ntconfig | 3 = ss, 74.177.202.58, 443, encrypt-method = chacha20-ietf-poly1305, password = 69MUii7VDwMqh7Hz
+🇸🇪 SE | 🟢 | ss | @orange_vpns | 14 = ss, 20.91.252.21, 48172, encrypt-method = chacha20-ietf-poly1305, password = 51yloQC8D9w1Wae7FHtI65
+🇪🇸 ES | 🟢 | ss | @outlineopenkey | 11 = ss, 194.87.45.189, 443, encrypt-method = chacha20-ietf-poly1305, password = l2yHlcJJ5f8tA69pQwvNHa
+🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9 = ss, 217.138.193.10, 808, encrypt-method = chacha20-ietf-poly1305, password = G!yBwPWH3Vao
+🇩🇪 DE | 🟢 | ss | @shadowproxy66 | 4 = ss, 147.45.178.200, 57456, encrypt-method = chacha20-ietf-poly1305, password = c40641c1f89e7acb
+🇨🇦 CA | 🟢 | ss | @shadowsocksserv | 2 = ss, 38.111.114.246, 9102, encrypt-method = aes-256-gcm, password = e4FCWrgpkji3QY
+🇺🇸 US | 🟢 | ss | @slamvpn | 2 = ss, 45.87.175.178, 8080, encrypt-method = chacha20-ietf-poly1305, password = cvII85TrW6n0OGyfpHVS1u
+🇩🇪 DE | 🟢 | ss | @srv2ray | 0 = ss, 5.182.87.210, 35961, encrypt-method = aes-256-gcm, password = wDZtxfIk3UhacKHrho7lxw
+🇫🇮 FI | 🟢 | ss | @strongprotocol | 10 = ss, 45.12.135.36, 47076, encrypt-method = chacha20-ietf-poly1305, password = WrNAsbtcuoeEEQdoSOcPgO
+🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7 = ss, 51.103.32.8, 666, encrypt-method = chacha20-ietf-poly1305, password = 427395387a9379ca
+🇩🇪 DE | 🟢 | ss | @v2freenet | 19 = ss, 3.121.98.210, 8080, encrypt-method = chacha20-ietf-poly1305, password = AuirfT6Se/T5YFhqCNidSOfJc7g5y5DC+mDiIsNAYzI=
+🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27 = ss, 94.131.123.147, 7383, encrypt-method = chacha20-ietf-poly1305, password = eSHEdJz96rqNkOCAzd5Csv
+🇮🇩 ID | 🟢 | ss | @vipoutline | 20 = ss, 154.205.159.100, 990, encrypt-method = chacha20-ietf-poly1305, password = f8f7aCzcPKbsF8p3
+🇵🇱 PL | 🟢 | ss | @vipufovpn | 19 = ss, 54.36.174.181, 5601, encrypt-method = aes-256-gcm, password = Y6R9pAtvxxzmGC
+🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19 = ss, 45.87.175.10, 8080, encrypt-method = chacha20-ietf-poly1305, password = oZIoA69Q8yhcQV8ka3Pa3A
+🇸🇪 SE | 🟢 | ss | @vmessx | 4 = ss, 45.8.147.88, 45961, encrypt-method = aes-256-gcm, password = Y5Y2Rmq9TT33hli3GKnV5c
+🇫🇷 FR | 🟢 | ss | @vpnfreeaccounts | 15 = ss, 172.232.45.24, 80, encrypt-method = chacha20-ietf-poly1305, password = t9tgJFwwla72eL9W61t8yB
+🇸🇪 SE | 🟢 | ss | @vpnv2rayngv | 17 = ss, 217.209.77.111, 62005, encrypt-method = chacha20-ietf-poly1305, password = jGIXGK0Q7CQSU3d_JKOGHQ
+
+[Proxy Group]
+PSG-MANUAL = select, PSG-AUTO, PSG-FALLBACK, 🇩🇪 DE | 🟢 | ss | @argo_vpn1 | 6, 🇦🇹 AT | 🟢 | ss | @arv2ra | 7, 🇬🇧 GB | 🟢 | ss | @bislullproxy | 18, 🇩🇪 DE | 🟢 | ss | @connect_sho | 29, 🇩🇪 DE | 🟢 | ss | @free1ss | 16, 🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7, 🇬🇧 GB | 🟢 | ss | @injectormconf | 39, 🇩🇪 DE | 🟢 | ss | @jiedianf | 9, 🇬🇧 GB | 🟢 | ss | @key_outline | 19, 🇩🇪 DE | 🟢 | ss | @m_android | 2, 🇬🇧 GB | 🟢 | ss | @megavpn_link | 14, 🇺🇸 US | 🟢 | ss | @mester_v2ray | 18, 🇬🇧 GB | 🟢 | ss | @novinology | 16, 🇬🇧 GB | 🟢 | ss | @ntconfig | 3, 🇸🇪 SE | 🟢 | ss | @orange_vpns | 14, 🇪🇸 ES | 🟢 | ss | @outlineopenkey | 11, 🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9, 🇩🇪 DE | 🟢 | ss | @shadowproxy66 | 4, 🇨🇦 CA | 🟢 | ss | @shadowsocksserv | 2, 🇺🇸 US | 🟢 | ss | @slamvpn | 2, 🇩🇪 DE | 🟢 | ss | @srv2ray | 0, 🇫🇮 FI | 🟢 | ss | @strongprotocol | 10, 🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7, 🇩🇪 DE | 🟢 | ss | @v2freenet | 19, 🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27, 🇮🇩 ID | 🟢 | ss | @vipoutline | 20, 🇵🇱 PL | 🟢 | ss | @vipufovpn | 19, 🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19, 🇸🇪 SE | 🟢 | ss | @vmessx | 4, 🇫🇷 FR | 🟢 | ss | @vpnfreeaccounts | 15, 🇸🇪 SE | 🟢 | ss | @vpnv2rayngv | 17
+PSG-AUTO = url-test, 🇩🇪 DE | 🟢 | ss | @argo_vpn1 | 6, 🇦🇹 AT | 🟢 | ss | @arv2ra | 7, 🇬🇧 GB | 🟢 | ss | @bislullproxy | 18, 🇩🇪 DE | 🟢 | ss | @connect_sho | 29, 🇩🇪 DE | 🟢 | ss | @free1ss | 16, 🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7, 🇬🇧 GB | 🟢 | ss | @injectormconf | 39, 🇩🇪 DE | 🟢 | ss | @jiedianf | 9, 🇬🇧 GB | 🟢 | ss | @key_outline | 19, 🇩🇪 DE | 🟢 | ss | @m_android | 2, 🇬🇧 GB | 🟢 | ss | @megavpn_link | 14, 🇺🇸 US | 🟢 | ss | @mester_v2ray | 18, 🇬🇧 GB | 🟢 | ss | @novinology | 16, 🇬🇧 GB | 🟢 | ss | @ntconfig | 3, 🇸🇪 SE | 🟢 | ss | @orange_vpns | 14, 🇪🇸 ES | 🟢 | ss | @outlineopenkey | 11, 🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9, 🇩🇪 DE | 🟢 | ss | @shadowproxy66 | 4, 🇨🇦 CA | 🟢 | ss | @shadowsocksserv | 2, 🇺🇸 US | 🟢 | ss | @slamvpn | 2, 🇩🇪 DE | 🟢 | ss | @srv2ray | 0, 🇫🇮 FI | 🟢 | ss | @strongprotocol | 10, 🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7, 🇩🇪 DE | 🟢 | ss | @v2freenet | 19, 🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27, 🇮🇩 ID | 🟢 | ss | @vipoutline | 20, 🇵🇱 PL | 🟢 | ss | @vipufovpn | 19, 🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19, 🇸🇪 SE | 🟢 | ss | @vmessx | 4, 🇫🇷 FR | 🟢 | ss | @vpnfreeaccounts | 15, 🇸🇪 SE | 🟢 | ss | @vpnv2rayngv | 17
+PSG-FALLBACK = fallback, 🇩🇪 DE | 🟢 | ss | @argo_vpn1 | 6, 🇦🇹 AT | 🟢 | ss | @arv2ra | 7, 🇬🇧 GB | 🟢 | ss | @bislullproxy | 18, 🇩🇪 DE | 🟢 | ss | @connect_sho | 29, 🇩🇪 DE | 🟢 | ss | @free1ss | 16, 🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7, 🇬🇧 GB | 🟢 | ss | @injectormconf | 39, 🇩🇪 DE | 🟢 | ss | @jiedianf | 9, 🇬🇧 GB | 🟢 | ss | @key_outline | 19, 🇩🇪 DE | 🟢 | ss | @m_android | 2, 🇬🇧 GB | 🟢 | ss | @megavpn_link | 14, 🇺🇸 US | 🟢 | ss | @mester_v2ray | 18, 🇬🇧 GB | 🟢 | ss | @novinology | 16, 🇬🇧 GB | 🟢 | ss | @ntconfig | 3, 🇸🇪 SE | 🟢 | ss | @orange_vpns | 14, 🇪🇸 ES | 🟢 | ss | @outlineopenkey | 11, 🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9, 🇩🇪 DE | 🟢 | ss | @shadowproxy66 | 4, 🇨🇦 CA | 🟢 | ss | @shadowsocksserv | 2, 🇺🇸 US | 🟢 | ss | @slamvpn | 2, 🇩🇪 DE | 🟢 | ss | @srv2ray | 0, 🇫🇮 FI | 🟢 | ss | @strongprotocol | 10, 🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7, 🇩🇪 DE | 🟢 | ss | @v2freenet | 19, 🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27, 🇮🇩 ID | 🟢 | ss | @vipoutline | 20, 🇵🇱 PL | 🟢 | ss | @vipufovpn | 19, 🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19, 🇸🇪 SE | 🟢 | ss | @vmessx | 4, 🇫🇷 FR | 🟢 | ss | @vpnfreeaccounts | 15, 🇸🇪 SE | 🟢 | ss | @vpnv2rayngv | 17
+
+[Rule]
+GEOIP,IR,DIRECT
+FINAL,PSG-MANUAL
