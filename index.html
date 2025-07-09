@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,74 +10,94 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Theme Initializer -->
+    <script>
+        // Apply theme right away to prevent FOUC (Flash of Unstyled Content)
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    
     <style>
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        .icon { width: 24px; height: 24px; color: #4f46e5; flex-shrink: 0; }
-        .flag { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
-        .social-icon { width: 20px; height: 20px; }
+        .lucide { width: 20px; height: 20px; stroke-width: 2; } /* Default Lucide icon size */
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 leading-relaxed">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-300 leading-relaxed transition-colors duration-300">
     <div class="container max-w-6xl mx-auto px-4 py-8">
-        <header class="text-center mb-10">
-            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-0">Proxy Subscription Generator (PSG)</h1>
-            <p class="text-base sm:text-lg text-slate-500 mt-2">Select your preferences to get the corresponding subscription link and QR code.</p>
+        <header class="flex justify-between items-center mb-10">
+            <div class="text-left">
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-0">Proxy Subscription Generator</h1>
+                <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mt-2">Select your preferences to get a subscription link.</p>
+            </div>
+            <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400">
+                <i data-lucide="sun" class="sun-icon lucide"></i>
+                <i data-lucide="moon" class="moon-icon lucide hidden"></i>
+                <span class="sr-only">Toggle dark mode</span>
+            </button>
         </header>
 
         <main>
-            <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-slate-200 mb-8 sm:mb-10">
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 sm:p-8 shadow-lg border border-slate-200 dark:border-slate-700 mb-8 sm:mb-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
                     <div>
-                        <label for="configType" class="block text-sm font-medium text-slate-700 mb-2">Config Type:</label>
-                        <select id="configType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100"></select>
+                        <label for="configType" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Config Type:</label>
+                        <select id="configType" class="block w-full rounded-md border-slate-300 dark:border-slate-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 dark:bg-slate-700 dark:text-slate-200"></select>
                     </div>
                     <div>
-                        <label for="ipType" class="block text-sm font-medium text-slate-700 mb-2">Type:</label>
-                        <select id="ipType" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100" disabled></select>
+                        <label for="ipType" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Type:</label>
+                        <select id="ipType" class="block w-full rounded-md border-slate-300 dark:border-slate-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 dark:bg-slate-700 dark:text-slate-200" disabled></select>
                     </div>
                     <div>
-                        <label for="otherElement" class="block text-sm font-medium text-slate-700 mb-2">Element:</label>
-                        <select id="otherElement" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100" disabled></select>
+                        <label for="otherElement" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Element:</label>
+                        <input type="search" id="searchBar" placeholder="Filter elements..." class="block w-full rounded-md border-slate-300 dark:border-slate-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 mb-2 bg-slate-100 dark:bg-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500" disabled>
+                        <select id="otherElement" class="block w-full rounded-md border-slate-300 dark:border-slate-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 dark:bg-slate-700 dark:text-slate-200" disabled></select>
                     </div>
                 </div>
 
-                <div id="resultArea" class="hidden bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200">
-                    <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-4">Your Subscription Link:</h3>
+                <div id="resultArea" class="hidden bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 sm:p-6 border border-slate-200 dark:border-slate-700">
+                    <h3 class="text-lg sm:text-xl font-semibold text-slate-800 dark:text-slate-200 mb-4">Your Subscription Link:</h3>
                     <div class="flex items-center mb-4">
                         <input type="text" id="subscriptionUrl" readonly
-                            class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
-                        <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100" title="Copy URL">
-                            <svg class='copy-icon w-4 h-4 sm:w-5 sm:h-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.16 12.66 9 11.625 9h-.375a3.75 3.75 0 0 1-3.75-3.75V3.375ZM6.188 1.875a.75.75 0 0 0-1.5 0v1.875a.75.75 0 0 0 .75.75h.375a.75.75 0 0 0 .75-.75V5.25ZM9 3.375a2.25 2.25 0 0 1 2.25-2.25h.375a2.25 2.25 0 0 1 2.25 2.25v1.875a2.25 2.25 0 0 1-2.25 2.25h-.375A2.25 2.25 0 0 1 9 5.25V3.375Z' /><path d='M12.983 9.917a.75.75 0 0 0-1.166-.825l-5.334 3.078a.75.75 0 0 0-.417.825V21a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75V13a.75.75 0 0 0-.417-.825l-5.333-3.078Z' /></svg>
-                            <svg class='check-icon w-4 h-4 sm:w-5 sm:h-5 hidden' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path fill-rule='evenodd' d='M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd' /></svg>
+                            class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
+                        <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 border border-l-0 border-indigo-600 dark:border-indigo-500 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100 dark:hover:bg-indigo-800" title="Copy URL">
+                            <i data-lucide="copy" class="copy-icon lucide w-5 h-5"></i>
+                            <i data-lucide="check" class="check-icon lucide w-5 h-5 hidden"></i>
                         </button>
                     </div>
                     <div class="flex flex-col items-center justify-center">
-                        <p class="text-sm text-slate-600 mb-2">Scan the QR code:</p>
-                        <div id="qrcode" class="p-2 bg-white border border-slate-300 rounded-lg shadow-inner"></div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">Scan the QR code:</p>
+                        <div id="qrcode" class="p-2 bg-white border border-slate-300 dark:border-slate-600 rounded-lg shadow-inner"></div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <footer class="text-center mt-12 sm:mt-16 py-6 sm:py-8 border-t border-slate-200">
-            <div class="flex justify-center items-center gap-x-6 text-slate-500 text-sm">
+        <footer class="text-center mt-12 sm:mt-16 py-6 sm:py-8 border-t border-slate-200 dark:border-slate-700">
+            <div class="flex justify-center items-center gap-x-6 text-slate-500 dark:text-slate-400 text-sm">
                 <p>Created with ❤️ by YEBEKHE</p>
                 <div class="flex items-center gap-x-3">
-                    <a href="https://t.me/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="Telegram">
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zM18 7.4l-1.46 6.86c-.14.66-.54 1.36-1.3 1.36-.5 0-1-.23-1.5-.54l-2.92-2.14-1.4 1.34c-.2.2-.4.4-.8.4-.5 0-.7-.2-.7-.7v-2.97l6.3-5.73c.33-.3.04-.48-.38-.2L7.3 11.7l-2.75-.86c-.6-.18-.6-.6 0-.87l11.02-4.2c.5-.2.9.2.7.7z"/></svg>
+                    <a href="https://t.me/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="Telegram">
+                        <i data-lucide="send" class="lucide"></i>
                     </a>
-                    <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)">
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="X (Twitter)">
+                        <i data-lucide="twitter" class="lucide"></i>
                     </a>
                 </div>
             </div>
+            <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">Last Generated: 2025-07-09 08:04:41 UTC</p>
         </footer>
     </div>
 
     <!-- Message Box HTML -->
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
-        <div class="bg-white rounded-lg p-6 shadow-xl max-w-sm w-full text-center">
-            <p id="messageBoxText" class="text-lg font-semibold text-slate-800 mb-4"></p>
+        <div class="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-xl max-w-sm w-full text-center">
+            <p id="messageBoxText" class="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4"></p>
             <button id="messageBoxClose" class="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">OK</button>
         </div>
     </div>
@@ -320,14 +340,20 @@
     }
 };
 
+            // Element References
             const configTypeSelect = document.getElementById('configType');
             const ipTypeSelect = document.getElementById('ipType');
             const otherElementSelect = document.getElementById('otherElement');
+            const searchBar = document.getElementById('searchBar');
             const resultArea = document.getElementById('resultArea');
             const subscriptionUrlInput = document.getElementById('subscriptionUrl');
             const copyButton = document.getElementById('copyButton');
             const qrcodeDiv = document.getElementById('qrcode');
+            const themeToggleButton = document.getElementById('theme-toggle');
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
 
+            // --- Helper Functions ---
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
                 document.getElementById('messageBoxText').textContent = message;
@@ -355,21 +381,10 @@
                 if (type === 'location') {
                     return name.toUpperCase() + ' ' + getFlagEmoji(name);
                 }
-
-                // New logic for parsing IPv4, IPv6, and domain suffixes
-                let baseName = name;
-                let suffix = '';
-
-                if (name.endsWith('_ipv4')) {
-                    baseName = name.slice(0, -5);
-                    suffix = ' (IPv4)';
-                } else if (name.endsWith('_ipv6')) {
-                    baseName = name.slice(0, -5);
-                    suffix = ' (IPv6)';
-                } else if (name.endsWith('_domain')) {
-                    baseName = name.slice(0, -7);
-                    suffix = ' (Domain)';
-                }
+                let baseName = name, suffix = '';
+                if (name.endsWith('_ipv4')) { baseName = name.slice(0, -5); suffix = ' (IPv4)'; } 
+                else if (name.endsWith('_ipv6')) { baseName = name.slice(0, -5); suffix = ' (IPv6)'; } 
+                else if (name.endsWith('_domain')) { baseName = name.slice(0, -7); suffix = ' (Domain)'; }
                 
                 const formattedBase = baseName.split(/[-_]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
                 return formattedBase + suffix;
@@ -391,12 +406,44 @@
                     });
                 }
             }
+
+            // --- Main Application Logic ---
+            function updateOtherElementOptions() {
+                const selectedConfigType = configTypeSelect.value;
+                const selectedIpType = ipTypeSelect.value;
+                const searchTerm = searchBar.value.toLowerCase();
+
+                resetSelect(otherElementSelect, 'Select Element');
+                resultArea.classList.add('hidden');
+
+                if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
+                    const allElements = structuredData[selectedConfigType][selectedIpType];
+                    
+                    const filteredElements = Object.keys(allElements)
+                        .filter(key => formatDisplayName(key, (selectedIpType === 'location' ? 'location' : 'default')).toLowerCase().includes(searchTerm))
+                        .reduce((obj, key) => {
+                            obj[key] = allElements[key];
+                            return obj;
+                        }, {});
+
+                    populateSelect(otherElementSelect, filteredElements, Object.keys(filteredElements).length > 0 ? 'Select Element' : 'No matches found');
+                    otherElementSelect.disabled = false;
+                    
+                    const options = Object.keys(filteredElements);
+                    if (options.length === 1) {
+                        otherElementSelect.value = options[0];
+                        otherElementSelect.dispatchEvent(new Event('change'));
+                    }
+                }
+            }
             
             configTypeSelect.addEventListener('change', () => {
                 const selectedConfigType = configTypeSelect.value;
                 resetSelect(ipTypeSelect, 'Select Type');
                 resetSelect(otherElementSelect, 'Select Element');
                 resultArea.classList.add('hidden');
+                searchBar.value = '';
+                searchBar.disabled = true;
 
                 if (selectedConfigType && structuredData[selectedConfigType]) {
                     populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type');
@@ -405,16 +452,12 @@
             });
 
             ipTypeSelect.addEventListener('change', () => {
-                const selectedConfigType = configTypeSelect.value;
-                const selectedIpType = ipTypeSelect.value;
-                resetSelect(otherElementSelect, 'Select Element');
-                resultArea.classList.add('hidden');
-
-                if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
-                    populateSelect(otherElementSelect, structuredData[selectedConfigType][selectedIpType], 'Select Element');
-                    otherElementSelect.disabled = false;
-                }
+                searchBar.disabled = !ipTypeSelect.value;
+                searchBar.value = '';
+                updateOtherElementOptions();
             });
+
+            searchBar.addEventListener('input', updateOtherElementOptions);
 
             otherElementSelect.addEventListener('change', () => {
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value] || null;
@@ -444,8 +487,28 @@
                 }).catch(() => showMessageBox('Failed to copy URL.'));
             });
 
+            // --- Dark Mode Handler ---
+            const updateThemeIcons = (isDarkMode) => {
+                sunIcon.classList.toggle('hidden', isDarkMode);
+                moonIcon.classList.toggle('hidden', !isDarkMode);
+            };
+
+            themeToggleButton.addEventListener('click', () => {
+                const isDark = document.documentElement.classList.toggle('dark');
+                localStorage.theme = isDark ? 'dark' : 'light';
+                updateThemeIcons(isDark);
+            });
+
+
+            // --- Initial Page Setup ---
             populateSelect(configTypeSelect, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
+            
+            // Set initial theme icon state
+            updateThemeIcons(document.documentElement.classList.contains('dark'));
+            
+            // Render all Lucide icons
+            lucide.createIcons();
         });
     </script>
 </body>
