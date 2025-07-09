@@ -118,19 +118,19 @@
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
-                "🇺🇸 US | 🔴 | vless | @vpnaloo | 13",
+                "🇺🇸 US | 🔴 | vless | @vpnaloo | 11",
                 "🇺🇸 US | 🔴 | vless | @vpnstable | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0",
                 "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 13",
+                "🇺🇸 US | 🔴 | vless | @getconfigir | 19",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 36",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 15",
-                "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
+                "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0"
             ]
         },
         {
@@ -150,19 +150,19 @@
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
-                "🇺🇸 US | 🔴 | vless | @vpnaloo | 13",
+                "🇺🇸 US | 🔴 | vless | @vpnaloo | 11",
                 "🇺🇸 US | 🔴 | vless | @vpnstable | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0",
                 "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 13",
+                "🇺🇸 US | 🔴 | vless | @getconfigir | 19",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 36",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 15",
-                "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
+                "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -311,7 +311,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @vpnaloo | 13",
+            "tag": "🇺🇸 US | 🔴 | vless | @vpnaloo | 11",
             "type": "vless",
             "server": "test.fast.hosting-ip.com",
             "server_port": 80,
@@ -379,6 +379,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @getconfigir | 19",
+            "type": "vless",
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "qeshmserver",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 36",
             "type": "vless",
             "server": "151.101.3.8",
@@ -429,7 +438,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 15",
+            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
@@ -459,15 +468,6 @@
                     "short_id": "4c"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "qeshmserver",
-            "flow": "",
-            "packet_encoding": "xudp"
         }
     ],
     "route": {
