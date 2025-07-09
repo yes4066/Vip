@@ -106,7 +106,6 @@
             "outbounds": [
                 "URL-TEST",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 19",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -138,7 +137,6 @@
             "type": "urltest",
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 19",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -204,29 +202,6 @@
                     "enabled": true,
                     "public_key": "QYWJdS4JDdSmQKeMkJfPshFuz0bC3jhm9yW3uJfQFmw",
                     "short_id": "b4"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 19",
-            "type": "vless",
-            "server": "real-all3.sdcards.ir",
-            "server_port": 8501,
-            "uuid": "9666ee62-d1f3-4f6e-8881-c17fee524e31",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "OJ0wA5wp55uZdD16dutlTZvx1x-rbMMXmiO9D_MMCHI",
-                    "short_id": "e701a013553059ba"
                 }
             }
         },

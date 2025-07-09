@@ -169,8 +169,7 @@
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
                 "❔ XX | 🔴 | vmess | @vpray3 | 3",
-                "🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3",
-                "🇨🇳 CN | 🔴 | vmess | @zerobaipiao | 41"
+                "🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3"
             ]
         },
         {
@@ -241,8 +240,7 @@
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
                 "❔ XX | 🔴 | vmess | @vpray3 | 3",
-                "🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3",
-                "🇨🇳 CN | 🔴 | vmess | @zerobaipiao | 41"
+                "🇮🇷 IR | 🔴 | vmess | @yejoriconfig | 3"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -1128,27 +1126,11 @@
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 16",
             "type": "vmess",
-            "server": "vc.fly.dev",
-            "server_port": 443,
-            "uuid": "35379219-6535-4f2e-a4fe-3e44f61e0eee",
+            "server": "66.94.114.122",
+            "server_port": 53503,
+            "uuid": "c9b9dea3-5868-477f-e54d-2c8f124f647d",
             "security": "auto",
-            "alter_id": 32,
-            "tls": {
-                "enabled": true,
-                "server_name": "vc.fly.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/vc",
-                "headers": {
-                    "Host": "vc.fly.dev"
-                }
-            }
+            "alter_id": 0
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
@@ -1217,15 +1199,6 @@
             "uuid": "4465948c-ea8b-4df8-b59a-279b12d2ae41",
             "security": "auto",
             "alter_id": 0
-        },
-        {
-            "tag": "🇨🇳 CN | 🔴 | vmess | @zerobaipiao | 41",
-            "type": "vmess",
-            "server": "120.198.71.220",
-            "server_port": 39595,
-            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
-            "security": "auto",
-            "alter_id": 64
         }
     ],
     "route": {

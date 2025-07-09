@@ -105,24 +105,22 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
-                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 19",
-                "🇨🇳 CN | 🟢 | trojan | @ip_cf_config | 14",
+                "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
-                "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
+                "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
+                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ]
         },
         {
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
-                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 19",
-                "🇨🇳 CN | 🟢 | trojan | @ip_cf_config | 14",
+                "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
-                "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
+                "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
+                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -145,7 +143,7 @@
             "type": "dns"
         },
         {
-            "tag": "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
+            "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
             "type": "trojan",
             "server": "production.tj.ojan.workers.dev",
             "server_port": 443,
@@ -164,45 +162,6 @@
                 "path": "/",
                 "headers": {
                     "Host": "production.tj.ojan.workers.dev"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @freevpnatm | 19",
-            "type": "trojan",
-            "server": "ggbnhju.859885.xyz",
-            "server_port": 443,
-            "password": "f69b7304-9bea-4740-a555-797514012a53",
-            "tls": {
-                "enabled": true,
-                "server_name": "gGbNHjU.859885.xYZ",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/MxtuuhyCwC29auSeckWI9",
-                "headers": {
-                    "Host": "gGbNHjU.859885.xYZ"
-                }
-            }
-        },
-        {
-            "tag": "🇨🇳 CN | 🟢 | trojan | @ip_cf_config | 14",
-            "type": "trojan",
-            "server": "f10011.flyflylflyflysbs.sbs",
-            "server_port": 19949,
-            "password": "9c3c38d0-8637-4c94-a790-61f3202a943a",
-            "tls": {
-                "enabled": true,
-                "server_name": "tw01.ckcloud.info",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },
@@ -251,6 +210,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "chatbuzzteambhm.chatbuzzt7150.workers.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
+            "type": "trojan",
+            "server": "f10011.flyflylflyflysbs.sbs",
+            "server_port": 19949,
+            "password": "9c3c38d0-8637-4c94-a790-61f3202a943a",
+            "tls": {
+                "enabled": true,
+                "server_name": "tw01.ckcloud.info",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
