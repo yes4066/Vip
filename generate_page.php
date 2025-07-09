@@ -19,7 +19,6 @@ define('SCAN_DIRECTORIES', [
     'Lite' => PROJECT_ROOT . '/lite/subscriptions',
 ]);
 
-// --- NEW: Client Information Data Source (REVISED) ---
 /**
  * Provides a mapping of subscription core/client types to compatible applications
  * for various platforms, including their download URLs.
@@ -100,7 +99,8 @@ function get_client_info(): array
             'android' => [
                 ['name' => 'Surfboard', 'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard'],
             ]
-        ]
+        ],
+        // Add other cores like 'hysteria2', 'tuic', etc. here as needed
     ];
 }
 
@@ -130,7 +130,6 @@ function process_files_to_structure(array $files_by_category): array
             $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
             $parts = explode('/', $relative_path_from_base);
             if (count($parts) < 2) continue;
-            // The 'type' is now the core/client type, e.g., 'clash', 'sing-box'
             $type = array_shift($parts);
             $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
             $url = GITHUB_REPO_URL . '/' . $path;
@@ -201,9 +200,11 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         <select id="otherElement" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800" disabled></select>
                     </div>
                 </div>
+                <!-- MODIFIED: Result area now contains a sub-container for the URL/QR part -->
                 <div id="resultArea" class="hidden bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 items-start">
-                        <div>
+                        <!-- This part will be hidden until the final subscription is selected -->
+                        <div id="subscription-details-container" class="hidden">
                             <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-4">Your Subscription Link:</h3>
                             <div class="flex items-center mb-4">
                                 <input type="text" id="subscriptionUrl" readonly class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
@@ -217,6 +218,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                                 <div id="qrcode" class="p-2 bg-white border border-slate-300 rounded-lg shadow-inner"></div>
                             </div>
                         </div>
+                        <!-- This part will appear as soon as a Client/Core is selected -->
                         <div class="space-y-4">
                            <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Compatible Clients & Downloads:</h3>
                            <div id="client-info-list" class="space-y-5">
@@ -248,6 +250,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
     
+    <!-- MODIFIED: Javascript logic is corrected -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             try { lucide.createIcons(); } catch (error) { console.error('Lucide icons initialization failed:', error); }
@@ -263,6 +266,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             const copyButton = document.getElementById('copyButton');
             const qrcodeDiv = document.getElementById('qrcode');
             const clientInfoList = document.getElementById('client-info-list');
+            const subscriptionDetailsContainer = document.getElementById('subscription-details-container');
 
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
@@ -292,14 +296,13 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     try {
                         new QRCode(qrcodeDiv, {
                             text: url, width: 128, height: 128,
-                            colorDark: "#000000", colorLight: "#ffffff",
+                            colorDark: "#000000", colorLight: "#00000000", // Transparent background
                             correctLevel: QRCode.CorrectLevel.H
                         });
                     } catch (error) { console.error('QR code initialization failed:', error); }
                 }
             }
             
-            // --- NEW: Function to display compatible clients, grouped by platform ---
             function updateClientInfo(coreType) {
                 clientInfoList.innerHTML = '';
                 const platforms = clientInfoData[coreType];
@@ -312,35 +315,28 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 Object.entries(platforms).forEach(([platformName, clients]) => {
                     if (clients.length > 0) {
                         const platformContainer = document.createElement('div');
-                        
                         const title = document.createElement('h4');
                         title.className = 'text-sm font-semibold text-slate-600 mb-2';
                         title.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1);
                         platformContainer.appendChild(title);
-                        
                         const linksContainer = document.createElement('div');
                         linksContainer.className = 'flex flex-col gap-2';
-                        
                         clients.forEach(client => {
                             const link = document.createElement('a');
                             link.href = client.url;
                             link.target = '_blank';
                             link.rel = 'noopener noreferrer';
                             link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600';
-
                             const nameSpan = document.createElement('span');
                             nameSpan.className = 'font-medium text-sm';
                             nameSpan.textContent = client.name;
-                            
                             const icon = document.createElement('i');
                             icon.setAttribute('data-lucide', 'download');
                             icon.className = 'w-4 h-4 text-slate-500';
-
                             link.appendChild(nameSpan);
                             link.appendChild(icon);
                             linksContainer.appendChild(link);
                         });
-
                         platformContainer.appendChild(linksContainer);
                         clientInfoList.appendChild(platformContainer);
                     }
@@ -354,7 +350,8 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 const selectedIpType = ipTypeSelect.value;
                 const searchTerm = searchBar.value.toLowerCase();
                 resetSelect(otherElementSelect, 'Select Subscription');
-                resultArea.classList.add('hidden');
+                subscriptionDetailsContainer.classList.add('hidden');
+                
                 if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
                     const allElements = structuredData[selectedConfigType][selectedIpType];
                     const filteredElements = Object.keys(allElements)
@@ -362,41 +359,61 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         .reduce((obj, key) => { (obj[key] = allElements[key]); return obj; }, {});
                     populateSelect(otherElementSelect, filteredElements, Object.keys(filteredElements).length > 0 ? 'Select Subscription' : 'No matches found');
                     otherElementSelect.disabled = false;
-                    const options = Object.keys(filteredElements);
-                    if (options.length === 1) {
-                        otherElementSelect.value = options[0];
-                        otherElementSelect.dispatchEvent(new Event('change'));
-                    }
                 }
             }
+
             configTypeSelect.addEventListener('change', () => {
                 resetSelect(ipTypeSelect, 'Select Client/Core');
                 resetSelect(otherElementSelect, 'Select Subscription');
-                resultArea.classList.add('hidden');
                 searchBar.value = '';
                 searchBar.disabled = true;
+                resultArea.classList.add('hidden'); // Hide everything
+                
                 if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
                     populateSelect(ipTypeSelect, structuredData[configTypeSelect.value], 'Select Client/Core');
                     ipTypeSelect.disabled = false;
                 }
             });
+            
+            // CORRECTED LOGIC
             ipTypeSelect.addEventListener('change', () => {
-                searchBar.disabled = !ipTypeSelect.value;
+                const selectedCore = ipTypeSelect.value;
                 searchBar.value = '';
-                updateOtherElementOptions();
+                
+                if (selectedCore) {
+                    // 1. Show client info immediately
+                    updateClientInfo(selectedCore);
+                    resultArea.classList.remove('hidden');
+                    
+                    // 2. Hide the URL/QR part until a subscription is chosen
+                    subscriptionDetailsContainer.classList.add('hidden');
+                    
+                    // 3. Prepare the next dropdown
+                    searchBar.disabled = false;
+                    updateOtherElementOptions();
+                } else {
+                    // Hide everything if the user deselects
+                    resultArea.classList.add('hidden');
+                    searchBar.disabled = true;
+                    resetSelect(otherElementSelect, 'Select Subscription');
+                }
             });
+
             searchBar.addEventListener('input', updateOtherElementOptions);
+
+            // CORRECTED LOGIC
             otherElementSelect.addEventListener('change', () => {
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value] || null;
                 if (url) {
+                    // Only update and show the subscription details part
                     subscriptionUrlInput.value = url;
                     updateQRCode(url);
-                    updateClientInfo(ipTypeSelect.value); // Pass the core type (e.g., 'clash')
-                    resultArea.classList.remove('hidden');
+                    subscriptionDetailsContainer.classList.remove('hidden');
                 } else {
-                    resultArea.classList.add('hidden');
+                    subscriptionDetailsContainer.classList.add('hidden');
                 }
             });
+
             copyButton.addEventListener('click', () => {
                 if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
                 document.execCommand('copy');
@@ -415,6 +432,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     event.preventDefault();
                 }
             });
+            
             populateSelect(configTypeSelect, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
         });
