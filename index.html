@@ -36,8 +36,8 @@
                 <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mt-2">Select your preferences to get a subscription link.</p>
             </div>
             <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400">
-                <i data-lucide="sun" class="sun-icon lucide"></i>
-                <i data-lucide="moon" class="moon-icon lucide hidden"></i>
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
                 <span class="sr-only">Toggle dark mode</span>
             </button>
         </header>
@@ -66,8 +66,8 @@
                         <input type="text" id="subscriptionUrl" readonly
                             class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
                         <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 border border-l-0 border-indigo-600 dark:border-indigo-500 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100 dark:hover:bg-indigo-800" title="Copy URL">
-                            <i data-lucide="copy" class="copy-icon lucide w-5 h-5"></i>
-                            <i data-lucide="check" class="check-icon lucide w-5 h-5 hidden"></i>
+                            <i data-lucide="copy" class="copy-icon w-5 h-5"></i>
+                            <i data-lucide="check" class="check-icon w-5 h-5 hidden"></i>
                         </button>
                     </div>
                     <div class="flex flex-col items-center justify-center">
@@ -83,14 +83,14 @@
                 <p>Created with ❤️ by YEBEKHE</p>
                 <div class="flex items-center gap-x-3">
                     <a href="https://t.me/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="Telegram">
-                        <i data-lucide="send" class="lucide"></i>
+                        <i data-lucide="send"></i>
                     </a>
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="X (Twitter)">
-                        <i data-lucide="twitter" class="lucide"></i>
+                        <i data-lucide="twitter"></i>
                     </a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">Last Generated: 2025-07-09 08:04:41 UTC</p>
+            <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">Last Generated: 2025-07-09 08:11:12 UTC</p>
         </footer>
     </div>
 
@@ -350,8 +350,6 @@
             const copyButton = document.getElementById('copyButton');
             const qrcodeDiv = document.getElementById('qrcode');
             const themeToggleButton = document.getElementById('theme-toggle');
-            const sunIcon = document.querySelector('.sun-icon');
-            const moonIcon = document.querySelector('.moon-icon');
 
             // --- Helper Functions ---
             function showMessageBox(message) {
@@ -476,10 +474,16 @@
                     return;
                 }
                 navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => {
+                    // Re-run createIcons to ensure the checkmark is rendered
                     const copyIcon = copyButton.querySelector('.copy-icon');
                     const checkIcon = copyButton.querySelector('.check-icon');
                     copyIcon.classList.add('hidden');
                     checkIcon.classList.remove('hidden');
+                    lucide.createIcons({
+                        nodes: [checkIcon],
+                        attrs: {'class': 'check-icon w-5 h-5'}
+                    });
+
                     setTimeout(() => {
                         copyIcon.classList.remove('hidden');
                         checkIcon.classList.add('hidden');
@@ -488,27 +492,33 @@
             });
 
             // --- Dark Mode Handler ---
-            const updateThemeIcons = (isDarkMode) => {
-                sunIcon.classList.toggle('hidden', isDarkMode);
-                moonIcon.classList.toggle('hidden', !isDarkMode);
+            const updateThemeIcons = () => {
+                const isDark = document.documentElement.classList.contains('dark');
+                const sunIcon = document.querySelector('.sun-icon');
+                const moonIcon = document.querySelector('.moon-icon');
+                
+                // Ensure icons exist before trying to modify them
+                if (sunIcon) sunIcon.style.display = isDark ? 'none' : 'inline-block';
+                if (moonIcon) moonIcon.style.display = isDark ? 'inline-block' : 'none';
             };
 
             themeToggleButton.addEventListener('click', () => {
-                const isDark = document.documentElement.classList.toggle('dark');
+                document.documentElement.classList.toggle('dark');
+                const isDark = document.documentElement.classList.contains('dark');
                 localStorage.theme = isDark ? 'dark' : 'light';
-                updateThemeIcons(isDark);
+                updateThemeIcons();
             });
 
 
             // --- Initial Page Setup ---
+            // Render all Lucide icons first
+            lucide.createIcons();
+
+            // Then, set the initial visibility of the theme icons
+            updateThemeIcons();
+
             populateSelect(configTypeSelect, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
-            
-            // Set initial theme icon state
-            updateThemeIcons(document.documentElement.classList.contains('dark'));
-            
-            // Render all Lucide icons
-            lucide.createIcons();
         });
     </script>
 </body>
