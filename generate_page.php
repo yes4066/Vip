@@ -124,8 +124,9 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mt-2">Select your preferences to get a subscription link.</p>
             </div>
             <button id="theme-toggle" type="button" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400">
-                <i data-lucide="sun" class="sun-icon"></i>
-                <i data-lucide="moon" class="moon-icon"></i>
+                <!-- CORRECTED: Using Tailwind dark: variants to toggle icons -->
+                <i data-lucide="sun" class="sun-icon block dark:hidden"></i>
+                <i data-lucide="moon" class="moon-icon hidden dark:block"></i>
                 <span class="sr-only">Toggle dark mode</span>
             </button>
         </header>
@@ -256,7 +257,8 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 if (url) {
                     new QRCode(qrcodeDiv, {
                         text: url, width: 128, height: 128,
-                        colorDark: "#000000", colorLight: "#ffffff",
+                        colorDark: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#000000', // slate-200 for dark, black for light
+                        colorLight: "#ffffff00", // Transparent background
                         correctLevel: QRCode.CorrectLevel.H
                     });
                 }
@@ -331,16 +333,11 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                     return;
                 }
                 navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => {
-                    // Re-run createIcons to ensure the checkmark is rendered
                     const copyIcon = copyButton.querySelector('.copy-icon');
                     const checkIcon = copyButton.querySelector('.check-icon');
                     copyIcon.classList.add('hidden');
                     checkIcon.classList.remove('hidden');
-                    lucide.createIcons({
-                        nodes: [checkIcon],
-                        attrs: {'class': 'check-icon w-5 h-5'}
-                    });
-
+                    
                     setTimeout(() => {
                         copyIcon.classList.remove('hidden');
                         checkIcon.classList.add('hidden');
@@ -348,32 +345,29 @@ function generate_full_html(array $structured_data, string $generation_timestamp
                 }).catch(() => showMessageBox('Failed to copy URL.'));
             });
 
-            // --- Dark Mode Handler ---
-            const updateThemeIcons = () => {
-                const isDark = document.documentElement.classList.contains('dark');
-                const sunIcon = document.querySelector('.sun-icon');
-                const moonIcon = document.querySelector('.moon-icon');
-                
-                // Ensure icons exist before trying to modify them
-                if (sunIcon) sunIcon.style.display = isDark ? 'none' : 'inline-block';
-                if (moonIcon) moonIcon.style.display = isDark ? 'inline-block' : 'none';
-            };
-
+            // --- Dark Mode Handler (CORRECTED & SIMPLIFIED) ---
             themeToggleButton.addEventListener('click', () => {
+                // 1. Toggle the 'dark' class on the <html> element
                 document.documentElement.classList.toggle('dark');
-                const isDark = document.documentElement.classList.contains('dark');
-                localStorage.theme = isDark ? 'dark' : 'light';
-                updateThemeIcons();
-            });
 
+                // 2. Update localStorage with the new state
+                if (document.documentElement.classList.contains('dark')) {
+                    localStorage.theme = 'dark';
+                } else {
+                    localStorage.theme = 'light';
+                }
+
+                // 3. Re-generate QR code if it exists, to match new theme
+                if (!resultArea.classList.contains('hidden')) {
+                    updateQRCode(subscriptionUrlInput.value);
+                }
+            });
 
             // --- Initial Page Setup ---
             // Render all Lucide icons first
             lucide.createIcons();
 
-            // Then, set the initial visibility of the theme icons
-            updateThemeIcons();
-
+            // Populate the first dropdown
             populateSelect(configTypeSelect, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
         });
