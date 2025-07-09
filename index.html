@@ -4,28 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proxy Subscription Generator (PSG)</title>
-    <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- *** THIS IS THE FIX *** -->
-    <!-- 1. Add Tailwind config to enable class-based dark mode -->
+    <!-- Tailwind Config to enable class-based dark mode. MUST be before the main script. -->
     <script>
-      tailwind.config = {
-        darkMode: 'class'
-      }
+      tailwind.config = { darkMode: 'class' }
     </script>
-    
-    <!-- 2. Load the main Tailwind script AFTER the config -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Theme Initializer -->
+    <!-- Theme Initializer: Prevents Flash of Unstyled Content (FOUC) -->
     <script>
-        // Apply theme right away to prevent FOUC (Flash of Unstyled Content)
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
@@ -72,8 +62,7 @@
                 <div id="resultArea" class="hidden bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 sm:p-6 border border-slate-200 dark:border-slate-700">
                     <h3 class="text-lg sm:text-xl font-semibold text-slate-800 dark:text-slate-200 mb-4">Your Subscription Link:</h3>
                     <div class="flex items-center mb-4">
-                        <input type="text" id="subscriptionUrl" readonly
-                            class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
+                        <input type="text" id="subscriptionUrl" readonly class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
                         <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 border border-l-0 border-indigo-600 dark:border-indigo-500 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100 dark:hover:bg-indigo-800" title="Copy URL">
                             <i data-lucide="copy" class="copy-icon w-5 h-5"></i>
                             <i data-lucide="check" class="check-icon w-5 h-5 hidden"></i>
@@ -99,7 +88,7 @@
                     </a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">Last Generated: 2025-07-09 08:29:31 UTC</p>
+            <p class="text-xs text-slate-400 dark:text-slate-500 mt-4">Last Generated: 2025-07-09 08:35:02 UTC</p>
         </footer>
     </div>
 
@@ -111,14 +100,19 @@
         </div>
     </div>
 
-    <!-- QR Code Library -->
+    <!-- SCRIPTS MOVED TO THE END OF THE BODY FOR RELIABILITY -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
-
+    
+    <!-- MAIN APPLICATION SCRIPT -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            
-            const structuredData = {
+        // --- START OF SAFE SCRIPT EXECUTION ---
+
+        // 1. Create all Lucide icons. This is now safe to call.
+        lucide.createIcons();
+
+        // 2. Grab all necessary elements from the DOM.
+        const structuredData = {
     "Lite": {
         "clash": {
             "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/mix",
@@ -350,155 +344,153 @@
         }
     }
 };
-            const configTypeSelect = document.getElementById('configType');
-            const ipTypeSelect = document.getElementById('ipType');
-            const otherElementSelect = document.getElementById('otherElement');
-            const searchBar = document.getElementById('searchBar');
-            const resultArea = document.getElementById('resultArea');
-            const subscriptionUrlInput = document.getElementById('subscriptionUrl');
-            const copyButton = document.getElementById('copyButton');
-            const qrcodeDiv = document.getElementById('qrcode');
-            const themeToggleButton = document.getElementById('theme-toggle');
+        const configTypeSelect = document.getElementById('configType');
+        const ipTypeSelect = document.getElementById('ipType');
+        const otherElementSelect = document.getElementById('otherElement');
+        const searchBar = document.getElementById('searchBar');
+        const resultArea = document.getElementById('resultArea');
+        const subscriptionUrlInput = document.getElementById('subscriptionUrl');
+        const copyButton = document.getElementById('copyButton');
+        const qrcodeDiv = document.getElementById('qrcode');
+        const themeToggleButton = document.getElementById('theme-toggle');
 
-            function showMessageBox(message) {
-                const box = document.getElementById('messageBox');
-                document.getElementById('messageBoxText').textContent = message;
-                box.classList.remove('hidden');
-                document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
-            }
+        // --- HELPER FUNCTIONS ---
+        function showMessageBox(message) {
+            const box = document.getElementById('messageBox');
+            document.getElementById('messageBoxText').textContent = message;
+            box.classList.remove('hidden');
+            document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
+        }
 
-            function populateSelect(selectElement, data, defaultOptionText) {
-                selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
-                Object.keys(data).forEach(key => {
-                    const option = document.createElement('option');
-                    option.value = key;
-                    const formatType = (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') ? 'location' : 'default';
-                    option.textContent = formatDisplayName(key, formatType);
-                    selectElement.appendChild(option);
+        function populateSelect(selectElement, data, defaultOptionText) {
+            selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
+            Object.keys(data).forEach(key => {
+                const option = document.createElement('option');
+                option.value = key;
+                const formatType = (selectElement.id === 'otherElement' && ipTypeSelect.value === 'location') ? 'location' : 'default';
+                option.textContent = formatDisplayName(key, formatType);
+                selectElement.appendChild(option);
+            });
+        }
+        
+        function resetSelect(selectElement, defaultText) {
+            selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+            selectElement.disabled = true;
+        }
+
+        function formatDisplayName(name, type = 'default') {
+            if (type === 'location') return name.toUpperCase() + ' ' + getFlagEmoji(name);
+            let baseName = name, suffix = '';
+            if (name.endsWith('_ipv4')) { baseName = name.slice(0, -5); suffix = ' (IPv4)'; } 
+            else if (name.endsWith('_ipv6')) { baseName = name.slice(0, -5); suffix = ' (IPv6)'; } 
+            else if (name.endsWith('_domain')) { baseName = name.slice(0, -7); suffix = ' (Domain)'; }
+            const formattedBase = baseName.split(/[-_]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+            return formattedBase + suffix;
+        }
+        
+        function getFlagEmoji(countryCode) {
+            if (typeof countryCode !== 'string' || !/^[a-zA-Z]{2}$/.test(countryCode)) return '🏳️';
+            const code = countryCode.toUpperCase();
+            return String.fromCodePoint(code.charCodeAt(0) + 127397) + String.fromCodePoint(code.charCodeAt(1) + 127397);
+        }
+
+        function updateQRCode(url) {
+            qrcodeDiv.innerHTML = '';
+            if (url) {
+                new QRCode(qrcodeDiv, {
+                    text: url, width: 128, height: 128,
+                    colorDark: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#000000',
+                    colorLight: "#00000000",
+                    correctLevel: QRCode.CorrectLevel.H
                 });
             }
-            
-            function resetSelect(selectElement, defaultText) {
-                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
-                selectElement.disabled = true;
+        }
+
+        // --- EVENT LISTENERS & LOGIC ---
+
+        // Dark Mode Toggle (Simplified and Robust)
+        themeToggleButton.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            if (!resultArea.classList.contains('hidden')) {
+                updateQRCode(subscriptionUrlInput.value);
             }
-
-            function formatDisplayName(name, type = 'default') {
-                if (type === 'location') {
-                    return name.toUpperCase() + ' ' + getFlagEmoji(name);
-                }
-                let baseName = name, suffix = '';
-                if (name.endsWith('_ipv4')) { baseName = name.slice(0, -5); suffix = ' (IPv4)'; } 
-                else if (name.endsWith('_ipv6')) { baseName = name.slice(0, -5); suffix = ' (IPv6)'; } 
-                else if (name.endsWith('_domain')) { baseName = name.slice(0, -7); suffix = ' (Domain)'; }
-                
-                const formattedBase = baseName.split(/[-_]/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-                return formattedBase + suffix;
-            }
-            
-            function getFlagEmoji(countryCode) {
-                if (typeof countryCode !== 'string' || !/^[a-zA-Z]{2}$/.test(countryCode)) return '🏳️';
-                const code = countryCode.toUpperCase();
-                return String.fromCodePoint(code.charCodeAt(0) + 127397) + String.fromCodePoint(code.charCodeAt(1) + 127397);
-            }
-
-            function updateQRCode(url) {
-                qrcodeDiv.innerHTML = '';
-                if (url) {
-                    new QRCode(qrcodeDiv, {
-                        text: url, width: 128, height: 128,
-                        colorDark: document.documentElement.classList.contains('dark') ? '#e2e8f0' : '#000000',
-                        colorLight: "#00000000",
-                        correctLevel: QRCode.CorrectLevel.H
-                    });
-                }
-            }
-
-            function updateOtherElementOptions() {
-                const selectedConfigType = configTypeSelect.value;
-                const selectedIpType = ipTypeSelect.value;
-                const searchTerm = searchBar.value.toLowerCase();
-                resetSelect(otherElementSelect, 'Select Element');
-                resultArea.classList.add('hidden');
-                if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
-                    const allElements = structuredData[selectedConfigType][selectedIpType];
-                    const filteredElements = Object.keys(allElements)
-                        .filter(key => formatDisplayName(key, (selectedIpType === 'location' ? 'location' : 'default')).toLowerCase().includes(searchTerm))
-                        .reduce((obj, key) => { (obj[key] = allElements[key]); return obj; }, {});
-                    populateSelect(otherElementSelect, filteredElements, Object.keys(filteredElements).length > 0 ? 'Select Element' : 'No matches found');
-                    otherElementSelect.disabled = false;
-                    const options = Object.keys(filteredElements);
-                    if (options.length === 1) {
-                        otherElementSelect.value = options[0];
-                        otherElementSelect.dispatchEvent(new Event('change'));
-                    }
-                }
-            }
-            
-            configTypeSelect.addEventListener('change', () => {
-                const selectedConfigType = configTypeSelect.value;
-                resetSelect(ipTypeSelect, 'Select Type');
-                resetSelect(otherElementSelect, 'Select Element');
-                resultArea.classList.add('hidden');
-                searchBar.value = '';
-                searchBar.disabled = true;
-                if (selectedConfigType && structuredData[selectedConfigType]) {
-                    populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type');
-                    ipTypeSelect.disabled = false;
-                }
-            });
-
-            ipTypeSelect.addEventListener('change', () => {
-                searchBar.disabled = !ipTypeSelect.value;
-                searchBar.value = '';
-                updateOtherElementOptions();
-            });
-
-            searchBar.addEventListener('input', updateOtherElementOptions);
-
-            otherElementSelect.addEventListener('change', () => {
-                const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value] || null;
-                if (url) {
-                    subscriptionUrlInput.value = url;
-                    updateQRCode(url);
-                    resultArea.classList.remove('hidden');
-                } else {
-                    resultArea.classList.add('hidden');
-                }
-            });
-
-            copyButton.addEventListener('click', () => {
-                if (!subscriptionUrlInput.value) {
-                    showMessageBox('No URL to copy.');
-                    return;
-                }
-                navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => {
-                    const copyIcon = copyButton.querySelector('.copy-icon');
-                    const checkIcon = copyButton.querySelector('.check-icon');
-                    copyIcon.classList.add('hidden');
-                    checkIcon.classList.remove('hidden');
-                    setTimeout(() => {
-                        copyIcon.classList.remove('hidden');
-                        checkIcon.classList.add('hidden');
-                    }, 2000);
-                }).catch(() => showMessageBox('Failed to copy URL.'));
-            });
-
-            themeToggleButton.addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark');
-                if (document.documentElement.classList.contains('dark')) {
-                    localStorage.theme = 'dark';
-                } else {
-                    localStorage.theme = 'light';
-                }
-                if (!resultArea.classList.contains('hidden')) {
-                    updateQRCode(subscriptionUrlInput.value);
-                }
-            });
-
-            populateSelect(configTypeSelect, structuredData, 'Select Config Type');
-            configTypeSelect.disabled = false;
         });
+
+        // Other event listeners...
+        function updateOtherElementOptions() {
+            const selectedConfigType = configTypeSelect.value;
+            const selectedIpType = ipTypeSelect.value;
+            const searchTerm = searchBar.value.toLowerCase();
+            resetSelect(otherElementSelect, 'Select Element');
+            resultArea.classList.add('hidden');
+            if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
+                const allElements = structuredData[selectedConfigType][selectedIpType];
+                const filteredElements = Object.keys(allElements)
+                    .filter(key => formatDisplayName(key, (selectedIpType === 'location' ? 'location' : 'default')).toLowerCase().includes(searchTerm))
+                    .reduce((obj, key) => { (obj[key] = allElements[key]); return obj; }, {});
+                populateSelect(otherElementSelect, filteredElements, Object.keys(filteredElements).length > 0 ? 'Select Element' : 'No matches found');
+                otherElementSelect.disabled = false;
+                const options = Object.keys(filteredElements);
+                if (options.length === 1) {
+                    otherElementSelect.value = options[0];
+                    otherElementSelect.dispatchEvent(new Event('change'));
+                }
+            }
+        }
+        
+        configTypeSelect.addEventListener('change', () => {
+            const selectedConfigType = configTypeSelect.value;
+            resetSelect(ipTypeSelect, 'Select Type');
+            resetSelect(otherElementSelect, 'Select Element');
+            resultArea.classList.add('hidden');
+            searchBar.value = '';
+            searchBar.disabled = true;
+            if (selectedConfigType && structuredData[selectedConfigType]) {
+                populateSelect(ipTypeSelect, structuredData[selectedConfigType], 'Select Type');
+                ipTypeSelect.disabled = false;
+            }
+        });
+
+        ipTypeSelect.addEventListener('change', () => {
+            searchBar.disabled = !ipTypeSelect.value;
+            searchBar.value = '';
+            updateOtherElementOptions();
+        });
+
+        searchBar.addEventListener('input', updateOtherElementOptions);
+
+        otherElementSelect.addEventListener('change', () => {
+            const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value] || null;
+            if (url) {
+                subscriptionUrlInput.value = url;
+                updateQRCode(url);
+                resultArea.classList.remove('hidden');
+            } else {
+                resultArea.classList.add('hidden');
+            }
+        });
+
+        copyButton.addEventListener('click', () => {
+            if (!subscriptionUrlInput.value) {
+                showMessageBox('No URL to copy.');
+                return;
+            }
+            navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => {
+                const copyIcon = copyButton.querySelector('.copy-icon');
+                const checkIcon = copyButton.querySelector('.check-icon');
+                copyIcon.classList.add('hidden');
+                checkIcon.classList.remove('hidden');
+                setTimeout(() => {
+                    copyIcon.classList.remove('hidden');
+                    checkIcon.classList.add('hidden');
+                }, 2000);
+            }).catch(() => showMessageBox('Failed to copy URL.'));
+        });
+
+        // --- INITIAL PAGE SETUP ---
+        populateSelect(configTypeSelect, structuredData, 'Select Config Type');
+        configTypeSelect.disabled = false;
     </script>
 </body>
 </html>
