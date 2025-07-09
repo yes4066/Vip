@@ -114,10 +114,10 @@
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 6",
-                "🇺🇸 US | 🔴 | vless | @flyv2ray | 9",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
+                "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @vpnaloo | 13",
                 "🇺🇸 US | 🔴 | vless | @vpnstable | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
@@ -136,10 +136,10 @@
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 6",
-                "🇺🇸 US | 🔴 | vless | @flyv2ray | 9",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
+                "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @vpnaloo | 13",
                 "🇺🇸 US | 🔴 | vless | @vpnstable | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
@@ -246,15 +246,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @flyv2ray | 9",
-            "type": "vless",
-            "server": "viop.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
             "type": "vless",
             "server": "speedtest.net",
@@ -291,6 +282,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
+            "type": "vless",
+            "server": "viop.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @vpnaloo | 13",
             "type": "vless",
             "server": "test.fast.hosting-ip.com",
@@ -302,9 +302,9 @@
         {
             "tag": "🇺🇸 US | 🔴 | vless | @vpnstable | 15",
             "type": "vless",
-            "server": "viop.fast.hosting-ip.com",
+            "server": "mci.dl101movis.ir",
             "server_port": 80,
-            "uuid": "V2rayNGFreeeV2rayNGFreeee",
+            "uuid": "04b2b6b2-73ba-4a61-baed-f606f3b78220",
             "flow": "",
             "packet_encoding": "xudp"
         },
