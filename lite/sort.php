@@ -67,7 +67,7 @@ function is_xhttp(string $config): bool
 
     parse_str($queryString, $params);
 
-    return isset($params['type']) && $params['type'] === 'http';
+    return isset($params['type']) && $params['type'] === 'xhttp';
 }
 
 
