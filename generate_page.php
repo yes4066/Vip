@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 /**
- * Proxy Subscription Generator (PSG) Page Builder
+ * Proxy Subscription Generator (PSG) & Customizer
  *
  * Scans subscription directories and generates a modern, fully functional index.html.
- * This script includes a Search/Filter bar, Last Generated timestamp, a multi-format
- * Subscription Analyzer, custom sorting, and uses the Lucide icon library.
+ * This script includes a powerful on-the-fly Subscription Customizer that allows users
+ * to combine, filter, and generate unique subscription links.
  */
 
 // --- Configuration ---
@@ -27,106 +27,26 @@ function get_client_info(): array
 {
     return [
     'clash' => [
-        'windows' => [
-            [
-                'name' => 'Clash Verge (Rev) - x64 Installer',
-                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'
-            ],
-            [
-                'name' => 'Clash Verge (Rev) - ARM64 Installer',
-                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi'
-            ]
-        ],
-        'macos' => [
-            [
-                'name' => 'Clash Verge (Rev) - Apple Silicon',
-                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg'
-            ],
-            [
-                'name' => 'ClashX - Universal',
-                'url' => 'https://github.com/yichengchen/clashX/releases/latest/download/ClashX.dmg'
-            ]
-        ],
-        'android' => [
-            [
-                'name' => 'Clash for Android (CFA) - arm64-v8a',
-                'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk'
-            ]
-        ],
-        'ios' => [
-            [
-                'name' => 'Stash (Recommended for Clash)',
-                'url' => 'https://apps.apple.com/us/app/stash/id1596063349'
-            ]
-        ],
-        'linux' => [
-            [
-                'name' => 'Clash Verge (Rev) - amd64 (.deb)',
-                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb'
-            ]
-        ]
+        'windows' => [ ['name' => 'Clash Verge (Rev) - x64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'] ],
+        'macos' => [ ['name' => 'Clash Verge (Rev) - Apple Silicon', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg'] ],
+        'android' => [ ['name' => 'Clash for Android (CFA) - arm64-v8a', 'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk'] ],
+        'ios' => [ ['name' => 'Stash (Recommended for Clash)', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349'] ],
+        'linux' => [ ['name' => 'Clash Verge (Rev) - amd64 (.deb)', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb'] ]
     ],
     'singbox' => [
-        'windows' => [
-            [
-                'name' => 'Hiddify-Next - x64 Installer',
-                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe'
-            ]
-        ],
-        'macos' => [
-            [
-                'name' => 'Hiddify-Next - Universal',
-                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg'
-            ]
-        ],
-        'android' => [
-            [
-                'name' => 'Hiddify-Next - Universal',
-                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk'
-            ]
-        ],
-        'ios' => [
-            [
-                'name' => 'Streisand (Recommended for Sing-Box)',
-                'url' => 'https://apps.apple.com/us/app/streisand/id6450534064'
-            ]
-        ],
-        'linux' => [
-            [
-                'name' => 'Hiddify-Next - x64 (.AppImage)',
-                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage'
-            ]
-        ]
+        'windows' => [ ['name' => 'Hiddify-Next - x64 Installer', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe'] ],
+        'macos' => [ ['name' => 'Hiddify-Next - Universal', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg'] ],
+        'android' => [ ['name' => 'Hiddify-Next - Universal', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk'] ],
+        'ios' => [ ['name' => 'Streisand (Recommended for Sing-Box)', 'url' => 'https://apps.apple.com/us/app/streisand/id6450534064'] ],
+        'linux' => [ ['name' => 'Hiddify-Next - x64 (.AppImage)', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage'] ]
     ],
     'xray' => [
-        'windows' => [
-            [
-                'name' => 'v2rayN (with Xray core)',
-                'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip'
-            ]
-        ],
-        'android' => [
-            [
-                'name' => 'v2rayNG - arm64-v8a',
-                'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk'
-            ]
-        ],
-        'ios' => [
-            [
-                'name' => 'Shadowrocket (Classic Choice)',
-                'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118'
-            ]
-        ]
+        'windows' => [ ['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip'] ],
+        'android' => [ ['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk'] ],
+        'ios' => [ ['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118'] ]
     ],
-    'surfboard' => [
-        'android' => [
-            [
-                'name' => 'Surfboard (Google Play)',
-                'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard'
-            ]
-        ]
-    ]
-];
+    'surfboard' => [ 'android' => [ ['name' => 'Surfboard (Google Play)', 'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard'] ] ]
+    ];
 }
 
 function scan_directory(string $dir): array
@@ -150,26 +70,18 @@ function process_files_to_structure(array $files_by_category): array
     foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
         $base_dir_relative = ltrim(str_replace(DIRECTORY_SEPARATOR, '/', str_replace(PROJECT_ROOT, '', $category_dir_path)), '/');
         if (!isset($files_by_category[$category_key])) continue;
-
         foreach ($files_by_category[$category_key] as $path) {
             $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
             $path_for_parsing = $relative_path_from_base;
-
             if (strpos($path_for_parsing, 'xray/') === 0) {
-                if (strpos($path_for_parsing, 'xray/base64/') !== 0) {
-                    continue; 
-                }
+                if (strpos($path_for_parsing, 'xray/base64/') !== 0) continue;
                 $path_for_parsing = str_replace('xray/base64/', 'xray/', $path_for_parsing);
             }
-
             $parts = explode('/', $path_for_parsing);
             if (count($parts) < 2) continue;
-            
             $type = array_shift($parts);
             $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
-            
             $url = GITHUB_REPO_URL . '/' . $path;
-            
             $structure[$category_key][$type][$name] = $url;
         }
     }
@@ -322,11 +234,9 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- 1. INITIALIZE ---
+            // --- 1. INITIALIZE & GRAB ELEMENTS ---
             lucide.createIcons();
             const structuredData = __JSON_DATA_PLACEHOLDER__;
-
-            // --- 2. GRAB ELEMENTS ---
             const configTypeSelect = document.getElementById('configType');
             const ipTypeSelect = document.getElementById('ipType');
             const subscriptionCheckboxesContainer = document.getElementById('subscriptionCheckboxesContainer');
@@ -342,15 +252,46 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             const qrcodeDiv = document.getElementById('qrcode');
             const copyButton = document.getElementById('copyButton');
 
-            // --- 3. STATE MANAGEMENT ---
+            // --- 2. STATE MANAGEMENT ---
             let masterProxyList = [];
             let filteredProxyList = [];
 
-            // --- 4. HELPER & PARSING FUNCTIONS ---
-            function showMessageBox(message) { /* ... same as before ... */ }
-            function getFlagEmoji(countryCode) { /* ... same as before ... */ }
-            function formatDisplayName(name) { /* ... same as before ... */ }
-            function updateQRCode(url) { /* ... same as before ... */ }
+            // --- 3. HELPER & PARSING FUNCTIONS ---
+            function showMessageBox(message) {
+                const box = document.getElementById('messageBox');
+                document.getElementById('messageBoxText').textContent = message;
+                box.classList.remove('hidden');
+                document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
+            }
+            function getFlagEmoji(countryCode) {
+                if (!/^[A-Z]{2}$/.test(countryCode)) return '';
+                return String.fromCodePoint(...countryCode.toUpperCase().split('').map(c => 127397 + c.charCodeAt(0)));
+            }
+            function formatDisplayName(name) {
+                const specialReplacements = { 'ss': 'SHADOWSOCKS' };
+                const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+                const protocolPrefixes = ['ss', 'ssr'];
+                const parts = name.split(/[-_]/);
+                let flag = '';
+                if (parts.length > 0 && !protocolPrefixes.includes(parts[0].toLowerCase())) {
+                    flag = getFlagEmoji(parts[0].toUpperCase());
+                }
+                const displayNameParts = parts.map((part, index) => {
+                    const lowerPart = part.toLowerCase();
+                    if (specialReplacements[lowerPart]) return specialReplacements[lowerPart];
+                    if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase();
+                    if (index === 0 && flag) return part.toUpperCase();
+                    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+                });
+                const textName = displayNameParts.join(' ');
+                return flag ? `${flag} ${textName}` : textName;
+            }
+            function updateQRCode(url) {
+                qrcodeDiv.innerHTML = '';
+                if (url) {
+                    try { new QRCode(qrcodeDiv, { text: url, width: 128, height: 128 }); } catch (e) { console.error(e); }
+                }
+            }
 
             function parseProxyLink(link) {
                 const linkLower = link.toLowerCase();
@@ -359,21 +300,23 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 else if (linkLower.startsWith('vless://')) protocol = 'vless';
                 else if (linkLower.startsWith('ss://')) protocol = 'ss';
                 else if (linkLower.startsWith('trojan://')) protocol = 'trojan';
-                
-                let name = '';
-                try {
-                    name = decodeURIComponent(link.substring(link.indexOf('#') + 1));
-                } catch(e) { name = "Unnamed"; }
+
+                let name = "Unnamed";
+                const hashIndex = link.lastIndexOf('#');
+                if (hashIndex !== -1) {
+                    try { name = decodeURIComponent(link.substring(hashIndex + 1)); } catch (e) {}
+                }
 
                 const countryMatch = name.match(/^([A-Z]{2})/);
                 const country = countryMatch ? countryMatch[1] : 'XX';
 
                 return { originalLink: link, name, protocol, country };
             }
-
+            
+            // --- 4. CORE LOGIC FUNCTIONS ---
             async function processSourceSelections() {
                 const checkedSources = Array.from(subscriptionCheckboxesContainer.querySelectorAll('input:checked'))
-                                           .map(cb => ({ url: cb.value, type: ipTypeSelect.value }));
+                                           .map(cb => cb.value);
                 
                 if (checkedSources.length === 0) {
                     filterBuilderContainer.classList.add('hidden');
@@ -386,26 +329,26 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 nodeCounter.textContent = '...';
 
                 try {
-                    const responses = await Promise.all(checkedSources.map(source => fetch(source.url)));
-                    const contents = await Promise.all(responses.map(res => res.text()));
+                    const responses = await Promise.all(checkedSources.map(url => fetch(url)));
+                    const contents = await Promise.all(responses.map(res => {
+                        if (!res.ok) throw new Error(`Failed to fetch ${res.url}`);
+                        return res.text();
+                    }));
                     
                     masterProxyList = [];
-                    contents.forEach((content, index) => {
-                        let links = [];
-                        // This is a simplified parser for all formats, focusing on extracting raw links
-                        // A more robust version would handle YAML/JSON structures more deeply
-                        const lines = content.split('\n');
-                        lines.forEach(line => {
+                    contents.forEach(content => {
+                        let decodedContent;
+                        try { decodedContent = atob(content); } catch (e) { decodedContent = content; }
+
+                        const protocols = ['vmess://', 'vless://', 'ss://', 'trojan://', 'ssr://'];
+                        decodedContent.split('\n').forEach(line => {
                             const trimmed = line.trim();
-                            if (trimmed.startsWith('vmess://') || trimmed.startsWith('vless://') || trimmed.startsWith('ss://') || trimmed.startsWith('trojan://')) {
-                                links.push(trimmed);
+                            if (protocols.some(p => trimmed.startsWith(p))) {
+                                masterProxyList.push(parseProxyLink(trimmed));
                             }
                         });
-                        
-                        links.forEach(link => masterProxyList.push(parseProxyLink(link)));
                     });
 
-                    // Deduplicate
                     const uniqueLinks = new Set(masterProxyList.map(p => p.originalLink));
                     masterProxyList = Array.from(uniqueLinks).map(link => masterProxyList.find(p => p.originalLink === link));
 
@@ -413,7 +356,8 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     applyFiltersAndRender();
 
                 } catch (error) {
-                    showMessageBox(`Failed to fetch or parse subscriptions: ${error.message}`);
+                    showMessageBox(`Failed to process sources: ${error.message}`);
+                    filterBuilderContainer.classList.add('hidden');
                 }
             }
 
@@ -426,14 +370,14 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         <input type="checkbox" class="filter-control-country" value="${c}" />
                         <span class="ml-2">${getFlagEmoji(c)} ${c}</span>
                     </label>
-                `).join('');
+                `).join('') || '<p class="text-slate-400 text-xs">No countries detected.</p>';
 
                 protocolFilters.innerHTML = protocols.map(p => `
                     <label class="filter-checkbox-label">
                         <input type="checkbox" class="filter-control-protocol" value="${p}" />
                         <span class="ml-2">${p.toUpperCase()}</span>
                     </label>
-                `).join('');
+                `).join('') || '<p class="text-slate-400 text-xs">No protocols detected.</p>';
 
                 document.querySelectorAll('.filter-control-country, .filter-control-protocol').forEach(el => {
                     el.addEventListener('change', applyFiltersAndRender);
@@ -450,7 +394,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     if (selectedCountries.length > 0 && !selectedCountries.includes(proxy.country)) return false;
                     if (selectedProtocols.length > 0 && !selectedProtocols.includes(proxy.protocol)) return false;
                     if (includeText && !proxy.name.toLowerCase().includes(includeText)) return false;
-                    if (excludeText && proxy.name.toLowerCase().includes(excludeText)) return false;
+                    if (excludeText && excludeText.length > 0 && proxy.name.toLowerCase().includes(excludeText)) return false;
                     return true;
                 });
 
@@ -458,16 +402,21 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 generateButton.disabled = filteredProxyList.length === 0;
                 resultArea.classList.add('hidden');
             }
+            
+            function populateDropdown(selectElement, keys, defaultText) {
+                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+                keys.forEach(key => selectElement.add(new Option(formatDisplayName(key), key)));
+            }
 
-            // --- 5. EVENT LISTENERS ---
+            // --- 5. EVENT LISTENERS SETUP ---
             configTypeSelect.addEventListener('change', () => {
-                ipTypeSelect.innerHTML = '<option value="">Select Client/Core</option>';
+                populateDropdown(ipTypeSelect, [], 'Select Client/Core');
                 ipTypeSelect.disabled = true;
                 subscriptionCheckboxesContainer.innerHTML = '';
                 filterBuilderContainer.classList.add('hidden');
                 if (configTypeSelect.value) {
                     const keys = Object.keys(structuredData[configTypeSelect.value] || {});
-                    keys.forEach(key => ipTypeSelect.add(new Option(formatDisplayName(key), key)));
+                    populateDropdown(ipTypeSelect, keys, 'Select Client/Core');
                     ipTypeSelect.disabled = false;
                 }
             });
@@ -476,9 +425,10 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 subscriptionCheckboxesContainer.innerHTML = '';
                 filterBuilderContainer.classList.add('hidden');
                 resultArea.classList.add('hidden');
-
+                
+                // This is the key fix: Ensure 'sources' is an object before using Object.entries
                 const sources = structuredData[configTypeSelect.value]?.[ipTypeSelect.value];
-                if (sources) {
+                if (sources && typeof sources === 'object') {
                     Object.entries(sources).forEach(([name, url]) => {
                         const checkboxId = `source-${name}`;
                         const checkboxHTML = `
@@ -500,10 +450,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             });
 
             generateButton.addEventListener('click', () => {
-                if (filteredProxyList.length === 0) {
-                    showMessageBox('No nodes selected. Adjust your filters.');
-                    return;
-                }
+                if (filteredProxyList.length === 0) return;
                 const finalContent = filteredProxyList.map(p => p.originalLink).join('\n');
                 const encodedContent = btoa(finalContent);
                 const dataUri = `data:text/plain;base64,${encodedContent}`;
@@ -514,19 +461,23 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 resultArea.scrollIntoView({ behavior: 'smooth' });
             });
             
-            copyButton.addEventListener('click', () => { /* ... same as before ... */ });
+            copyButton.addEventListener('click', () => {
+                if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
+                document.execCommand('copy'); const copyIcon = copyButton.querySelector('.copy-icon');
+                const checkIcon = copyButton.querySelector('.check-icon');
+                copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
+                setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
+            });
 
             // --- 6. INITIAL PAGE SETUP ---
-            Object.keys(structuredData).forEach(key => configTypeSelect.add(new Option(key, key)));
+            populateDropdown(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
         });
     </script>
 </body>
 </html>
 HTML;
 
-    $final_html = str_replace('__JSON_DATA_PLACEHOLDER__', json_encode($structuredData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES), $html_template);
-    // Note: clientInfoData is no longer used in this version but kept for potential future use
-    return str_replace('__TIMESTAMP_PLACEHOLDER__', $generation_timestamp, $final_html);
+    return str_replace('__JSON_DATA_PLACEHOLDER__', $json_structured_data, $html_template);
 }
 
 
