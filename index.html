@@ -94,7 +94,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-11 01:40:12 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-11 01:48:44 +0330</p>
         </footer>
     </div>
     
@@ -655,8 +655,8 @@
                             break;
 
                         case 'singbox':
-                            // FIX: Use robust jsoncParser instead of regex + JSON.parse
-                            const parsedJson = jsoncParser.parse(content);
+                            // FIX: Use robust jsonc_parser (note the underscore)
+                            const parsedJson = jsonc_parser.parse(content);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
                                 parsedJson.outbounds
@@ -683,8 +683,8 @@
                         case 'location':
                         default: // Fallback for base64 with expanded regex
                             const decoded = atob(content);
-                            // FIX: Dedicated regex for vmess, and expanded list for others
-                            const vmessRegex = /^(vmess):\/\/(.+)#(.+)$/;
+                            // FIX: Added dedicated regex for VMess, separate from others.
+                            const vmessRegex = /^vmess:\/\/(.+)$/;
                             const standardRegex = /^(vless|trojan|ss|hy2|tuic):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
                             const hysteriaRegex = /^(hysteria|hysteria2):\/\/([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
 
@@ -693,14 +693,16 @@
                                 if (!line) return;
                                 
                                 let match;
-                                let protocol, lowerName, transport, security = 'none';
+                                let protocol = '', lowerName = '', transport = 'tcp', security = 'none';
 
                                 if (match = line.match(vmessRegex)) {
-                                    protocol = 'vmess';
-                                    lowerName = decodeURIComponent(match[3] || '').trim().toLowerCase();
-                                    const vmessConfig = JSON.parse(atob(match[2]));
-                                    transport = vmessConfig.net || 'tcp';
-                                    security = vmessConfig.tls || 'none';
+                                    try {
+                                        const vmessConfig = JSON.parse(atob(match[1]));
+                                        protocol = 'vmess';
+                                        lowerName = (vmessConfig.ps || '').toLowerCase();
+                                        transport = vmessConfig.net || 'tcp';
+                                        security = vmessConfig.tls || 'none';
+                                    } catch (e) { /* Malformed vmess, skip */ return; }
                                 } else if (match = line.match(standardRegex) || line.match(hysteriaRegex)) {
                                     protocol = match[1];
                                     const params = new URLSearchParams(match[match.length - 2] || '');
