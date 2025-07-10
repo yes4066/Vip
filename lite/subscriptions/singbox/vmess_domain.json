@@ -133,10 +133,10 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇳🇱 NL | 🔴 | vmess | @mowjproxy | 5",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
                 "❔ XX | 🟢 | vmess | @prooxyk | 4",
-                "🇮🇷 IR | 🔴 | vmess | @proxyvpnvip | 0",
                 "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
                 "❔ XX | 🔴 | vmess | @pydriclub | 4",
                 "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
@@ -158,8 +158,7 @@
                 "🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10",
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
-                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 13",
+                "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 15",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
@@ -197,10 +196,10 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇳🇱 NL | 🔴 | vmess | @mowjproxy | 5",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
                 "❔ XX | 🟢 | vmess | @prooxyk | 4",
-                "🇮🇷 IR | 🔴 | vmess | @proxyvpnvip | 0",
                 "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
                 "❔ XX | 🔴 | vmess | @pydriclub | 4",
                 "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
@@ -222,8 +221,7 @@
                 "🇫🇮 FI | 🔴 | vmess | @v2rayspeed | 10",
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
-                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 13",
+                "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 15",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
@@ -689,6 +687,15 @@
             }
         },
         {
+            "tag": "🇳🇱 NL | 🔴 | vmess | @mowjproxy | 5",
+            "type": "vmess",
+            "server": "channel.dollardoon.com",
+            "server_port": 15709,
+            "uuid": "4ac39e8a-6d5c-48bb-b0d0-f633c829113e",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
             "tag": "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
             "type": "vmess",
             "server": "adsl.stylebender209.ir",
@@ -737,15 +744,6 @@
                     "Host": "join.v1-amironetwork.site"
                 }
             }
-        },
-        {
-            "tag": "🇮🇷 IR | 🔴 | vmess | @proxyvpnvip | 0",
-            "type": "vmess",
-            "server": "185.58.243.177",
-            "server_port": 808,
-            "uuid": "@ProxyVPNVip-ChannelTelegram",
-            "security": "auto",
-            "alter_id": 0
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
@@ -1049,25 +1047,16 @@
             "alter_id": 0
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
+            "tag": "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 15",
             "type": "vmess",
-            "server": "193.233.133.59",
-            "server_port": 33,
-            "uuid": "0dc0d22c-68e5-440a-9465-97cad8d1cf33",
-            "security": "auto",
-            "alter_id": 0
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 13",
-            "type": "vmess",
-            "server": "57.129.64.238",
+            "server": "38.99.82.193",
             "server_port": 443,
             "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
             "alter_id": 0,
             "tls": {
                 "enabled": true,
-                "server_name": "kapelleng.com",
+                "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -1078,7 +1067,7 @@
                 "type": "ws",
                 "path": "/linkvws",
                 "headers": {
-                    "Host": "kapelleng.com"
+                    "Host": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"
                 }
             }
         },

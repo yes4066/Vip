@@ -113,7 +113,6 @@
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @srcvpn | 27",
                 "🇺🇸 US | 🔴 | vless | @trueproxy | 7",
                 "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_tz | 5",
@@ -127,10 +126,9 @@
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 6",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
-                "🇺🇸 US | 🔴 | vless | @orange_vpns | 13",
+                "🇮🇹 IT | 🔴 | vless | @orange_vpns | 13",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 9",
-                "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ]
         },
@@ -146,7 +144,6 @@
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @srcvpn | 27",
                 "🇺🇸 US | 🔴 | vless | @trueproxy | 7",
                 "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_tz | 5",
@@ -160,10 +157,9 @@
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 6",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
-                "🇺🇸 US | 🔴 | vless | @orange_vpns | 13",
+                "🇮🇹 IT | 🔴 | vless | @orange_vpns | 13",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 9",
-                "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -297,15 +293,6 @@
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "qeshmserver",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @srcvpn | 27",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "23f340e3-1709-40e2-b4ec-c42cd57a05dd",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -459,11 +446,11 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @orange_vpns | 13",
+            "tag": "🇮🇹 IT | 🔴 | vless | @orange_vpns | 13",
             "type": "vless",
-            "server": "bot.nimeshab-nabod.info",
+            "server": "filmnet.filimnet.com",
             "server_port": 80,
-            "uuid": "itsproxy",
+            "uuid": "9c83eb8e-f84d-4624-a6b8-756230e85396",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -496,29 +483,6 @@
                     "enabled": true,
                     "public_key": "MvHAa605zfOrBe-SDP6_ytTmotBw39f6OefvXn2DZhk",
                     "short_id": "7f2798f9"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 15",
-            "type": "vless",
-            "server": "ep1.rolexcloud.net",
-            "server_port": 443,
-            "uuid": "146518a9-c8b5-43f2-a3e2-3fb3b697369a",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "gAwjo7y5nfNWyQIKu8BZSeEHyx03bTJymjVzEFRmahk",
-                    "short_id": "13664108"
                 }
             }
         },
