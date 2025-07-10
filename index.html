@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- CORRECTED: Use the standard Tailwind Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+      // CORRECTED: Configuration is now safely placed here
       tailwind.config = {
         theme: {
           extend: {
@@ -98,7 +100,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: __TIMESTAMP_PLACEHOLDER__</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 23:29:33 +0330</p>
         </footer>
     </div>
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
@@ -111,10 +113,13 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
     
+    <!-- CORRECTED: All JavaScript logic is now safely inside the DOMContentLoaded event listener -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- 1. INITIALIZE & GRAB ELEMENTS ---
+            // 1. INITIALIZE LIBRARIES
             lucide.createIcons();
+
+            // 2. DEFINE CONSTANTS
             const structuredData = {
     "Lite": {
         "clash": {
@@ -401,7 +406,108 @@
         }
     }
 };
-            const clientInfoData = __CLIENT_INFO_PLACEHOLDER__;
+            const clientInfoData = {
+    "clash": {
+        "windows": [
+            {
+                "name": "Clash Verge (Rev) - x64 Installer",
+                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe"
+            },
+            {
+                "name": "Clash Verge (Rev) - ARM64 Installer",
+                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi"
+            }
+        ],
+        "macos": [
+            {
+                "name": "Clash Verge (Rev) - Apple Silicon",
+                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg"
+            },
+            {
+                "name": "ClashX - Universal",
+                "url": "https://github.com/yichengchen/clashX/releases/latest/download/ClashX.dmg"
+            }
+        ],
+        "android": [
+            {
+                "name": "Clash for Android (CFA) - arm64-v8a",
+                "url": "https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk"
+            }
+        ],
+        "ios": [
+            {
+                "name": "Stash (Recommended for Clash)",
+                "url": "https://apps.apple.com/us/app/stash/id1596063349"
+            }
+        ],
+        "linux": [
+            {
+                "name": "Clash Verge (Rev) - amd64 (.deb)",
+                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb"
+            }
+        ]
+    },
+    "singbox": {
+        "windows": [
+            {
+                "name": "Hiddify-Next - x64 Installer",
+                "url": "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe"
+            }
+        ],
+        "macos": [
+            {
+                "name": "Hiddify-Next - Universal",
+                "url": "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg"
+            }
+        ],
+        "android": [
+            {
+                "name": "Hiddify-Next - Universal",
+                "url": "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk"
+            }
+        ],
+        "ios": [
+            {
+                "name": "Streisand (Recommended for Sing-Box)",
+                "url": "https://apps.apple.com/us/app/streisand/id6450534064"
+            }
+        ],
+        "linux": [
+            {
+                "name": "Hiddify-Next - x64 (.AppImage)",
+                "url": "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage"
+            }
+        ]
+    },
+    "xray": {
+        "windows": [
+            {
+                "name": "v2rayN (with Xray core)",
+                "url": "https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip"
+            }
+        ],
+        "android": [
+            {
+                "name": "v2rayNG - arm64-v8a",
+                "url": "https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk"
+            }
+        ],
+        "ios": [
+            {
+                "name": "Shadowrocket (Classic Choice)",
+                "url": "https://apps.apple.com/us/app/shadowrocket/id932747118"
+            }
+        ]
+    },
+    "surfboard": {
+        "android": [
+            {
+                "name": "Surfboard (Google Play)",
+                "url": "https://play.google.com/store/apps/details?id=com.getsurfboard"
+            }
+        ]
+    }
+};
             const configTypeSelect = document.getElementById('configType');
             const ipTypeSelect = document.getElementById('ipType');
             const otherElementSelect = document.getElementById('otherElement');
@@ -417,7 +523,7 @@
             const analysisResults = document.getElementById('analysis-results');
             const CUSTOM_SORT_ORDER = ['mix', 'vmess', 'vless', 'reality', 'trojan', 'hysteria', 'hy2', 'tuic'];
 
-            // --- 2. HELPER & PARSING FUNCTIONS ---
+            // 3. DEFINE ALL HELPER FUNCTIONS
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
                 document.getElementById('messageBoxText').textContent = message;
@@ -425,9 +531,14 @@
                 document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
             }
 
-            function populateSelect(selectElement, keys, defaultText) {
-                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
-                keys.forEach(key => selectElement.add(new Option(formatDisplayName(key), key)));
+            function populateSelect(selectElement, sortedKeys, defaultOptionText) {
+                selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
+                sortedKeys.forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = formatDisplayName(key);
+                    selectElement.appendChild(option);
+                });
             }
 
             function resetSelect(selectElement, defaultText) {
@@ -437,11 +548,13 @@
 
             function getFlagEmoji(countryCode) {
                 if (!/^[A-Z]{2}$/.test(countryCode)) return '';
-                return String.fromCodePoint(...countryCode.toUpperCase().split('').map(c => 127397 + c.charCodeAt(0)));
+                const codePoints = countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt());
+                return String.fromCodePoint(...codePoints);
             }
+
             function formatDisplayName(name) {
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
-                const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+                const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp'];
                 const protocolPrefixes = ['ss', 'ssr'];
                 const parts = name.split(/[-_]/);
                 let flag = '';
@@ -458,12 +571,21 @@
                 const textName = displayNameParts.join(' ');
                 return flag ? `${flag} ${textName}` : textName;
             }
+
             function updateQRCode(url) {
                 qrcodeDiv.innerHTML = '';
                 if (url) {
-                    try { new QRCode(qrcodeDiv, { text: url, width: 128, height: 128 }); } catch (e) { console.error(e); }
+                    try {
+                        new QRCode(qrcodeDiv, {
+                            text: url, width: 128, height: 128,
+                            colorDark: "#000000", colorLight: "#00000000",
+                            correctLevel: QRCode.CorrectLevel.H
+                        });
+                    } catch (error) { console.error('QR code initialization failed:', error); }
                 }
             }
+            
+            // --- ANALYSIS PARSERS ---
             function parseBase64Subscription(content) {
                 let decodedContent; try { decodedContent = atob(content); } catch (e) { decodedContent = content; }
                 const protocols = ['vmess://', 'vless://', 'ss://', 'trojan://', 'ssr://', 'hy2://', 'tuic://'];
@@ -485,7 +607,7 @@
                     if (!data.outbounds || !Array.isArray(data.outbounds)) return 0;
                     const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns', 'fallback'];
                     return data.outbounds.filter(o => o.type && !utilityTypes.includes(o.type.toLowerCase())).length;
-                } catch (e) { return 0; }
+                } catch (e) { console.error('Sing-box JSON parsing error:', e); return 0; }
             }
             function parseSurfboardSubscription(content) {
                 const lines = content.split('\n'); let inProxySection = false; let nodeCount = 0;
@@ -498,49 +620,31 @@
 
             function updateClientInfo(coreType) {
                 const clientInfoContainer = document.getElementById('client-info-container');
-                clientInfoList.innerHTML = '';
-                const platforms = clientInfoData[coreType];
-                if (!platforms || Object.keys(platforms).length === 0) {
-                    clientInfoContainer.classList.add('hidden');
-                    return;
-                }
+                clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType];
+                if (!platforms || Object.keys(platforms).length === 0) { clientInfoContainer.classList.add('hidden'); return; }
                 clientInfoContainer.classList.remove('hidden');
                 Object.entries(platforms).forEach(([platformName, clients]) => {
                     if (clients.length > 0) {
                         const platformContainer = document.createElement('div');
-                        const title = document.createElement('h4');
-                        title.className = 'text-sm font-semibold text-slate-600 mb-2';
+                        const title = document.createElement('h4'); title.className = 'text-sm font-semibold text-slate-600 mb-2';
                         title.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1);
-                        platformContainer.appendChild(title);
-                        const linksContainer = document.createElement('div');
+                        platformContainer.appendChild(title); const linksContainer = document.createElement('div');
                         linksContainer.className = 'flex flex-col gap-2';
                         clients.forEach(client => {
-                            const link = document.createElement('a');
-                            link.href = client.url;
-                            link.target = '_blank';
+                            const link = document.createElement('a'); link.href = client.url; link.target = '_blank';
                             link.rel = 'noopener noreferrer';
                             link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600';
-                            const nameSpan = document.createElement('span');
-                            nameSpan.className = 'font-medium text-sm';
-                            nameSpan.textContent = client.name;
-                            const icon = document.createElement('i');
-                            icon.setAttribute('data-lucide', 'download');
-                            icon.className = 'w-4 h-4 text-slate-500';
-                            link.appendChild(nameSpan);
-                            link.appendChild(icon);
-                            linksContainer.appendChild(link);
+                            const nameSpan = document.createElement('span'); nameSpan.className = 'font-medium text-sm';
+                            nameSpan.textContent = client.name; const icon = document.createElement('i');
+                            icon.setAttribute('data-lucide', 'download'); icon.className = 'w-4 h-4 text-slate-500';
+                            link.appendChild(nameSpan); link.appendChild(icon); linksContainer.appendChild(link);
                         });
-                        platformContainer.appendChild(linksContainer);
-                        clientInfoList.appendChild(platformContainer);
+                        platformContainer.appendChild(linksContainer); clientInfoList.appendChild(platformContainer);
                     }
                 });
-                try {
-                    lucide.createIcons();
-                } catch (e) {
-                    console.error(e);
-                }
+                try { lucide.createIcons(); } catch(e) { console.error(e); }
             }
-
+            
             function updateOtherElementOptions() {
                 const selectedConfigType = configTypeSelect.value;
                 const selectedIpType = ipTypeSelect.value;
@@ -550,6 +654,7 @@
                 
                 if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
                     const allElements = structuredData[selectedConfigType][selectedIpType];
+                    
                     const getSortIndex = (filename) => {
                         const lowerFilename = filename.toLowerCase();
                         for (let i = 0; i < CUSTOM_SORT_ORDER.length; i++) {
@@ -557,6 +662,7 @@
                         }
                         return CUSTOM_SORT_ORDER.length;
                     };
+
                     const filteredAndSortedKeys = Object.keys(allElements)
                         .filter(key => formatDisplayName(key).toLowerCase().includes(searchTerm))
                         .sort((a, b) => {
@@ -570,20 +676,16 @@
                     otherElementSelect.disabled = false;
                 }
             }
-            
-            // --- 3. EVENT LISTENERS SETUP ---
+
+            // 4. ATTACH EVENT LISTENERS
             analyzeButton.addEventListener('click', async () => {
-                const url = subscriptionUrlInput.value;
-                const clientCore = ipTypeSelect.value;
-                if (!url) return;
+                const url = subscriptionUrlInput.value; const clientCore = ipTypeSelect.value; if (!url) return;
                 analysisContainer.classList.remove('hidden');
                 analysisResults.innerHTML = '<p class="flex items-center gap-2"><i data-lucide="loader-2" class="animate-spin"></i> Analyzing subscription...</p>';
                 lucide.createIcons();
                 try {
-                    const response = await fetch(url);
-                    if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
-                    const content = await response.text();
-                    let nodeCount = 0;
+                    const response = await fetch(url); if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
+                    const content = await response.text(); let nodeCount = 0;
                     switch (clientCore.toLowerCase()) {
                         case 'xray': nodeCount = parseBase64Subscription(content); break;
                         case 'clash': nodeCount = parseClashSubscription(content); break;
@@ -592,37 +694,26 @@
                         default: throw new Error('Analysis for this client type is not supported.');
                     }
                     analysisResults.innerHTML = `<p class="font-medium text-green-700">✅ Analysis Complete</p><p><strong>Total Proxies Found:</strong> <span class="font-bold text-lg">${nodeCount}</span></p>`;
-                } catch (error) {
-                    analysisResults.innerHTML = `<p class="font-medium text-red-700">❌ Analysis Failed</p><p>${error.message}</p>`;
-                }
+                } catch (error) { analysisResults.innerHTML = `<p class="font-medium text-red-700">❌ Analysis Failed</p><p>${error.message}</p>`; }
             });
 
             configTypeSelect.addEventListener('change', () => {
-                resetSelect(ipTypeSelect, 'Select Client/Core');
-                resetSelect(otherElementSelect, 'Select Subscription');
-                searchBar.value = '';
-                searchBar.disabled = true;
-                resultArea.classList.add('hidden');
-                if (configTypeSelect.value) {
-                    const keys = Object.keys(structuredData[configTypeSelect.value] || {});
-                    populateSelect(ipTypeSelect, keys, 'Select Client/Core');
+                resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription');
+                searchBar.value = ''; searchBar.disabled = true; resultArea.classList.add('hidden');
+                if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
+                    populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), 'Select Client/Core');
                     ipTypeSelect.disabled = false;
                 }
             });
             
             ipTypeSelect.addEventListener('change', () => {
-                const selectedCore = ipTypeSelect.value;
-                searchBar.value = '';
+                const selectedCore = ipTypeSelect.value; searchBar.value = '';
                 if (selectedCore) {
-                    updateClientInfo(selectedCore);
-                    resultArea.classList.remove('hidden');
-                    subscriptionDetailsContainer.classList.add('hidden');
-                    analysisContainer.classList.add('hidden');
-                    searchBar.disabled = false;
-                    updateOtherElementOptions();
+                    updateClientInfo(selectedCore); resultArea.classList.remove('hidden');
+                    subscriptionDetailsContainer.classList.add('hidden'); analysisContainer.classList.add('hidden');
+                    searchBar.disabled = false; updateOtherElementOptions();
                 } else {
-                    resultArea.classList.add('hidden');
-                    searchBar.disabled = true;
+                    resultArea.classList.add('hidden'); searchBar.disabled = true;
                     resetSelect(otherElementSelect, 'Select Subscription');
                 }
             });
@@ -633,8 +724,7 @@
                 analysisContainer.classList.add('hidden');
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value];
                 if (url) {
-                    subscriptionUrlInput.value = url;
-                    updateQRCode(url);
+                    subscriptionUrlInput.value = url; updateQRCode(url);
                     subscriptionDetailsContainer.classList.remove('hidden');
                 } else {
                     subscriptionDetailsContainer.classList.add('hidden');
@@ -643,24 +733,19 @@
 
             copyButton.addEventListener('click', () => {
                 if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
-                document.execCommand('copy');
-                const copyIcon = copyButton.querySelector('.copy-icon');
+                document.execCommand('copy'); const copyIcon = copyButton.querySelector('.copy-icon');
                 const checkIcon = copyButton.querySelector('.check-icon');
-                copyIcon.classList.add('hidden');
-                checkIcon.classList.remove('hidden');
-                setTimeout(() => {
-                    copyIcon.classList.remove('hidden');
-                    checkIcon.classList.add('hidden');
-                }, 2000);
+                copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
+                setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
             });
+            
             document.addEventListener('copy', (event) => {
                 if (subscriptionUrlInput.value && event.clipboardData) {
-                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value);
-                    event.preventDefault();
+                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value); event.preventDefault();
                 }
             });
 
-            // --- 4. INITIAL PAGE SETUP ---
+            // 5. INITIALIZE THE PAGE
             populateSelect(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
             configTypeSelect.disabled = false;
         });
