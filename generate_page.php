@@ -354,7 +354,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
             function formatDisplayName(name) {
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
-                const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+                const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp'];
                 const protocolPrefixes = ['ss', 'ssr'];
                 const parts = name.split(/[-_]/);
                 let flag = '';
