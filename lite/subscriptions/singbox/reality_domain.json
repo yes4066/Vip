@@ -105,8 +105,7 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
-                "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
+                "🇫🇮 FI | 🟢 | vless | @config_proxy | 107",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -135,8 +134,7 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
-                "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
+                "🇫🇮 FI | 🟢 | vless | @config_proxy | 107",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -181,53 +179,26 @@
             "type": "dns"
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
+            "tag": "🇫🇮 FI | 🟢 | vless | @config_proxy | 107",
             "type": "vless",
-            "server": "telegrambermuda24.jahanmataleb.ir",
-            "server_port": 443,
-            "uuid": "48735946-f706-4873-b9b6-d9f0255475cc",
+            "server": "canine.origamimarketings.com",
+            "server_port": 9999,
+            "uuid": "e96adc51-70f2-451d-83c5-77094b9d680f",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "www.refersion.com",
+                "server_name": "tgju.org",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome"
+                    "fingerprint": "firefox"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "QYWJdS4JDdSmQKeMkJfPshFuz0bC3jhm9yW3uJfQFmw",
-                    "short_id": "b4"
+                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
+                    "short_id": "42c0b628ba6a42a9"
                 }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
-            "type": "vless",
-            "server": "r1.vipfastconnect.site",
-            "server_port": 2083,
-            "uuid": "7c6a9976-adbe-4d56-8c4f-f6d7d1f98e7a",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "wordpress.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "Q9KrxctP_L5fT1sL_sQLejDpNn7KdH1b-wZ_GR0UtX4",
-                    "short_id": "f414e49bc35be542"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "vless2083"
             }
         },
         {
