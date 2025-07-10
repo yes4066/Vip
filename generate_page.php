@@ -26,107 +26,88 @@ define('SCAN_DIRECTORIES', [
 function get_client_info(): array
 {
     return [
-    'clash' => [
-        'windows' => [
-            [
-                'name' => 'Clash Verge (Rev) - x64 Installer',
-                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'
+        'clash' => [
+            'windows' => [
+                ['name' => 'Clash Verge (Rev) - x64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'],
+                ['name' => 'Clash Verge (Rev) - ARM64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi']
             ],
-            [
-                'name' => 'Clash Verge (Rev) - ARM64 Installer',
-                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi'
-            ]
-        ],
-        'macos' => [
-            [
-                'name' => 'Clash Verge (Rev) - Apple Silicon',
-                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg'
+            'macos' => [
+                ['name' => 'Clash Verge (Rev) - Apple Silicon', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg'],
+                ['name' => 'ClashX - Universal', 'url' => 'https://github.com/yichengchen/clashX/releases/latest/download/ClashX.dmg']
             ],
-            [
-                'name' => 'ClashX - Universal',
-                'url' => 'https://github.com/yichengchen/clashX/releases/latest/download/ClashX.dmg'
+            'android' => [
+                ['name' => 'Clash for Android (CFA) - arm64-v8a', 'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk']
+            ],
+            'ios' => [
+                ['name' => 'Stash (Recommended for Clash)', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349']
+            ],
+            'linux' => [
+                ['name' => 'Clash Verge (Rev) - amd64 (.deb)', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb']
             ]
         ],
-        'android' => [
-            [
-                'name' => 'Clash for Android (CFA) - arm64-v8a',
-                'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk'
+        'meta' => [ // Uses the same clients as Clash
+            'windows' => [
+                ['name' => 'Clash Verge (Rev) - x64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'],
+                ['name' => 'Clash Verge (Rev) - ARM64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi']
+            ],
+            'macos' => [
+                ['name' => 'Clash Verge (Rev) - Apple Silicon', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg']
+            ],
+            'android' => [
+                ['name' => 'Clash for Android (CFA) - arm64-v8a', 'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk']
+            ],
+            'ios' => [
+                ['name' => 'Stash (Recommended for Clash Meta)', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349']
+            ],
+            'linux' => [
+                ['name' => 'Clash Verge (Rev) - amd64 (.deb)', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb']
             ]
         ],
-        'ios' => [
-            [
-                'name' => 'Stash (Recommended for Clash)',
-                'url' => 'https://apps.apple.com/us/app/stash/id1596063349'
+        'locations' => [ // Uses the same clients as Xray
+            'windows' => [
+                ['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']
+            ],
+            'android' => [
+                ['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk']
+            ],
+            'ios' => [
+                ['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118']
             ]
         ],
-        'linux' => [
-            [
-                'name' => 'Clash Verge (Rev) - amd64 (.deb)',
-                'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb'
+        'singbox' => [
+            'windows' => [
+                ['name' => 'Hiddify-Next - x64 Installer', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe']
+            ],
+            'macos' => [
+                ['name' => 'Hiddify-Next - Universal', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg']
+            ],
+            'android' => [
+                ['name' => 'Hiddify-Next - Universal', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk']
+            ],
+            'ios' => [
+                ['name' => 'Streisand (Recommended for Sing-Box)', 'url' => 'https://apps.apple.com/us/app/streisand/id6450534064']
+            ],
+            'linux' => [
+                ['name' => 'Hiddify-Next - x64 (.AppImage)', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage']
+            ]
+        ],
+        'surfboard' => [
+            'android' => [
+                ['name' => 'Surfboard (Google Play)', 'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard']
+            ]
+        ],
+        'xray' => [
+            'windows' => [
+                ['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']
+            ],
+            'android' => [
+                ['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk']
+            ],
+            'ios' => [
+                ['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118']
             ]
         ]
-    ],
-    'singbox' => [
-        'windows' => [
-            [
-                'name' => 'Hiddify-Next - x64 Installer',
-                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe'
-            ]
-        ],
-        'macos' => [
-            [
-                'name' => 'Hiddify-Next - Universal',
-                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg'
-            ]
-        ],
-        'android' => [
-            [
-                'name' => 'Hiddify-Next - Universal',
-                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk'
-            ]
-        ],
-        'ios' => [
-            [
-                'name' => 'Streisand (Recommended for Sing-Box)',
-                'url' => 'https://apps.apple.com/us/app/streisand/id6450534064'
-            ]
-        ],
-        'linux' => [
-            [
-                'name' => 'Hiddify-Next - x64 (.AppImage)',
-                'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage'
-            ]
-        ]
-    ],
-    'xray' => [
-        'windows' => [
-            [
-                'name' => 'v2rayN (with Xray core)',
-                'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip'
-            ]
-        ],
-        'android' => [
-            [
-                'name' => 'v2rayNG - arm64-v8a',
-                'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk'
-            ]
-        ],
-        'ios' => [
-            [
-                'name' => 'Shadowrocket (Classic Choice)',
-                'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118'
-            ]
-        ]
-    ],
-    'surfboard' => [
-        'android' => [
-            [
-                'name' => 'Surfboard (Google Play)',
-                'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard'
-            ]
-        ]
-    ]
-];
+    ];
 }
 
 /**
