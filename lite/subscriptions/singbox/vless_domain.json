@@ -120,13 +120,13 @@
                 "🇺🇸 US | 🔴 | vless | @config_proxy_ir | 18",
                 "❔ XX | 🟢 | vless | @config_vip7 | 3",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
+                "🇮🇷 IR | 🔴 | vless | @configshubplus | 15",
                 "🇮🇷 IR | 🔴 | vless | @configtrapi | 27",
                 "❔ XX | 🔴 | vless | @confingv2raay | 1",
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "🇺🇸 US | 🔴 | vless | @cr7v2ry | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
-                "🇺🇸 US | 🔴 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
@@ -309,13 +309,13 @@
                 "🇺🇸 US | 🔴 | vless | @config_proxy_ir | 18",
                 "❔ XX | 🟢 | vless | @config_vip7 | 3",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
+                "🇮🇷 IR | 🔴 | vless | @configshubplus | 15",
                 "🇮🇷 IR | 🔴 | vless | @configtrapi | 27",
                 "❔ XX | 🔴 | vless | @confingv2raay | 1",
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "🇺🇸 US | 🔴 | vless | @cr7v2ry | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
-                "🇺🇸 US | 🔴 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
@@ -739,6 +739,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇮🇷 IR | 🔴 | vless | @configshubplus | 15",
+            "type": "vless",
+            "server": "de6.razercompany.com",
+            "server_port": 33200,
+            "uuid": "c4389c70-1e5a-4bd2-934f-44fb2e62ccf5",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇮🇷 IR | 🔴 | vless | @configtrapi | 27",
             "type": "vless",
             "server": "srv6.numberonedrshabi.top",
@@ -828,22 +837,6 @@
                 "path": "/-LiV2ry@LIGHTNING6-TEL--@LIGHTNING6-TEL--@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL-@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL--@LIGHTNING6?ed=2056",
                 "headers": {
                     "Host": "www.speedtest.net"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @customvpnserver | 26",
-            "type": "vless",
-            "server": "Pishgam.sdcards.ir",
-            "server_port": 2052,
-            "uuid": "c064beef-8d03-47a7-9306-5affa589fbc1",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/@CUSTOMVPNSERVER-Telegram-@CUSTOMVPNSERVER-@CUSTOMVPNSERVER-Telegram-@CUSTOMVPNSERVER-Telegram-@CUSTOMVPNSERVER@CUSTOMVPNSERVER-Telegram-@CUSTOMVPNSERVER-@CUSTOMVPNSERVER-Telegram-@CUSTOMVPNSERVER-Telegram-@CUSTOMVPNSERVER?ed=2087",
-                "headers": {
-                    "Host": "Pishgam.sdcards.ir"
                 }
             }
         },
