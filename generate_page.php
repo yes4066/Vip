@@ -416,44 +416,43 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             }
 
             /**
-             * --- CORRECTED AND SIMPLIFIED FUNCTION ---
-             * This function is now reliable and handles all formatting rules correctly.
+             * --- CORRECTED, RELIABLE FUNCTION ---
+             * This version correctly formats names and handles the 'ss' vs. country code collision.
              */
             function formatDisplayName(name) {
-                // Define the formatting rules
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
                 const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+                
+                // A list of abbreviations that are protocols, NOT country codes.
+                const protocolPrefixes = ['ss', 'ssr'];
 
-                // Split the name into parts
                 const parts = name.split(/[-_]/);
+                let flag = '';
 
-                // Find the flag emoji, if any
-                const flag = getFlagEmoji(parts[0].toUpperCase());
+                // Check for a flag ONLY if the first part is NOT a known protocol abbreviation.
+                if (parts.length > 0 && !protocolPrefixes.includes(parts[0].toLowerCase())) {
+                    flag = getFlagEmoji(parts[0].toUpperCase());
+                }
 
-                // Process each part of the name
                 const displayNameParts = parts.map((part, index) => {
                     const lowerPart = part.toLowerCase();
 
-                    // Rule 1: Apply special replacements first
                     if (specialReplacements[lowerPart]) {
                         return specialReplacements[lowerPart];
                     }
-                    // Rule 2: Uppercase known config types
                     if (uppercaseTypes.includes(lowerPart)) {
                         return part.toUpperCase();
                     }
-                    // Rule 3: Uppercase the country code itself
+                    // Uppercase the country code part if a flag was found for it
                     if (index === 0 && flag) {
                         return part.toUpperCase();
                     }
-                    // Rule 4: Default capitalization for other parts
+                    // Default: Capitalize the first letter
                     return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
                 });
 
-                // Join the formatted parts to create the text of the name
                 const textName = displayNameParts.join(' ');
                 
-                // Prepend the flag if it exists, otherwise just return the text
                 return flag ? `${flag} ${textName}` : textName;
             }
 
