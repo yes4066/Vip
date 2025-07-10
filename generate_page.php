@@ -129,60 +129,107 @@ function get_client_info(): array
 ];
 }
 
+/**
+ * Scans a directory recursively for files, filters out ignored extensions,
+ * and normalizes paths, including special handling for xray/base64.
+ */
 function scan_directory(string $dir): array
 {
-    if (!is_dir($dir)) return [];
+    if (!is_dir($dir)) {
+        return [];
+    }
     $files = [];
-    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS), RecursiveIteratorIterator::SELF_FIRST);
-    $ignoreExtensions = ['php', 'md', 'yml', 'yaml', 'ini'];
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+    // Add more common ignored extensions like .json, .txt, .log, .conf if they shouldn't be considered subscriptions
+    $ignoreExtensions = ['php', 'md', 'yml', 'yaml', 'ini', 'json', 'txt', 'log', 'conf'];
+
     foreach ($iterator as $file) {
         if ($file->isFile() && !in_array(strtolower($file->getExtension()), $ignoreExtensions)) {
             $relativePath = str_replace(PROJECT_ROOT . DIRECTORY_SEPARATOR, '', $file->getRealPath());
-            $files[] = str_replace(DIRECTORY_SEPARATOR, '/', $relativePath);
+            $relativePath = str_replace(DIRECTORY_SEPARATOR, '/', $relativePath); // Normalize slashes
+
+            // Specific handling for xray/base64/ to make it appear as xray/ for parsing purposes
+            // This is done before adding to $files, so process_files_to_structure doesn't need to worry
+            if (strpos($relativePath, 'xray/base64/') !== false) {
+                $relativePath = str_replace('xray/base64/', 'xray/', $relativePath);
+            }
+            $files[] = $relativePath;
         }
     }
     return $files;
 }
 
+/**
+ * Processes a list of file paths into a structured array, categorizing them
+ * by config type, client/core type, and subscription name, along with their GitHub raw URLs.
+ */
 function process_files_to_structure(array $files_by_category): array
 {
     $structure = [];
     foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
-        $base_dir_relative = ltrim(str_replace(DIRECTORY_SEPARATOR, '/', str_replace(PROJECT_ROOT, '', $category_dir_path)), '/');
-        if (!isset($files_by_category[$category_key])) continue;
+        // Ensure $category_dir_path is relative from PROJECT_ROOT for accurate stripping
+        $base_dir_relative = ltrim(str_replace(PROJECT_ROOT, '', $category_dir_path), DIRECTORY_SEPARATOR);
+        $base_dir_relative = str_replace(DIRECTORY_SEPARATOR, '/', $base_dir_relative); // Normalize slashes
+
+        if (!isset($files_by_category[$category_key])) {
+            continue;
+        }
 
         foreach ($files_by_category[$category_key] as $path) {
-            $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
-            $path_for_parsing = $relative_path_from_base;
-
-            if (strpos($path_for_parsing, 'xray/') === 0) {
-                if (strpos($path_for_parsing, 'xray/base64/') !== 0) {
-                    continue; 
-                }
-                $path_for_parsing = str_replace('xray/base64/', 'xray/', $path_for_parsing);
+            // Remove the category base path from the beginning of the file path
+            // Example: 'Standard/subscriptions/clash/myclash.yaml' -> 'clash/myclash.yaml'
+            if (strpos($path, $base_dir_relative . '/') === 0) {
+                $path_for_parsing = substr($path, strlen($base_dir_relative . '/'));
+            } else {
+                // Fallback if path doesn't start with expected base_dir_relative, might happen if PROJECT_ROOT is complex
+                $path_for_parsing = $path; // Use full relative path for parsing
             }
 
             $parts = explode('/', $path_for_parsing);
-            if (count($parts) < 2) continue;
-            
-            $type = array_shift($parts);
-            $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
-            
+
+            // Expect at least two parts: type/name.ext
+            if (count($parts) < 2) {
+                continue;
+            }
+
+            $type = array_shift($parts); // e.g., 'clash', 'singbox', 'xray'
+            $name_with_ext = implode('/', $parts); // e.g., 'country_name.yaml' or 'my/sub/name.txt'
+
+            // Get filename without extension
+            $name = pathinfo($name_with_ext, PATHINFO_FILENAME);
+
+            // Construct the URL using the original path (which includes category and base path)
+            // GITHUB_REPO_URL expects the full relative path from the repo root
             $url = GITHUB_REPO_URL . '/' . $path;
-            
+
             $structure[$category_key][$type][$name] = $url;
         }
     }
-    foreach ($structure as &$categories) { ksort($categories); foreach ($categories as &$elements) { ksort($elements); } }
+    // Sort the structure for consistent output
+    foreach ($structure as &$categories) {
+        ksort($categories);
+        foreach ($categories as &$elements) {
+            ksort($elements);
+        }
+    }
     ksort($structure);
     return $structure;
 }
 
+/**
+ * Generates the complete HTML content for the PSG page, embedding
+ * structured subscription data and client information as JSON.
+ */
 function generate_full_html(array $structured_data, array $client_info_data, string $generation_timestamp): string
 {
     $json_structured_data = json_encode($structured_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     $json_client_info_data = json_encode($client_info_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
+    // Using a heredoc for the HTML template for readability.
+    // Placeholders are used for dynamic PHP data injection.
     $html_template = <<<'HTML'
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -194,10 +241,9 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CORRECTED: Use the standard Tailwind Play CDN -->
+    <!-- Tailwind Play CDN for development/simple deployment -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      // CORRECTED: Configuration is now safely placed here
       tailwind.config = {
         theme: {
           extend: {
@@ -299,7 +345,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
     
-    <!-- CORRECTED: All JavaScript logic is now safely inside the DOMContentLoaded event listener -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // 1. INITIALIZE LIBRARIES
@@ -323,7 +368,18 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             const analysisResults = document.getElementById('analysis-results');
             const CUSTOM_SORT_ORDER = ['mix', 'vmess', 'vless', 'reality', 'trojan', 'hysteria', 'hy2', 'tuic'];
 
+            // Map platform names to Lucide icons
+            const platformIcons = {
+                windows: 'monitor',
+                macos: 'apple',
+                android: 'smartphone',
+                ios: 'tablet', // or iphone
+                linux: 'terminal'
+            };
+
             // 3. DEFINE ALL HELPER FUNCTIONS
+
+            // Displays a custom message box to the user
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
                 document.getElementById('messageBoxText').textContent = message;
@@ -331,6 +387,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
             }
 
+            // Populates a select element with options
             function populateSelect(selectElement, sortedKeys, defaultOptionText) {
                 selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
                 sortedKeys.forEach(key => {
@@ -341,44 +398,64 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 });
             }
 
+            // Resets a select element to its default state
             function resetSelect(selectElement, defaultText) {
                 selectElement.innerHTML = `<option value="">${defaultText}</option>`;
                 selectElement.disabled = true;
             }
 
+            // Converts a two-letter country code to a flag emoji
             function getFlagEmoji(countryCode) {
                 if (!/^[A-Z]{2}$/.test(countryCode)) return '';
                 const codePoints = countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt());
                 return String.fromCodePoint(...codePoints);
             }
 
+            // Formats a subscription name for display, including a flag emoji if a country code is found
             function formatDisplayName(name) {
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
                 const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp'];
                 const protocolPrefixes = ['ss', 'ssr'];
-                const parts = name.split(/[-_]/);
+
                 let flag = '';
-                if (parts.length > 0 && !protocolPrefixes.includes(parts[0].toLowerCase())) {
-                    flag = getFlagEmoji(parts[0].toUpperCase());
+                let processedName = name;
+
+                // Try to extract country code from the beginning of the name (e.g., US-MyConfig)
+                const countryCodeMatch = processedName.match(/^([A-Z]{2})[-_]/);
+                if (countryCodeMatch) {
+                    flag = getFlagEmoji(countryCodeMatch[1]);
+                    processedName = processedName.substring(countryCodeMatch[0].length); // Remove the country code part
+                } else {
+                    // Fallback for names like "US_Vmess_Server" where US is not the only part.
+                    // This regex will find the first two capital letters at the beginning of a word.
+                    const initialTwoLetterMatch = processedName.match(/(?:^|\W)([A-Z]{2})(?:$|\W)/);
+                    if (initialTwoLetterMatch && initialTwoLetterMatch[1] && !protocolPrefixes.includes(initialTwoLetterMatch[1].toLowerCase())) {
+                        flag = getFlagEmoji(initialTwoLetterMatch[1]);
+                    }
                 }
-                const displayNameParts = parts.map((part, index) => {
+
+                const parts = processedName.split(/[-_]/).filter(p => p !== ''); // Split and remove empty parts
+
+                const displayNameParts = parts.map((part) => {
                     const lowerPart = part.toLowerCase();
                     if (specialReplacements[lowerPart]) return specialReplacements[lowerPart];
                     if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase();
-                    if (index === 0 && flag) return part.toUpperCase();
                     return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
                 });
+
                 const textName = displayNameParts.join(' ');
-                return flag ? `${flag} ${textName}` : textName;
+                return flag ? `${flag} ${textName.trim()}` : textName.trim();
             }
 
+
+            // Updates the QR code displayed on the page
             function updateQRCode(url) {
                 qrcodeDiv.innerHTML = '';
                 if (url) {
                     try {
                         new QRCode(qrcodeDiv, {
                             text: url, width: 128, height: 128,
-                            colorDark: "#000000", colorLight: "#00000000",
+                            colorDark: "#000000", colorLight: "#00000000", // colorLight: #00000000 for transparent background
                             correctLevel: QRCode.CorrectLevel.H
                         });
                     } catch (error) { console.error('QR code initialization failed:', error); }
@@ -386,65 +463,153 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             }
             
             // --- ANALYSIS PARSERS ---
+
+            // Parses a Base64-encoded subscription (typically Xray/V2Ray) to count nodes, protocols, and countries
             function parseBase64Subscription(content) {
-                let decodedContent; try { decodedContent = atob(content); } catch (e) { decodedContent = content; }
-                const protocols = ['vmess://', 'vless://', 'ss://', 'trojan://', 'ssr://', 'hy2://', 'tuic://'];
-                return decodedContent.split('\n').filter(line => {
+                let decodedContent;
+                try { decodedContent = atob(content); } catch (e) { decodedContent = content; } // Fallback if not base64
+
+                const protocols = new Set();
+                const countries = new Set();
+                let nodeCount = 0;
+
+                // Regex to find common protocols and extract potential country codes from tags
+                const nodeRegex = /(vmess|vless|ss|trojan|ssr|hy2|tuic):\/\/[^\s#]*(?:#([A-Z]{2}[-_]?[^&\n]*)|#([^&\n]*))?/gi;
+                // Group 1: protocol (e.g., vmess)
+                // Group 2: potential country code (e.g., US) at the start of the tag, followed by anything
+                // Group 3: full tag if no country code pattern is found at the start
+
+                const lines = decodedContent.split('\n');
+                lines.forEach(line => {
                     const trimmedLine = line.trim();
-                    if (trimmedLine.startsWith('#') || trimmedLine.startsWith('//') || trimmedLine.length === 0) return false;
-                    return protocols.some(proto => trimmedLine.startsWith(proto));
-                }).length;
+                    if (trimmedLine.startsWith('#') || trimmedLine.startsWith('//') || trimmedLine.length === 0) return;
+
+                    let match;
+                    // Use exec in a loop to find all matches in a single line (though subscriptions are usually one URL per line)
+                    while ((match = nodeRegex.exec(trimmedLine)) !== null) {
+                        nodeCount++;
+                        if (match[1]) {
+                            protocols.add(match[1].toLowerCase()); // Protocol (e.g., vmess)
+                        }
+
+                        // Try to extract country from tag (either group 2 or 3)
+                        const tag = match[2] || match[3];
+                        if (tag) {
+                            const countryCodeMatch = tag.match(/^([A-Z]{2})[-_]?/); // Look for two capital letters at the beginning of the tag
+                            if (countryCodeMatch && countryCodeMatch[1]) {
+                                countries.add(countryCodeMatch[1].toUpperCase());
+                            }
+                        }
+                    }
+                });
+
+                return { nodeCount, protocols: Array.from(protocols).sort(), countries: Array.from(countries).sort() };
             }
+
+            // Parses a Clash subscription to count proxies and proxy groups
             function parseClashSubscription(content) {
-                const match = content.match(/^\s*proxies:\s*\n((?:\s*-\s*.+\n?)*)/m);
-                if (!match || !match[1]) return 0;
-                const nodeMatches = match[1].match(/^\s*-\s/gm);
-                return nodeMatches ? nodeMatches.length : 0;
+                const proxyMatch = content.match(/^\s*proxies:\s*\n((?:\s*-\s*.+\n?)*)/m);
+                const proxyCount = proxyMatch && proxyMatch[1] ? (proxyMatch[1].match(/^\s*-\s/gm) || []).length : 0;
+
+                const groupMatch = content.match(/^\s*proxy-groups:\s*\n((?:\s*-\s*name:.*?\n?)*)/m);
+                const groupCount = groupMatch && groupMatch[1] ? (groupMatch[1].match(/^\s*-\s*name:/gm) || []).length : 0;
+
+                return { proxyCount, groupCount };
             }
+
+            // Parses a Sing-box subscription (JSON) to count actual outbound nodes
             function parseSingboxSubscription(content) {
                 try {
-                    const data = JSON.parse(content.replace(/^\s*\/\/.*\r?\n/gm, ''));
+                    // Remove single-line comments that might break JSON parsing
+                    const cleanContent = content.replace(/^\s*\/\/.*\r?\n/gm, '');
+                    const data = JSON.parse(cleanContent);
                     if (!data.outbounds || !Array.isArray(data.outbounds)) return 0;
+                    // Filter out utility types like selector, urltest, direct, block, dns, fallback
                     const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns', 'fallback'];
                     return data.outbounds.filter(o => o.type && !utilityTypes.includes(o.type.toLowerCase())).length;
                 } catch (e) { console.error('Sing-box JSON parsing error:', e); return 0; }
             }
+
+            // Parses a Surfboard subscription to count proxy nodes
             function parseSurfboardSubscription(content) {
-                const lines = content.split('\n'); let inProxySection = false; let nodeCount = 0;
+                const lines = content.split('\n');
+                let inProxySection = false;
+                let nodeCount = 0;
                 for (const line of lines) {
-                    const trimmedLine = line.trim(); if (trimmedLine.toLowerCase() === '[proxy]') { inProxySection = true; continue; }
-                    if (trimmedLine.startsWith('[')) { inProxySection = false; }
-                    if (inProxySection && trimmedLine.includes('=') && !trimmedLine.toLowerCase().startsWith('direct =')) { nodeCount++; }
-                } return nodeCount;
+                    const trimmedLine = line.trim();
+                    if (trimmedLine.toLowerCase() === '[proxy]') {
+                        inProxySection = true;
+                        continue;
+                    }
+                    if (trimmedLine.startsWith('[')) { // End of proxy section if another section starts
+                        inProxySection = false;
+                    }
+                    if (inProxySection && trimmedLine.includes('=') && !trimmedLine.toLowerCase().startsWith('direct =')) {
+                        nodeCount++;
+                    }
+                }
+                return nodeCount;
             }
 
+            // Updates the compatible client information section
             function updateClientInfo(coreType) {
                 const clientInfoContainer = document.getElementById('client-info-container');
-                clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType];
-                if (!platforms || Object.keys(platforms).length === 0) { clientInfoContainer.classList.add('hidden'); return; }
+                clientInfoList.innerHTML = '';
+                const platforms = clientInfoData[coreType];
+
+                if (!platforms || Object.keys(platforms).length === 0) {
+                    clientInfoContainer.classList.add('hidden');
+                    return;
+                }
                 clientInfoContainer.classList.remove('hidden');
+
                 Object.entries(platforms).forEach(([platformName, clients]) => {
                     if (clients.length > 0) {
                         const platformContainer = document.createElement('div');
-                        const title = document.createElement('h4'); title.className = 'text-sm font-semibold text-slate-600 mb-2';
-                        title.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1);
-                        platformContainer.appendChild(title); const linksContainer = document.createElement('div');
+                        const titleDiv = document.createElement('div');
+                        titleDiv.className = 'flex items-center gap-2 text-sm font-semibold text-slate-600 mb-2';
+
+                        const iconName = platformIcons[platformName.toLowerCase()] || 'box'; // Default icon if not mapped
+                        const icon = document.createElement('i');
+                        icon.setAttribute('data-lucide', iconName);
+                        icon.className = 'w-4 h-4 text-slate-500';
+                        titleDiv.appendChild(icon);
+
+                        const titleText = document.createElement('span');
+                        titleText.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1);
+                        titleDiv.appendChild(titleText);
+
+                        platformContainer.appendChild(titleDiv);
+
+                        const linksContainer = document.createElement('div');
                         linksContainer.className = 'flex flex-col gap-2';
                         clients.forEach(client => {
-                            const link = document.createElement('a'); link.href = client.url; link.target = '_blank';
+                            const link = document.createElement('a');
+                            link.href = client.url;
+                            link.target = '_blank';
                             link.rel = 'noopener noreferrer';
                             link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600';
-                            const nameSpan = document.createElement('span'); nameSpan.className = 'font-medium text-sm';
-                            nameSpan.textContent = client.name; const icon = document.createElement('i');
-                            icon.setAttribute('data-lucide', 'download'); icon.className = 'w-4 h-4 text-slate-500';
-                            link.appendChild(nameSpan); link.appendChild(icon); linksContainer.appendChild(link);
+
+                            const nameSpan = document.createElement('span');
+                            nameSpan.className = 'font-medium text-sm';
+                            nameSpan.textContent = client.name;
+
+                            const downloadIcon = document.createElement('i');
+                            downloadIcon.setAttribute('data-lucide', 'download');
+                            downloadIcon.className = 'w-4 h-4 text-slate-500';
+
+                            link.appendChild(nameSpan);
+                            link.appendChild(downloadIcon);
+                            linksContainer.appendChild(link);
                         });
-                        platformContainer.appendChild(linksContainer); clientInfoList.appendChild(platformContainer);
+                        platformContainer.appendChild(linksContainer);
+                        clientInfoList.appendChild(platformContainer);
                     }
                 });
-                try { lucide.createIcons(); } catch(e) { console.error(e); }
+                lucide.createIcons(); // Render newly added icons
             }
             
+            // Updates the options in the "Subscription" dropdown based on current selections and search term
             function updateOtherElementOptions() {
                 const selectedConfigType = configTypeSelect.value;
                 const selectedIpType = ipTypeSelect.value;
@@ -460,7 +625,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         for (let i = 0; i < CUSTOM_SORT_ORDER.length; i++) {
                             if (lowerFilename.includes(CUSTOM_SORT_ORDER[i])) return i;
                         }
-                        return CUSTOM_SORT_ORDER.length;
+                        return CUSTOM_SORT_ORDER.length; // Place unknown types at the end
                     };
 
                     const filteredAndSortedKeys = Object.keys(allElements)
@@ -469,7 +634,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                             const indexA = getSortIndex(a);
                             const indexB = getSortIndex(b);
                             if (indexA !== indexB) return indexA - indexB;
-                            return a.localeCompare(b);
+                            return a.localeCompare(b); // Alphabetical sort for same category
                         });
 
                     populateSelect(otherElementSelect, filteredAndSortedKeys, filteredAndSortedKeys.length > 0 ? 'Select Subscription' : 'No matches found');
@@ -478,76 +643,169 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             }
 
             // 4. ATTACH EVENT LISTENERS
+
+            // Event listener for the Analyze Subscription button
             analyzeButton.addEventListener('click', async () => {
-                const url = subscriptionUrlInput.value; const clientCore = ipTypeSelect.value; if (!url) return;
+                const url = subscriptionUrlInput.value;
+                const clientCore = ipTypeSelect.value;
+                if (!url) {
+                    showMessageBox('Please select a subscription URL first.');
+                    return;
+                }
+
                 analysisContainer.classList.remove('hidden');
-                analysisResults.innerHTML = '<p class="flex items-center gap-2"><i data-lucide="loader-2" class="animate-spin"></i> Analyzing subscription...</p>';
-                lucide.createIcons();
+                analysisResults.innerHTML = '<p class="flex items-center gap-2 text-slate-600"><i data-lucide="loader-2" class="animate-spin w-4 h-4"></i> Analyzing subscription...</p>';
+                lucide.createIcons(); // Re-create icons for the loader
+
                 try {
-                    const response = await fetch(url); if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
-                    const content = await response.text(); let nodeCount = 0;
-                    switch (clientCore.toLowerCase()) {
-                        case 'xray': nodeCount = parseBase64Subscription(content); break;
-                        case 'clash': nodeCount = parseClashSubscription(content); break;
-                        case 'singbox': nodeCount = parseSingboxSubscription(content); break;
-                        case 'surfboard': nodeCount = parseSurfboardSubscription(content); break;
-                        default: throw new Error('Analysis for this client type is not supported.');
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        // Specific error for 404 (Not Found)
+                        if (response.status === 404) {
+                            throw new Error(`Subscription file not found (404). Please ensure the link is correct.`);
+                        }
+                        // Generic error for other HTTP issues
+                        throw new Error(`Failed to fetch subscription: HTTP ${response.status} - ${response.statusText}.`);
                     }
-                    analysisResults.innerHTML = `<p class="font-medium text-green-700">✅ Analysis Complete</p><p><strong>Total Proxies Found:</strong> <span class="font-bold text-lg">${nodeCount}</span></p>`;
-                } catch (error) { analysisResults.innerHTML = `<p class="font-medium text-red-700">❌ Analysis Failed</p><p>${error.message}</p>`; }
+                    const content = await response.text();
+
+                    let analysisOutput = '';
+                    switch (clientCore.toLowerCase()) {
+                        case 'xray':
+                            const xrayResults = parseBase64Subscription(content);
+                            analysisOutput = `
+                                <p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p>
+                                <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${xrayResults.nodeCount}</span></p>
+                                <p><strong>Protocols:</strong> ${xrayResults.protocols.length > 0 ? xrayResults.protocols.join(', ').toUpperCase() : 'N/A'}</p>
+                                <p><strong>Countries:</strong> ${xrayResults.countries.length > 0 ? xrayResults.countries.map(c => getFlagEmoji(c) + ' ' + c).join(', ') : 'N/A'}</p>
+                            `;
+                            break;
+                        case 'clash':
+                            const clashResults = parseClashSubscription(content);
+                            analysisOutput = `
+                                <p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p>
+                                <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${clashResults.proxyCount}</span></p>
+                                <p><strong>Proxy Groups:</strong> <span class="font-bold text-lg">${clashResults.groupCount}</span></p>
+                            `;
+                            break;
+                        case 'singbox':
+                            const singboxNodeCount = parseSingboxSubscription(content);
+                            analysisOutput = `
+                                <p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p>
+                                <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${singboxNodeCount}</span></p>
+                            `;
+                            break;
+                        case 'surfboard':
+                            const surfboardNodeCount = parseSurfboardSubscription(content);
+                            analysisOutput = `
+                                <p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p>
+                                <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${surfboardNodeCount}</span></p>
+                            `;
+                            break;
+                        default:
+                            throw new Error('Analysis for this client type is not supported yet.');
+                    }
+                    analysisResults.innerHTML = analysisOutput;
+
+                } catch (error) {
+                    analysisResults.innerHTML = `<p class="font-medium text-red-700 flex items-center gap-2"><i data-lucide="x-circle" class="w-4 h-4"></i> Analysis Failed</p><p class="text-sm text-slate-600">${error.message}</p>`;
+                }
+                lucide.createIcons(); // Re-create icons for any new content (like checkmarks/crosses)
             });
 
+            // Event listener for Config Type selection change
             configTypeSelect.addEventListener('change', () => {
-                resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription');
-                searchBar.value = ''; searchBar.disabled = true; resultArea.classList.add('hidden');
+                resetSelect(ipTypeSelect, 'Select Client/Core');
+                resetSelect(otherElementSelect, 'Select Subscription');
+                searchBar.value = ''; // Clear search bar
+                searchBar.disabled = true; // Disable search bar
+                resultArea.classList.add('hidden'); // Hide results area
+
                 if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
                     populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), 'Select Client/Core');
                     ipTypeSelect.disabled = false;
                 }
             });
             
+            // Event listener for Client/Core selection change
             ipTypeSelect.addEventListener('change', () => {
-                const selectedCore = ipTypeSelect.value; searchBar.value = '';
+                const selectedCore = ipTypeSelect.value;
+                searchBar.value = ''; // Clear search bar on client/core change
                 if (selectedCore) {
-                    updateClientInfo(selectedCore); resultArea.classList.remove('hidden');
-                    subscriptionDetailsContainer.classList.add('hidden'); analysisContainer.classList.add('hidden');
-                    searchBar.disabled = false; updateOtherElementOptions();
+                    updateClientInfo(selectedCore);
+                    resultArea.classList.remove('hidden');
+                    subscriptionDetailsContainer.classList.add('hidden'); // Hide URL/QR
+                    analysisContainer.classList.add('hidden'); // Hide analysis results
+                    searchBar.disabled = false; // Enable search bar
+                    updateOtherElementOptions(); // Populate subscription list
                 } else {
-                    resultArea.classList.add('hidden'); searchBar.disabled = true;
+                    resultArea.classList.add('hidden');
+                    searchBar.disabled = true;
                     resetSelect(otherElementSelect, 'Select Subscription');
+                    clientInfoList.innerHTML = ''; // Clear client info
+                    document.getElementById('client-info-container').classList.add('hidden'); // Hide client info heading
                 }
             });
 
+            // Event listener for search bar input
             searchBar.addEventListener('input', updateOtherElementOptions);
 
+            // Event listener for Subscription selection change
             otherElementSelect.addEventListener('change', () => {
-                analysisContainer.classList.add('hidden');
+                analysisContainer.classList.add('hidden'); // Hide analysis results when new subscription selected
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value];
                 if (url) {
-                    subscriptionUrlInput.value = url; updateQRCode(url);
-                    subscriptionDetailsContainer.classList.remove('hidden');
+                    subscriptionUrlInput.value = url;
+                    updateQRCode(url);
+                    subscriptionDetailsContainer.classList.remove('hidden'); // Show URL/QR
                 } else {
                     subscriptionDetailsContainer.classList.add('hidden');
                 }
             });
 
+            // Event listener for Copy URL button
             copyButton.addEventListener('click', () => {
-                if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
-                document.execCommand('copy'); const copyIcon = copyButton.querySelector('.copy-icon');
-                const checkIcon = copyButton.querySelector('.check-icon');
-                copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
-                setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
+                if (!subscriptionUrlInput.value) {
+                    showMessageBox('No URL to copy.');
+                    return;
+                }
+                // Use Clipboard API if available, fallback to execCommand
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(subscriptionUrlInput.value)
+                        .then(() => {
+                            const copyIcon = copyButton.querySelector('.copy-icon');
+                            const checkIcon = copyButton.querySelector('.check-icon');
+                            copyIcon.classList.add('hidden');
+                            checkIcon.classList.remove('hidden');
+                            setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy text: ', err);
+                            showMessageBox('Failed to copy URL. Please copy manually.');
+                        });
+                } else {
+                    // Fallback for older browsers
+                    subscriptionUrlInput.select();
+                    document.execCommand('copy');
+                    const copyIcon = copyButton.querySelector('.copy-icon');
+                    const checkIcon = copyButton.querySelector('.check-icon');
+                    copyIcon.classList.add('hidden');
+                    checkIcon.classList.remove('hidden');
+                    setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
+                }
             });
             
+            // Prevent default copy behavior if custom copy is used, though not strictly necessary with the above
             document.addEventListener('copy', (event) => {
-                if (subscriptionUrlInput.value && event.clipboardData) {
-                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value); event.preventDefault();
+                if (subscriptionUrlInput.value && event.clipboardData && event.target === subscriptionUrlInput) {
+                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value);
+                    event.preventDefault();
                 }
             });
 
             // 5. INITIALIZE THE PAGE
             populateSelect(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
-            configTypeSelect.disabled = false;
+            configTypeSelect.disabled = false; // Ensure the first select is enabled
         });
     </script>
 </body>
@@ -572,7 +830,7 @@ foreach (SCAN_DIRECTORIES as $category => $dir) {
     }
 }
 $file_count = array_sum(array_map('count', $all_files));
-if ($file_count === 0) { die("Error: No subscription files were found to generate the page. Exiting." . PHP_EOL); }
+if ($file_count === 0) { die("Error: No subscription files were found to generate the page. Please check SCAN_DIRECTORIES paths. Exiting." . PHP_EOL); }
 echo "Found and categorized {$file_count} subscription files." . PHP_EOL;
 $structured_data = process_files_to_structure($all_files);
 $client_info = get_client_info();
