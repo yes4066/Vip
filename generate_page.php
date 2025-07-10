@@ -228,19 +228,44 @@ function scan_directory(string $dir): array
     return $files;
 }
 
+/**
+ * MODIFIED FUNCTION
+ * Processes file paths into a structured array, with special handling for 'xray' directories.
+ */
 function process_files_to_structure(array $files_by_category): array
 {
     $structure = [];
     foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
         $base_dir_relative = ltrim(str_replace(DIRECTORY_SEPARATOR, '/', str_replace(PROJECT_ROOT, '', $category_dir_path)), '/');
         if (!isset($files_by_category[$category_key])) continue;
+
         foreach ($files_by_category[$category_key] as $path) {
             $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
-            $parts = explode('/', $relative_path_from_base);
+            $path_for_parsing = $relative_path_from_base;
+
+            // --- SPECIAL HANDLING FOR XRAY DIRECTORIES ---
+            // Check if this path is within an 'xray' directory.
+            if (strpos($path_for_parsing, 'xray/') === 0) {
+                // If it's an xray path, it MUST be in the 'base64' subfolder.
+                // We skip any other xray files (e.g., in 'normal' or at the root of 'xray').
+                if (strpos($path_for_parsing, 'xray/base64/') !== 0) {
+                    continue; // Skip this file as it's not in the required 'base64' folder.
+                }
+                // To prevent 'base64' from becoming part of the subscription name,
+                // we modify the path string that will be used for parsing the name.
+                $path_for_parsing = str_replace('xray/base64/', 'xray/', $path_for_parsing);
+            }
+            // --- END SPECIAL HANDLING ---
+
+            $parts = explode('/', $path_for_parsing);
             if (count($parts) < 2) continue;
+            
             $type = array_shift($parts);
             $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
+            
+            // The URL must always point to the original, unmodified path.
             $url = GITHUB_REPO_URL . '/' . $path;
+            
             $structure[$category_key][$type][$name] = $url;
         }
     }
@@ -308,10 +333,8 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         <select id="otherElement" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800" disabled></select>
                     </div>
                 </div>
-                <!-- MODIFIED: Result area now contains a sub-container for the URL/QR part -->
                 <div id="resultArea" class="hidden bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 items-start">
-                        <!-- This part will be hidden until the final subscription is selected -->
                         <div id="subscription-details-container" class="hidden">
                             <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-4">Your Subscription Link:</h3>
                             <div class="flex items-center mb-4">
@@ -326,11 +349,9 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                                 <div id="qrcode" class="p-2 bg-white border border-slate-300 rounded-lg shadow-inner"></div>
                             </div>
                         </div>
-                        <!-- This part will appear as soon as a Client/Core is selected -->
                         <div class="space-y-4">
                            <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Compatible Clients & Downloads:</h3>
                            <div id="client-info-list" class="space-y-5">
-                               <!-- Client links will be grouped by platform and injected here -->
                            </div>
                         </div>
                     </div>
@@ -395,17 +416,10 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 selectElement.disabled = true;
             }
             
-            /**
-             * Converts a two-letter country code to a flag emoji.
-             * @param {string} countryCode - The two-letter country code (e.g., 'US', 'DE').
-             * @returns {string} The flag emoji or an empty string if invalid.
-             */
             function getFlagEmoji(countryCode) {
-                // Check if the input is a valid two-letter string
                 if (!/^[A-Z]{2}$/.test(countryCode)) {
                     return '';
                 }
-                // Convert letters to regional indicator symbol code points
                 const codePoints = countryCode
                     .toUpperCase()
                     .split('')
@@ -413,17 +427,11 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 return String.fromCodePoint(...codePoints);
             }
 
-            /**
-             * Formats a raw name for display, adding a flag emoji if applicable.
-             * @param {string} name - The raw name (e.g., 'DE-Frankfurt_premium').
-             * @returns {string} The formatted display name (e.g., '🇩🇪 De Frankfurt Premium').
-             */
             function formatDisplayName(name) {
                 const parts = name.split(/[-_]/);
                 const potentialCode = parts[0].toUpperCase();
                 let flag = '';
 
-                // If the first part of the name is a two-letter code, treat it as a country
                 if (potentialCode.length === 2) {
                     flag = getFlagEmoji(potentialCode);
                 }
@@ -439,7 +447,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     try {
                         new QRCode(qrcodeDiv, {
                             text: url, width: 128, height: 128,
-                            colorDark: "#000000", colorLight: "#00000000", // Transparent background
+                            colorDark: "#000000", colorLight: "#00000000",
                             correctLevel: QRCode.CorrectLevel.H
                         });
                     } catch (error) { console.error('QR code initialization failed:', error); }
