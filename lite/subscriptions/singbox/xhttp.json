@@ -115,6 +115,7 @@
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -125,9 +126,11 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 15",
+                "🇺🇸 US | 🔴 | vless | @proxy_hiddfy | 9",
                 "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
                 "🇺🇸 US | 🔴 | vless | @sstpvpn | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
+                "🇺🇸 US | 🔴 | vless | @v2rayng_fars | 19",
                 "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ]
@@ -146,6 +149,7 @@
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -156,9 +160,11 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 15",
+                "🇺🇸 US | 🔴 | vless | @proxy_hiddfy | 9",
                 "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
                 "🇺🇸 US | 🔴 | vless | @sstpvpn | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
+                "🇺🇸 US | 🔴 | vless | @v2rayng_fars | 19",
                 "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ],
@@ -315,6 +321,24 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
+            "type": "vless",
+            "server": "206.71.158.10",
+            "server_port": 443,
+            "uuid": "7c63f43f-f526-49bb-b5c8-2be26e11ef00",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "statue.lnmarketplace.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
             "type": "vless",
             "server": "viop.fast.hosting-ip.com",
@@ -414,6 +438,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @proxy_hiddfy | 9",
+            "type": "vless",
+            "server": "fastlyeeeeee.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "cdnfastlycash",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
             "type": "vless",
             "server": "HydroVpn.quantumflow.ir",
@@ -437,6 +470,15 @@
             "server": "viop.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @v2rayng_fars | 19",
+            "type": "vless",
+            "server": "test.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "ipcloudflaretamiz",
             "flow": "",
             "packet_encoding": "xudp"
         },
