@@ -156,8 +156,8 @@ function scan_directory(string $dir): array
 }
 
 /**
- * Processes file paths into a structured array. It now uses a temporary,
- * modified path for parsing the structure, while using the original path for the URL.
+ * CORRECTED: Processes file paths into a structured array. This function now acts as a
+ * strict filter, only processing files from the 'base64' subfolder for 'xray' and 'locations' types.
  */
 function process_files_to_structure(array $files_by_category): array
 {
@@ -173,16 +173,27 @@ function process_files_to_structure(array $files_by_category): array
         foreach ($files_by_category[$category_key] as $path) { 
             $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
             
+            // This temporary path is used for filtering and categorization.
             $path_for_parsing = $relative_path_from_base;
             
-            // CORRECTED: Handle both xray and locations base64 folders for categorization.
-            if (strpos($path_for_parsing, 'xray/base64/') === 0) {
-                // For a path like 'xray/base64/sub.txt', parse it as if it's 'xray/sub.txt'
+            // --- STRICT FILTERING LOGIC ---
+            if (strpos($path_for_parsing, 'xray/') === 0) {
+                // If it's an 'xray' path, it MUST come from the 'base64' subfolder.
+                if (strpos($path_for_parsing, 'xray/base64/') !== 0) {
+                    continue; // Skip this file (e.g., from 'xray/normal/').
+                }
+                // It's valid. Simplify the path for categorization.
                 $path_for_parsing = str_replace('xray/base64/', 'xray/', $path_for_parsing);
-            } elseif (strpos($path_for_parsing, 'locations/base64/') === 0) {
-                // For a path like 'locations/base64/us.txt', parse it as if it's 'locations/us.txt'
-                $path_for_parsing = str_replace('locations/base64/', 'locations/', $path_for_parsing);
+
+            } elseif (strpos($path_for_parsing, 'location/') === 0) {
+                // If it's a 'locations' path, it MUST come from the 'base64' subfolder.
+                if (strpos($path_for_parsing, 'location/base64/') !== 0) {
+                    continue; // Skip this file (e.g., from 'locations/normal/').
+                }
+                // It's valid. Simplify the path for categorization.
+                $path_for_parsing = str_replace('location/base64/', 'location/', $path_for_parsing);
             }
+            // --- END OF FILTERING ---
 
             $parts = explode('/', $path_for_parsing);
             if (count($parts) < 2) {
@@ -192,12 +203,14 @@ function process_files_to_structure(array $files_by_category): array
             $type = array_shift($parts); 
             $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
             
+            // The URL is always built from the original, correct path.
             $url = GITHUB_REPO_URL . '/' . $path;
 
             $structure[$category_key][$type][$name] = $url;
         }
     }
     
+    // Sort the final structure
     foreach ($structure as &$categories) {
         ksort($categories);
         foreach ($categories as &$elements) {
@@ -668,3 +681,5 @@ $timestamp = date('Y-m-d H:i:s T');
 $final_html = generate_full_html($structured_data, $client_info, $timestamp);
 file_put_contents(OUTPUT_HTML_FILE, $final_html);
 echo "Successfully generated page at: " . realpath(OUTPUT_HTML_FILE) . PHP_EOL;
+
+?>
