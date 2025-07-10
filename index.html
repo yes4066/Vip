@@ -98,7 +98,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 22:46:55 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 22:53:18 +0330</p>
         </footer>
     </div>
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
@@ -503,19 +503,13 @@
         ]
     }
 };
-            const configTypeSelect = document.getElementById('configType');
-            const ipTypeSelect = document.getElementById('ipType');
-            const otherElementSelect = document.getElementById('otherElement');
-            const searchBar = document.getElementById('searchBar');
-            const resultArea = document.getElementById('resultArea');
-            const subscriptionUrlInput = document.getElementById('subscriptionUrl');
-            const copyButton = document.getElementById('copyButton');
-            const qrcodeDiv = document.getElementById('qrcode');
-            const clientInfoList = document.getElementById('client-info-list');
-            const subscriptionDetailsContainer = document.getElementById('subscription-details-container');
+            // ... (all other const declarations remain the same)
             const analyzeButton = document.getElementById('analyzeButton');
             const analysisContainer = document.getElementById('analysis-container');
             const analysisResults = document.getElementById('analysis-results');
+
+            // --- NEW: Custom sort order definition ---
+            const CUSTOM_SORT_ORDER = ['mix', 'vmess', 'vless', 'reality', 'trojan', 'hysteria', 'hy2', 'tuic'];
 
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
@@ -523,15 +517,18 @@
                 box.classList.remove('hidden');
                 document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
             }
-            function populateSelect(selectElement, data, defaultOptionText) {
+
+            // --- MODIFIED: populateSelect now accepts a sorted array of keys ---
+            function populateSelect(selectElement, sortedKeys, allData, defaultOptionText) {
                 selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
-                Object.keys(data).forEach(key => {
+                sortedKeys.forEach(key => {
                     const option = document.createElement('option');
                     option.value = key;
                     option.textContent = formatDisplayName(key);
                     selectElement.appendChild(option);
                 });
             }
+
             function resetSelect(selectElement, defaultText) {
                 selectElement.innerHTML = `<option value="">${defaultText}</option>`;
                 selectElement.disabled = true;
@@ -543,7 +540,7 @@
             }
             function formatDisplayName(name) {
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
-                const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+                const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp'];
                 const protocolPrefixes = ['ss', 'ssr'];
                 const parts = name.split(/[-_]/);
                 let flag = '';
@@ -573,142 +570,77 @@
                 }
             }
 
-            // --- ANALYSIS PARSERS ---
-
+            // --- ANALYSIS PARSERS (Unchanged) ---
             function parseBase64Subscription(content) {
-                let decodedContent;
-                try {
-                    decodedContent = atob(content);
-                } catch (e) {
-                    decodedContent = content;
-                }
+                let decodedContent; try { decodedContent = atob(content); } catch (e) { decodedContent = content; }
                 const protocols = ['vmess://', 'vless://', 'ss://', 'trojan://', 'ssr://', 'hy2://', 'tuic://'];
-                const nodes = decodedContent.split('\n').filter(line => {
+                return decodedContent.split('\n').filter(line => {
                     const trimmedLine = line.trim();
-                    if (trimmedLine.startsWith('#') || trimmedLine.startsWith('//') || trimmedLine.length === 0) {
-                        return false;
-                    }
+                    if (trimmedLine.startsWith('#') || trimmedLine.startsWith('//') || trimmedLine.length === 0) return false;
                     return protocols.some(proto => trimmedLine.startsWith(proto));
-                });
-                return nodes.length;
+                }).length;
             }
-
             function parseClashSubscription(content) {
-                const proxyRegex = /^\s*proxies:\s*\n((?:\s*-\s*.+\n?)*)/m;
-                const match = content.match(proxyRegex);
+                const match = content.match(/^\s*proxies:\s*\n((?:\s*-\s*.+\n?)*)/m);
                 if (!match || !match[1]) return 0;
-                const proxyBlock = match[1];
-                const nodeMatches = proxyBlock.match(/^\s*-\s/gm);
+                const nodeMatches = match[1].match(/^\s*-\s/gm);
                 return nodeMatches ? nodeMatches.length : 0;
             }
-
             function parseSingboxSubscription(content) {
                 try {
-                    const cleanedContent = content.replace(/^\s*\/\/.*\r?\n/gm, '');
-                    const data = JSON.parse(cleanedContent);
+                    const data = JSON.parse(content.replace(/^\s*\/\/.*\r?\n/gm, ''));
                     if (!data.outbounds || !Array.isArray(data.outbounds)) return 0;
                     const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns', 'fallback'];
-                    const proxies = data.outbounds.filter(outbound => 
-                        outbound.type && !utilityTypes.includes(outbound.type.toLowerCase())
-                    );
-                    return proxies.length;
-                } catch (e) {
-                    console.error("Sing-box JSON parsing error:", e);
-                    return 0; // Return 0 on parsing error
-                }
+                    return data.outbounds.filter(o => o.type && !utilityTypes.includes(o.type.toLowerCase())).length;
+                } catch (e) { return 0; }
             }
-
             function parseSurfboardSubscription(content) {
-                const lines = content.split('\n');
-                let inProxySection = false;
-                let nodeCount = 0;
+                const lines = content.split('\n'); let inProxySection = false; let nodeCount = 0;
                 for (const line of lines) {
-                    const trimmedLine = line.trim();
-                    if (trimmedLine.toLowerCase() === '[proxy]') {
-                        inProxySection = true;
-                        continue;
-                    }
-                    if (trimmedLine.startsWith('[')) {
-                        inProxySection = false;
-                    }
-                    if (inProxySection && trimmedLine.includes('=')) {
-                        if (!trimmedLine.toLowerCase().startsWith('direct =')) {
-                            nodeCount++;
-                        }
-                    }
-                }
-                return nodeCount;
+                    const trimmedLine = line.trim(); if (trimmedLine.toLowerCase() === '[proxy]') { inProxySection = true; continue; }
+                    if (trimmedLine.startsWith('[')) { inProxySection = false; }
+                    if (inProxySection && trimmedLine.includes('=') && !trimmedLine.toLowerCase().startsWith('direct =')) { nodeCount++; }
+                } return nodeCount;
             }
 
             // --- EVENT LISTENERS ---
 
             analyzeButton.addEventListener('click', async () => {
-                const url = subscriptionUrlInput.value;
-                const clientCore = ipTypeSelect.value;
-                if (!url) return;
-
+                const url = subscriptionUrlInput.value; const clientCore = ipTypeSelect.value; if (!url) return;
                 analysisContainer.classList.remove('hidden');
                 analysisResults.innerHTML = '<p class="flex items-center gap-2"><i data-lucide="loader-2" class="animate-spin"></i> Analyzing subscription...</p>';
                 lucide.createIcons();
-
                 try {
-                    const response = await fetch(url);
-                    if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
-                    const content = await response.text();
-                    
-                    let nodeCount = 0;
+                    const response = await fetch(url); if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
+                    const content = await response.text(); let nodeCount = 0;
                     switch (clientCore.toLowerCase()) {
-                        case 'xray':
-                            nodeCount = parseBase64Subscription(content);
-                            break;
-                        case 'clash':
-                            nodeCount = parseClashSubscription(content);
-                            break;
-                        case 'singbox':
-                            nodeCount = parseSingboxSubscription(content);
-                            break;
-                        case 'surfboard':
-                            nodeCount = parseSurfboardSubscription(content);
-                            break;
-                        default:
-                            throw new Error('Analysis for this client type is not supported.');
+                        case 'xray': nodeCount = parseBase64Subscription(content); break;
+                        case 'clash': nodeCount = parseClashSubscription(content); break;
+                        case 'singbox': nodeCount = parseSingboxSubscription(content); break;
+                        case 'surfboard': nodeCount = parseSurfboardSubscription(content); break;
+                        default: throw new Error('Analysis for this client type is not supported.');
                     }
-                    
-                    analysisResults.innerHTML = `<p class="font-medium text-green-700">✅ Analysis Complete</p>
-                                                 <p><strong>Total Proxies Found:</strong> <span class="font-bold text-lg">${nodeCount}</span></p>`;
-                } catch (error) {
-                    analysisResults.innerHTML = `<p class="font-medium text-red-700">❌ Analysis Failed</p>
-                                                 <p>${error.message}</p>`;
-                }
+                    analysisResults.innerHTML = `<p class="font-medium text-green-700">✅ Analysis Complete</p><p><strong>Total Proxies Found:</strong> <span class="font-bold text-lg">${nodeCount}</span></p>`;
+                } catch (error) { analysisResults.innerHTML = `<p class="font-medium text-red-700">❌ Analysis Failed</p><p>${error.message}</p>`; }
             });
 
             configTypeSelect.addEventListener('change', () => {
-                resetSelect(ipTypeSelect, 'Select Client/Core');
-                resetSelect(otherElementSelect, 'Select Subscription');
-                searchBar.value = '';
-                searchBar.disabled = true;
-                resultArea.classList.add('hidden');
-                
+                resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription');
+                searchBar.value = ''; searchBar.disabled = true; resultArea.classList.add('hidden');
                 if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
-                    populateSelect(ipTypeSelect, structuredData[configTypeSelect.value], 'Select Client/Core');
+                    populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), structuredData[configTypeSelect.value], 'Select Client/Core');
                     ipTypeSelect.disabled = false;
                 }
             });
             
             ipTypeSelect.addEventListener('change', () => {
-                const selectedCore = ipTypeSelect.value;
-                searchBar.value = '';
-                
+                const selectedCore = ipTypeSelect.value; searchBar.value = '';
                 if (selectedCore) {
-                    updateClientInfo(selectedCore);
-                    resultArea.classList.remove('hidden');
-                    subscriptionDetailsContainer.classList.add('hidden');
-                    analysisContainer.classList.add('hidden'); // Hide on core change
-                    searchBar.disabled = false;
-                    updateOtherElementOptions();
+                    updateClientInfo(selectedCore); resultArea.classList.remove('hidden');
+                    subscriptionDetailsContainer.classList.add('hidden'); analysisContainer.classList.add('hidden');
+                    searchBar.disabled = false; updateOtherElementOptions();
                 } else {
-                    resultArea.classList.add('hidden');
-                    searchBar.disabled = true;
+                    resultArea.classList.add('hidden'); searchBar.disabled = true;
                     resetSelect(otherElementSelect, 'Select Subscription');
                 }
             });
@@ -716,11 +648,10 @@
             searchBar.addEventListener('input', updateOtherElementOptions);
 
             otherElementSelect.addEventListener('change', () => {
-                analysisContainer.classList.add('hidden'); // Hide analysis on new selection
+                analysisContainer.classList.add('hidden');
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value];
                 if (url) {
-                    subscriptionUrlInput.value = url;
-                    updateQRCode(url);
+                    subscriptionUrlInput.value = url; updateQRCode(url);
                     subscriptionDetailsContainer.classList.remove('hidden');
                 } else {
                     subscriptionDetailsContainer.classList.add('hidden');
@@ -729,80 +660,85 @@
 
             copyButton.addEventListener('click', () => {
                 if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
-                document.execCommand('copy');
-                const copyIcon = copyButton.querySelector('.copy-icon');
+                document.execCommand('copy'); const copyIcon = copyButton.querySelector('.copy-icon');
                 const checkIcon = copyButton.querySelector('.check-icon');
-                copyIcon.classList.add('hidden');
-                checkIcon.classList.remove('hidden');
-                setTimeout(() => {
-                    copyIcon.classList.remove('hidden');
-                    checkIcon.classList.add('hidden');
-                }, 2000);
+                copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
+                setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
             });
             document.addEventListener('copy', (event) => {
                 if (subscriptionUrlInput.value && event.clipboardData) {
-                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value);
-                    event.preventDefault();
+                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value); event.preventDefault();
                 }
             });
 
             function updateClientInfo(coreType) {
                 const clientInfoContainer = document.getElementById('client-info-container');
-                clientInfoList.innerHTML = '';
-                const platforms = clientInfoData[coreType];
-                if (!platforms || Object.keys(platforms).length === 0) {
-                    clientInfoContainer.classList.add('hidden');
-                    return;
-                }
+                clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType];
+                if (!platforms || Object.keys(platforms).length === 0) { clientInfoContainer.classList.add('hidden'); return; }
                 clientInfoContainer.classList.remove('hidden');
                 Object.entries(platforms).forEach(([platformName, clients]) => {
                     if (clients.length > 0) {
                         const platformContainer = document.createElement('div');
-                        const title = document.createElement('h4');
-                        title.className = 'text-sm font-semibold text-slate-600 mb-2';
+                        const title = document.createElement('h4'); title.className = 'text-sm font-semibold text-slate-600 mb-2';
                         title.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1);
-                        platformContainer.appendChild(title);
-                        const linksContainer = document.createElement('div');
+                        platformContainer.appendChild(title); const linksContainer = document.createElement('div');
                         linksContainer.className = 'flex flex-col gap-2';
                         clients.forEach(client => {
-                            const link = document.createElement('a');
-                            link.href = client.url;
-                            link.target = '_blank';
+                            const link = document.createElement('a'); link.href = client.url; link.target = '_blank';
                             link.rel = 'noopener noreferrer';
                             link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600';
-                            const nameSpan = document.createElement('span');
-                            nameSpan.className = 'font-medium text-sm';
-                            nameSpan.textContent = client.name;
-                            const icon = document.createElement('i');
-                            icon.setAttribute('data-lucide', 'download');
-                            icon.className = 'w-4 h-4 text-slate-500';
-                            link.appendChild(nameSpan);
-                            link.appendChild(icon);
-                            linksContainer.appendChild(link);
+                            const nameSpan = document.createElement('span'); nameSpan.className = 'font-medium text-sm';
+                            nameSpan.textContent = client.name; const icon = document.createElement('i');
+                            icon.setAttribute('data-lucide', 'download'); icon.className = 'w-4 h-4 text-slate-500';
+                            link.appendChild(nameSpan); link.appendChild(icon); linksContainer.appendChild(link);
                         });
-                        platformContainer.appendChild(linksContainer);
-                        clientInfoList.appendChild(platformContainer);
+                        platformContainer.appendChild(linksContainer); clientInfoList.appendChild(platformContainer);
                     }
                 });
                 try { lucide.createIcons(); } catch(e) { console.error(e); }
             }
+            
+            // --- MODIFIED: This function now performs custom sorting before populating ---
             function updateOtherElementOptions() {
                 const selectedConfigType = configTypeSelect.value;
                 const selectedIpType = ipTypeSelect.value;
                 const searchTerm = searchBar.value.toLowerCase();
                 resetSelect(otherElementSelect, 'Select Subscription');
                 subscriptionDetailsContainer.classList.add('hidden');
+                
                 if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
                     const allElements = structuredData[selectedConfigType][selectedIpType];
-                    const filteredElements = Object.keys(allElements)
+                    
+                    const getSortIndex = (filename) => {
+                        const lowerFilename = filename.toLowerCase();
+                        for (let i = 0; i < CUSTOM_SORT_ORDER.length; i++) {
+                            if (lowerFilename.includes(CUSTOM_SORT_ORDER[i])) {
+                                return i;
+                            }
+                        }
+                        return CUSTOM_SORT_ORDER.length; // Items not in the list go to the end
+                    };
+
+                    const filteredAndSortedKeys = Object.keys(allElements)
                         .filter(key => formatDisplayName(key).toLowerCase().includes(searchTerm))
-                        .reduce((obj, key) => { (obj[key] = allElements[key]); return obj; }, {});
-                    populateSelect(otherElementSelect, filteredElements, Object.keys(filteredElements).length > 0 ? 'Select Subscription' : 'No matches found');
+                        .sort((a, b) => {
+                            const indexA = getSortIndex(a);
+                            const indexB = getSortIndex(b);
+
+                            if (indexA !== indexB) {
+                                return indexA - indexB; // Primary sort by custom order
+                            }
+                            return a.localeCompare(b); // Secondary sort alphabetically
+                        });
+
+                    populateSelect(otherElementSelect, filteredAndSortedKeys, allElements, filteredAndSortedKeys.length > 0 ? 'Select Subscription' : 'No matches found');
                     otherElementSelect.disabled = false;
                 }
             }
 
-            populateSelect(configTypeSelect, structuredData, 'Select Config Type');
+            // Initial population for the first dropdown
+            const initialKeys = Object.keys(structuredData);
+            populateSelect(configTypeSelect, initialKeys, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
         });
     </script>
