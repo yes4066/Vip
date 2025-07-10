@@ -84,7 +84,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 22:24:01 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 22:30:39 +0330</p>
         </footer>
     </div>
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
@@ -610,50 +610,45 @@
             }
 
             /**
-             * --- CORRECTED AND IMPROVED FUNCTION ---
-             * This function now correctly handles all formatting rules.
+             * --- CORRECTED AND SIMPLIFIED FUNCTION ---
+             * This function is now reliable and handles all formatting rules correctly.
              */
             function formatDisplayName(name) {
-                // Rule definition
+                // Define the formatting rules
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
                 const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
 
+                // Split the name into parts
                 const parts = name.split(/[-_]/);
-                const potentialCode = parts[0].toUpperCase();
-                let flag = getFlagEmoji(potentialCode);
 
+                // Find the flag emoji, if any
+                const flag = getFlagEmoji(parts[0].toUpperCase());
+
+                // Process each part of the name
                 const displayNameParts = parts.map((part, index) => {
                     const lowerPart = part.toLowerCase();
 
-                    // Rule 1: First part is a country code, keep it uppercase.
-                    if (index === 0 && flag) {
-                        return part.toUpperCase();
-                    }
-
-                    // Rule 2 (Corrected): Check for special full-word replacements. This now works correctly.
+                    // Rule 1: Apply special replacements first
                     if (specialReplacements[lowerPart]) {
                         return specialReplacements[lowerPart];
                     }
-                    
-                    // Rule 3: Check if it's a known config type to be uppercased.
+                    // Rule 2: Uppercase known config types
                     if (uppercaseTypes.includes(lowerPart)) {
                         return part.toUpperCase();
                     }
-
-                    // Rule 4: Default formatting (Capitalize first letter).
+                    // Rule 3: Uppercase the country code itself
+                    if (index === 0 && flag) {
+                        return part.toUpperCase();
+                    }
+                    // Rule 4: Default capitalization for other parts
                     return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
                 });
 
-                const displayName = displayNameParts.join(' ');
+                // Join the formatted parts to create the text of the name
+                const textName = displayNameParts.join(' ');
                 
-                // For a select option name, we don't want the flag emoji at the beginning if there's no actual country code.
-                if (flag && displayNameParts[0] === potentialCode) {
-                    return `${flag} ${displayNameParts.slice(1).join(' ')}`;
-                } else if (flag) {
-                    return `${flag} ${displayName}`;
-                }
-
-                return displayName;
+                // Prepend the flag if it exists, otherwise just return the text
+                return flag ? `${flag} ${textName}` : textName;
             }
 
 
