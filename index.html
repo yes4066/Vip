@@ -53,6 +53,7 @@
                 </div>
                 <div id="resultArea" class="hidden bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 items-start">
+                        <!-- URL and QR Code Area -->
                         <div id="subscription-details-container" class="hidden">
                             <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-4">Your Subscription Link:</h3>
                             <div class="flex items-center mb-4">
@@ -66,10 +67,23 @@
                                 <p class="text-sm text-slate-600 mb-2">Scan the QR code:</p>
                                 <div id="qrcode" class="p-2 bg-white border border-slate-300 rounded-lg shadow-inner"></div>
                             </div>
+                            <button id="analyzeButton" class="mt-4 w-full flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200">
+                                <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+                                <span>Analyze Subscription</span>
+                            </button>
                         </div>
+                        
+                        <!-- Client Info & Analysis Results Area -->
                         <div class="space-y-4">
-                           <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Compatible Clients & Downloads:</h3>
-                           <div id="client-info-list" class="space-y-5">
+                           <div id="client-info-container">
+                               <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Compatible Clients:</h3>
+                               <div id="client-info-list" class="space-y-5"></div>
+                           </div>
+                           <div id="analysis-container" class="hidden">
+                               <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Live Analysis:</h3>
+                               <div id="analysis-results" class="p-4 bg-slate-100 rounded-lg text-slate-700 space-y-2 text-sm">
+                                   <!-- Analysis results will be injected here -->
+                               </div>
                            </div>
                         </div>
                     </div>
@@ -84,7 +98,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 22:35:20 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 22:46:55 +0330</p>
         </footer>
     </div>
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
@@ -99,7 +113,7 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            try { lucide.createIcons(); } catch (error) { console.error('Lucide icons initialization failed:', error); }
+            lucide.createIcons();
 
             const structuredData = {
     "Lite": {
@@ -397,20 +411,12 @@
             {
                 "name": "Clash Verge (Rev) - ARM64 Installer",
                 "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi"
-            },
-            {
-                "name": "Clash for Windows - x64 Installer",
-                "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/latest/download/Clash.for.Windows.Setup.0.20.39.exe"
             }
         ],
         "macos": [
             {
                 "name": "Clash Verge (Rev) - Apple Silicon",
                 "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg"
-            },
-            {
-                "name": "Clash Verge (Rev) - Intel",
-                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64.dmg"
             },
             {
                 "name": "ClashX - Universal",
@@ -421,30 +427,18 @@
             {
                 "name": "Clash for Android (CFA) - arm64-v8a",
                 "url": "https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk"
-            },
-            {
-                "name": "Clash for Android (CFA) - armeabi-v7a",
-                "url": "https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-armeabi-v7a-release.apk"
             }
         ],
         "ios": [
             {
                 "name": "Stash (Recommended for Clash)",
                 "url": "https://apps.apple.com/us/app/stash/id1596063349"
-            },
-            {
-                "name": "Shadowrocket",
-                "url": "https://apps.apple.com/us/app/shadowrocket/id932747118"
             }
         ],
         "linux": [
             {
                 "name": "Clash Verge (Rev) - amd64 (.deb)",
                 "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb"
-            },
-            {
-                "name": "Clash Verge (Rev) - amd64 (.AppImage)",
-                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_amd64.AppImage"
             }
         ]
     },
@@ -453,10 +447,6 @@
             {
                 "name": "Hiddify-Next - x64 Installer",
                 "url": "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe"
-            },
-            {
-                "name": "NekoRay - x64",
-                "url": "https://github.com/MatsuriDayo/nekoray/releases/latest/download/nekoray-3.28-2024-03-10-windows64.zip"
             }
         ],
         "macos": [
@@ -469,34 +459,18 @@
             {
                 "name": "Hiddify-Next - Universal",
                 "url": "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk"
-            },
-            {
-                "name": "NekoBox - Universal",
-                "url": "https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/latest/download/NB4A-1.2.8-foss.apk"
             }
         ],
         "ios": [
             {
                 "name": "Streisand (Recommended for Sing-Box)",
                 "url": "https://apps.apple.com/us/app/streisand/id6450534064"
-            },
-            {
-                "name": "FoXray",
-                "url": "https://apps.apple.com/us/app/foxray/id6448898396"
-            },
-            {
-                "name": "Stash",
-                "url": "https://apps.apple.com/us/app/stash/id1596063349"
             }
         ],
         "linux": [
             {
                 "name": "Hiddify-Next - x64 (.AppImage)",
                 "url": "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage"
-            },
-            {
-                "name": "NekoRay - x64",
-                "url": "https://github.com/MatsuriDayo/nekoray/releases/latest/download/nekoray-3.28-2024-03-10-linux64.zip"
             }
         ]
     },
@@ -507,44 +481,16 @@
                 "url": "https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip"
             }
         ],
-        "macos": [
-            {
-                "name": "V2RayU - Universal",
-                "url": "https://github.com/yanue/V2rayU/releases/latest/download/V2rayU.dmg"
-            }
-        ],
         "android": [
             {
                 "name": "v2rayNG - arm64-v8a",
                 "url": "https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk"
-            },
-            {
-                "name": "v2rayNG - armeabi-v7a",
-                "url": "https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_armeabi-v7a.apk"
             }
         ],
         "ios": [
             {
                 "name": "Shadowrocket (Classic Choice)",
                 "url": "https://apps.apple.com/us/app/shadowrocket/id932747118"
-            },
-            {
-                "name": "FoXray",
-                "url": "https://apps.apple.com/us/app/foxray/id6448898396"
-            },
-            {
-                "name": "Stash",
-                "url": "https://apps.apple.com/us/app/stash/id1596063349"
-            },
-            {
-                "name": "Streisand",
-                "url": "https://apps.apple.com/us/app/streisand/id6450534064"
-            }
-        ],
-        "linux": [
-            {
-                "name": "Qv2ray - x86_64 (.AppImage) (Archived)",
-                "url": "https://github.com/Qv2ray/Qv2ray/releases/download/v2.7.0/Qv2ray.v2.7.0.linux-x64.AppImage"
             }
         ]
     },
@@ -553,16 +499,6 @@
             {
                 "name": "Surfboard (Google Play)",
                 "url": "https://play.google.com/store/apps/details?id=com.getsurfboard"
-            },
-            {
-                "name": "Surfboard (Github Release)",
-                "url": "https://github.com/getsurfboard/surfboard/releases/latest/download/surfboard-2.22.0.apk"
-            }
-        ],
-        "ios": [
-            {
-                "name": "Not Available (Use Shadowrocket or Stash)",
-                "url": ""
             }
         ]
     }
@@ -577,6 +513,9 @@
             const qrcodeDiv = document.getElementById('qrcode');
             const clientInfoList = document.getElementById('client-info-list');
             const subscriptionDetailsContainer = document.getElementById('subscription-details-container');
+            const analyzeButton = document.getElementById('analyzeButton');
+            const analysisContainer = document.getElementById('analysis-container');
+            const analysisResults = document.getElementById('analysis-results');
 
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
@@ -597,60 +536,30 @@
                 selectElement.innerHTML = `<option value="">${defaultText}</option>`;
                 selectElement.disabled = true;
             }
-            
             function getFlagEmoji(countryCode) {
-                if (!/^[A-Z]{2}$/.test(countryCode)) {
-                    return '';
-                }
-                const codePoints = countryCode
-                    .toUpperCase()
-                    .split('')
-                    .map(char => 127397 + char.charCodeAt());
+                if (!/^[A-Z]{2}$/.test(countryCode)) return '';
+                const codePoints = countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt());
                 return String.fromCodePoint(...codePoints);
             }
-
-            /**
-             * --- CORRECTED, RELIABLE FUNCTION ---
-             * This version correctly formats names and handles the 'ss' vs. country code collision.
-             */
             function formatDisplayName(name) {
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
                 const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
-                
-                // A list of abbreviations that are protocols, NOT country codes.
                 const protocolPrefixes = ['ss', 'ssr'];
-
                 const parts = name.split(/[-_]/);
                 let flag = '';
-
-                // Check for a flag ONLY if the first part is NOT a known protocol abbreviation.
                 if (parts.length > 0 && !protocolPrefixes.includes(parts[0].toLowerCase())) {
                     flag = getFlagEmoji(parts[0].toUpperCase());
                 }
-
                 const displayNameParts = parts.map((part, index) => {
                     const lowerPart = part.toLowerCase();
-
-                    if (specialReplacements[lowerPart]) {
-                        return specialReplacements[lowerPart];
-                    }
-                    if (uppercaseTypes.includes(lowerPart)) {
-                        return part.toUpperCase();
-                    }
-                    // Uppercase the country code part if a flag was found for it
-                    if (index === 0 && flag) {
-                        return part.toUpperCase();
-                    }
-                    // Default: Capitalize the first letter
+                    if (specialReplacements[lowerPart]) return specialReplacements[lowerPart];
+                    if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase();
+                    if (index === 0 && flag) return part.toUpperCase();
                     return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
                 });
-
                 const textName = displayNameParts.join(' ');
-                
                 return flag ? `${flag} ${textName}` : textName;
             }
-
-
             function updateQRCode(url) {
                 qrcodeDiv.innerHTML = '';
                 if (url) {
@@ -663,16 +572,189 @@
                     } catch (error) { console.error('QR code initialization failed:', error); }
                 }
             }
+
+            // --- ANALYSIS PARSERS ---
+
+            function parseBase64Subscription(content) {
+                let decodedContent;
+                try {
+                    decodedContent = atob(content);
+                } catch (e) {
+                    decodedContent = content;
+                }
+                const protocols = ['vmess://', 'vless://', 'ss://', 'trojan://', 'ssr://', 'hy2://', 'tuic://'];
+                const nodes = decodedContent.split('\n').filter(line => {
+                    const trimmedLine = line.trim();
+                    if (trimmedLine.startsWith('#') || trimmedLine.startsWith('//') || trimmedLine.length === 0) {
+                        return false;
+                    }
+                    return protocols.some(proto => trimmedLine.startsWith(proto));
+                });
+                return nodes.length;
+            }
+
+            function parseClashSubscription(content) {
+                const proxyRegex = /^\s*proxies:\s*\n((?:\s*-\s*.+\n?)*)/m;
+                const match = content.match(proxyRegex);
+                if (!match || !match[1]) return 0;
+                const proxyBlock = match[1];
+                const nodeMatches = proxyBlock.match(/^\s*-\s/gm);
+                return nodeMatches ? nodeMatches.length : 0;
+            }
+
+            function parseSingboxSubscription(content) {
+                try {
+                    const cleanedContent = content.replace(/^\s*\/\/.*\r?\n/gm, '');
+                    const data = JSON.parse(cleanedContent);
+                    if (!data.outbounds || !Array.isArray(data.outbounds)) return 0;
+                    const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns', 'fallback'];
+                    const proxies = data.outbounds.filter(outbound => 
+                        outbound.type && !utilityTypes.includes(outbound.type.toLowerCase())
+                    );
+                    return proxies.length;
+                } catch (e) {
+                    console.error("Sing-box JSON parsing error:", e);
+                    return 0; // Return 0 on parsing error
+                }
+            }
+
+            function parseSurfboardSubscription(content) {
+                const lines = content.split('\n');
+                let inProxySection = false;
+                let nodeCount = 0;
+                for (const line of lines) {
+                    const trimmedLine = line.trim();
+                    if (trimmedLine.toLowerCase() === '[proxy]') {
+                        inProxySection = true;
+                        continue;
+                    }
+                    if (trimmedLine.startsWith('[')) {
+                        inProxySection = false;
+                    }
+                    if (inProxySection && trimmedLine.includes('=')) {
+                        if (!trimmedLine.toLowerCase().startsWith('direct =')) {
+                            nodeCount++;
+                        }
+                    }
+                }
+                return nodeCount;
+            }
+
+            // --- EVENT LISTENERS ---
+
+            analyzeButton.addEventListener('click', async () => {
+                const url = subscriptionUrlInput.value;
+                const clientCore = ipTypeSelect.value;
+                if (!url) return;
+
+                analysisContainer.classList.remove('hidden');
+                analysisResults.innerHTML = '<p class="flex items-center gap-2"><i data-lucide="loader-2" class="animate-spin"></i> Analyzing subscription...</p>';
+                lucide.createIcons();
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
+                    const content = await response.text();
+                    
+                    let nodeCount = 0;
+                    switch (clientCore.toLowerCase()) {
+                        case 'xray':
+                            nodeCount = parseBase64Subscription(content);
+                            break;
+                        case 'clash':
+                            nodeCount = parseClashSubscription(content);
+                            break;
+                        case 'singbox':
+                            nodeCount = parseSingboxSubscription(content);
+                            break;
+                        case 'surfboard':
+                            nodeCount = parseSurfboardSubscription(content);
+                            break;
+                        default:
+                            throw new Error('Analysis for this client type is not supported.');
+                    }
+                    
+                    analysisResults.innerHTML = `<p class="font-medium text-green-700">✅ Analysis Complete</p>
+                                                 <p><strong>Total Proxies Found:</strong> <span class="font-bold text-lg">${nodeCount}</span></p>`;
+                } catch (error) {
+                    analysisResults.innerHTML = `<p class="font-medium text-red-700">❌ Analysis Failed</p>
+                                                 <p>${error.message}</p>`;
+                }
+            });
+
+            configTypeSelect.addEventListener('change', () => {
+                resetSelect(ipTypeSelect, 'Select Client/Core');
+                resetSelect(otherElementSelect, 'Select Subscription');
+                searchBar.value = '';
+                searchBar.disabled = true;
+                resultArea.classList.add('hidden');
+                
+                if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
+                    populateSelect(ipTypeSelect, structuredData[configTypeSelect.value], 'Select Client/Core');
+                    ipTypeSelect.disabled = false;
+                }
+            });
             
+            ipTypeSelect.addEventListener('change', () => {
+                const selectedCore = ipTypeSelect.value;
+                searchBar.value = '';
+                
+                if (selectedCore) {
+                    updateClientInfo(selectedCore);
+                    resultArea.classList.remove('hidden');
+                    subscriptionDetailsContainer.classList.add('hidden');
+                    analysisContainer.classList.add('hidden'); // Hide on core change
+                    searchBar.disabled = false;
+                    updateOtherElementOptions();
+                } else {
+                    resultArea.classList.add('hidden');
+                    searchBar.disabled = true;
+                    resetSelect(otherElementSelect, 'Select Subscription');
+                }
+            });
+
+            searchBar.addEventListener('input', updateOtherElementOptions);
+
+            otherElementSelect.addEventListener('change', () => {
+                analysisContainer.classList.add('hidden'); // Hide analysis on new selection
+                const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value];
+                if (url) {
+                    subscriptionUrlInput.value = url;
+                    updateQRCode(url);
+                    subscriptionDetailsContainer.classList.remove('hidden');
+                } else {
+                    subscriptionDetailsContainer.classList.add('hidden');
+                }
+            });
+
+            copyButton.addEventListener('click', () => {
+                if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
+                document.execCommand('copy');
+                const copyIcon = copyButton.querySelector('.copy-icon');
+                const checkIcon = copyButton.querySelector('.check-icon');
+                copyIcon.classList.add('hidden');
+                checkIcon.classList.remove('hidden');
+                setTimeout(() => {
+                    copyIcon.classList.remove('hidden');
+                    checkIcon.classList.add('hidden');
+                }, 2000);
+            });
+            document.addEventListener('copy', (event) => {
+                if (subscriptionUrlInput.value && event.clipboardData) {
+                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value);
+                    event.preventDefault();
+                }
+            });
+
             function updateClientInfo(coreType) {
+                const clientInfoContainer = document.getElementById('client-info-container');
                 clientInfoList.innerHTML = '';
                 const platforms = clientInfoData[coreType];
-
                 if (!platforms || Object.keys(platforms).length === 0) {
-                    clientInfoList.innerHTML = '<p class="text-sm text-slate-500">No specific client information available for this type.</p>';
+                    clientInfoContainer.classList.add('hidden');
                     return;
                 }
-
+                clientInfoContainer.classList.remove('hidden');
                 Object.entries(platforms).forEach(([platformName, clients]) => {
                     if (clients.length > 0) {
                         const platformContainer = document.createElement('div');
@@ -702,17 +784,14 @@
                         clientInfoList.appendChild(platformContainer);
                     }
                 });
-
                 try { lucide.createIcons(); } catch(e) { console.error(e); }
             }
-
             function updateOtherElementOptions() {
                 const selectedConfigType = configTypeSelect.value;
                 const selectedIpType = ipTypeSelect.value;
                 const searchTerm = searchBar.value.toLowerCase();
                 resetSelect(otherElementSelect, 'Select Subscription');
                 subscriptionDetailsContainer.classList.add('hidden');
-                
                 if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
                     const allElements = structuredData[selectedConfigType][selectedIpType];
                     const filteredElements = Object.keys(allElements)
@@ -723,68 +802,6 @@
                 }
             }
 
-            configTypeSelect.addEventListener('change', () => {
-                resetSelect(ipTypeSelect, 'Select Client/Core');
-                resetSelect(otherElementSelect, 'Select Subscription');
-                searchBar.value = '';
-                searchBar.disabled = true;
-                resultArea.classList.add('hidden');
-                
-                if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
-                    populateSelect(ipTypeSelect, structuredData[configTypeSelect.value], 'Select Client/Core');
-                    ipTypeSelect.disabled = false;
-                }
-            });
-            
-            ipTypeSelect.addEventListener('change', () => {
-                const selectedCore = ipTypeSelect.value;
-                searchBar.value = '';
-                
-                if (selectedCore) {
-                    updateClientInfo(selectedCore);
-                    resultArea.classList.remove('hidden');
-                    subscriptionDetailsContainer.classList.add('hidden');
-                    searchBar.disabled = false;
-                    updateOtherElementOptions();
-                } else {
-                    resultArea.classList.add('hidden');
-                    searchBar.disabled = true;
-                    resetSelect(otherElementSelect, 'Select Subscription');
-                }
-            });
-
-            searchBar.addEventListener('input', updateOtherElementOptions);
-
-            otherElementSelect.addEventListener('change', () => {
-                const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value] || null;
-                if (url) {
-                    subscriptionUrlInput.value = url;
-                    updateQRCode(url);
-                    subscriptionDetailsContainer.classList.remove('hidden');
-                } else {
-                    subscriptionDetailsContainer.classList.add('hidden');
-                }
-            });
-
-            copyButton.addEventListener('click', () => {
-                if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
-                document.execCommand('copy');
-                const copyIcon = copyButton.querySelector('.copy-icon');
-                const checkIcon = copyButton.querySelector('.check-icon');
-                copyIcon.classList.add('hidden');
-                checkIcon.classList.remove('hidden');
-                setTimeout(() => {
-                    copyIcon.classList.remove('hidden');
-                    checkIcon.classList.add('hidden');
-                }, 2000);
-            });
-            document.addEventListener('copy', (event) => {
-                if (subscriptionUrlInput.value && event.clipboardData) {
-                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value);
-                    event.preventDefault();
-                }
-            });
-            
             populateSelect(configTypeSelect, structuredData, 'Select Config Type');
             configTypeSelect.disabled = false;
         });
