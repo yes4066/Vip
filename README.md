@@ -4,7 +4,8 @@
 
 ## 🌐 Main Interface
 
-Access the subscription links through the main UI: [itsyebekhe.github.io/PSG](https://itsyebekhe.github.io/PSG)
+Access the subscription links through the main UI:  
+🔗 [https://itsyebekhe.github.io/PSG/](https://itsyebekhe.github.io/PSG/)
 
 ## 📦 Features
 
@@ -20,8 +21,9 @@ Access the subscription links through the main UI: [itsyebekhe.github.io/PSG](ht
 
 ## 🧑‍💻 Contributors
 
-- [Ye Be Khe](https://github.com/itsyebekhe)
-- [actions-user](https://github.com/actions-user)
+- [Ye Be Khe](https://github.com/itsyebekhe) — creator and primary maintainer  
+- [seramo](https://github.com/seramo) — contributed proxy-related tools and ideas  
+- [actions-user](https://github.com/actions-user) — GitHub Actions automation
 
 ## 📄 License
 
