@@ -126,12 +126,10 @@
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 16",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
-                "❔ XX | 🟢 | vless | @xsv2ray | 6",
                 "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
-                "🇺🇸 US | 🟢 | vless | @deamnet_proxy | 19",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
@@ -182,12 +180,10 @@
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 16",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
-                "❔ XX | 🟢 | vless | @xsv2ray | 6",
                 "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
-                "🇺🇸 US | 🟢 | vless | @deamnet_proxy | 19",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
@@ -748,29 +744,6 @@
             }
         },
         {
-            "tag": "❔ XX | 🟢 | vless | @xsv2ray | 6",
-            "type": "vless",
-            "server": "cvvmtfin.fekoli.com",
-            "server_port": 2095,
-            "uuid": "Anty_Vpn-Anty_Vpn-Anty_Vpn",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "277HDYaNIvLYS9CMSr1CbkcTaahPEUCymW_0Ad17p2M",
-                    "short_id": "f2"
-                }
-            }
-        },
-        {
             "tag": "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0",
             "type": "vless",
             "server": "static.25.243.217.95.clients.your-server.de",
@@ -862,29 +835,6 @@
                 "reality": {
                     "enabled": true,
                     "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
-                    "short_id": ""
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @deamnet_proxy | 19",
-            "type": "vless",
-            "server": "5.181.171.10",
-            "server_port": 443,
-            "uuid": "a0de1607-5b63-fab8-a759-9f98706b6125",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "speed.cloudflare.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "YNGotlyAx3ELUmi4lxOUjiEDmibqf1pPUTE9o3YYT2Y",
                     "short_id": ""
                 }
             }

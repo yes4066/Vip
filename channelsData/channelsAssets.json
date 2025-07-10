@@ -435,8 +435,8 @@
     "configshubplus": {
         "types": [
             "vless",
-            "ss",
-            "vmess"
+            "trojan",
+            "ss"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/configshubplus.jpg"
@@ -754,6 +754,7 @@
     "entrynet": {
         "types": [
             "vless",
+            "vmess",
             "ss",
             "trojan"
         ],
@@ -1409,9 +1410,9 @@
     "hope_net": {
         "types": [
             "vless",
-            "trojan",
             "ss",
-            "vmess"
+            "vmess",
+            "trojan"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1487,10 +1488,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
+            "ss",
             "vmess",
             "vless",
-            "ss"
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -2144,7 +2145,8 @@
     },
     "mobilinternet": {
         "types": [
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "#فیلترشکن #vpn #هوش_مصنوعی",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mobilinternet.jpg"
@@ -2158,8 +2160,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -2567,7 +2569,14 @@
         "title": "پروکسی - V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/prooxyk.jpg"
     },
-    "ProtoLandCo": {},
+    "ProtoLandCo": {
+        "types": [
+            "vless",
+            "ss"
+        ],
+        "title": "ProtoLand | پروتولند",
+        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ProtoLandCo.jpg"
+    },
     "proxie": {
         "types": [
             "vless"
@@ -2632,8 +2641,8 @@
     },
     "proxy_mtproto_vpns_free": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxy_mtproto_vpns_free.jpg"
@@ -3491,9 +3500,9 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "trojan",
-            "ss",
             "vless",
+            "ss",
+            "trojan",
             "vmess"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
@@ -3657,9 +3666,7 @@
     "v2raych": {
         "types": [
             "vless",
-            "ss",
-            "trojan",
-            "vmess"
+            "ss"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raych.jpg"
@@ -3696,8 +3703,8 @@
     },
     "v2rayfree": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayfree.jpg"
@@ -4106,9 +4113,7 @@
     },
     "v2rayweb": {
         "types": [
-            "vless",
-            "vmess",
-            "trojan"
+            "vless"
         ],
         "title": "V2ray | VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayweb.jpg"
@@ -5084,8 +5089,8 @@
     },
     "zerobaipiao": {
         "types": [
-            "vmess",
             "trojan",
+            "vmess",
             "ss"
         ],
         "title": "免费节点 🏆【1小时前更新】",
