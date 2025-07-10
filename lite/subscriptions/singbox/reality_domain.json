@@ -106,6 +106,7 @@
             "outbounds": [
                 "URL-TEST",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -119,11 +120,10 @@
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @public504 | 11",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
-                "🇩🇪 DE | 🟢 | vless | @v2ray_free_conf | 19",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 13",
-                "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 10",
+                "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 9",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
@@ -136,6 +136,7 @@
             "type": "urltest",
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 3",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -149,11 +150,10 @@
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @public504 | 11",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
-                "🇩🇪 DE | 🟢 | vless | @v2ray_free_conf | 19",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 13",
-                "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 10",
+                "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 9",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
@@ -201,6 +201,33 @@
                     "public_key": "QYWJdS4JDdSmQKeMkJfPshFuz0bC3jhm9yW3uJfQFmw",
                     "short_id": "b4"
                 }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 18",
+            "type": "vless",
+            "server": "r1.vipfastconnect.site",
+            "server_port": 2083,
+            "uuid": "7c6a9976-adbe-4d56-8c4f-f6d7d1f98e7a",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "wordpress.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Q9KrxctP_L5fT1sL_sQLejDpNn7KdH1b-wZ_GR0UtX4",
+                    "short_id": "f414e49bc35be542"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "vless2083"
             }
         },
         {
@@ -531,29 +558,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2ray_free_conf | 19",
-            "type": "vless",
-            "server": "wolf540.api-tel.ir",
-            "server_port": 36338,
-            "uuid": "d4710a65-4d89-4736-b575-917334dcfffb",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "WRbNyWLu_I0Mfyv6WWf4EwoE2srtKdwlUq2Z-tbJ6j4",
-                    "short_id": "82bd6d1066"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
             "type": "vless",
             "server": "site.felinefreedom.site",
@@ -627,7 +631,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 10",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 9",
             "type": "vless",
             "server": "test-lets-wildcard.spotifycdn.org",
             "server_port": 443,
