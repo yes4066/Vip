@@ -22,6 +22,7 @@ proxies:
   - {"name":"🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15","type":"trojan","server":"ru2.asc-sam.ir","port":443,"password":"IM4e0ZQNPU","skip-cert-verify":false}
   - {"name":"🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6","type":"trojan","server":"de1.test3.net","port":443,"password":"b8841c50-c3ad-11ee-9be0-1239d0255272","skip-cert-verify":false}
   - {"name":"🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12","type":"trojan","server":"f10011.flyflylflyflysbs.sbs","port":19949,"password":"9c3c38d0-8637-4c94-a790-61f3202a943a","skip-cert-verify":true}
+  - {"name":"🇭🇰 HK | 🟢 | trojan | @NamiraNet | 42","type":"trojan","server":"pt.mjt000.com","port":443,"password":"84587c21-9938-42fc-a4b0-4f72dd72b7aa","skip-cert-verify":false}
 
 rule-providers:
   ir_domains:
@@ -57,6 +58,7 @@ proxy-groups:
       - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15'
       - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
       - '🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12'
+      - '🇭🇰 HK | 🟢 | trojan | @NamiraNet | 42'
 
   - name: 📉 Fallback
     type: fallback
@@ -68,6 +70,7 @@ proxy-groups:
       - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15'
       - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
       - '🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12'
+      - '🇭🇰 HK | 🟢 | trojan | @NamiraNet | 42'
       
   - name: All-Proxies
     type: select
@@ -77,6 +80,7 @@ proxy-groups:
       - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15'
       - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
       - '🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12'
+      - '🇭🇰 HK | 🟢 | trojan | @NamiraNet | 42'
 
 rules:
   - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
