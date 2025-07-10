@@ -98,7 +98,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 23:49:41 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 23:56:20 +0330</p>
         </footer>
     </div>
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
@@ -709,14 +709,13 @@
                     const content = await response.text();
                     let analysisOutput = '';
                     
-                    // CORRECTED: Added cases for 'meta' and 'location' to fall through to the appropriate parsers.
                     switch (clientCore.toLowerCase()) {
-                        case 'location': // Location-based configs are parsed like Xray (base64) configs.
+                        case 'location':
                         case 'xray':
                             const xrayResults = parseBase64Subscription(content);
                             analysisOutput = `<p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p> <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${xrayResults.nodeCount}</span></p> <p><strong>Protocols:</strong> ${xrayResults.protocols.length > 0 ? xrayResults.protocols.join(', ').toUpperCase() : 'N/A'}</p> <p><strong>Countries:</strong> ${xrayResults.countries.length > 0 ? xrayResults.countries.map(c => getFlagEmoji(c) + ' ' + c).join(', ') : 'N/A'}</p>`;
                             break;
-                        case 'meta': // Meta configs are parsed like Clash configs.
+                        case 'meta':
                         case 'clash':
                             const clashResults = parseClashSubscription(content);
                             analysisOutput = `<p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p> <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${clashResults.proxyCount}</span></p> <p><strong>Proxy Groups:</strong> <span class="font-bold text-lg">${clashResults.groupCount}</span></p>`;
