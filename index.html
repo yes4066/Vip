@@ -94,7 +94,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-11 01:54:51 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-11 01:58:55 +0330</p>
         </footer>
     </div>
     
@@ -137,17 +137,19 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="font-semibold mb-3 text-center text-slate-700">Provider Keywords</h3>
-                        <div id="providerTagCloud" class="p-4 bg-slate-100 rounded-lg min-h-[150px] flex flex-wrap gap-2 items-center justify-center"></div>
+                        <h3 class="font-semibold mb-3 text-center text-slate-700">Security Profile</h3>
+                        <div class="max-w-[200px] sm:max-w-[250px] mx-auto">
+                           <canvas id="securityChart"></canvas>
+                        </div>
                     </div>
                 </div>
                 <div class="space-y-8">
                      <div>
-                        <h3 class="font-semibold mb-3 text-center text-slate-700">Geographic Distribution</h3>
+                        <h3 class="font-semibold mb-3 text-center text-slate-700">Top Countries</h3>
                         <div id="countryBarChartContainer"><canvas id="countryBarChart"></canvas></div>
                     </div>
                      <div>
-                        <h3 class="font-semibold mb-3 text-center text-slate-700">Transport & Security</h3>
+                        <h3 class="font-semibold mb-3 text-center text-slate-700">Top Transports</h3>
                         <div id="transportChartContainer"><canvas id="transportChart"></canvas></div>
                     </div>
                 </div>
@@ -629,10 +631,28 @@
                 return String.fromCodePoint(...countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt()));
             }
 
-            // --- UNIVERSAL DNA PARSER (UPGRADED) ---
+            // --- UNIVERSAL DNA PARSER (DEFINITIVE VERSION) ---
             function getUniversalDna(content, coreType) {
-                const dna = { protocols: {}, countries: {}, providers: {}, transports: {}, security: {tls: {}, reality: {}}, total: 0 };
-                const providerKeywords = ['aws', 'cdn', 'google', 'azure', 'oracle', 'linode', 'vultr', 'digitalocean', 'hetzner', 'ovh', 'alibaba', 'vip', 'premium'];
+                const dna = { protocols: {}, countries: {}, transports: {}, security: {tls: 0, reality: 0, insecure: 0}, total: 0 };
+                
+                const processNodeDetails = (protocol, name, transport, security) => {
+                    if (!protocol || !name) return;
+                    dna.total++;
+                    const lowerName = name.toLowerCase();
+
+                    dna.protocols[protocol] = (dna.protocols[protocol] || 0) + 1;
+                    dna.transports[transport] = (dna.transports[transport] || 0) + 1;
+                    
+                    if (security === 'tls') dna.security.tls++;
+                    else if (security === 'reality') dna.security.reality++;
+                    else dna.security.insecure++;
+
+                    const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
+                    if (countryMatch) {
+                        const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
+                        dna.countries[code] = (dna.countries[code] || 0) + 1;
+                    }
+                };
                 
                 try {
                     switch (coreType.toLowerCase()) {
@@ -641,43 +661,27 @@
                             const parsedYaml = jsyaml.load(content);
                             if (parsedYaml && Array.isArray(parsedYaml.proxies)) {
                                 parsedYaml.proxies.forEach(p => {
-                                    if(!p || !p.name || !p.type) return;
-                                    dna.total++;
-                                    const lowerName = p.name.toLowerCase();
-                                    const transport = p.network || 'tcp';
-                                    dna.protocols[p.type] = (dna.protocols[p.type] || 0) + 1;
-                                    dna.transports[transport] = (dna.transports[transport] || 0) + 1;
-                                    if (p.tls) dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
-                                    if (p['reality-opts']) dna.security.reality[transport] = (dna.security.reality[transport] || 0) + 1;
-                                    
-                                    const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
-                                    if (countryMatch) dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] = (dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] || 0) + 1;
-                                    providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
+                                    let security = 'none';
+                                    if (p.tls) security = 'tls';
+                                    if (p['reality-opts']) security = 'reality';
+                                    processNodeDetails(p.type, p.name, p.network || 'tcp', security);
                                 });
                             }
                             break;
 
                         case 'singbox':
-                            // FIX: Use robust jsonc_parser (note the underscore)
+                            // FIX: Use robust jsonc_parser (with underscore)
                             const parsedJson = jsonc_parser.parse(content);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
                                 parsedJson.outbounds
                                     .filter(o => o.type && !utilityTypes.includes(o.type))
                                     .forEach(o => {
-                                        if(!o || !o.tag || !o.type) return;
-                                        dna.total++;
-                                        const lowerName = o.tag.toLowerCase();
-                                        const transport = o.transport?.type || o.network || 'tcp';
-                                        dna.protocols[o.type] = (dna.protocols[o.type] || 0) + 1;
-                                        dna.transports[transport] = (dna.transports[transport] || 0) + 1;
+                                        let security = 'none';
                                         if (o.tls?.enabled) {
-                                            if(o.tls.reality?.enabled) dna.security.reality[transport] = (dna.security.reality[transport] || 0) + 1;
-                                            else dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
+                                            security = o.tls.reality?.enabled ? 'reality' : 'tls';
                                         }
-                                        const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
-                                        if (countryMatch) dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] = (dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] || 0) + 1;
-                                        providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
+                                        processNodeDetails(o.type, o.tag, o.transport?.type || 'tcp', security);
                                     });
                             }
                             break;
@@ -686,7 +690,6 @@
                         case 'location':
                         default: // Fallback for base64 with expanded regex
                             const decoded = atob(content);
-                            // FIX: Added dedicated regex for VMess, separate from others.
                             const vmessRegex = /^vmess:\/\/(.+)$/;
                             const standardRegex = /^(vless|trojan|ss|hy2|tuic):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
                             const hysteriaRegex = /^(hysteria|hysteria2):\/\/([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
@@ -696,41 +699,33 @@
                                 if (!line) return;
                                 
                                 let match;
-                                let protocol = '', lowerName = '', transport = 'tcp', security = 'none';
-
                                 if (match = line.match(vmessRegex)) {
                                     try {
                                         const vmessConfig = JSON.parse(atob(match[1]));
-                                        protocol = 'vmess';
-                                        lowerName = (vmessConfig.ps || '').toLowerCase();
-                                        transport = vmessConfig.net || 'tcp';
-                                        security = vmessConfig.tls || 'none';
-                                    } catch (e) { /* Malformed vmess, skip */ return; }
+                                        processNodeDetails(
+                                            'vmess',
+                                            vmessConfig.ps || 'vmess_node',
+                                            vmessConfig.net || 'tcp',
+                                            vmessConfig.tls || 'none'
+                                        );
+                                    } catch (e) { /* Malformed vmess, skip */ }
                                 } else if (match = line.match(standardRegex) || line.match(hysteriaRegex)) {
-                                    protocol = match[1];
+                                    const protocol = match[1];
                                     const params = new URLSearchParams(match[match.length - 2] || '');
-                                    lowerName = decodeURIComponent(match[match.length - 1] || '').trim().toLowerCase();
-                                    transport = params.get('type') || 'tcp';
-                                    security = params.get('security') || 'none';
-                                }
-
-                                if (protocol) {
-                                    dna.total++;
-                                    dna.protocols[protocol] = (dna.protocols[protocol] || 0) + 1;
-                                    dna.transports[transport] = (dna.transports[transport] || 0) + 1;
-                                    if (security === 'tls') dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
-                                    else if (security === 'reality') dna.security.reality[transport] = (dna.security.reality[transport] || 0) + 1;
-
-                                    const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
-                                    if (countryMatch) dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] = (dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] || 0) + 1;
-                                    providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
+                                    const name = decodeURIComponent(match[match.length - 1] || `${protocol}_node`);
+                                    processNodeDetails(
+                                        protocol,
+                                        name,
+                                        params.get('type') || 'tcp',
+                                        params.get('security') || 'none'
+                                    );
                                 }
                             });
                             break;
                     }
                 } catch (e) {
                     console.error(`Parsing failed for type ${coreType}:`, e);
-                    throw new Error(`Could not parse the subscription content. It may be invalid or malformed for the '${coreType}' type.`);
+                    throw new Error(`Could not parse subscription. It may be invalid or malformed for the '${coreType}' type.`);
                 }
                 return dna;
             }
@@ -772,18 +767,9 @@
                     });
                     document.querySelector('#protocolTotal div span:first-child').textContent = dna.total;
 
-                    const transportLabels = Object.keys(dna.transports);
-                    charts.transport = new Chart(document.getElementById('transportChart'), {
-                        type: 'bar',
-                        data: {
-                            labels: transportLabels,
-                            datasets: [
-                                { label: 'TLS', data: transportLabels.map(l => dna.security.tls[l] || 0), backgroundColor: '#34d399' },
-                                { label: 'REALITY', data: transportLabels.map(l => dna.security.reality[l] || 0), backgroundColor: '#a78bfa' },
-                                { label: 'Insecure', data: transportLabels.map(l => dna.transports[l] - (dna.security.tls[l] || 0) - (dna.security.reality[l] || 0)), backgroundColor: '#fbbf24' }
-                            ]
-                        },
-                        options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } }, plugins: { legend: { position: 'bottom' }} }
+                    charts.security = new Chart(document.getElementById('securityChart'), {
+                        type: 'doughnut', data: { labels: ['TLS', 'REALITY', 'Insecure'], datasets: [{ data: [dna.security.tls, dna.security.reality, dna.security.insecure], backgroundColor: ['#34d399', '#a78bfa', '#fbbf24'], borderWidth: 0 }] },
+                        options: { responsive: true, cutout: '70%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15 }}}}
                     });
 
                     const sortedCountries = Object.entries(dna.countries).sort((a, b) => b[1] - a[1]).slice(0, 7);
@@ -792,19 +778,12 @@
                         options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } } }
                     });
 
-                    const tagCloud = document.getElementById('providerTagCloud');
-                    tagCloud.innerHTML = '';
-                    const sortedProviders = Object.entries(dna.providers).sort((a, b) => b[1] - a[1]);
-                    if (sortedProviders.length === 0) {
-                        tagCloud.innerHTML = '<p class="text-slate-500 text-sm">No common keywords found.</p>';
-                    } else {
-                        sortedProviders.forEach(([provider, count]) => {
-                           const tag = document.createElement('span');
-                           tag.className = 'bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full';
-                           tag.textContent = `${provider} (${count})`;
-                           tagCloud.appendChild(tag);
-                        });
-                    }
+                    const sortedTransports = Object.entries(dna.transports).sort((a, b) => b[1] - a[1]).slice(0, 7);
+                    charts.transport = new Chart(document.getElementById('transportChart'), {
+                        type: 'bar', data: { labels: sortedTransports.map(t => t[0]), datasets: [{ label: '# Nodes', data: sortedTransports.map(t => t[1]), backgroundColor: '#f472b6', borderRadius: 4 }] },
+                        options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } } }
+                    });
+                    
                     document.getElementById('dnaLoadingState').classList.add('hidden');
                     document.getElementById('dnaResultsContainer').classList.remove('hidden');
                 } catch (error) {
