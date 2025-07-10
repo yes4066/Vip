@@ -84,7 +84,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 22:10:27 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 22:17:56 +0330</p>
         </footer>
     </div>
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
@@ -609,16 +609,43 @@
                 return String.fromCodePoint(...codePoints);
             }
 
+            /**
+             * MODIFIED FUNCTION
+             * Formats a raw name for display with special capitalization rules.
+             * Example: 'DE-premium_ss' -> '🇩🇪 DE Premium SHADOWSOCKS'
+             * Example: 'US-all-vless-ws' -> '🇺🇸 US All VLESS WS'
+             */
             function formatDisplayName(name) {
+                // List of config types to be fully uppercased. Add more as needed.
+                const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+
                 const parts = name.split(/[-_]/);
                 const potentialCode = parts[0].toUpperCase();
-                let flag = '';
+                let flag = getFlagEmoji(potentialCode);
 
-                if (potentialCode.length === 2) {
-                    flag = getFlagEmoji(potentialCode);
-                }
+                const displayNameParts = parts.map((part, index) => {
+                    const lowerPart = part.toLowerCase();
 
-                const displayName = parts.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                    // Rule 1: First part is a country code, keep it uppercase.
+                    if (index === 0 && flag) {
+                        return part.toUpperCase();
+                    }
+                    
+                    // Rule 2: Special replacement for 'ss' -> 'SHADOWSOCKS'.
+                    if (lowerPart === 'ss') {
+                        return 'SHADOWSOCKS';
+                    }
+
+                    // Rule 3: Check if it's a known config type to be uppercased.
+                    if (uppercaseTypes.includes(lowerPart)) {
+                        return part.toUpperCase();
+                    }
+
+                    // Rule 4: Default formatting (Capitalize first letter).
+                    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+                });
+
+                const displayName = displayNameParts.join(' ');
                 
                 return flag ? `${flag} ${displayName}` : displayName;
             }
