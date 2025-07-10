@@ -121,7 +121,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-10 23:15:18 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: __TIMESTAMP_PLACEHOLDER__</p>
         </footer>
     </div>
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
@@ -136,11 +136,294 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- 1. INITIALIZE ---
+            // --- 1. INITIALIZE & GRAB ELEMENTS ---
             lucide.createIcons();
-            const structuredData = null;
-
-            // --- 2. GRAB ELEMENTS ---
+            const structuredData = {
+    "Lite": {
+        "clash": {
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/mix",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/ss",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/ss_domain",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/ss_ipv4",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/ss_ipv6",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/trojan",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/trojan_domain",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/trojan_ipv4",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/vmess",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/clash/vmess_domain"
+        },
+        "location": {
+            "AE": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/AE",
+            "AM": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/AM",
+            "AT": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/AT",
+            "BR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/BR",
+            "CA": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/CA",
+            "CH": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/CH",
+            "CL": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/CL",
+            "CN": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/CN",
+            "DE": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/DE",
+            "FI": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/FI",
+            "FR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/FR",
+            "GB": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/GB",
+            "IE": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/IE",
+            "IR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/IR",
+            "IT": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/IT",
+            "JP": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/JP",
+            "KZ": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/KZ",
+            "LT": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/LT",
+            "NL": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/NL",
+            "PL": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/PL",
+            "RU": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/RU",
+            "SE": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/SE",
+            "SG": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/SG",
+            "TR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/TR",
+            "US": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/US",
+            "XX": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/location/normal/XX"
+        },
+        "meta": {
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/mix",
+            "reality": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality",
+            "reality_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality_domain",
+            "reality_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality_ipv4",
+            "reality_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/reality_ipv6",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/ss",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/ss_domain",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/ss_ipv4",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/ss_ipv6",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/trojan",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/trojan_domain",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/trojan_ipv4",
+            "vless": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/vless",
+            "vless_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/vless_domain",
+            "vless_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/vless_ipv4",
+            "vless_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/vless_ipv6",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/vmess",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/meta/vmess_domain"
+        },
+        "singbox": {
+            "hy2": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/hy2.json",
+            "hy2_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/hy2_domain.json",
+            "hy2_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/hy2_ipv4.json",
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/mix.json",
+            "reality": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/reality.json",
+            "reality_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/reality_domain.json",
+            "reality_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/reality_ipv4.json",
+            "reality_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/reality_ipv6.json",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/ss.json",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/ss_domain.json",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/ss_ipv4.json",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/ss_ipv6.json",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/trojan.json",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/trojan_domain.json",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/trojan_ipv4.json",
+            "tuic": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/tuic.json",
+            "vless": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/vless.json",
+            "vless_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/vless_domain.json",
+            "vless_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/vless_ipv4.json",
+            "vless_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/vless_ipv6.json",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/vmess.json",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/vmess_domain.json",
+            "xhttp": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/xhttp.json",
+            "xhttp_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/xhttp_domain.json",
+            "xhttp_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/singbox/xhttp_ipv4.json"
+        },
+        "surfboard": {
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/mix",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/ss",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/ss_domain",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/ss_ipv4",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/ss_ipv6",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/trojan",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/trojan_domain",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/trojan_ipv4",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/vmess",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/surfboard/vmess_domain"
+        },
+        "xray": {
+            "hy2": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/hy2",
+            "hy2_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/hy2_domain",
+            "hy2_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/hy2_ipv4",
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/mix",
+            "reality": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/reality",
+            "reality_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/reality_domain",
+            "reality_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/reality_ipv4",
+            "reality_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/reality_ipv6",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/ss",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/ss_domain",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/ss_ipv4",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/ss_ipv6",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/trojan",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/trojan_domain",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/trojan_ipv4",
+            "tuic": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/tuic",
+            "vless": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/vless",
+            "vless_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/vless_domain",
+            "vless_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/vless_ipv4",
+            "vless_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/vless_ipv6",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/vmess",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/vmess_domain",
+            "xhttp": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/xhttp",
+            "xhttp_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/xhttp_domain",
+            "xhttp_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/base64/xhttp_ipv4"
+        }
+    },
+    "Standard": {
+        "clash": {
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/mix",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/ss",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/ss_domain",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/ss_ipv4",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/ss_ipv6",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/trojan",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/trojan_domain",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/trojan_ipv4",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/vmess",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/clash/vmess_domain"
+        },
+        "location": {
+            "AE": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/AE",
+            "AM": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/AM",
+            "AT": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/AT",
+            "AU": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/AU",
+            "BR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/BR",
+            "CA": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/CA",
+            "CH": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/CH",
+            "CL": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/CL",
+            "CN": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/CN",
+            "CW": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/CW",
+            "CY": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/CY",
+            "CZ": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/CZ",
+            "DE": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/DE",
+            "ES": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/ES",
+            "FI": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/FI",
+            "FR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/FR",
+            "GB": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/GB",
+            "HK": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/HK",
+            "HU": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/HU",
+            "ID": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/ID",
+            "IE": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/IE",
+            "IN": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/IN",
+            "IR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/IR",
+            "IS": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/IS",
+            "IT": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/IT",
+            "JP": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/JP",
+            "KH": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/KH",
+            "KR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/KR",
+            "KZ": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/KZ",
+            "LK": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/LK",
+            "LT": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/LT",
+            "LU": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/LU",
+            "LV": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/LV",
+            "MT": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/MT",
+            "MX": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/MX",
+            "NL": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/NL",
+            "NO": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/NO",
+            "PH": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/PH",
+            "PL": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/PL",
+            "PT": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/PT",
+            "RS": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/RS",
+            "RU": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/RU",
+            "SE": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/SE",
+            "SG": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/SG",
+            "TH": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/TH",
+            "TR": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/TR",
+            "UA": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/UA",
+            "US": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/US",
+            "VN": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/VN",
+            "XX": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/location/normal/XX"
+        },
+        "meta": {
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/mix",
+            "reality": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/reality",
+            "reality_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/reality_domain",
+            "reality_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/reality_ipv4",
+            "reality_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/reality_ipv6",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/ss",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/ss_domain",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/ss_ipv4",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/ss_ipv6",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/trojan",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/trojan_domain",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/trojan_ipv4",
+            "vless": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/vless",
+            "vless_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/vless_domain",
+            "vless_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/vless_ipv4",
+            "vless_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/vless_ipv6",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/vmess",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/meta/vmess_domain"
+        },
+        "singbox": {
+            "hy2": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/hy2.json",
+            "hy2_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/hy2_domain.json",
+            "hy2_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/hy2_ipv4.json",
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/mix.json",
+            "reality": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/reality.json",
+            "reality_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/reality_domain.json",
+            "reality_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/reality_ipv4.json",
+            "reality_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/reality_ipv6.json",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/ss.json",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/ss_domain.json",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/ss_ipv4.json",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/ss_ipv6.json",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/trojan.json",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/trojan_domain.json",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/trojan_ipv4.json",
+            "tuic": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/tuic.json",
+            "tuic_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/tuic_ipv4.json",
+            "tuic_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/tuic_ipv6.json",
+            "vless": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/vless.json",
+            "vless_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/vless_domain.json",
+            "vless_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/vless_ipv4.json",
+            "vless_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/vless_ipv6.json",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/vmess.json",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/singbox/vmess_domain.json"
+        },
+        "surfboard": {
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/mix",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/ss",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/ss_domain",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/ss_ipv4",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/ss_ipv6",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/trojan",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/trojan_domain",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/trojan_ipv4",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/vmess",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/surfboard/vmess_domain"
+        },
+        "warp": {
+            "config": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/warp/config"
+        },
+        "xray": {
+            "hy2": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/hy2",
+            "hy2_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/hy2_domain",
+            "hy2_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/hy2_ipv4",
+            "mix": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/mix",
+            "reality": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/reality",
+            "reality_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/reality_domain",
+            "reality_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/reality_ipv4",
+            "reality_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/reality_ipv6",
+            "ss": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/ss",
+            "ss_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/ss_domain",
+            "ss_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/ss_ipv4",
+            "ss_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/ss_ipv6",
+            "trojan": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/trojan",
+            "trojan_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/trojan_domain",
+            "trojan_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/trojan_ipv4",
+            "tuic": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/tuic",
+            "tuic_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/tuic_ipv4",
+            "tuic_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/tuic_ipv6",
+            "vless": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/vless",
+            "vless_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/vless_domain",
+            "vless_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/vless_ipv4",
+            "vless_ipv6": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/vless_ipv6",
+            "vmess": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/vmess",
+            "vmess_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/vmess_domain",
+            "xhttp": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/xhttp",
+            "xhttp_domain": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/xhttp_domain",
+            "xhttp_ipv4": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/base64/xhttp_ipv4"
+        }
+    }
+};
             const configTypeSelect = document.getElementById('configType');
             const ipTypeSelect = document.getElementById('ipType');
             const subscriptionCheckboxesContainer = document.getElementById('subscriptionCheckboxesContainer');
@@ -156,15 +439,46 @@
             const qrcodeDiv = document.getElementById('qrcode');
             const copyButton = document.getElementById('copyButton');
 
-            // --- 3. STATE MANAGEMENT ---
+            // --- 2. STATE MANAGEMENT ---
             let masterProxyList = [];
             let filteredProxyList = [];
 
-            // --- 4. HELPER & PARSING FUNCTIONS ---
-            function showMessageBox(message) { /* ... same as before ... */ }
-            function getFlagEmoji(countryCode) { /* ... same as before ... */ }
-            function formatDisplayName(name) { /* ... same as before ... */ }
-            function updateQRCode(url) { /* ... same as before ... */ }
+            // --- 3. HELPER & PARSING FUNCTIONS ---
+            function showMessageBox(message) {
+                const box = document.getElementById('messageBox');
+                document.getElementById('messageBoxText').textContent = message;
+                box.classList.remove('hidden');
+                document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
+            }
+            function getFlagEmoji(countryCode) {
+                if (!/^[A-Z]{2}$/.test(countryCode)) return '';
+                return String.fromCodePoint(...countryCode.toUpperCase().split('').map(c => 127397 + c.charCodeAt(0)));
+            }
+            function formatDisplayName(name) {
+                const specialReplacements = { 'ss': 'SHADOWSOCKS' };
+                const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+                const protocolPrefixes = ['ss', 'ssr'];
+                const parts = name.split(/[-_]/);
+                let flag = '';
+                if (parts.length > 0 && !protocolPrefixes.includes(parts[0].toLowerCase())) {
+                    flag = getFlagEmoji(parts[0].toUpperCase());
+                }
+                const displayNameParts = parts.map((part, index) => {
+                    const lowerPart = part.toLowerCase();
+                    if (specialReplacements[lowerPart]) return specialReplacements[lowerPart];
+                    if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase();
+                    if (index === 0 && flag) return part.toUpperCase();
+                    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+                });
+                const textName = displayNameParts.join(' ');
+                return flag ? `${flag} ${textName}` : textName;
+            }
+            function updateQRCode(url) {
+                qrcodeDiv.innerHTML = '';
+                if (url) {
+                    try { new QRCode(qrcodeDiv, { text: url, width: 128, height: 128 }); } catch (e) { console.error(e); }
+                }
+            }
 
             function parseProxyLink(link) {
                 const linkLower = link.toLowerCase();
@@ -173,21 +487,23 @@
                 else if (linkLower.startsWith('vless://')) protocol = 'vless';
                 else if (linkLower.startsWith('ss://')) protocol = 'ss';
                 else if (linkLower.startsWith('trojan://')) protocol = 'trojan';
-                
-                let name = '';
-                try {
-                    name = decodeURIComponent(link.substring(link.indexOf('#') + 1));
-                } catch(e) { name = "Unnamed"; }
+
+                let name = "Unnamed";
+                const hashIndex = link.lastIndexOf('#');
+                if (hashIndex !== -1) {
+                    try { name = decodeURIComponent(link.substring(hashIndex + 1)); } catch (e) {}
+                }
 
                 const countryMatch = name.match(/^([A-Z]{2})/);
                 const country = countryMatch ? countryMatch[1] : 'XX';
 
                 return { originalLink: link, name, protocol, country };
             }
-
+            
+            // --- 4. CORE LOGIC FUNCTIONS ---
             async function processSourceSelections() {
                 const checkedSources = Array.from(subscriptionCheckboxesContainer.querySelectorAll('input:checked'))
-                                           .map(cb => ({ url: cb.value, type: ipTypeSelect.value }));
+                                           .map(cb => cb.value);
                 
                 if (checkedSources.length === 0) {
                     filterBuilderContainer.classList.add('hidden');
@@ -200,26 +516,26 @@
                 nodeCounter.textContent = '...';
 
                 try {
-                    const responses = await Promise.all(checkedSources.map(source => fetch(source.url)));
-                    const contents = await Promise.all(responses.map(res => res.text()));
+                    const responses = await Promise.all(checkedSources.map(url => fetch(url)));
+                    const contents = await Promise.all(responses.map(res => {
+                        if (!res.ok) throw new Error(`Failed to fetch ${res.url}`);
+                        return res.text();
+                    }));
                     
                     masterProxyList = [];
-                    contents.forEach((content, index) => {
-                        let links = [];
-                        // This is a simplified parser for all formats, focusing on extracting raw links
-                        // A more robust version would handle YAML/JSON structures more deeply
-                        const lines = content.split('\n');
-                        lines.forEach(line => {
+                    contents.forEach(content => {
+                        let decodedContent;
+                        try { decodedContent = atob(content); } catch (e) { decodedContent = content; }
+
+                        const protocols = ['vmess://', 'vless://', 'ss://', 'trojan://', 'ssr://'];
+                        decodedContent.split('\n').forEach(line => {
                             const trimmed = line.trim();
-                            if (trimmed.startsWith('vmess://') || trimmed.startsWith('vless://') || trimmed.startsWith('ss://') || trimmed.startsWith('trojan://')) {
-                                links.push(trimmed);
+                            if (protocols.some(p => trimmed.startsWith(p))) {
+                                masterProxyList.push(parseProxyLink(trimmed));
                             }
                         });
-                        
-                        links.forEach(link => masterProxyList.push(parseProxyLink(link)));
                     });
 
-                    // Deduplicate
                     const uniqueLinks = new Set(masterProxyList.map(p => p.originalLink));
                     masterProxyList = Array.from(uniqueLinks).map(link => masterProxyList.find(p => p.originalLink === link));
 
@@ -227,7 +543,8 @@
                     applyFiltersAndRender();
 
                 } catch (error) {
-                    showMessageBox(`Failed to fetch or parse subscriptions: ${error.message}`);
+                    showMessageBox(`Failed to process sources: ${error.message}`);
+                    filterBuilderContainer.classList.add('hidden');
                 }
             }
 
@@ -240,14 +557,14 @@
                         <input type="checkbox" class="filter-control-country" value="${c}" />
                         <span class="ml-2">${getFlagEmoji(c)} ${c}</span>
                     </label>
-                `).join('');
+                `).join('') || '<p class="text-slate-400 text-xs">No countries detected.</p>';
 
                 protocolFilters.innerHTML = protocols.map(p => `
                     <label class="filter-checkbox-label">
                         <input type="checkbox" class="filter-control-protocol" value="${p}" />
                         <span class="ml-2">${p.toUpperCase()}</span>
                     </label>
-                `).join('');
+                `).join('') || '<p class="text-slate-400 text-xs">No protocols detected.</p>';
 
                 document.querySelectorAll('.filter-control-country, .filter-control-protocol').forEach(el => {
                     el.addEventListener('change', applyFiltersAndRender);
@@ -264,7 +581,7 @@
                     if (selectedCountries.length > 0 && !selectedCountries.includes(proxy.country)) return false;
                     if (selectedProtocols.length > 0 && !selectedProtocols.includes(proxy.protocol)) return false;
                     if (includeText && !proxy.name.toLowerCase().includes(includeText)) return false;
-                    if (excludeText && proxy.name.toLowerCase().includes(excludeText)) return false;
+                    if (excludeText && excludeText.length > 0 && proxy.name.toLowerCase().includes(excludeText)) return false;
                     return true;
                 });
 
@@ -272,16 +589,21 @@
                 generateButton.disabled = filteredProxyList.length === 0;
                 resultArea.classList.add('hidden');
             }
+            
+            function populateDropdown(selectElement, keys, defaultText) {
+                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+                keys.forEach(key => selectElement.add(new Option(formatDisplayName(key), key)));
+            }
 
-            // --- 5. EVENT LISTENERS ---
+            // --- 5. EVENT LISTENERS SETUP ---
             configTypeSelect.addEventListener('change', () => {
-                ipTypeSelect.innerHTML = '<option value="">Select Client/Core</option>';
+                populateDropdown(ipTypeSelect, [], 'Select Client/Core');
                 ipTypeSelect.disabled = true;
                 subscriptionCheckboxesContainer.innerHTML = '';
                 filterBuilderContainer.classList.add('hidden');
                 if (configTypeSelect.value) {
                     const keys = Object.keys(structuredData[configTypeSelect.value] || {});
-                    keys.forEach(key => ipTypeSelect.add(new Option(formatDisplayName(key), key)));
+                    populateDropdown(ipTypeSelect, keys, 'Select Client/Core');
                     ipTypeSelect.disabled = false;
                 }
             });
@@ -290,9 +612,10 @@
                 subscriptionCheckboxesContainer.innerHTML = '';
                 filterBuilderContainer.classList.add('hidden');
                 resultArea.classList.add('hidden');
-
+                
+                // This is the key fix: Ensure 'sources' is an object before using Object.entries
                 const sources = structuredData[configTypeSelect.value]?.[ipTypeSelect.value];
-                if (sources) {
+                if (sources && typeof sources === 'object') {
                     Object.entries(sources).forEach(([name, url]) => {
                         const checkboxId = `source-${name}`;
                         const checkboxHTML = `
@@ -314,10 +637,7 @@
             });
 
             generateButton.addEventListener('click', () => {
-                if (filteredProxyList.length === 0) {
-                    showMessageBox('No nodes selected. Adjust your filters.');
-                    return;
-                }
+                if (filteredProxyList.length === 0) return;
                 const finalContent = filteredProxyList.map(p => p.originalLink).join('\n');
                 const encodedContent = btoa(finalContent);
                 const dataUri = `data:text/plain;base64,${encodedContent}`;
@@ -328,10 +648,16 @@
                 resultArea.scrollIntoView({ behavior: 'smooth' });
             });
             
-            copyButton.addEventListener('click', () => { /* ... same as before ... */ });
+            copyButton.addEventListener('click', () => {
+                if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
+                document.execCommand('copy'); const copyIcon = copyButton.querySelector('.copy-icon');
+                const checkIcon = copyButton.querySelector('.check-icon');
+                copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
+                setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
+            });
 
             // --- 6. INITIAL PAGE SETUP ---
-            Object.keys(structuredData).forEach(key => configTypeSelect.add(new Option(key, key)));
+            populateDropdown(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
         });
     </script>
 </body>
