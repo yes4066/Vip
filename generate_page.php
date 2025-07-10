@@ -7,7 +7,7 @@ declare(strict_types=1);
  *
  * Scans subscription directories and generates a modern, fully functional index.html.
  * This script includes a Search/Filter bar, Last Generated timestamp, and a fully responsive,
- * universal "Subscription DNA" feature for deep visual analysis of all subscription types.
+ * universal "Subscription DNA" feature with advanced charts for all subscription types.
  */
 
 // --- Configuration ---
@@ -63,6 +63,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 </head>
 <body class="bg-slate-50 text-slate-800 leading-relaxed transition-colors duration-300">
     <div class="container max-w-6xl mx-auto px-4 py-8">
+        <!-- Main Header -->
         <header class="flex justify-between items-center mb-10">
             <div class="text-left">
                 <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 mb-0">Proxy Subscription Generator</h1>
@@ -71,6 +72,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
         </header>
 
         <main>
+            <!-- Main Control Panel -->
             <div class="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-200 mb-8 sm:mb-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
                     <div>
@@ -88,28 +90,26 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     </div>
                 </div>
                 <div id="resultArea" class="hidden bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6 items-start">
-                        <!-- URL and QR Code Area -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 items-start">
+                        <!-- Left Column: Subscription Details -->
                         <div id="subscription-details-container" class="hidden">
                             <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-4">Your Subscription Link:</h3>
                             <div class="flex items-center mb-4">
-                                <input type="text" id="subscriptionUrl" readonly class="flex-grow font-mono text-xs sm:text-sm py-2 px-2.5 sm:py-2.5 sm:px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
-                                <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-indigo-50 text-indigo-700 border border-l-0 border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100" title="Copy URL">
+                                <input type="text" id="subscriptionUrl" readonly class="flex-grow font-mono text-xs sm:text-sm py-2.5 px-3 bg-white border border-slate-300 rounded-l-lg outline-none whitespace-nowrap overflow-hidden text-ellipsis" />
+                                <button id="copyButton" class="flex-shrink-0 flex items-center justify-center w-11 h-11 bg-indigo-50 text-indigo-700 border border-l-0 border-indigo-600 rounded-r-lg cursor-pointer transition-colors duration-200 hover:bg-indigo-100" title="Copy URL">
                                     <i data-lucide="copy" class="copy-icon w-5 h-5"></i>
                                     <i data-lucide="check" class="check-icon w-5 h-5 hidden"></i>
                                 </button>
                             </div>
-                            <div class="flex flex-col items-center justify-center">
-                                <p class="text-sm text-slate-600 mb-2">Scan the QR code:</p>
+                            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4">
                                 <div id="qrcode" class="p-2 bg-white border border-slate-300 rounded-lg shadow-inner"></div>
+                                <button id="analyzeButton" class="w-full sm:w-auto flex-grow flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-3 rounded-md hover:bg-blue-700 transition-colors duration-200">
+                                    <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                                    <span class="font-semibold">Analyze Subscription DNA</span>
+                                </button>
                             </div>
-                            <button id="analyzeButton" class="mt-4 w-full flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200">
-                                <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
-                                <span>Analyze Subscription DNA</span>
-                            </button>
                         </div>
-                        
-                        <!-- Client Info Area -->
+                        <!-- Right Column: Client Info -->
                         <div id="client-info-container">
                            <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Compatible Clients:</h3>
                            <div id="client-info-list" class="space-y-5"></div>
@@ -118,6 +118,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 </div>
             </div>
         </main>
+        <!-- Footer -->
         <footer class="text-center mt-12 sm:mt-16 py-6 sm:py-8 border-t border-slate-200">
             <div class="flex flex-col sm:flex-row justify-center items-center gap-y-4 gap-x-6 text-slate-500 text-sm">
                 <p>Created with ❤️ by YEBEKHE</p>
@@ -130,7 +131,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
         </footer>
     </div>
     
-    <!-- Message Box -->
+    <!-- Modals -->
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
         <div class="bg-white rounded-lg p-6 shadow-xl max-w-sm w-full text-center">
             <p id="messageBoxText" class="text-lg font-semibold text-slate-800 mb-4"></p>
@@ -138,9 +139,8 @@ function generate_full_html(array $structured_data, array $client_info_data, str
         </div>
     </div>
     
-    <!-- Subscription DNA Modal -->
     <div id="dnaModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
-        <div id="dnaModalContent" class="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-2xl max-w-4xl w-full text-slate-800 transform transition-all scale-95 opacity-0 overflow-y-auto max-h-[90vh]">
+        <div id="dnaModalContent" class="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-2xl max-w-5xl w-full text-slate-800 transform transition-all scale-95 opacity-0 overflow-y-auto max-h-[90vh]">
             <div class="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
                 <div>
                     <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Subscription DNA</h2>
@@ -158,18 +158,14 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 </p>
             </div>
 
-            <div id="dnaResultsContainer" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Left Column: Charts -->
+            <div id="dnaResultsContainer" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="space-y-8">
                     <div>
                         <h3 class="font-semibold mb-3 text-center text-slate-700">Protocol Distribution</h3>
                         <div class="max-w-[200px] sm:max-w-[250px] mx-auto relative">
                             <canvas id="protocolChart"></canvas>
                             <div id="protocolTotal" class="absolute inset-0 flex items-center justify-center text-center leading-none">
-                                <div>
-                                    <span class="text-3xl font-bold text-slate-800"></span>
-                                    <span class="text-sm text-slate-500 block">Nodes</span>
-                                </div>
+                                <div><span class="text-3xl font-bold text-slate-800"></span><span class="text-sm text-slate-500 block">Nodes</span></div>
                             </div>
                         </div>
                     </div>
@@ -178,13 +174,14 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         <div id="providerTagCloud" class="p-4 bg-slate-100 rounded-lg min-h-[150px] flex flex-wrap gap-2 items-center justify-center"></div>
                     </div>
                 </div>
-                <!-- Right Column: Geo Info -->
                 <div class="space-y-8">
                      <div>
                         <h3 class="font-semibold mb-3 text-center text-slate-700">Geographic Distribution</h3>
-                         <div id="countryBarChartContainer">
-                            <canvas id="countryBarChart"></canvas>
-                        </div>
+                        <div id="countryBarChartContainer"><canvas id="countryBarChart"></canvas></div>
+                    </div>
+                     <div>
+                        <h3 class="font-semibold mb-3 text-center text-slate-700">Transport & Security</h3>
+                        <div id="transportChartContainer"><canvas id="transportChart"></canvas></div>
                     </div>
                 </div>
             </div>
@@ -196,7 +193,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // ... (All JS variables and functions go here) ...
             const structuredData = __JSON_DATA_PLACEHOLDER__;
             const clientInfoData = __CLIENT_INFO_PLACEHOLDER__;
             // Get all DOM elements
@@ -215,7 +211,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             const dnaModalCloseButton = document.getElementById('dnaModalCloseButton');
 
             let charts = {};
-            const platformIcons = { windows: 'monitor', macos: 'apple', android: 'smartphone', ios: 'tablet', linux: 'terminal' };
             const countryCodeMap = { US: 'United States', SG: 'Singapore', JP: 'Japan', KR: 'S. Korea', DE: 'Germany', NL: 'Netherlands', GB: 'UK', FR: 'France', CA: 'Canada', AU: 'Australia', HK: 'Hong Kong', TW: 'Taiwan', RU: 'Russia', IN: 'India', TR: 'Turkey', IR: 'Iran', AE: 'UAE' };
 
             function getCountryName(code) { return countryCodeMap[code] || code; }
@@ -224,29 +219,10 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 return String.fromCodePoint(...countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt()));
             }
 
-            // Universal DNA Parser
+            // --- UNIVERSAL DNA PARSER ---
             function getUniversalDna(content, coreType) {
-                const dna = { protocols: {}, countries: {}, providers: {}, total: 0 };
+                const dna = { protocols: {}, countries: {}, providers: {}, transports: {}, security: {tls: {}, reality: {}}, total: 0 };
                 const providerKeywords = ['aws', 'cdn', 'google', 'azure', 'oracle', 'linode', 'vultr', 'digitalocean', 'hetzner', 'ovh', 'alibaba', 'vip', 'premium'];
-                
-                const processNode = (name, protocol) => {
-                    if(!name || !protocol) return;
-                    dna.total++;
-                    const lowerName = name.toLowerCase();
-                    
-                    dna.protocols[protocol] = (dna.protocols[protocol] || 0) + 1;
-
-                    const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
-                    if (countryMatch) {
-                        const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
-                        dna.countries[code] = (dna.countries[code] || 0) + 1;
-                    }
-                    providerKeywords.forEach(keyword => {
-                        if (lowerName.includes(keyword)) {
-                            dna.providers[keyword.toUpperCase()] = (dna.providers[keyword.toUpperCase()] || 0) + 1;
-                        }
-                    });
-                };
                 
                 try {
                     switch (coreType.toLowerCase()) {
@@ -254,33 +230,51 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         case 'meta':
                             const parsedYaml = jsyaml.load(content);
                             if (parsedYaml && Array.isArray(parsedYaml.proxies)) {
-                                parsedYaml.proxies.forEach(p => processNode(p.name, p.type));
+                                parsedYaml.proxies.forEach(p => {
+                                    if(!p || !p.name || !p.type) return;
+                                    dna.total++;
+                                    const lowerName = p.name.toLowerCase();
+                                    const transport = p.network || 'tcp';
+                                    dna.protocols[p.type] = (dna.protocols[p.type] || 0) + 1;
+                                    dna.transports[transport] = (dna.transports[transport] || 0) + 1;
+                                    if (p.tls) {
+                                        dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
+                                    }
+                                    const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
+                                    if (countryMatch) {
+                                        const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
+                                        dna.countries[code] = (dna.countries[code] || 0) + 1;
+                                    }
+                                    providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
+                                });
                             }
                             break;
 
                         case 'singbox':
-                            const parsedJson = JSON.parse(content);
+                            // Strip comments from JSONC before parsing
+                            const cleanedJson = content.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '');
+                            const parsedJson = JSON.parse(cleanedJson);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
                                 parsedJson.outbounds
                                     .filter(o => o.type && !utilityTypes.includes(o.type))
-                                    .forEach(o => processNode(o.tag, o.type));
-                            }
-                            break;
-                            
-                        case 'surfboard':
-                            const lines = content.split('\n');
-                            let inProxySection = false;
-                            for (const line of lines) {
-                                const trimmed = line.trim();
-                                if (trimmed.toLowerCase() === '[proxy]') { inProxySection = true; continue; }
-                                if (trimmed.startsWith('[')) { inProxySection = false; }
-                                if (inProxySection && trimmed.includes('=')) {
-                                    const parts = trimmed.split('=').map(p => p.trim());
-                                    const name = parts[0];
-                                    const protocol = parts[1]?.split(',')[0] || 'unknown';
-                                    processNode(name, protocol);
-                                }
+                                    .forEach(o => {
+                                        if(!o || !o.tag || !o.type) return;
+                                        dna.total++;
+                                        const lowerName = o.tag.toLowerCase();
+                                        const transport = o.transport?.type || o.network || 'tcp';
+                                        dna.protocols[o.type] = (dna.protocols[o.type] || 0) + 1;
+                                        dna.transports[transport] = (dna.transports[transport] || 0) + 1;
+                                        if (o.tls?.enabled) {
+                                            dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
+                                        }
+                                        const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
+                                        if (countryMatch) {
+                                            const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
+                                            dna.countries[code] = (dna.countries[code] || 0) + 1;
+                                        }
+                                        providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
+                                    });
                             }
                             break;
 
@@ -292,19 +286,40 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                             decoded.split('\n').forEach(line => {
                                 const match = line.trim().match(linkRegex);
                                 if (match) {
-                                    processNode(decodeURIComponent(match[6] || '').trim(), match[1]);
+                                    dna.total++;
+                                    const protocol = match[1];
+                                    const params = new URLSearchParams(match[5] || '');
+                                    const lowerName = decodeURIComponent(match[6] || '').trim().toLowerCase();
+                                    
+                                    const transport = params.get('type') || 'tcp';
+                                    const security = params.get('security') || 'none';
+                                    
+                                    dna.protocols[protocol] = (dna.protocols[protocol] || 0) + 1;
+                                    dna.transports[transport] = (dna.transports[transport] || 0) + 1;
+                                    if (security === 'tls') {
+                                        dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
+                                    } else if (security === 'reality') {
+                                        dna.security.reality[transport] = (dna.security.reality[transport] || 0) + 1;
+                                    }
+
+                                    const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
+                                    if (countryMatch) {
+                                        const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
+                                        dna.countries[code] = (dna.countries[code] || 0) + 1;
+                                    }
+                                    providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
                                 }
                             });
                             break;
                     }
                 } catch (e) {
                     console.error(`Parsing failed for type ${coreType}:`, e);
-                    throw new Error(`Could not parse the subscription content. It might be invalid for the '${coreType}' type.`);
+                    throw new Error(`Could not parse the subscription content. It may be invalid or malformed for the '${coreType}' type.`);
                 }
-                
                 return dna;
             }
 
+            // --- UI & Event Functions ---
             function closeDnaModal(event) {
                 if (event && event.target.id !== 'dnaModal') return;
                 const modalContent = document.getElementById('dnaModalContent');
@@ -312,14 +327,13 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 setTimeout(() => dnaModal.classList.add('hidden'), 200);
                 Object.values(charts).forEach(chart => { if (chart) chart.destroy(); });
             }
-
-            function showMessageBox(message) { /* ... unchanged ... */ const box = document.getElementById('messageBox'); document.getElementById('messageBoxText').textContent = message; box.classList.remove('hidden'); document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden'); }
-            function populateSelect(selectElement, sortedKeys, defaultOptionText) { /* ... unchanged ... */ selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`; sortedKeys.forEach(key => { const option = document.createElement('option'); option.value = key; option.textContent = formatDisplayName(key); selectElement.appendChild(option); }); }
-            function resetSelect(selectElement, defaultText) { /* ... unchanged ... */ selectElement.innerHTML = `<option value="">${defaultText}</option>`; selectElement.disabled = true; }
-            function formatDisplayName(name) { /* ... unchanged ... */ const specialReplacements = { 'ss': 'SHADOWSOCKS' }; const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp']; const parts = name.split(/[-_]/).filter(p => p !== ''); let flag = ''; const countryCodeMatch = name.match(/^([A-Z]{2})[-_]/); if (countryCodeMatch) { flag = getFlagEmoji(countryCodeMatch[1]); } const displayNameParts = parts.map((part) => { const lowerPart = part.toLowerCase(); if (specialReplacements[lowerPart]) return specialReplacements[lowerPart]; if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase(); return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase(); }); const textName = displayNameParts.join(' '); return flag ? `${flag} ${textName.trim()}` : textName.trim(); }
-            function updateQRCode(url) { /* ... unchanged ... */ qrcodeDiv.innerHTML = ''; if (url) { try { new QRCode(qrcodeDiv, { text: url, width: 128, height: 128, colorDark: "#000000", colorLight: "#FFFFFF", correctLevel: QRCode.CorrectLevel.H }); } catch (error) { console.error('QR code initialization failed:', error); } } }
-            function updateClientInfo(coreType) { /* ... unchanged ... */ const clientInfoContainer = document.getElementById('client-info-container'); clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType]; if (!platforms || Object.keys(platforms).length === 0) { clientInfoContainer.classList.add('hidden'); return; } clientInfoContainer.classList.remove('hidden'); Object.entries(platforms).forEach(([platformName, clients]) => { if (clients.length > 0) { const platformContainer = document.createElement('div'); const titleDiv = document.createElement('div'); titleDiv.className = 'flex items-center gap-2 text-sm font-semibold text-slate-600 mb-2'; const iconName = platformIcons[platformName.toLowerCase()] || 'box'; const icon = document.createElement('i'); icon.setAttribute('data-lucide', iconName); icon.className = 'w-4 h-4 text-slate-500'; titleDiv.appendChild(icon); const titleText = document.createElement('span'); titleText.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1); titleDiv.appendChild(titleText); platformContainer.appendChild(titleDiv); const linksContainer = document.createElement('div'); linksContainer.className = 'flex flex-col gap-2'; clients.forEach(client => { const link = document.createElement('a'); link.href = client.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600'; const nameSpan = document.createElement('span'); nameSpan.className = 'font-medium text-sm'; nameSpan.textContent = client.name; const downloadIcon = document.createElement('i'); downloadIcon.setAttribute('data-lucide', 'download'); downloadIcon.className = 'w-4 h-4 text-slate-500'; link.appendChild(nameSpan); link.appendChild(downloadIcon); linksContainer.appendChild(link); }); platformContainer.appendChild(linksContainer); clientInfoList.appendChild(platformContainer); } }); lucide.createIcons(); }
-            function updateOtherElementOptions() { /* ... unchanged ... */ const selectedConfigType = configTypeSelect.value; const selectedIpType = ipTypeSelect.value; const searchTerm = searchBar.value.toLowerCase(); resetSelect(otherElementSelect, 'Select Subscription'); subscriptionDetailsContainer.classList.add('hidden'); if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) { const allElements = structuredData[selectedConfigType][selectedIpType]; const filteredAndSortedKeys = Object.keys(allElements).filter(key => formatDisplayName(key).toLowerCase().includes(searchTerm)).sort((a, b) => a.localeCompare(b)); populateSelect(otherElementSelect, filteredAndSortedKeys, filteredAndSortedKeys.length > 0 ? 'Select Subscription' : 'No matches found'); otherElementSelect.disabled = false; } }
+            function showMessageBox(message) { const box = document.getElementById('messageBox'); document.getElementById('messageBoxText').textContent = message; box.classList.remove('hidden'); document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden'); }
+            function populateSelect(selectElement, sortedKeys, defaultOptionText) { selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`; sortedKeys.forEach(key => { const option = document.createElement('option'); option.value = key; option.textContent = formatDisplayName(key); selectElement.appendChild(option); }); }
+            function resetSelect(selectElement, defaultText) { selectElement.innerHTML = `<option value="">${defaultText}</option>`; selectElement.disabled = true; }
+            function formatDisplayName(name) { const specialReplacements = { 'ss': 'SHADOWSOCKS' }; const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp']; const parts = name.split(/[-_]/).filter(p => p !== ''); let flag = ''; const countryCodeMatch = name.match(/^([A-Z]{2})[-_]/); if (countryCodeMatch) { flag = getFlagEmoji(countryCodeMatch[1]); } const displayNameParts = parts.map((part) => { const lowerPart = part.toLowerCase(); if (specialReplacements[lowerPart]) return specialReplacements[lowerPart]; if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase(); return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase(); }); const textName = displayNameParts.join(' '); return flag ? `${flag} ${textName.trim()}` : textName.trim(); }
+            function updateQRCode(url) { qrcodeDiv.innerHTML = ''; if (url) { try { new QRCode(qrcodeDiv, { text: url, width: 128, height: 128, colorDark: "#000000", colorLight: "#FFFFFF", correctLevel: QRCode.CorrectLevel.H }); } catch (error) { console.error('QR code init failed:', error); } } }
+            function updateClientInfo(coreType) { const clientInfoContainer = document.getElementById('client-info-container'); clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType]; if (!platforms || Object.keys(platforms).length === 0) { clientInfoContainer.classList.add('hidden'); return; } clientInfoContainer.classList.remove('hidden'); Object.entries(platforms).forEach(([platformName, clients]) => { if (clients.length > 0) { const platformContainer = document.createElement('div'); const titleDiv = document.createElement('div'); titleDiv.className = 'flex items-center gap-2 text-sm font-semibold text-slate-600 mb-2'; const iconName = { windows: 'monitor', macos: 'apple', android: 'smartphone', ios: 'tablet', linux: 'terminal' }[platformName.toLowerCase()] || 'box'; const icon = document.createElement('i'); icon.setAttribute('data-lucide', iconName); icon.className = 'w-4 h-4 text-slate-500'; titleDiv.appendChild(icon); const titleText = document.createElement('span'); titleText.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1); titleDiv.appendChild(titleText); platformContainer.appendChild(titleDiv); const linksContainer = document.createElement('div'); linksContainer.className = 'flex flex-col gap-2'; clients.forEach(client => { const link = document.createElement('a'); link.href = client.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600'; const nameSpan = document.createElement('span'); nameSpan.className = 'font-medium text-sm'; nameSpan.textContent = client.name; const downloadIcon = document.createElement('i'); downloadIcon.setAttribute('data-lucide', 'download'); downloadIcon.className = 'w-4 h-4 text-slate-500'; link.appendChild(nameSpan); link.appendChild(downloadIcon); linksContainer.appendChild(link); }); platformContainer.appendChild(linksContainer); clientInfoList.appendChild(platformContainer); } }); lucide.createIcons(); }
+            function updateOtherElementOptions() { const selectedConfigType = configTypeSelect.value; const selectedIpType = ipTypeSelect.value; const searchTerm = searchBar.value.toLowerCase(); resetSelect(otherElementSelect, 'Select Subscription'); subscriptionDetailsContainer.classList.add('hidden'); if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) { const allElements = structuredData[selectedConfigType][selectedIpType]; const filteredAndSortedKeys = Object.keys(allElements).filter(key => formatDisplayName(key).toLowerCase().includes(searchTerm)).sort((a, b) => a.localeCompare(b)); populateSelect(otherElementSelect, filteredAndSortedKeys, filteredAndSortedKeys.length > 0 ? 'Select Subscription' : 'No matches found'); otherElementSelect.disabled = false; } }
 
             // --- Event Listeners ---
             analyzeButton.addEventListener('click', async () => {
@@ -340,7 +354,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     const dna = getUniversalDna(content, ipTypeSelect.value);
 
                     if (dna.total === 0) throw new Error('No compatible proxy nodes found to analyze.');
-
                     Object.values(charts).forEach(chart => { if (chart) chart.destroy(); });
                     
                     charts.protocol = new Chart(document.getElementById('protocolChart'), {
@@ -349,9 +362,23 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     });
                     document.querySelector('#protocolTotal div span:first-child').textContent = dna.total;
 
+                    const transportLabels = Object.keys(dna.transports);
+                    charts.transport = new Chart(document.getElementById('transportChart'), {
+                        type: 'bar',
+                        data: {
+                            labels: transportLabels,
+                            datasets: [
+                                { label: 'TLS', data: transportLabels.map(l => dna.security.tls[l] || 0), backgroundColor: '#34d399' },
+                                { label: 'REALITY', data: transportLabels.map(l => dna.security.reality[l] || 0), backgroundColor: '#a78bfa' },
+                                { label: 'Insecure', data: transportLabels.map(l => dna.transports[l] - (dna.security.tls[l] || 0) - (dna.security.reality[l] || 0)), backgroundColor: '#fbbf24' }
+                            ]
+                        },
+                        options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true } }, plugins: { legend: { position: 'bottom' }} }
+                    });
+
                     const sortedCountries = Object.entries(dna.countries).sort((a, b) => b[1] - a[1]).slice(0, 7);
                     charts.country = new Chart(document.getElementById('countryBarChart'), {
-                        type: 'bar', data: { labels: sortedCountries.map(c => `${getFlagEmoji(c[0])} ${getCountryName(c[0])}`), datasets: [{ label: '# Nodes', data: sortedCountries.map(c => c[1]), backgroundColor: '#a855f7', borderRadius: 4 }] },
+                        type: 'bar', data: { labels: sortedCountries.map(c => `${getFlagEmoji(c[0])} ${getCountryName(c[0])}`), datasets: [{ label: '# Nodes', data: sortedCountries.map(c => c[1]), backgroundColor: '#60a5fa', borderRadius: 4 }] },
                         options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } } }
                     });
 
@@ -359,7 +386,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     tagCloud.innerHTML = '';
                     const sortedProviders = Object.entries(dna.providers).sort((a, b) => b[1] - a[1]);
                     if (sortedProviders.length === 0) {
-                        tagCloud.innerHTML = '<p class="text-slate-500 text-sm">No common provider keywords found.</p>';
+                        tagCloud.innerHTML = '<p class="text-slate-500 text-sm">No common keywords found.</p>';
                     } else {
                         sortedProviders.forEach(([provider, count]) => {
                            const tag = document.createElement('span');
@@ -368,7 +395,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                            tagCloud.appendChild(tag);
                         });
                     }
-
                     document.getElementById('dnaLoadingState').classList.add('hidden');
                     document.getElementById('dnaResultsContainer').classList.remove('hidden');
                 } catch (error) {
@@ -379,59 +405,11 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
             dnaModalCloseButton.addEventListener('click', () => closeDnaModal());
             dnaModal.addEventListener('click', (event) => closeDnaModal(event));
-
-            configTypeSelect.addEventListener('change', () => {
-                resetSelect(ipTypeSelect, 'Select Client/Core');
-                resetSelect(otherElementSelect, 'Select Subscription');
-                searchBar.value = ''; searchBar.disabled = true;
-                resultArea.classList.add('hidden');
-                if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
-                    populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), 'Select Client/Core');
-                    ipTypeSelect.disabled = false;
-                }
-            });
-
-            ipTypeSelect.addEventListener('change', () => {
-                searchBar.value = '';
-                if (ipTypeSelect.value) {
-                    updateClientInfo(ipTypeSelect.value);
-                    resultArea.classList.remove('hidden');
-                    subscriptionDetailsContainer.classList.add('hidden');
-                    searchBar.disabled = false;
-                    updateOtherElementOptions();
-                    analyzeButton.style.display = 'flex'; // Always show analyze button
-                } else {
-                    resultArea.classList.add('hidden');
-                    searchBar.disabled = true;
-                    resetSelect(otherElementSelect, 'Select Subscription');
-                }
-            });
-
+            configTypeSelect.addEventListener('change', () => { resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription'); searchBar.value = ''; searchBar.disabled = true; resultArea.classList.add('hidden'); if (configTypeSelect.value && structuredData[configTypeSelect.value]) { populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), 'Select Client/Core'); ipTypeSelect.disabled = false; } });
+            ipTypeSelect.addEventListener('change', () => { searchBar.value = ''; if (ipTypeSelect.value) { updateClientInfo(ipTypeSelect.value); resultArea.classList.remove('hidden'); subscriptionDetailsContainer.classList.add('hidden'); searchBar.disabled = false; updateOtherElementOptions(); analyzeButton.style.display = 'flex'; } else { resultArea.classList.add('hidden'); searchBar.disabled = true; resetSelect(otherElementSelect, 'Select Subscription'); } });
             searchBar.addEventListener('input', updateOtherElementOptions);
-            otherElementSelect.addEventListener('change', () => {
-                const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value];
-                if (url) {
-                    subscriptionUrlInput.value = url;
-                    updateQRCode(url);
-                    subscriptionDetailsContainer.classList.remove('hidden');
-                } else {
-                    subscriptionDetailsContainer.classList.add('hidden');
-                }
-            });
-            copyButton.addEventListener('click', () => {
-                if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
-                navigator.clipboard.writeText(subscriptionUrlInput.value)
-                    .then(() => {
-                        const copyIcon = copyButton.querySelector('.copy-icon');
-                        const checkIcon = copyButton.querySelector('.check-icon');
-                        copyIcon.classList.add('hidden');
-                        checkIcon.classList.remove('hidden');
-                        setTimeout(() => {
-                            copyIcon.classList.remove('hidden');
-                            checkIcon.classList.add('hidden');
-                        }, 2000);
-                    }).catch(err => { showMessageBox('Failed to copy URL.'); });
-            });
+            otherElementSelect.addEventListener('change', () => { const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value]; if (url) { subscriptionUrlInput.value = url; updateQRCode(url); subscriptionDetailsContainer.classList.remove('hidden'); } else { subscriptionDetailsContainer.classList.add('hidden'); } });
+            copyButton.addEventListener('click', () => { if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; } navigator.clipboard.writeText(subscriptionUrlInput.value) .then(() => { const copyIcon = copyButton.querySelector('.copy-icon'); const checkIcon = copyButton.querySelector('.check-icon'); copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden'); setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000); }).catch(err => { showMessageBox('Failed to copy URL.'); }); });
 
             // Page Initialization
             populateSelect(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
