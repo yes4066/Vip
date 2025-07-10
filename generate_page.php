@@ -249,7 +249,8 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                             break;
 
                         case 'singbox':
-                            const parsedJson = jsonc.parse(content);
+                            // FIX: Use robust jsoncParser instead of regex + JSON.parse
+                            const parsedJson = jsoncParser.parse(content);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
                                 parsedJson.outbounds
@@ -276,24 +277,34 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         case 'location':
                         default: // Fallback for base64 with expanded regex
                             const decoded = atob(content);
-                            // FIX: Added vmess, hy2, tuic, hysteria, hysteria2 to regex list
-                            const standardRegex = /^(vless|vmess|trojan|ss|hy2|tuic):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
+                            // FIX: Dedicated regex for vmess, and expanded list for others
+                            const vmessRegex = /^(vmess):\/\/(.+)#(.+)$/;
+                            const standardRegex = /^(vless|trojan|ss|hy2|tuic):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
                             const hysteriaRegex = /^(hysteria|hysteria2):\/\/([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
 
                             decoded.split('\n').forEach(line => {
                                 line = line.trim();
                                 if (!line) return;
                                 
-                                let match = line.match(standardRegex) || line.match(hysteriaRegex);
-                                if (match) {
+                                let match;
+                                let protocol, lowerName, transport, security = 'none';
+
+                                if (match = line.match(vmessRegex)) {
+                                    protocol = 'vmess';
+                                    lowerName = decodeURIComponent(match[3] || '').trim().toLowerCase();
+                                    const vmessConfig = JSON.parse(atob(match[2]));
+                                    transport = vmessConfig.net || 'tcp';
+                                    security = vmessConfig.tls || 'none';
+                                } else if (match = line.match(standardRegex) || line.match(hysteriaRegex)) {
+                                    protocol = match[1];
+                                    const params = new URLSearchParams(match[match.length - 2] || '');
+                                    lowerName = decodeURIComponent(match[match.length - 1] || '').trim().toLowerCase();
+                                    transport = params.get('type') || 'tcp';
+                                    security = params.get('security') || 'none';
+                                }
+
+                                if (protocol) {
                                     dna.total++;
-                                    const protocol = match[1];
-                                    const params = new URLSearchParams(match[4] || '');
-                                    const lowerName = decodeURIComponent(match[match.length - 1] || '').trim().toLowerCase();
-                                    
-                                    const transport = params.get('type') || 'tcp';
-                                    const security = params.get('security') || 'none';
-                                    
                                     dna.protocols[protocol] = (dna.protocols[protocol] || 0) + 1;
                                     dna.transports[transport] = (dna.transports[transport] || 0) + 1;
                                     if (security === 'tls') dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
