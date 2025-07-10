@@ -109,8 +109,7 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
-                "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 42"
+                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ]
         },
         {
@@ -121,8 +120,7 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
-                "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 42"
+                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -228,22 +226,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "tw01.ckcloud.info",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 42",
-            "type": "trojan",
-            "server": "pt.mjt000.com",
-            "server_port": 443,
-            "password": "84587c21-9938-42fc-a4b0-4f72dd72b7aa",
-            "tls": {
-                "enabled": true,
-                "server_name": "pt.mjt000.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,

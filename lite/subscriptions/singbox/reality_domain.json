@@ -106,7 +106,6 @@
             "outbounds": [
                 "URL-TEST",
                 "🇩🇪 DE | 🟢 | vless | @antifilterjadid | 1",
-                "🇳🇱 NL | 🟢 | vless | @config_proxy | 86",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -120,7 +119,6 @@
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @public504 | 11",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
-                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 19",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
@@ -137,7 +135,6 @@
             "type": "urltest",
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @antifilterjadid | 1",
-                "🇳🇱 NL | 🟢 | vless | @config_proxy | 86",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -151,7 +148,6 @@
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @public504 | 11",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
-                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 19",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
@@ -202,29 +198,6 @@
                     "enabled": true,
                     "public_key": "GpgfsA-U8Y8M3LRcTfsaBViDtp2VlN5riSLLZ2kxEiQ",
                     "short_id": "7def4dde"
-                }
-            }
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @config_proxy | 86",
-            "type": "vless",
-            "server": "rutube.isgood.host",
-            "server_port": 28202,
-            "uuid": "b3da59fd-0985-4b60-a439-71c339cef850",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "dns-shop.ru",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "Z8s87Dp6qlWDkGUorxH6W7Pnstcdo3M7ZDS3thi4dh0",
-                    "short_id": "8f03a19272d0c09d"
                 }
             }
         },
@@ -552,29 +525,6 @@
                     "enabled": true,
                     "public_key": "YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E",
                     "short_id": "ea1058117be12087"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 19",
-            "type": "vless",
-            "server": "de1.marzban-locations.com",
-            "server_port": 3030,
-            "uuid": "3d1622e6-7ac5-4715-b635-7bd542e0a70b",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
-                    "short_id": ""
                 }
             }
         },

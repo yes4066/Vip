@@ -105,9 +105,10 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
+                "🇺🇸 US | 🔴 | vless | @argooo_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 30",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 29",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
                 "🇺🇸 US | 🔴 | vless | @lranonline_new | 17",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -136,9 +137,10 @@
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
+                "🇺🇸 US | 🔴 | vless | @argooo_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 30",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 29",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
                 "🇺🇸 US | 🔴 | vless | @lranonline_new | 17",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -183,6 +185,15 @@
             "type": "dns"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @argooo_vpn | 14",
+            "type": "vless",
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "ea86cb06-a6da-454c-8aae-f4e65f1df975",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
             "type": "vless",
             "server": "151.101.195.8",
@@ -215,7 +226,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 30",
+            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 29",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,

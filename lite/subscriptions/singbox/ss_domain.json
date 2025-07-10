@@ -105,10 +105,11 @@
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
+                "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
-                "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 19",
                 "🇬🇧 GB | 🟢 | ss | @imhdiyvp | 11",
                 "🇬🇧 GB | 🟢 | ss | @kurdistan_vpn_perfectt | 6",
+                "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "🇨🇭 CH | 🟢 | ss | @orange_vpns | 13",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
                 "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
@@ -118,18 +119,18 @@
                 "🇬🇧 GB | 🟢 | ss | @v2rayport | 13",
                 "❔ XX | 🟢 | ss | @v2raytel | 2",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 9",
-                "🇬🇧 GB | 🟢 | ss | @zibanabz | 3"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 9"
             ]
         },
         {
             "tag": "URL-TEST",
             "type": "urltest",
             "outbounds": [
+                "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
-                "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 19",
                 "🇬🇧 GB | 🟢 | ss | @imhdiyvp | 11",
                 "🇬🇧 GB | 🟢 | ss | @kurdistan_vpn_perfectt | 6",
+                "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "🇨🇭 CH | 🟢 | ss | @orange_vpns | 13",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
                 "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
@@ -139,8 +140,7 @@
                 "🇬🇧 GB | 🟢 | ss | @v2rayport | 13",
                 "❔ XX | 🟢 | ss | @v2raytel | 2",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 9",
-                "🇬🇧 GB | 🟢 | ss | @zibanabz | 3"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 9"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -163,20 +163,20 @@
             "type": "dns"
         },
         {
+            "tag": "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
+            "type": "shadowsocks",
+            "server": "admin.c4.webramz.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "69MUii7VDwMqh7Hz"
+        },
+        {
             "tag": "❔ XX | 🟢 | ss | @chestertm | 12",
             "type": "shadowsocks",
             "server": "freakconfig94.usecharge.ir",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "W74XFALLLuw6m5IA"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 19",
-            "type": "shadowsocks",
-            "server": "admin.c2.webramz.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "WstuSnlu4ieA9M0L"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @imhdiyvp | 11",
@@ -193,6 +193,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "u17T3BvpYaaiuW2c"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
+            "type": "shadowsocks",
+            "server": "admin.c2.webramz.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "WstuSnlu4ieA9M0L"
         },
         {
             "tag": "🇨🇭 CH | 🟢 | ss | @orange_vpns | 13",
@@ -273,14 +281,6 @@
             "server_port": 1235,
             "method": "chacha20-ietf-poly1305",
             "password": "amOyPdmvB8VIjQNqEgeVEo"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @zibanabz | 3",
-            "type": "shadowsocks",
-            "server": "admin.c4.webramz.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "69MUii7VDwMqh7Hz"
         }
     ],
     "route": {
