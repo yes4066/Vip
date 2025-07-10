@@ -10,7 +10,8 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script> <!-- For Clash/YAML parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsonc-parser@3.2.1/lib/umd/main.min.js"></script> <!-- FIX: Added robust JSONC parser -->
     <script>
       tailwind.config = {
         theme: {
@@ -93,7 +94,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-11 01:22:42 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-11 01:30:08 +0330</p>
         </footer>
     </div>
     
@@ -657,9 +658,8 @@
                             break;
 
                         case 'singbox':
-                            // Strip comments from JSONC before parsing
-                            const cleanedJson = content.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '');
-                            const parsedJson = JSON.parse(cleanedJson);
+                            // FIX: Use robust jsonc-parser instead of regex + JSON.parse
+                            const parsedJson = jsonc.parse(content);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
                                 parsedJson.outbounds
@@ -779,7 +779,7 @@
                                 { label: 'Insecure', data: transportLabels.map(l => dna.transports[l] - (dna.security.tls[l] || 0) - (dna.security.reality[l] || 0)), backgroundColor: '#fbbf24' }
                             ]
                         },
-                        options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true } }, plugins: { legend: { position: 'bottom' }} }
+                        options: { responsive: true, scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } }, plugins: { legend: { position: 'bottom' }} }
                     });
 
                     const sortedCountries = Object.entries(dna.countries).sort((a, b) => b[1] - a[1]).slice(0, 7);
