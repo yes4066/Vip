@@ -124,6 +124,7 @@
                 "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 18",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 16",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0"
@@ -152,6 +153,7 @@
                 "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 18",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 16",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0"
@@ -642,6 +644,29 @@
                     "enabled": true,
                     "public_key": "YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E",
                     "short_id": "fd1dff03520d8f56"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 18",
+            "type": "vless",
+            "server": "hub.atomamoz.ir",
+            "server_port": 33450,
+            "uuid": "46ea256c-48e4-41b2-abe5-ec9b9b233333",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "de.atomamoz.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Y3h3cOAkz3j_CbseRzm3EAkVq9HMkqv-gnwcXI2TI0Q",
+                    "short_id": ""
                 }
             }
         },

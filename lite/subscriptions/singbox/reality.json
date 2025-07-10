@@ -124,6 +124,7 @@
                 "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 18",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 16",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0",
@@ -134,6 +135,7 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇺🇸 US | 🟢 | vless | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -178,6 +180,7 @@
                 "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 18",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 16",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0",
@@ -188,6 +191,7 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇺🇸 US | 🟢 | vless | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -698,6 +702,29 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 18",
+            "type": "vless",
+            "server": "hub.atomamoz.ir",
+            "server_port": 33450,
+            "uuid": "46ea256c-48e4-41b2-abe5-ec9b9b233333",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "de.atomamoz.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Y3h3cOAkz3j_CbseRzm3EAkVq9HMkqv-gnwcXI2TI0Q",
+                    "short_id": ""
+                }
+            }
+        },
+        {
             "tag": "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 16",
             "type": "vless",
             "server": "iran.mr-cloud.ir",
@@ -932,6 +959,29 @@
                     "enabled": true,
                     "public_key": "YqHW8a4iAc1SZYpTrFVoOQg1F3yAdX1tWXuROZUCsEU",
                     "short_id": "6ba85179e30d4fc2"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @hope_net | 19",
+            "type": "vless",
+            "server": "3.134.97.233",
+            "server_port": 4433,
+            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
+                    "short_id": "f785b38130e64177"
                 }
             }
         },
