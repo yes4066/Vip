@@ -228,10 +228,6 @@ function scan_directory(string $dir): array
     return $files;
 }
 
-/**
- * MODIFIED FUNCTION
- * Processes file paths into a structured array, with special handling for 'xray' directories.
- */
 function process_files_to_structure(array $files_by_category): array
 {
     $structure = [];
@@ -243,19 +239,12 @@ function process_files_to_structure(array $files_by_category): array
             $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
             $path_for_parsing = $relative_path_from_base;
 
-            // --- SPECIAL HANDLING FOR XRAY DIRECTORIES ---
-            // Check if this path is within an 'xray' directory.
             if (strpos($path_for_parsing, 'xray/') === 0) {
-                // If it's an xray path, it MUST be in the 'base64' subfolder.
-                // We skip any other xray files (e.g., in 'normal' or at the root of 'xray').
                 if (strpos($path_for_parsing, 'xray/base64/') !== 0) {
-                    continue; // Skip this file as it's not in the required 'base64' folder.
+                    continue; 
                 }
-                // To prevent 'base64' from becoming part of the subscription name,
-                // we modify the path string that will be used for parsing the name.
                 $path_for_parsing = str_replace('xray/base64/', 'xray/', $path_for_parsing);
             }
-            // --- END SPECIAL HANDLING ---
 
             $parts = explode('/', $path_for_parsing);
             if (count($parts) < 2) continue;
@@ -263,7 +252,6 @@ function process_files_to_structure(array $files_by_category): array
             $type = array_shift($parts);
             $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
             
-            // The URL must always point to the original, unmodified path.
             $url = GITHUB_REPO_URL . '/' . $path;
             
             $structure[$category_key][$type][$name] = $url;
@@ -427,16 +415,43 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 return String.fromCodePoint(...codePoints);
             }
 
+            /**
+             * MODIFIED FUNCTION
+             * Formats a raw name for display with special capitalization rules.
+             * Example: 'DE-premium_ss' -> '🇩🇪 DE Premium SHADOWSOCKS'
+             * Example: 'US-all-vless-ws' -> '🇺🇸 US All VLESS WS'
+             */
             function formatDisplayName(name) {
+                // List of config types to be fully uppercased. Add more as needed.
+                const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+
                 const parts = name.split(/[-_]/);
                 const potentialCode = parts[0].toUpperCase();
-                let flag = '';
+                let flag = getFlagEmoji(potentialCode);
 
-                if (potentialCode.length === 2) {
-                    flag = getFlagEmoji(potentialCode);
-                }
+                const displayNameParts = parts.map((part, index) => {
+                    const lowerPart = part.toLowerCase();
 
-                const displayName = parts.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                    // Rule 1: First part is a country code, keep it uppercase.
+                    if (index === 0 && flag) {
+                        return part.toUpperCase();
+                    }
+                    
+                    // Rule 2: Special replacement for 'ss' -> 'SHADOWSOCKS'.
+                    if (lowerPart === 'ss') {
+                        return 'SHADOWSOCKS';
+                    }
+
+                    // Rule 3: Check if it's a known config type to be uppercased.
+                    if (uppercaseTypes.includes(lowerPart)) {
+                        return part.toUpperCase();
+                    }
+
+                    // Rule 4: Default formatting (Capitalize first letter).
+                    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+                });
+
+                const displayName = displayNameParts.join(' ');
                 
                 return flag ? `${flag} ${displayName}` : displayName;
             }
