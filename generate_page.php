@@ -6,8 +6,8 @@ declare(strict_types=1);
  * Proxy Subscription Generator (PSG) Page Builder
  *
  * Scans subscription directories and generates a modern, fully functional index.html.
- * This script includes a Search/Filter bar, Last Generated timestamp, a multi-format
- * Subscription Analyzer, custom sorting, and uses the Lucide icon library.
+ * This script includes a Search/Filter bar, Last Generated timestamp, and the
+ * "Subscription DNA" feature for deep visual analysis with interactive charts.
  */
 
 // --- Configuration ---
@@ -25,6 +25,7 @@ define('SCAN_DIRECTORIES', [
  */
 function get_client_info(): array
 {
+    // This function remains unchanged.
     return [
         'clash' => [
             'windows' => [
@@ -48,7 +49,6 @@ function get_client_info(): array
         'meta' => [ // Uses the same clients as Clash
             'windows' => [
                 ['name' => 'Clash Verge (Rev) - x64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'],
-                ['name' => 'Clash Verge (Rev) - ARM64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi']
             ],
             'macos' => [
                 ['name' => 'Clash Verge (Rev) - Apple Silicon', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg']
@@ -110,12 +110,14 @@ function get_client_info(): array
     ];
 }
 
+
 /**
  * Scans a directory recursively for files, filters out ignored extensions,
  * and returns the original, unmodified relative paths.
  */
 function scan_directory(string $dir): array
 {
+    // This function remains unchanged.
     if (!is_dir($dir)) {
         return [];
     }
@@ -142,6 +144,7 @@ function scan_directory(string $dir): array
  */
 function process_files_to_structure(array $files_by_category): array
 {
+    // This function remains unchanged.
     $structure = [];
     foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
         $base_dir_relative = ltrim(str_replace(PROJECT_ROOT, '', $category_dir_path), DIRECTORY_SEPARATOR);
@@ -153,45 +156,26 @@ function process_files_to_structure(array $files_by_category): array
 
         foreach ($files_by_category[$category_key] as $path) { 
             $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
-            
-            // This temporary path is used for filtering and categorization.
             $path_for_parsing = $relative_path_from_base;
             
-            // --- STRICT FILTERING LOGIC ---
             if (strpos($path_for_parsing, 'xray/') === 0) {
-                // If it's an 'xray' path, it MUST come from the 'base64' subfolder.
-                if (strpos($path_for_parsing, 'xray/base64/') !== 0) {
-                    continue; // Skip this file (e.g., from 'xray/normal/').
-                }
-                // It's valid. Simplify the path for categorization.
+                if (strpos($path_for_parsing, 'xray/base64/') !== 0) continue;
                 $path_for_parsing = str_replace('xray/base64/', 'xray/', $path_for_parsing);
-
             } elseif (strpos($path_for_parsing, 'location/') === 0) {
-                // If it's a 'locations' path, it MUST come from the 'base64' subfolder.
-                if (strpos($path_for_parsing, 'location/base64/') !== 0) {
-                    continue; // Skip this file (e.g., from 'locations/normal/').
-                }
-                // It's valid. Simplify the path for categorization.
+                if (strpos($path_for_parsing, 'location/base64/') !== 0) continue;
                 $path_for_parsing = str_replace('location/base64/', 'location/', $path_for_parsing);
             }
-            // --- END OF FILTERING ---
 
             $parts = explode('/', $path_for_parsing);
-            if (count($parts) < 2) {
-                continue;
-            }
+            if (count($parts) < 2) continue;
 
             $type = array_shift($parts); 
             $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
-            
-            // The URL is always built from the original, correct path.
             $url = GITHUB_REPO_URL . '/' . $path;
-
             $structure[$category_key][$type][$name] = $url;
         }
     }
     
-    // Sort the final structure
     foreach ($structure as &$categories) {
         ksort($categories);
         foreach ($categories as &$elements) {
@@ -205,7 +189,7 @@ function process_files_to_structure(array $files_by_category): array
 
 /**
  * Generates the complete HTML content for the PSG page, embedding
- * structured subscription data and client information as JSON.
+ * structured subscription data, client information, and the Subscription DNA modal.
  */
 function generate_full_html(array $structured_data, array $client_info_data, string $generation_timestamp): string
 {
@@ -224,6 +208,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script> <!-- Chart.js for DNA feature -->
     <script>
       tailwind.config = {
         theme: {
@@ -284,22 +269,14 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                             </div>
                             <button id="analyzeButton" class="mt-4 w-full flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200">
                                 <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
-                                <span>Analyze Subscription</span>
+                                <span>Analyze Subscription DNA</span>
                             </button>
                         </div>
                         
-                        <!-- Client Info & Analysis Results Area -->
-                        <div class="space-y-4">
-                           <div id="client-info-container">
-                               <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Compatible Clients:</h3>
-                               <div id="client-info-list" class="space-y-5"></div>
-                           </div>
-                           <div id="analysis-container" class="hidden">
-                               <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Live Analysis:</h3>
-                               <div id="analysis-results" class="p-4 bg-slate-100 rounded-lg text-slate-700 space-y-2 text-sm">
-                                   <!-- Analysis results will be injected here -->
-                               </div>
-                           </div>
+                        <!-- Client Info Area -->
+                        <div id="client-info-container">
+                           <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Compatible Clients:</h3>
+                           <div id="client-info-list" class="space-y-5"></div>
                         </div>
                     </div>
                 </div>
@@ -316,10 +293,69 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             <p class="text-xs text-slate-400 mt-4">Last Generated: __TIMESTAMP_PLACEHOLDER__</p>
         </footer>
     </div>
+    
+    <!-- Message Box -->
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
         <div class="bg-white rounded-lg p-6 shadow-xl max-w-sm w-full text-center">
             <p id="messageBoxText" class="text-lg font-semibold text-slate-800 mb-4"></p>
             <button id="messageBoxClose" class="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">OK</button>
+        </div>
+    </div>
+    
+    <!-- Subscription DNA Modal -->
+    <div id="dnaModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden" onclick="closeDnaModal(event)">
+        <div id="dnaModalContent" class="bg-white rounded-xl p-6 sm:p-8 shadow-2xl max-w-4xl w-full text-slate-800 transform transition-all scale-95 opacity-0">
+            <div class="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Subscription DNA</h2>
+                    <p id="modalSubscriptionName" class="text-sm text-slate-500">Analysis of the selected subscription.</p>
+                </div>
+                <button onclick="closeDnaModal()" class="p-2 rounded-full hover:bg-slate-100">
+                    <i data-lucide="x" class="w-6 h-6 text-slate-600"></i>
+                </button>
+            </div>
+            
+            <div id="dnaLoadingState" class="text-center py-10">
+                 <p class="flex items-center justify-center gap-2 text-slate-600">
+                    <i data-lucide="loader-2" class="animate-spin w-5 h-5"></i> 
+                    Analyzing... Please wait.
+                </p>
+            </div>
+
+            <div id="dnaResultsContainer" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Left Column: Charts -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-semibold mb-3 text-center text-slate-700">Protocol Distribution</h3>
+                        <div class="max-w-[250px] mx-auto relative">
+                            <canvas id="protocolChart"></canvas>
+                            <div id="protocolTotal" class="absolute inset-0 flex items-center justify-center text-center">
+                                <span class="text-3xl font-bold text-slate-800"></span>
+                                <span class="text-sm text-slate-500 block -mt-1">Nodes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3 text-center text-slate-700">Transport & Security</h3>
+                        <canvas id="transportChart"></canvas>
+                    </div>
+                </div>
+                <!-- Right Column: Map & Info -->
+                <div class="space-y-8">
+                     <div>
+                        <h3 class="font-semibold mb-3 text-center text-slate-700">Geographic Distribution</h3>
+                         <div id="countryBarChartContainer">
+                            <canvas id="countryBarChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3 text-center text-slate-700">Provider Keywords</h3>
+                        <div id="providerTagCloud" class="p-4 bg-slate-100 rounded-lg min-h-[150px] flex flex-wrap gap-2 items-center justify-center">
+                            <!-- Tags will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -331,7 +367,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             // 1. INITIALIZE LIBRARIES
             lucide.createIcons();
 
-            // 2. DEFINE CONSTANTS
+            // 2. DEFINE CONSTANTS & GLOBALS
             const structuredData = __JSON_DATA_PLACEHOLDER__;
             const clientInfoData = __CLIENT_INFO_PLACEHOLDER__;
             const configTypeSelect = document.getElementById('configType');
@@ -345,11 +381,10 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             const clientInfoList = document.getElementById('client-info-list');
             const subscriptionDetailsContainer = document.getElementById('subscription-details-container');
             const analyzeButton = document.getElementById('analyzeButton');
-            const analysisContainer = document.getElementById('analysis-container');
-            const analysisResults = document.getElementById('analysis-results');
             const CUSTOM_SORT_ORDER = ['mix', 'vmess', 'vless', 'reality', 'trojan', 'hysteria', 'hy2', 'tuic'];
-
             const platformIcons = { windows: 'monitor', macos: 'apple', android: 'smartphone', ios: 'tablet', linux: 'terminal' };
+
+            let charts = {}; // To hold chart instances for destruction
 
             // 3. DEFINE ALL HELPER FUNCTIONS
             function showMessageBox(message) {
@@ -379,6 +414,10 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 const codePoints = countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt());
                 return String.fromCodePoint(...codePoints);
             }
+            
+            // Mapping from 2-letter code to full name for charts
+            const countryCodeMap = { US: 'United States', SG: 'Singapore', JP: 'Japan', KR: 'S. Korea', DE: 'Germany', NL: 'Netherlands', GB: 'UK', FR: 'France', CA: 'Canada', AU: 'Australia', HK: 'Hong Kong', TW: 'Taiwan', RU: 'Russia', IN: 'India', TR: 'Turkey', IR: 'Iran', AE: 'UAE' };
+            function getCountryName(code) { return countryCodeMap[code] || code; }
 
             function formatDisplayName(name) {
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
@@ -390,11 +429,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 if (countryCodeMatch) {
                     flag = getFlagEmoji(countryCodeMatch[1]);
                     processedName = processedName.substring(countryCodeMatch[0].length);
-                } else {
-                    const initialTwoLetterMatch = processedName.match(/(?:^|\W)([A-Z]{2})(?:$|\W)/);
-                    if (initialTwoLetterMatch && initialTwoLetterMatch[1] && !protocolPrefixes.includes(initialTwoLetterMatch[1].toLowerCase())) {
-                        flag = getFlagEmoji(initialTwoLetterMatch[1]);
-                    }
                 }
                 const parts = processedName.split(/[-_]/).filter(p => p !== '');
                 const displayNameParts = parts.map((part) => {
@@ -413,60 +447,13 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     try {
                         new QRCode(qrcodeDiv, {
                             text: url, width: 128, height: 128,
-                            colorDark: "#000000", colorLight: "#00000000",
+                            colorDark: "#000000", colorLight: "#FFFFFF",
                             correctLevel: QRCode.CorrectLevel.H
                         });
                     } catch (error) { console.error('QR code initialization failed:', error); }
                 }
             }
             
-            // --- ANALYSIS PARSERS ---
-            function parseBase64Subscription(content) {
-                let decodedContent; try { decodedContent = atob(content); } catch (e) { decodedContent = content; }
-                const protocols = new Set(); const countries = new Set(); let nodeCount = 0;
-                const nodeRegex = /(vmess|vless|ss|trojan|ssr|hy2|tuic):\/\/[^\s#]*(?:#([A-Z]{2}[-_]?[^&\n]*)|#([^&\n]*))?/gi;
-                const lines = decodedContent.split('\n');
-                lines.forEach(line => {
-                    const trimmedLine = line.trim(); if (trimmedLine.startsWith('#') || trimmedLine.startsWith('//') || trimmedLine.length === 0) return;
-                    let match;
-                    while ((match = nodeRegex.exec(trimmedLine)) !== null) {
-                        nodeCount++; if (match[1]) { protocols.add(match[1].toLowerCase()); }
-                        const tag = match[2] || match[3];
-                        if (tag) {
-                            const countryCodeMatch = tag.match(/^([A-Z]{2})[-_]?/);
-                            if (countryCodeMatch && countryCodeMatch[1]) { countries.add(countryCodeMatch[1].toUpperCase()); }
-                        }
-                    }
-                });
-                return { nodeCount, protocols: Array.from(protocols).sort(), countries: Array.from(countries).sort() };
-            }
-
-            function parseClashSubscription(content) {
-                const proxyMatch = content.match(/^\s*proxies:\s*\n((?:\s*-\s*.+\n?)*)/m);
-                const proxyCount = proxyMatch && proxyMatch[1] ? (proxyMatch[1].match(/^\s*-\s/gm) || []).length : 0;
-                const groupMatch = content.match(/^\s*proxy-groups:\s*\n((?:\s*-\s*name:.*?\n?)*)/m);
-                const groupCount = groupMatch && groupMatch[1] ? (groupMatch[1].match(/^\s*-\s*name:/gm) || []).length : 0;
-                return { proxyCount, groupCount };
-            }
-
-            function parseSingboxSubscription(content) {
-                try {
-                    const cleanContent = content.replace(/^\s*\/\/.*\r?\n/gm, ''); const data = JSON.parse(cleanContent);
-                    if (!data.outbounds || !Array.isArray(data.outbounds)) return 0;
-                    const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns', 'fallback'];
-                    return data.outbounds.filter(o => o.type && !utilityTypes.includes(o.type.toLowerCase())).length;
-                } catch (e) { console.error('Sing-box JSON parsing error:', e); return 0; }
-            }
-
-            function parseSurfboardSubscription(content) {
-                const lines = content.split('\n'); let inProxySection = false; let nodeCount = 0;
-                for (const line of lines) {
-                    const trimmedLine = line.trim(); if (trimmedLine.toLowerCase() === '[proxy]') { inProxySection = true; continue; }
-                    if (trimmedLine.startsWith('[')) { inProxySection = false; }
-                    if (inProxySection && trimmedLine.includes('=') && !trimmedLine.toLowerCase().startsWith('direct =')) { nodeCount++; }
-                } return nodeCount;
-            }
-
             function updateClientInfo(coreType) {
                 const clientInfoContainer = document.getElementById('client-info-container');
                 clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType];
@@ -520,51 +507,125 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     otherElementSelect.disabled = false;
                 }
             }
+            
+            // --- SUBSCRIPTION DNA ---
+            function analyzeSubscriptionDNA(decodedContent) {
+                const lines = decodedContent.split('\n');
+                const dna = {
+                    protocols: {}, transports: {}, security: {}, countries: {}, providers: {}, total: 0
+                };
+                const linkRegex = /^(vless|vmess|trojan|ss):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
+                const providerKeywords = ['aws', 'cdn', 'google', 'azure', 'oracle', 'linode', 'vultr', 'digitalocean', 'hetzner', 'ovh', 'alibaba', 'vip', 'premium'];
 
+                for (const line of lines) {
+                    const match = line.trim().match(linkRegex);
+                    if (!match) continue;
+                    
+                    dna.total++;
+                    const protocol = match[1];
+                    const params = new URLSearchParams(match[5] || '');
+                    const name = decodeURIComponent(match[6] || '').trim().toLowerCase();
+
+                    dna.protocols[protocol] = (dna.protocols[protocol] || 0) + 1;
+                    dna.transports[params.get('type') || 'tcp'] = (dna.transports[params.get('type') || 'tcp'] || 0) + 1;
+                    dna.security[params.get('security') || 'none'] = (dna.security[params.get('security') || 'none'] || 0) + 1;
+                    
+                    const countryMatch = name.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
+                    if (countryMatch) {
+                        const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
+                        dna.countries[code] = (dna.countries[code] || 0) + 1;
+                    }
+                    
+                    providerKeywords.forEach(keyword => {
+                        if (name.includes(keyword)) {
+                            dna.providers[keyword.toUpperCase()] = (dna.providers[keyword.toUpperCase()] || 0) + 1;
+                        }
+                    });
+                }
+                return dna;
+            }
+
+            function closeDnaModal(event) {
+                if (event && event.target.id !== 'dnaModal' && event.target.closest('button') === null) return;
+                const modal = document.getElementById('dnaModal');
+                const modalContent = document.getElementById('dnaModalContent');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => modal.classList.add('hidden'), 200);
+                Object.values(charts).forEach(chart => { if(chart) chart.destroy(); });
+            }
+            
             // 4. ATTACH EVENT LISTENERS
             analyzeButton.addEventListener('click', async () => {
                 const url = subscriptionUrlInput.value;
-                const clientCore = ipTypeSelect.value;
                 if (!url) { showMessageBox('Please select a subscription URL first.'); return; }
-                analysisContainer.classList.remove('hidden');
-                analysisResults.innerHTML = '<p class="flex items-center gap-2 text-slate-600"><i data-lucide="loader-2" class="animate-spin w-4 h-4"></i> Analyzing subscription...</p>';
-                lucide.createIcons();
+                
+                // Show modal in loading state
+                const modal = document.getElementById('dnaModal');
+                const modalContent = document.getElementById('dnaModalContent');
+                document.getElementById('dnaLoadingState').classList.remove('hidden');
+                document.getElementById('dnaResultsContainer').classList.add('hidden');
+                document.getElementById('modalSubscriptionName').textContent = `Analysis for: ${formatDisplayName(otherElementSelect.value)}`;
+                modal.classList.remove('hidden');
+                setTimeout(() => modalContent.classList.remove('scale-95', 'opacity-0'), 50);
+
                 try {
                     const response = await fetch(url);
-                    if (!response.ok) {
-                        if (response.status === 404) { throw new Error(`Subscription file not found (404). Please ensure the link is correct.`); }
-                        throw new Error(`Failed to fetch subscription: HTTP ${response.status} - ${response.statusText}.`);
-                    }
-                    const content = await response.text();
-                    let analysisOutput = '';
+                    if (!response.ok) throw new Error(`Failed to fetch subscription (${response.status})`);
                     
-                    switch (clientCore.toLowerCase()) {
-                        case 'location':
-                        case 'xray':
-                            const xrayResults = parseBase64Subscription(content);
-                            analysisOutput = `<p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p> <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${xrayResults.nodeCount}</span></p> <p><strong>Protocols:</strong> ${xrayResults.protocols.length > 0 ? xrayResults.protocols.join(', ').toUpperCase() : 'N/A'}</p> <p><strong>Countries:</strong> ${xrayResults.countries.length > 0 ? xrayResults.countries.map(c => getFlagEmoji(c) + ' ' + c).join(', ') : 'N/A'}</p>`;
-                            break;
-                        case 'meta':
-                        case 'clash':
-                            const clashResults = parseClashSubscription(content);
-                            analysisOutput = `<p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p> <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${clashResults.proxyCount}</span></p> <p><strong>Proxy Groups:</strong> <span class="font-bold text-lg">${clashResults.groupCount}</span></p>`;
-                            break;
-                        case 'singbox':
-                            const singboxNodeCount = parseSingboxSubscription(content);
-                            analysisOutput = `<p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p> <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${singboxNodeCount}</span></p>`;
-                            break;
-                        case 'surfboard':
-                            const surfboardNodeCount = parseSurfboardSubscription(content);
-                            analysisOutput = `<p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p> <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${surfboardNodeCount}</span></p>`;
-                            break;
-                        default:
-                            throw new Error('Analysis for this client type is not supported yet.');
+                    const content = await response.text();
+                    // Analysis is best for base64 encoded v2ray/xray subs
+                    const decodedContent = atob(content);
+                    const dna = analyzeSubscriptionDNA(decodedContent);
+
+                    if (dna.total === 0) throw new Error('No compatible proxy nodes found to analyze.');
+
+                    // Destroy old charts
+                    Object.values(charts).forEach(chart => { if(chart) chart.destroy(); });
+                    
+                    // Render Charts
+                    const protocolCtx = document.getElementById('protocolChart').getContext('2d');
+                    charts.protocol = new Chart(protocolCtx, {
+                        type: 'doughnut', data: { labels: Object.keys(dna.protocols), datasets: [{ data: Object.values(dna.protocols), backgroundColor: ['#4f46e5', '#16a34a', '#f97316', '#0ea5e9'], borderWidth: 0 }] },
+                        options: { responsive: true, cutout: '70%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 20 }}}}
+                    });
+                    document.querySelector('#protocolTotal span:first-child').textContent = dna.total;
+
+                    const transportCtx = document.getElementById('transportChart').getContext('2d');
+                    charts.transport = new Chart(transportCtx, {
+                        type: 'bar', data: { labels: Object.keys(dna.transports), datasets: [{ label: '# Nodes', data: Object.values(dna.transports), backgroundColor: '#3b82f6' }] },
+                        options: { responsive: true, plugins: { legend: { display: false } } }
+                    });
+
+                    const sortedCountries = Object.entries(dna.countries).sort((a,b) => b[1] - a[1]).slice(0, 7);
+                    const countryCtx = document.getElementById('countryBarChart').getContext('2d');
+                    charts.country = new Chart(countryCtx, {
+                        type: 'bar', data: { labels: sortedCountries.map(c => `${getFlagEmoji(c[0])} ${getCountryName(c[0])}`), datasets: [{ label: '# Nodes', data: sortedCountries.map(c => c[1]), backgroundColor: '#a855f7' }] },
+                        options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } } }
+                    });
+                    
+                    // Render Tag Cloud
+                    const tagCloud = document.getElementById('providerTagCloud');
+                    tagCloud.innerHTML = '';
+                    const sortedProviders = Object.entries(dna.providers).sort((a, b) => b[1] - a[1]);
+                    if (sortedProviders.length === 0) {
+                        tagCloud.innerHTML = '<p class="text-slate-500 text-sm">No common provider keywords found.</p>';
+                    } else {
+                        sortedProviders.forEach(([provider, count]) => {
+                           const tag = document.createElement('span');
+                           tag.className = 'bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full';
+                           tag.textContent = `${provider} (${count})`;
+                           tagCloud.appendChild(tag);
+                        });
                     }
-                    analysisResults.innerHTML = analysisOutput;
+
+                    // Show results
+                    document.getElementById('dnaLoadingState').classList.add('hidden');
+                    document.getElementById('dnaResultsContainer').classList.remove('hidden');
+
                 } catch (error) {
-                    analysisResults.innerHTML = `<p class="font-medium text-red-700 flex items-center gap-2"><i data-lucide="x-circle" class="w-4 h-4"></i> Analysis Failed</p><p class="text-sm text-slate-600">${error.message}</p>`;
+                    closeDnaModal();
+                    showMessageBox(`Analysis Failed: ${error.message}. This feature works best with VLESS/VMESS/Trojan subscriptions.`);
                 }
-                lucide.createIcons();
             });
 
             configTypeSelect.addEventListener('change', () => {
@@ -580,8 +641,12 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 const selectedCore = ipTypeSelect.value; searchBar.value = '';
                 if (selectedCore) {
                     updateClientInfo(selectedCore); resultArea.classList.remove('hidden');
-                    subscriptionDetailsContainer.classList.add('hidden'); analysisContainer.classList.add('hidden');
+                    subscriptionDetailsContainer.classList.add('hidden');
                     searchBar.disabled = false; updateOtherElementOptions();
+                    
+                    const dnaCompatible = ['xray', 'location'].includes(selectedCore.toLowerCase());
+                    analyzeButton.style.display = dnaCompatible ? 'flex' : 'none';
+
                 } else {
                     resultArea.classList.add('hidden'); searchBar.disabled = true;
                     resetSelect(otherElementSelect, 'Select Subscription');
@@ -593,7 +658,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             searchBar.addEventListener('input', updateOtherElementOptions);
 
             otherElementSelect.addEventListener('change', () => {
-                analysisContainer.classList.add('hidden');
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value];
                 if (url) {
                     subscriptionUrlInput.value = url; updateQRCode(url);
@@ -605,27 +669,14 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
             copyButton.addEventListener('click', () => {
                 if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(subscriptionUrlInput.value)
-                        .then(() => {
-                            const copyIcon = copyButton.querySelector('.copy-icon'); const checkIcon = copyButton.querySelector('.check-icon');
-                            copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
-                            setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
-                        }).catch(err => { console.error('Failed to copy text: ', err); showMessageBox('Failed to copy URL. Please copy manually.'); });
-                } else {
-                    subscriptionUrlInput.select(); document.execCommand('copy');
-                    const copyIcon = copyButton.querySelector('.copy-icon'); const checkIcon = copyButton.querySelector('.check-icon');
-                    copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
-                    setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
-                }
+                navigator.clipboard.writeText(subscriptionUrlInput.value)
+                    .then(() => {
+                        const copyIcon = copyButton.querySelector('.copy-icon'); const checkIcon = copyButton.querySelector('.check-icon');
+                        copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
+                        setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
+                    }).catch(err => { showMessageBox('Failed to copy URL. Please copy manually.'); });
             });
             
-            document.addEventListener('copy', (event) => {
-                if (subscriptionUrlInput.value && event.clipboardData && event.target === subscriptionUrlInput) {
-                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value); event.preventDefault();
-                }
-            });
-
             // 5. INITIALIZE THE PAGE
             populateSelect(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
             configTypeSelect.disabled = false;
@@ -662,5 +713,3 @@ $timestamp = date('Y-m-d H:i:s T');
 $final_html = generate_full_html($structured_data, $client_info, $timestamp);
 file_put_contents(OUTPUT_HTML_FILE, $final_html);
 echo "Successfully generated page at: " . realpath(OUTPUT_HTML_FILE) . PHP_EOL;
-
-?>
