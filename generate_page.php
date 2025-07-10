@@ -358,7 +358,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
     
-    <!-- MODIFIED: Javascript logic is corrected -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             try { lucide.createIcons(); } catch (error) { console.error('Lucide icons initialization failed:', error); }
@@ -395,9 +394,45 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 selectElement.innerHTML = `<option value="">${defaultText}</option>`;
                 selectElement.disabled = true;
             }
-            function formatDisplayName(name) {
-                return name.split(/[-_]/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            
+            /**
+             * Converts a two-letter country code to a flag emoji.
+             * @param {string} countryCode - The two-letter country code (e.g., 'US', 'DE').
+             * @returns {string} The flag emoji or an empty string if invalid.
+             */
+            function getFlagEmoji(countryCode) {
+                // Check if the input is a valid two-letter string
+                if (!/^[A-Z]{2}$/.test(countryCode)) {
+                    return '';
+                }
+                // Convert letters to regional indicator symbol code points
+                const codePoints = countryCode
+                    .toUpperCase()
+                    .split('')
+                    .map(char => 127397 + char.charCodeAt());
+                return String.fromCodePoint(...codePoints);
             }
+
+            /**
+             * Formats a raw name for display, adding a flag emoji if applicable.
+             * @param {string} name - The raw name (e.g., 'DE-Frankfurt_premium').
+             * @returns {string} The formatted display name (e.g., '🇩🇪 De Frankfurt Premium').
+             */
+            function formatDisplayName(name) {
+                const parts = name.split(/[-_]/);
+                const potentialCode = parts[0].toUpperCase();
+                let flag = '';
+
+                // If the first part of the name is a two-letter code, treat it as a country
+                if (potentialCode.length === 2) {
+                    flag = getFlagEmoji(potentialCode);
+                }
+
+                const displayName = parts.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                
+                return flag ? `${flag} ${displayName}` : displayName;
+            }
+
             function updateQRCode(url) {
                 qrcodeDiv.innerHTML = '';
                 if (url) {
@@ -475,7 +510,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 resetSelect(otherElementSelect, 'Select Subscription');
                 searchBar.value = '';
                 searchBar.disabled = true;
-                resultArea.classList.add('hidden'); // Hide everything
+                resultArea.classList.add('hidden');
                 
                 if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
                     populateSelect(ipTypeSelect, structuredData[configTypeSelect.value], 'Select Client/Core');
@@ -483,24 +518,17 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 }
             });
             
-            // CORRECTED LOGIC
             ipTypeSelect.addEventListener('change', () => {
                 const selectedCore = ipTypeSelect.value;
                 searchBar.value = '';
                 
                 if (selectedCore) {
-                    // 1. Show client info immediately
                     updateClientInfo(selectedCore);
                     resultArea.classList.remove('hidden');
-                    
-                    // 2. Hide the URL/QR part until a subscription is chosen
                     subscriptionDetailsContainer.classList.add('hidden');
-                    
-                    // 3. Prepare the next dropdown
                     searchBar.disabled = false;
                     updateOtherElementOptions();
                 } else {
-                    // Hide everything if the user deselects
                     resultArea.classList.add('hidden');
                     searchBar.disabled = true;
                     resetSelect(otherElementSelect, 'Select Subscription');
@@ -509,11 +537,9 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
             searchBar.addEventListener('input', updateOtherElementOptions);
 
-            // CORRECTED LOGIC
             otherElementSelect.addEventListener('change', () => {
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value] || null;
                 if (url) {
-                    // Only update and show the subscription details part
                     subscriptionUrlInput.value = url;
                     updateQRCode(url);
                     subscriptionDetailsContainer.classList.remove('hidden');
