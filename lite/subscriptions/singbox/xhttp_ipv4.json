@@ -107,17 +107,17 @@
                 "URL-TEST",
                 "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 28",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 27",
                 "🇺🇸 US | 🔴 | vless | @ipv2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🔴 | vless | @noviin_tel | 1",
+                "🇺🇸 US | 🔴 | vless | @proxy_hiddfy | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @srcvpn | 25",
+                "🇺🇸 US | 🔴 | vless | @srcvpn | 27",
                 "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
-                "🇺🇸 US | 🔴 | vless | @v2ray_tz | 5",
                 "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19"
             ]
         },
@@ -127,17 +127,17 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 28",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 27",
                 "🇺🇸 US | 🔴 | vless | @ipv2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🔴 | vless | @noviin_tel | 1",
+                "🇺🇸 US | 🔴 | vless | @proxy_hiddfy | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @srcvpn | 25",
+                "🇺🇸 US | 🔴 | vless | @srcvpn | 27",
                 "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
-                "🇺🇸 US | 🔴 | vless | @v2ray_tz | 5",
                 "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19"
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -193,7 +193,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 28",
+            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 27",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
@@ -261,6 +261,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @proxy_hiddfy | 7",
+            "type": "vless",
+            "server": "151.101.67.8",
+            "server_port": 80,
+            "uuid": "8088c605-e0c2-4774-9ee4-7fa7e47b6112",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
             "type": "vless",
             "server": "147.182.183.207",
@@ -293,7 +302,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @srcvpn | 25",
+            "tag": "🇺🇸 US | 🔴 | vless | @srcvpn | 27",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
@@ -318,15 +327,6 @@
                     "fingerprint": "chrome"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2ray_tz | 5",
-            "type": "vless",
-            "server": "151.101.67.8",
-            "server_port": 80,
-            "uuid": "8088c605-e0c2-4774-9ee4-7fa7e47b6112",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19",

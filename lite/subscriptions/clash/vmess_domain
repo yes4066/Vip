@@ -52,7 +52,6 @@ proxies:
   - {"name":"🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7","type":"vmess","server":"199.247.30.45","port":8080,"cipher":"auto","uuid":"ca80451e-768a-469f-9913-57a27268fd70","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"google.com"}}}
   - {"name":"🇮🇷 IR | 🔴 | vmess | @v2pedia | 27","type":"vmess","server":"0.numberfive.sbs","port":80,"cipher":"chacha20-poly1305","uuid":"4e259c24-53d1-4db4-bc01-5c74cea872a6","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7","type":"vmess","server":"91.107.160.240","port":15795,"cipher":"auto","uuid":"7ca6c13a-e450-49fa-9b9c-b49a6eda5b79","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪 DE | 🟢 | vmess | @v2ray_free_conf | 19","type":"vmess","server":"ov-germany7.09vpn.com","port":8443,"cipher":"auto","uuid":"8b7ec98d-c291-4034-9719-e6d62051636a","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess/","headers":{"Host":""}}}
   - {"name":"❔ XX | 🔴 | vmess | @v2ray_n | 19","type":"vmess","server":"tr1.iranz.me","port":443,"cipher":"auto","uuid":"1145b8f1-72b9-4e3c-aede-1b884f56537d","alterId":"0","tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"tr1.iranz.me"}}}
   - {"name":"🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6","type":"vmess","server":"5.180.30.85","port":18598,"cipher":"auto","uuid":"bf26f2fb-9d2a-49b6-8527-82e8aba3a9a9","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3","type":"vmess","server":"57.129.7.139","port":60240,"cipher":"auto","uuid":"84e92b93-93d0-40e4-8b2b-123801eeda44","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
@@ -127,7 +126,6 @@ proxy-groups:
       - '🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7'
       - '🇮🇷 IR | 🔴 | vmess | @v2pedia | 27'
       - '🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7'
-      - '🇩🇪 DE | 🟢 | vmess | @v2ray_free_conf | 19'
       - '❔ XX | 🔴 | vmess | @v2ray_n | 19'
       - '🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6'
       - '🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3'
@@ -178,7 +176,6 @@ proxy-groups:
       - '🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7'
       - '🇮🇷 IR | 🔴 | vmess | @v2pedia | 27'
       - '🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7'
-      - '🇩🇪 DE | 🟢 | vmess | @v2ray_free_conf | 19'
       - '❔ XX | 🔴 | vmess | @v2ray_n | 19'
       - '🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6'
       - '🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3'
@@ -227,7 +224,6 @@ proxy-groups:
       - '🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7'
       - '🇮🇷 IR | 🔴 | vmess | @v2pedia | 27'
       - '🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7'
-      - '🇩🇪 DE | 🟢 | vmess | @v2ray_free_conf | 19'
       - '❔ XX | 🔴 | vmess | @v2ray_n | 19'
       - '🇬🇧 GB | 🔴 | vmess | @v2rayng3 | 6'
       - '🇩🇪 DE | 🔴 | vmess | @v2rayng_v2_ray | 3'

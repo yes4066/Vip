@@ -286,7 +286,6 @@
     "config_proxy": {
         "types": [
             "vless",
-            "ss",
             "vmess"
         ],
         "title": "Proxy | V2ray | Config | Vpn | Hiddify | Nekobox | Segaro | پروکسی | فیلترشکن | ایرانسل | همراه اول | رایتل | سامانتل | مخابرات|",
@@ -343,7 +342,8 @@
         "types": [
             "vless",
             "ss",
-            "trojan"
+            "trojan",
+            "vmess"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/configshubplus.jpg"
@@ -482,8 +482,8 @@
     },
     "deamnet_proxy": {
         "types": [
-            "vless",
             "trojan",
+            "vless",
             "vmess"
         ],
         "title": "DeamNet_proxy",
@@ -1139,9 +1139,7 @@
     "hope_net": {
         "types": [
             "vless",
-            "trojan",
-            "vmess",
-            "ss"
+            "vmess"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1218,10 +1216,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
             "vmess",
             "ss",
-            "trojan"
+            "trojan",
+            "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -2082,13 +2080,6 @@
         "title": "NTGreen Plus 👽",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ntgreenplus.jpg"
     },
-    "nufilter": {
-        "types": [
-            "vless"
-        ],
-        "title": "@NUFiLTER | نوفیلتر",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/nufilter.jpg"
-    },
     "ohvpn": {
         "types": [
             "vless"
@@ -2272,7 +2263,6 @@
     },
     "proxy_mtproto_vpns_free": {
         "types": [
-            "vmess",
             "vless",
             "ss"
         ],
@@ -2295,16 +2285,16 @@
     },
     "proxyandvpnofficial1": {
         "types": [
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "🧿 کانال رسمی پروکسی و فیلترشکن (VPN) دائمی و رایگان و امن🧿",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxyandvpnofficial1.jpg"
     },
     "proxycrone": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "پروکسی | کانفیگ نت ملی",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxycrone.jpg"
@@ -2857,9 +2847,9 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "ss",
             "vless",
             "vmess",
+            "ss",
             "trojan"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
@@ -2983,7 +2973,6 @@
     },
     "v2rayfree": {
         "types": [
-            "vmess",
             "vless",
             "ss"
         ],
@@ -3309,9 +3298,7 @@
     },
     "v2rayweb": {
         "types": [
-            "vless",
-            "vmess",
-            "trojan"
+            "vless"
         ],
         "title": "V2ray | VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayweb.jpg"
@@ -3602,8 +3589,8 @@
     },
     "vpn451": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "451°F VPN || НОВОСТИ",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vpn451.jpg"
