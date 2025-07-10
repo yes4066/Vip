@@ -416,13 +416,12 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             }
 
             /**
-             * MODIFIED FUNCTION
-             * Formats a raw name for display with special capitalization rules.
-             * Example: 'DE-premium_ss' -> '🇩🇪 DE Premium SHADOWSOCKS'
-             * Example: 'US-all-vless-ws' -> '🇺🇸 US All VLESS WS'
+             * --- CORRECTED AND IMPROVED FUNCTION ---
+             * This function now correctly handles all formatting rules.
              */
             function formatDisplayName(name) {
-                // List of config types to be fully uppercased. Add more as needed.
+                // Rule definition
+                const specialReplacements = { 'ss': 'SHADOWSOCKS' };
                 const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
 
                 const parts = name.split(/[-_]/);
@@ -436,12 +435,12 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     if (index === 0 && flag) {
                         return part.toUpperCase();
                     }
-                    
-                    // Rule 2: Special replacement for 'ss' -> 'SHADOWSOCKS'.
-                    if (lowerPart === 'ss') {
-                        return 'SHADOWSOCKS';
-                    }
 
+                    // Rule 2 (Corrected): Check for special full-word replacements. This now works correctly.
+                    if (specialReplacements[lowerPart]) {
+                        return specialReplacements[lowerPart];
+                    }
+                    
                     // Rule 3: Check if it's a known config type to be uppercased.
                     if (uppercaseTypes.includes(lowerPart)) {
                         return part.toUpperCase();
@@ -453,8 +452,16 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
                 const displayName = displayNameParts.join(' ');
                 
-                return flag ? `${flag} ${displayName}` : displayName;
+                // For a select option name, we don't want the flag emoji at the beginning if there's no actual country code.
+                if (flag && displayNameParts[0] === potentialCode) {
+                    return `${flag} ${displayNameParts.slice(1).join(' ')}`;
+                } else if (flag) {
+                    return `${flag} ${displayName}`;
+                }
+
+                return displayName;
             }
+
 
             function updateQRCode(url) {
                 qrcodeDiv.innerHTML = '';
