@@ -63,7 +63,7 @@ function get_client_info(): array
                 ['name' => 'Clash Verge (Rev) - amd64 (.deb)', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb']
             ]
         ],
-        'locations' => [ // Uses the same clients as Xray
+        'location' => [ // Uses the same clients as Xray
             'windows' => [
                 ['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']
             ],
