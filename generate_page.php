@@ -131,7 +131,7 @@ function get_client_info(): array
 
 /**
  * Scans a directory recursively for files, filters out ignored extensions,
- * and normalizes paths, including special handling for xray/base64.
+ * and returns the original, unmodified relative paths.
  */
 function scan_directory(string $dir): array
 {
@@ -144,30 +144,20 @@ function scan_directory(string $dir): array
         RecursiveIteratorIterator::SELF_FIRST
     );
     
-    // CORRECTED: Removed 'json', 'yml', 'yaml' to correctly process Sing-box, Clash, and Meta configs.
-    // Only non-subscription utility/meta files should be ignored.
     $ignoreExtensions = ['php', 'md', 'ini', 'txt', 'log', 'conf'];
 
     foreach ($iterator as $file) {
         if ($file->isFile() && !in_array(strtolower($file->getExtension()), $ignoreExtensions)) {
             $relativePath = str_replace(PROJECT_ROOT . DIRECTORY_SEPARATOR, '', $file->getRealPath());
-            $relativePath = str_replace(DIRECTORY_SEPARATOR, '/', $relativePath); 
-
-            if (strpos($relativePath, 'xray/base64/') !== false) {
-                $relativePath = str_replace('xray/base64/', 'xray/', $relativePath);
-            }
-            if (strpos($relativePath, 'location/base64/') !== false) {
-                $relativePath = str_replace('location/base64/', 'location/', $relativePath);
-            }
-            $files[] = $relativePath;
+            $files[] = str_replace(DIRECTORY_SEPARATOR, '/', $relativePath);
         }
     }
     return $files;
 }
 
 /**
- * Processes a list of file paths into a structured array, categorizing them
- * by config type, client/core type, and subscription name, along with their GitHub raw URLs.
+ * Processes file paths into a structured array. It now uses a temporary,
+ * modified path for parsing the structure, while using the original path for the URL.
  */
 function process_files_to_structure(array $files_by_category): array
 {
@@ -180,27 +170,34 @@ function process_files_to_structure(array $files_by_category): array
             continue;
         }
 
-        foreach ($files_by_category[$category_key] as $path) {
-            if (strpos($path, $base_dir_relative . '/') === 0) {
-                $path_for_parsing = substr($path, strlen($base_dir_relative . '/'));
-            } else {
-                $path_for_parsing = $path;
+        foreach ($files_by_category[$category_key] as $path) { 
+            $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
+            
+            $path_for_parsing = $relative_path_from_base;
+            
+            // CORRECTED: Handle both xray and locations base64 folders for categorization.
+            if (strpos($path_for_parsing, 'xray/base64/') === 0) {
+                // For a path like 'xray/base64/sub.txt', parse it as if it's 'xray/sub.txt'
+                $path_for_parsing = str_replace('xray/base64/', 'xray/', $path_for_parsing);
+            } elseif (strpos($path_for_parsing, 'locations/base64/') === 0) {
+                // For a path like 'locations/base64/us.txt', parse it as if it's 'locations/us.txt'
+                $path_for_parsing = str_replace('locations/base64/', 'locations/', $path_for_parsing);
             }
 
             $parts = explode('/', $path_for_parsing);
-
             if (count($parts) < 2) {
                 continue;
             }
 
             $type = array_shift($parts); 
-            $name_with_ext = implode('/', $parts); 
-            $name = pathinfo($name_with_ext, PATHINFO_FILENAME);
+            $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
+            
             $url = GITHUB_REPO_URL . '/' . $path;
 
             $structure[$category_key][$type][$name] = $url;
         }
     }
+    
     foreach ($structure as &$categories) {
         ksort($categories);
         foreach ($categories as &$elements) {
@@ -210,6 +207,7 @@ function process_files_to_structure(array $files_by_category): array
     ksort($structure);
     return $structure;
 }
+
 
 /**
  * Generates the complete HTML content for the PSG page, embedding
@@ -546,14 +544,13 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     const content = await response.text();
                     let analysisOutput = '';
                     
-                    // CORRECTED: Added cases for 'meta' and 'location' to fall through to the appropriate parsers.
                     switch (clientCore.toLowerCase()) {
-                        case 'location': // Location-based configs are parsed like Xray (base64) configs.
+                        case 'location':
                         case 'xray':
                             const xrayResults = parseBase64Subscription(content);
                             analysisOutput = `<p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p> <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${xrayResults.nodeCount}</span></p> <p><strong>Protocols:</strong> ${xrayResults.protocols.length > 0 ? xrayResults.protocols.join(', ').toUpperCase() : 'N/A'}</p> <p><strong>Countries:</strong> ${xrayResults.countries.length > 0 ? xrayResults.countries.map(c => getFlagEmoji(c) + ' ' + c).join(', ') : 'N/A'}</p>`;
                             break;
-                        case 'meta': // Meta configs are parsed like Clash configs.
+                        case 'meta':
                         case 'clash':
                             const clashResults = parseClashSubscription(content);
                             analysisOutput = `<p class="font-medium text-green-700 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> Analysis Complete</p> <p><strong>Total Proxies:</strong> <span class="font-bold text-lg">${clashResults.proxyCount}</span></p> <p><strong>Proxy Groups:</strong> <span class="font-bold text-lg">${clashResults.groupCount}</span></p>`;
@@ -671,5 +668,3 @@ $timestamp = date('Y-m-d H:i:s T');
 $final_html = generate_full_html($structured_data, $client_info, $timestamp);
 file_put_contents(OUTPUT_HTML_FILE, $final_html);
 echo "Successfully generated page at: " . realpath(OUTPUT_HTML_FILE) . PHP_EOL;
-
-?>
