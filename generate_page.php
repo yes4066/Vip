@@ -249,8 +249,8 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                             break;
 
                         case 'singbox':
-                            // FIX: Use robust jsoncParser instead of regex + JSON.parse
-                            const parsedJson = jsoncParser.parse(content);
+                            // FIX: Use robust jsonc_parser (note the underscore)
+                            const parsedJson = jsonc_parser.parse(content);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
                                 parsedJson.outbounds
@@ -277,8 +277,8 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         case 'location':
                         default: // Fallback for base64 with expanded regex
                             const decoded = atob(content);
-                            // FIX: Dedicated regex for vmess, and expanded list for others
-                            const vmessRegex = /^(vmess):\/\/(.+)#(.+)$/;
+                            // FIX: Added dedicated regex for VMess, separate from others.
+                            const vmessRegex = /^vmess:\/\/(.+)$/;
                             const standardRegex = /^(vless|trojan|ss|hy2|tuic):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
                             const hysteriaRegex = /^(hysteria|hysteria2):\/\/([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
 
@@ -287,14 +287,16 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                                 if (!line) return;
                                 
                                 let match;
-                                let protocol, lowerName, transport, security = 'none';
+                                let protocol = '', lowerName = '', transport = 'tcp', security = 'none';
 
                                 if (match = line.match(vmessRegex)) {
-                                    protocol = 'vmess';
-                                    lowerName = decodeURIComponent(match[3] || '').trim().toLowerCase();
-                                    const vmessConfig = JSON.parse(atob(match[2]));
-                                    transport = vmessConfig.net || 'tcp';
-                                    security = vmessConfig.tls || 'none';
+                                    try {
+                                        const vmessConfig = JSON.parse(atob(match[1]));
+                                        protocol = 'vmess';
+                                        lowerName = (vmessConfig.ps || '').toLowerCase();
+                                        transport = vmessConfig.net || 'tcp';
+                                        security = vmessConfig.tls || 'none';
+                                    } catch (e) { /* Malformed vmess, skip */ return; }
                                 } else if (match = line.match(standardRegex) || line.match(hysteriaRegex)) {
                                     protocol = match[1];
                                     const params = new URLSearchParams(match[match.length - 2] || '');
