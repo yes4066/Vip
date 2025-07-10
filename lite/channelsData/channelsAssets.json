@@ -307,10 +307,10 @@
     },
     "config_proxy": {
         "types": [
-            "vmess",
             "vless",
-            "ss",
-            "trojan"
+            "vmess",
+            "trojan",
+            "ss"
         ],
         "title": "Proxy | V2ray | Config | Vpn | Hiddify | Nekobox | Segaro | پروکسی | فیلترشکن | ایرانسل | همراه اول | رایتل | سامانتل | مخابرات|",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/config_proxy.jpg"
@@ -809,7 +809,8 @@
     },
     "free1_vpn": {
         "types": [
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "Free_VPN √ v2ray √ NapsternetV √ custom √ injector √",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/free1_vpn.jpg"
@@ -1152,8 +1153,7 @@
     "hope_net": {
         "types": [
             "vless",
-            "vmess",
-            "ss"
+            "trojan"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1231,9 +1231,9 @@
     "ip_cf_config": {
         "types": [
             "vless",
-            "ss",
             "trojan",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1840,8 +1840,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
             "vmess",
+            "vless",
             "ss"
         ],
         "title": "Mowj Proxy",
@@ -2281,7 +2281,7 @@
     "proxy_mtproto_vpns_free": {
         "types": [
             "vless",
-            "ss"
+            "vmess"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxy_mtproto_vpns_free.jpg"
@@ -2846,8 +2846,8 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "trojan",
             "vless",
+            "trojan",
             "vmess",
             "ss"
         ],
@@ -2973,7 +2973,7 @@
     "v2rayfree": {
         "types": [
             "vless",
-            "ss"
+            "vmess"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayfree.jpg"
@@ -3522,7 +3522,6 @@
     },
     "vmesskhodam": {
         "types": [
-            "ss",
             "vless"
         ],
         "title": "Vmesskhodam",
