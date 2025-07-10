@@ -107,8 +107,7 @@
                 "URL-TEST",
                 "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 27",
-                "🇺🇸 US | 🔴 | vless | @ipv2ray | 5",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 28",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -117,8 +116,8 @@
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇺🇸 US | 🔴 | vless | @srcvpn | 27",
-                "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
-                "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19"
+                "🇺🇸 US | 🔴 | vless | @trueproxy | 7",
+                "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8"
             ]
         },
         {
@@ -127,8 +126,7 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @binner_iran | 1",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 27",
-                "🇺🇸 US | 🔴 | vless | @ipv2ray | 5",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 28",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 12",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -137,8 +135,8 @@
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇺🇸 US | 🔴 | vless | @srcvpn | 27",
-                "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
-                "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19"
+                "🇺🇸 US | 🔴 | vless | @trueproxy | 7",
+                "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -193,20 +191,11 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 27",
+            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 28",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "505fb766-a321-47ce-8df7-73f6d854b398",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @ipv2ray | 5",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "62dcd14e-5828-4a02-a888-b67a91c3e488",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -311,6 +300,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @trueproxy | 7",
+            "type": "vless",
+            "server": "151.101.67.8",
+            "server_port": 80,
+            "uuid": "8088c605-e0c2-4774-9ee4-7fa7e47b6112",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
             "type": "vless",
             "server": "206.71.158.10",
@@ -325,29 +323,6 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19",
-            "type": "vless",
-            "server": "46.31.76.3",
-            "server_port": 80,
-            "uuid": "295afac4-e906-4e08-b1ce-524177c7ecb1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oTX6mQJYxkmmdF7Rq_stAKX_hYoOMXGaWmoblFl2zgo",
-                    "short_id": "5942e2"
                 }
             }
         }

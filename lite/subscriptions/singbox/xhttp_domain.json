@@ -114,9 +114,9 @@
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 6",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
+                "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 17",
                 "🇺🇸 US | 🔴 | vless | @orange_vpns | 13",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
-                "🇺🇸 US | 🔴 | vless | @vmesc | 18",
                 "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 9",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ]
@@ -134,9 +134,9 @@
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 6",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
+                "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 17",
                 "🇺🇸 US | 🔴 | vless | @orange_vpns | 13",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
-                "🇺🇸 US | 🔴 | vless | @vmesc | 18",
                 "🇩🇪 DE | 🟢 | vless | @vmesskhodam | 9",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ],
@@ -251,6 +251,29 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 17",
+            "type": "vless",
+            "server": "ep1.rolexcloud.net",
+            "server_port": 443,
+            "uuid": "146518a9-c8b5-43f2-a3e2-3fb3b697369a",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "gAwjo7y5nfNWyQIKu8BZSeEHyx03bTJymjVzEFRmahk",
+                    "short_id": "13664108"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @orange_vpns | 13",
             "type": "vless",
             "server": "bot.nimeshab-nabod.info",
@@ -265,15 +288,6 @@
             "server": "viop.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @vmesc | 18",
-            "type": "vless",
-            "server": "test.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "ipcloudflaretamiz",
             "flow": "",
             "packet_encoding": "xudp"
         },

@@ -133,6 +133,7 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 5",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
@@ -145,7 +146,6 @@
                 "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
                 "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
                 "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4",
-                "🇮🇷 IR | 🔴 | vmess | @sstpvpn | 8",
                 "🇺🇸 US | 🔴 | vmess | @tawanaclub | 2",
                 "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
                 "🇮🇷 IR | 🔴 | vmess | @v2pedia | 27",
@@ -199,6 +199,7 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 5",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
@@ -211,7 +212,6 @@
                 "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
                 "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
                 "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4",
-                "🇮🇷 IR | 🔴 | vmess | @sstpvpn | 8",
                 "🇺🇸 US | 🔴 | vmess | @tawanaclub | 2",
                 "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
                 "🇮🇷 IR | 🔴 | vmess | @v2pedia | 27",
@@ -693,6 +693,15 @@
             }
         },
         {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 5",
+            "type": "vmess",
+            "server": "81.12.33.180",
+            "server_port": 8595,
+            "uuid": "ef0b85e8-d3f2-4e7d-8935-dffc6447f639",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
             "tag": "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
             "type": "vmess",
             "server": "adsl.stylebender209.ir",
@@ -847,15 +856,6 @@
             "server": "120.233.248.133",
             "server_port": 30514,
             "uuid": "02f0d2ec-086c-4ca2-a229-7ee75e9a73b6",
-            "security": "auto",
-            "alter_id": 0
-        },
-        {
-            "tag": "🇮🇷 IR | 🔴 | vmess | @sstpvpn | 8",
-            "type": "vmess",
-            "server": "fin1.nspay.top",
-            "server_port": 35600,
-            "uuid": "50317d29-705f-4ee6-846a-fa6e4f2604c8",
             "security": "auto",
             "alter_id": 0
         },
@@ -1082,7 +1082,7 @@
         {
             "tag": "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 13",
             "type": "vmess",
-            "server": "57.129.28.65",
+            "server": "57.129.64.238",
             "server_port": 443,
             "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
