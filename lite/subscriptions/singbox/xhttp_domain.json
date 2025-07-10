@@ -106,7 +106,6 @@
             "outbounds": [
                 "URL-TEST",
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
@@ -119,7 +118,6 @@
                 "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
-                "🇫🇮 FI | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ]
@@ -129,7 +127,6 @@
             "type": "urltest",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
@@ -142,7 +139,6 @@
                 "🇺🇸 US | 🔴 | vless | @proxycrone | 11",
                 "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
-                "🇫🇮 FI | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0"
             ],
@@ -172,15 +168,6 @@
             "server": "viop.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "7fa08b3d-86d8-4b14-92b3-4c56a83f027d",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
-            "type": "vless",
-            "server": "cdn.dominicpv.shop",
-            "server_port": 80,
-            "uuid": "d8ce911d-107c-41fd-aae0-0d0a1b0f9197",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -300,29 +287,6 @@
             "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @v2source | 19",
-            "type": "vless",
-            "server": "online-chat.webboosterpro.co.uk",
-            "server_port": 443,
-            "uuid": "6e2b8615-4a92-4d17-83de-d927d357ece4",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.fastly.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U",
-                    "short_id": "1eaf5214"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",

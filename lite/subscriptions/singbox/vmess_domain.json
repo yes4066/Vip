@@ -110,6 +110,7 @@
                 "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
                 "❔ XX | 🟢 | vmess | @cattvpn | 0",
                 "🇮🇷 IR | 🔴 | vmess | @club_profsor | 14",
+                "🏳️  | 🔴 | vmess | @config_proxy | 98",
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
                 "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
                 "❔ XX | 🔴 | vmess | @dailyv2ray | 30",
@@ -135,6 +136,7 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 4",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
@@ -163,11 +165,10 @@
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
-                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 14",
+                "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 15",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
-                "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
-                "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 49"
+                "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
             ]
         },
         {
@@ -179,6 +180,7 @@
                 "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
                 "❔ XX | 🟢 | vmess | @cattvpn | 0",
                 "🇮🇷 IR | 🔴 | vmess | @club_profsor | 14",
+                "🏳️  | 🔴 | vmess | @config_proxy | 98",
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
                 "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
                 "❔ XX | 🔴 | vmess | @dailyv2ray | 30",
@@ -204,6 +206,7 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 4",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pistachiovpn | 1",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
@@ -232,11 +235,10 @@
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
-                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 14",
+                "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 15",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
-                "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
-                "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 49"
+                "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -323,6 +325,15 @@
             "server": "94.182.223.8",
             "server_port": 20883,
             "uuid": "1a0558da-ab54-439b-a617-7fbb3611307c",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
+            "tag": "🏳️  | 🔴 | vmess | @config_proxy | 98",
+            "type": "vmess",
+            "server": "127.0.0.1",
+            "server_port": 8080,
+            "uuid": "baabcac-baca-caba-dcab-bbabbccaccaa",
             "security": "auto",
             "alter_id": 0
         },
@@ -715,6 +726,15 @@
                     "Host": "speedtest.net"
                 }
             }
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 4",
+            "type": "vmess",
+            "server": "94.182.223.8",
+            "server_port": 20883,
+            "uuid": "1a0558da-ab54-439b-a617-7fbb3611307c",
+            "security": "auto",
+            "alter_id": 0
         },
         {
             "tag": "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
@@ -1120,16 +1140,16 @@
             "alter_id": 0
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 14",
+            "tag": "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 15",
             "type": "vmess",
-            "server": "57.129.25.25",
+            "server": "134.195.198.147",
             "server_port": 443,
             "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
             "alter_id": 0,
             "tls": {
                 "enabled": true,
-                "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
+                "server_name": "134.195.198.147",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -1140,7 +1160,7 @@
                 "type": "ws",
                 "path": "/linkvws",
                 "headers": {
-                    "Host": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"
+                    "Host": "134.195.198.147"
                 }
             }
         },
@@ -1191,31 +1211,6 @@
                 "path": "/",
                 "headers": {
                     "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vmess | @zerobaipiao | 49",
-            "type": "vmess",
-            "server": "rrrrrrrrrt.11890604.xyz",
-            "server_port": 443,
-            "uuid": "f898ffcb-6417-4373-9640-0b66091e8206",
-            "security": "auto",
-            "alter_id": 0,
-            "tls": {
-                "enabled": true,
-                "server_name": "rrrrrrrrrt.11890604.xyz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/GnJ3bBxV91uFkYtuzXyJ5XNeH1R1",
-                "headers": {
-                    "Host": "rrrrrrrrrt.11890604.xyz"
                 }
             }
         }

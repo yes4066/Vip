@@ -117,7 +117,6 @@
                 "❔ XX | 🟢 | vless | @catvpns | 11",
                 "❔ XX | 🟢 | vless | @cconfig_v2ray | 10",
                 "❔ XX | 🔴 | vless | @ch_a2l | 5",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
                 "🇺🇸 US | 🔴 | vless | @config_proxy_ir | 18",
                 "❔ XX | 🟢 | vless | @config_vip7 | 3",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
@@ -253,10 +252,8 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvl | 6",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
-                "🇩🇪 DE | 🔴 | vless | @v2rayweb | 19",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇮🇷 IR | 🔴 | vless | @v2rez | 4",
-                "🇫🇮 FI | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🔴 | vless | @v_2rayngvpn | 7",
                 "🇮🇷 IR | 🔴 | vless | @vaynora | 11",
                 "🇮🇷 IR | 🔴 | vless | @vezzevpn | 5",
@@ -281,6 +278,7 @@
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "🇺🇸 US | 🔴 | vless | @womanlifefreedomvpn | 16",
+                "🇺🇸 US | 🟢 | vless | @wxgmrjdcc | 18",
                 "🇮🇷 IR | 🔴 | vless | @xixv2ray | 5",
                 "🇮🇷 IR | 🔴 | vless | @xnxv2ray | 14",
                 "❔ XX | 🟢 | vless | @xrayzxn | 6",
@@ -308,7 +306,6 @@
                 "❔ XX | 🟢 | vless | @catvpns | 11",
                 "❔ XX | 🟢 | vless | @cconfig_v2ray | 10",
                 "❔ XX | 🔴 | vless | @ch_a2l | 5",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
                 "🇺🇸 US | 🔴 | vless | @config_proxy_ir | 18",
                 "❔ XX | 🟢 | vless | @config_vip7 | 3",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
@@ -444,10 +441,8 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvl | 6",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
-                "🇩🇪 DE | 🔴 | vless | @v2rayweb | 19",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇮🇷 IR | 🔴 | vless | @v2rez | 4",
-                "🇫🇮 FI | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🔴 | vless | @v_2rayngvpn | 7",
                 "🇮🇷 IR | 🔴 | vless | @vaynora | 11",
                 "🇮🇷 IR | 🔴 | vless | @vezzevpn | 5",
@@ -472,6 +467,7 @@
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "🇺🇸 US | 🔴 | vless | @womanlifefreedomvpn | 16",
+                "🇺🇸 US | 🟢 | vless | @wxgmrjdcc | 18",
                 "🇮🇷 IR | 🔴 | vless | @xixv2ray | 5",
                 "🇮🇷 IR | 🔴 | vless | @xnxv2ray | 14",
                 "❔ XX | 🟢 | vless | @xrayzxn | 6",
@@ -694,15 +690,6 @@
                     "Host": "A2L.GODGAME.FUN"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 109",
-            "type": "vless",
-            "server": "cdn.dominicpv.shop",
-            "server_port": 80,
-            "uuid": "d8ce911d-107c-41fd-aae0-0d0a1b0f9197",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @config_proxy_ir | 18",
@@ -2932,15 +2919,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🔴 | vless | @v2rayweb | 19",
-            "type": "vless",
-            "server": "web.bandarhp.ir",
-            "server_port": 666,
-            "uuid": "ff8fffd7-3546-488b-a5f2-a74896da74a2",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
             "type": "vless",
             "server": "www.canva.com",
@@ -2978,29 +2956,6 @@
                 "path": "/",
                 "headers": {
                     "Host": "srv5.raykaservers.com"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @v2source | 19",
-            "type": "vless",
-            "server": "online-chat.webboosterpro.co.uk",
-            "server_port": 443,
-            "uuid": "6e2b8615-4a92-4d17-83de-d927d357ece4",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.fastly.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U",
-                    "short_id": "1eaf5214"
                 }
             }
         },
@@ -3359,6 +3314,31 @@
             "uuid": "WomanLifeFreedomVPN",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @wxgmrjdcc | 18",
+            "type": "vless",
+            "server": "www.meter.net",
+            "server_port": 443,
+            "uuid": "1b368bf6-5aac-413c-a77c-229fb984d5ae",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "mAXNetvIpAp-cLOuD76.netKh3.siTe",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkws?ed=2560",
+                "headers": {
+                    "Host": "mAXNetvIpAp-cLOuD76.netKh3.siTe"
+                }
+            }
         },
         {
             "tag": "🇮🇷 IR | 🔴 | vless | @xixv2ray | 5",
