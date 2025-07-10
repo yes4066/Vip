@@ -45,7 +45,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jsonc-parser@3.2.1/lib/umd/main.min.js"></script> <!-- FIX: Added robust JSONC parser -->
+    <script src="https://cdn.jsdelivr.net/npm/jsonc-parser@3.2.1/lib/umd/main.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -220,7 +220,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 return String.fromCodePoint(...countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt()));
             }
 
-            // --- UNIVERSAL DNA PARSER ---
+            // --- UNIVERSAL DNA PARSER (UPGRADED) ---
             function getUniversalDna(content, coreType) {
                 const dna = { protocols: {}, countries: {}, providers: {}, transports: {}, security: {tls: {}, reality: {}}, total: 0 };
                 const providerKeywords = ['aws', 'cdn', 'google', 'azure', 'oracle', 'linode', 'vultr', 'digitalocean', 'hetzner', 'ovh', 'alibaba', 'vip', 'premium'];
@@ -238,21 +238,17 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                                     const transport = p.network || 'tcp';
                                     dna.protocols[p.type] = (dna.protocols[p.type] || 0) + 1;
                                     dna.transports[transport] = (dna.transports[transport] || 0) + 1;
-                                    if (p.tls) {
-                                        dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
-                                    }
+                                    if (p.tls) dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
+                                    if (p['reality-opts']) dna.security.reality[transport] = (dna.security.reality[transport] || 0) + 1;
+                                    
                                     const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
-                                    if (countryMatch) {
-                                        const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
-                                        dna.countries[code] = (dna.countries[code] || 0) + 1;
-                                    }
+                                    if (countryMatch) dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] = (dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] || 0) + 1;
                                     providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
                                 });
                             }
                             break;
 
                         case 'singbox':
-                            // FIX: Use robust jsonc-parser instead of regex + JSON.parse
                             const parsedJson = jsonc.parse(content);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
@@ -266,13 +262,11 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                                         dna.protocols[o.type] = (dna.protocols[o.type] || 0) + 1;
                                         dna.transports[transport] = (dna.transports[transport] || 0) + 1;
                                         if (o.tls?.enabled) {
-                                            dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
+                                            if(o.tls.reality?.enabled) dna.security.reality[transport] = (dna.security.reality[transport] || 0) + 1;
+                                            else dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
                                         }
                                         const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
-                                        if (countryMatch) {
-                                            const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
-                                            dna.countries[code] = (dna.countries[code] || 0) + 1;
-                                        }
+                                        if (countryMatch) dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] = (dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] || 0) + 1;
                                         providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
                                     });
                             }
@@ -280,33 +274,33 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
                         case 'xray':
                         case 'location':
-                        default: // Fallback for base64
+                        default: // Fallback for base64 with expanded regex
                             const decoded = atob(content);
-                            const linkRegex = /^(vless|vmess|trojan|ss):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
+                            // FIX: Added vmess, hy2, tuic, hysteria, hysteria2 to regex list
+                            const standardRegex = /^(vless|vmess|trojan|ss|hy2|tuic):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
+                            const hysteriaRegex = /^(hysteria|hysteria2):\/\/([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
+
                             decoded.split('\n').forEach(line => {
-                                const match = line.trim().match(linkRegex);
+                                line = line.trim();
+                                if (!line) return;
+                                
+                                let match = line.match(standardRegex) || line.match(hysteriaRegex);
                                 if (match) {
                                     dna.total++;
                                     const protocol = match[1];
-                                    const params = new URLSearchParams(match[5] || '');
-                                    const lowerName = decodeURIComponent(match[6] || '').trim().toLowerCase();
+                                    const params = new URLSearchParams(match[4] || '');
+                                    const lowerName = decodeURIComponent(match[match.length - 1] || '').trim().toLowerCase();
                                     
                                     const transport = params.get('type') || 'tcp';
                                     const security = params.get('security') || 'none';
                                     
                                     dna.protocols[protocol] = (dna.protocols[protocol] || 0) + 1;
                                     dna.transports[transport] = (dna.transports[transport] || 0) + 1;
-                                    if (security === 'tls') {
-                                        dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
-                                    } else if (security === 'reality') {
-                                        dna.security.reality[transport] = (dna.security.reality[transport] || 0) + 1;
-                                    }
+                                    if (security === 'tls') dna.security.tls[transport] = (dna.security.tls[transport] || 0) + 1;
+                                    else if (security === 'reality') dna.security.reality[transport] = (dna.security.reality[transport] || 0) + 1;
 
                                     const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
-                                    if (countryMatch) {
-                                        const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
-                                        dna.countries[code] = (dna.countries[code] || 0) + 1;
-                                    }
+                                    if (countryMatch) dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] = (dna.countries[(countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase()] || 0) + 1;
                                     providerKeywords.forEach(k => { if(lowerName.includes(k)) dna.providers[k.toUpperCase()] = (dna.providers[k.toUpperCase()] || 0) + 1; });
                                 }
                             });
@@ -320,13 +314,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             }
 
             // --- UI & Event Functions ---
-            function closeDnaModal(event) {
-                if (event && event.target.id !== 'dnaModal') return;
-                const modalContent = document.getElementById('dnaModalContent');
-                modalContent.classList.add('scale-95', 'opacity-0');
-                setTimeout(() => dnaModal.classList.add('hidden'), 200);
-                Object.values(charts).forEach(chart => { if (chart) chart.destroy(); });
-            }
+            function closeDnaModal(event) { if (event && event.target.id !== 'dnaModal') return; const modalContent = document.getElementById('dnaModalContent'); modalContent.classList.add('scale-95', 'opacity-0'); setTimeout(() => dnaModal.classList.add('hidden'), 200); Object.values(charts).forEach(chart => { if (chart) chart.destroy(); }); }
             function showMessageBox(message) { const box = document.getElementById('messageBox'); document.getElementById('messageBoxText').textContent = message; box.classList.remove('hidden'); document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden'); }
             function populateSelect(selectElement, sortedKeys, defaultOptionText) { selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`; sortedKeys.forEach(key => { const option = document.createElement('option'); option.value = key; option.textContent = formatDisplayName(key); selectElement.appendChild(option); }); }
             function resetSelect(selectElement, defaultText) { selectElement.innerHTML = `<option value="">${defaultText}</option>`; selectElement.disabled = true; }
@@ -357,7 +345,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     Object.values(charts).forEach(chart => { if (chart) chart.destroy(); });
                     
                     charts.protocol = new Chart(document.getElementById('protocolChart'), {
-                        type: 'doughnut', data: { labels: Object.keys(dna.protocols), datasets: [{ data: Object.values(dna.protocols), backgroundColor: ['#4f46e5', '#16a34a', '#f97316', '#0ea5e9', '#dc2626'], borderWidth: 0 }] },
+                        type: 'doughnut', data: { labels: Object.keys(dna.protocols), datasets: [{ data: Object.values(dna.protocols), backgroundColor: ['#4f46e5', '#16a34a', '#f97316', '#0ea5e9', '#dc2626', '#d946ef', '#65a30d'], borderWidth: 0 }] },
                         options: { responsive: true, cutout: '70%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15 }}}}
                     });
                     document.querySelector('#protocolTotal div span:first-child').textContent = dna.total;
