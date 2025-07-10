@@ -112,13 +112,13 @@
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 13",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇺🇸 US | 🔴 | vless | @srcvpn | 29",
                 "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_tz | 5",
-                "🇺🇸 US | 🔴 | vless | @vistav2ray | 16"
+                "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19"
             ]
         },
         {
@@ -132,13 +132,13 @@
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 13",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇺🇸 US | 🔴 | vless | @srcvpn | 29",
                 "🇳🇱 NL | 🟢 | vless | @uvpn_org | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_tz | 5",
-                "🇺🇸 US | 🔴 | vless | @vistav2ray | 16"
+                "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19"
             ],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m",
@@ -252,7 +252,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
+            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
@@ -329,13 +329,27 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @vistav2ray | 16",
+            "tag": "🇹🇷 TR | 🟢 | vless | @vmess_ir | 19",
             "type": "vless",
-            "server": "151.101.67.8",
+            "server": "46.31.76.3",
             "server_port": 80,
-            "uuid": "e52245fa-7353-4e55-87d0-9e210e8de69a",
-            "flow": "",
-            "packet_encoding": "xudp"
+            "uuid": "295afac4-e906-4e08-b1ce-524177c7ecb1",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "oTX6mQJYxkmmdF7Rq_stAKX_hYoOMXGaWmoblFl2zgo",
+                    "short_id": "5942e2"
+                }
+            }
         }
     ],
     "route": {

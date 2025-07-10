@@ -106,15 +106,16 @@
             "outbounds": [
                 "URL-TEST",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 12",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
+                "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
+                "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 19",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
@@ -125,15 +126,16 @@
             "type": "urltest",
             "outbounds": [
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 12",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
+                "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
+                "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 19",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
@@ -180,13 +182,6 @@
                     "Host": "production.tj.ojan.workers.dev"
                 }
             }
-        },
-        {
-            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 12",
-            "type": "trojan",
-            "server": "13c2c931-swin40-swy6li-tni2.cu.plebai.net",
-            "server_port": 15229,
-            "password": "5e2f888c-68ef-11ef-96ca-f23c9164ca5d"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
@@ -257,6 +252,29 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
+            "type": "trojan",
+            "server": "104.21.112.1",
+            "server_port": 443,
+            "password": "f8b7cd5e-60c4-4e95-9b7b-d561ef4eed8c",
+            "tls": {
+                "enabled": true,
+                "server_name": "yellow-cloud-d53f.vavovi6084.workers.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "yellow-cloud-d53f.vavovi6084.workers.dev"
+                }
+            }
+        },
+        {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
             "type": "trojan",
             "server": "35.181.25.106",
@@ -320,6 +338,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "speedtest.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 19",
+            "type": "trojan",
+            "server": "3.124.76.127",
+            "server_port": 22222,
+            "password": "telegram-id-privatevpns",
+            "tls": {
+                "enabled": true,
+                "server_name": "trojan.burgerip.co.uk",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
