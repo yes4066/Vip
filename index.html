@@ -91,7 +91,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-11 00:58:50 +0330</p>
+            <p class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-11 01:06:23 +0330</p>
         </footer>
     </div>
     
@@ -104,14 +104,14 @@
     </div>
     
     <!-- Subscription DNA Modal -->
-    <div id="dnaModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden" onclick="closeDnaModal(event)">
+    <div id="dnaModal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
         <div id="dnaModalContent" class="bg-white rounded-xl p-6 sm:p-8 shadow-2xl max-w-4xl w-full text-slate-800 transform transition-all scale-95 opacity-0">
             <div class="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900">Subscription DNA</h2>
                     <p id="modalSubscriptionName" class="text-sm text-slate-500">Analysis of the selected subscription.</p>
                 </div>
-                <button onclick="closeDnaModal()" class="p-2 rounded-full hover:bg-slate-100">
+                <button id="dnaModalCloseButton" class="p-2 rounded-full hover:bg-slate-100">
                     <i data-lucide="x" class="w-6 h-6 text-slate-600"></i>
                 </button>
             </div>
@@ -130,9 +130,11 @@
                         <h3 class="font-semibold mb-3 text-center text-slate-700">Protocol Distribution</h3>
                         <div class="max-w-[250px] mx-auto relative">
                             <canvas id="protocolChart"></canvas>
-                            <div id="protocolTotal" class="absolute inset-0 flex items-center justify-center text-center">
-                                <span class="text-3xl font-bold text-slate-800"></span>
-                                <span class="text-sm text-slate-500 block -mt-1">Nodes</span>
+                            <div id="protocolTotal" class="absolute inset-0 flex items-center justify-center text-center leading-none">
+                                <div>
+                                    <span class="text-3xl font-bold text-slate-800"></span>
+                                    <span class="text-sm text-slate-500 block">Nodes</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -622,6 +624,8 @@
             const clientInfoList = document.getElementById('client-info-list');
             const subscriptionDetailsContainer = document.getElementById('subscription-details-container');
             const analyzeButton = document.getElementById('analyzeButton');
+            const dnaModal = document.getElementById('dnaModal');
+            const dnaModalCloseButton = document.getElementById('dnaModalCloseButton');
             const CUSTOM_SORT_ORDER = ['mix', 'vmess', 'vless', 'reality', 'trojan', 'hysteria', 'hy2', 'tuic'];
             const platformIcons = { windows: 'monitor', macos: 'apple', android: 'smartphone', ios: 'tablet', linux: 'terminal' };
 
@@ -656,22 +660,18 @@
                 return String.fromCodePoint(...codePoints);
             }
             
-            // Mapping from 2-letter code to full name for charts
             const countryCodeMap = { US: 'United States', SG: 'Singapore', JP: 'Japan', KR: 'S. Korea', DE: 'Germany', NL: 'Netherlands', GB: 'UK', FR: 'France', CA: 'Canada', AU: 'Australia', HK: 'Hong Kong', TW: 'Taiwan', RU: 'Russia', IN: 'India', TR: 'Turkey', IR: 'Iran', AE: 'UAE' };
             function getCountryName(code) { return countryCodeMap[code] || code; }
 
             function formatDisplayName(name) {
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
                 const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp'];
-                const protocolPrefixes = ['ss', 'ssr'];
+                const parts = name.split(/[-_]/).filter(p => p !== '');
                 let flag = '';
-                let processedName = name;
-                const countryCodeMatch = processedName.match(/^([A-Z]{2})[-_]/);
+                const countryCodeMatch = name.match(/^([A-Z]{2})[-_]/);
                 if (countryCodeMatch) {
                     flag = getFlagEmoji(countryCodeMatch[1]);
-                    processedName = processedName.substring(countryCodeMatch[0].length);
                 }
-                const parts = processedName.split(/[-_]/).filter(p => p !== '');
                 const displayNameParts = parts.map((part) => {
                     const lowerPart = part.toLowerCase();
                     if (specialReplacements[lowerPart]) return specialReplacements[lowerPart];
@@ -787,11 +787,13 @@
             }
 
             function closeDnaModal(event) {
-                if (event && event.target.id !== 'dnaModal' && event.target.closest('button') === null) return;
-                const modal = document.getElementById('dnaModal');
+                // If event exists, only close if the click is on the background.
+                if (event && event.target.id !== 'dnaModal') {
+                    return;
+                }
                 const modalContent = document.getElementById('dnaModalContent');
                 modalContent.classList.add('scale-95', 'opacity-0');
-                setTimeout(() => modal.classList.add('hidden'), 200);
+                setTimeout(() => dnaModal.classList.add('hidden'), 200);
                 Object.values(charts).forEach(chart => { if(chart) chart.destroy(); });
             }
             
@@ -800,13 +802,11 @@
                 const url = subscriptionUrlInput.value;
                 if (!url) { showMessageBox('Please select a subscription URL first.'); return; }
                 
-                // Show modal in loading state
-                const modal = document.getElementById('dnaModal');
                 const modalContent = document.getElementById('dnaModalContent');
                 document.getElementById('dnaLoadingState').classList.remove('hidden');
                 document.getElementById('dnaResultsContainer').classList.add('hidden');
                 document.getElementById('modalSubscriptionName').textContent = `Analysis for: ${formatDisplayName(otherElementSelect.value)}`;
-                modal.classList.remove('hidden');
+                dnaModal.classList.remove('hidden');
                 setTimeout(() => modalContent.classList.remove('scale-95', 'opacity-0'), 50);
 
                 try {
@@ -814,37 +814,30 @@
                     if (!response.ok) throw new Error(`Failed to fetch subscription (${response.status})`);
                     
                     const content = await response.text();
-                    // Analysis is best for base64 encoded v2ray/xray subs
                     const decodedContent = atob(content);
                     const dna = analyzeSubscriptionDNA(decodedContent);
 
                     if (dna.total === 0) throw new Error('No compatible proxy nodes found to analyze.');
 
-                    // Destroy old charts
                     Object.values(charts).forEach(chart => { if(chart) chart.destroy(); });
                     
-                    // Render Charts
-                    const protocolCtx = document.getElementById('protocolChart').getContext('2d');
-                    charts.protocol = new Chart(protocolCtx, {
+                    charts.protocol = new Chart(document.getElementById('protocolChart'), {
                         type: 'doughnut', data: { labels: Object.keys(dna.protocols), datasets: [{ data: Object.values(dna.protocols), backgroundColor: ['#4f46e5', '#16a34a', '#f97316', '#0ea5e9'], borderWidth: 0 }] },
                         options: { responsive: true, cutout: '70%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 20 }}}}
                     });
                     document.querySelector('#protocolTotal span:first-child').textContent = dna.total;
 
-                    const transportCtx = document.getElementById('transportChart').getContext('2d');
-                    charts.transport = new Chart(transportCtx, {
+                    charts.transport = new Chart(document.getElementById('transportChart'), {
                         type: 'bar', data: { labels: Object.keys(dna.transports), datasets: [{ label: '# Nodes', data: Object.values(dna.transports), backgroundColor: '#3b82f6' }] },
                         options: { responsive: true, plugins: { legend: { display: false } } }
                     });
 
                     const sortedCountries = Object.entries(dna.countries).sort((a,b) => b[1] - a[1]).slice(0, 7);
-                    const countryCtx = document.getElementById('countryBarChart').getContext('2d');
-                    charts.country = new Chart(countryCtx, {
+                    charts.country = new Chart(document.getElementById('countryBarChart'), {
                         type: 'bar', data: { labels: sortedCountries.map(c => `${getFlagEmoji(c[0])} ${getCountryName(c[0])}`), datasets: [{ label: '# Nodes', data: sortedCountries.map(c => c[1]), backgroundColor: '#a855f7' }] },
                         options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } } }
                     });
                     
-                    // Render Tag Cloud
                     const tagCloud = document.getElementById('providerTagCloud');
                     tagCloud.innerHTML = '';
                     const sortedProviders = Object.entries(dna.providers).sort((a, b) => b[1] - a[1]);
@@ -859,7 +852,6 @@
                         });
                     }
 
-                    // Show results
                     document.getElementById('dnaLoadingState').classList.add('hidden');
                     document.getElementById('dnaResultsContainer').classList.remove('hidden');
 
@@ -868,6 +860,9 @@
                     showMessageBox(`Analysis Failed: ${error.message}. This feature works best with VLESS/VMESS/Trojan subscriptions.`);
                 }
             });
+
+            dnaModalCloseButton.addEventListener('click', () => closeDnaModal());
+            dnaModal.addEventListener('click', (event) => closeDnaModal(event));
 
             configTypeSelect.addEventListener('change', () => {
                 resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription');
