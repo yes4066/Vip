@@ -194,8 +194,10 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- CORRECTED: Use the standard Tailwind Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+      // CORRECTED: Configuration is now safely placed here
       tailwind.config = {
         theme: {
           extend: {
@@ -297,10 +299,13 @@ function generate_full_html(array $structured_data, array $client_info_data, str
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
     
+    <!-- CORRECTED: All JavaScript logic is now safely inside the DOMContentLoaded event listener -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- 1. INITIALIZE & GRAB ELEMENTS ---
+            // 1. INITIALIZE LIBRARIES
             lucide.createIcons();
+
+            // 2. DEFINE CONSTANTS
             const structuredData = __JSON_DATA_PLACEHOLDER__;
             const clientInfoData = __CLIENT_INFO_PLACEHOLDER__;
             const configTypeSelect = document.getElementById('configType');
@@ -318,7 +323,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             const analysisResults = document.getElementById('analysis-results');
             const CUSTOM_SORT_ORDER = ['mix', 'vmess', 'vless', 'reality', 'trojan', 'hysteria', 'hy2', 'tuic'];
 
-            // --- 2. HELPER & PARSING FUNCTIONS ---
+            // 3. DEFINE ALL HELPER FUNCTIONS
             function showMessageBox(message) {
                 const box = document.getElementById('messageBox');
                 document.getElementById('messageBoxText').textContent = message;
@@ -326,9 +331,14 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden');
             }
 
-            function populateSelect(selectElement, keys, defaultText) {
-                selectElement.innerHTML = `<option value="">${defaultText}</option>`;
-                keys.forEach(key => selectElement.add(new Option(formatDisplayName(key), key)));
+            function populateSelect(selectElement, sortedKeys, defaultOptionText) {
+                selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
+                sortedKeys.forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = formatDisplayName(key);
+                    selectElement.appendChild(option);
+                });
             }
 
             function resetSelect(selectElement, defaultText) {
@@ -338,11 +348,13 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
             function getFlagEmoji(countryCode) {
                 if (!/^[A-Z]{2}$/.test(countryCode)) return '';
-                return String.fromCodePoint(...countryCode.toUpperCase().split('').map(c => 127397 + c.charCodeAt(0)));
+                const codePoints = countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt());
+                return String.fromCodePoint(...codePoints);
             }
+
             function formatDisplayName(name) {
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
-                const uppercaseTypes = ['vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic'];
+                const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp'];
                 const protocolPrefixes = ['ss', 'ssr'];
                 const parts = name.split(/[-_]/);
                 let flag = '';
@@ -359,12 +371,21 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 const textName = displayNameParts.join(' ');
                 return flag ? `${flag} ${textName}` : textName;
             }
+
             function updateQRCode(url) {
                 qrcodeDiv.innerHTML = '';
                 if (url) {
-                    try { new QRCode(qrcodeDiv, { text: url, width: 128, height: 128 }); } catch (e) { console.error(e); }
+                    try {
+                        new QRCode(qrcodeDiv, {
+                            text: url, width: 128, height: 128,
+                            colorDark: "#000000", colorLight: "#00000000",
+                            correctLevel: QRCode.CorrectLevel.H
+                        });
+                    } catch (error) { console.error('QR code initialization failed:', error); }
                 }
             }
+            
+            // --- ANALYSIS PARSERS ---
             function parseBase64Subscription(content) {
                 let decodedContent; try { decodedContent = atob(content); } catch (e) { decodedContent = content; }
                 const protocols = ['vmess://', 'vless://', 'ss://', 'trojan://', 'ssr://', 'hy2://', 'tuic://'];
@@ -386,7 +407,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     if (!data.outbounds || !Array.isArray(data.outbounds)) return 0;
                     const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns', 'fallback'];
                     return data.outbounds.filter(o => o.type && !utilityTypes.includes(o.type.toLowerCase())).length;
-                } catch (e) { return 0; }
+                } catch (e) { console.error('Sing-box JSON parsing error:', e); return 0; }
             }
             function parseSurfboardSubscription(content) {
                 const lines = content.split('\n'); let inProxySection = false; let nodeCount = 0;
@@ -399,49 +420,31 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
             function updateClientInfo(coreType) {
                 const clientInfoContainer = document.getElementById('client-info-container');
-                clientInfoList.innerHTML = '';
-                const platforms = clientInfoData[coreType];
-                if (!platforms || Object.keys(platforms).length === 0) {
-                    clientInfoContainer.classList.add('hidden');
-                    return;
-                }
+                clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType];
+                if (!platforms || Object.keys(platforms).length === 0) { clientInfoContainer.classList.add('hidden'); return; }
                 clientInfoContainer.classList.remove('hidden');
                 Object.entries(platforms).forEach(([platformName, clients]) => {
                     if (clients.length > 0) {
                         const platformContainer = document.createElement('div');
-                        const title = document.createElement('h4');
-                        title.className = 'text-sm font-semibold text-slate-600 mb-2';
+                        const title = document.createElement('h4'); title.className = 'text-sm font-semibold text-slate-600 mb-2';
                         title.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1);
-                        platformContainer.appendChild(title);
-                        const linksContainer = document.createElement('div');
+                        platformContainer.appendChild(title); const linksContainer = document.createElement('div');
                         linksContainer.className = 'flex flex-col gap-2';
                         clients.forEach(client => {
-                            const link = document.createElement('a');
-                            link.href = client.url;
-                            link.target = '_blank';
+                            const link = document.createElement('a'); link.href = client.url; link.target = '_blank';
                             link.rel = 'noopener noreferrer';
                             link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600';
-                            const nameSpan = document.createElement('span');
-                            nameSpan.className = 'font-medium text-sm';
-                            nameSpan.textContent = client.name;
-                            const icon = document.createElement('i');
-                            icon.setAttribute('data-lucide', 'download');
-                            icon.className = 'w-4 h-4 text-slate-500';
-                            link.appendChild(nameSpan);
-                            link.appendChild(icon);
-                            linksContainer.appendChild(link);
+                            const nameSpan = document.createElement('span'); nameSpan.className = 'font-medium text-sm';
+                            nameSpan.textContent = client.name; const icon = document.createElement('i');
+                            icon.setAttribute('data-lucide', 'download'); icon.className = 'w-4 h-4 text-slate-500';
+                            link.appendChild(nameSpan); link.appendChild(icon); linksContainer.appendChild(link);
                         });
-                        platformContainer.appendChild(linksContainer);
-                        clientInfoList.appendChild(platformContainer);
+                        platformContainer.appendChild(linksContainer); clientInfoList.appendChild(platformContainer);
                     }
                 });
-                try {
-                    lucide.createIcons();
-                } catch (e) {
-                    console.error(e);
-                }
+                try { lucide.createIcons(); } catch(e) { console.error(e); }
             }
-
+            
             function updateOtherElementOptions() {
                 const selectedConfigType = configTypeSelect.value;
                 const selectedIpType = ipTypeSelect.value;
@@ -451,6 +454,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 
                 if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
                     const allElements = structuredData[selectedConfigType][selectedIpType];
+                    
                     const getSortIndex = (filename) => {
                         const lowerFilename = filename.toLowerCase();
                         for (let i = 0; i < CUSTOM_SORT_ORDER.length; i++) {
@@ -458,6 +462,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         }
                         return CUSTOM_SORT_ORDER.length;
                     };
+
                     const filteredAndSortedKeys = Object.keys(allElements)
                         .filter(key => formatDisplayName(key).toLowerCase().includes(searchTerm))
                         .sort((a, b) => {
@@ -471,20 +476,16 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                     otherElementSelect.disabled = false;
                 }
             }
-            
-            // --- 3. EVENT LISTENERS SETUP ---
+
+            // 4. ATTACH EVENT LISTENERS
             analyzeButton.addEventListener('click', async () => {
-                const url = subscriptionUrlInput.value;
-                const clientCore = ipTypeSelect.value;
-                if (!url) return;
+                const url = subscriptionUrlInput.value; const clientCore = ipTypeSelect.value; if (!url) return;
                 analysisContainer.classList.remove('hidden');
                 analysisResults.innerHTML = '<p class="flex items-center gap-2"><i data-lucide="loader-2" class="animate-spin"></i> Analyzing subscription...</p>';
                 lucide.createIcons();
                 try {
-                    const response = await fetch(url);
-                    if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
-                    const content = await response.text();
-                    let nodeCount = 0;
+                    const response = await fetch(url); if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
+                    const content = await response.text(); let nodeCount = 0;
                     switch (clientCore.toLowerCase()) {
                         case 'xray': nodeCount = parseBase64Subscription(content); break;
                         case 'clash': nodeCount = parseClashSubscription(content); break;
@@ -493,37 +494,26 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                         default: throw new Error('Analysis for this client type is not supported.');
                     }
                     analysisResults.innerHTML = `<p class="font-medium text-green-700">✅ Analysis Complete</p><p><strong>Total Proxies Found:</strong> <span class="font-bold text-lg">${nodeCount}</span></p>`;
-                } catch (error) {
-                    analysisResults.innerHTML = `<p class="font-medium text-red-700">❌ Analysis Failed</p><p>${error.message}</p>`;
-                }
+                } catch (error) { analysisResults.innerHTML = `<p class="font-medium text-red-700">❌ Analysis Failed</p><p>${error.message}</p>`; }
             });
 
             configTypeSelect.addEventListener('change', () => {
-                resetSelect(ipTypeSelect, 'Select Client/Core');
-                resetSelect(otherElementSelect, 'Select Subscription');
-                searchBar.value = '';
-                searchBar.disabled = true;
-                resultArea.classList.add('hidden');
-                if (configTypeSelect.value) {
-                    const keys = Object.keys(structuredData[configTypeSelect.value] || {});
-                    populateSelect(ipTypeSelect, keys, 'Select Client/Core');
+                resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription');
+                searchBar.value = ''; searchBar.disabled = true; resultArea.classList.add('hidden');
+                if (configTypeSelect.value && structuredData[configTypeSelect.value]) {
+                    populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), 'Select Client/Core');
                     ipTypeSelect.disabled = false;
                 }
             });
             
             ipTypeSelect.addEventListener('change', () => {
-                const selectedCore = ipTypeSelect.value;
-                searchBar.value = '';
+                const selectedCore = ipTypeSelect.value; searchBar.value = '';
                 if (selectedCore) {
-                    updateClientInfo(selectedCore);
-                    resultArea.classList.remove('hidden');
-                    subscriptionDetailsContainer.classList.add('hidden');
-                    analysisContainer.classList.add('hidden');
-                    searchBar.disabled = false;
-                    updateOtherElementOptions();
+                    updateClientInfo(selectedCore); resultArea.classList.remove('hidden');
+                    subscriptionDetailsContainer.classList.add('hidden'); analysisContainer.classList.add('hidden');
+                    searchBar.disabled = false; updateOtherElementOptions();
                 } else {
-                    resultArea.classList.add('hidden');
-                    searchBar.disabled = true;
+                    resultArea.classList.add('hidden'); searchBar.disabled = true;
                     resetSelect(otherElementSelect, 'Select Subscription');
                 }
             });
@@ -534,8 +524,7 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                 analysisContainer.classList.add('hidden');
                 const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value];
                 if (url) {
-                    subscriptionUrlInput.value = url;
-                    updateQRCode(url);
+                    subscriptionUrlInput.value = url; updateQRCode(url);
                     subscriptionDetailsContainer.classList.remove('hidden');
                 } else {
                     subscriptionDetailsContainer.classList.add('hidden');
@@ -544,24 +533,19 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 
             copyButton.addEventListener('click', () => {
                 if (!subscriptionUrlInput.value) { showMessageBox('No URL to copy.'); return; }
-                document.execCommand('copy');
-                const copyIcon = copyButton.querySelector('.copy-icon');
+                document.execCommand('copy'); const copyIcon = copyButton.querySelector('.copy-icon');
                 const checkIcon = copyButton.querySelector('.check-icon');
-                copyIcon.classList.add('hidden');
-                checkIcon.classList.remove('hidden');
-                setTimeout(() => {
-                    copyIcon.classList.remove('hidden');
-                    checkIcon.classList.add('hidden');
-                }, 2000);
+                copyIcon.classList.add('hidden'); checkIcon.classList.remove('hidden');
+                setTimeout(() => { copyIcon.classList.remove('hidden'); checkIcon.classList.add('hidden'); }, 2000);
             });
+            
             document.addEventListener('copy', (event) => {
                 if (subscriptionUrlInput.value && event.clipboardData) {
-                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value);
-                    event.preventDefault();
+                    event.clipboardData.setData('text/plain', subscriptionUrlInput.value); event.preventDefault();
                 }
             });
 
-            // --- 4. INITIAL PAGE SETUP ---
+            // 5. INITIALIZE THE PAGE
             populateSelect(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
             configTypeSelect.disabled = false;
         });
@@ -570,9 +554,11 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 </html>
 HTML;
 
-    return str_replace('__JSON_DATA_PLACEHOLDER__', $json_structured_data, $html_template);
+    $final_html = str_replace('__JSON_DATA_PLACEHOLDER__', $json_structured_data, $html_template);
+    $final_html = str_replace('__CLIENT_INFO_PLACEHOLDER__', $json_client_info_data, $final_html);
+    $final_html = str_replace('__TIMESTAMP_PLACEHOLDER__', $generation_timestamp, $final_html);
+    return $final_html;
 }
-
 
 // --- Main Execution ---
 echo "Starting PSG page generator..." . PHP_EOL;
