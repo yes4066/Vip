@@ -113,6 +113,7 @@
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 3",
                 "🇬🇧 GB | 🟢 | ss | @hacknashid | 0",
+                "🇬🇧 GB | 🟢 | ss | @hope_net | 16",
                 "🇬🇧 GB | 🟢 | ss | @kurdistan_vpn_perfectt | 3",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
@@ -133,13 +134,13 @@
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
+                "🇮🇷 IR | 🟢 | ss | @v2raych | 19",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇬🇧 GB | 🟢 | ss | @v2rayopen | 6",
-                "🇵🇱 PL | 🟢 | ss | @vmesc | 13",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 5",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 9",
+                "🇵🇱 PL | 🟢 | ss | @vmesc | 12",
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8",
                 "🇬🇧 GB | 🟢 | ss | @vpntrt | 30"
             ],
             "interrupt_exist_connections": false
@@ -163,6 +164,7 @@
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 3",
                 "🇬🇧 GB | 🟢 | ss | @hacknashid | 0",
+                "🇬🇧 GB | 🟢 | ss | @hope_net | 16",
                 "🇬🇧 GB | 🟢 | ss | @kurdistan_vpn_perfectt | 3",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
@@ -183,13 +185,13 @@
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
+                "🇮🇷 IR | 🟢 | ss | @v2raych | 19",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇬🇧 GB | 🟢 | ss | @v2rayopen | 6",
-                "🇵🇱 PL | 🟢 | ss | @vmesc | 13",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 5",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 9",
+                "🇵🇱 PL | 🟢 | ss | @vmesc | 12",
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8",
                 "🇬🇧 GB | 🟢 | ss | @vpntrt | 30"
             ],
             "url": "https://detectportal.firefox.com/success.txt",
@@ -328,6 +330,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "AcGFEsMR6c07Txux"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @hope_net | 16",
+            "type": "shadowsocks",
+            "server": "admin.c2.webramz.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "u17T3BvpYaaiuW2c"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @kurdistan_vpn_perfectt | 3",
@@ -490,6 +500,14 @@
             "password": "u17T3BvpYaaiuW2c"
         },
         {
+            "tag": "🇮🇷 IR | 🟢 | ss | @v2raych | 19",
+            "type": "shadowsocks",
+            "server": "tehran.npveniltuo.com",
+            "server_port": 8128,
+            "method": "aes-256-gcm",
+            "password": "MzY4YzJmNDQzOGUyZmE0MjEwNWIzMGEwNTIyNzk2"
+        },
+        {
             "tag": "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
             "type": "shadowsocks",
             "server": "flank3.g.edgeservers.org",
@@ -514,7 +532,7 @@
             "password": "1xO2cqPazqjGfCfd"
         },
         {
-            "tag": "🇵🇱 PL | 🟢 | ss | @vmesc | 13",
+            "tag": "🇵🇱 PL | 🟢 | ss | @vmesc | 12",
             "type": "shadowsocks",
             "server": "war.ssvpnapp.win",
             "server_port": 57456,
@@ -522,15 +540,7 @@
             "password": "d3837224ed465f00"
         },
         {
-            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 5",
-            "type": "shadowsocks",
-            "server": "sakura.outlinekeys.net",
-            "server_port": 1235,
-            "method": "chacha20-ietf-poly1305",
-            "password": "055Url9JTp2myIegks4mA2"
-        },
-        {
-            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
+            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
             "type": "shadowsocks",
             "server": "sakura.outlinekeys.net",
             "server_port": 1235,
@@ -538,7 +548,7 @@
             "password": "MWLQQaSvusNhEwxKMiOdEe"
         },
         {
-            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 9",
+            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 8",
             "type": "shadowsocks",
             "server": "sakura.outlinekeys.net",
             "server_port": 1235,
