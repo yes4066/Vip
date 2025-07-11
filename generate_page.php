@@ -22,7 +22,63 @@ define('SCAN_DIRECTORIES', [
 
 function get_client_info(): array { /* ... unchanged ... */ return [ 'clash' => [ 'windows' => [['name' => 'Clash Verge (Rev) - x64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'],['name' => 'Clash Verge (Rev) - ARM64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi']], 'macos' => [['name' => 'Clash Verge (Rev) - Apple Silicon', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg'],['name' => 'ClashX - Universal', 'url' => 'https://github.com/yichengchen/clashX/releases/latest/download/ClashX.dmg']], 'android' => [['name' => 'Clash for Android (CFA) - arm64-v8a', 'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk']], 'ios' => [['name' => 'Stash (Recommended for Clash)', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349']], 'linux' => [['name' => 'Clash Verge (Rev) - amd64 (.deb)', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb']] ], 'meta' => [ 'windows' => [['name' => 'Clash Verge (Rev) - x64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe']], 'macos' => [['name' => 'Clash Verge (Rev) - Apple Silicon', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg']], 'android' => [['name' => 'Clash for Android (CFA) - arm64-v8a', 'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk']], 'ios' => [['name' => 'Stash (Recommended for Clash Meta)', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349']], 'linux' => [['name' => 'Clash Verge (Rev) - amd64 (.deb)', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb']] ], 'location' => [ 'windows' => [['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']], 'android' => [['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk']], 'ios' => [['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118']] ], 'singbox' => [ 'windows' => [['name' => 'Hiddify-Next - x64 Installer', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe']], 'macos' => [['name' => 'Hiddify-Next - Universal', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg']], 'android' => [['name' => 'Hiddify-Next - Universal', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk']], 'ios' => [['name' => 'Streisand (Recommended for Sing-Box)', 'url' => 'https://apps.apple.com/us/app/streisand/id6450534064']], 'linux' => [['name' => 'Hiddify-Next - x64 (.AppImage)', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage']] ], 'surfboard' => [ 'android' => [['name' => 'Surfboard (Google Play)', 'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard']] ], 'xray' => [ 'windows' => [['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']], 'android' => [['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk']], 'ios' => [['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118']] ], 'channel' => [ 'windows' => [['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']], 'android' => [['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk']], 'ios' => [['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118']] ] ]; }
 function scan_directory(string $dir): array { /* ... unchanged ... */ if (!is_dir($dir)) { return []; } $files = []; $iterator = new RecursiveIteratorIterator( new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS), RecursiveIteratorIterator::SELF_FIRST ); $ignoreExtensions = ['php', 'md', 'ini', 'txt', 'log', 'conf']; foreach ($iterator as $file) { if ($file->isFile() && !in_array(strtolower($file->getExtension()), $ignoreExtensions)) { $relativePath = str_replace(PROJECT_ROOT . DIRECTORY_SEPARATOR, '', $file->getRealPath()); $files[] = str_replace(DIRECTORY_SEPARATOR, '/', $relativePath); } } return $files; }
-function process_files_to_structure(array $files_by_category): array { /* ... unchanged ... */ $structure = []; foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) { $base_dir_relative = ltrim(str_replace(PROJECT_ROOT, '', $category_dir_path), DIRECTORY_SEPARATOR); $base_dir_relative = str_replace(DIRECTORY_SEPARATOR, '/', $base_dir_relative); if (!isset($files_by_category[$category_key])) { continue; } foreach ($files_by_category[$category_key] as $path) { $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path); $path_for_parsing = $relative_path_from_base; if (strpos($path_for_parsing, 'xray/') === 0) { if (strpos($path_for_parsing, 'xray/base64/') !== 0) continue; $path_for_parsing = str_replace('xray/base64/', 'xray/', $path_for_parsing); } elseif (strpos($path_for_parsing, 'location/') === 0) { if (strpos($path_for_parsing, 'location/base64/') !== 0) continue; $path_for_parsing = str_replace('location/base64/', 'location/', $path_for_parsing); } elseif (strpos($path_for_parsing, 'channel/') === 0) { if (strpos($path_for_parsing, 'channel/base64/') !== 0) continue; $path_for_parsing = str_replace('channel/base64/', 'channel/', $path_for_parsing); } $parts = explode('/', $path_for_parsing); if (count($parts) < 2) continue; $type = array_shift($parts); $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME); $url = GITHUB_REPO_URL . '/' . $path; $structure[$category_key][$type][$name] = $url; } } foreach ($structure as &$categories) { ksort($categories); foreach ($categories as &$elements) { ksort($elements); } } ksort($structure); return $structure; }
+
+function process_files_to_structure(array $files_by_category): array
+{
+    $structure = [];
+    foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
+        $base_dir_relative = ltrim(str_replace(PROJECT_ROOT, '', $category_dir_path), DIRECTORY_SEPARATOR);
+        $base_dir_relative = str_replace(DIRECTORY_SEPARATOR, '/', $base_dir_relative);
+
+        if (!isset($files_by_category[$category_key])) {
+            continue;
+        }
+
+        foreach ($files_by_category[$category_key] as $path) {
+            $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
+            $path_for_parsing = $relative_path_from_base;
+
+            // Handle strict 'base64' subfolder requirement for xray and channel
+            if (strpos($path_for_parsing, 'xray/') === 0 || strpos($path_for_parsing, 'channel/') === 0) {
+                $type_prefix = (strpos($path_for_parsing, 'xray/') === 0) ? 'xray' : 'channel';
+                if (strpos($path_for_parsing, $type_prefix . '/base64/') !== 0) {
+                    continue; // Skip if not in a base64 subfolder
+                }
+                $path_for_parsing = str_replace($type_prefix . '/base64/', $type_prefix . '/', $path_for_parsing);
+            
+            // Handle flexible 'base64' subfolder for location
+            } elseif (strpos($path_for_parsing, 'location/') === 0) {
+                if (strpos($path_for_parsing, 'location/base64/') === 0) {
+                    // If it is in a base64 subfolder, flatten the path
+                    $path_for_parsing = str_replace('location/base64/', 'location/', $path_for_parsing);
+                }
+                // Otherwise, just let it pass through (e.g., location/US-config.txt)
+            }
+
+            $parts = explode('/', $path_for_parsing);
+            if (count($parts) < 2) {
+                continue;
+            }
+
+            $type = array_shift($parts);
+            $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
+            $url = GITHUB_REPO_URL . '/' . $path;
+
+            $structure[$category_key][$type][$name] = $url;
+        }
+    }
+
+    foreach ($structure as &$categories) {
+        ksort($categories);
+        foreach ($categories as &$elements) {
+            ksort($elements);
+        }
+    }
+    ksort($structure);
+
+    return $structure;
+}
+
 
 /**
  * Generates the complete HTML content for the PSG page.
@@ -262,7 +318,6 @@ function generate_full_html(array $structured_data, array $client_info_data, str
                             break;
 
                         case 'singbox':
-                            // FIX: Use robust jsonc_parser (with underscore)
                             const parsedJson = jsonc_parser.parse(content);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
