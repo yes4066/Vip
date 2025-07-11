@@ -103,6 +103,7 @@
                 "🇺🇦 UA | 🟢 | vless | @cook_vpn | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
+                "🇩🇪 DE | 🟢 | vless | @entrynet | 18",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 13",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 98",
                 "🇮🇷 IR | 🟢 | vless | @filter_breaker | 99",
@@ -205,6 +206,7 @@
                 "🇺🇦 UA | 🟢 | vless | @cook_vpn | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
+                "🇩🇪 DE | 🟢 | vless | @entrynet | 18",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 13",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 98",
                 "🇮🇷 IR | 🟢 | vless | @filter_breaker | 99",
@@ -631,6 +633,29 @@
                     "enabled": true,
                     "public_key": "QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U",
                     "short_id": "1eaf5214"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @entrynet | 18",
+            "type": "vless",
+            "server": "hecror.bizipsych.ir",
+            "server_port": 38755,
+            "uuid": "7ff8a0c0-d0dd-4251-8f8f-46e9b44d44ba",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Hz-XqYNjjbZ4yOjM6IKlQSvzUbipK0DY5-rmH7f4SAo",
+                    "short_id": "585d50e4e2"
                 }
             }
         },
