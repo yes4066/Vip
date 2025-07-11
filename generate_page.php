@@ -639,6 +639,7 @@ function generate_full_html(
             function showMessageBox(message) { const box = document.getElementById('messageBox'); document.getElementById('messageBoxText').textContent = message; box.classList.remove('hidden'); document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden'); }
             function populateSelect(selectElement, sortedKeys, defaultOptionText) { selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`; sortedKeys.forEach(key => { const option = document.createElement('option'); option.value = key; option.textContent = formatDisplayName(key); selectElement.appendChild(option); }); }
             function resetSelect(selectElement, defaultText) { selectElement.innerHTML = `<option value="">${defaultText}</option>`; selectElement.disabled = true; }
+            
             function formatDisplayName(name) {
                 let flag = '';
                 // Flexible regex to find country code: [XX], XX at the start, or as a whole word.
@@ -650,8 +651,15 @@ function generate_full_html(
 
                 const specialReplacements = { 'ss': 'SHADOWSOCKS' };
                 const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp'];
-                const parts = name.replace(/\//g, '-').split(/[-_]/).filter(p => p !== '' && !/^[A-Z]{2}$/.test(p));
+                
+                // Corrected logic: Do not filter out the country code from the parts.
+                const parts = name.replace(/\//g, '-').split(/[-_]/).filter(p => p !== '');
+                
                 const displayNameParts = parts.map((part) => {
+                    // New rule: If a part is a two-letter code, keep it uppercase.
+                    if (/^[A-Z]{2}$/.test(part)) {
+                        return part.toUpperCase();
+                    }
                     const lowerPart = part.toLowerCase();
                     if (specialReplacements[lowerPart]) return specialReplacements[lowerPart];
                     if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase();
@@ -661,6 +669,7 @@ function generate_full_html(
                 const textName = displayNameParts.join(' ');
                 return flag ? `${flag} ${textName.trim()}` : textName.trim();
             }
+
             function updateQRCode(url) { qrcodeDiv.innerHTML = ''; if (url) { try { new QRCode(qrcodeDiv, { text: url, width: 128, height: 128, colorDark: "#000000", colorLight: "#FFFFFF", correctLevel: QRCode.CorrectLevel.H }); } catch (error) { console.error('QR code init failed:', error); } } }
             function updateClientInfo(coreType) { const clientInfoContainer = document.getElementById('client-info-container'); clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType]; if (!platforms || Object.keys(platforms).length === 0) { clientInfoContainer.classList.add('hidden'); return; } clientInfoContainer.classList.remove('hidden'); Object.entries(platforms).forEach(([platformName, clients]) => { if (clients.length > 0) { const platformContainer = document.createElement('div'); const titleDiv = document.createElement('div'); titleDiv.className = 'flex items-center gap-2 text-sm font-semibold text-slate-600 mb-2'; const iconName = { windows: 'monitor', macos: 'apple', android: 'smartphone', ios: 'tablet', linux: 'terminal' }[platformName.toLowerCase()] || 'box'; const icon = document.createElement('i'); icon.setAttribute('data-lucide', iconName); icon.className = 'w-4 h-4 text-slate-500'; titleDiv.appendChild(icon); const titleText = document.createElement('span'); titleText.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1); titleDiv.appendChild(titleText); platformContainer.appendChild(titleDiv); const linksContainer = document.createElement('div'); linksContainer.className = 'flex flex-col gap-2'; clients.forEach(client => { const link = document.createElement('a'); link.href = client.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600'; const nameSpan = document.createElement('span'); nameSpan.className = 'font-medium text-sm'; nameSpan.textContent = client.name; const downloadIcon = document.createElement('i'); downloadIcon.setAttribute('data-lucide', 'download'); downloadIcon.className = 'w-4 h-4 text-slate-500'; link.appendChild(nameSpan); link.appendChild(downloadIcon); linksContainer.appendChild(link); }); platformContainer.appendChild(linksContainer); clientInfoList.appendChild(platformContainer); } }); lucide.createIcons(); }
             function updateOtherElementOptions() { const selectedConfigType = configTypeSelect.value; const selectedIpType = ipTypeSelect.value; const searchTerm = searchBar.value.toLowerCase(); resetSelect(otherElementSelect, 'Select Subscription'); subscriptionDetailsContainer.classList.add('hidden'); if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) { const allElements = structuredData[selectedConfigType][selectedIpType]; const filteredAndSortedKeys = Object.keys(allElements).filter(key => formatDisplayName(key).toLowerCase().includes(searchTerm)).sort((a, b) => a.localeCompare(b)); populateSelect(otherElementSelect, filteredAndSortedKeys, filteredAndSortedKeys.length > 0 ? 'Select Subscription' : 'No matches found'); otherElementSelect.disabled = false; } }
