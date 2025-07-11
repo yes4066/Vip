@@ -6,36 +6,43 @@
 {
     "log": {
         "disabled": false,
-        "level": "fatal",
+        "level": "info",
         "timestamp": true
     },
     "experimental": {
         "clash_api": {
-            "external_controller": "0.0.0.0:9090",
-            "external_ui": "yacd",
-            "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+            "external_controller": "127.0.0.1:9090",
+            "external_ui": "metacubexd",
+            "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
             "external_ui_download_detour": "direct",
-            "secret": "",
             "default_mode": "rule"
+        },
+        "cache_file": {
+            "enabled": true,
+            "path": "cache.db",
+            "store_fakeip": false,
+            "store_rdrc": false,
+            "rdrc_timeout": "7d"
         }
     },
     "dns": {
         "servers": [
             {
-                "address": "tcp://185.228.168.9",
-                "address_resolver": "dns-direct",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "dns-local",
+                "detour": "Proxy",
                 "strategy": "ipv4_only",
                 "tag": "dns-remote"
             },
             {
-                "address": "tcp://185.228.168.9",
+                "address": "78.157.42.100",
                 "address_resolver": "dns-local",
                 "detour": "direct",
                 "strategy": "ipv4_only",
                 "tag": "dns-direct"
             },
             {
-                "address": "local",
+                "address": "8.8.8.8",
                 "detour": "direct",
                 "tag": "dns-local"
             },
@@ -46,62 +53,48 @@
         ],
         "rules": [
             {
-                "domain_suffix": [
-                    ".ir"
+                "domain": [],
+                "rule_set": [
+                    "geosite-ir"
                 ],
                 "server": "dns-direct"
             },
             {
-                "outbound": "direct",
-                "server": "dns-direct",
-                "rewrite_ttl": 20
+                "disable_cache": true,
+                "rule_set": [
+                    "geosite-category-ads-all",
+                    "geosite-malware",
+                    "geosite-phishing",
+                    "geosite-cryptominers"
+                ],
+                "server": "dns-block"
             },
             {
                 "outbound": "any",
-                "server": "dns-direct",
-                "rewrite_ttl": 20
+                "server": "dns-direct"
             }
         ],
-        "reverse_mapping": true,
-        "strategy": "ipv4_only",
         "independent_cache": true
     },
     "inbounds": [
         {
-            "listen": "0.0.0.0",
-            "listen_port": 6450,
-            "override_address": "8.8.8.8",
-            "override_port": 53,
-            "tag": "dns-in",
-            "type": "direct"
-        },
-        {
             "type": "tun",
             "tag": "tun-in",
-            "domain_strategy": "",
-            "interface_name": "tun0",
+            "domain_strategy": "ipv4_only",
+            "interface_name": "sing-tun",
             "inet4_address": "172.19.0.1/30",
-            "mtu": 9000,
+            "mtu": 1492,
             "auto_route": true,
             "strict_route": true,
-            "stack": "system",
+            "stack": "gvisor",
             "endpoint_independent_nat": true,
             "sniff": true,
             "sniff_override_destination": false
-        },
-        {
-            "domain_strategy": "",
-            "listen": "0.0.0.0",
-            "listen_port": 2080,
-            "sniff": true,
-            "sniff_override_destination": false,
-            "tag": "mixed-in",
-            "type": "mixed"
         }
     ],
     "outbounds": [
         {
-            "tag": "proxy",
+            "tag": "Proxy",
             "type": "selector",
             "outbounds": [
                 "URL-TEST",
@@ -112,38 +105,6 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇺🇸 US | 🟢 | vless | @hope_net | 19",
-                "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
-                "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
-                "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
-                "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
-                "🇹🇷 TR | 🟢 | vless | @sinavm | 2",
-                "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
-                "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
-                "🇩🇪 DE | 🟢 | vless | @vip_vpn_2022 | 6",
-                "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
-                "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇺🇸 US | 🟢 | vless | @vpnaloo | 12",
-                "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
-                "🇹🇷 TR | 🟢 | vless | @xixv2ray | 6",
-                "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
-            ]
-        },
-        {
-            "tag": "URL-TEST",
-            "type": "urltest",
-            "outbounds": [
-                "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
-                "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 14",
-                "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
-                "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
-                "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
-                "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇺🇸 US | 🟢 | vless | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -162,16 +123,44 @@
                 "🇹🇷 TR | 🟢 | vless | @xixv2ray | 6",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
             ],
-            "url": "https://www.gstatic.com/generate_204",
-            "interval": "3m",
-            "tolerance": 50
+            "interrupt_exist_connections": false
+        },
+        {
+            "tag": "URL-TEST",
+            "type": "urltest",
+            "outbounds": [
+                "🇫🇷 FR | 🟢 | vless | @configasli | 6",
+                "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
+                "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 14",
+                "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
+                "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
+                "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
+                "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
+                "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
+                "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
+                "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
+                "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
+                "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
+                "🇹🇷 TR | 🟢 | vless | @sinavm | 2",
+                "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
+                "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
+                "🇩🇪 DE | 🟢 | vless | @vip_vpn_2022 | 6",
+                "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
+                "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
+                "🇺🇸 US | 🟢 | vless | @vpnaloo | 12",
+                "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
+                "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
+                "🇹🇷 TR | 🟢 | vless | @xixv2ray | 6",
+                "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
+            ],
+            "url": "https://detectportal.firefox.com/success.txt",
+            "interval": "5m",
+            "tolerance": 50,
+            "interrupt_exist_connections": false
         },
         {
             "tag": "direct",
-            "type": "direct"
-        },
-        {
-            "tag": "bypass",
             "type": "direct"
         },
         {
@@ -344,29 +333,6 @@
                     "enabled": true,
                     "public_key": "YqHW8a4iAc1SZYpTrFVoOQg1F3yAdX1tWXuROZUCsEU",
                     "short_id": "6ba85179e30d4fc2"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @hope_net | 19",
-            "type": "vless",
-            "server": "18.226.4.129",
-            "server_port": 4433,
-            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "stackoverflow.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "random"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
-                    "short_id": "f785b38130e64177"
                 }
             }
         },
@@ -788,68 +754,110 @@
     "route": {
         "auto_detect_interface": true,
         "override_android_vpn": true,
-        "final": "proxy",
-        "geoip": {
-            "download_url": "https://github.com/MiSaturo/sing-box-geoip-ir/releases/latest/download/geoip.db",
-            "download_detour": "direct"
-        },
-        "geosite": {
-            "download_url": "https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/iran-geosite.db",
-            "download_detour": "direct"
-        },
+        "final": "Proxy",
         "rules": [
             {
-                "outbound": "dns-out",
-                "port": [
-                    53
-                ]
-            },
-            {
-                "inbound": [
-                    "dns-in"
-                ],
+                "protocol": "dns",
                 "outbound": "dns-out"
             },
             {
+                "network": "udp",
+                "port": 443,
+                "outbound": "block"
+            },
+            {
+                "ip_is_private": true,
+                "outbound": "direct"
+            },
+            {
                 "domain_suffix": [
-                    "ir"
-                ],
-                "outbound": "bypass"
-            },
-            {
-                "geoip": [
-                    "ir"
-                ],
-                "outbound": "bypass"
-            },
-            {
-                "geosite": [
-                    "ir"
+                    ".ir"
                 ],
                 "outbound": "direct"
             },
             {
-                "geosite": [
-                    "other"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": [
-                    "ads"
+                "rule_set": [
+                    "geosite-category-ads-all",
+                    "geosite-malware",
+                    "geosite-phishing",
+                    "geosite-cryptominers",
+                    "geoip-malware",
+                    "geoip-phishing"
                 ],
                 "outbound": "block"
             },
             {
-                "ip_cidr": [
-                    "224.0.0.0/3",
-                    "ff00::/8"
+                "rule_set": [
+                    "geoip-ir",
+                    "geosite-ir"
                 ],
-                "outbound": "block",
-                "source_ip_cidr": [
-                    "224.0.0.0/3",
-                    "ff00::/8"
-                ]
+                "outbound": "direct"
+            }
+        ],
+        "rule_set": [
+            {
+                "tag": "geosite-ir",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-category-ads-all",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-malware",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-phishing",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-cryptominers",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geoip-ir",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geoip-malware",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geoip-phishing",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
+                "download_detour": "direct",
+                "update_interval": "1d"
             }
         ]
     }

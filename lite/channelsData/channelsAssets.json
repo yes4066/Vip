@@ -11,7 +11,9 @@
     "NamiraNet": {
         "types": [
             "ss",
-            "vless"
+            "trojan",
+            "vless",
+            "vmess"
         ],
         "title": "‌NamiraNet / نامیرا نت",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/NamiraNet.jpg"
@@ -184,13 +186,6 @@
         "title": "دور زدن اینترنت ملی | کانفیگ پروکسی رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/befreewithus.jpg"
     },
-    "binner_iran": {
-        "types": [
-            "vless"
-        ],
-        "title": "پروکسی رایگان ملی / فیلترشکن",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/binner_iran.jpg"
-    },
     "bislullproxy": {
         "types": [
             "vless",
@@ -301,6 +296,7 @@
         "types": [
             "vless",
             "vmess",
+            "ss",
             "trojan"
         ],
         "title": "Proxy | V2ray | Config | Vpn | Hiddify | Nekobox | Segaro | پروکسی | فیلترشکن | ایرانسل | همراه اول | رایتل | سامانتل | مخابرات|",
@@ -599,7 +595,6 @@
     },
     "erfanpaydartelegram": {
         "types": [
-            "ss",
             "vless",
             "trojan",
             "vmess"
@@ -1128,10 +1123,10 @@
     },
     "hope_net": {
         "types": [
-            "trojan",
             "vless",
             "ss",
-            "vmess"
+            "vmess",
+            "trojan"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1208,10 +1203,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
-            "vmess",
             "ss",
-            "vless"
+            "vless",
+            "trojan",
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1796,7 +1791,6 @@
     },
     "mobilinternet": {
         "types": [
-            "vless",
             "ss"
         ],
         "title": "#فیلترشکن #vpn #هوش_مصنوعی",
@@ -2258,6 +2252,7 @@
     },
     "proxy_mtproto_vpns_free": {
         "types": [
+            "ss",
             "vless"
         ],
         "title": "VPNs Proxy Mtproto",
@@ -2743,9 +2738,9 @@
     },
     "v2pedia": {
         "types": [
+            "vmess",
             "vless",
-            "ss",
-            "vmess"
+            "ss"
         ],
         "title": "⚜️V2PEDIA☬",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2pedia.jpg"
@@ -2807,8 +2802,8 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "ss",
             "vless",
+            "ss",
             "trojan",
             "vmess"
         ],
@@ -2933,6 +2928,7 @@
     },
     "v2rayfree": {
         "types": [
+            "ss",
             "vless"
         ],
         "title": "VPNs Proxy Mtproto",
