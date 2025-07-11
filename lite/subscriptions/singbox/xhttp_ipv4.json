@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 19",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 87",
                 "🇺🇸 US | 🔴 | vless | @free1_vpn | 9",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 9",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 11",
@@ -107,6 +108,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 19",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 87",
                 "🇺🇸 US | 🔴 | vless | @free1_vpn | 9",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 9",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 11",
@@ -132,6 +134,15 @@
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "724383d8-33c6-4e8d-9db4-0184a89efa33",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 87",
+            "type": "vless",
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "c60c5106-08b1-4fe7-eff9-d665d62f3030",
             "flow": "",
             "packet_encoding": "xudp"
         },

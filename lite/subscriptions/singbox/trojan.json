@@ -89,7 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
@@ -101,6 +101,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇫🇷 FR | 🟢 | trojan | @v2ray_extractor | 19",
+                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 19",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
@@ -111,7 +112,7 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
@@ -123,6 +124,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇫🇷 FR | 🟢 | trojan | @v2ray_extractor | 19",
+                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 19",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
@@ -137,7 +139,7 @@
             "type": "direct"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+            "tag": "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
             "type": "trojan",
             "server": "production.tj.ojan.workers.dev",
             "server_port": 443,
@@ -341,6 +343,22 @@
             "tag": "🇫🇷 FR | 🟢 | trojan | @v2ray_extractor | 19",
             "type": "trojan",
             "server": "13.36.29.194",
+            "server_port": 22222,
+            "password": "telegram-id-privatevpns",
+            "tls": {
+                "enabled": true,
+                "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 19",
+            "type": "trojan",
+            "server": "13.36.253.184",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {

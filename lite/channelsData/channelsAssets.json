@@ -1170,8 +1170,8 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
             "trojan",
+            "vless",
             "vmess",
             "ss"
         ],
@@ -2183,7 +2183,6 @@
     },
     "proxy_mtproto_vpns_free": {
         "types": [
-            "ss",
             "vless",
             "vmess"
         ],
@@ -2813,7 +2812,6 @@
     },
     "v2rayfree": {
         "types": [
-            "ss",
             "vless",
             "vmess"
         ],
@@ -3078,8 +3076,7 @@
     },
     "v2rayweb": {
         "types": [
-            "vless",
-            "trojan"
+            "vless"
         ],
         "title": "V2ray | VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayweb.jpg"
@@ -3167,7 +3164,6 @@
     },
     "vaynora": {
         "types": [
-            "ss",
             "vless"
         ],
         "title": "VayNora",

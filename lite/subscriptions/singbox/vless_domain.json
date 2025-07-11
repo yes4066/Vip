@@ -208,7 +208,7 @@
                 "🇺🇸 US | 🟢 | vless | @v2ray_reality_new | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
-                "🇮🇷 IR | 🔴 | vless | @v2rayng_fars | 7",
+                "🇮🇷 IR | 🔴 | vless | @v2rayng_fars | 8",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -223,11 +223,10 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvl | 6",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
-                "🇺🇸 US | 🟢 | vless | @v2rayweb | 14",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇮🇷 IR | 🔴 | vless | @v2rez | 1",
                 "🇺🇸 US | 🔴 | vless | @v2source | 19",
-                "🇩🇪 DE | 🔴 | vless | @vaynora | 9",
+                "🇮🇷 IR | 🔴 | vless | @vaynora | 9",
                 "🇮🇷 IR | 🔴 | vless | @vezzevpn | 5",
                 "🇮🇷 IR | 🔴 | vless | @vipvpnsia | 3",
                 "🇩🇪 DE | 🟢 | vless | @vmesc | 17",
@@ -378,7 +377,7 @@
                 "🇺🇸 US | 🟢 | vless | @v2ray_reality_new | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
-                "🇮🇷 IR | 🔴 | vless | @v2rayng_fars | 7",
+                "🇮🇷 IR | 🔴 | vless | @v2rayng_fars | 8",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -393,11 +392,10 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvl | 6",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
-                "🇺🇸 US | 🟢 | vless | @v2rayweb | 14",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇮🇷 IR | 🔴 | vless | @v2rez | 1",
                 "🇺🇸 US | 🔴 | vless | @v2source | 19",
-                "🇩🇪 DE | 🔴 | vless | @vaynora | 9",
+                "🇮🇷 IR | 🔴 | vless | @vaynora | 9",
                 "🇮🇷 IR | 🔴 | vless | @vezzevpn | 5",
                 "🇮🇷 IR | 🔴 | vless | @vipvpnsia | 3",
                 "🇩🇪 DE | 🟢 | vless | @vmesc | 17",
@@ -2365,13 +2363,20 @@
             }
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @v2rayng_fars | 7",
+            "tag": "🇮🇷 IR | 🔴 | vless | @v2rayng_fars | 8",
             "type": "vless",
-            "server": "bahar.blaackgame.ir",
-            "server_port": 2089,
-            "uuid": "23f05af4-33d7-4a24-ae1e-2140464e627a",
+            "server": "sshtamizdind81.ivy-net.ir",
+            "server_port": 2064,
+            "uuid": "01c00374-3deb-40f7-a3dd-fc449c9412e7",
             "flow": "",
-            "packet_encoding": "xudp"
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/lklklkopkpwqkepoqwejdiojqowijedopjqwepdijqwedjpqwoejopjdwjlklklkopkpwqkepoqwejdiojqowijedopjqwepdijqwedjpqwoejopjdwjlklklkopkpwqkepoqwejdiojqowijedopjqwepdijqwedjpqwoejopjdwjlklklkopkpwqkepoqwejdiojqowijedopjqwepdijqwedjpqwoejopjdwjlklklkopkpwqkepoqwejdiojqowijedopjqwepdijqwedjpqwoejopjdwjlklklkopkpwqkepoqwejdiojqowijedopjqwepdijqwedjpqwoejopjdwjlklklkopkpwqkepoqwejdiojqowijedopjqwepdijqwedjpqwoejopjdwjlklklkopkpwqkepoqwejdiojqowijedopjqwepdijqwedjpqwoejopjdwj?ed=4096",
+                "headers": {
+                    "Host": "sshtamizdind81.ivy-net.ir"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
@@ -2660,31 +2665,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @v2rayweb | 14",
-            "type": "vless",
-            "server": "ipw.gfdv54cvghhgfhgj-njhgj64.info",
-            "server_port": 8443,
-            "uuid": "96a1b724-68d2-4f4d-ab25-38ecd83577bc",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "IyFpLkXk10.jOoLaJoOlA.OrG",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "IyFpLkXk10.jOoLaJoOlA.OrG"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
             "type": "vless",
             "server": "www.canva.com",
@@ -2742,11 +2722,11 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🔴 | vless | @vaynora | 9",
+            "tag": "🇮🇷 IR | 🔴 | vless | @vaynora | 9",
             "type": "vless",
-            "server": "0ger.amazon-osishop.ir",
-            "server_port": 8880,
-            "uuid": "3afb0e5d-5c7f-40e9-9d02-046fbd4c87aa",
+            "server": "nl1vip.vnetplus.click",
+            "server_port": 20054,
+            "uuid": "2484153e-cdc0-4538-9d24-351de5c00d87",
             "flow": "",
             "packet_encoding": "xudp"
         },

@@ -99,8 +99,9 @@
                 "🇳🇱 NL | 🟢 | vless | @canfing_vpn | 16",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 84",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 87",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 16",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
                 "🇺🇦 UA | 🟢 | vless | @cook_vpn | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
@@ -154,6 +155,7 @@
                 "🇩🇪 DE | 🟢 | vless | @v2ray_sub | 0",
                 "🇫🇮 FI | 🟢 | vless | @v2ray_v_vpn | 11",
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
+                "🇩🇪 DE | 🟢 | vless | @v2raych | 18",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 4",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
@@ -202,8 +204,9 @@
                 "🇳🇱 NL | 🟢 | vless | @canfing_vpn | 16",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 84",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 87",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 16",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
                 "🇺🇦 UA | 🟢 | vless | @cook_vpn | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
@@ -257,6 +260,7 @@
                 "🇩🇪 DE | 🟢 | vless | @v2ray_sub | 0",
                 "🇫🇮 FI | 🟢 | vless | @v2ray_v_vpn | 11",
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
+                "🇩🇪 DE | 🟢 | vless | @v2raych | 18",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 4",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
@@ -537,11 +541,11 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 84",
+            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 87",
             "type": "vless",
             "server": "mg2.yuanbaojc.site",
             "server_port": 19999,
-            "uuid": "ded6d814-3dea-4a1b-9121-01dd50174fe3",
+            "uuid": "0bdd1436-fe59-40ae-a654-91c0ee277445",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
@@ -550,7 +554,7 @@
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "safari"
+                    "fingerprint": "qq"
                 },
                 "reality": {
                     "enabled": true,
@@ -584,6 +588,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
+            "type": "vless",
+            "server": "it.panelmarzban.com",
+            "server_port": 3037,
+            "uuid": "a0a3e34d-87e4-4ff3-b04a-875c85325d62",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
+                    "short_id": ""
+                }
             }
         },
         {
@@ -1885,6 +1912,29 @@
                     "enabled": true,
                     "public_key": "2dIWbgD8nbCd1YBs-IiQ6vgA7mse9PA9DWqaIMFsTmc",
                     "short_id": "cb333964"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2raych | 18",
+            "type": "vless",
+            "server": "real-all3-2.sdcards.ir",
+            "server_port": 8501,
+            "uuid": "ac37eb9c-0db8-4056-8f61-e8db4e2da35e",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "tgju.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "OJ0wA5wp55uZdD16dutlTZvx1x-rbMMXmiO9D_MMCHI",
+                    "short_id": "e701a013553059ba"
                 }
             }
         },
