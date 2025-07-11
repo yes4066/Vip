@@ -11,58 +11,306 @@ declare(strict_types=1);
  */
 
 // --- Configuration ---
-define('PROJECT_ROOT', __DIR__);
-define('GITHUB_REPO_URL', 'https://raw.githubusercontent.com/itsyebekhe/PSG/main');
-define('OUTPUT_HTML_FILE', PROJECT_ROOT . '/index.html');
-define('SCAN_DIRECTORIES', [
-    'Standard' => PROJECT_ROOT . '/subscriptions',
-    'Lite' => PROJECT_ROOT . '/lite/subscriptions',
-    'Channels' => PROJECT_ROOT . '/channels',
+define("PROJECT_ROOT", __DIR__);
+define(
+    "GITHUB_REPO_URL",
+    "https://raw.githubusercontent.com/itsyebekhe/PSG/main"
+);
+define("OUTPUT_HTML_FILE", PROJECT_ROOT . "/index.html");
+define("SCAN_DIRECTORIES", [
+    "Standard" => PROJECT_ROOT . "/subscriptions",
+    "Lite" => PROJECT_ROOT . "/lite/subscriptions",
+    "Channels" => PROJECT_ROOT . "/channels",
 ]);
 
-function get_client_info(): array { /* ... unchanged ... */ return [ 'clash' => [ 'windows' => [['name' => 'Clash Verge (Rev) - x64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe'],['name' => 'Clash Verge (Rev) - ARM64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi']], 'macos' => [['name' => 'Clash Verge (Rev) - Apple Silicon', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg'],['name' => 'ClashX - Universal', 'url' => 'https://github.com/yichengchen/clashX/releases/latest/download/ClashX.dmg']], 'android' => [['name' => 'Clash for Android (CFA) - arm64-v8a', 'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk']], 'ios' => [['name' => 'Stash (Recommended for Clash)', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349']], 'linux' => [['name' => 'Clash Verge (Rev) - amd64 (.deb)', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb']] ], 'meta' => [ 'windows' => [['name' => 'Clash Verge (Rev) - x64 Installer', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe']], 'macos' => [['name' => 'Clash Verge (Rev) - Apple Silicon', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg']], 'android' => [['name' => 'Clash for Android (CFA) - arm64-v8a', 'url' => 'https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk']], 'ios' => [['name' => 'Stash (Recommended for Clash Meta)', 'url' => 'https://apps.apple.com/us/app/stash/id1596063349']], 'linux' => [['name' => 'Clash Verge (Rev) - amd64 (.deb)', 'url' => 'https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb']] ], 'location' => [ 'windows' => [['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']], 'android' => [['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk']], 'ios' => [['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118']] ], 'singbox' => [ 'windows' => [['name' => 'Hiddify-Next - x64 Installer', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe']], 'macos' => [['name' => 'Hiddify-Next - Universal', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg']], 'android' => [['name' => 'Hiddify-Next - Universal', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk']], 'ios' => [['name' => 'Streisand (Recommended for Sing-Box)', 'url' => 'https://apps.apple.com/us/app/streisand/id6450534064']], 'linux' => [['name' => 'Hiddify-Next - x64 (.AppImage)', 'url' => 'https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage']] ], 'surfboard' => [ 'android' => [['name' => 'Surfboard (Google Play)', 'url' => 'https://play.google.com/store/apps/details?id=com.getsurfboard']] ], 'xray' => [ 'windows' => [['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']], 'android' => [['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk']], 'ios' => [['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118']] ], 'channel' => [ 'windows' => [['name' => 'v2rayN (with Xray core)', 'url' => 'https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip']], 'android' => [['name' => 'v2rayNG - arm64-v8a', 'url' => 'https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk']], 'ios' => [['name' => 'Shadowrocket (Classic Choice)', 'url' => 'https://apps.apple.com/us/app/shadowrocket/id932747118']] ] ]; }
-function scan_directory(string $dir): array { /* ... unchanged ... */ if (!is_dir($dir)) { return []; } $files = []; $iterator = new RecursiveIteratorIterator( new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS), RecursiveIteratorIterator::SELF_FIRST ); $ignoreExtensions = ['php', 'md', 'ini', 'txt', 'log', 'conf']; foreach ($iterator as $file) { if ($file->isFile() && !in_array(strtolower($file->getExtension()), $ignoreExtensions)) { $relativePath = str_replace(PROJECT_ROOT . DIRECTORY_SEPARATOR, '', $file->getRealPath()); $files[] = str_replace(DIRECTORY_SEPARATOR, '/', $relativePath); } } return $files; }
+function get_client_info(): array
+{
+    return [
+        "clash" => [
+            "windows" => [
+                [
+                    "name" => "Clash Verge (Rev) - x64 Installer",
+                    "url" =>
+                        "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe",
+                ],
+                [
+                    "name" => "Clash Verge (Rev) - ARM64 Installer",
+                    "url" =>
+                        "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_arm64-setup.msi",
+                ],
+            ],
+            "macos" => [
+                [
+                    "name" => "Clash Verge (Rev) - Apple Silicon",
+                    "url" =>
+                        "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg",
+                ],
+                [
+                    "name" => "ClashX - Universal",
+                    "url" =>
+                        "https://github.com/yichengchen/clashX/releases/latest/download/ClashX.dmg",
+                ],
+            ],
+            "android" => [
+                [
+                    "name" => "Clash for Android (CFA) - arm64-v8a",
+                    "url" =>
+                        "https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk",
+                ],
+            ],
+            "ios" => [
+                [
+                    "name" => "Stash (Recommended for Clash)",
+                    "url" => "https://apps.apple.com/us/app/stash/id1596063349",
+                ],
+            ],
+            "linux" => [
+                [
+                    "name" => "Clash Verge (Rev) - amd64 (.deb)",
+                    "url" =>
+                        "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb",
+                ],
+            ],
+        ],
+        "meta" => [
+            "windows" => [
+                [
+                    "name" => "Clash Verge (Rev) - x64 Installer",
+                    "url" =>
+                        "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_x64-setup.exe",
+                ],
+            ],
+            "macos" => [
+                [
+                    "name" => "Clash Verge (Rev) - Apple Silicon",
+                    "url" =>
+                        "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/Clash.Verge_1.6.8_aarch64.dmg",
+                ],
+            ],
+            "android" => [
+                [
+                    "name" => "Clash for Android (CFA) - arm64-v8a",
+                    "url" =>
+                        "https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk",
+                ],
+            ],
+            "ios" => [
+                [
+                    "name" => "Stash (Recommended for Clash Meta)",
+                    "url" =>
+                        "https://apps.apple.com/us/app/stash/id1596063349",
+                ],
+            ],
+            "linux" => [
+                [
+                    "name" => "Clash Verge (Rev) - amd64 (.deb)",
+                    "url" =>
+                        "https://github.com/clash-verge-rev/clash-verge-rev/releases/latest/download/clash-verge_1.6.8_amd64.deb",
+                ],
+            ],
+        ],
+        "location" => [
+            "windows" => [
+                [
+                    "name" => "v2rayN (with Xray core)",
+                    "url" =>
+                        "https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip",
+                ],
+            ],
+            "android" => [
+                [
+                    "name" => "v2rayNG - arm64-v8a",
+                    "url" =>
+                        "https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk",
+                ],
+            ],
+            "ios" => [
+                [
+                    "name" => "Shadowrocket (Classic Choice)",
+                    "url" =>
+                        "https://apps.apple.com/us/app/shadowrocket/id932747118",
+                ],
+            ],
+        ],
+        "singbox" => [
+            "windows" => [
+                [
+                    "name" => "Hiddify-Next - x64 Installer",
+                    "url" =>
+                        "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Windows-x64-Setup.exe",
+                ],
+            ],
+            "macos" => [
+                [
+                    "name" => "Hiddify-Next - Universal",
+                    "url" =>
+                        "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-MacOS.dmg",
+                ],
+            ],
+            "android" => [
+                [
+                    "name" => "Hiddify-Next - Universal",
+                    "url" =>
+                        "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Android-universal.apk",
+                ],
+            ],
+            "ios" => [
+                [
+                    "name" => "Streisand (Recommended for Sing-Box)",
+                    "url" =>
+                        "https://apps.apple.com/us/app/streisand/id6450534064",
+                ],
+            ],
+            "linux" => [
+                [
+                    "name" => "Hiddify-Next - x64 (.AppImage)",
+                    "url" =>
+                        "https://github.com/hiddify/hiddify-next/releases/latest/download/Hiddify-Linux-x64.AppImage",
+                ],
+            ],
+        ],
+        "surfboard" => [
+            "android" => [
+                [
+                    "name" => "Surfboard (Google Play)",
+                    "url" =>
+                        "https://play.google.com/store/apps/details?id=com.getsurfboard",
+                ],
+            ],
+        ],
+        "xray" => [
+            "windows" => [
+                [
+                    "name" => "v2rayN (with Xray core)",
+                    "url" =>
+                        "https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip",
+                ],
+            ],
+            "android" => [
+                [
+                    "name" => "v2rayNG - arm64-v8a",
+                    "url" =>
+                        "https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk",
+                ],
+            ],
+            "ios" => [
+                [
+                    "name" => "Shadowrocket (Classic Choice)",
+                    "url" =>
+                        "https://apps.apple.com/us/app/shadowrocket/id932747118",
+                ],
+            ],
+        ],
+        "channel" => [
+            "windows" => [
+                [
+                    "name" => "v2rayN (with Xray core)",
+                    "url" =>
+                        "https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-With-Core.zip",
+                ],
+            ],
+            "android" => [
+                [
+                    "name" => "v2rayNG - arm64-v8a",
+                    "url" =>
+                        "https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.19_arm64-v8a.apk",
+                ],
+            ],
+            "ios" => [
+                [
+                    "name" => "Shadowrocket (Classic Choice)",
+                    "url" =>
+                        "https://apps.apple.com/us/app/shadowrocket/id932747118",
+                ],
+            ],
+        ],
+    ];
+}
+function scan_directory(string $dir): array
+{
+    if (!is_dir($dir)) {
+        return [];
+    }
+    $files = [];
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator(
+            $dir,
+            RecursiveDirectoryIterator::SKIP_DOTS
+        ),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+    $ignoreExtensions = ["php", "md", "ini", "txt", "log", "conf"];
+    foreach ($iterator as $file) {
+        if (
+            $file->isFile() &&
+            !in_array(strtolower($file->getExtension()), $ignoreExtensions)
+        ) {
+            $relativePath = str_replace(
+                PROJECT_ROOT . DIRECTORY_SEPARATOR,
+                "",
+                $file->getRealPath()
+            );
+            $files[] = str_replace(DIRECTORY_SEPARATOR, "/", $relativePath);
+        }
+    }
+    return $files;
+}
 
 function process_files_to_structure(array $files_by_category): array
 {
     $structure = [];
     foreach (SCAN_DIRECTORIES as $category_key => $category_dir_path) {
-        $base_dir_relative = ltrim(str_replace(PROJECT_ROOT, '', $category_dir_path), DIRECTORY_SEPARATOR);
-        $base_dir_relative = str_replace(DIRECTORY_SEPARATOR, '/', $base_dir_relative);
+        $base_dir_relative = ltrim(
+            str_replace(PROJECT_ROOT, "", $category_dir_path),
+            DIRECTORY_SEPARATOR
+        );
+        $base_dir_relative = str_replace(
+            DIRECTORY_SEPARATOR,
+            "/",
+            $base_dir_relative
+        );
 
         if (!isset($files_by_category[$category_key])) {
             continue;
         }
 
         foreach ($files_by_category[$category_key] as $path) {
-            $relative_path_from_base = str_replace($base_dir_relative . '/', '', $path);
+            $relative_path_from_base = str_replace(
+                $base_dir_relative . "/",
+                "",
+                $path
+            );
             $path_for_parsing = $relative_path_from_base;
 
-            // Handle strict 'base64' subfolder requirement for xray and channel
-            if (strpos($path_for_parsing, 'xray/') === 0 || strpos($path_for_parsing, 'channel/') === 0) {
-                $type_prefix = (strpos($path_for_parsing, 'xray/') === 0) ? 'xray' : 'channel';
-                if (strpos($path_for_parsing, $type_prefix . '/base64/') !== 0) {
+            // Handle strict 'base64' subfolder requirement for xray, channel, and location
+            if (
+                strpos($path_for_parsing, "xray/") === 0 ||
+                strpos($path_for_parsing, "channel/") === 0 ||
+                strpos($path_for_parsing, "location/") === 0
+            ) {
+                $parts = explode('/', $path_for_parsing, 3);
+                $type_prefix = $parts[0];
+
+                // The path must be in the format 'type/base64/...'
+                if (count($parts) < 3 || $parts[1] !== 'base64') {
                     continue; // Skip if not in a base64 subfolder
                 }
-                $path_for_parsing = str_replace($type_prefix . '/base64/', $type_prefix . '/', $path_for_parsing);
-            
-            // Handle flexible 'base64' subfolder for location
-            } elseif (strpos($path_for_parsing, 'location/') === 0) {
-                if (strpos($path_for_parsing, 'location/base64/') === 0) {
-                    // If it is in a base64 subfolder, flatten the path
-                    $path_for_parsing = str_replace('location/base64/', 'location/', $path_for_parsing);
-                }
-                // Otherwise, just let it pass through (e.g., location/US-config.txt)
+
+                // Flatten the path for parsing, e.g. 'type/base64/file.txt' -> 'type/file.txt'
+                $path_for_parsing = $type_prefix . '/' . $parts[2];
             }
 
-            $parts = explode('/', $path_for_parsing);
+            $parts = explode("/", $path_for_parsing);
             if (count($parts) < 2) {
                 continue;
             }
 
             $type = array_shift($parts);
-            $name = pathinfo(implode('/', $parts), PATHINFO_FILENAME);
-            $url = GITHUB_REPO_URL . '/' . $path;
+            // Correctly get the full name, including subdirectories, by removing only the extension
+            $remaining_path = implode("/", $parts);
+            $name = preg_replace('/\\.[^.\\/]+$/', '', $remaining_path);
+
+            $url = GITHUB_REPO_URL . "/" . $path;
 
             $structure[$category_key][$type][$name] = $url;
         }
@@ -79,14 +327,22 @@ function process_files_to_structure(array $files_by_category): array
     return $structure;
 }
 
-
 /**
  * Generates the complete HTML content for the PSG page.
  */
-function generate_full_html(array $structured_data, array $client_info_data, string $generation_timestamp): string
-{
-    $json_structured_data = json_encode($structured_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    $json_client_info_data = json_encode($client_info_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+function generate_full_html(
+    array $structured_data,
+    array $client_info_data,
+    string $generation_timestamp
+): string {
+    $json_structured_data = json_encode(
+        $structured_data,
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
+    );
+    $json_client_info_data = json_encode(
+        $client_info_data,
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
+    );
 
     $html_template = <<<'HTML'
 <!DOCTYPE html>
@@ -383,7 +639,28 @@ function generate_full_html(array $structured_data, array $client_info_data, str
             function showMessageBox(message) { const box = document.getElementById('messageBox'); document.getElementById('messageBoxText').textContent = message; box.classList.remove('hidden'); document.getElementById('messageBoxClose').onclick = () => box.classList.add('hidden'); }
             function populateSelect(selectElement, sortedKeys, defaultOptionText) { selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`; sortedKeys.forEach(key => { const option = document.createElement('option'); option.value = key; option.textContent = formatDisplayName(key); selectElement.appendChild(option); }); }
             function resetSelect(selectElement, defaultText) { selectElement.innerHTML = `<option value="">${defaultText}</option>`; selectElement.disabled = true; }
-            function formatDisplayName(name) { const specialReplacements = { 'ss': 'SHADOWSOCKS' }; const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp']; const parts = name.split(/[-_]/).filter(p => p !== ''); let flag = ''; const countryCodeMatch = name.match(/^([A-Z]{2})[-_]/); if (countryCodeMatch) { flag = getFlagEmoji(countryCodeMatch[1]); } const displayNameParts = parts.map((part) => { const lowerPart = part.toLowerCase(); if (specialReplacements[lowerPart]) return specialReplacements[lowerPart]; if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase(); return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase(); }); const textName = displayNameParts.join(' '); return flag ? `${flag} ${textName.trim()}` : textName.trim(); }
+            function formatDisplayName(name) {
+                let flag = '';
+                // Flexible regex to find country code: [XX], XX at the start, or as a whole word.
+                const countryCodeMatch = name.match(/\[([A-Z]{2})\]|^([A-Z]{2})[-_]|\b([A-Z]{2})\b/);
+                if (countryCodeMatch) {
+                    const code = countryCodeMatch[1] || countryCodeMatch[2] || countryCodeMatch[3];
+                    if (code) flag = getFlagEmoji(code);
+                }
+
+                const specialReplacements = { 'ss': 'SHADOWSOCKS' };
+                const uppercaseTypes = ['mix', 'vless', 'vmess', 'trojan', 'ssr', 'ws', 'grpc', 'reality', 'hy2', 'hysteria2', 'tuic', 'xhttp'];
+                const parts = name.replace(/\//g, '-').split(/[-_]/).filter(p => p !== '' && !/^[A-Z]{2}$/.test(p));
+                const displayNameParts = parts.map((part) => {
+                    const lowerPart = part.toLowerCase();
+                    if (specialReplacements[lowerPart]) return specialReplacements[lowerPart];
+                    if (uppercaseTypes.includes(lowerPart)) return part.toUpperCase();
+                    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+                });
+                
+                const textName = displayNameParts.join(' ');
+                return flag ? `${flag} ${textName.trim()}` : textName.trim();
+            }
             function updateQRCode(url) { qrcodeDiv.innerHTML = ''; if (url) { try { new QRCode(qrcodeDiv, { text: url, width: 128, height: 128, colorDark: "#000000", colorLight: "#FFFFFF", correctLevel: QRCode.CorrectLevel.H }); } catch (error) { console.error('QR code init failed:', error); } } }
             function updateClientInfo(coreType) { const clientInfoContainer = document.getElementById('client-info-container'); clientInfoList.innerHTML = ''; const platforms = clientInfoData[coreType]; if (!platforms || Object.keys(platforms).length === 0) { clientInfoContainer.classList.add('hidden'); return; } clientInfoContainer.classList.remove('hidden'); Object.entries(platforms).forEach(([platformName, clients]) => { if (clients.length > 0) { const platformContainer = document.createElement('div'); const titleDiv = document.createElement('div'); titleDiv.className = 'flex items-center gap-2 text-sm font-semibold text-slate-600 mb-2'; const iconName = { windows: 'monitor', macos: 'apple', android: 'smartphone', ios: 'tablet', linux: 'terminal' }[platformName.toLowerCase()] || 'box'; const icon = document.createElement('i'); icon.setAttribute('data-lucide', iconName); icon.className = 'w-4 h-4 text-slate-500'; titleDiv.appendChild(icon); const titleText = document.createElement('span'); titleText.textContent = platformName.charAt(0).toUpperCase() + platformName.slice(1); titleDiv.appendChild(titleText); platformContainer.appendChild(titleDiv); const linksContainer = document.createElement('div'); linksContainer.className = 'flex flex-col gap-2'; clients.forEach(client => { const link = document.createElement('a'); link.href = client.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.className = 'flex items-center justify-between p-2.5 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors duration-200 text-slate-700 hover:text-indigo-600'; const nameSpan = document.createElement('span'); nameSpan.className = 'font-medium text-sm'; nameSpan.textContent = client.name; const downloadIcon = document.createElement('i'); downloadIcon.setAttribute('data-lucide', 'download'); downloadIcon.className = 'w-4 h-4 text-slate-500'; link.appendChild(nameSpan); link.appendChild(downloadIcon); linksContainer.appendChild(link); }); platformContainer.appendChild(linksContainer); clientInfoList.appendChild(platformContainer); } }); lucide.createIcons(); }
             function updateOtherElementOptions() { const selectedConfigType = configTypeSelect.value; const selectedIpType = ipTypeSelect.value; const searchTerm = searchBar.value.toLowerCase(); resetSelect(otherElementSelect, 'Select Subscription'); subscriptionDetailsContainer.classList.add('hidden'); if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) { const allElements = structuredData[selectedConfigType][selectedIpType]; const filteredAndSortedKeys = Object.keys(allElements).filter(key => formatDisplayName(key).toLowerCase().includes(searchTerm)).sort((a, b) => a.localeCompare(b)); populateSelect(otherElementSelect, filteredAndSortedKeys, filteredAndSortedKeys.length > 0 ? 'Select Subscription' : 'No matches found'); otherElementSelect.disabled = false; } }
@@ -457,9 +734,21 @@ function generate_full_html(array $structured_data, array $client_info_data, str
 </html>
 HTML;
 
-    $final_html = str_replace('__JSON_DATA_PLACEHOLDER__', $json_structured_data, $html_template);
-    $final_html = str_replace('__CLIENT_INFO_PLACEHOLDER__', $json_client_info_data, $final_html);
-    $final_html = str_replace('__TIMESTAMP_PLACEHOLDER__', $generation_timestamp, $final_html);
+    $final_html = str_replace(
+        "__JSON_DATA_PLACEHOLDER__",
+        $json_structured_data,
+        $html_template
+    );
+    $final_html = str_replace(
+        "__CLIENT_INFO_PLACEHOLDER__",
+        $json_client_info_data,
+        $final_html
+    );
+    $final_html = str_replace(
+        "__TIMESTAMP_PLACEHOLDER__",
+        $generation_timestamp,
+        $final_html
+    );
     return $final_html;
 }
 
@@ -474,13 +763,18 @@ foreach (SCAN_DIRECTORIES as $category => $dir) {
         echo "Warning: Directory not found, skipping: {$dir}" . PHP_EOL;
     }
 }
-$file_count = array_sum(array_map('count', $all_files));
-if ($file_count === 0) { die("Error: No subscription files were found to generate the page. Please check SCAN_DIRECTORIES paths. Exiting." . PHP_EOL); }
+$file_count = array_sum(array_map("count", $all_files));
+if ($file_count === 0) {
+    die(
+        "Error: No subscription files were found to generate the page. Please check SCAN_DIRECTORIES paths. Exiting." .
+            PHP_EOL
+    );
+}
 echo "Found and categorized {$file_count} subscription files." . PHP_EOL;
 $structured_data = process_files_to_structure($all_files);
 $client_info = get_client_info();
-date_default_timezone_set('Asia/Tehran'); 
-$timestamp = date('Y-m-d H:i:s T');
+date_default_timezone_set("Asia/Tehran");
+$timestamp = date("Y-m-d H:i:s T");
 $final_html = generate_full_html($structured_data, $client_info, $timestamp);
 file_put_contents(OUTPUT_HTML_FILE, $final_html);
 echo "Successfully generated page at: " . realpath(OUTPUT_HTML_FILE) . PHP_EOL;
