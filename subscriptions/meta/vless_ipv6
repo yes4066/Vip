@@ -1,22 +1,28 @@
 mixed-port: 7890
 allow-lan: true
-mode: rule
-log-level: error
-ipv6: true
-external-controller: 127.0.0.1:9090
-profile:
-  store-selected: true
-  store-fake-ip: true
+log-level: info
+external-controller: 0.0.0.0:9090
+
 dns:
-  enable: true
+  enabled: true
+  listen: 0.0.0.0:1053
   ipv6: true
-  default-nameserver: [1.1.1.1, 8.8.8.8]
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  nameserver: [8.8.4.4, 1.0.0.1, "https://1.0.0.1/dns-query"]
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - '+.pool.ntp.org'
 
-proxies:
+proxies: 
   - {"name":"❔ XX | 🟢 | vless | @deli_servers | 1","type":"vless","server":"[2a01:4f8:c012:81c0::1]","port":1,"uuid":"d3927fcb-1dd4-4a84-af91-75196dcc0ee9","tls":true,"network":"grpc","client-fingerprint":"firefox","udp":true,"servername":"4dsply.com","grpc-opts":{"grpc-service-name":"/tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers tel:deli_servers"},"reality-opts":{"public-key":"L6AkyAVesPEg-yz5o4-2yeTCBYACZW5OWnPBVaS-OnQ","short-id":"bbcb1cf7"}}
   - {"name":"❔ XX | 🟢 | vless | @fire_vpn_channel | 0","type":"vless","server":"[2a00:7c80:0000:0192:aaa1:bbb3:1bb8:f32e]","port":443,"uuid":"ac864844-c86b-4ac5-bbe9-50fcc05123f2","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"srhrforall.org","flow":"xtls-rprx-vision","reality-opts":{"public-key":"Uu4tcBEWuNn0SKnDk2Jy_o5Te2VA76M68hMlVYj9kiQ","short-id":"6412"}}
   - {"name":"❔ XX | 🔴 | vless | @freevv2rayng | 6","type":"vless","server":"[2a12:5940:1527::2]","port":443,"uuid":"8bfbdbb1-9126-4372-96a1-5547d629559f","tls":false,"network":"tcp","client-fingerprint":"chrome","udp":true}
@@ -35,35 +41,18 @@ proxies:
   - {"name":"❔ XX | 🟢 | vless | @yekoyekvpn | 0","type":"vless","server":"[::ffff:3207:55dd]","port":443,"uuid":"89b3cbba-e6ac-485a-9481-976a0415eab9","tls":true,"network":"ws","client-fingerprint":"chrome","udp":true,"servername":"tEstBp.fIBiDOB9775921.woRkeRS.DEV","ws-opts":{"path":"/xUnw05Z6MV3NG29U?ed=2560","headers":{"Host":"testbp.fibidob9775921.workers.dev"}}}
   - {"name":"❔ XX | 🔴 | vless | @zilv2ray_service | 9","type":"vless","server":"[2a01:7e0:0:151:1fff:ffff:ffff:2224]","port":2087,"uuid":"d3cc4545-0896-4245-8f29-fcc5dd928512","tls":false,"network":"tcp","client-fingerprint":"chrome","udp":true}
 
-rule-providers:
-  ir_domains:
-    type: http
-    behavior: domain
-    url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ir.txt"
-    path: ./ruleset/ir.txt
-    interval: 86400
-  ir_cidr:
-    type: http
-    behavior: ipcidr
-    url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ircidr.txt"
-    path: ./ruleset/ircidr.txt
-    interval: 86400
-
 proxy-groups:
-  - name: 🚀 PROXY
+  - name: 🚀 Proxy
     type: select
     proxies:
-      - ♻️ AUTO
-      - 📉 Fallback
-      - DIRECT
-      - All-Proxies
+      - ♻️ Auto
+      - 🎯 Direct
 
-  - name: ♻️ AUTO
+  - name: ♻️ Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50 
-    proxies:
+    proxies: 
       - '❔ XX | 🟢 | vless | @deli_servers | 1'
       - '❔ XX | 🟢 | vless | @fire_vpn_channel | 0'
       - '❔ XX | 🔴 | vless | @freevv2rayng | 6'
@@ -82,57 +71,46 @@ proxy-groups:
       - '❔ XX | 🟢 | vless | @yekoyekvpn | 0'
       - '❔ XX | 🔴 | vless | @zilv2ray_service | 9'
 
-  - name: 📉 Fallback
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - '❔ XX | 🟢 | vless | @deli_servers | 1'
-      - '❔ XX | 🟢 | vless | @fire_vpn_channel | 0'
-      - '❔ XX | 🔴 | vless | @freevv2rayng | 6'
-      - '❔ XX | 🔴 | vless | @freevv2rayng | 9'
-      - '❔ XX | 🔴 | vless | @freevv2rayng | 10'
-      - '❔ XX | 🔴 | vless | @internet_nor | 0'
-      - '❔ XX | 🔴 | vless | @internet_nor | 1'
-      - '❔ XX | 🔴 | vless | @internet_nor | 2'
-      - '❔ XX | 🟢 | vless | @kesslervpn | 2'
-      - '❔ XX | 🟢 | vless | @v2raytg | 73'
-      - '❔ XX | 🔴 | vless | @v2ryngfree | 6'
-      - '❔ XX | 🔴 | vless | @v2ryngfree | 8'
-      - '❔ XX | 🔴 | vless | @v2ryngfree | 10'
-      - '❔ XX | 🔴 | vless | @vpn_matin_best1 | 0'
-      - '❔ XX | 🟢 | vless | @vpnvg | 10'
-      - '❔ XX | 🟢 | vless | @yekoyekvpn | 0'
-      - '❔ XX | 🔴 | vless | @zilv2ray_service | 9'
-      
-  - name: All-Proxies
+  - name: 🌍 Global Media
     type: select
     proxies:
-      - '❔ XX | 🟢 | vless | @deli_servers | 1'
-      - '❔ XX | 🟢 | vless | @fire_vpn_channel | 0'
-      - '❔ XX | 🔴 | vless | @freevv2rayng | 6'
-      - '❔ XX | 🔴 | vless | @freevv2rayng | 9'
-      - '❔ XX | 🔴 | vless | @freevv2rayng | 10'
-      - '❔ XX | 🔴 | vless | @internet_nor | 0'
-      - '❔ XX | 🔴 | vless | @internet_nor | 1'
-      - '❔ XX | 🔴 | vless | @internet_nor | 2'
-      - '❔ XX | 🟢 | vless | @kesslervpn | 2'
-      - '❔ XX | 🟢 | vless | @v2raytg | 73'
-      - '❔ XX | 🔴 | vless | @v2ryngfree | 6'
-      - '❔ XX | 🔴 | vless | @v2ryngfree | 8'
-      - '❔ XX | 🔴 | vless | @v2ryngfree | 10'
-      - '❔ XX | 🔴 | vless | @vpn_matin_best1 | 0'
-      - '❔ XX | 🟢 | vless | @vpnvg | 10'
-      - '❔ XX | 🟢 | vless | @yekoyekvpn | 0'
-      - '❔ XX | 🔴 | vless | @zilv2ray_service | 9'
+      - 🚀 Proxy
+      - ♻️ Auto
+      - 🎯 Direct
+
+  - name: 🎯 Direct
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 Proxy
+
+  - name: 🛑 Ad Block
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🐟 Fallback
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🎯 Direct
 
 rules:
-  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve  # Clash Fake-IP range
-  - RULE-SET,ir_domains,DIRECT
-  - RULE-SET,ir_cidr,DIRECT
-  - GEOIP,IR,DIRECT
-  - MATCH,🚀 PROXY
+  - DOMAIN-KEYWORD,adservice,🛑 Ad Block
+  - DOMAIN-SUFFIX,googlesyndication.com,🛑 Ad Block
+  - DOMAIN-SUFFIX,netflix.com,🌍 Global Media
+  - DOMAIN-SUFFIX,nflxvideo.net,🌍 Global Media
+  - DOMAIN-SUFFIX,disneyplus.com,🌍 Global Media
+  - DOMAIN-KEYWORD,youtube,🌍 Global Media
+  - DOMAIN-SUFFIX,t.me,🚀 Proxy
+  - DOMAIN-SUFFIX,telegram.org,🚀 Proxy
+  - DOMAIN-SUFFIX,openai.com,🚀 Proxy
+  - DOMAIN-SUFFIX,lan,🎯 Direct
+  - DOMAIN-SUFFIX,local,🎯 Direct
+  - IP-CIDR,127.0.0.0/8,🎯 Direct,no-resolve
+  - IP-CIDR,192.168.0.0/16,🎯 Direct,no-resolve
+  - IP-CIDR,10.0.0.0/8,🎯 Direct,no-resolve
+  - IP-CIDR,172.16.0.0/12,🎯 Direct,no-resolve
+  - GEOIP,IR,🎯 Direct
+  - MATCH,🐟 Fallback

@@ -1,34 +1,39 @@
 mixed-port: 7890
 allow-lan: true
-mode: rule
-log-level: error
-ipv6: true
-external-controller: 127.0.0.1:9090
-profile:
-  store-selected: true
-  store-fake-ip: true
+log-level: info
+external-controller: 0.0.0.0:9090
+
 dns:
-  enable: true
+  enabled: true
+  listen: 0.0.0.0:1053
   ipv6: true
-  default-nameserver: [1.1.1.1, 8.8.8.8]
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  nameserver: [8.8.4.4, 1.0.0.1, "https://1.0.0.1/dns-query"]
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - '+.pool.ntp.org'
 
-proxies:
+proxies: 
   - {"name":"🇸🇬 SG | 🟢 | ss | @argo_vpn1 | 6","type":"ss","server":"175.41.157.91","port":8316,"password":"ljqdalu13..","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇦🇹 AT | 🟢 | ss | @arv2ra | 7","type":"ss","server":"45.138.74.160","port":7261,"password":"pZvwP17Nlz2z6jsYnVgZgf","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @bislullproxy | 18","type":"ss","server":"4.250.60.151","port":443,"password":"WstuSnlu4ieA9M0L","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @elfv2ray | 5","type":"ss","server":"74.177.199.135","port":443,"password":"u17T3BvpYaaiuW2c","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"🇳🇱 NL | 🟢 | ss | @free1ss | 15","type":"ss","server":"193.29.139.175","port":8080,"password":"1RWwXhwfAB5gAEozU4G2Pg","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇪🇸 ES | 🟢 | ss | @free1ss | 16","type":"ss","server":"194.87.45.189","port":443,"password":"U7nveAHLhOahFgwJlTbE9n","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @injectormconf | 39","type":"ss","server":"51.142.171.150","port":49499,"password":"kTjlLxrncKx4i2HIjxfA3M","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇩🇪 DE | 🟢 | ss | @jiedianf | 9","type":"ss","server":"138.124.115.157","port":1080,"password":"M-nffO40KlclwbCX9CV1DQ","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇫🇷 FR | 🟢 | ss | @key_outline | 19","type":"ss","server":"62.210.88.22","port":443,"password":"sB7tREKV3aBrcChfxJZihF","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @kingofilter | 3","type":"ss","server":"172.187.105.25","port":443,"password":"1xO2cqPazqjGfCfd","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇩🇪 DE | 🟢 | ss | @m_android | 2","type":"ss","server":"91.99.201.235","port":80,"password":"7bgifu8UsiF/RdGesX5zjW6kEqHYKhslGqaccf2HyLA=","cipher":"aes-256-gcm"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @megavpn_link | 14","type":"ss","server":"85.210.120.237","port":443,"password":"Bog0ELmMM9DSxDdQ","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"🇯🇵 JP | 🟢 | ss | @meli_proxyy | 16","type":"ss","server":"54.238.207.188","port":8319,"password":"ljqdalu13..","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇺🇸 US | 🟢 | ss | @mester_v2ray | 18","type":"ss","server":"45.87.175.192","port":8080,"password":"4a2rfixophdjffa8KVA4Aa","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇩🇪 DE | 🟢 | ss | @mobilinternet | 0","type":"ss","server":"62.60.216.61","port":1080,"password":"foKeqDOV9NCiDMMWTiDOoQ","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇩🇪 DE | 🟢 | ss | @msv2flyng | 12","type":"ss","server":"45.144.54.33","port":34803,"password":"LiHQX9cDbdooBHlIg0eiqQ","cipher":"chacha20-ietf-poly1305"}
@@ -43,55 +48,37 @@ proxies:
   - {"name":"🇫🇮 FI | 🟢 | ss | @strongprotocol | 10","type":"ss","server":"45.12.135.36","port":47076,"password":"WrNAsbtcuoeEEQdoSOcPgO","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7","type":"ss","server":"51.103.32.8","port":666,"password":"427395387a9379ca","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇺🇸 US | 🟢 | ss | @v2pedia | 30","type":"ss","server":"45.87.175.28","port":8080,"password":"oZIoA69Q8yhcQV8ka3Pa3A","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"🇬🇧 GB | 🟢 | ss | @v2ray_free_conf | 19","type":"ss","server":"147.45.179.183","port":443,"password":"nXPG9xWj6ptd","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇬🇧 GB | 🟢 | ss | @v2ray_free_conf | 19","type":"ss","server":"83.147.18.163","port":8388,"password":"MjJhY","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @v2rayngrit | 15","type":"ss","server":"172.165.94.205","port":443,"password":"1xO2cqPazqjGfCfd","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27","type":"ss","server":"94.131.123.147","port":7383,"password":"eSHEdJz96rqNkOCAzd5Csv","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇵🇱 PL | 🟢 | ss | @vipufovpn | 19","type":"ss","server":"54.36.174.181","port":5601,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
   - {"name":"🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19","type":"ss","server":"45.87.175.10","port":8080,"password":"oZIoA69Q8yhcQV8ka3Pa3A","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇸🇪 SE | 🟢 | ss | @vmessx | 4","type":"ss","server":"45.8.147.88","port":45961,"password":"Y5Y2Rmq9TT33hli3GKnV5c","cipher":"aes-256-gcm"}
-  - {"name":"🇫🇷 FR | 🟢 | ss | @vpnfreeaccounts | 15","type":"ss","server":"172.232.45.24","port":80,"password":"t9tgJFwwla72eL9W61t8yB","cipher":"chacha20-ietf-poly1305"}
-
-rule-providers:
-  ir_domains:
-    type: http
-    behavior: domain
-    url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ir.txt"
-    path: ./ruleset/ir.txt
-    interval: 86400
-  ir_cidr:
-    type: http
-    behavior: ipcidr
-    url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ircidr.txt"
-    path: ./ruleset/ircidr.txt
-    interval: 86400
+  - {"name":"🇯🇵 JP | 🟢 | ss | @vpnv2rayngv | 15","type":"ss","server":"54.238.207.188","port":8319,"password":"ljqdalu13..","cipher":"chacha20-ietf-poly1305"}
 
 proxy-groups:
-  - name: 🚀 PROXY
+  - name: 🚀 Proxy
     type: select
     proxies:
-      - ♻️ AUTO
-      - 📉 Fallback
-      - DIRECT
-      - All-Proxies
+      - ♻️ Auto
+      - 🎯 Direct
 
-  - name: ♻️ AUTO
+  - name: ♻️ Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50 
-    proxies:
+    proxies: 
       - '🇸🇬 SG | 🟢 | ss | @argo_vpn1 | 6'
       - '🇦🇹 AT | 🟢 | ss | @arv2ra | 7'
       - '🇬🇧 GB | 🟢 | ss | @bislullproxy | 18'
       - '🇬🇧 GB | 🟢 | ss | @elfv2ray | 5'
-      - '🇳🇱 NL | 🟢 | ss | @free1ss | 15'
+      - '🇪🇸 ES | 🟢 | ss | @free1ss | 16'
       - '🇬🇧 GB | 🟢 | ss | @injectormconf | 39'
       - '🇩🇪 DE | 🟢 | ss | @jiedianf | 9'
       - '🇫🇷 FR | 🟢 | ss | @key_outline | 19'
       - '🇬🇧 GB | 🟢 | ss | @kingofilter | 3'
       - '🇩🇪 DE | 🟢 | ss | @m_android | 2'
       - '🇬🇧 GB | 🟢 | ss | @megavpn_link | 14'
-      - '🇯🇵 JP | 🟢 | ss | @meli_proxyy | 16'
       - '🇺🇸 US | 🟢 | ss | @mester_v2ray | 18'
       - '🇩🇪 DE | 🟢 | ss | @mobilinternet | 0'
       - '🇩🇪 DE | 🟢 | ss | @msv2flyng | 12'
@@ -112,91 +99,48 @@ proxy-groups:
       - '🇵🇱 PL | 🟢 | ss | @vipufovpn | 19'
       - '🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19'
       - '🇸🇪 SE | 🟢 | ss | @vmessx | 4'
-      - '🇫🇷 FR | 🟢 | ss | @vpnfreeaccounts | 15'
+      - '🇯🇵 JP | 🟢 | ss | @vpnv2rayngv | 15'
 
-  - name: 📉 Fallback
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - '🇸🇬 SG | 🟢 | ss | @argo_vpn1 | 6'
-      - '🇦🇹 AT | 🟢 | ss | @arv2ra | 7'
-      - '🇬🇧 GB | 🟢 | ss | @bislullproxy | 18'
-      - '🇬🇧 GB | 🟢 | ss | @elfv2ray | 5'
-      - '🇳🇱 NL | 🟢 | ss | @free1ss | 15'
-      - '🇬🇧 GB | 🟢 | ss | @injectormconf | 39'
-      - '🇩🇪 DE | 🟢 | ss | @jiedianf | 9'
-      - '🇫🇷 FR | 🟢 | ss | @key_outline | 19'
-      - '🇬🇧 GB | 🟢 | ss | @kingofilter | 3'
-      - '🇩🇪 DE | 🟢 | ss | @m_android | 2'
-      - '🇬🇧 GB | 🟢 | ss | @megavpn_link | 14'
-      - '🇯🇵 JP | 🟢 | ss | @meli_proxyy | 16'
-      - '🇺🇸 US | 🟢 | ss | @mester_v2ray | 18'
-      - '🇩🇪 DE | 🟢 | ss | @mobilinternet | 0'
-      - '🇩🇪 DE | 🟢 | ss | @msv2flyng | 12'
-      - '🇬🇧 GB | 🟢 | ss | @novinology | 16'
-      - '🇬🇧 GB | 🟢 | ss | @ntconfig | 2'
-      - '🇳🇱 NL | 🟢 | ss | @outline_ir | 16'
-      - '🇩🇪 DE | 🟢 | ss | @outlineopenkey | 13'
-      - '🇨🇦 CA | 🟢 | ss | @outlinereleasedkey | 18'
-      - '🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9'
-      - '🇰🇷 KR | 🟢 | ss | @shadowsockskeys | 16'
-      - '🇺🇸 US | 🟢 | ss | @slamvpn | 2'
-      - '🇫🇮 FI | 🟢 | ss | @strongprotocol | 10'
-      - '🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7'
-      - '🇺🇸 US | 🟢 | ss | @v2pedia | 30'
-      - '🇬🇧 GB | 🟢 | ss | @v2ray_free_conf | 19'
-      - '🇬🇧 GB | 🟢 | ss | @v2rayngrit | 15'
-      - '🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27'
-      - '🇵🇱 PL | 🟢 | ss | @vipufovpn | 19'
-      - '🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19'
-      - '🇸🇪 SE | 🟢 | ss | @vmessx | 4'
-      - '🇫🇷 FR | 🟢 | ss | @vpnfreeaccounts | 15'
-      
-  - name: All-Proxies
+  - name: 🌍 Global Media
     type: select
     proxies:
-      - '🇸🇬 SG | 🟢 | ss | @argo_vpn1 | 6'
-      - '🇦🇹 AT | 🟢 | ss | @arv2ra | 7'
-      - '🇬🇧 GB | 🟢 | ss | @bislullproxy | 18'
-      - '🇬🇧 GB | 🟢 | ss | @elfv2ray | 5'
-      - '🇳🇱 NL | 🟢 | ss | @free1ss | 15'
-      - '🇬🇧 GB | 🟢 | ss | @injectormconf | 39'
-      - '🇩🇪 DE | 🟢 | ss | @jiedianf | 9'
-      - '🇫🇷 FR | 🟢 | ss | @key_outline | 19'
-      - '🇬🇧 GB | 🟢 | ss | @kingofilter | 3'
-      - '🇩🇪 DE | 🟢 | ss | @m_android | 2'
-      - '🇬🇧 GB | 🟢 | ss | @megavpn_link | 14'
-      - '🇯🇵 JP | 🟢 | ss | @meli_proxyy | 16'
-      - '🇺🇸 US | 🟢 | ss | @mester_v2ray | 18'
-      - '🇩🇪 DE | 🟢 | ss | @mobilinternet | 0'
-      - '🇩🇪 DE | 🟢 | ss | @msv2flyng | 12'
-      - '🇬🇧 GB | 🟢 | ss | @novinology | 16'
-      - '🇬🇧 GB | 🟢 | ss | @ntconfig | 2'
-      - '🇳🇱 NL | 🟢 | ss | @outline_ir | 16'
-      - '🇩🇪 DE | 🟢 | ss | @outlineopenkey | 13'
-      - '🇨🇦 CA | 🟢 | ss | @outlinereleasedkey | 18'
-      - '🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9'
-      - '🇰🇷 KR | 🟢 | ss | @shadowsockskeys | 16'
-      - '🇺🇸 US | 🟢 | ss | @slamvpn | 2'
-      - '🇫🇮 FI | 🟢 | ss | @strongprotocol | 10'
-      - '🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7'
-      - '🇺🇸 US | 🟢 | ss | @v2pedia | 30'
-      - '🇬🇧 GB | 🟢 | ss | @v2ray_free_conf | 19'
-      - '🇬🇧 GB | 🟢 | ss | @v2rayngrit | 15'
-      - '🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27'
-      - '🇵🇱 PL | 🟢 | ss | @vipufovpn | 19'
-      - '🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19'
-      - '🇸🇪 SE | 🟢 | ss | @vmessx | 4'
-      - '🇫🇷 FR | 🟢 | ss | @vpnfreeaccounts | 15'
+      - 🚀 Proxy
+      - ♻️ Auto
+      - 🎯 Direct
+
+  - name: 🎯 Direct
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 Proxy
+
+  - name: 🛑 Ad Block
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🐟 Fallback
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🎯 Direct
 
 rules:
-  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve  # Clash Fake-IP range
-  - RULE-SET,ir_domains,DIRECT
-  - RULE-SET,ir_cidr,DIRECT
-  - GEOIP,IR,DIRECT
-  - MATCH,🚀 PROXY
+  - DOMAIN-KEYWORD,adservice,🛑 Ad Block
+  - DOMAIN-SUFFIX,googlesyndication.com,🛑 Ad Block
+  - DOMAIN-SUFFIX,netflix.com,🌍 Global Media
+  - DOMAIN-SUFFIX,nflxvideo.net,🌍 Global Media
+  - DOMAIN-SUFFIX,disneyplus.com,🌍 Global Media
+  - DOMAIN-KEYWORD,youtube,🌍 Global Media
+  - DOMAIN-SUFFIX,t.me,🚀 Proxy
+  - DOMAIN-SUFFIX,telegram.org,🚀 Proxy
+  - DOMAIN-SUFFIX,openai.com,🚀 Proxy
+  - DOMAIN-SUFFIX,lan,🎯 Direct
+  - DOMAIN-SUFFIX,local,🎯 Direct
+  - IP-CIDR,127.0.0.0/8,🎯 Direct,no-resolve
+  - IP-CIDR,192.168.0.0/16,🎯 Direct,no-resolve
+  - IP-CIDR,10.0.0.0/8,🎯 Direct,no-resolve
+  - IP-CIDR,172.16.0.0/12,🎯 Direct,no-resolve
+  - GEOIP,IR,🎯 Direct
+  - MATCH,🐟 Fallback

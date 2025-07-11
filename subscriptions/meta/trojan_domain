@@ -1,29 +1,34 @@
 mixed-port: 7890
 allow-lan: true
-mode: rule
-log-level: error
-ipv6: true
-external-controller: 127.0.0.1:9090
-profile:
-  store-selected: true
-  store-fake-ip: true
+log-level: info
+external-controller: 0.0.0.0:9090
+
 dns:
-  enable: true
+  enabled: true
+  listen: 0.0.0.0:1053
   ipv6: true
-  default-nameserver: [1.1.1.1, 8.8.8.8]
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  nameserver: [8.8.4.4, 1.0.0.1, "https://1.0.0.1/dns-query"]
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - '+.pool.ntp.org'
 
-proxies:
+proxies: 
   - {"name":"❔ XX | 🟢 | trojan | @armodchannel | 59","type":"trojan","server":"asia.artunnel57.host","port":443,"password":"fa9b326c-ca6f-4bb2-88f5-a163b404fcf8","skip-cert-verify":false}
   - {"name":"❔ XX | 🔴 | trojan | @armodchannel | 60","type":"trojan","server":"asia.artunnel57.host","port":80,"password":"fa9b326c-ca6f-4bb2-88f5-a163b404fcf8","skip-cert-verify":false}
   - {"name":"🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2","type":"trojan","server":"production.tj.ojan.workers.dev","port":443,"password":"9yu6m5okr","skip-cert-verify":false}
   - {"name":"❔ XX | 🟢 | trojan | @fati_ffx | 1","type":"trojan","server":"t3.teslacdn2.live","port":443,"password":"e1c12e6f-a555-4ff8-b071-1e09dd5d91e6","skip-cert-verify":false}
   - {"name":"🇺🇸 US | 🟢 | trojan | @free_serverir | 31","type":"trojan","server":"azadnet-9ya.pages.dev","port":443,"password":"trojan","skip-cert-verify":false}
   - {"name":"🇺🇸 US | 🟢 | trojan | @hopev2ray | 1","type":"trojan","server":"usa.test3.net","port":443,"password":"7cf2d310-489f-11f0-8746-1239d0255272","skip-cert-verify":false}
-  - {"name":"❔ XX | 🔴 | trojan | @ip_cf_config | 12","type":"trojan","server":"13c2c931-swin40-swy6li-tni2.cu.plebai.net","port":15229,"password":"5e2f888c-68ef-11ef-96ca-f23c9164ca5d","skip-cert-verify":false}
   - {"name":"❔ XX | 🟢 | trojan | @iraniv2ray | 3","type":"trojan","server":"lllliraniv2rayllll.norooz.shop","port":2083,"password":"BWDcALS5TU","skip-cert-verify":false}
   - {"name":"❔ XX | 🟢 | trojan | @jiedianf | 6","type":"trojan","server":"e312e558-sxusg0-t3f7qr-141tv.cu.plebai.net","port":15229,"password":"bd77bfe8-e0f3-11ec-bd7c-f23c913c8d2b","skip-cert-verify":true}
   - {"name":"🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5","type":"trojan","server":"www.digitalocean.com","port":443,"password":"trojan","skip-cert-verify":false}
@@ -41,42 +46,24 @@ proxies:
   - {"name":"❔ XX | 🟢 | trojan | @xrayzxn | 4","type":"trojan","server":"amin.karkas1.ir","port":443,"password":"11ae0edd-2f63-4495-8683-037abbda9986","skip-cert-verify":false}
   - {"name":"🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12","type":"trojan","server":"f10011.flyflylflyflysbs.sbs","port":19949,"password":"9c3c38d0-8637-4c94-a790-61f3202a943a","skip-cert-verify":true}
 
-rule-providers:
-  ir_domains:
-    type: http
-    behavior: domain
-    url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ir.txt"
-    path: ./ruleset/ir.txt
-    interval: 86400
-  ir_cidr:
-    type: http
-    behavior: ipcidr
-    url: "https://github.com/bootmortis/iran-clash-rules/releases/latest/download/ircidr.txt"
-    path: ./ruleset/ircidr.txt
-    interval: 86400
-
 proxy-groups:
-  - name: 🚀 PROXY
+  - name: 🚀 Proxy
     type: select
     proxies:
-      - ♻️ AUTO
-      - 📉 Fallback
-      - DIRECT
-      - All-Proxies
+      - ♻️ Auto
+      - 🎯 Direct
 
-  - name: ♻️ AUTO
+  - name: ♻️ Auto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50 
-    proxies:
+    proxies: 
       - '❔ XX | 🟢 | trojan | @armodchannel | 59'
       - '❔ XX | 🔴 | trojan | @armodchannel | 60'
       - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
       - '❔ XX | 🟢 | trojan | @fati_ffx | 1'
       - '🇺🇸 US | 🟢 | trojan | @free_serverir | 31'
       - '🇺🇸 US | 🟢 | trojan | @hopev2ray | 1'
-      - '❔ XX | 🔴 | trojan | @ip_cf_config | 12'
       - '❔ XX | 🟢 | trojan | @iraniv2ray | 3'
       - '❔ XX | 🟢 | trojan | @jiedianf | 6'
       - '🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5'
@@ -94,69 +81,46 @@ proxy-groups:
       - '❔ XX | 🟢 | trojan | @xrayzxn | 4'
       - '🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12'
 
-  - name: 📉 Fallback
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - '❔ XX | 🟢 | trojan | @armodchannel | 59'
-      - '❔ XX | 🔴 | trojan | @armodchannel | 60'
-      - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
-      - '❔ XX | 🟢 | trojan | @fati_ffx | 1'
-      - '🇺🇸 US | 🟢 | trojan | @free_serverir | 31'
-      - '🇺🇸 US | 🟢 | trojan | @hopev2ray | 1'
-      - '❔ XX | 🔴 | trojan | @ip_cf_config | 12'
-      - '❔ XX | 🟢 | trojan | @iraniv2ray | 3'
-      - '❔ XX | 🟢 | trojan | @jiedianf | 6'
-      - '🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5'
-      - '❔ XX | 🟢 | trojan | @maradona_vpn | 4'
-      - '❔ XX | 🟢 | trojan | @maradona_vpn | 6'
-      - '❔ XX | 🟢 | trojan | @maradona_vpn | 7'
-      - '❔ XX | 🟢 | trojan | @maradona_vpn | 8'
-      - '❔ XX | 🟢 | trojan | @mtpv2ray | 5'
-      - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14'
-      - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15'
-      - '🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3'
-      - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
-      - '❔ XX | 🟢 | trojan | @tenzovpn | 0'
-      - '❔ XX | 🟢 | trojan | @v2rayngconfig | 41'
-      - '❔ XX | 🟢 | trojan | @xrayzxn | 4'
-      - '🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12'
-      
-  - name: All-Proxies
+  - name: 🌍 Global Media
     type: select
     proxies:
-      - '❔ XX | 🟢 | trojan | @armodchannel | 59'
-      - '❔ XX | 🔴 | trojan | @armodchannel | 60'
-      - '🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2'
-      - '❔ XX | 🟢 | trojan | @fati_ffx | 1'
-      - '🇺🇸 US | 🟢 | trojan | @free_serverir | 31'
-      - '🇺🇸 US | 🟢 | trojan | @hopev2ray | 1'
-      - '❔ XX | 🔴 | trojan | @ip_cf_config | 12'
-      - '❔ XX | 🟢 | trojan | @iraniv2ray | 3'
-      - '❔ XX | 🟢 | trojan | @jiedianf | 6'
-      - '🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5'
-      - '❔ XX | 🟢 | trojan | @maradona_vpn | 4'
-      - '❔ XX | 🟢 | trojan | @maradona_vpn | 6'
-      - '❔ XX | 🟢 | trojan | @maradona_vpn | 7'
-      - '❔ XX | 🟢 | trojan | @maradona_vpn | 8'
-      - '❔ XX | 🟢 | trojan | @mtpv2ray | 5'
-      - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 14'
-      - '🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15'
-      - '🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3'
-      - '🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6'
-      - '❔ XX | 🟢 | trojan | @tenzovpn | 0'
-      - '❔ XX | 🟢 | trojan | @v2rayngconfig | 41'
-      - '❔ XX | 🟢 | trojan | @xrayzxn | 4'
-      - '🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12'
+      - 🚀 Proxy
+      - ♻️ Auto
+      - 🎯 Direct
+
+  - name: 🎯 Direct
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 Proxy
+
+  - name: 🛑 Ad Block
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🐟 Fallback
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🎯 Direct
 
 rules:
-  - IP-CIDR,127.0.0.1/32,DIRECT,no-resolve
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,198.18.0.1/16,DIRECT,no-resolve  # Clash Fake-IP range
-  - RULE-SET,ir_domains,DIRECT
-  - RULE-SET,ir_cidr,DIRECT
-  - GEOIP,IR,DIRECT
-  - MATCH,🚀 PROXY
+  - DOMAIN-KEYWORD,adservice,🛑 Ad Block
+  - DOMAIN-SUFFIX,googlesyndication.com,🛑 Ad Block
+  - DOMAIN-SUFFIX,netflix.com,🌍 Global Media
+  - DOMAIN-SUFFIX,nflxvideo.net,🌍 Global Media
+  - DOMAIN-SUFFIX,disneyplus.com,🌍 Global Media
+  - DOMAIN-KEYWORD,youtube,🌍 Global Media
+  - DOMAIN-SUFFIX,t.me,🚀 Proxy
+  - DOMAIN-SUFFIX,telegram.org,🚀 Proxy
+  - DOMAIN-SUFFIX,openai.com,🚀 Proxy
+  - DOMAIN-SUFFIX,lan,🎯 Direct
+  - DOMAIN-SUFFIX,local,🎯 Direct
+  - IP-CIDR,127.0.0.0/8,🎯 Direct,no-resolve
+  - IP-CIDR,192.168.0.0/16,🎯 Direct,no-resolve
+  - IP-CIDR,10.0.0.0/8,🎯 Direct,no-resolve
+  - IP-CIDR,172.16.0.0/12,🎯 Direct,no-resolve
+  - GEOIP,IR,🎯 Direct
+  - MATCH,🐟 Fallback

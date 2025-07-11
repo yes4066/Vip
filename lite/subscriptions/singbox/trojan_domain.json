@@ -93,7 +93,6 @@
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇺🇸 US | 🟢 | trojan | @v2rayweb | 16",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ],
             "tag": "proxy",
@@ -106,7 +105,6 @@
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇺🇸 US | 🟢 | trojan | @v2rayweb | 16",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ],
             "tag": "auto",
@@ -201,22 +199,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @v2rayweb | 16",
-            "type": "trojan",
-            "server": "download2hkt.windowsupdate.lol",
-            "server_port": 443,
-            "password": "af4d2493-9156-4514-9f6b-ee5d1a1e4713",
-            "tls": {
-                "enabled": true,
-                "server_name": "download2hkt.windowsupdate.lol",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
             "type": "trojan",
             "server": "f10011.flyflylflyflysbs.sbs",
@@ -242,35 +224,35 @@
                 "format": "binary",
                 "tag": "geosite-ads",
                 "type": "remote",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs"
+                "url": "https://raw.githubusercontent.com/itsyebekhe/meta-rules-dat-sing/main/geo/geosite/category-ads-all.srs"
             },
             {
                 "download_detour": "direct",
                 "format": "binary",
                 "tag": "geosite-private",
                 "type": "remote",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs"
+                "url": "https://raw.githubusercontent.com/itsyebekhe/meta-rules-dat-sing/main/geo/geosite/private.srs"
             },
             {
                 "download_detour": "direct",
                 "format": "binary",
                 "tag": "geosite-ir",
                 "type": "remote",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs"
+                "url": "https://raw.githubusercontent.com/itsyebekhe/meta-rules-dat-sing/main/geo/geosite/category-ir.srs"
             },
             {
                 "download_detour": "direct",
                 "format": "binary",
                 "tag": "geoip-private",
                 "type": "remote",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs"
+                "url": "https://raw.githubusercontent.com/itsyebekhe/meta-rules-dat-sing/main/geo/geoip/private.srs"
             },
             {
                 "download_detour": "direct",
                 "format": "binary",
                 "tag": "geoip-ir",
                 "type": "remote",
-                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs"
+                "url": "https://raw.githubusercontent.com/itsyebekhe/meta-rules-dat-sing/main/geo/geoip/ir.srs"
             }
         ],
         "rules": [
