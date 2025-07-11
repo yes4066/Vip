@@ -36,7 +36,7 @@ proxies:
   - {"name":"❔ XX | 🟢 | vless | @vp22ray | 10","type":"vless","server":"German.vp22ray.site","port":40130,"uuid":"eb7f17f3-4715-4b2d-87e5-39d12b1c962c","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"Seed.cloudflare.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"XEpHiKs6YbcMrBR4YTRXLlIlO5RfGcVUUcbt4KZc7TY","short-id":"d90b293e"}}
   - {"name":"🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12","type":"vless","server":"ARM.CROCODILESERVER.IR","port":443,"uuid":"32932937-b85f-40be-ae02-997ea5b0b62a","tls":true,"network":"tcp","client-fingerprint":"firefox","udp":true,"servername":"app.hubspot.com","reality-opts":{"public-key":"YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E","short-id":"fd1dff03520d8f56"}}
   - {"name":"🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15","type":"vless","server":"iran.mr-cloud.ir","port":443,"uuid":"ae942900-cae6-425e-94b0-21f086e6d7b1","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"www.cloudflare.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"__6BhtO3Rhjw4wnAmzklhquVvIngjhfnB8dhDVtj0Vs","short-id":"275f34"}}
-  - {"name":"🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 16","type":"vless","server":"ns1002ir2.tickblue.ir","port":8443,"uuid":"3a4bf2fa-638d-433f-8f6c-c1a0103455f3","tls":true,"network":"tcp","client-fingerprint":"firefox","udp":true,"servername":"store.steampowered.com","reality-opts":{"public-key":"9nfJ4l5Eq1BKT_gYkdXMK0W9uE8zEJIgVPK9_6S10HY","short-id":"09b4fb57276c767d"}}
+  - {"name":"🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 15","type":"vless","server":"ns1002ir2.tickblue.ir","port":8443,"uuid":"3a4bf2fa-638d-433f-8f6c-c1a0103455f3","tls":true,"network":"tcp","client-fingerprint":"firefox","udp":true,"servername":"store.steampowered.com","reality-opts":{"public-key":"9nfJ4l5Eq1BKT_gYkdXMK0W9uE8zEJIgVPK9_6S10HY","short-id":"09b4fb57276c767d"}}
   - {"name":"🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0","type":"vless","server":"static.50.146.62.46.clients.your-server.de","port":443,"uuid":"95b0f8b6-8373-4398-893f-782af287e2fe","tls":true,"network":"grpc","client-fingerprint":"chrome","udp":true,"servername":"www.speedtest.net","grpc-opts":{"grpc-service-name":"0VTuTCdLL8WUYSwaz2OnC5y"},"reality-opts":{"public-key":"L4ja73hdU_P-euK_ikOs623oM4u3PpDS5IwzXOrCjnE","short-id":"15cf0914947a4379"}}
 
 rule-providers:
@@ -87,7 +87,7 @@ proxy-groups:
       - '❔ XX | 🟢 | vless | @vp22ray | 10'
       - '🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12'
       - '🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15'
-      - '🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 16'
+      - '🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 15'
       - '🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0'
 
   - name: 📉 Fallback
@@ -114,7 +114,7 @@ proxy-groups:
       - '❔ XX | 🟢 | vless | @vp22ray | 10'
       - '🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12'
       - '🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15'
-      - '🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 16'
+      - '🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 15'
       - '🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0'
       
   - name: All-Proxies
@@ -139,7 +139,7 @@ proxy-groups:
       - '❔ XX | 🟢 | vless | @vp22ray | 10'
       - '🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12'
       - '🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15'
-      - '🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 16'
+      - '🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 15'
       - '🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0'
 
 rules:
