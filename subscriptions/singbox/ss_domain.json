@@ -121,8 +121,7 @@
                 "🇹🇷 TR | 🟢 | ss | @orange_vpns | 11",
                 "🇨🇭 CH | 🟢 | ss | @orange_vpns | 12",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
-                "🇵🇱 PL | 🟢 | ss | @proxy_mtproto_vpns_free | 12",
-                "🇸🇪 SE | 🟢 | ss | @proxy_mtproto_vpns_free | 16",
+                "🇩🇪 DE | 🟢 | ss | @proxy_mtproto_vpns_free | 15",
                 "🇳🇱 NL | 🟢 | ss | @proxycrone | 7",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -139,6 +138,7 @@
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇬🇧 GB | 🟢 | ss | @v2rayopen | 7",
+                "🇵🇱 PL | 🟢 | ss | @vmesc | 15",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 5",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 9",
@@ -174,8 +174,7 @@
                 "🇹🇷 TR | 🟢 | ss | @orange_vpns | 11",
                 "🇨🇭 CH | 🟢 | ss | @orange_vpns | 12",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
-                "🇵🇱 PL | 🟢 | ss | @proxy_mtproto_vpns_free | 12",
-                "🇸🇪 SE | 🟢 | ss | @proxy_mtproto_vpns_free | 16",
+                "🇩🇪 DE | 🟢 | ss | @proxy_mtproto_vpns_free | 15",
                 "🇳🇱 NL | 🟢 | ss | @proxycrone | 7",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -192,6 +191,7 @@
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇬🇧 GB | 🟢 | ss | @v2rayopen | 7",
+                "🇵🇱 PL | 🟢 | ss | @vmesc | 15",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 5",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 9",
@@ -400,20 +400,12 @@
             "password": "u17T3BvpYaaiuW2c"
         },
         {
-            "tag": "🇵🇱 PL | 🟢 | ss | @proxy_mtproto_vpns_free | 12",
+            "tag": "🇩🇪 DE | 🟢 | ss | @proxy_mtproto_vpns_free | 15",
             "type": "shadowsocks",
-            "server": "war.ssvpnapp.win",
-            "server_port": 57456,
+            "server": "konkor.sanjeshvipspeed.ir",
+            "server_port": 9679,
             "method": "chacha20-ietf-poly1305",
-            "password": "d3837224ed465f00"
-        },
-        {
-            "tag": "🇸🇪 SE | 🟢 | ss | @proxy_mtproto_vpns_free | 16",
-            "type": "shadowsocks",
-            "server": "homa.cybsecguru.com",
-            "server_port": 62005,
-            "method": "chacha20-ietf-poly1305",
-            "password": "y-N9DnHXQFIcLoDw3mXMKw"
+            "password": "qWQPYwYJrUxptqLq7eb5Vw"
         },
         {
             "tag": "🇳🇱 NL | 🟢 | ss | @proxycrone | 7",
@@ -542,6 +534,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "1xO2cqPazqjGfCfd"
+        },
+        {
+            "tag": "🇵🇱 PL | 🟢 | ss | @vmesc | 15",
+            "type": "shadowsocks",
+            "server": "war.ssvpnapp.win",
+            "server_port": 57456,
+            "method": "chacha20-ietf-poly1305",
+            "password": "d3837224ed465f00"
         },
         {
             "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 5",
