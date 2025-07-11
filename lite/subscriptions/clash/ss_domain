@@ -25,7 +25,9 @@ dns:
 proxies: 
   - {"name":"🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55","type":"ss","server":"admin.c4.webramz.co","port":443,"password":"69MUii7VDwMqh7Hz","cipher":"chacha20-ietf-poly1305"}
   - {"name":"❔ XX | 🟢 | ss | @chestertm | 12","type":"ss","server":"freakconfig94.usecharge.ir","port":443,"password":"W74XFALLLuw6m5IA","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"🇬🇧 GB | 🟢 | ss | @club_profsor | 16","type":"ss","server":"admin.c1.webramz.co","port":443,"password":"1xO2cqPazqjGfCfd","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇬🇧 GB | 🟢 | ss | @club_profsor | 15","type":"ss","server":"admin.c1.webramz.co","port":443,"password":"1xO2cqPazqjGfCfd","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US | 🟢 | ss | @ip_cf_config | 18","type":"ss","server":"beesyar.org","port":8080,"password":"4a2rfixophdjffa8KVA4Aa","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US | 🟢 | ss | @mowjproxy | 5","type":"ss","server":"h110vpnus.outlinekeys.net","port":9483,"password":"nLwAl3svNCBPtG9I2FrVYI","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4","type":"ss","server":"series-a2-mec.varzesh360.co","port":443,"password":"u17T3BvpYaaiuW2c","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @noviin_tel | 4","type":"ss","server":"Peweza1.digipedia.shop","port":443,"password":"mps3FwmDjLrWaOVg","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0","type":"ss","server":"admin.c2.webramz.co","port":443,"password":"WstuSnlu4ieA9M0L","cipher":"chacha20-ietf-poly1305"}
@@ -50,7 +52,9 @@ proxy-groups:
     proxies: 
       - '🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55'
       - '❔ XX | 🟢 | ss | @chestertm | 12'
-      - '🇬🇧 GB | 🟢 | ss | @club_profsor | 16'
+      - '🇬🇧 GB | 🟢 | ss | @club_profsor | 15'
+      - '🇺🇸 US | 🟢 | ss | @ip_cf_config | 18'
+      - '🇺🇸 US | 🟢 | ss | @mowjproxy | 5'
       - '🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4'
       - '🇬🇧 GB | 🟢 | ss | @noviin_tel | 4'
       - '🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0'
@@ -72,7 +76,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🚀 Proxy
 
   - name: 🛑 Ad Block
     type: select

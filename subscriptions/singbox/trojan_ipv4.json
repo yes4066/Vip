@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
+                "🇱🇻 LV | 🔴 | trojan | @configshubplus | 18",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
@@ -99,7 +100,6 @@
                 "🇩🇪 DE | 🟢 | trojan | @free_serverir | 30",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇳🇱 NL | 🔴 | trojan | @hacknashid | 2",
-                "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 15",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
                 "🇷🇺 RU | 🟢 | trojan | @jokerrvpn | 41",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
@@ -112,6 +112,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
+                "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇩🇪 DE | 🟢 | trojan | @proxyy | 2",
                 "🇺🇸 US | 🟢 | trojan | @rsv2ray | 16",
                 "🇩🇪 DE | 🟢 | trojan | @v2pedia | 26",
@@ -143,6 +144,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
+                "🇱🇻 LV | 🔴 | trojan | @configshubplus | 18",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
@@ -152,7 +154,6 @@
                 "🇩🇪 DE | 🟢 | trojan | @free_serverir | 30",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇳🇱 NL | 🔴 | trojan | @hacknashid | 2",
-                "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 15",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
                 "🇷🇺 RU | 🟢 | trojan | @jokerrvpn | 41",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
@@ -165,6 +166,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
+                "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇩🇪 DE | 🟢 | trojan | @proxyy | 2",
                 "🇺🇸 US | 🟢 | trojan | @rsv2ray | 16",
                 "🇩🇪 DE | 🟢 | trojan | @v2pedia | 26",
@@ -213,6 +215,13 @@
                     "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "🇱🇻 LV | 🔴 | trojan | @configshubplus | 18",
+            "type": "trojan",
+            "server": "91.197.3.168",
+            "server_port": 8443,
+            "password": "Aimer"
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
@@ -340,22 +349,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "46.8.231.225",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 15",
-            "type": "trojan",
-            "server": "51.91.11.29",
-            "server_port": 80,
-            "password": "598c19f3-a48e-47cd-8451-1ba04ea094d0",
-            "tls": {
-                "enabled": true,
-                "server_name": "speedtest.net",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -553,6 +546,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
+            "type": "trojan",
+            "server": "51.91.11.29",
+            "server_port": 80,
+            "password": "598c19f3-a48e-47cd-8451-1ba04ea094d0",
+            "tls": {
+                "enabled": true,
+                "server_name": "speedtest.net",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
