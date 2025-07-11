@@ -100,14 +100,13 @@
                 "URL-TEST",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇩🇪 DE | 🔴 | trojan | @configshubplus | 12",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
-                "🇩🇪 DE | 🔴 | trojan | @hope_net | 15",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
+                "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 6",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 6",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
@@ -118,9 +117,7 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @tenzovpn | 0",
-                "🇺🇸 US | 🟢 | trojan | @v2raych | 18",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
-                "🇺🇸 US | 🟢 | trojan | @vmesc | 16",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ],
@@ -132,14 +129,13 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇩🇪 DE | 🔴 | trojan | @configshubplus | 12",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
-                "🇩🇪 DE | 🔴 | trojan | @hope_net | 15",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
+                "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 6",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 6",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
@@ -150,9 +146,7 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @tenzovpn | 0",
-                "🇺🇸 US | 🟢 | trojan | @v2raych | 18",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
-                "🇺🇸 US | 🟢 | trojan | @vmesc | 16",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ],
@@ -207,22 +201,6 @@
                 "path": "/trojan-ntls",
                 "headers": {
                     "Host": "asia.artunnel57.host"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | trojan | @configshubplus | 12",
-            "type": "trojan",
-            "server": "honest-cow.goat627.mom",
-            "server_port": 443,
-            "password": "3763495894587285504",
-            "tls": {
-                "enabled": true,
-                "server_name": "honest-cow.goat627.mom",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },
@@ -289,22 +267,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🔴 | trojan | @hope_net | 15",
-            "type": "trojan",
-            "server": "artistic-vulture.goat627.mom",
-            "server_port": 443,
-            "password": "3763495894587285504",
-            "tls": {
-                "enabled": true,
-                "server_name": "artistic-vulture.goat627.mom",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
             "type": "trojan",
             "server": "usa.test3.net",
@@ -353,6 +315,29 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 6",
+            "type": "trojan",
+            "server": "www.digitalocean.com",
+            "server_port": 443,
+            "password": "trojan",
+            "tls": {
+                "enabled": true,
+                "server_name": "azadnet-9ya.pages.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "azadnet-9ya.pages.dev"
                 }
             }
         },
@@ -556,29 +541,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @v2raych | 18",
-            "type": "trojan",
-            "server": "www.pcmag.com",
-            "server_port": 443,
-            "password": "vip",
-            "tls": {
-                "enabled": true,
-                "server_name": "heihu880.pages.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "heihu880.pages.dev"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
             "type": "trojan",
             "server": "170-187-134-190.ipv4.rush.ml",
@@ -591,29 +553,6 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @vmesc | 16",
-            "type": "trojan",
-            "server": "www.digitalocean.com",
-            "server_port": 443,
-            "password": "trojan",
-            "tls": {
-                "enabled": true,
-                "server_name": "azadnet-9ya.pages.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "azadnet-9ya.pages.dev"
                 }
             }
         },

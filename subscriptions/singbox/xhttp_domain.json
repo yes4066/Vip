@@ -103,13 +103,12 @@
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 11",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 12",
                 "🇺🇸 US | 🔴 | vless | @befreewithus | 1",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 96",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @dalton_ping | 6",
                 "🇩🇪 DE | 🔴 | vless | @dalton_ping | 8",
+                "🇺🇸 US | 🔴 | vless | @dalton_ping | 11",
                 "❔ XX | 🔴 | vless | @dgkbza | 18",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
@@ -164,13 +163,12 @@
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 11",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 12",
                 "🇺🇸 US | 🔴 | vless | @befreewithus | 1",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 96",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @dalton_ping | 6",
                 "🇩🇪 DE | 🔴 | vless | @dalton_ping | 8",
+                "🇺🇸 US | 🔴 | vless | @dalton_ping | 11",
                 "❔ XX | 🔴 | vless | @dgkbza | 18",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
@@ -277,15 +275,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 96",
-            "type": "vless",
-            "server": "test.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "5a11a94b-2f23-4c44-927d-c8167e2b0c60",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @configscenter | 4",
             "type": "vless",
             "server": "2sudo.winapp3.ir",
@@ -322,20 +311,20 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @dalton_ping | 6",
-            "type": "vless",
-            "server": "bot.nimeshab-nabod.info",
-            "server_port": 80,
-            "uuid": "itsproxy",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇩🇪 DE | 🔴 | vless | @dalton_ping | 8",
             "type": "vless",
             "server": "img.iwantfun.ir",
             "server_port": 80,
             "uuid": "a65a6ecc-a21a-5218-4674-733235843a02",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @dalton_ping | 11",
+            "type": "vless",
+            "server": "test.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "5e9c9edd-add9-4963-8c6b-ff0804f5dcca",
             "flow": "",
             "packet_encoding": "xudp"
         },
