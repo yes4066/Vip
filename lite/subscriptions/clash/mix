@@ -18,9 +18,8 @@ dns:
 
 proxies:
   - {"name":"🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55","type":"ss","server":"admin.c4.webramz.co","port":443,"password":"69MUii7VDwMqh7Hz","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"🇵🇱 PL | 🟢 | ss | @NamiraNet | 68","type":"ss","server":"pr.fastsoonlink.com","port":40030,"password":"7905a32b-012c-4711-89e2-73b6713eca75","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇮🇷 IR | 🔴 | vmess | @angus_vpn | 6","type":"vmess","server":"tu.shoptx.sbs","port":15400,"cipher":"auto","uuid":"cc660614-1172-4988-9647-3846502d0e4f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇮🇳 IN | 🔴 | vmess | @argo_vpn1 | 5","type":"vmess","server":"94.136.185.230","port":10534,"cipher":"auto","uuid":"b01c7ef9-33ec-41f6-bfbf-77ddc4d21649","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 7","type":"ss","server":"109.107.159.246","port":17228,"password":"psamSbJq","cipher":"aes-256-gcm"}
   - {"name":"❔ XX | 🔴 | vmess | @armodchannel | 62","type":"vmess","server":"asia.artunnel57.host","port":80,"cipher":"auto","uuid":"65e44501-defd-4609-a4e3-7028dc417b50","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess-ntls","headers":{"Host":"asia.artunnel57.host"}}}
   - {"name":"🇦🇹 AT | 🟢 | ss | @arv2ra | 7","type":"ss","server":"45.138.74.160","port":7261,"password":"pZvwP17Nlz2z6jsYnVgZgf","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @bislullproxy | 18","type":"ss","server":"4.250.60.151","port":443,"password":"WstuSnlu4ieA9M0L","cipher":"chacha20-ietf-poly1305"}
@@ -34,7 +33,7 @@ proxies:
   - {"name":"🇫🇷 FR | 🟢 | trojan | @directvpn | 15","type":"trojan","server":"35.180.216.86","port":22223,"password":"telegram-id-directvpn","skip-cert-verify":false}
   - {"name":"🇬🇧 GB | 🟢 | ss | @elfv2ray | 6","type":"ss","server":"74.177.199.135","port":443,"password":"u17T3BvpYaaiuW2c","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @free1_vpn | 10","type":"ss","server":"172.187.105.25","port":443,"password":"1xO2cqPazqjGfCfd","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"🇬🇧 GB | 🟢 | ss | @free1ss | 13","type":"ss","server":"109.107.159.246","port":17228,"password":"psamSbJq","cipher":"aes-256-gcm"}
+  - {"name":"🇨🇦 CA | 🟢 | ss | @free1ss | 14","type":"ss","server":"142.4.216.225","port":80,"password":"JIhN6rBKkaEboLNXVSv5rq","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14","type":"vmess","server":"51.79.102.253","port":80,"cipher":"auto","uuid":"58fe1542-5290-40ad-815a-77707a81afe5","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/IOebhLMhl1CTbFHbL95myfRX2","headers":{"Host":"51.79.102.253"}}}
   - {"name":"❔ XX | 🟢 | ss | @free_omega | 4","type":"ss","server":"[2a01:4f8:c012:42dc::1]","port":2060,"password":"DU7nmmEPs5eGoqrt_SwBEQ","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇳🇱 NL | 🔴 | vmess | @freeconfigsplus | 18","type":"vmess","server":"aswedonke.bluetoothmouse.ir","port":8081,"cipher":"auto","uuid":"b31bedcc-a397-4ac7-a3fb-aecd16e08a87","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
@@ -85,7 +84,7 @@ proxies:
   - {"name":"🇬🇧 GB | 🟢 | ss | @selinc | 6","type":"ss","server":"74.177.199.135","port":443,"password":"WstuSnlu4ieA9M0L","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @server_nekobox | 14","type":"ss","server":"freakconfig.usecharge.ir","port":443,"password":"Bog0ELmMM9DSxDdQ","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19","type":"ss","server":"series-a2-me.samanehha.co","port":443,"password":"Bog0ELmMM9DSxDdQ","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"🇨🇱 CL | 🟢 | ss | @shadowsockskeys | 15","type":"ss","server":"129.151.99.94","port":35515,"password":"6bd6c289-9b89-4acd-b79b-db525b407734","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇰🇷 KR | 🟢 | ss | @shadowsockskeys | 16","type":"ss","server":"220.124.31.130","port":19378,"password":"NiznLvoIuy","cipher":"aes-256-gcm"}
   - {"name":"🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4","type":"vmess","server":"120.233.248.133","port":30514,"cipher":"auto","uuid":"02f0d2ec-086c-4ca2-a229-7ee75e9a73b6","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸 US | 🟢 | ss | @slamvpn | 2","type":"ss","server":"45.87.175.178","port":8080,"password":"cvII85TrW6n0OGyfpHVS1u","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇫🇮 FI | 🟢 | ss | @strongprotocol | 10","type":"ss","server":"45.12.135.36","port":47076,"password":"WrNAsbtcuoeEEQdoSOcPgO","cipher":"chacha20-ietf-poly1305"}
@@ -153,9 +152,8 @@ proxy-groups:
     tolerance: 50 
     proxies:
       - '🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55'
-      - '🇵🇱 PL | 🟢 | ss | @NamiraNet | 68'
       - '🇮🇷 IR | 🔴 | vmess | @angus_vpn | 6'
-      - '🇮🇳 IN | 🔴 | vmess | @argo_vpn1 | 5'
+      - '🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 7'
       - '❔ XX | 🔴 | vmess | @armodchannel | 62'
       - '🇦🇹 AT | 🟢 | ss | @arv2ra | 7'
       - '🇬🇧 GB | 🟢 | ss | @bislullproxy | 18'
@@ -169,7 +167,7 @@ proxy-groups:
       - '🇫🇷 FR | 🟢 | trojan | @directvpn | 15'
       - '🇬🇧 GB | 🟢 | ss | @elfv2ray | 6'
       - '🇬🇧 GB | 🟢 | ss | @free1_vpn | 10'
-      - '🇬🇧 GB | 🟢 | ss | @free1ss | 13'
+      - '🇨🇦 CA | 🟢 | ss | @free1ss | 14'
       - '🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14'
       - '❔ XX | 🟢 | ss | @free_omega | 4'
       - '🇳🇱 NL | 🔴 | vmess | @freeconfigsplus | 18'
@@ -220,7 +218,7 @@ proxy-groups:
       - '🇬🇧 GB | 🟢 | ss | @selinc | 6'
       - '🇬🇧 GB | 🟢 | ss | @server_nekobox | 14'
       - '🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19'
-      - '🇨🇱 CL | 🟢 | ss | @shadowsockskeys | 15'
+      - '🇰🇷 KR | 🟢 | ss | @shadowsockskeys | 16'
       - '🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4'
       - '🇺🇸 US | 🟢 | ss | @slamvpn | 2'
       - '🇫🇮 FI | 🟢 | ss | @strongprotocol | 10'
@@ -264,9 +262,8 @@ proxy-groups:
     interval: 300
     proxies:
       - '🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55'
-      - '🇵🇱 PL | 🟢 | ss | @NamiraNet | 68'
       - '🇮🇷 IR | 🔴 | vmess | @angus_vpn | 6'
-      - '🇮🇳 IN | 🔴 | vmess | @argo_vpn1 | 5'
+      - '🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 7'
       - '❔ XX | 🔴 | vmess | @armodchannel | 62'
       - '🇦🇹 AT | 🟢 | ss | @arv2ra | 7'
       - '🇬🇧 GB | 🟢 | ss | @bislullproxy | 18'
@@ -280,7 +277,7 @@ proxy-groups:
       - '🇫🇷 FR | 🟢 | trojan | @directvpn | 15'
       - '🇬🇧 GB | 🟢 | ss | @elfv2ray | 6'
       - '🇬🇧 GB | 🟢 | ss | @free1_vpn | 10'
-      - '🇬🇧 GB | 🟢 | ss | @free1ss | 13'
+      - '🇨🇦 CA | 🟢 | ss | @free1ss | 14'
       - '🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14'
       - '❔ XX | 🟢 | ss | @free_omega | 4'
       - '🇳🇱 NL | 🔴 | vmess | @freeconfigsplus | 18'
@@ -331,7 +328,7 @@ proxy-groups:
       - '🇬🇧 GB | 🟢 | ss | @selinc | 6'
       - '🇬🇧 GB | 🟢 | ss | @server_nekobox | 14'
       - '🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19'
-      - '🇨🇱 CL | 🟢 | ss | @shadowsockskeys | 15'
+      - '🇰🇷 KR | 🟢 | ss | @shadowsockskeys | 16'
       - '🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4'
       - '🇺🇸 US | 🟢 | ss | @slamvpn | 2'
       - '🇫🇮 FI | 🟢 | ss | @strongprotocol | 10'
@@ -373,9 +370,8 @@ proxy-groups:
     type: select
     proxies:
       - '🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55'
-      - '🇵🇱 PL | 🟢 | ss | @NamiraNet | 68'
       - '🇮🇷 IR | 🔴 | vmess | @angus_vpn | 6'
-      - '🇮🇳 IN | 🔴 | vmess | @argo_vpn1 | 5'
+      - '🇬🇧 GB | 🟢 | ss | @argo_vpn1 | 7'
       - '❔ XX | 🔴 | vmess | @armodchannel | 62'
       - '🇦🇹 AT | 🟢 | ss | @arv2ra | 7'
       - '🇬🇧 GB | 🟢 | ss | @bislullproxy | 18'
@@ -389,7 +385,7 @@ proxy-groups:
       - '🇫🇷 FR | 🟢 | trojan | @directvpn | 15'
       - '🇬🇧 GB | 🟢 | ss | @elfv2ray | 6'
       - '🇬🇧 GB | 🟢 | ss | @free1_vpn | 10'
-      - '🇬🇧 GB | 🟢 | ss | @free1ss | 13'
+      - '🇨🇦 CA | 🟢 | ss | @free1ss | 14'
       - '🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14'
       - '❔ XX | 🟢 | ss | @free_omega | 4'
       - '🇳🇱 NL | 🔴 | vmess | @freeconfigsplus | 18'
@@ -440,7 +436,7 @@ proxy-groups:
       - '🇬🇧 GB | 🟢 | ss | @selinc | 6'
       - '🇬🇧 GB | 🟢 | ss | @server_nekobox | 14'
       - '🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19'
-      - '🇨🇱 CL | 🟢 | ss | @shadowsockskeys | 15'
+      - '🇰🇷 KR | 🟢 | ss | @shadowsockskeys | 16'
       - '🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4'
       - '🇺🇸 US | 🟢 | ss | @slamvpn | 2'
       - '🇫🇮 FI | 🟢 | ss | @strongprotocol | 10'
