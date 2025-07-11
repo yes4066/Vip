@@ -129,6 +129,8 @@
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
                 "🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 15",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
+                "🇫🇮 FI | 🟢 | vless | @azarbayjab1 | 40",
+                "🇫🇮 FI | 🟢 | vless | @config_proxy | 94",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
@@ -150,7 +152,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vip_vpn_2022 | 6",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇹🇷 TR | 🟢 | vless | @vmesc | 16",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇹🇷 TR | 🟢 | vless | @xixv2ray | 6",
@@ -186,6 +187,8 @@
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 15",
                 "🇮🇷 IR | 🟢 | vless | @vpnv2rayngv | 15",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
+                "🇫🇮 FI | 🟢 | vless | @azarbayjab1 | 40",
+                "🇫🇮 FI | 🟢 | vless | @config_proxy | 94",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @custom_config | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
@@ -207,7 +210,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vip_vpn_2022 | 6",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇹🇷 TR | 🟢 | vless | @vmesc | 16",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇹🇷 TR | 🟢 | vless | @xixv2ray | 6",
@@ -819,6 +821,52 @@
             }
         },
         {
+            "tag": "🇫🇮 FI | 🟢 | vless | @azarbayjab1 | 40",
+            "type": "vless",
+            "server": "46.62.149.136",
+            "server_port": 9999,
+            "uuid": "e96adc51-70f2-451d-83c5-77094b9d680f",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "tgju.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
+                    "short_id": "42c0b628ba6a42a9"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @config_proxy | 94",
+            "type": "vless",
+            "server": "46.62.150.45",
+            "server_port": 9999,
+            "uuid": "e96adc51-70f2-451d-83c5-77094b9d680f",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "tgju.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
+                    "short_id": "42c0b628ba6a42a9"
+                }
+            }
+        },
+        {
             "tag": "🇫🇷 FR | 🟢 | vless | @configasli | 6",
             "type": "vless",
             "server": "172.232.33.18",
@@ -1317,29 +1365,6 @@
                     "enabled": true,
                     "public_key": "Qdg7LVP5VmLr7xzv556ry5RNc3QaeAj4TwOUxndA23M",
                     "short_id": "e3f89b63"
-                }
-            }
-        },
-        {
-            "tag": "🇹🇷 TR | 🟢 | vless | @vmesc | 16",
-            "type": "vless",
-            "server": "46.31.76.3",
-            "server_port": 80,
-            "uuid": "315145cd-0955-4594-98e7-e1390e90ef33",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oTX6mQJYxkmmdF7Rq_stAKX_hYoOMXGaWmoblFl2zgo",
-                    "short_id": "5942e2"
                 }
             }
         },

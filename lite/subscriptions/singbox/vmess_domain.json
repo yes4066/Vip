@@ -132,10 +132,10 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 3",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
                 "❔ XX | 🟢 | vmess | @prooxyk | 4",
-                "🇮🇷 IR | 🔴 | vmess | @proxy_mtproto_vpns_free | 8",
                 "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
                 "❔ XX | 🔴 | vmess | @pydriclub | 4",
                 "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
@@ -157,7 +157,6 @@
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
-                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
@@ -194,10 +193,10 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
+                "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 3",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
                 "❔ XX | 🟢 | vmess | @prooxyk | 4",
-                "🇮🇷 IR | 🔴 | vmess | @proxy_mtproto_vpns_free | 8",
                 "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
                 "❔ XX | 🔴 | vmess | @pydriclub | 4",
                 "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
@@ -219,7 +218,6 @@
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
-                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
@@ -660,6 +658,15 @@
             }
         },
         {
+            "tag": "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 3",
+            "type": "vmess",
+            "server": "fast17.new1gold.com",
+            "server_port": 56701,
+            "uuid": "1d350e55-cd4e-4c93-9f8b-f8684aa5b8dc",
+            "security": "auto",
+            "alter_id": 0
+        },
+        {
             "tag": "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
             "type": "vmess",
             "server": "adsl.stylebender209.ir",
@@ -708,15 +715,6 @@
                     "Host": "join.v1-amironetwork.site"
                 }
             }
-        },
-        {
-            "tag": "🇮🇷 IR | 🔴 | vmess | @proxy_mtproto_vpns_free | 8",
-            "type": "vmess",
-            "server": "fast17.new1gold.com",
-            "server_port": 56701,
-            "uuid": "1d350e55-cd4e-4c93-9f8b-f8684aa5b8dc",
-            "security": "auto",
-            "alter_id": 0
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
@@ -1016,15 +1014,6 @@
             "server": "193.233.133.59",
             "server_port": 33,
             "uuid": "0dc0d22c-68e5-440a-9465-97cad8d1cf33",
-            "security": "auto",
-            "alter_id": 0
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
-            "type": "vmess",
-            "server": "15.204.11.190",
-            "server_port": 15361,
-            "uuid": "5d7bf9e3-415c-40f3-c66d-a54ea0fd860e",
             "security": "auto",
             "alter_id": 0
         },
