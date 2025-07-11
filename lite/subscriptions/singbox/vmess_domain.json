@@ -132,10 +132,10 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
-                "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 3",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
                 "❔ XX | 🟢 | vmess | @prooxyk | 4",
+                "🇳🇱 NL | 🔴 | vmess | @proxy_mtproto_vpns_free | 14",
                 "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
                 "❔ XX | 🔴 | vmess | @pydriclub | 4",
                 "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
@@ -157,7 +157,7 @@
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
-                "🇯🇵 JP | 🔴 | vmess | @vpnfail_v2ray | 16",
+                "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 16",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
@@ -194,10 +194,10 @@
                 "🇨🇳 CN | 🔴 | vmess | @mftizi | 19",
                 "🇺🇸 US | 🟢 | vmess | @mi_pn_official | 2",
                 "🇺🇸 US | 🟢 | vmess | @minovpnch | 12",
-                "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 3",
                 "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
                 "🇮🇷 IR | 🔴 | vmess | @pro_chaneel | 1",
                 "❔ XX | 🟢 | vmess | @prooxyk | 4",
+                "🇳🇱 NL | 🔴 | vmess | @proxy_mtproto_vpns_free | 14",
                 "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
                 "❔ XX | 🔴 | vmess | @pydriclub | 4",
                 "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
@@ -219,7 +219,7 @@
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
-                "🇯🇵 JP | 🔴 | vmess | @vpnfail_v2ray | 16",
+                "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 16",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
@@ -660,15 +660,6 @@
             }
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vmess | @mowjproxy | 3",
-            "type": "vmess",
-            "server": "fast17.new1gold.com",
-            "server_port": 56701,
-            "uuid": "1d350e55-cd4e-4c93-9f8b-f8684aa5b8dc",
-            "security": "auto",
-            "alter_id": 0
-        },
-        {
             "tag": "❔ XX | 🔴 | vmess | @net_azad_1 | 12",
             "type": "vmess",
             "server": "adsl.stylebender209.ir",
@@ -717,6 +708,15 @@
                     "Host": "join.v1-amironetwork.site"
                 }
             }
+        },
+        {
+            "tag": "🇳🇱 NL | 🔴 | vmess | @proxy_mtproto_vpns_free | 14",
+            "type": "vmess",
+            "server": "185.169.107.120",
+            "server_port": 11577,
+            "uuid": "6b788668-c3cf-4754-afdb-a172248e0ac8",
+            "security": "auto",
+            "alter_id": 0
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @proxyy | 4",
@@ -1020,16 +1020,16 @@
             "alter_id": 0
         },
         {
-            "tag": "🇯🇵 JP | 🔴 | vmess | @vpnfail_v2ray | 16",
+            "tag": "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 16",
             "type": "vmess",
-            "server": "107.148.6.67",
-            "server_port": 30001,
-            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "server": "38.99.82.193",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
-            "alter_id": 64,
+            "alter_id": 0,
             "tls": {
                 "enabled": true,
-                "server_name": "",
+                "server_name": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -1038,9 +1038,9 @@
             },
             "transport": {
                 "type": "ws",
-                "path": "/path/170733132233",
+                "path": "/linkvws",
                 "headers": {
-                    "Host": ""
+                    "Host": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"
                 }
             }
         },

@@ -107,6 +107,7 @@
                 "URL-TEST",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇳🇱 NL | 🔴 | trojan | @hacknashid | 2",
+                "🇭🇺 HU | 🔴 | trojan | @hope_net | 19",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
@@ -122,6 +123,7 @@
             "outbounds": [
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇳🇱 NL | 🔴 | trojan | @hacknashid | 2",
+                "🇭🇺 HU | 🔴 | trojan | @hope_net | 19",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
@@ -175,6 +177,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "46.8.231.225",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇺 HU | 🔴 | trojan | @hope_net | 19",
+            "type": "trojan",
+            "server": "141.11.203.168",
+            "server_port": 443,
+            "password": "Aimer",
+            "tls": {
+                "enabled": true,
+                "server_name": "ngepy.ambercc.filegear-sg.me",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
