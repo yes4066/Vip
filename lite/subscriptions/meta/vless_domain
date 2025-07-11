@@ -23,7 +23,6 @@ dns:
     - '+.pool.ntp.org'
 
 proxies: 
-  - {"name":"❔ XX | 🔴 | vless | @NamiraNet | 69","type":"vless","server":"dest.realtechshop.top","port":666,"uuid":"ff8fffd7-3546-488b-a5f2-a74896da74a2","tls":false,"network":"tcp","client-fingerprint":"chrome","udp":true}
   - {"name":"🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0","type":"vless","server":"sourceforge.net","port":2052,"uuid":"18161878-c749-40fe-8146-8b061a41bd4f","tls":false,"network":"ws","client-fingerprint":"chrome","udp":true,"ws-opts":{"path":"/telegram-@alo_v2rayng----telegram-@alo_v2rayng----telegram-@alo_v2rayng----telegram-@alo_v2rayng----telegram-@alo_v2rayng----telegram-@alo_v2rayng----telegram-@alo_v2rayng----telegram-@alo_v2rayng----telegram-@alo_v2rayng----telegram-@alo_v2rayng----hameV2rayGmSix6.6.6.6.ir.Com.Site.xn--fhq0la447aac5504dea701axr1g","headers":{"Host":"v2cityv2raygmsix6.6.6.6.ir.com.site.列列男事的事列上赛男.科斯涅過濾器斯.mobileiraniii.ir"}}}
   - {"name":"🇩🇪 DE | 🔴 | vless | @argotaz | 0","type":"vless","server":"vrp2.vidasuniversity.ir","port":8443,"uuid":"52200463-3f3e-4751-8887-b80b70212af7","tls":false,"network":"tcp","client-fingerprint":"chrome","udp":true}
   - {"name":"🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1","type":"vless","server":"Artemis.sbs","port":80,"uuid":"6db4a91c-838d-419a-af83-bc5bd211ffc6","tls":false,"network":"ws","client-fingerprint":"chrome","udp":true,"ws-opts":{"path":"/@Artemis_vpn","headers":{"Host":"free-02.artemis-03.sbs"}}}
@@ -111,6 +110,7 @@ proxies:
   - {"name":"🇺🇸 US | 🟢 | vless | @proxie | 16","type":"vless","server":"aule.manwe.ir","port":2083,"uuid":"50a610d3-5a95-4d59-9766-3fe869e737e4","tls":true,"network":"ws","client-fingerprint":"chrome","udp":true,"servername":"varda-2.manwe.ir","ws-opts":{"path":"/","headers":{"Host":"varda-2.manwe.ir"}}}
   - {"name":"❔ XX | 🟢 | vless | @proxy_confiingir | 3","type":"vless","server":"bia2.outline-vpn.cloud","port":443,"uuid":"884f9b2c-f0c5-44dd-a68e-3e39ce93bb39","tls":true,"network":"ws","client-fingerprint":"chrome","udp":true,"servername":"cf-wkrs-pages-vless-aoy.pages.dev","ws-opts":{"path":"/?ed=2048","headers":{"Host":"cf-wkrs-pages-vless-aoy.pages.dev"}}}
   - {"name":"🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0","type":"vless","server":"ir.any-server.cfd","port":24041,"uuid":"36c540df-eed6-4d7a-994c-dd766a86db30","tls":false,"network":"tcp","client-fingerprint":"chrome","udp":true}
+  - {"name":"🇺🇸 US | 🟢 | vless | @proxy_mtproto_vpns_free | 16","type":"vless","server":"www.speedtest.net","port":443,"uuid":"c55ef976-d9f5-41d9-8bfb-c57853a66327","tls":true,"network":"ws","client-fingerprint":"chrome","udp":true,"servername":"skYNet.ZIStArviNBiOtEch.Ir","ws-opts":{"path":"/qp8ihoxMLXPfQWaw?ed=2560","headers":{"Host":"skynet.zistarvinbiotech.ir"}}}
   - {"name":"🇺🇸 US | 🟢 | vless | @proxycrone | 10","type":"vless","server":"www.speedtest.net","port":443,"uuid":"6bcb4f37-bba7-4ae0-afac-d43195c72c12","tls":true,"network":"ws","client-fingerprint":"chrome","udp":true,"servername":"my.digikala.dynv6.net","ws-opts":{"path":"/--------v2rayNGcloud-----?ed=2560","headers":{"Host":"my.digikala.dynv6.net"}}}
   - {"name":"❔ XX | 🟢 | vless | @proxysudo | 2","type":"vless","server":"proxysudochannel.ddns.net","port":8080,"uuid":"bcf8c65a-ed44-4b40-b7f3-752115b20662","tls":true,"network":"tcp","client-fingerprint":"safari","udp":true,"servername":"instructure.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"blF2p2FE_fexB29-tmU9HfVs6TwqsSQVxWAHIiP2KTk","short-id":"b28a0dd8"}}
   - {"name":"🇩🇪 DE | 🔴 | vless | @prrofile_purple | 124","type":"vless","server":"hh.green1.sbs","port":9808,"uuid":"4432ed67-5714-42b3-b92a-345be16ec596","tls":false,"network":"tcp","client-fingerprint":"chrome","udp":true}
@@ -179,7 +179,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies: 
-      - '❔ XX | 🔴 | vless | @NamiraNet | 69'
       - '🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0'
       - '🇩🇪 DE | 🔴 | vless | @argotaz | 0'
       - '🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1'
@@ -267,6 +266,7 @@ proxy-groups:
       - '🇺🇸 US | 🟢 | vless | @proxie | 16'
       - '❔ XX | 🟢 | vless | @proxy_confiingir | 3'
       - '🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0'
+      - '🇺🇸 US | 🟢 | vless | @proxy_mtproto_vpns_free | 16'
       - '🇺🇸 US | 🟢 | vless | @proxycrone | 10'
       - '❔ XX | 🟢 | vless | @proxysudo | 2'
       - '🇩🇪 DE | 🔴 | vless | @prrofile_purple | 124'

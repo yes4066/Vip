@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇨🇦 CA | 🔴 | trojan | @NamiraNet | 65",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
@@ -119,7 +118,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇨🇦 CA | 🔴 | trojan | @NamiraNet | 65",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
@@ -151,20 +149,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇨🇦 CA | 🔴 | trojan | @NamiraNet | 65",
-            "type": "trojan",
-            "server": "ssrsub.cloudflare.182682.xyz",
-            "server_port": 8443,
-            "password": "67828a6e-0144-4e57-8169-2447a3dd2e61",
-            "transport": {
-                "type": "ws",
-                "path": "/profile/telegram@ssrsub",
-                "headers": {
-                    "Host": "cdn-node-oss-99.paofu.de"
-                }
-            }
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @armodchannel | 59",
