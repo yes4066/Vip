@@ -33,7 +33,7 @@ function vmessToProxyData(ConfigWrapper $c): ?array {
     if (!is_valid_uuid($c->getUuid())) return null;
     $proxy = [
         "name" => $c->getTag(), "type" => "vmess", "server" => $c->getServer(), "port" => $c->getPort(),
-        "cipher" => $c->get('scy', 'auto'), "uuid" => $c->getUuid(), "alterId" => $c->get('aid', 0),
+        "cipher" => ($c->get('scy') ?: 'auto'), "uuid" => $c->getUuid(), "alterId" => $c->get('aid', 0),
         "tls" => $c->get('tls') === 'tls', "skip-cert-verify" => true, "network" => $c->get('net', 'tcp'),
     ];
     if ($proxy['network'] === "ws") {
