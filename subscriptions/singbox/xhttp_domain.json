@@ -123,8 +123,10 @@
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @game_file2020 | 2",
                 "🇩🇪 DE | 🟢 | vless | @game_file2020 | 3",
+                "🇺🇸 US | 🔴 | vless | @getconfigir | 12",
+                "🇳🇱 NL | 🟢 | vless | @getconfigir | 13",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 9",
-                "🇺🇸 US | 🔴 | vless | @grizzlyvpn | 1",
+                "🇺🇸 US | 🔴 | vless | @grizzlyvpn | 3",
                 "🇺🇸 US | 🟢 | vless | @hack_androidapp1 | 2",
                 "🇺🇸 US | 🔴 | vless | @hooshemasnui | 3",
                 "🇺🇸 US | 🔴 | vless | @lranonline_new | 14",
@@ -143,9 +145,8 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 6",
                 "🇺🇸 US | 🔴 | vless | @v2rayngvpn_1 | 9",
-                "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 13",
-                "🇳🇱 NL | 🟢 | vless | @vistav2ray | 15",
-                "🇺🇸 US | 🔴 | vless | @vmessorg | 16",
+                "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 12",
+                "🇺🇸 US | 🔴 | vless | @vmessorg | 14",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇺🇸 US | 🔴 | vless | @vtworay_wolf | 15",
                 "🇺🇸 US | 🔴 | vless | @vtworay_wolf | 16",
@@ -183,8 +184,10 @@
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @game_file2020 | 2",
                 "🇩🇪 DE | 🟢 | vless | @game_file2020 | 3",
+                "🇺🇸 US | 🔴 | vless | @getconfigir | 12",
+                "🇳🇱 NL | 🟢 | vless | @getconfigir | 13",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 9",
-                "🇺🇸 US | 🔴 | vless | @grizzlyvpn | 1",
+                "🇺🇸 US | 🔴 | vless | @grizzlyvpn | 3",
                 "🇺🇸 US | 🟢 | vless | @hack_androidapp1 | 2",
                 "🇺🇸 US | 🔴 | vless | @hooshemasnui | 3",
                 "🇺🇸 US | 🔴 | vless | @lranonline_new | 14",
@@ -203,9 +206,8 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 6",
                 "🇺🇸 US | 🔴 | vless | @v2rayngvpn_1 | 9",
-                "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 13",
-                "🇳🇱 NL | 🟢 | vless | @vistav2ray | 15",
-                "🇺🇸 US | 🔴 | vless | @vmessorg | 16",
+                "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 12",
+                "🇺🇸 US | 🔴 | vless | @vmessorg | 14",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇺🇸 US | 🔴 | vless | @vtworay_wolf | 15",
                 "🇺🇸 US | 🔴 | vless | @vtworay_wolf | 16",
@@ -492,6 +494,33 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @getconfigir | 12",
+            "type": "vless",
+            "server": "bot.nimeshab-nabod.info",
+            "server_port": 80,
+            "uuid": "itsproxy",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @getconfigir | 13",
+            "type": "vless",
+            "server": "statue.lnmarketplace.net",
+            "server_port": 443,
+            "uuid": "7c63f43f-f526-49bb-b5c8-2be26e11ef00",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "statue.lnmarketplace.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 9",
             "type": "vless",
             "server": "ips.rainoteam.store",
@@ -501,7 +530,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @grizzlyvpn | 1",
+            "tag": "🇺🇸 US | 🔴 | vless | @grizzlyvpn | 3",
             "type": "vless",
             "server": "test.fast.hosting-ip.com",
             "server_port": 80,
@@ -727,7 +756,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 13",
+            "tag": "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 12",
             "type": "vless",
             "server": "speedtest.net",
             "server_port": 80,
@@ -736,25 +765,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @vistav2ray | 15",
-            "type": "vless",
-            "server": "statue.lnmarketplace.net",
-            "server_port": 443,
-            "uuid": "7c63f43f-f526-49bb-b5c8-2be26e11ef00",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "statue.lnmarketplace.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @vmessorg | 16",
+            "tag": "🇺🇸 US | 🔴 | vless | @vmessorg | 14",
             "type": "vless",
             "server": "speedtest.net",
             "server_port": 80,

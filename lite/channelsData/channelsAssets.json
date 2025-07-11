@@ -8,6 +8,15 @@
         "title": "کانفیگ رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/Fr33C0nfig.jpg"
     },
+    "NamiraNet": {
+        "title": "NamiraNet",
+        "logo": "",
+        "types": [
+            "ss",
+            "trojan",
+            "vless"
+        ]
+    },
     "ai_duet": {
         "types": [
             "vless"
@@ -284,8 +293,8 @@
     },
     "config_proxy": {
         "types": [
-            "vmess",
             "vless",
+            "vmess",
             "trojan"
         ],
         "title": "Proxy | V2ray | Config | Vpn | Hiddify | Nekobox | Segaro | پروکسی | فیلترشکن | ایرانسل | همراه اول | رایتل | سامانتل | مخابرات|",
@@ -1112,10 +1121,10 @@
     },
     "hope_net": {
         "types": [
-            "vless",
-            "ss",
+            "vmess",
             "trojan",
-            "vmess"
+            "ss",
+            "vless"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1193,9 +1202,9 @@
     "ip_cf_config": {
         "types": [
             "trojan",
-            "vless",
+            "ss",
             "vmess",
-            "ss"
+            "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1803,9 +1812,9 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
+            "ss",
             "vmess",
-            "ss"
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -2097,8 +2106,8 @@
     },
     "outline_vpn": {
         "types": [
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "Outline Vpn",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outline_vpn.jpg"
@@ -2503,8 +2512,8 @@
     },
     "sinavm": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "𝗙𝗥𝗘𝗘 𝗩𝗣𝗡 | SiNAVM",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/sinavm.jpg"
@@ -2664,14 +2673,6 @@
         ],
         "title": "Channel",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/u7kll.jpg"
-    },
-    "ultrasurf_12": {
-        "types": [
-            "ss",
-            "vless"
-        ],
-        "title": "فیلترشکن رایگان | پروکسی ملی",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ultrasurf_12.jpg"
     },
     "uvpn_org": {
         "types": [
@@ -2953,7 +2954,8 @@
     "v2rayng_fars": {
         "types": [
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "v2rayng fars",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayng_fars.jpg"
@@ -3412,8 +3414,8 @@
     },
     "vmesc": {
         "types": [
-            "ss",
             "vless",
+            "ss",
             "trojan"
         ],
         "title": "Free V2ray",
