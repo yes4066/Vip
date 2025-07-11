@@ -28,6 +28,7 @@ proxies:
   - {"name":"🇬🇧 GB | 🟢 | ss | @bislullproxy | 18","type":"ss","server":"4.250.60.151","port":443,"password":"WstuSnlu4ieA9M0L","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @elfv2ray | 5","type":"ss","server":"74.177.199.135","port":443,"password":"u17T3BvpYaaiuW2c","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @injectormconf | 39","type":"ss","server":"51.142.171.150","port":49499,"password":"kTjlLxrncKx4i2HIjxfA3M","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸 US | 🟢 | ss | @ip_cf_config | 14","type":"ss","server":"45.87.175.164","port":8080,"password":"4a2rfixophdjffa8KVA4Aa","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇩🇪 DE | 🟢 | ss | @jiedianf | 9","type":"ss","server":"138.124.115.157","port":1080,"password":"M-nffO40KlclwbCX9CV1DQ","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇫🇷 FR | 🟢 | ss | @key_outline | 19","type":"ss","server":"62.210.88.22","port":443,"password":"sB7tREKV3aBrcChfxJZihF","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @kingofilter | 3","type":"ss","server":"172.187.105.25","port":443,"password":"1xO2cqPazqjGfCfd","cipher":"chacha20-ietf-poly1305"}
@@ -38,7 +39,6 @@ proxies:
   - {"name":"🇩🇪 DE | 🟢 | ss | @msv2flyng | 12","type":"ss","server":"45.144.54.33","port":34803,"password":"LiHQX9cDbdooBHlIg0eiqQ","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @novinology | 16","type":"ss","server":"13.87.74.71","port":14564,"password":"Q1qlRknoN9PwGeExWVyTKg","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇬🇧 GB | 🟢 | ss | @ntconfig | 2","type":"ss","server":"74.177.202.58","port":443,"password":"69MUii7VDwMqh7Hz","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"🇳🇱 NL | 🟢 | ss | @outline_ir | 16","type":"ss","server":"194.87.31.68","port":443,"password":"R2UGad61FGO5","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇩🇪 DE | 🟢 | ss | @outlineopenkey | 13","type":"ss","server":"81.19.141.45","port":443,"password":"7ESGPjz22c2ghHUeJs7vg3","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇨🇦 CA | 🟢 | ss | @outlinereleasedkey | 18","type":"ss","server":"209.200.246.174","port":8388,"password":"OTc3Z","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9","type":"ss","server":"217.138.193.10","port":808,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
@@ -52,7 +52,6 @@ proxies:
   - {"name":"🇵🇱 PL | 🟢 | ss | @vipufovpn | 19","type":"ss","server":"54.36.174.181","port":5601,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
   - {"name":"🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19","type":"ss","server":"45.87.175.10","port":8080,"password":"oZIoA69Q8yhcQV8ka3Pa3A","cipher":"chacha20-ietf-poly1305"}
   - {"name":"🇸🇪 SE | 🟢 | ss | @vmessx | 4","type":"ss","server":"45.8.147.88","port":45961,"password":"Y5Y2Rmq9TT33hli3GKnV5c","cipher":"aes-256-gcm"}
-  - {"name":"🇯🇵 JP | 🟢 | ss | @vpnv2rayngv | 14","type":"ss","server":"54.238.207.188","port":8319,"password":"ljqdalu13..","cipher":"chacha20-ietf-poly1305"}
 
 proxy-groups:
   - name: 🚀 Proxy
@@ -71,6 +70,7 @@ proxy-groups:
       - '🇬🇧 GB | 🟢 | ss | @bislullproxy | 18'
       - '🇬🇧 GB | 🟢 | ss | @elfv2ray | 5'
       - '🇬🇧 GB | 🟢 | ss | @injectormconf | 39'
+      - '🇺🇸 US | 🟢 | ss | @ip_cf_config | 14'
       - '🇩🇪 DE | 🟢 | ss | @jiedianf | 9'
       - '🇫🇷 FR | 🟢 | ss | @key_outline | 19'
       - '🇬🇧 GB | 🟢 | ss | @kingofilter | 3'
@@ -81,7 +81,6 @@ proxy-groups:
       - '🇩🇪 DE | 🟢 | ss | @msv2flyng | 12'
       - '🇬🇧 GB | 🟢 | ss | @novinology | 16'
       - '🇬🇧 GB | 🟢 | ss | @ntconfig | 2'
-      - '🇳🇱 NL | 🟢 | ss | @outline_ir | 16'
       - '🇩🇪 DE | 🟢 | ss | @outlineopenkey | 13'
       - '🇨🇦 CA | 🟢 | ss | @outlinereleasedkey | 18'
       - '🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9'
@@ -95,7 +94,6 @@ proxy-groups:
       - '🇵🇱 PL | 🟢 | ss | @vipufovpn | 19'
       - '🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19'
       - '🇸🇪 SE | 🟢 | ss | @vmessx | 4'
-      - '🇯🇵 JP | 🟢 | ss | @vpnv2rayngv | 14'
 
   - name: 🌍 Global Media
     type: select

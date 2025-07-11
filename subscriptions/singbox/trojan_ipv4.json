@@ -90,7 +90,6 @@
                 "auto",
                 "direct",
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
-                "🇱🇻 LV | 🔴 | trojan | @configshubplus | 18",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
@@ -100,8 +99,9 @@
                 "🇩🇪 DE | 🟢 | trojan | @free_serverir | 30",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇳🇱 NL | 🔴 | trojan | @hacknashid | 2",
+                "🇯🇵 JP | 🟢 | trojan | @hope_net | 17",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
-                "🇷🇺 RU | 🟢 | trojan | @jokerrvpn | 41",
+                "🇷🇺 RU | 🟢 | trojan | @jokerrvpn | 36",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
                 "🇮🇷 IR | 🔴 | trojan | @mahanvpn | 0",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -144,7 +144,6 @@
             "interval": "10m",
             "outbounds": [
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
-                "🇱🇻 LV | 🔴 | trojan | @configshubplus | 18",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
@@ -154,8 +153,9 @@
                 "🇩🇪 DE | 🟢 | trojan | @free_serverir | 30",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇳🇱 NL | 🔴 | trojan | @hacknashid | 2",
+                "🇯🇵 JP | 🟢 | trojan | @hope_net | 17",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
-                "🇷🇺 RU | 🟢 | trojan | @jokerrvpn | 41",
+                "🇷🇺 RU | 🟢 | trojan | @jokerrvpn | 36",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
                 "🇮🇷 IR | 🔴 | trojan | @mahanvpn | 0",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -215,13 +215,6 @@
                     "fingerprint": "chrome"
                 }
             }
-        },
-        {
-            "tag": "🇱🇻 LV | 🔴 | trojan | @configshubplus | 18",
-            "type": "trojan",
-            "server": "91.197.3.168",
-            "server_port": 8443,
-            "password": "Aimer"
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
@@ -357,6 +350,22 @@
             }
         },
         {
+            "tag": "🇯🇵 JP | 🟢 | trojan | @hope_net | 17",
+            "type": "trojan",
+            "server": "37.128.255.108",
+            "server_port": 22332,
+            "password": "3bcaef9b-af27-4e23-8e18-91be0774ba89",
+            "tls": {
+                "enabled": true,
+                "server_name": "douyin.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
             "type": "trojan",
             "server": "15.236.173.146",
@@ -373,7 +382,7 @@
             }
         },
         {
-            "tag": "🇷🇺 RU | 🟢 | trojan | @jokerrvpn | 41",
+            "tag": "🇷🇺 RU | 🟢 | trojan | @jokerrvpn | 36",
             "type": "trojan",
             "server": "176.32.39.29",
             "server_port": 443,

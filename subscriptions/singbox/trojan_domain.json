@@ -89,13 +89,14 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇨🇦 CA | 🔴 | trojan | @NamiraNet | 65",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 18",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 10",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
@@ -119,13 +120,14 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇨🇦 CA | 🔴 | trojan | @NamiraNet | 65",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 18",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 10",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
@@ -151,6 +153,20 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇨🇦 CA | 🔴 | trojan | @NamiraNet | 65",
+            "type": "trojan",
+            "server": "ssrsub.cloudflare.182682.xyz",
+            "server_port": 8443,
+            "password": "67828a6e-0144-4e57-8169-2447a3dd2e61",
+            "transport": {
+                "type": "ws",
+                "path": "/profile/telegram@ssrsub",
+                "headers": {
+                    "Host": "cdn-node-oss-99.paofu.de"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @armodchannel | 59",
@@ -268,7 +284,7 @@
             }
         },
         {
-            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 18",
+            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 10",
             "type": "trojan",
             "server": "13c2c931-swin40-swy6li-tni2.cu.plebai.net",
             "server_port": 15229,
