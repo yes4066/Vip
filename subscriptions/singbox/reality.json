@@ -4,100 +4,91 @@
 //support-url: https://t.me/yebekhe
 //profile-web-page-url: ithub.com/itsyebekhe/PSG
 {
-    "log": {
-        "disabled": false,
-        "level": "info",
-        "timestamp": true
-    },
-    "experimental": {
-        "clash_api": {
-            "external_controller": "127.0.0.1:9090",
-            "external_ui": "metacubexd",
-            "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-            "external_ui_download_detour": "direct",
-            "default_mode": "rule"
-        },
-        "cache_file": {
-            "enabled": true,
-            "path": "cache.db",
-            "store_fakeip": false,
-            "store_rdrc": false,
-            "rdrc_timeout": "7d"
-        }
-    },
     "dns": {
-        "servers": [
-            {
-                "address": "https://1.1.1.1/dns-query",
-                "address_resolver": "dns-local",
-                "detour": "Proxy",
-                "strategy": "ipv4_only",
-                "tag": "dns-remote"
-            },
-            {
-                "address": "78.157.42.100",
-                "address_resolver": "dns-local",
-                "detour": "direct",
-                "strategy": "ipv4_only",
-                "tag": "dns-direct"
-            },
-            {
-                "address": "8.8.8.8",
-                "detour": "direct",
-                "tag": "dns-local"
-            },
-            {
-                "address": "rcode://success",
-                "tag": "dns-block"
-            }
-        ],
+        "final": "local-dns",
         "rules": [
             {
-                "domain": [],
+                "action": "route",
+                "clash_mode": "Global",
+                "server": "proxy-dns",
+                "source_ip_cidr": [
+                    "172.19.0.0/30",
+                    "fdfe:dcba:9876::1/126"
+                ]
+            },
+            {
+                "action": "route",
+                "server": "proxy-dns",
+                "source_ip_cidr": [
+                    "172.19.0.0/30",
+                    "fdfe:dcba:9876::1/126"
+                ]
+            },
+            {
+                "action": "route",
+                "clash_mode": "Direct",
+                "server": "direct-dns"
+            },
+            {
+                "action": "route",
                 "rule_set": [
                     "geosite-ir"
                 ],
-                "server": "dns-direct"
-            },
-            {
-                "disable_cache": true,
-                "rule_set": [
-                    "geosite-category-ads-all",
-                    "geosite-malware",
-                    "geosite-phishing",
-                    "geosite-cryptominers"
-                ],
-                "server": "dns-block"
-            },
-            {
-                "outbound": "any",
-                "server": "dns-direct"
+                "server": "direct-dns"
             }
         ],
-        "independent_cache": true
+        "servers": [
+            {
+                "address": "tcp://1.1.1.1",
+                "address_resolver": "local-dns",
+                "detour": "proxy",
+                "tag": "proxy-dns"
+            },
+            {
+                "address": "local",
+                "detour": "direct",
+                "tag": "local-dns"
+            },
+            {
+                "address": "tcp://8.8.8.8",
+                "detour": "direct",
+                "tag": "direct-dns"
+            }
+        ],
+        "strategy": "prefer_ipv4"
     },
     "inbounds": [
         {
-            "type": "tun",
-            "tag": "tun-in",
-            "domain_strategy": "ipv4_only",
-            "interface_name": "sing-tun",
-            "inet4_address": "172.19.0.1/30",
-            "mtu": 1492,
+            "address": [
+                "172.19.0.1/30",
+                "fdfe:dcba:9876::1/126"
+            ],
             "auto_route": true,
-            "strict_route": true,
-            "stack": "gvisor",
-            "endpoint_independent_nat": true,
-            "sniff": true,
-            "sniff_override_destination": false
+            "endpoint_independent_nat": false,
+            "mtu": 9000,
+            "platform": {
+                "http_proxy": {
+                    "enabled": true,
+                    "server": "127.0.0.1",
+                    "server_port": 2080
+                }
+            },
+            "stack": "system",
+            "strict_route": false,
+            "type": "tun"
+        },
+        {
+            "listen": "127.0.0.1",
+            "listen_port": 2080,
+            "type": "mixed",
+            "users": []
         }
     ],
     "outbounds": [
         {
-            "tag": "Proxy",
-            "type": "selector",
             "outbounds": [
-                "URL-TEST",
+                "auto",
+                "direct",
                 "❔ XX | 🟢 | vless | @Fr33C0nfig | 51",
                 "🇩🇪 DE | 🟢 | vless | @aminaqafarzane | 12",
                 "🇩🇪 DE | 🟢 | vless | @antifilterjadid | 1",
@@ -112,7 +103,6 @@
                 "🇺🇦 UA | 🟢 | vless | @cook_vpn | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
-                "🇩🇪 DE | 🟢 | vless | @entrynet | 19",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 10",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 98",
                 "🇮🇷 IR | 🟢 | vless | @filter_breaker | 99",
@@ -140,8 +130,8 @@
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 15",
                 "❔ XX | 🟢 | vless | @mtpv2ray | 7",
+                "🇮🇷 IR | 🟢 | vless | @netmellianti | 14",
                 "🇮🇷 IR | 🟢 | vless | @netmellianti | 15",
-                "🇮🇷 IR | 🟢 | vless | @netmellianti | 16",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇩🇪 DE | 🟢 | vless | @nofiltering2 | 19",
@@ -163,16 +153,11 @@
                 "🇩🇪 DE | 🟢 | vless | @v2ray_sub | 0",
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 4",
-                "🇦🇪 AE | 🟢 | vless | @v2rayng_fars | 8",
+                "🇦🇪 AE | 🟢 | vless | @v2rayng_fars | 6",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
-                "🇩🇪 DE | 🟢 | vless | @v2rayweb | 13",
-                "🇫🇮 FI | 🟢 | vless | @v2rayweb | 14",
-                "🇫🇮 FI | 🟢 | vless | @v2rayweb | 15",
-                "🇫🇮 FI | 🟢 | vless | @v2rayweb | 16",
-                "🇫🇮 FI | 🟢 | vless | @v2rayweb | 17",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "🇮🇷 IR | 🟢 | vless | @v2reay | 11",
@@ -200,7 +185,6 @@
                 "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @ai_duet | 4",
                 "🇫🇮 FI | 🟢 | vless | @azarbayjab1 | 38",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 77",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -219,13 +203,10 @@
                 "🇩🇪 DE | 🟢 | vless | @freenapsternetv | 2",
                 "🇵🇱 PL | 🟢 | vless | @freenapsternetv | 4",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
-                "🇪🇪 EE | 🟢 | vless | @getconfigir | 14",
-                "🇫🇷 FR | 🟢 | vless | @getconfigir | 15",
                 "🇩🇪 DE | 🟢 | vless | @goldenshiinevpn | 10",
                 "🇩🇪 DE | 🟢 | vless | @goodbyefiltering | 3",
                 "🇩🇪 DE | 🟢 | vless | @goodbyefiltering | 4",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇺🇸 US | 🟢 | vless | @hope_net | 18",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 4",
                 "🇩🇪 DE | 🟢 | vless | @imhdiyvp | 8",
@@ -242,7 +223,7 @@
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 1",
                 "🇺🇸 US | 🟢 | vless | @kkkkkoabvbbvbvv | 10",
-                "🇩🇪 DE | 🟢 | vless | @mahan_ping | 9",
+                "🇩🇪 DE | 🟢 | vless | @mahan_ping | 8",
                 "🇫🇷 FR | 🟢 | vless | @manstervpn | 71",
                 "🇩🇪 DE | 🟢 | vless | @mastervpnshop1 | 14",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
@@ -254,9 +235,8 @@
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 4",
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 5",
-                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 13",
-                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 14",
                 "🇷🇺 RU | 🟢 | vless | @proxyfn | 16",
+                "🇪🇪 EE | 🟢 | vless | @proxygodratmand | 9",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇦🇹 AT | 🟢 | vless | @rnrifci | 2",
                 "🇦🇹 AT | 🟢 | vless | @rnrifci | 4",
@@ -270,11 +250,12 @@
                 "🇫🇷 FR | 🟢 | vless | @v2ray_one1 | 13",
                 "🇸🇪 SE | 🟢 | vless | @v2ray_sos | 0",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_vmes | 14",
+                "🇺🇸 US | 🟢 | vless | @v2raych | 18",
                 "🇸🇪 SE | 🟢 | vless | @v2rayexpress | 6",
                 "🇸🇬 SG | 🟢 | vless | @v2rayexpress | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2rayexpress | 8",
                 "🇪🇸 ES | 🟢 | vless | @v2rayexpress | 9",
-                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 5",
+                "🇫🇷 FR | 🟢 | vless | @v2rayng_fars | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngconfings | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
                 "🇩🇪 DE | 🟢 | vless | @v2rayo7ybv67i76 | 13",
@@ -288,7 +269,7 @@
                 "🇷🇺 RU | 🟢 | vless | @vipnetmeli | 1",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇹🇷 TR | 🟢 | vless | @vmesc | 13",
+                "🇹🇷 TR | 🟢 | vless | @vmesc | 12",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 7",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 9",
                 "🇫🇮 FI | 🟢 | vless | @vpn_ocean | 0",
@@ -299,6 +280,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vpnkafing | 1",
                 "🇫🇷 FR | 🟢 | vless | @vpnpacket | 3",
                 "🇫🇷 FR | 🟢 | vless | @vpnpacket | 4",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
                 "🇺🇸 US | 🟢 | vless | @vpnservergprc | 0",
                 "🇺🇸 US | 🟢 | vless | @vpnservergprc | 1",
                 "🇺🇸 US | 🟢 | vless | @vpnservergprc | 2",
@@ -314,11 +296,11 @@
                 "❔ XX | 🟢 | vless | @kesslervpn | 2",
                 "❔ XX | 🟢 | vless | @vpnvg | 10"
             ],
-            "interrupt_exist_connections": false
+            "tag": "proxy",
+            "type": "selector"
         },
         {
-            "tag": "URL-TEST",
-            "type": "urltest",
+            "interval": "10m",
             "outbounds": [
                 "❔ XX | 🟢 | vless | @Fr33C0nfig | 51",
                 "🇩🇪 DE | 🟢 | vless | @aminaqafarzane | 12",
@@ -334,7 +316,6 @@
                 "🇺🇦 UA | 🟢 | vless | @cook_vpn | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
-                "🇩🇪 DE | 🟢 | vless | @entrynet | 19",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 10",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 98",
                 "🇮🇷 IR | 🟢 | vless | @filter_breaker | 99",
@@ -362,8 +343,8 @@
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 15",
                 "❔ XX | 🟢 | vless | @mtpv2ray | 7",
+                "🇮🇷 IR | 🟢 | vless | @netmellianti | 14",
                 "🇮🇷 IR | 🟢 | vless | @netmellianti | 15",
-                "🇮🇷 IR | 🟢 | vless | @netmellianti | 16",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇩🇪 DE | 🟢 | vless | @nofiltering2 | 19",
@@ -385,16 +366,11 @@
                 "🇩🇪 DE | 🟢 | vless | @v2ray_sub | 0",
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 4",
-                "🇦🇪 AE | 🟢 | vless | @v2rayng_fars | 8",
+                "🇦🇪 AE | 🟢 | vless | @v2rayng_fars | 6",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
-                "🇩🇪 DE | 🟢 | vless | @v2rayweb | 13",
-                "🇫🇮 FI | 🟢 | vless | @v2rayweb | 14",
-                "🇫🇮 FI | 🟢 | vless | @v2rayweb | 15",
-                "🇫🇮 FI | 🟢 | vless | @v2rayweb | 16",
-                "🇫🇮 FI | 🟢 | vless | @v2rayweb | 17",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "🇮🇷 IR | 🟢 | vless | @v2reay | 11",
@@ -422,7 +398,6 @@
                 "🇫🇮 FI | 🟢 | vless | @xyzquantvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @ai_duet | 4",
                 "🇫🇮 FI | 🟢 | vless | @azarbayjab1 | 38",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 77",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -441,13 +416,10 @@
                 "🇩🇪 DE | 🟢 | vless | @freenapsternetv | 2",
                 "🇵🇱 PL | 🟢 | vless | @freenapsternetv | 4",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
-                "🇪🇪 EE | 🟢 | vless | @getconfigir | 14",
-                "🇫🇷 FR | 🟢 | vless | @getconfigir | 15",
                 "🇩🇪 DE | 🟢 | vless | @goldenshiinevpn | 10",
                 "🇩🇪 DE | 🟢 | vless | @goodbyefiltering | 3",
                 "🇩🇪 DE | 🟢 | vless | @goodbyefiltering | 4",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇺🇸 US | 🟢 | vless | @hope_net | 18",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 4",
                 "🇩🇪 DE | 🟢 | vless | @imhdiyvp | 8",
@@ -464,7 +436,7 @@
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 1",
                 "🇺🇸 US | 🟢 | vless | @kkkkkoabvbbvbvv | 10",
-                "🇩🇪 DE | 🟢 | vless | @mahan_ping | 9",
+                "🇩🇪 DE | 🟢 | vless | @mahan_ping | 8",
                 "🇫🇷 FR | 🟢 | vless | @manstervpn | 71",
                 "🇩🇪 DE | 🟢 | vless | @mastervpnshop1 | 14",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
@@ -476,9 +448,8 @@
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 4",
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 5",
-                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 13",
-                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 14",
                 "🇷🇺 RU | 🟢 | vless | @proxyfn | 16",
+                "🇪🇪 EE | 🟢 | vless | @proxygodratmand | 9",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇦🇹 AT | 🟢 | vless | @rnrifci | 2",
                 "🇦🇹 AT | 🟢 | vless | @rnrifci | 4",
@@ -492,11 +463,12 @@
                 "🇫🇷 FR | 🟢 | vless | @v2ray_one1 | 13",
                 "🇸🇪 SE | 🟢 | vless | @v2ray_sos | 0",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_vmes | 14",
+                "🇺🇸 US | 🟢 | vless | @v2raych | 18",
                 "🇸🇪 SE | 🟢 | vless | @v2rayexpress | 6",
                 "🇸🇬 SG | 🟢 | vless | @v2rayexpress | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2rayexpress | 8",
                 "🇪🇸 ES | 🟢 | vless | @v2rayexpress | 9",
-                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 5",
+                "🇫🇷 FR | 🟢 | vless | @v2rayng_fars | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngconfings | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
                 "🇩🇪 DE | 🟢 | vless | @v2rayo7ybv67i76 | 13",
@@ -510,7 +482,7 @@
                 "🇷🇺 RU | 🟢 | vless | @vipnetmeli | 1",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇹🇷 TR | 🟢 | vless | @vmesc | 13",
+                "🇹🇷 TR | 🟢 | vless | @vmesc | 12",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 7",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 9",
                 "🇫🇮 FI | 🟢 | vless | @vpn_ocean | 0",
@@ -521,6 +493,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vpnkafing | 1",
                 "🇫🇷 FR | 🟢 | vless | @vpnpacket | 3",
                 "🇫🇷 FR | 🟢 | vless | @vpnpacket | 4",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
                 "🇺🇸 US | 🟢 | vless | @vpnservergprc | 0",
                 "🇺🇸 US | 🟢 | vless | @vpnservergprc | 1",
                 "🇺🇸 US | 🟢 | vless | @vpnservergprc | 2",
@@ -536,22 +509,14 @@
                 "❔ XX | 🟢 | vless | @kesslervpn | 2",
                 "❔ XX | 🟢 | vless | @vpnvg | 10"
             ],
-            "url": "https://detectportal.firefox.com/success.txt",
-            "interval": "5m",
+            "tag": "auto",
             "tolerance": 50,
-            "interrupt_exist_connections": false
+            "type": "urltest",
+            "url": "http://www.gstatic.com/generate_204"
         },
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "block",
-            "type": "block"
-        },
-        {
-            "tag": "dns-out",
-            "type": "dns"
         },
         {
             "tag": "❔ XX | 🟢 | vless | @Fr33C0nfig | 51",
@@ -888,29 +853,6 @@
                     "enabled": true,
                     "public_key": "QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U",
                     "short_id": "1eaf5214"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @entrynet | 19",
-            "type": "vless",
-            "server": "real-all3.sdcards.ir",
-            "server_port": 8520,
-            "uuid": "0e1518fc-b8d3-421b-96fe-514976d3b028",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "real-all3.sdcards.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": null
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "OJ0wA5wp55uZdD16dutlTZvx1x-rbMMXmiO9D_MMCHI",
-                    "short_id": ""
                 }
             }
         },
@@ -1595,7 +1537,7 @@
             }
         },
         {
-            "tag": "🇮🇷 IR | 🟢 | vless | @netmellianti | 15",
+            "tag": "🇮🇷 IR | 🟢 | vless | @netmellianti | 14",
             "type": "vless",
             "server": "Host.iranservers.space",
             "server_port": 1030,
@@ -1618,7 +1560,7 @@
             }
         },
         {
-            "tag": "🇮🇷 IR | 🟢 | vless | @netmellianti | 16",
+            "tag": "🇮🇷 IR | 🟢 | vless | @netmellianti | 15",
             "type": "vless",
             "server": "Host.iranservers.space",
             "server_port": 1040,
@@ -2148,7 +2090,7 @@
             }
         },
         {
-            "tag": "🇦🇪 AE | 🟢 | vless | @v2rayng_fars | 8",
+            "tag": "🇦🇪 AE | 🟢 | vless | @v2rayng_fars | 6",
             "type": "vless",
             "server": "taiger.raheaiande.ir",
             "server_port": 38505,
@@ -2263,121 +2205,6 @@
                     "enabled": true,
                     "public_key": "bf0D8kLkfGVYP8NVpiOGKcm-wutxlcLXua3760tRgkI",
                     "short_id": "adf6b90c"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayweb | 13",
-            "type": "vless",
-            "server": "hound.origamimarketings.com",
-            "server_port": 7777,
-            "uuid": "905c78d8-a213-4b15-b4ae-e1b5a8fdde45",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
-                    "short_id": "42c0b628ba6a42a9"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @v2rayweb | 14",
-            "type": "vless",
-            "server": "wolf.origamimarketings.com",
-            "server_port": 8888,
-            "uuid": "905c78d8-a213-4b15-b4ae-e1b5a8fdde45",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
-                    "short_id": "42c0b628ba6a42a9"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @v2rayweb | 15",
-            "type": "vless",
-            "server": "canine.origamimarketings.com",
-            "server_port": 9999,
-            "uuid": "905c78d8-a213-4b15-b4ae-e1b5a8fdde45",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
-                    "short_id": "42c0b628ba6a42a9"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @v2rayweb | 16",
-            "type": "vless",
-            "server": "howl.origamimarketings.com",
-            "server_port": 6666,
-            "uuid": "905c78d8-a213-4b15-b4ae-e1b5a8fdde45",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
-                    "short_id": "42c0b628ba6a42a9"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @v2rayweb | 17",
-            "type": "vless",
-            "server": "k9.origamimarketings.com",
-            "server_port": 5555,
-            "uuid": "905c78d8-a213-4b15-b4ae-e1b5a8fdde45",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
-                    "short_id": "42c0b628ba6a42a9"
                 }
             }
         },
@@ -3027,29 +2854,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 77",
-            "type": "vless",
-            "server": "3.132.216.174",
-            "server_port": 4433,
-            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "stackoverflow.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "random"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
-                    "short_id": "f785b38130e64177"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @configasli | 2",
             "type": "vless",
             "server": "5.75.188.7",
@@ -3488,52 +3292,6 @@
             }
         },
         {
-            "tag": "🇪🇪 EE | 🟢 | vless | @getconfigir | 14",
-            "type": "vless",
-            "server": "93.123.39.31",
-            "server_port": 443,
-            "uuid": "00e92112-b43b-4757-a56a-fa7b53ad3419",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "cdnjs.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg",
-                    "short_id": "0a6ba2716a409da6"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇷 FR | 🟢 | vless | @getconfigir | 15",
-            "type": "vless",
-            "server": "185.193.89.61",
-            "server_port": 443,
-            "uuid": "00e92112-b43b-4757-a56a-fa7b53ad3419",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "cdnjs.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg",
-                    "short_id": "0a6ba2716a409da6"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @goldenshiinevpn | 10",
             "type": "vless",
             "server": "172.104.148.48",
@@ -3630,29 +3388,6 @@
                     "enabled": true,
                     "public_key": "YqHW8a4iAc1SZYpTrFVoOQg1F3yAdX1tWXuROZUCsEU",
                     "short_id": "6ba85179e30d4fc2"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @hope_net | 18",
-            "type": "vless",
-            "server": "52.14.188.107",
-            "server_port": 4433,
-            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "stackoverflow.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "random"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
-                    "short_id": "f785b38130e64177"
                 }
             }
         },
@@ -4045,7 +3780,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @mahan_ping | 9",
+            "tag": "🇩🇪 DE | 🟢 | vless | @mahan_ping | 8",
             "type": "vless",
             "server": "94.74.164.71",
             "server_port": 3443,
@@ -4348,52 +4083,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 13",
-            "type": "vless",
-            "server": "91.99.89.22",
-            "server_port": 2070,
-            "uuid": "Telegram-SRCVPN-SRCVPN-SRCVPN",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "HCtUEm_1Cd2n2q9w46sAcsOG-5ZPjsV66IsWE3at9gc",
-                    "short_id": "24"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 14",
-            "type": "vless",
-            "server": "91.99.89.22",
-            "server_port": 2080,
-            "uuid": "Telegram-SRCVPN-SRCVPN-SRCVPN",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "HCtUEm_1Cd2n2q9w46sAcsOG-5ZPjsV66IsWE3at9gc",
-                    "short_id": "24"
-                }
-            }
-        },
-        {
             "tag": "🇷🇺 RU | 🟢 | vless | @proxyfn | 16",
             "type": "vless",
             "server": "5.42.77.71",
@@ -4413,6 +4102,29 @@
                     "enabled": true,
                     "public_key": "3q2rJ0IljIdNL0YvlAy7TwqtnPCr1woQv9KjoHjG3gE",
                     "short_id": "366e5433f6196a6f"
+                }
+            }
+        },
+        {
+            "tag": "🇪🇪 EE | 🟢 | vless | @proxygodratmand | 9",
+            "type": "vless",
+            "server": "93.123.39.31",
+            "server_port": 443,
+            "uuid": "00e92112-b43b-4757-a56a-fa7b53ad3419",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "cdnjs.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg",
+                    "short_id": "0a6ba2716a409da6"
                 }
             }
         },
@@ -4736,6 +4448,29 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | vless | @v2raych | 18",
+            "type": "vless",
+            "server": "3.12.83.113",
+            "server_port": 4433,
+            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "random"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
+                    "short_id": "f785b38130e64177"
+                }
+            }
+        },
+        {
             "tag": "🇸🇪 SE | 🟢 | vless | @v2rayexpress | 6",
             "type": "vless",
             "server": "70.34.194.125",
@@ -4835,25 +4570,25 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 5",
+            "tag": "🇫🇷 FR | 🟢 | vless | @v2rayng_fars | 7",
             "type": "vless",
-            "server": "91.99.115.254",
-            "server_port": 9999,
-            "uuid": "e96adc51-70f2-451d-83c5-77094b9d680f",
+            "server": "185.193.89.61",
+            "server_port": 443,
+            "uuid": "00e92112-b43b-4757-a56a-fa7b53ad3419",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "tgju.org",
+                "server_name": "cdnjs.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
-                    "short_id": "42c0b628ba6a42a9"
+                    "public_key": "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg",
+                    "short_id": "0a6ba2716a409da6"
                 }
             }
         },
@@ -5192,7 +4927,7 @@
             }
         },
         {
-            "tag": "🇹🇷 TR | 🟢 | vless | @vmesc | 13",
+            "tag": "🇹🇷 TR | 🟢 | vless | @vmesc | 12",
             "type": "vless",
             "server": "46.31.76.3",
             "server_port": 80,
@@ -5462,6 +5197,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@VPNPacket"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
+            "type": "vless",
+            "server": "91.99.89.22",
+            "server_port": 2080,
+            "uuid": "Telegram-SRCVPN-SRCVPN-SRCVPN",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "HCtUEm_1Cd2n2q9w46sAcsOG-5ZPjsV66IsWE3at9gc",
+                    "short_id": "24"
+                }
             }
         },
         {
@@ -5813,111 +5571,77 @@
     ],
     "route": {
         "auto_detect_interface": true,
-        "override_android_vpn": true,
-        "final": "Proxy",
-        "rules": [
-            {
-                "protocol": "dns",
-                "outbound": "dns-out"
-            },
-            {
-                "network": "udp",
-                "port": 443,
-                "outbound": "block"
-            },
-            {
-                "ip_is_private": true,
-                "outbound": "direct"
-            },
-            {
-                "domain_suffix": [
-                    ".ir"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "rule_set": [
-                    "geosite-category-ads-all",
-                    "geosite-malware",
-                    "geosite-phishing",
-                    "geosite-cryptominers",
-                    "geoip-malware",
-                    "geoip-phishing"
-                ],
-                "outbound": "block"
-            },
-            {
-                "rule_set": [
-                    "geoip-ir",
-                    "geosite-ir"
-                ],
-                "outbound": "direct"
-            }
-        ],
+        "final": "proxy",
         "rule_set": [
             {
+                "download_detour": "direct",
+                "format": "binary",
+                "tag": "geosite-ads",
+                "type": "remote",
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs"
+            },
+            {
+                "download_detour": "direct",
+                "format": "binary",
+                "tag": "geosite-private",
+                "type": "remote",
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs"
+            },
+            {
+                "download_detour": "direct",
+                "format": "binary",
                 "tag": "geosite-ir",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
-                "download_detour": "direct",
-                "update_interval": "1d"
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ir.srs"
             },
             {
-                "tag": "geosite-category-ads-all",
+                "download_detour": "direct",
+                "format": "binary",
+                "tag": "geoip-private",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
-                "download_detour": "direct",
-                "update_interval": "1d"
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs"
             },
             {
-                "tag": "geosite-malware",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
                 "download_detour": "direct",
-                "update_interval": "1d"
-            },
-            {
-                "tag": "geosite-phishing",
-                "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
-                "download_detour": "direct",
-                "update_interval": "1d"
-            },
-            {
-                "tag": "geosite-cryptominers",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
-                "download_detour": "direct",
-                "update_interval": "1d"
-            },
-            {
                 "tag": "geoip-ir",
                 "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
-                "download_detour": "direct",
-                "update_interval": "1d"
+                "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/ir.srs"
+            }
+        ],
+        "rules": [
+            {
+                "action": "sniff"
             },
             {
-                "tag": "geoip-malware",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
-                "download_detour": "direct",
-                "update_interval": "1d"
+                "action": "route",
+                "clash_mode": "Direct",
+                "outbound": "direct"
             },
             {
-                "tag": "geoip-phishing",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
-                "download_detour": "direct",
-                "update_interval": "1d"
+                "action": "route",
+                "clash_mode": "Global",
+                "outbound": "proxy"
+            },
+            {
+                "action": "hijack-dns",
+                "protocol": "dns"
+            },
+            {
+                "action": "route",
+                "outbound": "direct",
+                "rule_set": [
+                    "geoip-private",
+                    "geosite-private",
+                    "geosite-ir",
+                    "geoip-ir"
+                ]
+            },
+            {
+                "action": "reject",
+                "rule_set": [
+                    "geosite-ads"
+                ]
             }
         ]
     }
