@@ -91,6 +91,7 @@
                 "direct",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
+                "❔ XX | 🔴 | vless | @freevpnatm | 17",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 9",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 10",
@@ -119,6 +120,7 @@
             "outbounds": [
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
+                "❔ XX | 🔴 | vless | @freevpnatm | 17",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 9",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 10",
@@ -195,6 +197,31 @@
                     "enabled": true,
                     "public_key": "Uu4tcBEWuNn0SKnDk2Jy_o5Te2VA76M68hMlVYj9kiQ",
                     "short_id": "6412"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | vless | @freevpnatm | 17",
+            "type": "vless",
+            "server": "[2606:4700:3030::6815:2001]",
+            "server_port": 443,
+            "uuid": "6e5925c0-f39e-4449-93e9-2e2e9772b17b",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "[2606:4700:3030::6815:2001]",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "[2606:4700:3030::6815:2001]"
                 }
             }
         },

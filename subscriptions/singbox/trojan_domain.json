@@ -91,11 +91,12 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇩🇪 DE | 🔴 | trojan | @configshubplus | 17",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇸🇬 SG | 🔴 | trojan | @entrynet | 17",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 10",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
@@ -121,11 +122,12 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇩🇪 DE | 🔴 | trojan | @configshubplus | 17",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇸🇬 SG | 🔴 | trojan | @entrynet | 17",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 10",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
@@ -190,22 +192,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🔴 | trojan | @configshubplus | 17",
-            "type": "trojan",
-            "server": "golden-krill.treefrog761.one",
-            "server_port": 443,
-            "password": "3763495894587285504",
-            "tls": {
-                "enabled": true,
-                "server_name": "golden-krill.treefrog761.one",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
             "type": "trojan",
             "server": "production.tj.ojan.workers.dev",
@@ -225,6 +211,22 @@
                 "path": "/",
                 "headers": {
                     "Host": "production.tj.ojan.workers.dev"
+                }
+            }
+        },
+        {
+            "tag": "🇸🇬 SG | 🔴 | trojan | @entrynet | 17",
+            "type": "trojan",
+            "server": "us02.trojanyyds.xyz",
+            "server_port": 443,
+            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
+            "tls": {
+                "enabled": true,
+                "server_name": "us02.trojanyyds.xyz",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },
@@ -282,6 +284,13 @@
                     "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 10",
+            "type": "trojan",
+            "server": "13c2c931-swin40-swy6li-tni2.cu.plebai.net",
+            "server_port": 15229,
+            "password": "5e2f888c-68ef-11ef-96ca-f23c9164ca5d"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @iraniv2ray | 3",

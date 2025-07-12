@@ -90,7 +90,6 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 82",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
@@ -100,6 +99,8 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
+                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 14",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @vmesc | 17",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0",
@@ -110,7 +111,6 @@
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @srcvpn | 28",
                 "🇺🇸 US | 🔴 | vless | @trueproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @v2raymelliii | 6"
             ],
@@ -121,7 +121,6 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 82",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
@@ -131,6 +130,8 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
+                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 14",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @vmesc | 17",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0",
@@ -141,7 +142,6 @@
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @srcvpn | 28",
                 "🇺🇸 US | 🔴 | vless | @trueproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @v2raymelliii | 6"
             ],
@@ -160,15 +160,6 @@
             "server": "viop.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "7fa08b3d-86d8-4b14-92b3-4c56a83f027d",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 82",
-            "type": "vless",
-            "server": "vpconnect.ahadbala.ir",
-            "server_port": 80,
-            "uuid": "316caa7e-71d0-4bb1-8dba-6e8a16f7198a",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -259,6 +250,24 @@
             "server": "test.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "d4185486-d969-4ba6-b937-253a84bf892c",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
+            "type": "vless",
+            "server": "vpconnect.ahadbala.ir",
+            "server_port": 80,
+            "uuid": "316caa7e-71d0-4bb1-8dba-6e8a16f7198a",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 14",
+            "type": "vless",
+            "server": "vpconnect.ahadbala.ir",
+            "server_port": 80,
+            "uuid": "316caa7e-71d0-4bb1-8dba-6e8a16f7198a",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -377,15 +386,6 @@
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "qeshmserver",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @srcvpn | 28",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "259923b6-756d-4b33-9ea9-73e55378018a",
             "flow": "",
             "packet_encoding": "xudp"
         },

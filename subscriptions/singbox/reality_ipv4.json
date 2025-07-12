@@ -91,7 +91,7 @@
                 "direct",
                 "🇺🇸 US | 🟢 | vless | @ai_duet | 4",
                 "🇫🇮 FI | 🟢 | vless | @azarbayjab1 | 38",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 71",
+                "🇳🇱 NL | 🟢 | vless | @config_proxy | 71",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -176,6 +176,7 @@
                 "🇷🇺 RU | 🟢 | vless | @vipnetmeli | 1",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
+                "🇳🇱 NL | 🟢 | vless | @vistav2ray | 14",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 7",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 9",
                 "🇫🇮 FI | 🟢 | vless | @vpn_ocean | 0",
@@ -205,7 +206,7 @@
             "outbounds": [
                 "🇺🇸 US | 🟢 | vless | @ai_duet | 4",
                 "🇫🇮 FI | 🟢 | vless | @azarbayjab1 | 38",
-                "🇺🇸 US | 🟢 | vless | @config_proxy | 71",
+                "🇳🇱 NL | 🟢 | vless | @config_proxy | 71",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -290,6 +291,7 @@
                 "🇷🇺 RU | 🟢 | vless | @vipnetmeli | 1",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
+                "🇳🇱 NL | 🟢 | vless | @vistav2ray | 14",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 7",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 9",
                 "🇫🇮 FI | 🟢 | vless | @vpn_ocean | 0",
@@ -367,26 +369,30 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 71",
+            "tag": "🇳🇱 NL | 🟢 | vless | @config_proxy | 71",
             "type": "vless",
-            "server": "18.222.22.208",
-            "server_port": 4433,
-            "uuid": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
+            "server": "24.144.78.124",
+            "server_port": 4793,
+            "uuid": "79eea6c4-75f9-4fa3-95f2-fc86df949c64",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "stackoverflow.com",
+                "server_name": "refersion.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "random"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "tZn5Tdrk045zSTbBEzGwSV_LOdCZqEwT8c85pJOK_C0",
-                    "short_id": "f785b38130e64177"
+                    "public_key": "IfTrRXLeimq41Lwj2HqGHda1O9kI6OLt7T4yxTklciw",
+                    "short_id": "64176758f3181759"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Tok"
             }
         },
         {
@@ -2459,6 +2465,29 @@
                     "enabled": true,
                     "public_key": "Qdg7LVP5VmLr7xzv556ry5RNc3QaeAj4TwOUxndA23M",
                     "short_id": "e3f89b63"
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @vistav2ray | 14",
+            "type": "vless",
+            "server": "62.60.244.252",
+            "server_port": 25888,
+            "uuid": "301d049f-26d9-15ba-a83c-b1d5111d4444",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.microsoft.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "1wWJ_HJdLChMyEqb1agU0pQr26966K5SK4u7ehst-VQ",
+                    "short_id": "8c5f97c86a710a"
                 }
             }
         },
