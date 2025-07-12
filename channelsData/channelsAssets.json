@@ -352,7 +352,6 @@
     "config_proxy": {
         "types": [
             "vless",
-            "trojan",
             "vmess"
         ],
         "title": "Proxy | V2ray | Config | Vpn | Hiddify | Nekobox | Segaro | پروکسی | فیلترشکن | ایرانسل | همراه اول | رایتل | سامانتل | مخابرات|",
@@ -434,9 +433,9 @@
     "configshubplus": {
         "types": [
             "vless",
-            "trojan",
             "ss",
-            "vmess"
+            "vmess",
+            "trojan"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/configshubplus.jpg"
@@ -1073,8 +1072,8 @@
     },
     "freeiranianv2rey": {
         "types": [
-            "vless",
             "ss",
+            "vless",
             "vmess"
         ],
         "title": "FreeV2rey4all وی توری رایگان ایرانی",
@@ -1377,10 +1376,8 @@
     },
     "hope_net": {
         "types": [
-            "ss",
             "vless",
-            "trojan",
-            "vmess"
+            "ss"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1457,10 +1454,10 @@
     },
     "ip_cf_config": {
         "types": [
+            "vless",
             "vmess",
             "ss",
-            "trojan",
-            "vless"
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -2122,8 +2119,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -3336,9 +3333,8 @@
     },
     "v2ray_extractor": {
         "types": [
-            "ss",
             "vless",
-            "trojan"
+            "ss"
         ],
         "title": "V2ray Extractor",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_extractor.jpg"
@@ -3360,9 +3356,8 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vless",
-            "vmess",
             "ss",
+            "vmess",
             "trojan"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
@@ -3489,6 +3484,7 @@
     "v2raych": {
         "types": [
             "vless",
+            "ss",
             "vmess",
             "trojan"
         ],
@@ -3903,8 +3899,7 @@
     },
     "v2rayweb": {
         "types": [
-            "vless",
-            "trojan"
+            "vless"
         ],
         "title": "V2ray | VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayweb.jpg"
@@ -4313,13 +4308,6 @@
         ],
         "title": "Securit_y_Breach",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vpn_proxy_v2ry.jpg"
-    },
-    "vpn_storm": {
-        "types": [
-            "vless"
-        ],
-        "title": "STORM VPN ʀx",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vpn_storm.jpg"
     },
     "vpn_zvpn": {
         "types": [
