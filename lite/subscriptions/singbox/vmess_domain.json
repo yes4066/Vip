@@ -102,8 +102,6 @@
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇺🇸 US | 🟢 | vmess | @freevpnatm | 19",
-                "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 14",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -128,7 +126,6 @@
                 "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
                 "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
                 "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4",
-                "🇺🇸 US | 🔴 | vmess | @tawanaclub | 2",
                 "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
                 "🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7",
                 "🇺🇸 US | 🟢 | vmess | @v2ray_fd | 0",
@@ -139,8 +136,8 @@
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇬🇧 GB | 🔴 | vmess | @vistav2ray | 15",
                 "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
+                "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 16",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
@@ -164,8 +161,6 @@
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇺🇸 US | 🟢 | vmess | @freevpnatm | 19",
-                "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 14",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -190,7 +185,6 @@
                 "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
                 "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
                 "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 4",
-                "🇺🇸 US | 🔴 | vmess | @tawanaclub | 2",
                 "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
                 "🇩🇪 DE | 🔴 | vmess | @v2ray4win | 7",
                 "🇺🇸 US | 🟢 | vmess | @v2ray_fd | 0",
@@ -201,8 +195,8 @@
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇬🇧 GB | 🔴 | vmess | @vistav2ray | 15",
                 "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
+                "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 16",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3"
@@ -411,47 +405,6 @@
             "transport": {
                 "type": "ws",
                 "path": "/telegram-id-@privatevpns",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vmess | @freevpnatm | 19",
-            "type": "vmess",
-            "server": "rak2ding.89060004.xyz",
-            "server_port": 2096,
-            "uuid": "350e2b01-d410-44a6-90ba-6483f1062972",
-            "security": "auto",
-            "alter_id": 0,
-            "tls": {
-                "enabled": true,
-                "server_name": "rak2d1.89060004.xyz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "rak2d1.89060004.xyz"
-                }
-            }
-        },
-        {
-            "tag": "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 14",
-            "type": "vmess",
-            "server": "51.79.102.253",
-            "server_port": 80,
-            "uuid": "58fe1542-5290-40ad-815a-77707a81afe5",
-            "security": "auto",
-            "alter_id": 0,
-            "transport": {
-                "type": "ws",
-                "path": "/IOebhLMhl1CTbFHbL95myfRX2",
                 "headers": {
                     "Host": ""
                 }
@@ -813,22 +766,6 @@
             "alter_id": 0
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vmess | @tawanaclub | 2",
-            "type": "vmess",
-            "server": "173.245.59.168",
-            "server_port": 8080,
-            "uuid": "27848739-7e62-4138-9fd3-938a63964b6b",
-            "security": "auto",
-            "alter_id": 0,
-            "transport": {
-                "type": "ws",
-                "path": "/KTR",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
             "tag": "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
             "type": "vmess",
             "server": "199.247.30.45",
@@ -988,15 +925,6 @@
             "alter_id": 0
         },
         {
-            "tag": "🇬🇧 GB | 🔴 | vmess | @vistav2ray | 15",
-            "type": "vmess",
-            "server": "englomiandoascnd.aslanmaslan.com",
-            "server_port": 8081,
-            "uuid": "5cc423e9-2d7d-4cb8-81e4-67636e375b7c",
-            "security": "auto",
-            "alter_id": 0
-        },
-        {
             "tag": "🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3",
             "type": "vmess",
             "server": "193.233.133.59",
@@ -1004,6 +932,31 @@
             "uuid": "0dc0d22c-68e5-440a-9465-97cad8d1cf33",
             "security": "auto",
             "alter_id": 0
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 16",
+            "type": "vmess",
+            "server": "57.129.24.125",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "57.129.24.125",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkvws",
+                "headers": {
+                    "Host": "57.129.24.125"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",

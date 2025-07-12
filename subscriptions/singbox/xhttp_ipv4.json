@@ -112,8 +112,10 @@
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
+                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 11",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇳🇱 NL | 🟢 | vless | @trueproxy | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_one1 | 9",
                 "🇸🇪 SE | 🟢 | vless | @v2ray_sos | 0",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_vmes | 14",
@@ -155,8 +157,10 @@
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
+                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 11",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇳🇱 NL | 🟢 | vless | @trueproxy | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_one1 | 9",
                 "🇸🇪 SE | 🟢 | vless | @v2ray_sos | 0",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_vmes | 14",
@@ -437,6 +441,15 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 11",
+            "type": "vless",
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "a9f920aa-10f7-4fa5-857b-964e18c8c405",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
             "type": "vless",
             "server": "147.182.183.207",
@@ -467,6 +480,29 @@
             "uuid": "qeshmserver",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @trueproxy | 6",
+            "type": "vless",
+            "server": "45.77.137.98",
+            "server_port": 8880,
+            "uuid": "2345a78a-4900-4819-a11a-721c1fdd4b59",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "cp7.cloudflare.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "mlPSdTwmHcAaNeQICN46i7YauUB8WPdJXzp2vb_JXWQ",
+                    "short_id": "8b"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @v2ray_one1 | 9",
