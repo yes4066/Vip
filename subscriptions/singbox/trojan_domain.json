@@ -91,11 +91,10 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇩🇪 DE | 🔴 | trojan | @configshubplus | 12",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+                "🇯🇵 JP | 🔴 | trojan | @hope_net | 15",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
@@ -122,11 +121,10 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇩🇪 DE | 🔴 | trojan | @configshubplus | 12",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+                "🇯🇵 JP | 🔴 | trojan | @hope_net | 15",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
@@ -188,22 +186,6 @@
                 "path": "/trojan-ntls",
                 "headers": {
                     "Host": "asia.artunnel57.host"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | trojan | @configshubplus | 12",
-            "type": "trojan",
-            "server": "nearby-sheep.goat627.mom",
-            "server_port": 443,
-            "password": "3763495894587285504",
-            "tls": {
-                "enabled": true,
-                "server_name": "nearby-sheep.goat627.mom",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },
@@ -270,14 +252,14 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+            "tag": "🇯🇵 JP | 🔴 | trojan | @hope_net | 15",
             "type": "trojan",
-            "server": "nextstepcareer.online",
+            "server": "tw02.trojanyyds.xyz",
             "server_port": 443,
-            "password": "4732adfa16c6450bbef87264e41332db",
+            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
             "tls": {
                 "enabled": true,
-                "server_name": "nextstepcareer.online",
+                "server_name": "tw02.trojanyyds.xyz",
                 "insecure": true,
                 "utls": {
                     "enabled": true,

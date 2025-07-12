@@ -90,8 +90,6 @@
                 "auto",
                 "direct",
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
-                "🇳🇱 NL | 🟢 | ss | @NamiraNet | 65",
-                "🇺🇸 US | 🟢 | ss | @NamiraNet | 66",
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @club_profsor | 15",
@@ -99,6 +97,8 @@
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
                 "🇬🇧 GB | 🟢 | ss | @custom_v2ray | 1",
+                "🇳🇱 NL | 🟢 | ss | @dalton_ping | 11",
+                "🇨🇭 CH | 🟢 | ss | @dalton_ping | 12",
                 "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 15",
                 "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 18",
                 "🇬🇧 GB | 🟢 | ss | @expressvpn_420 | 10",
@@ -142,8 +142,6 @@
             "interval": "10m",
             "outbounds": [
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
-                "🇳🇱 NL | 🟢 | ss | @NamiraNet | 65",
-                "🇺🇸 US | 🟢 | ss | @NamiraNet | 66",
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @club_profsor | 15",
@@ -151,6 +149,8 @@
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
                 "🇬🇧 GB | 🟢 | ss | @custom_v2ray | 1",
+                "🇳🇱 NL | 🟢 | ss | @dalton_ping | 11",
+                "🇨🇭 CH | 🟢 | ss | @dalton_ping | 12",
                 "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 15",
                 "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 18",
                 "🇬🇧 GB | 🟢 | ss | @expressvpn_420 | 10",
@@ -203,22 +203,6 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "69MUii7VDwMqh7Hz"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | ss | @NamiraNet | 65",
-            "type": "shadowsocks",
-            "server": "h110vpnnl.outlinekeys.net",
-            "server_port": 52571,
-            "method": "chacha20-ietf-poly1305",
-            "password": "jXfsyaUTwZxGuaSLwIky3S"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | ss | @NamiraNet | 66",
-            "type": "shadowsocks",
-            "server": "h110vpnus.outlinekeys.net",
-            "server_port": 9483,
-            "method": "chacha20-ietf-poly1305",
-            "password": "nLwAl3svNCBPtG9I2FrVYI"
         },
         {
             "tag": "🇺🇸 US | 🟢 | ss | @chestertm | 10",
@@ -275,6 +259,22 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "7ivrGEHY88sQk3DP"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | ss | @dalton_ping | 11",
+            "type": "shadowsocks",
+            "server": "h110vpnnl.outlinekeys.net",
+            "server_port": 52571,
+            "method": "chacha20-ietf-poly1305",
+            "password": "jXfsyaUTwZxGuaSLwIky3S"
+        },
+        {
+            "tag": "🇨🇭 CH | 🟢 | ss | @dalton_ping | 12",
+            "type": "shadowsocks",
+            "server": "h110vpnch.outlinekeys.net",
+            "server_port": 4248,
+            "method": "chacha20-ietf-poly1305",
+            "password": "SasawZo4g7WaqlK3a2mCol"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 15",

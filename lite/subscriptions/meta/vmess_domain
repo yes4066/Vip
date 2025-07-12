@@ -63,7 +63,6 @@ proxies:
   - {"name":"🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13","type":"vmess","server":"144.48.81.134","port":443,"cipher":"auto","uuid":"73ed2e06-4833-4626-9746-b056668a2101","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0","type":"vmess","server":"176.120.17.67","port":42270,"cipher":"auto","uuid":"3c0f9cf4-6a0c-42f3-a6de-89c79d4af8e3","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3","type":"vmess","server":"193.233.133.59","port":33,"cipher":"auto","uuid":"0dc0d22c-68e5-440a-9465-97cad8d1cf33","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇯🇵 JP | 🔴 | vmess | @vpnfail_v2ray | 19","type":"vmess","server":"107.148.6.67","port":30001,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/170733132233","headers":{"Host":"www.53865734.xyz"}}}
 
 proxy-groups:
   - name: 🚀 Proxy
@@ -117,7 +116,6 @@ proxy-groups:
       - '🇨🇭 CH | 🔴 | vmess | @v2rayzone | 13'
       - '🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0'
       - '🇫🇷 FR | 🟢 | vmess | @vmessprotocol | 3'
-      - '🇯🇵 JP | 🔴 | vmess | @vpnfail_v2ray | 19'
 
   - name: 🌍 Global Media
     type: select
