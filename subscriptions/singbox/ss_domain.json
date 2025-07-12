@@ -94,13 +94,12 @@
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @club_profsor | 14",
+                "🇨🇭 CH | 🟢 | ss | @config_proxy | 90",
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
                 "🇬🇧 GB | 🟢 | ss | @custom_v2ray | 1",
                 "🇳🇱 NL | 🟢 | ss | @dalton_ping | 11",
-                "🇨🇭 CH | 🟢 | ss | @dalton_ping | 12",
-                "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 16",
                 "🇬🇧 GB | 🟢 | ss | @expressvpn_420 | 10",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 9",
@@ -110,6 +109,7 @@
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
+                "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -141,13 +141,12 @@
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @club_profsor | 14",
+                "🇨🇭 CH | 🟢 | ss | @config_proxy | 90",
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
                 "🇬🇧 GB | 🟢 | ss | @custom_v2ray | 1",
                 "🇳🇱 NL | 🟢 | ss | @dalton_ping | 11",
-                "🇨🇭 CH | 🟢 | ss | @dalton_ping | 12",
-                "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 16",
                 "🇬🇧 GB | 🟢 | ss | @expressvpn_420 | 10",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 9",
@@ -157,6 +156,7 @@
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
+                "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -227,6 +227,14 @@
             "password": "1xO2cqPazqjGfCfd"
         },
         {
+            "tag": "🇨🇭 CH | 🟢 | ss | @config_proxy | 90",
+            "type": "shadowsocks",
+            "server": "h110vpnch.outlinekeys.net",
+            "server_port": 4248,
+            "method": "chacha20-ietf-poly1305",
+            "password": "SasawZo4g7WaqlK3a2mCol"
+        },
+        {
             "tag": "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
             "type": "shadowsocks",
             "server": "series-a2-me.samanehha.co",
@@ -265,22 +273,6 @@
             "server_port": 52571,
             "method": "chacha20-ietf-poly1305",
             "password": "jXfsyaUTwZxGuaSLwIky3S"
-        },
-        {
-            "tag": "🇨🇭 CH | 🟢 | ss | @dalton_ping | 12",
-            "type": "shadowsocks",
-            "server": "h110vpnch.outlinekeys.net",
-            "server_port": 4248,
-            "method": "chacha20-ietf-poly1305",
-            "password": "SasawZo4g7WaqlK3a2mCol"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @deamnet_proxy | 16",
-            "type": "shadowsocks",
-            "server": "admin.c2.webramz.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "WstuSnlu4ieA9M0L"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @expressvpn_420 | 10",
@@ -353,6 +345,14 @@
             "server_port": 40934,
             "method": "chacha20-ietf-poly1305",
             "password": "jxfYgVB87GkSQR4U7Ce6rNBkP5URFYJfH1bFNo84pr5fWXMYCkcPAUYBCrAz7NBkpixeHgdzYYYW7jVyo9LpwSakvQ7nuKj1"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
+            "type": "shadowsocks",
+            "server": "admin.c2.webramz.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "WstuSnlu4ieA9M0L"
         },
         {
             "tag": "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
