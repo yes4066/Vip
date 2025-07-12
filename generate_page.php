@@ -574,7 +574,8 @@ function generate_full_html(
                             break;
 
                         case 'singbox':
-                            const parsedJson = jsonc_parser.parse(content);
+                            const contentAfterRemovingLines = content.split('\n').slice(6).join('\n');
+                            const parsedJson = JSON.parse(contentAfterRemovingLines);
                             const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
                             if (parsedJson && Array.isArray(parsedJson.outbounds)) {
                                 parsedJson.outbounds
