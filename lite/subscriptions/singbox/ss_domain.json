@@ -90,8 +90,9 @@
                 "auto",
                 "direct",
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
-                "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 25",
+                "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 24",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
+                "🇨🇭 CH | 🟢 | ss | @meli_proxyy | 45",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
@@ -108,8 +109,9 @@
             "interval": "10m",
             "outbounds": [
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
-                "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 25",
+                "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 24",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
+                "🇨🇭 CH | 🟢 | ss | @meli_proxyy | 45",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
@@ -137,7 +139,7 @@
             "password": "69MUii7VDwMqh7Hz"
         },
         {
-            "tag": "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 25",
+            "tag": "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 24",
             "type": "shadowsocks",
             "server": "rusrv.vpnsparta.pro",
             "server_port": 57456,
@@ -151,6 +153,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "W74XFALLLuw6m5IA"
+        },
+        {
+            "tag": "🇨🇭 CH | 🟢 | ss | @meli_proxyy | 45",
+            "type": "shadowsocks",
+            "server": "h110vpnch.outlinekeys.net",
+            "server_port": 4248,
+            "method": "chacha20-ietf-poly1305",
+            "password": "SasawZo4g7WaqlK3a2mCol"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
