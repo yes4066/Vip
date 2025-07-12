@@ -91,11 +91,11 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇨🇳 CN | 🔴 | trojan | @connect_sho | 19",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
-                "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 9",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
@@ -121,11 +121,11 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇨🇳 CN | 🔴 | trojan | @connect_sho | 19",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
-                "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 9",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 5",
@@ -188,6 +188,13 @@
                     "Host": "asia.artunnel57.host"
                 }
             }
+        },
+        {
+            "tag": "🇨🇳 CN | 🔴 | trojan | @connect_sho | 19",
+            "type": "trojan",
+            "server": "q1.46322416.xyz",
+            "server_port": 20220,
+            "password": "0b9c9261-7209-4dcc-b268-2fa74f6cd536"
         },
         {
             "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
@@ -260,22 +267,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "usa.test3.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 9",
-            "type": "trojan",
-            "server": "v01.gutingting.com",
-            "server_port": 30002,
-            "password": "1957909a-4f2a-4d9c-99ad-119d45f052c1",
-            "tls": {
-                "enabled": true,
-                "server_name": "v2tw01.fuqiangren.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
