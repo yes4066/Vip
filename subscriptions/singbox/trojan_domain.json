@@ -91,11 +91,9 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇺🇸 US | 🟢 | trojan | @configshubplus | 18",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
-                "🇯🇵 JP | 🔴 | trojan | @hope_net | 18",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
@@ -111,6 +109,7 @@
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @tenzovpn | 0",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
+                "🇺🇸 US | 🟢 | trojan | @v2rayweb | 14",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ],
@@ -122,11 +121,9 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇺🇸 US | 🟢 | trojan | @configshubplus | 18",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 31",
-                "🇯🇵 JP | 🔴 | trojan | @hope_net | 18",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
@@ -142,6 +139,7 @@
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @tenzovpn | 0",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
+                "🇺🇸 US | 🟢 | trojan | @v2rayweb | 14",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
             ],
@@ -188,29 +186,6 @@
                 "path": "/trojan-ntls",
                 "headers": {
                     "Host": "asia.artunnel57.host"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @configshubplus | 18",
-            "type": "trojan",
-            "server": "ip.sb",
-            "server_port": 8443,
-            "password": "trojan",
-            "tls": {
-                "enabled": true,
-                "server_name": "fofang.pages.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "fofang.pages.dev"
                 }
             }
         },
@@ -273,22 +248,6 @@
                 "path": "/?ed=2560",
                 "headers": {
                     "Host": "azadnet-9ya.pages.dev"
-                }
-            }
-        },
-        {
-            "tag": "🇯🇵 JP | 🔴 | trojan | @hope_net | 18",
-            "type": "trojan",
-            "server": "tw01.trojanyyds.xyz",
-            "server_port": 443,
-            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
-            "tls": {
-                "enabled": true,
-                "server_name": "tw01.trojanyyds.xyz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },
@@ -575,6 +534,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "170-187-134-190.ipv4.rush.ml",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @v2rayweb | 14",
+            "type": "trojan",
+            "server": "download2hkt.windowsupdate.lol",
+            "server_port": 443,
+            "password": "af4d2493-9156-4514-9f6b-ee5d1a1e4713",
+            "tls": {
+                "enabled": true,
+                "server_name": "download2hkt.windowsupdate.lol",
                 "insecure": true,
                 "utls": {
                     "enabled": true,

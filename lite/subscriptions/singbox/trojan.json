@@ -96,7 +96,6 @@
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
-                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 18",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 16",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
@@ -104,7 +103,6 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayng_fast | 1",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayweb | 19",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
             ],
             "tag": "proxy",
@@ -120,7 +118,6 @@
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
-                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 18",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 16",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
@@ -128,7 +125,6 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayng_fast | 1",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayweb | 19",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
             ],
             "tag": "auto",
@@ -271,29 +267,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @freevpnatm | 18",
-            "type": "trojan",
-            "server": "104.21.78.243",
-            "server_port": 443,
-            "password": "a94fafdb-10d6-46c2-be8a-5c2e8358fbb0",
-            "tls": {
-                "enabled": true,
-                "server_name": "DDdddDRrrRRrRRy.7282728.xYz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/xa846InEcmjyiKVby2Lp",
-                "headers": {
-                    "Host": "DDdddDRrrRRrRRy.7282728.xYz"
-                }
-            }
-        },
-        {
             "tag": "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
             "type": "trojan",
             "server": "146.190.87.238",
@@ -405,22 +378,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayweb | 19",
-            "type": "trojan",
-            "server": "104.248.18.1",
-            "server_port": 1935,
-            "password": "6gZh2JbfhQ",
-            "tls": {
-                "enabled": true,
-                "server_name": "x1-germany-digitalocean-v2.devefun.org",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
