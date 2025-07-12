@@ -94,13 +94,12 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
-                "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
+                "🇩🇪 DE | 🟢 | trojan | @directvpn | 17",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 16",
-                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
+                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 17",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayng_fast | 1",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
@@ -116,13 +115,12 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
-                "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
+                "🇩🇪 DE | 🟢 | trojan | @directvpn | 17",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 16",
-                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
+                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 17",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayng_fast | 1",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇺🇸 US | 🟢 | trojan | @webhube | 4"
@@ -235,7 +233,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 17",
             "type": "trojan",
             "server": "3.78.4.19",
             "server_port": 22223,
@@ -306,7 +304,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @privatevpns | 17",
             "type": "trojan",
             "server": "3.78.4.19",
             "server_port": 22222,
@@ -330,22 +328,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "speedtest.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayng_fast | 1",
-            "type": "trojan",
-            "server": "104.248.18.1",
-            "server_port": 1935,
-            "password": "6gZh2JbfhQ",
-            "tls": {
-                "enabled": true,
-                "server_name": "x1-germany-digitalocean-v2.devefun.org",
                 "insecure": true,
                 "utls": {
                     "enabled": true,

@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
+                "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 25",
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @club_profsor | 14",
@@ -106,7 +107,6 @@
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 9",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 3",
                 "🇬🇧 GB | 🟢 | ss | @hacknashid | 0",
-                "🇳🇱 NL | 🟢 | ss | @ip_cf_config | 11",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
@@ -141,6 +141,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
+                "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 25",
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @club_profsor | 14",
@@ -157,7 +158,6 @@
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 9",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 3",
                 "🇬🇧 GB | 🟢 | ss | @hacknashid | 0",
-                "🇳🇱 NL | 🟢 | ss | @ip_cf_config | 11",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
@@ -201,6 +201,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "69MUii7VDwMqh7Hz"
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | ss | @argo_vpn1 | 25",
+            "type": "shadowsocks",
+            "server": "rusrv.vpnsparta.pro",
+            "server_port": 57456,
+            "method": "chacha20-ietf-poly1305",
+            "password": "360e21d21977dc11"
         },
         {
             "tag": "🇺🇸 US | 🟢 | ss | @chestertm | 10",
@@ -329,14 +337,6 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "AcGFEsMR6c07Txux"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | ss | @ip_cf_config | 11",
-            "type": "shadowsocks",
-            "server": "beesyar.org",
-            "server_port": 8080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "4a2rfixophdjffa8KVA4Aa"
         },
         {
             "tag": "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
