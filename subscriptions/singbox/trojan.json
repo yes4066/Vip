@@ -111,17 +111,18 @@
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
+                "🇺🇸 US | 🟢 | trojan | @config_proxy | 91",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
+                "🇯🇵 JP | 🟢 | trojan | @entrynet | 14",
                 "🇮🇷 IR | 🔴 | trojan | @erfanpaydartelegram | 3",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 14",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 16",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
                 "🇮🇷 IR | 🔴 | trojan | @mahanvpn | 0",
@@ -181,17 +182,18 @@
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
+                "🇺🇸 US | 🟢 | trojan | @config_proxy | 91",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
+                "🇯🇵 JP | 🟢 | trojan | @entrynet | 14",
                 "🇮🇷 IR | 🔴 | trojan | @erfanpaydartelegram | 3",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 14",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 16",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
                 "🇮🇷 IR | 🔴 | trojan | @mahanvpn | 0",
@@ -654,6 +656,22 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | trojan | @config_proxy | 91",
+            "type": "trojan",
+            "server": "198.41.211.21",
+            "server_port": 443,
+            "password": "bpb-trojan",
+            "tls": {
+                "enabled": true,
+                "server_name": "bpb.my79801.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
             "type": "trojan",
             "server": "35.181.246.153",
@@ -726,6 +744,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇯🇵 JP | 🟢 | trojan | @entrynet | 14",
+            "type": "trojan",
+            "server": "52.194.224.252",
+            "server_port": 20230,
+            "password": "429ad146-8f43-4dd4-8fb3-cca3f3a30c63",
+            "tls": {
+                "enabled": true,
+                "server_name": "jp006.421421.xyz",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -813,22 +847,6 @@
                 "path": "/TDUxZUop9k44oPiit2OdWk0KwirdY",
                 "headers": {
                     "Host": "dddcVbhnj.000890604.xyZ"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
-            "type": "trojan",
-            "server": "35.155.4.93",
-            "server_port": 443,
-            "password": "3723507166611775488",
-            "tls": {
-                "enabled": true,
-                "server_name": "usable-toad.treefrog761.one",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },
