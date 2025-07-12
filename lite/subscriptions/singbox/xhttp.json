@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 82",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
@@ -98,12 +99,12 @@
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 4",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @vmesc | 17",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 19",
                 "🇺🇸 US | 🔴 | vless | @freevirgoolnet | 8",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 9",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 11",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -120,6 +121,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @blueshekan | 2",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 82",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
@@ -128,12 +130,12 @@
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 4",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "❔ XX | 🟢 | vless | @freakconfig2 | 7",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
                 "🇺🇸 US | 🔴 | vless | @vmesc | 17",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 19",
                 "🇺🇸 US | 🔴 | vless | @freevirgoolnet | 8",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 9",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 11",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -158,6 +160,15 @@
             "server": "viop.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "7fa08b3d-86d8-4b14-92b3-4c56a83f027d",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 82",
+            "type": "vless",
+            "server": "vpconnect.ahadbala.ir",
+            "server_port": 80,
+            "uuid": "316caa7e-71d0-4bb1-8dba-6e8a16f7198a",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -243,6 +254,15 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
+            "type": "vless",
+            "server": "test.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "d4185486-d969-4ba6-b937-253a84bf892c",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 17",
             "type": "vless",
             "server": "viop.fast.hosting-ip.com",
@@ -284,15 +304,6 @@
             "server": "151.101.67.8",
             "server_port": 80,
             "uuid": "8088c605-e0c2-4774-9ee4-7fa7e47b6112",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 9",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "259923b6-756d-4b33-9ea9-73e55378018a",
             "flow": "",
             "packet_encoding": "xudp"
         },
