@@ -92,7 +92,7 @@
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
-                "🇬🇧 GB | 🟢 | ss | @club_profsor | 14",
+                "🇬🇧 GB | 🟢 | ss | @club_profsor | 13",
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
@@ -102,6 +102,7 @@
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
+                "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 10",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
@@ -121,8 +122,7 @@
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 12",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 7"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -133,7 +133,7 @@
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
-                "🇬🇧 GB | 🟢 | ss | @club_profsor | 14",
+                "🇬🇧 GB | 🟢 | ss | @club_profsor | 13",
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
@@ -143,6 +143,7 @@
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
+                "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 10",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
@@ -162,8 +163,7 @@
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 12",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 7"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -199,7 +199,7 @@
             "password": "W74XFALLLuw6m5IA"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @club_profsor | 14",
+            "tag": "🇬🇧 GB | 🟢 | ss | @club_profsor | 13",
             "type": "shadowsocks",
             "server": "admin.c1.webramz.co",
             "server_port": 443,
@@ -277,6 +277,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "u17T3BvpYaaiuW2c"
+        },
+        {
+            "tag": "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 10",
+            "type": "shadowsocks",
+            "server": "azure-sto.edgeservers.org",
+            "server_port": 48172,
+            "method": "chacha20-ietf-poly1305",
+            "password": "51yloQC8D9w1Wae7FHtI65"
         },
         {
             "tag": "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
@@ -431,15 +439,7 @@
             "password": "WVU27LquAMOeXmYeStI897"
         },
         {
-            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
-            "type": "shadowsocks",
-            "server": "sakura.outlinekeys.net",
-            "server_port": 1235,
-            "method": "chacha20-ietf-poly1305",
-            "password": "MWLQQaSvusNhEwxKMiOdEe"
-        },
-        {
-            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 8",
+            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
             "type": "shadowsocks",
             "server": "sakura.outlinekeys.net",
             "server_port": 1235,

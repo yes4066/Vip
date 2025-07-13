@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "🇬🇧 GB | 🟢 | vless | @antifilterjadid | 4",
+                "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
                 "🇨🇿 CZ | 🟢 | vless | @farahvpn | 19",
@@ -98,16 +99,15 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇨🇿 CZ | 🟢 | vless | @icv2ray | 4",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇩🇪 DE | 🟢 | vless | @proxy_hiddfy | 5",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
                 "🇹🇷 TR | 🟢 | vless | @sinavm | 1",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
+                "🇹🇷 TR | 🟢 | vless | @v2source | 19",
                 "🇩🇪 DE | 🟢 | vless | @vip_vpn_2022 | 6",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
@@ -144,6 +144,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇬🇧 GB | 🟢 | vless | @antifilterjadid | 4",
+                "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
                 "🇨🇿 CZ | 🟢 | vless | @farahvpn | 19",
@@ -152,16 +153,15 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇨🇿 CZ | 🟢 | vless | @icv2ray | 4",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇩🇪 DE | 🟢 | vless | @proxy_hiddfy | 5",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
                 "🇹🇷 TR | 🟢 | vless | @sinavm | 1",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
+                "🇹🇷 TR | 🟢 | vless | @v2source | 19",
                 "🇩🇪 DE | 🟢 | vless | @vip_vpn_2022 | 6",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
@@ -225,6 +225,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Ahadhsksfhdg"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
+            "type": "vless",
+            "server": "91.107.180.100",
+            "server_port": 443,
+            "uuid": "7badc6bf-e902-4595-b4e8-448f2c144f31",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zula.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "eZs1Yn6wbXV2RPT47_szgepN6lNKseOb9nprDMrpNmE",
+                    "short_id": "f3"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@SobyV2ray"
             }
         },
         {
@@ -420,33 +447,6 @@
             }
         },
         {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @icv2ray | 4",
-            "type": "vless",
-            "server": "194.182.79.163",
-            "server_port": 10108,
-            "uuid": "edeffe9e-4725-428e-a1c0-7b6a96124f8d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "wGHsRP4taNR7OgyRPba24krQVhH9ZRbR7pvDxVsGjj0",
-                    "short_id": "ed"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
-            }
-        },
-        {
             "tag": "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
             "type": "vless",
             "server": "188.165.122.11",
@@ -543,33 +543,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxy_hiddfy | 5",
-            "type": "vless",
-            "server": "91.107.180.100",
-            "server_port": 443,
-            "uuid": "7badc6bf-e902-4595-b4e8-448f2c144f31",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zula.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "eZs1Yn6wbXV2RPT47_szgepN6lNKseOb9nprDMrpNmE",
-                    "short_id": "f3"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@SobyV2ray"
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
             "type": "vless",
             "server": "147.182.183.207",
@@ -663,6 +636,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn"
+            }
+        },
+        {
+            "tag": "🇹🇷 TR | 🟢 | vless | @v2source | 19",
+            "type": "vless",
+            "server": "46.31.76.3",
+            "server_port": 80,
+            "uuid": "295afac4-e906-4e08-b1ce-524177c7ecb1",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "oTX6mQJYxkmmdF7Rq_stAKX_hYoOMXGaWmoblFl2zgo",
+                    "short_id": "5942e2"
+                }
             }
         },
         {

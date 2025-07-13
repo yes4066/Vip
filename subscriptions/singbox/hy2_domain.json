@@ -88,17 +88,14 @@
         {
             "outbounds": [
                 "auto",
-                "direct",
-                "🇳🇱 NL | 🟢 | hy2 | @config_proxy | 70"
+                "direct"
             ],
             "tag": "proxy",
             "type": "selector"
         },
         {
             "interval": "10m",
-            "outbounds": [
-                "🇳🇱 NL | 🟢 | hy2 | @config_proxy | 70"
-            ],
+            "outbounds": [],
             "tag": "auto",
             "tolerance": 50,
             "type": "urltest",
@@ -107,25 +104,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | hy2 | @config_proxy | 70",
-            "type": "hysteria2",
-            "server": "gavazn.lnmarketplace.net",
-            "server_port": 45000,
-            "password": "Telegram-->@Ln2Ray",
-            "obfs": {
-                "type": "salamander",
-                "password": "Telegram-->@Ln2Ray"
-            },
-            "tls": {
-                "enabled": true,
-                "server_name": "gavazn.55994421.xyz",
-                "insecure": false,
-                "alpn": [
-                    "h3"
-                ]
-            }
         }
     ],
     "route": {
