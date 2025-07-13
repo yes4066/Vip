@@ -99,7 +99,6 @@
                 "🇳🇱 NL | 🟢 | ss | @dalton_ping | 11",
                 "🇨🇭 CH | 🟢 | ss | @dalton_ping | 12",
                 "🇬🇧 GB | 🟢 | ss | @expressvpn_420 | 10",
-                "🇬🇧 GB | 🟢 | ss | @falcunargo | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
@@ -119,12 +118,14 @@
                 "❔ XX | 🟢 | ss | @sifev2ray | 5",
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
+                "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 13",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇷🇺 RU | 🟢 | ss | @vmess_ir | 17",
+                "🇷🇺 RU | 🟢 | ss | @vmess_ir | 16",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8",
+                "🇬🇧 GB | 🟢 | ss | @vpnaloo | 13"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -142,7 +143,6 @@
                 "🇳🇱 NL | 🟢 | ss | @dalton_ping | 11",
                 "🇨🇭 CH | 🟢 | ss | @dalton_ping | 12",
                 "🇬🇧 GB | 🟢 | ss | @expressvpn_420 | 10",
-                "🇬🇧 GB | 🟢 | ss | @falcunargo | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
@@ -162,12 +162,14 @@
                 "❔ XX | 🟢 | ss | @sifev2ray | 5",
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
+                "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 13",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇷🇺 RU | 🟢 | ss | @vmess_ir | 17",
+                "🇷🇺 RU | 🟢 | ss | @vmess_ir | 16",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8",
+                "🇬🇧 GB | 🟢 | ss | @vpnaloo | 13"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -257,14 +259,6 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "u17T3BvpYaaiuW2c"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @falcunargo | 8",
-            "type": "shadowsocks",
-            "server": "series-a1.samanehha.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "W74XFALLLuw6m5IA"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
@@ -419,6 +413,14 @@
             "password": "1U5MUwZqVsFkDGXQfabJP9"
         },
         {
+            "tag": "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
+            "type": "shadowsocks",
+            "server": "series-a1.samanehha.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "W74XFALLLuw6m5IA"
+        },
+        {
             "tag": "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 13",
             "type": "shadowsocks",
             "server": "switcher-nick-croquet.freesocks.work",
@@ -443,7 +445,7 @@
             "password": "WVU27LquAMOeXmYeStI897"
         },
         {
-            "tag": "🇷🇺 RU | 🟢 | ss | @vmess_ir | 17",
+            "tag": "🇷🇺 RU | 🟢 | ss | @vmess_ir | 16",
             "type": "shadowsocks",
             "server": "ct.uigame.space",
             "server_port": 2024,
@@ -465,6 +467,14 @@
             "server_port": 1235,
             "method": "chacha20-ietf-poly1305",
             "password": "amOyPdmvB8VIjQNqEgeVEo"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @vpnaloo | 13",
+            "type": "shadowsocks",
+            "server": "Peweza2.digipedia.shop",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "WstuSnlu4ieA9M0L"
         }
     ],
     "route": {

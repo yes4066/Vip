@@ -99,17 +99,16 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
-                "🇺🇸 US | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 19",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 9",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 9",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 7",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @v2rayopen | 9"
+                "🇺🇸 US | 🔴 | vless | @v2rayopen | 8"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -127,17 +126,16 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
-                "🇺🇸 US | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🔴 | vless | @zedping | 0",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 19",
-                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 9",
+                "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 9",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 7",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @v2rayopen | 9"
+                "🇺🇸 US | 🔴 | vless | @v2rayopen | 8"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -248,24 +246,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @v2source | 19",
-            "type": "vless",
-            "server": "www.speedtest.net",
-            "server_port": 443,
-            "uuid": "4e0a435a-65d6-4e4e-a4ed-dfa8bdd732f5",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "ashil.tas-bazi.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @zedping | 0",
             "type": "vless",
             "server": "speedtest.net",
@@ -284,11 +264,11 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 9",
+            "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
-            "uuid": "4eab40da-ff08-40bb-9d8a-e059a2a6da0d",
+            "uuid": "01c83d31-8215-4f85-b94b-8c64a92a040a",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -334,27 +314,13 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @mowjproxy | 7",
+            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 7",
             "type": "vless",
-            "server": "45.77.137.98",
-            "server_port": 8880,
-            "uuid": "2345a78a-4900-4819-a11a-721c1fdd4b59",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "cp7.cloudflare.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "mlPSdTwmHcAaNeQICN46i7YauUB8WPdJXzp2vb_JXWQ",
-                    "short_id": "8b"
-                }
-            }
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "01c83d31-8215-4f85-b94b-8c64a92a040a",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
@@ -389,7 +355,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2rayopen | 9",
+            "tag": "🇺🇸 US | 🔴 | vless | @v2rayopen | 8",
             "type": "vless",
             "server": "151.101.67.8",
             "server_port": 80,
