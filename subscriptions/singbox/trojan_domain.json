@@ -91,13 +91,11 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇺🇸 US | 🔴 | trojan | @bored_vpn | 9",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
-                "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 10",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 12",
+                "🇺🇸 US | 🔴 | trojan | @icv2ray | 2",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 4",
@@ -106,9 +104,11 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "❔ XX | 🟢 | trojan | @mtpv2ray | 5",
+                "🇺🇸 US | 🔴 | trojan | @noviin_tel | 5",
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
+                "🇺🇸 US | 🔴 | trojan | @vaynora | 12",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -120,13 +120,11 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇺🇸 US | 🔴 | trojan | @bored_vpn | 9",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
-                "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 10",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 12",
+                "🇺🇸 US | 🔴 | trojan | @icv2ray | 2",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 6",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 4",
@@ -135,9 +133,11 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "❔ XX | 🟢 | trojan | @mtpv2ray | 5",
+                "🇺🇸 US | 🔴 | trojan | @noviin_tel | 5",
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
+                "🇺🇸 US | 🔴 | trojan | @vaynora | 12",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -186,13 +186,6 @@
                     "Host": "asia.artunnel57.host"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | trojan | @bored_vpn | 9",
-            "type": "trojan",
-            "server": "www.chatgameone.ir",
-            "server_port": 36557,
-            "password": "K7N8flfyok"
         },
         {
             "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
@@ -273,27 +266,11 @@
             }
         },
         {
-            "tag": "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 10",
+            "tag": "🇺🇸 US | 🔴 | trojan | @icv2ray | 2",
             "type": "trojan",
-            "server": "v01.gutingting.com",
-            "server_port": 30002,
-            "password": "1957909a-4f2a-4d9c-99ad-119d45f052c1",
-            "tls": {
-                "enabled": true,
-                "server_name": "v2tw01.fuqiangren.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 12",
-            "type": "trojan",
-            "server": "13c2c931-swin40-swy6li-tni2.cu.plebai.net",
-            "server_port": 15229,
-            "password": "5e2f888c-68ef-11ef-96ca-f23c9164ca5d"
+            "server": "www.chatgameone.ir",
+            "server_port": 36557,
+            "password": "K7N8flfyok"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -460,6 +437,13 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | trojan | @noviin_tel | 5",
+            "type": "trojan",
+            "server": "www.chatgameone.ir",
+            "server_port": 36557,
+            "password": "K7N8flfyok"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
             "type": "trojan",
             "server": "chatbuzzteambhm.chatbuzzt7150.workers.dev",
@@ -513,6 +497,13 @@
                     "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @vaynora | 12",
+            "type": "trojan",
+            "server": "www.chatgameone.ir",
+            "server_port": 36557,
+            "password": "K7N8flfyok"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @xrayzxn | 4",

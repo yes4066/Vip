@@ -102,6 +102,7 @@
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
+                "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 7",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
@@ -110,22 +111,21 @@
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
-                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 12",
-                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
-                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 16",
+                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
+                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 15",
                 "🇬🇧 GB | 🟢 | ss | @serverii | 0",
                 "🇫🇮 FI | 🟢 | ss | @shadowsockskeys | 12",
                 "❔ XX | 🟢 | ss | @sifev2ray | 5",
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
+                "🇬🇧 GB | 🟢 | ss | @v2raying | 11",
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 13",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇷🇺 RU | 🟢 | ss | @vmess_ir | 16",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8",
-                "🇬🇧 GB | 🟢 | ss | @vpnaloo | 13"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -146,6 +146,7 @@
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
+                "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 7",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
@@ -154,22 +155,21 @@
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
-                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 12",
-                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
-                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 16",
+                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
+                "🇬🇧 GB | 🟢 | ss | @server_nekobox | 15",
                 "🇬🇧 GB | 🟢 | ss | @serverii | 0",
                 "🇫🇮 FI | 🟢 | ss | @shadowsockskeys | 12",
                 "❔ XX | 🟢 | ss | @sifev2ray | 5",
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
+                "🇬🇧 GB | 🟢 | ss | @v2raying | 11",
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 13",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇷🇺 RU | 🟢 | ss | @vmess_ir | 16",
                 "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8",
-                "🇬🇧 GB | 🟢 | ss | @vpnaloo | 13"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 8"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -285,6 +285,14 @@
             "password": "u17T3BvpYaaiuW2c"
         },
         {
+            "tag": "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 7",
+            "type": "shadowsocks",
+            "server": "azure-sto.edgeservers.org",
+            "server_port": 48172,
+            "method": "chacha20-ietf-poly1305",
+            "password": "51yloQC8D9w1Wae7FHtI65"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
             "type": "shadowsocks",
             "server": "api.namasha.co",
@@ -349,15 +357,7 @@
             "password": "4e9ufa1a2jeANAVebF0wqN"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @server_nekobox | 12",
-            "type": "shadowsocks",
-            "server": "admin.c3.webramz.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "Bog0ELmMM9DSxDdQ"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
+            "tag": "🇬🇧 GB | 🟢 | ss | @server_nekobox | 13",
             "type": "shadowsocks",
             "server": "freakconfig.usecharge.ir",
             "server_port": 443,
@@ -365,7 +365,7 @@
             "password": "Bog0ELmMM9DSxDdQ"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @server_nekobox | 16",
+            "tag": "🇬🇧 GB | 🟢 | ss | @server_nekobox | 15",
             "type": "shadowsocks",
             "server": "freakconfig13.felafel.org",
             "server_port": 443,
@@ -421,6 +421,14 @@
             "password": "W74XFALLLuw6m5IA"
         },
         {
+            "tag": "🇬🇧 GB | 🟢 | ss | @v2raying | 11",
+            "type": "shadowsocks",
+            "server": "Peweza2.digipedia.shop",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "WstuSnlu4ieA9M0L"
+        },
+        {
             "tag": "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 13",
             "type": "shadowsocks",
             "server": "switcher-nick-croquet.freesocks.work",
@@ -467,14 +475,6 @@
             "server_port": 1235,
             "method": "chacha20-ietf-poly1305",
             "password": "amOyPdmvB8VIjQNqEgeVEo"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @vpnaloo | 13",
-            "type": "shadowsocks",
-            "server": "Peweza2.digipedia.shop",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "WstuSnlu4ieA9M0L"
         }
     ],
     "route": {

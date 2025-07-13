@@ -90,7 +90,9 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇸🇬 SG | 🔴 | trojan | @hope_net | 19",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
+                "🇺🇸 US | 🔴 | trojan | @noviin_tel | 5",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
             "tag": "proxy",
@@ -100,7 +102,9 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇸🇬 SG | 🔴 | trojan | @hope_net | 19",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
+                "🇺🇸 US | 🔴 | trojan | @noviin_tel | 5",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
             "tag": "auto",
@@ -136,6 +140,22 @@
             }
         },
         {
+            "tag": "🇸🇬 SG | 🔴 | trojan | @hope_net | 19",
+            "type": "trojan",
+            "server": "in01.trojanyyds.xyz",
+            "server_port": 443,
+            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
+            "tls": {
+                "enabled": true,
+                "server_name": "in01.trojanyyds.xyz",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
             "type": "trojan",
             "server": "maradona_vpn.history-paint.art",
@@ -154,6 +174,13 @@
                 "type": "grpc",
                 "service_name": "grpc20337"
             }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @noviin_tel | 5",
+            "type": "trojan",
+            "server": "www.chatgameone.ir",
+            "server_port": 36557,
+            "password": "K7N8flfyok"
         },
         {
             "tag": "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
