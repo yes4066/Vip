@@ -89,15 +89,12 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🔴 | vless | @getconfigir | 19",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
-                "🇺🇸 US | 🔴 | vless | @irv2rey | 9",
+                "🇺🇸 US | 🔴 | vless | @irv2rey | 10",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
-                "🇺🇸 US | 🔴 | vless | @meli_proxyy | 21",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇹🇷 TR | 🟢 | vless | @v2source | 19"
+                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -105,15 +102,12 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🔴 | vless | @getconfigir | 19",
                 "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
-                "🇺🇸 US | 🔴 | vless | @irv2rey | 9",
+                "🇺🇸 US | 🔴 | vless | @irv2rey | 10",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
-                "🇺🇸 US | 🔴 | vless | @meli_proxyy | 21",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇹🇷 TR | 🟢 | vless | @v2source | 19"
+                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -125,15 +119,6 @@
             "type": "direct"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @getconfigir | 19",
-            "type": "vless",
-            "server": "151.101.67.8",
-            "server_port": 80,
-            "uuid": "2a4e29dc-db1e-4b02-a60d-18a1bddb37a0",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @ghalagyann2 | 10",
             "type": "vless",
             "server": "151.101.3.8",
@@ -143,11 +128,11 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @irv2rey | 9",
+            "tag": "🇺🇸 US | 🔴 | vless | @irv2rey | 10",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
-            "uuid": "e907cd5b-8d4e-406f-8f24-9133c23c7e4e",
+            "uuid": "eb37c073-3fe1-4a38-a1f4-f50a831e47e3",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -173,15 +158,6 @@
                     "short_id": "bc5a8ead5ee076aa"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @meli_proxyy | 21",
-            "type": "vless",
-            "server": "151.101.195.8",
-            "server_port": 80,
-            "uuid": "97e74d74-78de-4fd1-81e2-4da17d08501c",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -223,29 +199,6 @@
             "uuid": "qeshmserver",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇹🇷 TR | 🟢 | vless | @v2source | 19",
-            "type": "vless",
-            "server": "46.31.76.3",
-            "server_port": 80,
-            "uuid": "295afac4-e906-4e08-b1ce-524177c7ecb1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oTX6mQJYxkmmdF7Rq_stAKX_hYoOMXGaWmoblFl2zgo",
-                    "short_id": "5942e2"
-                }
-            }
         }
     ],
     "route": {

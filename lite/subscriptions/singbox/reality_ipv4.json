@@ -107,7 +107,6 @@
                 "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
                 "🇹🇷 TR | 🟢 | vless | @sinavm | 1",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
-                "🇹🇷 TR | 🟢 | vless | @v2source | 19",
                 "🇩🇪 DE | 🟢 | vless | @vip_vpn_2022 | 6",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
@@ -140,7 +139,6 @@
                 "🇫🇮 FI | 🟢 | vless | @sezar_sec | 4",
                 "🇹🇷 TR | 🟢 | vless | @sinavm | 1",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
-                "🇹🇷 TR | 🟢 | vless | @v2source | 19",
                 "🇩🇪 DE | 🟢 | vless | @vip_vpn_2022 | 6",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
@@ -594,29 +592,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn"
-            }
-        },
-        {
-            "tag": "🇹🇷 TR | 🟢 | vless | @v2source | 19",
-            "type": "vless",
-            "server": "46.31.76.3",
-            "server_port": 80,
-            "uuid": "295afac4-e906-4e08-b1ce-524177c7ecb1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "oTX6mQJYxkmmdF7Rq_stAKX_hYoOMXGaWmoblFl2zgo",
-                    "short_id": "5942e2"
-                }
             }
         },
         {

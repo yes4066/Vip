@@ -92,10 +92,10 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🔴 | trojan | @confing_chanel | 15",
+                "🇩🇪 DE | 🔴 | trojan | @connect_sho | 31",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
-                "🇨🇳 CN | 🔴 | trojan | @hope_net | 15",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "🇺🇸 US | 🔴 | trojan | @icv2ray | 2",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -110,7 +110,6 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
-                "🇺🇸 US | 🔴 | trojan | @v2source | 18",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -123,10 +122,10 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🔴 | trojan | @confing_chanel | 15",
+                "🇩🇪 DE | 🔴 | trojan | @connect_sho | 31",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
-                "🇨🇳 CN | 🔴 | trojan | @hope_net | 15",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "🇺🇸 US | 🔴 | trojan | @icv2ray | 2",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -141,7 +140,6 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
-                "🇺🇸 US | 🔴 | trojan | @v2source | 18",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -197,6 +195,22 @@
             "server": "www.chatgameone.ir",
             "server_port": 36557,
             "password": "K7N8flfyok"
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | trojan | @connect_sho | 31",
+            "type": "trojan",
+            "server": "pet-bulldog.goat627.mom",
+            "server_port": 443,
+            "password": "3763495894587285504",
+            "tls": {
+                "enabled": true,
+                "server_name": "pet-bulldog.goat627.mom",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
@@ -259,13 +273,6 @@
                     "Host": "top-azx.pages.dev"
                 }
             }
-        },
-        {
-            "tag": "🇨🇳 CN | 🔴 | trojan | @hope_net | 15",
-            "type": "trojan",
-            "server": "aexshbgp01.114837322.xyz",
-            "server_port": 14434,
-            "password": "6AC378EE-C9AE-9D3C-3DD9-8C034898BE44"
         },
         {
             "tag": "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
@@ -509,22 +516,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "170-187-134-190.ipv4.rush.ml",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | trojan | @v2source | 18",
-            "type": "trojan",
-            "server": "sage.ns.cloudflare.com",
-            "server_port": 443,
-            "password": "Aimer",
-            "tls": {
-                "enabled": true,
-                "server_name": "ngepx.ambercc.filegear-sg.me",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
