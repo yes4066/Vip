@@ -91,8 +91,7 @@
                 "direct",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
-                "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇺🇸 US | 🔴 | trojan | @v2source | 19"
+                "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -102,8 +101,7 @@
             "outbounds": [
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
-                "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇺🇸 US | 🔴 | trojan | @v2source | 19"
+                "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -170,20 +168,6 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | trojan | @v2source | 19",
-            "type": "trojan",
-            "server": "cdns.doon.eu.org",
-            "server_port": 8443,
-            "password": "8a104bc2-a8d1-4f38-8c29-17176a68b7d5",
-            "transport": {
-                "type": "ws",
-                "path": "/profile/telegram@ssrsub",
-                "headers": {
-                    "Host": "cdn-node-oss-99.paofu.de"
                 }
             }
         }

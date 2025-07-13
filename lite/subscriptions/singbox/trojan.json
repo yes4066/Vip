@@ -92,11 +92,10 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇺🇸 US | 🔴 | trojan | @v2source | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 16",
-                "🇸🇬 SG | 🔴 | trojan | @hope_net | 19",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 16",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
@@ -114,11 +113,10 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇺🇸 US | 🔴 | trojan | @v2source | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 16",
-                "🇸🇬 SG | 🔴 | trojan | @hope_net | 19",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 16",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
@@ -196,20 +194,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @v2source | 19",
-            "type": "trojan",
-            "server": "cdns.doon.eu.org",
-            "server_port": 8443,
-            "password": "8a104bc2-a8d1-4f38-8c29-17176a68b7d5",
-            "transport": {
-                "type": "ws",
-                "path": "/profile/telegram@ssrsub",
-                "headers": {
-                    "Host": "cdn-node-oss-99.paofu.de"
-                }
-            }
-        },
-        {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
             "type": "trojan",
             "server": "35.181.182.19",
@@ -265,11 +249,20 @@
             }
         },
         {
-            "tag": "🇸🇬 SG | 🔴 | trojan | @hope_net | 19",
+            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
             "type": "trojan",
-            "server": "206.238.236.137",
-            "server_port": 8443,
-            "password": "Aimer"
+            "server": "35.155.4.93",
+            "server_port": 443,
+            "password": "3723507166611775488",
+            "tls": {
+                "enabled": true,
+                "server_name": "usable-toad.treefrog761.one",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",

@@ -98,6 +98,9 @@
                 "🇳🇱 NL | 🟢 | vless | @canfing_vpn | 16",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 82",
+                "🇳🇱 NL | 🟢 | vless | @configfa | 16",
+                "🇳🇱 NL | 🟢 | vless | @configfa | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 98",
@@ -111,7 +114,7 @@
                 "❔ XX | 🟢 | vless | @fsv2ray | 2",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @game_file2020 | 2",
-                "🇩🇪 DE | 🟢 | vless | @getconfigir | 16",
+                "🇩🇪 DE | 🟢 | vless | @getconfigir | 19",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iran_mehr_vpn | 15",
                 "🇺🇸 US | 🟢 | vless | @iranbaxvpn | 4",
@@ -154,6 +157,7 @@
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 4",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
+                "🇩🇪 DE | 🟢 | vless | @v2rayngvpn_1 | 9",
                 "🇩🇪 DE | 🟢 | vless | @v2rayopen | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
@@ -197,6 +201,9 @@
                 "🇳🇱 NL | 🟢 | vless | @canfing_vpn | 16",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 82",
+                "🇳🇱 NL | 🟢 | vless | @configfa | 16",
+                "🇳🇱 NL | 🟢 | vless | @configfa | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 98",
@@ -210,7 +217,7 @@
                 "❔ XX | 🟢 | vless | @fsv2ray | 2",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @game_file2020 | 2",
-                "🇩🇪 DE | 🟢 | vless | @getconfigir | 16",
+                "🇩🇪 DE | 🟢 | vless | @getconfigir | 19",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iran_mehr_vpn | 15",
                 "🇺🇸 US | 🟢 | vless | @iranbaxvpn | 4",
@@ -253,6 +260,7 @@
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 4",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
+                "🇩🇪 DE | 🟢 | vless | @v2rayngvpn_1 | 9",
                 "🇩🇪 DE | 🟢 | vless | @v2rayopen | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
@@ -503,6 +511,75 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 82",
+            "type": "vless",
+            "server": "activeservice.mispd.ir",
+            "server_port": 443,
+            "uuid": "e28cf77c-be33-4f99-be90-54b90994b4a8",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "tgju.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "NVOzqrT9fAAQzV1t5AQQMgQ-Q4y_Szgyxe14qG3rMS0",
+                    "short_id": "16c0b704e4"
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @configfa | 16",
+            "type": "vless",
+            "server": "a.nl.maviks.ru",
+            "server_port": 443,
+            "uuid": "e5c31f13-b10a-4e9c-bfa6-09454bc5e65c",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.apple.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
+                    "short_id": "21181028b56c8702"
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @configfa | 17",
+            "type": "vless",
+            "server": "uhgk.vip-morteza.xyz",
+            "server_port": 433,
+            "uuid": "a5f75cdd-d1dd-4767-99c4-ffebbe0d613e",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "eur-lex.europa.eu",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "safari"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "njS5Tdx6sQV0zCwFACf1uikWDSud9HqjS03WvH3_YAg",
+                    "short_id": "82df26bf775f55"
+                }
             }
         },
         {
@@ -829,16 +906,16 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @getconfigir | 16",
+            "tag": "🇩🇪 DE | 🟢 | vless | @getconfigir | 19",
             "type": "vless",
-            "server": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
-            "server_port": 443,
-            "uuid": "33707040-edcf-4185-94e4-2a071315c602",
+            "server": "poseidex.house0of1nyxora.top",
+            "server_port": 2096,
+            "uuid": "32622124-139e-4eab-8fb8-faaf021acd3f",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
+                "server_name": "yahoo.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -846,8 +923,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "GpgfsA-U8Y8M3LRcTfsaBViDtp2VlN5riSLLZ2kxEiQ",
-                    "short_id": "7def4dde"
+                    "public_key": "jM7JL3cp1HdLpEuvRDGJlzI-zUXW_6z8FkQBqimt4BE",
+                    "short_id": "88dfa714"
                 }
             }
         },
@@ -1894,6 +1971,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@LIGHTNING6"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayngvpn_1 | 9",
+            "type": "vless",
+            "server": "poseidex.house0of1nyxora.top",
+            "server_port": 2096,
+            "uuid": "32622124-139e-4eab-8fb8-faaf021acd3f",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "jM7JL3cp1HdLpEuvRDGJlzI-zUXW_6z8FkQBqimt4BE",
+                    "short_id": "88dfa714"
+                }
             }
         },
         {

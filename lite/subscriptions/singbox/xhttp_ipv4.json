@@ -94,10 +94,10 @@
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 9",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 11",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @v2raymelliii | 6"
+                "🇺🇸 US | 🔴 | vless | @v2raymelliii | 6",
+                "🇺🇸 US | 🔴 | vless | @v2rayopen | 9"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -110,10 +110,10 @@
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 9",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 11",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @v2raymelliii | 6"
+                "🇺🇸 US | 🔴 | vless | @v2raymelliii | 6",
+                "🇺🇸 US | 🔴 | vless | @v2rayopen | 9"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -184,15 +184,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 11",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "29091907-ea23-474b-a1ae-58b0a3996ed6",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
             "type": "vless",
             "server": "147.182.183.207",
@@ -230,6 +221,15 @@
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "c8b98685-35a8-413d-8184-d844322ecc4a",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @v2rayopen | 9",
+            "type": "vless",
+            "server": "151.101.67.8",
+            "server_port": 80,
+            "uuid": "acf4558d-eb3d-424b-d6e7-7f4191a2eddb",
             "flow": "",
             "packet_encoding": "xudp"
         }

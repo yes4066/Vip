@@ -81,9 +81,9 @@
     },
     "argo_vpn1": {
         "types": [
-            "ss",
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "𝐀𝐫𝐠𝐨_𝐕𝐏𝐍1 /پل فالکن /هیدیفای",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/argo_vpn1.jpg"
@@ -1046,7 +1046,9 @@
     "hope_net": {
         "types": [
             "vless",
-            "trojan"
+            "trojan",
+            "vmess",
+            "ss"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1125,8 +1127,8 @@
         "types": [
             "vmess",
             "ss",
-            "vless",
-            "trojan"
+            "trojan",
+            "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -2092,7 +2094,7 @@
     "proxy_mtproto_vpns_free": {
         "types": [
             "vless",
-            "ss"
+            "vmess"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxy_mtproto_vpns_free.jpg"
@@ -2556,10 +2558,10 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vmess",
-            "trojan",
             "vless",
-            "ss"
+            "vmess",
+            "ss",
+            "trojan"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
@@ -2676,7 +2678,7 @@
     "v2rayfree": {
         "types": [
             "vless",
-            "ss"
+            "vmess"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayfree.jpg"
