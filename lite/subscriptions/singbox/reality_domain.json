@@ -108,7 +108,6 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
-                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "proxy",
@@ -136,7 +135,6 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
-                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "auto",
@@ -610,29 +608,6 @@
                     "enabled": true,
                     "public_key": "YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E",
                     "short_id": "fd1dff03520d8f56"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
-            "type": "vless",
-            "server": "bmi.raheaiande.ir",
-            "server_port": 1001,
-            "uuid": "1bfb8c7d-a8f0-460d-f7a5-0e48df2beb30",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "ea.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "edge"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "wOXPafr4Gl6wXtw8c8T2juUCauBi25GVAfe4SMc4VEM",
-                    "short_id": "c7bc4d"
                 }
             }
         },
