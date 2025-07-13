@@ -92,7 +92,7 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
+                "🇺🇸 US | 🔴 | trojan | @v2source | 19"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -103,7 +103,7 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
+                "🇺🇸 US | 🔴 | trojan | @v2source | 19"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -174,18 +174,16 @@
             }
         },
         {
-            "tag": "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
+            "tag": "🇺🇸 US | 🔴 | trojan | @v2source | 19",
             "type": "trojan",
-            "server": "f10011.flyflylflyflysbs.sbs",
-            "server_port": 19949,
-            "password": "9c3c38d0-8637-4c94-a790-61f3202a943a",
-            "tls": {
-                "enabled": true,
-                "server_name": "tw01.ckcloud.info",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
+            "server": "cdns.doon.eu.org",
+            "server_port": 8443,
+            "password": "8a104bc2-a8d1-4f38-8c29-17176a68b7d5",
+            "transport": {
+                "type": "ws",
+                "path": "/profile/telegram@ssrsub",
+                "headers": {
+                    "Host": "cdn-node-oss-99.paofu.de"
                 }
             }
         }

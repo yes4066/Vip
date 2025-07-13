@@ -89,8 +89,10 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 65",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇸🇬 SG | 🔴 | trojan | @configshubplus | 19",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
@@ -107,7 +109,7 @@
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
-                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
+                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -115,8 +117,10 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 65",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇸🇬 SG | 🔴 | trojan | @configshubplus | 19",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
@@ -133,7 +137,7 @@
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
-                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12"
+                "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -143,6 +147,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 65",
+            "type": "trojan",
+            "server": "trus.moonfree.top",
+            "server_port": 443,
+            "password": "4863e1b2-ec2f-4c71-b862-ce533028e57e",
+            "tls": {
+                "enabled": true,
+                "server_name": "trus.moonfree.top",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @armodchannel | 59",
@@ -178,6 +198,22 @@
                 "path": "/trojan-ntls",
                 "headers": {
                     "Host": "asia.artunnel57.host"
+                }
+            }
+        },
+        {
+            "tag": "🇸🇬 SG | 🔴 | trojan | @configshubplus | 19",
+            "type": "trojan",
+            "server": "sg02.trojanyyds.xyz",
+            "server_port": 443,
+            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
+            "tls": {
+                "enabled": true,
+                "server_name": "sg02.trojanyyds.xyz",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },
@@ -502,7 +538,7 @@
             }
         },
         {
-            "tag": "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 12",
+            "tag": "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5",
             "type": "trojan",
             "server": "f10011.flyflylflyflysbs.sbs",
             "server_port": 19949,
