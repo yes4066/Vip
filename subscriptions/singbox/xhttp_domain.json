@@ -112,7 +112,6 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 5",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 3",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
-                "🇺🇸 US | 🔴 | vless | @free_serverir | 38",
                 "🇺🇸 US | 🔴 | vless | @g0dv2ray | 14",
                 "🇺🇸 US | 🔴 | vless | @game_file2020 | 1",
                 "🇩🇪 DE | 🟢 | vless | @game_file2020 | 2",
@@ -127,6 +126,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
+                "🇺🇸 US | 🔴 | vless | @v2raych | 15",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
                 "🇺🇸 US | 🔴 | vless | @v2rayngvpn_1 | 5",
@@ -167,7 +167,6 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 5",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 3",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
-                "🇺🇸 US | 🔴 | vless | @free_serverir | 38",
                 "🇺🇸 US | 🔴 | vless | @g0dv2ray | 14",
                 "🇺🇸 US | 🔴 | vless | @game_file2020 | 1",
                 "🇩🇪 DE | 🟢 | vless | @game_file2020 | 2",
@@ -182,6 +181,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 7",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
+                "🇺🇸 US | 🔴 | vless | @v2raych | 15",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
                 "🇺🇸 US | 🔴 | vless | @v2rayngvpn_1 | 5",
@@ -424,15 +424,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @free_serverir | 38",
-            "type": "vless",
-            "server": "bot.nimeshab-nabod.info",
-            "server_port": 80,
-            "uuid": "itsproxy-1",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @g0dv2ray | 14",
             "type": "vless",
             "server": "speedtestcustom.com",
@@ -592,6 +583,15 @@
             "server": "viop.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @v2raych | 15",
+            "type": "vless",
+            "server": "well.therubix.co",
+            "server_port": 80,
+            "uuid": "9dceeb88-6443-48cb-9f08-11190171e026",
             "flow": "",
             "packet_encoding": "xudp"
         },
