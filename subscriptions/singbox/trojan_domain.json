@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇫🇷 FR | 🟢 | trojan | @NamiraNet | 65",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🔴 | trojan | @confing_chanel | 15",
@@ -118,6 +119,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇫🇷 FR | 🟢 | trojan | @NamiraNet | 65",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🔴 | trojan | @confing_chanel | 15",
@@ -149,6 +151,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | trojan | @NamiraNet | 65",
+            "type": "trojan",
+            "server": "fr1.test3.net",
+            "server_port": 443,
+            "password": "8ce449a0-29cc-11f0-b43f-1239d0255272",
+            "tls": {
+                "enabled": true,
+                "server_name": "fr1.test3.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @armodchannel | 59",

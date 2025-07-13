@@ -23,6 +23,7 @@ dns:
     - '+.pool.ntp.org'
 
 proxies: 
+  - {"name":"🇫🇷 FR | 🟢 | trojan | @NamiraNet | 65","type":"trojan","server":"fr1.test3.net","port":443,"password":"8ce449a0-29cc-11f0-b43f-1239d0255272","skip-cert-verify":true}
   - {"name":"❔ XX | 🟢 | trojan | @armodchannel | 59","type":"trojan","server":"asia.artunnel57.host","port":443,"password":"fa9b326c-ca6f-4bb2-88f5-a163b404fcf8","skip-cert-verify":false}
   - {"name":"❔ XX | 🔴 | trojan | @armodchannel | 60","type":"trojan","server":"asia.artunnel57.host","port":80,"password":"fa9b326c-ca6f-4bb2-88f5-a163b404fcf8","skip-cert-verify":false}
   - {"name":"🇺🇸 US | 🔴 | trojan | @confing_chanel | 15","type":"trojan","server":"www.chatgameone.ir","port":36557,"password":"K7N8flfyok","skip-cert-verify":false}
@@ -58,6 +59,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies: 
+      - '🇫🇷 FR | 🟢 | trojan | @NamiraNet | 65'
       - '❔ XX | 🟢 | trojan | @armodchannel | 59'
       - '❔ XX | 🔴 | trojan | @armodchannel | 60'
       - '🇺🇸 US | 🔴 | trojan | @confing_chanel | 15'

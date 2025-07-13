@@ -105,10 +105,7 @@
                 "❔ XX | 🔴 | vless | @vpn_matin_best1 | 1",
                 "❔ XX | 🔴 | vless | @vpnstorefast | 13",
                 "❔ XX | 🟢 | vless | @vpnvg | 10",
-                "❔ XX | 🟢 | vless | @yekoyekvpn | 0",
-                "❔ XX | 🔴 | vless | @zilv2ray_service | 6",
-                "❔ XX | 🔴 | vless | @zilv2ray_service | 9",
-                "❔ XX | 🔴 | vless | @zilv2ray_service | 10"
+                "❔ XX | 🟢 | vless | @yekoyekvpn | 0"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -132,10 +129,7 @@
                 "❔ XX | 🔴 | vless | @vpn_matin_best1 | 1",
                 "❔ XX | 🔴 | vless | @vpnstorefast | 13",
                 "❔ XX | 🟢 | vless | @vpnvg | 10",
-                "❔ XX | 🟢 | vless | @yekoyekvpn | 0",
-                "❔ XX | 🔴 | vless | @zilv2ray_service | 6",
-                "❔ XX | 🔴 | vless | @zilv2ray_service | 9",
-                "❔ XX | 🔴 | vless | @zilv2ray_service | 10"
+                "❔ XX | 🟢 | vless | @yekoyekvpn | 0"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -447,51 +441,6 @@
                 "path": "/xUnw05Z6MV3NG29U?ed=2560",
                 "headers": {
                     "Host": "tEstBp.fIBiDOB9775921.woRkeRS.DEV"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🔴 | vless | @zilv2ray_service | 6",
-            "type": "vless",
-            "server": "[2a01:7e0:0:151:1fff:ffff:ffff:2224]",
-            "server_port": 443,
-            "uuid": "3c2cd8ba-da22-4d57-e885-26089cbead66",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "[2a01:7e0:0:151:1fff:ffff:ffff:2224]",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🔴 | vless | @zilv2ray_service | 9",
-            "type": "vless",
-            "server": "[2a01:7e0:0:151:1fff:ffff:ffff:2224]",
-            "server_port": 2087,
-            "uuid": "d3cc4545-0896-4245-8f29-fcc5dd928512",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "❔ XX | 🔴 | vless | @zilv2ray_service | 10",
-            "type": "vless",
-            "server": "[2a01:7e0:0:151:1fff:ffff:ffff:2224]",
-            "server_port": 443,
-            "uuid": "97344abc-9139-472f-d8a6-970f260cec8e",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "[2a01:7e0:0:151:1fff:ffff:ffff:2224]",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         }

@@ -91,6 +91,7 @@
                 "direct",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
+                "🇩🇪 DE | 🟢 | vless | @info_2it_channel | 14",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iseqaro | 4",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -98,7 +99,6 @@
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
-                "🇹🇷 TR | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2ray_sub | 6",
@@ -108,7 +108,6 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
-                "🇩🇪 DE | 🟢 | vless | @vpn_ioss | 16",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "proxy",
@@ -119,6 +118,7 @@
             "outbounds": [
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
+                "🇩🇪 DE | 🟢 | vless | @info_2it_channel | 14",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iseqaro | 4",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -126,7 +126,6 @@
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
-                "🇹🇷 TR | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2ray_sub | 6",
@@ -136,7 +135,6 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
-                "🇩🇪 DE | 🟢 | vless | @vpn_ioss | 16",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "auto",
@@ -200,6 +198,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@FsV2ray"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @info_2it_channel | 14",
+            "type": "vless",
+            "server": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
+            "server_port": 443,
+            "uuid": "1584806e-f63d-4f9b-a0b3-abe64b35a09c",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "GpgfsA-U8Y8M3LRcTfsaBViDtp2VlN5riSLLZ2kxEiQ",
+                    "short_id": "974a74bf"
+                }
             }
         },
         {
@@ -377,29 +398,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar"
-            }
-        },
-        {
-            "tag": "🇹🇷 TR | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
-            "type": "vless",
-            "server": "t1.tsto.ir",
-            "server_port": 10090,
-            "uuid": "60d8f9b7-8e41-4016-8663-5162db6c9cc3",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "arshitrayaneh.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "hHZ10XaArKwEuk-vi6cAIZTrTwHNMOWIgls2e5TLbwU",
-                    "short_id": "8dfa217df2ef0db9"
-                }
             }
         },
         {
@@ -610,29 +608,6 @@
                     "enabled": true,
                     "public_key": "YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E",
                     "short_id": "fd1dff03520d8f56"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vpn_ioss | 16",
-            "type": "vless",
-            "server": "zeusly.house0of1nyxora.top",
-            "server_port": 2087,
-            "uuid": "8e93b7d9-d134-4440-90b4-430248a97fe9",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "3XkvyZPLeTeTSQKy5k5i18k-qerFN8JJVIjNEQyMI3U",
-                    "short_id": "093a087278"
                 }
             }
         },
