@@ -91,24 +91,20 @@
                 "direct",
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 9",
+                "🏳️  | 🟢 | trojan | @configshubplus | 16",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
-                "🇺🇸 US | 🔴 | trojan | @entrynet | 15",
-                "🇯🇵 JP | 🟢 | trojan | @entrynet | 16",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 10",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
                 "🇮🇷 IR | 🔴 | trojan | @mahanvpn | 0",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
-                "🇩🇪 DE | 🟢 | trojan | @outline_ir | 14",
+                "🇩🇪 DE | 🟢 | trojan | @outline_ir | 13",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 11",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 12",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
@@ -140,24 +136,20 @@
             "outbounds": [
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 9",
+                "🏳️  | 🟢 | trojan | @configshubplus | 16",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
-                "🇺🇸 US | 🔴 | trojan | @entrynet | 15",
-                "🇯🇵 JP | 🟢 | trojan | @entrynet | 16",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 10",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
                 "🇮🇷 IR | 🔴 | trojan | @mahanvpn | 0",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
-                "🇩🇪 DE | 🟢 | trojan | @outline_ir | 14",
+                "🇩🇪 DE | 🟢 | trojan | @outline_ir | 13",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 11",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 12",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
@@ -212,6 +204,22 @@
             "server": "62.60.176.240",
             "server_port": 36557,
             "password": "@bored_vpn@bored_vpn@bored_vpn@bored_vpn@bored_vpn@bored_vpn"
+        },
+        {
+            "tag": "🏳️  | 🟢 | trojan | @configshubplus | 16",
+            "type": "trojan",
+            "server": "127.0.0.1",
+            "server_port": 1080,
+            "password": "bcaabca-aacb-acab-bdca-aacbccaabbcb",
+            "tls": {
+                "enabled": true,
+                "server_name": "127.0.0.1",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 11",
@@ -294,38 +302,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @entrynet | 15",
-            "type": "trojan",
-            "server": "108.162.195.127",
-            "server_port": 443,
-            "password": "Aimer",
-            "tls": {
-                "enabled": true,
-                "server_name": "ngepx.ambercc.filegear-sg.me",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇯🇵 JP | 🟢 | trojan | @entrynet | 16",
-            "type": "trojan",
-            "server": "18.181.175.76",
-            "server_port": 20230,
-            "password": "429ad146-8f43-4dd4-8fb3-cca3f3a30c63",
-            "tls": {
-                "enabled": true,
-                "server_name": "jp006.421421.xyz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
             "type": "trojan",
             "server": "18.199.233.194",
@@ -347,61 +323,6 @@
             "server": "91.107.141.0",
             "server_port": 23825,
             "password": "ziIjOlyGbM"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 10",
-            "type": "trojan",
-            "server": "35.155.4.93",
-            "server_port": 443,
-            "password": "3723507166611775488",
-            "tls": {
-                "enabled": true,
-                "server_name": "usable-toad.treefrog761.one",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
-            "type": "trojan",
-            "server": "104.21.75.120",
-            "server_port": 2053,
-            "password": "100b5163-fbb8-425d-9621-44d119555aa4",
-            "tls": {
-                "enabled": true,
-                "server_name": "MaHSA2.cffoRm.SitE",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/trWCuRIwSn9S6fDZGE/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=",
-                "headers": {
-                    "Host": "MaHSA2.cffoRm.SitE"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
-            "type": "trojan",
-            "server": "198.23.229.250",
-            "server_port": 443,
-            "password": "2ee85121-31de-4581-a492-eb00f606e392",
-            "tls": {
-                "enabled": true,
-                "server_name": "rc6.freeguard.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
@@ -489,7 +410,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @outline_ir | 14",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @outline_ir | 13",
             "type": "trojan",
             "server": "104.248.18.1",
             "server_port": 1935,

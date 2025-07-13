@@ -99,10 +99,12 @@
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
+                "🇺🇸 US | 🟢 | ss | @ip_cf_config | 9",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
+                "🇺🇸 US | 🟢 | ss | @outline_ir | 17",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -112,7 +114,6 @@
                 "❔ XX | 🟢 | ss | @sifev2ray | 5",
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
-                "🇮🇳 IN | 🟢 | ss | @v2ray_free_conf | 18",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raying | 11",
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 12",
@@ -138,10 +139,12 @@
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
+                "🇺🇸 US | 🟢 | ss | @ip_cf_config | 9",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
+                "🇺🇸 US | 🟢 | ss | @outline_ir | 17",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -151,7 +154,6 @@
                 "❔ XX | 🟢 | ss | @sifev2ray | 5",
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
-                "🇮🇳 IN | 🟢 | ss | @v2ray_free_conf | 18",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raying | 11",
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 12",
@@ -251,6 +253,14 @@
             "password": "u17T3BvpYaaiuW2c"
         },
         {
+            "tag": "🇺🇸 US | 🟢 | ss | @ip_cf_config | 9",
+            "type": "shadowsocks",
+            "server": "beesyar.org",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "4a2rfixophdjffa8KVA4Aa"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
             "type": "shadowsocks",
             "server": "api.namasha.co",
@@ -281,6 +291,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "WstuSnlu4ieA9M0L"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | ss | @outline_ir | 17",
+            "type": "shadowsocks",
+            "server": "host.phonygilson.icu",
+            "server_port": 49072,
+            "method": "chacha20-ietf-poly1305",
+            "password": "25WsDeXTUDXAZTEQ7TeHt9D4vkaHR6VbfkFRmutDiCJk6NQoeguUGciCX8JZiKUqiJm8JrJZzqYmDd194BVcnnuJu5rtvwoe"
         },
         {
             "tag": "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
@@ -353,14 +371,6 @@
             "server_port": 39448,
             "method": "chacha20-ietf-poly1305",
             "password": "1U5MUwZqVsFkDGXQfabJP9"
-        },
-        {
-            "tag": "🇮🇳 IN | 🟢 | ss | @v2ray_free_conf | 18",
-            "type": "shadowsocks",
-            "server": "id.vpnsparta.pro",
-            "server_port": 57456,
-            "method": "chacha20-ietf-poly1305",
-            "password": "360e21d21977dc11"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
