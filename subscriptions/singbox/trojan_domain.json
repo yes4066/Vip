@@ -91,9 +91,10 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇺🇸 US | 🔴 | trojan | @confing_chanel | 15",
                 "🇩🇪 DE | 🔴 | trojan | @connect_sho | 31",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
+                "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
@@ -121,9 +122,10 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇺🇸 US | 🔴 | trojan | @confing_chanel | 15",
                 "🇩🇪 DE | 🔴 | trojan | @connect_sho | 31",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
+                "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @free_serverir | 39",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
@@ -190,13 +192,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @confing_chanel | 15",
-            "type": "trojan",
-            "server": "www.chatgameone.ir",
-            "server_port": 36557,
-            "password": "K7N8flfyok"
-        },
-        {
             "tag": "🇩🇪 DE | 🔴 | trojan | @connect_sho | 31",
             "type": "trojan",
             "server": "pet-bulldog.goat627.mom",
@@ -232,6 +227,52 @@
                 "path": "/",
                 "headers": {
                     "Host": "production.tj.ojan.workers.dev"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
+            "type": "trojan",
+            "server": "russia.com",
+            "server_port": 443,
+            "password": "vip",
+            "tls": {
+                "enabled": true,
+                "server_name": "heihu880.pages.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "heihu880.pages.dev"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
+            "type": "trojan",
+            "server": "www.whatismyip.com",
+            "server_port": 443,
+            "password": "vip",
+            "tls": {
+                "enabled": true,
+                "server_name": "heihu880.pages.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "heihu880.pages.dev"
                 }
             }
         },
