@@ -93,12 +93,12 @@
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
-                "🇨🇭 CH | 🟢 | ss | @outline_ir | 17",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
                 "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "🇬🇧 GB | 🟢 | ss | @v2rayport | 13",
+                "🇷🇺 RU | 🟢 | ss | @vmess_ir | 17",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9"
             ],
             "tag": "proxy",
@@ -111,12 +111,12 @@
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
-                "🇨🇭 CH | 🟢 | ss | @outline_ir | 17",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
                 "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "🇬🇧 GB | 🟢 | ss | @v2rayport | 13",
+                "🇷🇺 RU | 🟢 | ss | @vmess_ir | 17",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9"
             ],
             "tag": "auto",
@@ -161,14 +161,6 @@
             "password": "WstuSnlu4ieA9M0L"
         },
         {
-            "tag": "🇨🇭 CH | 🟢 | ss | @outline_ir | 17",
-            "type": "shadowsocks",
-            "server": "h110vpnch.outlinekeys.net",
-            "server_port": 4248,
-            "method": "chacha20-ietf-poly1305",
-            "password": "SasawZo4g7WaqlK3a2mCol"
-        },
-        {
             "tag": "❔ XX | 🟢 | ss | @outlines_vpn | 5",
             "type": "shadowsocks",
             "server": "www.outline.network.ak1915.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
@@ -207,6 +199,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "1xO2cqPazqjGfCfd"
+        },
+        {
+            "tag": "🇷🇺 RU | 🟢 | ss | @vmess_ir | 17",
+            "type": "shadowsocks",
+            "server": "ct.uigame.space",
+            "server_port": 2024,
+            "method": "chacha20-ietf-poly1305",
+            "password": "33LpoU8X/xHnCD+cbNe+7p0pK/JngDLM+5+RILrxyfVFRW/niKz5Eu0rWyVcDho="
         },
         {
             "tag": "❔ XX | 🟢 | ss | @vpidiamond | 9",

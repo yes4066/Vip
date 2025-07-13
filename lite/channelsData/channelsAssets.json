@@ -1036,10 +1036,10 @@
     },
     "hope_net": {
         "types": [
-            "vmess",
-            "vless",
             "ss",
-            "trojan"
+            "trojan",
+            "vless",
+            "vmess"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1116,10 +1116,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
             "vmess",
-            "ss",
-            "trojan"
+            "vless",
+            "trojan",
+            "ss"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1671,9 +1671,9 @@
     },
     "mowjproxy": {
         "types": [
+            "ss",
             "vless",
-            "vmess",
-            "ss"
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -2141,7 +2141,6 @@
     },
     "proxyy": {
         "types": [
-            "trojan",
             "ss",
             "vmess"
         ],
@@ -2550,10 +2549,10 @@
     },
     "v2ray_free_conf": {
         "types": [
+            "trojan",
             "vless",
-            "vmess",
             "ss",
-            "trojan"
+            "vmess"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
@@ -2702,7 +2701,6 @@
     "v2rayng_fars": {
         "types": [
             "vless",
-            "vmess",
             "ss"
         ],
         "title": "v2rayng fars",
@@ -2745,13 +2743,6 @@
         ],
         "title": "V2rayNG (کانال فیلتر شکن )",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayngchannelll.jpg"
-    },
-    "v2rayngcloud": {
-        "types": [
-            "vless"
-        ],
-        "title": "V2",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayngcloud.jpg"
     },
     "v2rayngconfig": {
         "types": [
@@ -2950,8 +2941,8 @@
     },
     "v2ry_proxy": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "V2ry | Proxy | رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ry_proxy.jpg"
@@ -2967,8 +2958,9 @@
     },
     "v2source": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "trojan",
+            "ss"
         ],
         "title": "Free V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2source.jpg"
