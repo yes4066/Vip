@@ -89,12 +89,11 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇯🇵 JP | 🟢 | ss | @argo_vpn1 | 25",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇺🇸 US | 🟢 | ss | @dnsforyou | 2",
                 "🇺🇸 US | 🟢 | ss | @free1_vpn | 10",
-                "🇸🇬 SG | 🟢 | ss | @free1ss | 17",
+                "🇸🇬 SG | 🟢 | ss | @free1ss | 16",
                 "🇱🇻 LV | 🟢 | ss | @freeconfigsplus | 18",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
                 "🇩🇪 DE | 🟢 | ss | @jiedianf | 9",
@@ -124,12 +123,11 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇯🇵 JP | 🟢 | ss | @argo_vpn1 | 25",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇺🇸 US | 🟢 | ss | @dnsforyou | 2",
                 "🇺🇸 US | 🟢 | ss | @free1_vpn | 10",
-                "🇸🇬 SG | 🟢 | ss | @free1ss | 17",
+                "🇸🇬 SG | 🟢 | ss | @free1ss | 16",
                 "🇱🇻 LV | 🟢 | ss | @freeconfigsplus | 18",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
                 "🇩🇪 DE | 🟢 | ss | @jiedianf | 9",
@@ -161,14 +159,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇯🇵 JP | 🟢 | ss | @argo_vpn1 | 25",
-            "type": "shadowsocks",
-            "server": "54.238.207.188",
-            "server_port": 8313,
-            "method": "chacha20-ietf-poly1305",
-            "password": "ljqdalu13.."
         },
         {
             "tag": "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
@@ -203,7 +193,7 @@
             "password": "oZIoA69Q8yhcQV8ka3Pa3A"
         },
         {
-            "tag": "🇸🇬 SG | 🟢 | ss | @free1ss | 17",
+            "tag": "🇸🇬 SG | 🟢 | ss | @free1ss | 16",
             "type": "shadowsocks",
             "server": "167.172.89.195",
             "server_port": 8575,
