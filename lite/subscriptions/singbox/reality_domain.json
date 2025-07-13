@@ -98,6 +98,7 @@
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
+                "🇹🇷 TR | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2ray_sub | 6",
@@ -125,6 +126,7 @@
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
+                "🇹🇷 TR | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2ray_sub | 6",
@@ -375,6 +377,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar,@Mehrdad_Zargar"
+            }
+        },
+        {
+            "tag": "🇹🇷 TR | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
+            "type": "vless",
+            "server": "t1.tsto.ir",
+            "server_port": 10090,
+            "uuid": "60d8f9b7-8e41-4016-8663-5162db6c9cc3",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "arshitrayaneh.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "hHZ10XaArKwEuk-vi6cAIZTrTwHNMOWIgls2e5TLbwU",
+                    "short_id": "8dfa217df2ef0db9"
+                }
             }
         },
         {
