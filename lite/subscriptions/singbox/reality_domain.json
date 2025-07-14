@@ -105,6 +105,7 @@
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 9",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
+                "🇩🇪 DE | 🟢 | vless | @vaynora | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
@@ -131,6 +132,7 @@
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 9",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
+                "🇩🇪 DE | 🟢 | vless | @vaynora | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇦🇲 AM | 🟢 | vless | @vpn_accounti | 12",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
@@ -523,6 +525,29 @@
             "server": "de1.marzban-locations.com",
             "server_port": 3030,
             "uuid": "3d1622e6-7ac5-4715-b635-7bd542e0a70b",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @vaynora | 11",
+            "type": "vless",
+            "server": "al.panelmarzban.com",
+            "server_port": 3044,
+            "uuid": "dcbde77d-07b9-4c53-8542-60b6ff019c2d",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
