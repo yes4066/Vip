@@ -109,7 +109,8 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
+                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 17"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -137,7 +138,8 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
+                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 17"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -380,6 +382,15 @@
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "qeshmserver",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 17",
+            "type": "vless",
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "171fb311-8c1e-46ce-b8bd-2970f7367349",
             "flow": "",
             "packet_encoding": "xudp"
         }

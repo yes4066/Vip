@@ -111,7 +111,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
@@ -138,7 +138,7 @@
                 "❔ XX | 🟢 | vless | @garnet_free | 11",
                 "❔ XX | 🔴 | vless | @ge2ray | 4",
                 "❔ XX | 🟢 | vless | @god_server7 | 1",
-                "🇺🇸 US | 🔴 | vless | @goldenshiinevpn | 11",
+                "🇺🇸 US | 🔴 | vless | @goldenshiinevpn | 9",
                 "🇮🇷 IR | 🔴 | vless | @golf_vpn | 14",
                 "❔ XX | 🔴 | vless | @goodbyefiltering | 7",
                 "🇮🇷 IR | 🔴 | vless | @grizzlyvpn | 6",
@@ -212,6 +212,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
+                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 17",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -274,7 +275,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
@@ -301,7 +302,7 @@
                 "❔ XX | 🟢 | vless | @garnet_free | 11",
                 "❔ XX | 🔴 | vless | @ge2ray | 4",
                 "❔ XX | 🟢 | vless | @god_server7 | 1",
-                "🇺🇸 US | 🔴 | vless | @goldenshiinevpn | 11",
+                "🇺🇸 US | 🔴 | vless | @goldenshiinevpn | 9",
                 "🇮🇷 IR | 🔴 | vless | @golf_vpn | 14",
                 "❔ XX | 🔴 | vless | @goodbyefiltering | 7",
                 "🇮🇷 IR | 🔴 | vless | @grizzlyvpn | 6",
@@ -375,6 +376,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
+                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 17",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -748,7 +750,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
@@ -1182,7 +1184,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @goldenshiinevpn | 11",
+            "tag": "🇺🇸 US | 🔴 | vless | @goldenshiinevpn | 9",
             "type": "vless",
             "server": "cdnjs.com",
             "server_port": 8880,
@@ -2431,6 +2433,29 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 17",
+            "type": "vless",
+            "server": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
+            "server_port": 443,
+            "uuid": "1584806e-f63d-4f9b-a0b3-abe64b35a09c",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "GpgfsA-U8Y8M3LRcTfsaBViDtp2VlN5riSLLZ2kxEiQ",
+                    "short_id": "974a74bf"
                 }
             }
         },
