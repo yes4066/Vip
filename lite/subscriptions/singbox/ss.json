@@ -92,7 +92,6 @@
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
                 "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
-                "🇸🇬 SG | 🟢 | ss | @free_outline_keys | 16",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
@@ -113,12 +112,13 @@
                 "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 18",
                 "🇩🇪 DE | 🟢 | ss | @msv2flyng | 12",
-                "🇫🇷 FR | 🟢 | ss | @noviin_tel | 1",
+                "🇫🇷 FR | 🟢 | ss | @noviin_tel | 0",
                 "🇬🇧 GB | 🟢 | ss | @novinology | 16",
                 "🇬🇧 GB | 🟢 | ss | @outlineopenkey | 7",
                 "🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9",
                 "🇺🇸 US | 🟢 | ss | @selinc | 7",
                 "🇷🇺 RU | 🟢 | ss | @shadowsockskeys | 16",
+                "🇳🇱 NL | 🟢 | ss | @sinavm | 1",
                 "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
                 "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
                 "🇺🇸 US | 🟢 | ss | @v2pedia | 21",
@@ -137,7 +137,6 @@
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
                 "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
-                "🇸🇬 SG | 🟢 | ss | @free_outline_keys | 16",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
@@ -158,12 +157,13 @@
                 "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 18",
                 "🇩🇪 DE | 🟢 | ss | @msv2flyng | 12",
-                "🇫🇷 FR | 🟢 | ss | @noviin_tel | 1",
+                "🇫🇷 FR | 🟢 | ss | @noviin_tel | 0",
                 "🇬🇧 GB | 🟢 | ss | @novinology | 16",
                 "🇬🇧 GB | 🟢 | ss | @outlineopenkey | 7",
                 "🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9",
                 "🇺🇸 US | 🟢 | ss | @selinc | 7",
                 "🇷🇺 RU | 🟢 | ss | @shadowsockskeys | 16",
+                "🇳🇱 NL | 🟢 | ss | @sinavm | 1",
                 "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
                 "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
                 "🇺🇸 US | 🟢 | ss | @v2pedia | 21",
@@ -205,14 +205,6 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "W74XFALLLuw6m5IA"
-        },
-        {
-            "tag": "🇸🇬 SG | 🟢 | ss | @free_outline_keys | 16",
-            "type": "shadowsocks",
-            "server": "sg.outlinekeys.net",
-            "server_port": 52252,
-            "method": "chacha20-ietf-poly1305",
-            "password": "0XTRjWuqrvL6lpeio9mf5D"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
@@ -375,7 +367,7 @@
             "password": "LiHQX9cDbdooBHlIg0eiqQ"
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | ss | @noviin_tel | 1",
+            "tag": "🇫🇷 FR | 🟢 | ss | @noviin_tel | 0",
             "type": "shadowsocks",
             "server": "62.210.88.22",
             "server_port": 443,
@@ -421,6 +413,14 @@
             "server_port": 10601,
             "method": "aes-256-gcm",
             "password": "40bdc52dcffa6942"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | ss | @sinavm | 1",
+            "type": "shadowsocks",
+            "server": "146.103.98.85",
+            "server_port": 46303,
+            "method": "chacha20-ietf-poly1305",
+            "password": "VmtM6lUSMzc9lgO7gDzd49"
         },
         {
             "tag": "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",

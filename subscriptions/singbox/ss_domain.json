@@ -96,6 +96,7 @@
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
+                "🇺🇸 US | 🟢 | ss | @entrynet | 14",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
@@ -113,13 +114,14 @@
                 "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
-                "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 5",
-                "🇬🇧 GB | 🟢 | ss | @v2raying | 13",
+                "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 4",
+                "🇬🇧 GB | 🟢 | ss | @v2raying | 11",
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 12",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇬🇧 GB | 🟢 | ss | @vip_freevpn1 | 1",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
+                "🇳🇱 NL | 🟢 | ss | @vpn451 | 10",
                 "🇬🇧 GB | 🟢 | ss | @vpnaloo | 10"
             ],
             "tag": "proxy",
@@ -135,6 +137,7 @@
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
+                "🇺🇸 US | 🟢 | ss | @entrynet | 14",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
                 "🇬🇧 GB | 🟢 | ss | @freeconfigsplus | 16",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
@@ -152,13 +155,14 @@
                 "🇬🇧 GB | 🟢 | ss | @server_nekobox | 14",
                 "❔ XX | 🟢 | ss | @srovpn | 13",
                 "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
-                "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 5",
-                "🇬🇧 GB | 🟢 | ss | @v2raying | 13",
+                "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 4",
+                "🇬🇧 GB | 🟢 | ss | @v2raying | 11",
                 "🇳🇱 NL | 🟢 | ss | @v2rayngrit | 12",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇬🇧 GB | 🟢 | ss | @vip_freevpn1 | 1",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
+                "🇳🇱 NL | 🟢 | ss | @vpn451 | 10",
                 "🇬🇧 GB | 🟢 | ss | @vpnaloo | 10"
             ],
             "tag": "auto",
@@ -225,6 +229,14 @@
             "server_port": 10107,
             "method": "aes-256-gcm",
             "password": "M2E4ZGY2ZjI5MzU2ODAxMjEwYzgyNzQ0MGM5NGUy"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | ss | @entrynet | 14",
+            "type": "shadowsocks",
+            "server": "host.phonygilson.icu",
+            "server_port": 49072,
+            "method": "chacha20-ietf-poly1305",
+            "password": "2TyfdE1Di6h5BeFnimMePBYHksAUNXmvpbgiCWJDcDTff2acNnRDXYQpRPoFzcC4vu9WfHrUBV5VwVA6j8S1cNxNLNhZvo2E"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
@@ -363,7 +375,7 @@
             "password": "1U5MUwZqVsFkDGXQfabJP9"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 5",
+            "tag": "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 4",
             "type": "shadowsocks",
             "server": "admin.c1.webramz.co",
             "server_port": 443,
@@ -371,7 +383,7 @@
             "password": "1xO2cqPazqjGfCfd"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @v2raying | 13",
+            "tag": "🇬🇧 GB | 🟢 | ss | @v2raying | 11",
             "type": "shadowsocks",
             "server": "Peweza1.digipedia.shop",
             "server_port": 443,
@@ -411,12 +423,20 @@
             "password": "Bog0ELmMM9DSxDdQ"
         },
         {
-            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 7",
+            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 6",
             "type": "shadowsocks",
             "server": "sakura.outlinekeys.net",
             "server_port": 1235,
             "method": "chacha20-ietf-poly1305",
             "password": "amOyPdmvB8VIjQNqEgeVEo"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | ss | @vpn451 | 10",
+            "type": "shadowsocks",
+            "server": "macintosh.outlinekeys.net",
+            "server_port": 19609,
+            "method": "chacha20-ietf-poly1305",
+            "password": "rirgAJoGVPZBhFx9gNH3gj"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @vpnaloo | 10",
