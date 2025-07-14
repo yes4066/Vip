@@ -89,9 +89,8 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
-                "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 14",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
@@ -101,9 +100,8 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
-                "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 14",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
@@ -117,7 +115,7 @@
             "type": "direct"
         },
         {
-            "tag": "🇨🇦 CA | 🟢 | trojan | @cryptoguardvpn | 2",
+            "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
             "type": "trojan",
             "server": "production.tj.ojan.workers.dev",
             "server_port": 443,
@@ -159,22 +157,6 @@
                 "path": "/?ed=2560",
                 "headers": {
                     "Host": "heihu880.pages.dev"
-                }
-            }
-        },
-        {
-            "tag": "🇭🇰 HK | 🟢 | trojan | @ip_cf_config | 14",
-            "type": "trojan",
-            "server": "v01.gutingting.com",
-            "server_port": 30002,
-            "password": "1957909a-4f2a-4d9c-99ad-119d45f052c1",
-            "tls": {
-                "enabled": true,
-                "server_name": "v2tw01.fuqiangren.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },
