@@ -106,13 +106,14 @@
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇦🇹 AT | 🟢 | ss | @freakconfig | 7",
                 "🇬🇧 GB | 🟢 | ss | @free1_vpn | 11",
+                "🇫🇷 FR | 🟢 | ss | @free1ss | 16",
                 "🇱🇻 LV | 🟢 | ss | @freeconfigsplus | 18",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
+                "🇺🇸 US | 🟢 | ss | @hope_net | 19",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
-                "🇺🇸 US | 🟢 | ss | @ip_cf_config | 16",
                 "🇳🇱 NL | 🟢 | ss | @jiedianf | 9",
-                "🇫🇷 FR | 🟢 | ss | @key_outline | 19",
                 "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
+                "🇬🇧 GB | 🟢 | ss | @meli_proxyy | 20",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 18",
                 "🇩🇪 DE | 🟢 | ss | @msv2flyng | 12",
                 "🇫🇷 FR | 🟢 | ss | @noviin_tel | 0",
@@ -154,13 +155,14 @@
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇦🇹 AT | 🟢 | ss | @freakconfig | 7",
                 "🇬🇧 GB | 🟢 | ss | @free1_vpn | 11",
+                "🇫🇷 FR | 🟢 | ss | @free1ss | 16",
                 "🇱🇻 LV | 🟢 | ss | @freeconfigsplus | 18",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
+                "🇺🇸 US | 🟢 | ss | @hope_net | 19",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
-                "🇺🇸 US | 🟢 | ss | @ip_cf_config | 16",
                 "🇳🇱 NL | 🟢 | ss | @jiedianf | 9",
-                "🇫🇷 FR | 🟢 | ss | @key_outline | 19",
                 "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
+                "🇬🇧 GB | 🟢 | ss | @meli_proxyy | 20",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 18",
                 "🇩🇪 DE | 🟢 | ss | @msv2flyng | 12",
                 "🇫🇷 FR | 🟢 | ss | @noviin_tel | 0",
@@ -325,6 +327,14 @@
             "password": "W74XFALLLuw6m5IA"
         },
         {
+            "tag": "🇫🇷 FR | 🟢 | ss | @free1ss | 16",
+            "type": "shadowsocks",
+            "server": "62.210.88.22",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "2fHeM67wNfOyFBMVeVMWvp"
+        },
+        {
             "tag": "🇱🇻 LV | 🟢 | ss | @freeconfigsplus | 18",
             "type": "shadowsocks",
             "server": "216.173.70.187",
@@ -341,20 +351,20 @@
             "password": "fDDmH4QefmWqMJ8UURZrGh"
         },
         {
+            "tag": "🇺🇸 US | 🟢 | ss | @hope_net | 19",
+            "type": "shadowsocks",
+            "server": "45.87.175.154",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "4a2rfixophdjffa8KVA4Aa"
+        },
+        {
             "tag": "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
             "type": "shadowsocks",
             "server": "51.142.171.150",
             "server_port": 49499,
             "method": "chacha20-ietf-poly1305",
             "password": "kTjlLxrncKx4i2HIjxfA3M"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | ss | @ip_cf_config | 16",
-            "type": "shadowsocks",
-            "server": "45.87.175.164",
-            "server_port": 8080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "4a2rfixophdjffa8KVA4Aa"
         },
         {
             "tag": "🇳🇱 NL | 🟢 | ss | @jiedianf | 9",
@@ -365,20 +375,20 @@
             "password": "piv97XS1Cval86vfwHPD5j"
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | ss | @key_outline | 19",
-            "type": "shadowsocks",
-            "server": "62.210.88.22",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "2fHeM67wNfOyFBMVeVMWvp"
-        },
-        {
             "tag": "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
             "type": "shadowsocks",
             "server": "85.210.120.237",
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "Bog0ELmMM9DSxDdQ"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @meli_proxyy | 20",
+            "type": "shadowsocks",
+            "server": "78.129.140.11",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "uDk6Sn45YXIJ4pDGDUqy3i"
         },
         {
             "tag": "🇺🇸 US | 🟢 | ss | @mester_v2ray | 18",
