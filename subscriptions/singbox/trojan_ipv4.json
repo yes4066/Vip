@@ -93,7 +93,6 @@
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 6",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 7",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 8",
-                "🇨🇦 CA | 🔴 | trojan | @configshubplus | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 15",
@@ -119,8 +118,6 @@
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 16",
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 17",
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
-                "🏳️  | 🟢 | trojan | @v2raych | 17",
-                "🏳️  | 🟢 | trojan | @v2raych | 18",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -132,8 +129,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 12",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
-                "v@104.21.43.168:443?security=tls&sni=2.link-kon.ir&alpn=h3,h2,http/1.1&fp=randomized&type=ws&host=2.lINK-KoN.IR&path=/trTcwZRw8JC0TPp6d1?ed=2560#🇺🇸 US | 🟢 | trojan | @v2rayweb | 12",
-                "🇺🇸 US | 🟢 | trojan | @v2rayweb | 13",
+                "🇺🇸 US | 🟢 | trojan | @v2rayweb | 16",
                 "🇫🇷 FR | 🔴 | trojan | @yxjnode | 23"
             ],
             "tag": "proxy",
@@ -146,7 +142,6 @@
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 6",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 7",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 8",
-                "🇨🇦 CA | 🔴 | trojan | @configshubplus | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 15",
@@ -172,8 +167,6 @@
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 16",
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 17",
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
-                "🏳️  | 🟢 | trojan | @v2raych | 17",
-                "🏳️  | 🟢 | trojan | @v2raych | 18",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -185,8 +178,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 12",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
-                "v@104.21.43.168:443?security=tls&sni=2.link-kon.ir&alpn=h3,h2,http/1.1&fp=randomized&type=ws&host=2.lINK-KoN.IR&path=/trTcwZRw8JC0TPp6d1?ed=2560#🇺🇸 US | 🟢 | trojan | @v2rayweb | 12",
-                "🇺🇸 US | 🟢 | trojan | @v2rayweb | 13",
+                "🇺🇸 US | 🟢 | trojan | @v2rayweb | 16",
                 "🇫🇷 FR | 🔴 | trojan | @yxjnode | 23"
             ],
             "tag": "auto",
@@ -234,13 +226,6 @@
             "server": "62.60.176.240",
             "server_port": 36557,
             "password": "T9xcEjdUWx"
-        },
-        {
-            "tag": "🇨🇦 CA | 🔴 | trojan | @configshubplus | 14",
-            "type": "trojan",
-            "server": "52.60.98.113",
-            "server_port": 22222,
-            "password": "telegram-id-directvpn"
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 13",
@@ -658,38 +643,6 @@
             }
         },
         {
-            "tag": "🏳️  | 🟢 | trojan | @v2raych | 17",
-            "type": "trojan",
-            "server": "127.0.0.1",
-            "server_port": 8080,
-            "password": "cbcaaab-cbaa-acba-badc-aaaacbcbcbcb",
-            "tls": {
-                "enabled": true,
-                "server_name": "127.0.0.1",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🏳️  | 🟢 | trojan | @v2raych | 18",
-            "type": "trojan",
-            "server": "127.0.0.1",
-            "server_port": 1080,
-            "password": "baccaba-abac-caab-abcd-cbcbaacbacab",
-            "tls": {
-                "enabled": true,
-                "server_name": "127.0.0.1",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
             "type": "trojan",
             "server": "146.19.215.81",
@@ -864,14 +817,7 @@
             }
         },
         {
-            "tag": "v@104.21.43.168:443?security=tls&sni=2.link-kon.ir&alpn=h3,h2,http/1.1&fp=randomized&type=ws&host=2.lINK-KoN.IR&path=/trTcwZRw8JC0TPp6d1?ed=2560#🇺🇸 US | 🟢 | trojan | @v2rayweb | 12",
-            "type": "trojan",
-            "server": "0RiSuJPsug",
-            "server_port": 0,
-            "password": ""
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @v2rayweb | 13",
+            "tag": "🇺🇸 US | 🟢 | trojan | @v2rayweb | 16",
             "type": "trojan",
             "server": "172.67.181.173",
             "server_port": 443,

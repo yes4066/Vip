@@ -103,11 +103,10 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 9",
+                "🇩🇪 DE | 🟢 | vless | @v2rayngvpn_1 | 8",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
-                "🇩🇪 DE | 🟢 | vless | @vaynora | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
-                "🇩🇪 DE | 🟢 | vless | @vpn_accounti | 12",
+                "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 18",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "proxy",
@@ -130,11 +129,10 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 9",
+                "🇩🇪 DE | 🟢 | vless | @v2rayngvpn_1 | 8",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
-                "🇩🇪 DE | 🟢 | vless | @vaynora | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
-                "🇩🇪 DE | 🟢 | vless | @vpn_accounti | 12",
+                "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 18",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "auto",
@@ -501,26 +499,30 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @v2rayngvpn_1 | 9",
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayngvpn_1 | 8",
             "type": "vless",
-            "server": "poseidex.house0of1nyxora.top",
-            "server_port": 2096,
-            "uuid": "32622124-139e-4eab-8fb8-faaf021acd3f",
+            "server": "server1.fergalvpnmod.com",
+            "server_port": 28338,
+            "uuid": "0b9ee474-19f6-4d7f-9281-96f239e6cebc",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "yahoo.com",
+                "server_name": "cloudflare.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome"
+                    "fingerprint": "randomized"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "jM7JL3cp1HdLpEuvRDGJlzI-zUXW_6z8FkQBqimt4BE",
-                    "short_id": "88dfa714"
+                    "public_key": "MJwVQS7Qs5U_FYJn_osHZJSQ9ioxZRHC2HDPVwt7nmw",
+                    "short_id": "9ecc4615ce"
                 }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Telegram:@FergalVpnMod"
             }
         },
         {
@@ -529,29 +531,6 @@
             "server": "de1.marzban-locations.com",
             "server_port": 3030,
             "uuid": "3d1622e6-7ac5-4715-b635-7bd542e0a70b",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
-                    "short_id": ""
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vaynora | 11",
-            "type": "vless",
-            "server": "al.panelmarzban.com",
-            "server_port": 3044,
-            "uuid": "dcbde77d-07b9-4c53-8542-60b6ff019c2d",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
@@ -593,30 +572,26 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vpn_accounti | 12",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 18",
             "type": "vless",
-            "server": "server1.fergalvpnmod.com",
-            "server_port": 28338,
-            "uuid": "0b9ee474-19f6-4d7f-9281-96f239e6cebc",
+            "server": "al.panelmarzban.com",
+            "server_port": 3044,
+            "uuid": "dcbde77d-07b9-4c53-8542-60b6ff019c2d",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "cloudflare.com",
+                "server_name": "refersion.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "randomized"
+                    "fingerprint": "firefox"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "MJwVQS7Qs5U_FYJn_osHZJSQ9ioxZRHC2HDPVwt7nmw",
-                    "short_id": "9ecc4615ce"
+                    "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
+                    "short_id": ""
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@FergalVpnMod"
             }
         },
         {
