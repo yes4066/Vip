@@ -91,7 +91,6 @@
                 "direct",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
-                "🇬🇧 GB | 🟢 | trojan | @hope_net | 19",
                 "🇺🇸 US | 🔴 | trojan | @icv2ray | 6",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 16",
@@ -110,7 +109,6 @@
             "outbounds": [
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
-                "🇬🇧 GB | 🟢 | trojan | @hope_net | 19",
                 "🇺🇸 US | 🔴 | trojan | @icv2ray | 6",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 16",
@@ -152,22 +150,6 @@
             "server": "18.199.233.194",
             "server_port": 22223,
             "password": "telegram-id-directvpn",
-            "tls": {
-                "enabled": true,
-                "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | trojan | @hope_net | 19",
-            "type": "trojan",
-            "server": "18.169.33.253",
-            "server_port": 22222,
-            "password": "telegram-id-privatevpns",
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",

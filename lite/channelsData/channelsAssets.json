@@ -1088,10 +1088,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
-            "vless",
             "vmess",
-            "ss"
+            "ss",
+            "vless",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1938,14 +1938,6 @@
         "title": "سرور اوتلاین ا سرور V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outline_ir.jpg"
     },
-    "outline_vpn": {
-        "types": [
-            "vless",
-            "ss"
-        ],
-        "title": "Outline Vpn",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outline_vpn.jpg"
-    },
     "outlineopenkey": {
         "types": [
             "ss"
@@ -2471,8 +2463,6 @@
         "types": [
             "ss",
             "vless",
-            "hy2",
-            "vmess",
             "trojan"
         ],
         "title": "V2ray Extractor",
@@ -2487,10 +2477,10 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vmess",
             "ss",
             "trojan",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
@@ -2631,6 +2621,7 @@
     },
     "v2rayng_fars": {
         "types": [
+            "ss",
             "vless"
         ],
         "title": "v2rayng fars",
