@@ -70,14 +70,6 @@
         "title": "ANSEL",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ansel_team.jpg"
     },
-    "antifilterjadid": {
-        "types": [
-            "vless",
-            "vmess"
-        ],
-        "title": "🌍 Antifilterjadid 🌏 آنتی فیلتر جدید",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/antifilterjadid.jpg"
-    },
     "argo_vpn1": {
         "types": [
             "ss"
@@ -871,8 +863,8 @@
     "freevpnatm": {
         "types": [
             "trojan",
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "科學上网 free configs",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/freevpnatm.jpg"
@@ -1008,9 +1000,9 @@
     "hope_net": {
         "types": [
             "vless",
-            "trojan",
+            "ss",
             "vmess",
-            "ss"
+            "trojan"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1088,10 +1080,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
-            "trojan",
             "vless",
-            "vmess"
+            "ss",
+            "vmess",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1635,8 +1627,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1952,7 +1944,8 @@
     },
     "outlinev2rayng": {
         "types": [
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outlinev2rayng.jpg"
@@ -2054,7 +2047,7 @@
             "ss",
             "vmess"
         ],
-        "title": "پروکسی VPN | کانفیگ نت ملی",
+        "title": "پروکسی VPN | کانفیگ V2ray رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxycrone.jpg"
     },
     "proxyfn": {
@@ -2080,14 +2073,6 @@
         ],
         "title": "ProxySudo",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxysudo.jpg"
-    },
-    "proxyy": {
-        "types": [
-            "ss",
-            "vmess"
-        ],
-        "title": "پروکسی پرسرعت🚀proxy",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxyy.jpg"
     },
     "prrofile_purple": {
         "types": [
@@ -2469,9 +2454,9 @@
     "v2ray_free_conf": {
         "types": [
             "ss",
+            "vmess",
             "trojan",
-            "vless",
-            "vmess"
+            "vless"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
@@ -2866,8 +2851,8 @@
     },
     "vaynora": {
         "types": [
-            "vless",
             "trojan",
+            "vless",
             "vmess",
             "ss"
         ],
@@ -2939,8 +2924,8 @@
     },
     "vmess_ir": {
         "types": [
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "🚀سرور رایگان و اختصاصی vmess_ir🚀",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vmess_ir.jpg"
@@ -3177,8 +3162,8 @@
     },
     "vpnv2rayngv": {
         "types": [
-            "ss",
             "vless",
+            "ss",
             "vmess"
         ],
         "title": "کانفینگ پروکسی وی توری نت ملی اسکوئید گیم خرید سرورفیلترشکن بازی مرکب وی پی ان اسکویید گیم ایران vpn v2rayNG vmess vless proxy",
