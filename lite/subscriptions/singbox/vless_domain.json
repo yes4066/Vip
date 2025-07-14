@@ -237,7 +237,6 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "🇺🇸 US | 🟢 | vless | @vpnkanfik | 3",
-                "🇫🇮 FI | 🟢 | vless | @vpnplusee_free | 17",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
                 "🇩🇪 DE | 🔴 | vless | @vpnv2raytop | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
@@ -402,7 +401,6 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "🇺🇸 US | 🟢 | vless | @vpnkanfik | 3",
-                "🇫🇮 FI | 🟢 | vless | @vpnplusee_free | 17",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
                 "🇩🇪 DE | 🔴 | vless | @vpnv2raytop | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
@@ -2940,29 +2938,6 @@
                 "path": "/",
                 "headers": {
                     "Host": "OpBgSaWz16.aBbAsAlIrAhMaTdIkH.OrG"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @vpnplusee_free | 17",
-            "type": "vless",
-            "server": "oxg8.aivideosurfers.com",
-            "server_port": 5555,
-            "uuid": "4b7e41a7-0c05-442a-9c92-28c37afc3eab",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E",
-                    "short_id": "42c0b628ba6a42a9"
                 }
             }
         },
