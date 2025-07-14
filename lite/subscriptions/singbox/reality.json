@@ -99,7 +99,6 @@
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
-                "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 21",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇹🇷 TR | 🟢 | vless | @sinavm | 1",
@@ -110,6 +109,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 10",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
+                "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -120,7 +120,6 @@
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 5",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
@@ -150,7 +149,6 @@
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
-                "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 21",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇹🇷 TR | 🟢 | vless | @sinavm | 1",
@@ -161,6 +159,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 10",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
+                "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -171,7 +170,6 @@
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 5",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
@@ -433,33 +431,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 21",
-            "type": "vless",
-            "server": "91.107.251.56",
-            "server_port": 22,
-            "uuid": "8f10f456-fbb0-492a-a71b-9b88cde3e5aa",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "O1JNAhjldpMPvqA-GCbjVlm1gvVQSYAtXULtfC-9z1w",
-                    "short_id": "d757f949ab85"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "کانال‌تلگرام @ev2rayy"
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
             "type": "vless",
             "server": "188.245.61.146",
@@ -695,6 +666,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "chessgame"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 18",
+            "type": "vless",
+            "server": "91.107.251.56",
+            "server_port": 22,
+            "uuid": "8f10f456-fbb0-492a-a71b-9b88cde3e5aa",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "O1JNAhjldpMPvqA-GCbjVlm1gvVQSYAtXULtfC-9z1w",
+                    "short_id": "d757f949ab85"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "کانال‌تلگرام @ev2rayy"
             }
         },
         {
@@ -945,29 +943,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Hossien"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @mowjproxy | 5",
-            "type": "vless",
-            "server": "bmi.raheaiande.ir",
-            "server_port": 1001,
-            "uuid": "8f3fa4d8-9164-4320-af14-4bea3dbd1c21",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "ea.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "edge"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "wOXPafr4Gl6wXtw8c8T2juUCauBi25GVAfe4SMc4VEM",
-                    "short_id": "c7bc4d"
-                }
             }
         },
         {

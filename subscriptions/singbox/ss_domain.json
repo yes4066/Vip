@@ -96,6 +96,7 @@
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
+                "🇳🇱 NL | 🟢 | ss | @configshubplus | 15",
                 "🇬🇧 GB | 🟢 | ss | @dailyv2ry | 131",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
@@ -136,6 +137,7 @@
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 2",
+                "🇳🇱 NL | 🟢 | ss | @configshubplus | 15",
                 "🇬🇧 GB | 🟢 | ss | @dailyv2ry | 131",
                 "🇬🇧 GB | 🟢 | ss | @fastkanfig | 8",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 2",
@@ -227,6 +229,14 @@
             "server_port": 10107,
             "method": "aes-256-gcm",
             "password": "M2E4ZGY2ZjI5MzU2ODAxMjEwYzgyNzQ0MGM5NGUy"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | ss | @configshubplus | 15",
+            "type": "shadowsocks",
+            "server": "beesyar.org",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "4a2rfixophdjffa8KVA4Aa"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @dailyv2ry | 131",
