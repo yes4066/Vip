@@ -97,11 +97,10 @@
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
-                "🇸🇪 SE | 🟢 | trojan | @entrynet | 17",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
-                "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 11",
+                "🇫🇷 FR | 🟢 | trojan | @jiedianf | 7",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
                 "🇮🇷 IR | 🔴 | trojan | @mahanvpn | 0",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -117,6 +116,7 @@
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 16",
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 17",
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
+                "🏳️  | 🟢 | trojan | @v2raych | 19",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -144,11 +144,10 @@
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
-                "🇸🇪 SE | 🟢 | trojan | @entrynet | 17",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
-                "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 11",
+                "🇫🇷 FR | 🟢 | trojan | @jiedianf | 7",
                 "🇩🇪 DE | 🟢 | trojan | @mafiav2ray | 13",
                 "🇮🇷 IR | 🔴 | trojan | @mahanvpn | 0",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -164,6 +163,7 @@
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 16",
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 17",
                 "🇺🇸 US | 🟢 | trojan | @v2ray_team | 19",
+                "🏳️  | 🟢 | trojan | @v2raych | 19",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -313,22 +313,6 @@
             }
         },
         {
-            "tag": "🇸🇪 SE | 🟢 | trojan | @entrynet | 17",
-            "type": "trojan",
-            "server": "51.21.37.172",
-            "server_port": 22222,
-            "password": "telegram-id-privatevpns",
-            "tls": {
-                "enabled": true,
-                "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | trojan | @freakconfig | 6",
             "type": "trojan",
             "server": "18.199.233.194",
@@ -352,30 +336,23 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 11",
             "type": "trojan",
-            "server": "104.21.75.120",
-            "server_port": 2053,
-            "password": "100b5163-fbb8-425d-9621-44d119555aa4",
+            "server": "35.155.4.93",
+            "server_port": 443,
+            "password": "3723507166611775488",
             "tls": {
                 "enabled": true,
-                "server_name": "MaHSA2.cffoRm.SitE",
+                "server_name": "usable-toad.treefrog761.one",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
                 }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/trWCuRIwSn9S6fDZGE/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=",
-                "headers": {
-                    "Host": "MaHSA2.cffoRm.SitE"
-                }
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 8",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 7",
             "type": "trojan",
             "server": "15.236.173.146",
             "server_port": 22222,
@@ -653,6 +630,22 @@
                 "path": "/",
                 "headers": {
                     "Host": "t-watashi-r-jacket-o-people-jan.watashi-java.ir"
+                }
+            }
+        },
+        {
+            "tag": "🏳️  | 🟢 | trojan | @v2raych | 19",
+            "type": "trojan",
+            "server": "127.0.0.1",
+            "server_port": 8080,
+            "password": "caaacbb-caab-aabc-bcad-abcabbaccacb",
+            "tls": {
+                "enabled": true,
+                "server_name": "127.0.0.1",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },

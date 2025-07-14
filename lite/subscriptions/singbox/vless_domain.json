@@ -149,13 +149,13 @@
                 "🇺🇸 US | 🟢 | vless | @hopev2ray | 5",
                 "❔ XX | 🔴 | vless | @imhdiyvp | 12",
                 "🇩🇪 DE | 🟢 | vless | @info_2it_channel | 14",
-                "🇺🇸 US | 🟢 | vless | @ip_cf_config | 14",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iranbaxvpn | 8",
                 "🇷🇺 RU | 🔴 | vless | @iranbfilter | 6",
                 "❔ XX | 🟢 | vless | @iraniv2ray | 6",
                 "🇺🇸 US | 🟢 | vless | @iranproxypro | 6",
                 "🇺🇸 US | 🟢 | vless | @iransoftware90 | 1",
+                "🇺🇸 US | 🟢 | vless | @iranvipnet | 7",
                 "🇮🇷 IR | 🔴 | vless | @irlast | 0",
                 "❔ XX | 🟢 | vless | @iseqaro | 4",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -312,13 +312,13 @@
                 "🇺🇸 US | 🟢 | vless | @hopev2ray | 5",
                 "❔ XX | 🔴 | vless | @imhdiyvp | 12",
                 "🇩🇪 DE | 🟢 | vless | @info_2it_channel | 14",
-                "🇺🇸 US | 🟢 | vless | @ip_cf_config | 14",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iranbaxvpn | 8",
                 "🇷🇺 RU | 🔴 | vless | @iranbfilter | 6",
                 "❔ XX | 🟢 | vless | @iraniv2ray | 6",
                 "🇺🇸 US | 🟢 | vless | @iranproxypro | 6",
                 "🇺🇸 US | 🟢 | vless | @iransoftware90 | 1",
+                "🇺🇸 US | 🟢 | vless | @iranvipnet | 7",
                 "🇮🇷 IR | 🔴 | vless | @irlast | 0",
                 "❔ XX | 🟢 | vless | @iseqaro | 4",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -1353,31 +1353,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @ip_cf_config | 14",
-            "type": "vless",
-            "server": "fishlab.ucdavis.edu",
-            "server_port": 443,
-            "uuid": "-VPNCUSTOMIZE-",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "fishlab.ucdavis.edu",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/@VPNCUSTOMIZE-----@VPNCUSTOMIZE-----@VPNCUSTOMIZE---@VPNCUSTOMIZE---@VPNCUSTOMIZE---@VPNCUSTOMIZE---@VPNCUSTOMIZE?ed=2560",
-                "headers": {
-                    "Host": "fishlab.ucdavis.edu"
-                }
-            }
-        },
-        {
             "tag": "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
             "type": "vless",
             "server": "uae.kitten-tube.com",
@@ -1503,6 +1478,31 @@
                 "path": "/ws?ed=2056",
                 "headers": {
                     "Host": "de222.hajhesam.biz.id"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @iranvipnet | 7",
+            "type": "vless",
+            "server": "fishlab.ucdavis.edu",
+            "server_port": 443,
+            "uuid": "-VPNCUSTOMIZE-",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "fishlab.ucdavis.edu",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/@VPNCUSTOMIZE-----@VPNCUSTOMIZE-----@VPNCUSTOMIZE---@VPNCUSTOMIZE---@VPNCUSTOMIZE---@VPNCUSTOMIZE---@VPNCUSTOMIZE?ed=2560",
+                "headers": {
+                    "Host": "fishlab.ucdavis.edu"
                 }
             }
         },
