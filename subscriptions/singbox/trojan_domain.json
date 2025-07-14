@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 46",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
@@ -114,6 +115,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 46",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
@@ -141,6 +143,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 46",
+            "type": "trojan",
+            "server": "pt.mjt000.com",
+            "server_port": 443,
+            "password": "84587c21-9938-42fc-a4b0-4f72dd72b7aa",
+            "tls": {
+                "enabled": true,
+                "server_name": "pt.mjt000.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @armodchannel | 59",
