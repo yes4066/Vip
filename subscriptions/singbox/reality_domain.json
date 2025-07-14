@@ -130,6 +130,7 @@
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
                 "🇩🇪 DE | 🟢 | vless | @kurdistan_vpn_perfectt | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
+                "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 18",
                 "❔ XX | 🟢 | vless | @mtpv2ray | 7",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -153,7 +154,7 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 4",
                 "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 13",
-                "🇪🇸 ES | 🟢 | vless | @v2rayng_ip | 8",
+                "🇪🇸 ES | 🟢 | vless | @v2rayng_ip | 6",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngseven | 6",
@@ -233,6 +234,7 @@
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
                 "🇩🇪 DE | 🟢 | vless | @kurdistan_vpn_perfectt | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
+                "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 18",
                 "❔ XX | 🟢 | vless | @mtpv2ray | 7",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -256,7 +258,7 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 4",
                 "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 13",
-                "🇪🇸 ES | 🟢 | vless | @v2rayng_ip | 8",
+                "🇪🇸 ES | 🟢 | vless | @v2rayng_ip | 6",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngseven | 6",
@@ -1317,6 +1319,33 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🟢 | vless | @meli_proxyy | 18",
+            "type": "vless",
+            "server": "server1.fergalvpnmod.com",
+            "server_port": 28338,
+            "uuid": "0b9ee474-19f6-4d7f-9281-96f239e6cebc",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "cloudflare.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "MJwVQS7Qs5U_FYJn_osHZJSQ9ioxZRHC2HDPVwt7nmw",
+                    "short_id": "9ecc4615ce"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Telegram:@FergalVpnMod"
+            }
+        },
+        {
             "tag": "❔ XX | 🟢 | vless | @mtpv2ray | 7",
             "type": "vless",
             "server": "day.mtpmio.com",
@@ -1874,7 +1903,7 @@
             }
         },
         {
-            "tag": "🇪🇸 ES | 🟢 | vless | @v2rayng_ip | 8",
+            "tag": "🇪🇸 ES | 🟢 | vless | @v2rayng_ip | 6",
             "type": "vless",
             "server": "certificate.ronaldo7tiano.fun",
             "server_port": 55730,
