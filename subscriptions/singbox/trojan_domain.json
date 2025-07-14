@@ -109,6 +109,7 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
+                "🇩🇪 DE | 🔴 | trojan | @v2rayweb | 11",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -138,6 +139,7 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
+                "🇩🇪 DE | 🔴 | trojan | @v2rayweb | 11",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -507,6 +509,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "170-187-134-190.ipv4.rush.ml",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | trojan | @v2rayweb | 11",
+            "type": "trojan",
+            "server": "right-goldfish.goat627.mom",
+            "server_port": 443,
+            "password": "3763495894587285504",
+            "tls": {
+                "enabled": true,
+                "server_name": "right-goldfish.goat627.mom",
                 "insecure": true,
                 "utls": {
                     "enabled": true,

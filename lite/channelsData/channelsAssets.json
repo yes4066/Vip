@@ -10,8 +10,6 @@
     },
     "NamiraNet": {
         "types": [
-            "ss",
-            "trojan",
             "vless",
             "vmess"
         ],
@@ -1010,9 +1008,10 @@
     },
     "hope_net": {
         "types": [
-            "trojan",
             "vless",
-            "vmess"
+            "ss",
+            "vmess",
+            "trojan"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1090,10 +1089,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
-            "vmess",
             "ss",
-            "trojan"
+            "vless",
+            "trojan",
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1646,7 +1645,8 @@
     "mowjproxy": {
         "types": [
             "vmess",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -2489,8 +2489,8 @@
     "v2ray_free_conf": {
         "types": [
             "vmess",
-            "trojan",
             "ss",
+            "trojan",
             "vless"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",

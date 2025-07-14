@@ -10,8 +10,6 @@
     },
     "NamiraNet": {
         "types": [
-            "ss",
-            "trojan",
             "vless",
             "vmess"
         ],
@@ -418,10 +416,10 @@
     },
     "configshubplus": {
         "types": [
-            "vless",
             "trojan",
+            "ss",
             "vmess",
-            "ss"
+            "vless"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/configshubplus.jpg"
@@ -706,7 +704,8 @@
     "entrynet": {
         "types": [
             "vless",
-            "trojan"
+            "trojan",
+            "ss"
         ],
         "title": ".::entryNET::. Free v2ray vpn &amp; proxy | وی پی ان و پروکسی رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/entrynet.jpg"
@@ -1292,8 +1291,9 @@
     "hope_net": {
         "types": [
             "vless",
-            "trojan",
-            "vmess"
+            "ss",
+            "vmess",
+            "trojan"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1371,10 +1371,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
-            "vless",
+            "ss",
             "vmess",
-            "ss"
+            "vless",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -2013,7 +2013,8 @@
     "mowjproxy": {
         "types": [
             "vmess",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -3192,9 +3193,9 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "trojan",
             "vmess",
             "ss",
+            "trojan",
             "vless"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
@@ -3314,8 +3315,7 @@
         "types": [
             "vless",
             "vmess",
-            "trojan",
-            "ss"
+            "trojan"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raych.jpg"
