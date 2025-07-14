@@ -101,8 +101,11 @@
                 "🇬🇧 GB | 🟢 | ss | @v2rayport | 13",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9",
                 "🇳🇱 NL | 🟢 | ss | @vpn451 | 10",
+                "🇳🇱 NL | 🟢 | ss | @NamiraNet | 59",
+                "🇷🇺 RU | 🟢 | ss | @argo_vpn1 | 1",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
+                "🇦🇹 AT | 🟢 | ss | @freakconfig | 7",
                 "🇬🇧 GB | 🟢 | ss | @free1_vpn | 11",
                 "🇱🇻 LV | 🟢 | ss | @freeconfigsplus | 18",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
@@ -118,7 +121,6 @@
                 "🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9",
                 "🇺🇸 US | 🟢 | ss | @selinc | 7",
                 "🇷🇺 RU | 🟢 | ss | @shadowsockskeys | 16",
-                "🇳🇱 NL | 🟢 | ss | @sinavm | 1",
                 "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
                 "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
                 "🇺🇸 US | 🟢 | ss | @v2pedia | 21",
@@ -146,8 +148,11 @@
                 "🇬🇧 GB | 🟢 | ss | @v2rayport | 13",
                 "❔ XX | 🟢 | ss | @vpidiamond | 9",
                 "🇳🇱 NL | 🟢 | ss | @vpn451 | 10",
+                "🇳🇱 NL | 🟢 | ss | @NamiraNet | 59",
+                "🇷🇺 RU | 🟢 | ss | @argo_vpn1 | 1",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
+                "🇦🇹 AT | 🟢 | ss | @freakconfig | 7",
                 "🇬🇧 GB | 🟢 | ss | @free1_vpn | 11",
                 "🇱🇻 LV | 🟢 | ss | @freeconfigsplus | 18",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
@@ -163,7 +168,6 @@
                 "🇦🇪 AE | 🟢 | ss | @proxy_net_meli | 9",
                 "🇺🇸 US | 🟢 | ss | @selinc | 7",
                 "🇷🇺 RU | 🟢 | ss | @shadowsockskeys | 16",
-                "🇳🇱 NL | 🟢 | ss | @sinavm | 1",
                 "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
                 "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
                 "🇺🇸 US | 🟢 | ss | @v2pedia | 21",
@@ -279,6 +283,22 @@
             "password": "rirgAJoGVPZBhFx9gNH3gj"
         },
         {
+            "tag": "🇳🇱 NL | 🟢 | ss | @NamiraNet | 59",
+            "type": "shadowsocks",
+            "server": "146.103.98.85",
+            "server_port": 46303,
+            "method": "chacha20-ietf-poly1305",
+            "password": "VmtM6lUSMzc9lgO7gDzd49"
+        },
+        {
+            "tag": "🇷🇺 RU | 🟢 | ss | @argo_vpn1 | 1",
+            "type": "shadowsocks",
+            "server": "176.32.39.163",
+            "server_port": 30191,
+            "method": "aes-256-gcm",
+            "password": "9f5eb5059785d860"
+        },
+        {
             "tag": "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
             "type": "shadowsocks",
             "server": "45.138.74.160",
@@ -293,6 +313,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "WstuSnlu4ieA9M0L"
+        },
+        {
+            "tag": "🇦🇹 AT | 🟢 | ss | @freakconfig | 7",
+            "type": "shadowsocks",
+            "server": "152.53.2.128",
+            "server_port": 34045,
+            "method": "aes-256-gcm",
+            "password": "TG:@Enkelte_notif&&TG:@Notif_Chat"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @free1_vpn | 11",
@@ -413,14 +441,6 @@
             "server_port": 10601,
             "method": "aes-256-gcm",
             "password": "40bdc52dcffa6942"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | ss | @sinavm | 1",
-            "type": "shadowsocks",
-            "server": "146.103.98.85",
-            "server_port": 46303,
-            "method": "chacha20-ietf-poly1305",
-            "password": "VmtM6lUSMzc9lgO7gDzd49"
         },
         {
             "tag": "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
