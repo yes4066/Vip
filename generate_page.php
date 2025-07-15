@@ -1075,25 +1075,9 @@ function generate_full_html(
         }
 
         function generateBase64Output(nodes) {
-            // This function takes the parsed node objects and extracts their original URI for encoding.
-            const uris = nodes.map(n => {
-                // The 'parsed' object is nested inside the node object we created
-                const p = n.parsed;
-                // Reconstruct the original URI string from the parsed object
-                if (p.protocol === 'vmess') {
-                    // For vmess, we must re-encode the JSON part
-                    const vmessJson = { ...p };
-                    delete vmessJson.protocol; // Remove the protocol key we added
-                    return `vmess://${btoa(JSON.stringify(vmessJson))}`;
-                } else if (p.uri) {
-                     // If the original URI was stored, use it. This is the most reliable.
-                    return p.uri;
-                } else {
-                    // Fallback to reconstructing from parts, though less ideal
-                    const params = new URLSearchParams(p.params).toString();
-                    return `${p.protocol}://${p.username}@${p.hostname}:${p.port}?${params}#${encodeURIComponent(p.hash)}`;
-                }
-            });
+            // This function now correctly uses the original URI stored on each node object.
+            // The 'allNodes' array stores objects with a 'parsed' property and the original 'uri'.
+            const uris = nodes.map(node => node.parsed.uri || node.uri).filter(Boolean);
             return btoa(uris.join('\n'));
         }
 
@@ -1178,7 +1162,9 @@ function generate_full_html(
                             if (parsed) {
                                 const name = parsed.ps || parsed.hash;
                                 const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
+                                // The crucial change is to store the original URI here.
                                 allNodes.push({
+                                    uri: uri, // Store the original URI
                                     parsed: parsed,
                                     protocol: parsed.protocol,
                                     name: name,
@@ -1211,7 +1197,7 @@ function generate_full_html(
             try {
                 if (targetClient === 'clash') { outputContent = await generateClashOutput(finalNodes); fileExtension = 'yaml'; }
                 else if (targetClient === 'singbox') { outputContent = await generateSingboxOutput(finalNodes); fileExtension = 'json'; }
-                else { outputContent = generateBase64Output(finalNodes.map(n => n.parsed)); } // Base64 still needs raw URIs, let's re-evaluate this if needed
+                else { outputContent = generateBase64Output(finalNodes); }
             } catch (e) {
                 showMessageBox(`Error generating config: ${e.message}`);
                 console.error(e);
