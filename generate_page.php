@@ -357,7 +357,6 @@ function generate_full_html(
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jsonc-parser@3.2.1/lib/umd/main.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -917,11 +916,16 @@ function generate_full_html(
             button.textContent = isSelectAll ? 'Deselect All' : 'Select All';
         }
         
-        function parseProxyUri(uri) {
+                function parseProxyUri(uri) {
             try {
                 // Handle VMess separately as it's a base64 encoded JSON
                 if (uri.startsWith('vmess://')) {
-                    const decoded = JSON.parse(atob(uri.substring(8)));
+                    const b64 = uri.substring(8);
+                    const decoded = JSON.parse(atob(b64));
+                    // Sanitize path: remove any query strings from the path itself
+                    if (decoded.path) {
+                        decoded.path = decoded.path.split('?')[0];
+                    }
                     const name = decoded.ps || `${decoded.add}:${decoded.port}`;
                     const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
                     return {
@@ -935,21 +939,18 @@ function generate_full_html(
 
                 // Handle other URI-based protocols
                 const url = new URL(uri);
-                const protocol = url.protocol.slice(0, -1); // remove ":"
+                const protocol = url.protocol.slice(0, -1);
                 const name = decodeURIComponent(url.hash.substring(1)) || `${url.hostname}:${url.port}`;
                 const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
 
                 const details = {
                     server: url.hostname,
                     server_port: parseInt(url.port, 10),
-                    uuid: url.username, // For VLESS/Trojan
-                    password: url.username, // For Trojan
+                    uuid: url.username,
+                    password: url.username, 
                 };
                 
-                // Extract all search parameters
-                url.searchParams.forEach((value, key) => {
-                    details[key] = value;
-                });
+                url.searchParams.forEach((value, key) => { details[key.toLowerCase()] = value; });
                 
                 const isReality = details.security === 'reality';
 
@@ -966,7 +967,7 @@ function generate_full_html(
             }
         }
 
-                function generateBase64Output(nodes) {
+        function generateBase64Output(nodes) {
             // This function remains the same as it doesn't use a template.
             return btoa(nodes.map(n => n.uri).join('\n'));
         }
@@ -1009,10 +1010,15 @@ function generate_full_html(
             const templateURL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/templates/structure.json';
             const response = await fetch(templateURL);
             if (!response.ok) throw new Error('Could not fetch Sing-box template.');
-            // Using jsonc-parser to handle potential comments in your JSON template
-            const templateJson = jsonc.parse(await response.text());
+            let templateString = await response.text();
 
-            // 2. Format the nodes into Sing-box outbound format
+            // 2. Remove comments from the JSONC string before parsing
+            // This regex handles both single-line (//) and multi-line (/* */) comments
+            const jsonString = templateString.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m);
+
+            const templateJson = JSON.parse(jsonString);
+
+            // 3. Format the nodes into Sing-box outbound format
             const outbounds = nodes.map(node => {
                 const p = node.details;
                 const base = { tag: node.name };
@@ -1029,13 +1035,13 @@ function generate_full_html(
                 return singboxNode;
             }).filter(Boolean);
 
-            // 3. Find the 'auto' url-test group and add the proxy names to it
+            // 4. Find the 'auto' url-test group and add the proxy names to it
             const urlTestGroup = templateJson.outbounds.find(o => o.tag === 'auto');
             if (urlTestGroup) {
                 urlTestGroup.outbounds = outbounds.map(o => o.tag);
             }
             
-            // 4. Insert the generated outbounds at the beginning of the existing outbounds array
+            // 5. Insert the generated outbounds at the beginning of the existing outbounds array
             templateJson.outbounds.unshift(...outbounds);
 
             return JSON.stringify(templateJson, null, 2);
