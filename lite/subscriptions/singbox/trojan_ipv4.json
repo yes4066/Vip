@@ -90,7 +90,7 @@
                 "auto",
                 "direct",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 16",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+                "🇸🇬 SG | 🟢 | trojan | @ip_cf_config | 15",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 16",
@@ -105,7 +105,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 16",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+                "🇸🇬 SG | 🟢 | trojan | @ip_cf_config | 15",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 16",
@@ -139,25 +139,18 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+            "tag": "🇸🇬 SG | 🟢 | trojan | @ip_cf_config | 15",
             "type": "trojan",
-            "server": "104.21.75.120",
-            "server_port": 2053,
-            "password": "100b5163-fbb8-425d-9621-44d119555aa4",
+            "server": "13.213.142.42",
+            "server_port": 443,
+            "password": "3774827088566296576",
             "tls": {
                 "enabled": true,
-                "server_name": "MaHSA2.cffoRm.SitE",
+                "server_name": "exotic-bengal.treefrog761.one",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/trWCuRIwSn9S6fDZGE/c2hpcmVuLnlhZW1pa28uZ2dmZi5uZXQ=",
-                "headers": {
-                    "Host": "MaHSA2.cffoRm.SitE"
                 }
             }
         },
