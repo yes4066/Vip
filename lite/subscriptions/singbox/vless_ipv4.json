@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🟢 | vless | @NamiraNet | 61",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇬🇧 GB | 🔴 | vless | @aminaqafarzane | 16",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 2",
@@ -118,7 +117,6 @@
                 "🇩🇪 DE | 🔴 | vless | @filtershkan2 | 4",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇮🇷 IR | 🔴 | vless | @free1_vpn | 10",
-                "🇺🇸 US | 🔴 | vless | @free1ss | 16",
                 "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
                 "🇰🇿 KZ | 🔴 | vless | @freedom_guard_net | 1",
                 "🇺🇸 US | 🔴 | vless | @freev2flyng | 17",
@@ -150,7 +148,6 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇮🇷 IR | 🔴 | vless | @mimitdl | 7",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🟢 | vless | @mowjproxy | 4",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
                 "🇺🇸 US | 🟢 | vless | @mt_proxy | 7",
@@ -210,7 +207,6 @@
                 "🇩🇪 DE | 🔴 | vless | @vpnaloo | 14",
                 "🇺🇸 US | 🟢 | vless | @vpnfreeo | 33",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 18",
                 "🇮🇷 IR | 🔴 | vless | @vpnpopular2023 | 3",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇺🇸 US | 🟢 | vless | @zed_vpn | 15",
@@ -222,7 +218,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🟢 | vless | @NamiraNet | 61",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇬🇧 GB | 🔴 | vless | @aminaqafarzane | 16",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 2",
@@ -251,7 +246,6 @@
                 "🇩🇪 DE | 🔴 | vless | @filtershkan2 | 4",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇮🇷 IR | 🔴 | vless | @free1_vpn | 10",
-                "🇺🇸 US | 🔴 | vless | @free1ss | 16",
                 "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
                 "🇰🇿 KZ | 🔴 | vless | @freedom_guard_net | 1",
                 "🇺🇸 US | 🔴 | vless | @freev2flyng | 17",
@@ -283,7 +277,6 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇮🇷 IR | 🔴 | vless | @mimitdl | 7",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🟢 | vless | @mowjproxy | 4",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
                 "🇺🇸 US | 🟢 | vless | @mt_proxy | 7",
@@ -343,7 +336,6 @@
                 "🇩🇪 DE | 🔴 | vless | @vpnaloo | 14",
                 "🇺🇸 US | 🟢 | vless | @vpnfreeo | 33",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 18",
                 "🇮🇷 IR | 🔴 | vless | @vpnpopular2023 | 3",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇺🇸 US | 🟢 | vless | @zed_vpn | 15",
@@ -357,31 +349,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @NamiraNet | 61",
-            "type": "vless",
-            "server": "172.66.44.118",
-            "server_port": 443,
-            "uuid": "63005378-e32e-4e23-bc6e-84812f147a6f",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "ConFIgmr.PaGeS.dEV",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/telegram@v2ray_alpha/?ed=2560",
-                "headers": {
-                    "Host": "ConFIgmr.PaGeS.dEV"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
@@ -900,15 +867,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @free1ss | 16",
-            "type": "vless",
-            "server": "185.236.232.136",
-            "server_port": 1001,
-            "uuid": "c7c922da-ab54-433c-8046-1f9bf9d95c23",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
             "type": "vless",
             "server": "185.146.173.58",
@@ -1406,31 +1364,6 @@
             "uuid": "936f64b8-4045-4cb1-80ea-54315ea40709",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @mowjproxy | 4",
-            "type": "vless",
-            "server": "162.159.129.11",
-            "server_port": 2053,
-            "uuid": "b1a8ceea-6601-45b5-a674-7e5b64ab6f6f",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sub.divib.dynv6.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/Join---FarshidHUB---Join---FarshidHUB---Join---FarshidHUB?ed=2560",
-                "headers": {
-                    "Host": "sub.divib.dynv6.net"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
@@ -2527,15 +2460,6 @@
                 "type": "grpc",
                 "service_name": "chessgame"
             }
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 18",
-            "type": "vless",
-            "server": "188.245.167.113",
-            "server_port": 465,
-            "uuid": "7fb1a822-bd72-4a27-b987-89a4dd398142",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇮🇷 IR | 🔴 | vless | @vpnpopular2023 | 3",
