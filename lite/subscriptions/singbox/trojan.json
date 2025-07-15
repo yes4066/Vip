@@ -91,11 +91,10 @@
                 "direct",
                 "🇯🇵 JP | 🔴 | trojan | @NamiraNet | 69",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
-                "🇨🇦 CA | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+                "🇺🇸 US | 🟢 | trojan | @hope_net | 19",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
@@ -112,11 +111,10 @@
             "outbounds": [
                 "🇯🇵 JP | 🔴 | trojan | @NamiraNet | 69",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
-                "🇨🇦 CA | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+                "🇺🇸 US | 🟢 | trojan | @hope_net | 19",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
@@ -161,29 +159,6 @@
                 "path": "/",
                 "headers": {
                     "Host": "production.tj.ojan.workers.dev"
-                }
-            }
-        },
-        {
-            "tag": "🇨🇦 CA | 🟢 | trojan | @deamnet_proxy | 19",
-            "type": "trojan",
-            "server": "www.whatismyip.com",
-            "server_port": 443,
-            "password": "vip",
-            "tls": {
-                "enabled": true,
-                "server_name": "heihu880.pages.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "heihu880.pages.dev"
                 }
             }
         },
@@ -240,14 +215,14 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+            "tag": "🇺🇸 US | 🟢 | trojan | @hope_net | 19",
             "type": "trojan",
-            "server": "104.21.195.144",
-            "server_port": 443,
-            "password": "NISHIKUITAN111",
+            "server": "89.187.181.172",
+            "server_port": 43118,
+            "password": "ypDt8RkT7J",
             "tls": {
                 "enabled": true,
-                "server_name": "104.21.195.144",
+                "server_name": "egcmi.phooeyunfold.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,

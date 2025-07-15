@@ -91,7 +91,6 @@
                 "direct",
                 "🇯🇵 JP | 🔴 | trojan | @NamiraNet | 69",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
-                "🇨🇦 CA | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
@@ -103,7 +102,6 @@
             "outbounds": [
                 "🇯🇵 JP | 🔴 | trojan | @NamiraNet | 69",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
-                "🇨🇦 CA | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
@@ -143,29 +141,6 @@
                 "path": "/",
                 "headers": {
                     "Host": "production.tj.ojan.workers.dev"
-                }
-            }
-        },
-        {
-            "tag": "🇨🇦 CA | 🟢 | trojan | @deamnet_proxy | 19",
-            "type": "trojan",
-            "server": "www.whatismyip.com",
-            "server_port": 443,
-            "password": "vip",
-            "tls": {
-                "enabled": true,
-                "server_name": "heihu880.pages.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "heihu880.pages.dev"
                 }
             }
         },
