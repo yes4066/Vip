@@ -122,8 +122,8 @@
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 9",
                 "❔ XX | 🔴 | vless | @erfanpaydartelegram | 1",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 21",
+                "🇫🇮 FI | 🔴 | vless | @fastkanfig | 12",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 5",
-                "🇮🇷 IR | 🔴 | vless | @fastvpnorummobile | 3",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 3",
                 "❔ XX | 🟢 | vless | @flash_proxies | 0",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
@@ -173,7 +173,6 @@
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
-                "🇮🇷 IR | 🔴 | vless | @mowjproxy | 3",
                 "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇮🇷 IR | 🔴 | vless | @mtproxy22_v2ray | 33",
@@ -208,6 +207,7 @@
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
                 "🇺🇸 US | 🔴 | vless | @v2raying | 14",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
+                "🇫🇮 FI | 🟢 | vless | @v2rayng_fars | 17",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -277,8 +277,8 @@
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 9",
                 "❔ XX | 🔴 | vless | @erfanpaydartelegram | 1",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 21",
+                "🇫🇮 FI | 🔴 | vless | @fastkanfig | 12",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 5",
-                "🇮🇷 IR | 🔴 | vless | @fastvpnorummobile | 3",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 3",
                 "❔ XX | 🟢 | vless | @flash_proxies | 0",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 9",
@@ -328,7 +328,6 @@
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
-                "🇮🇷 IR | 🔴 | vless | @mowjproxy | 3",
                 "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇮🇷 IR | 🔴 | vless | @mtproxy22_v2ray | 33",
@@ -363,6 +362,7 @@
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
                 "🇺🇸 US | 🔴 | vless | @v2raying | 14",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
+                "🇫🇮 FI | 🟢 | vless | @v2rayng_fars | 17",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -891,20 +891,20 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇫🇮 FI | 🔴 | vless | @fastkanfig | 12",
+            "type": "vless",
+            "server": "dl1.pokerad.sbs",
+            "server_port": 80,
+            "uuid": "88d5b659-3c15-47a6-ae3c-b79ed49ef9f3",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @fastshovpn | 5",
             "type": "vless",
             "server": "FASTSHOVPNTELEGRAM.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "bb691001-faf8-4b4e-af2e-bfb27780f689",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇮🇷 IR | 🔴 | vless | @fastvpnorummobile | 3",
-            "type": "vless",
-            "server": "croatia.netblocksir.ir",
-            "server_port": 6556,
-            "uuid": "fbde8f25-fbee-49ef-9b47-d4441f2bba03",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -1741,15 +1741,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @mowjproxy | 3",
-            "type": "vless",
-            "server": "test.vipfastconnect.top",
-            "server_port": 2053,
-            "uuid": "9f3991c2-e4a2-4f4d-9702-9a8051954254",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
             "type": "vless",
             "server": "mrvpn1403.rightel001.chaghooosazi.shop",
@@ -2336,6 +2327,33 @@
                     "enabled": true,
                     "fingerprint": "chrome"
                 }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @v2rayng_fars | 17",
+            "type": "vless",
+            "server": "toofan.zeroa.store",
+            "server_port": 8681,
+            "uuid": "b4f1d581-ece1-45c2-a990-f743c45bf8cd",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "LjaEpIQZyga0txhwf7JRHlqFOrImB4dEpkw3-AASWUI",
+                    "short_id": "be"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Tahmznilana"
             }
         },
         {

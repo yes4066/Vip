@@ -91,10 +91,8 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇭🇰 HK | 🔴 | trojan | @configshubplus | 15",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
-                "🇸🇬 SG | 🔴 | trojan | @entrynet | 15",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -118,10 +116,8 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇭🇰 HK | 🔴 | trojan | @configshubplus | 15",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
-                "🇸🇬 SG | 🔴 | trojan | @entrynet | 15",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -184,22 +180,6 @@
             }
         },
         {
-            "tag": "🇭🇰 HK | 🔴 | trojan | @configshubplus | 15",
-            "type": "trojan",
-            "server": "sg.mjt000.com",
-            "server_port": 443,
-            "password": "61834c10-4218-4918-b836-9b852b7add70",
-            "tls": {
-                "enabled": true,
-                "server_name": "sg.mjt000.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
             "type": "trojan",
             "server": "russia.com",
@@ -242,22 +222,6 @@
                 "path": "/?ed=2560",
                 "headers": {
                     "Host": "heihu880.pages.dev"
-                }
-            }
-        },
-        {
-            "tag": "🇸🇬 SG | 🔴 | trojan | @entrynet | 15",
-            "type": "trojan",
-            "server": "in01.trojanyyds.xyz",
-            "server_port": 443,
-            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
-            "tls": {
-                "enabled": true,
-                "server_name": "in01.trojanyyds.xyz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },

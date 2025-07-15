@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🔴 | vless | @fastkanfig | 12",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 8",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -102,7 +101,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🔴 | vless | @fastkanfig | 12",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 8",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -117,24 +115,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @fastkanfig | 12",
-            "type": "vless",
-            "server": "216.22.5.96",
-            "server_port": 443,
-            "uuid": "e7b626f8-ebcc-4a24-ac32-4efb1d92340a",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "216.22.5.96",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @irv2rey | 8",
