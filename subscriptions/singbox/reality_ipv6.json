@@ -91,8 +91,7 @@
                 "direct",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
-                "❔ XX | 🟢 | vless | @kesslervpn | 2",
-                "❔ XX | 🟢 | vless | @vpnvg | 10"
+                "❔ XX | 🟢 | vless | @kesslervpn | 2"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -102,8 +101,7 @@
             "outbounds": [
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
-                "❔ XX | 🟢 | vless | @kesslervpn | 2",
-                "❔ XX | 🟢 | vless | @vpnvg | 10"
+                "❔ XX | 🟢 | vless | @kesslervpn | 2"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -185,33 +183,6 @@
                     "public_key": "WeBcvXnjj4LbVsAT2lTbZ3JbvoqE4S_rON9h-7DjrHo",
                     "short_id": ""
                 }
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @vpnvg | 10",
-            "type": "vless",
-            "server": "[2a01:4f8:1c17:cadc::1]",
-            "server_port": 2083,
-            "uuid": "5a0beb93-56ae-4390-b5c2-8ed92f5f591d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.speedtest.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "Qa9ePuwo1TY2uVN8143Sh3YAiVqdDj9VIZcQK20DTzc",
-                    "short_id": "5654bc18"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@Digiv2ray"
             }
         }
     ],

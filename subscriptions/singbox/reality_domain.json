@@ -100,13 +100,14 @@
                 "🇳🇱 NL | 🟢 | vless | @canfing_vpn | 15",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 16",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇩🇪 DE | 🟢 | vless | @configfa | 11",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
+                "🇩🇪 DE | 🟢 | vless | @configfa | 9",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇸🇬 SG | 🟢 | vless | @dailyv2ry | 157",
                 "🇫🇮 FI | 🟢 | vless | @dailyv2ry | 160",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
-                "🇩🇪 DE | 🟢 | vless | @filter_breaker | 60",
+                "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
                 "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 11",
                 "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 14",
@@ -209,13 +210,14 @@
                 "🇳🇱 NL | 🟢 | vless | @canfing_vpn | 15",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 16",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇩🇪 DE | 🟢 | vless | @configfa | 11",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
+                "🇩🇪 DE | 🟢 | vless | @configfa | 9",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇸🇬 SG | 🟢 | vless | @dailyv2ry | 157",
                 "🇫🇮 FI | 🟢 | vless | @dailyv2ry | 160",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
-                "🇩🇪 DE | 🟢 | vless | @filter_breaker | 60",
+                "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
                 "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 11",
                 "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 14",
@@ -572,7 +574,30 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @configfa | 11",
+            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
+            "type": "vless",
+            "server": "NS1002GR.tickblue.ir",
+            "server_port": 8443,
+            "uuid": "849c0cbd-f25b-474c-afd1-a4b08dd2ccdf",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "store.steampowered.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "9nfJ4l5Eq1BKT_gYkdXMK0W9uE8zEJIgVPK9_6S10HY",
+                    "short_id": "09b4fb57276c767d"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @configfa | 9",
             "type": "vless",
             "server": "www.zooboming.com",
             "server_port": 443,
@@ -722,7 +747,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @filter_breaker | 60",
+            "tag": "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
             "type": "vless",
             "server": "all97-vip.f-sub.com",
             "server_port": 2434,
