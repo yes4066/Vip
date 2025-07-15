@@ -1074,6 +1074,29 @@ function generate_full_html(
             }
         }
 
+        function generateBase64Output(nodes) {
+            // This function takes the parsed node objects and extracts their original URI for encoding.
+            const uris = nodes.map(n => {
+                // The 'parsed' object is nested inside the node object we created
+                const p = n.parsed;
+                // Reconstruct the original URI string from the parsed object
+                if (p.protocol === 'vmess') {
+                    // For vmess, we must re-encode the JSON part
+                    const vmessJson = { ...p };
+                    delete vmessJson.protocol; // Remove the protocol key we added
+                    return `vmess://${btoa(JSON.stringify(vmessJson))}`;
+                } else if (p.uri) {
+                     // If the original URI was stored, use it. This is the most reliable.
+                    return p.uri;
+                } else {
+                    // Fallback to reconstructing from parts, though less ideal
+                    const params = new URLSearchParams(p.params).toString();
+                    return `${p.protocol}://${p.username}@${p.hostname}:${p.port}?${params}#${encodeURIComponent(p.hash)}`;
+                }
+            });
+            return btoa(uris.join('\n'));
+        }
+
         async function generateClashOutput(nodes) {
             const templateURL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/templates/clash.yaml';
             const response = await fetch(templateURL);
