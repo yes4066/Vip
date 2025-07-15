@@ -695,6 +695,170 @@ function generate_full_html(
                 otherElementSelect.disabled = false;
             }
         }
+                function getUniversalDna(content, coreType) {
+            const dna = { protocols: {}, countries: {}, transports: {}, security: {tls: 0, reality: 0, insecure: 0}, total: 0 };
+            
+            const processNodeDetails = (protocol, name, transport, security) => {
+                if (!protocol || !name) return;
+                dna.total++;
+                const lowerName = name.toLowerCase();
+
+                // Normalize protocol names
+                let normalizedProtocol = protocol.toLowerCase();
+                if (normalizedProtocol === 'ss') normalizedProtocol = 'shadowsocks';
+                if (normalizedProtocol === 'hysteria2') normalizedProtocol = 'hy2';
+
+                dna.protocols[normalizedProtocol] = (dna.protocols[normalizedProtocol] || 0) + 1;
+                
+                let normalizedTransport = transport ? transport.toLowerCase() : 'tcp';
+                dna.transports[normalizedTransport] = (dna.transports[normalizedTransport] || 0) + 1;
+                
+                if (security === 'tls') dna.security.tls++;
+                else if (security === 'reality') dna.security.reality++;
+                else dna.security.insecure++;
+
+                const countryMatch = lowerName.match(/\[([a-z]{2})\]|\b([a-z]{2})\b|([a-z]{2})[-_]/);
+                if (countryMatch) {
+                    const code = (countryMatch[1] || countryMatch[2] || countryMatch[3]).toUpperCase();
+                    dna.countries[code] = (dna.countries[code] || 0) + 1;
+                }
+            };
+            
+            try {
+                switch (coreType.toLowerCase()) {
+                    case 'clash':
+                    case 'meta':
+                        const parsedYaml = jsyaml.load(content);
+                        if (parsedYaml && Array.isArray(parsedYaml.proxies)) {
+                            parsedYaml.proxies.forEach(p => {
+                                let security = 'insecure';
+                                if (p.tls) security = 'tls';
+                                if (p['reality-opts']) security = 'reality';
+                                processNodeDetails(p.type, p.name, p.network || 'tcp', security);
+                            });
+                        }
+                        break;
+
+                    case 'singbox':
+                        const parsedJson = JSON.parse(content);
+                        const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
+                        if (parsedJson && Array.isArray(parsedJson.outbounds)) {
+                            parsedJson.outbounds
+                                .filter(o => o.type && !utilityTypes.includes(o.type))
+                                .forEach(o => {
+                                    let security = 'insecure';
+                                    if (o.tls?.enabled) {
+                                        security = o.tls.reality?.enabled ? 'reality' : 'tls';
+                                    }
+                                    processNodeDetails(o.type, o.tag, o.transport?.type || 'tcp', security);
+                                });
+                        }
+                        break;
+                    
+                    case 'xray':
+                    case 'location':
+                    case 'channel':
+                    case 'surfboard': // Surfboard is often base64
+                    default: // Fallback for base64 with expanded regex
+                        const decoded = atob(content);
+                        const vmessRegex = /^vmess:\/\/(.+)$/;
+                        const standardRegex = /^(vless|trojan|ss|hy2|tuic|hysteria|hysteria2):\/\/([^@]+@)?([^:?#]+):(\d+)\??([^#]+)?#(.+)$/;
+
+                        decoded.split(/[\n\r]+/).forEach(line => {
+                            line = line.trim();
+                            if (!line) return;
+                            
+                            let match;
+                            if (match = line.match(vmessRegex)) {
+                                try {
+                                    const vmessConfig = JSON.parse(atob(match[1]));
+                                    processNodeDetails(
+                                        'vmess',
+                                        vmessConfig.ps || 'vmess_node',
+                                        vmessConfig.net || 'tcp',
+                                        vmessConfig.tls || 'insecure'
+                                    );
+                                } catch (e) { /* Malformed vmess, skip */ }
+                            } else if (match = line.match(standardRegex)) {
+                                const protocol = match[1];
+                                const params = new URLSearchParams(match[5] || '');
+                                const name = decodeURIComponent(match[6] || `${protocol}_node`);
+                                processNodeDetails(
+                                    protocol,
+                                    name,
+                                    params.get('type') || 'tcp',
+                                    params.get('security') || 'insecure'
+                                );
+                            }
+                        });
+                        break;
+                }
+            } catch (e) {
+                console.error(`Parsing failed for type ${coreType}:`, e);
+                throw new Error(`Could not parse subscription. It may be invalid or malformed for the '${coreType}' type.`);
+            }
+            return dna;
+        }
+
+        analyzeButton.addEventListener('click', async () => {
+            const url = subscriptionUrlInput.value;
+            if (!url) { showMessageBox('Please select a subscription URL first.'); return; }
+            
+            const modalContent = document.getElementById('dnaModalContent');
+            document.getElementById('dnaLoadingState').classList.remove('hidden');
+            document.getElementById('dnaResultsContainer').classList.add('hidden');
+            document.getElementById('modalSubscriptionName').textContent = `For: ${formatDisplayName(otherElementSelect.value)}`;
+            dnaModal.classList.remove('hidden');
+            setTimeout(() => modalContent.classList.remove('scale-95', 'opacity-0'), 50);
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
+                const content = await response.text();
+                const dna = getUniversalDna(content, ipTypeSelect.value);
+
+                if (dna.total === 0) throw new Error('No compatible proxy nodes found to analyze.');
+                Object.values(charts).forEach(chart => { if (chart) chart.destroy(); });
+                
+                charts.protocol = new Chart(document.getElementById('protocolChart'), {
+                    type: 'doughnut', data: { labels: Object.keys(dna.protocols), datasets: [{ data: Object.values(dna.protocols), backgroundColor: ['#4f46e5', '#16a34a', '#f97316', '#0ea5e9', '#dc2626', '#d946ef', '#65a30d'], borderWidth: 0 }] },
+                    options: { responsive: true, cutout: '70%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15 }}}}
+                });
+                document.querySelector('#protocolTotal div span:first-child').textContent = dna.total;
+
+                charts.security = new Chart(document.getElementById('securityChart'), {
+                    type: 'doughnut', data: { labels: ['TLS', 'REALITY', 'Insecure'], datasets: [{ data: [dna.security.tls, dna.security.reality, dna.security.insecure], backgroundColor: ['#34d399', '#a78bfa', '#fbbf24'], borderWidth: 0 }] },
+                    options: { responsive: true, cutout: '70%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15 }}}}
+                });
+
+                const sortedCountries = Object.entries(dna.countries).sort((a, b) => b[1] - a[1]).slice(0, 7);
+                charts.country = new Chart(document.getElementById('countryBarChart'), {
+                    type: 'bar', data: { labels: sortedCountries.map(c => `${getFlagEmoji(c[0])} ${getCountryName(c[0])}`), datasets: [{ label: '# Nodes', data: sortedCountries.map(c => c[1]), backgroundColor: '#60a5fa', borderRadius: 4 }] },
+                    options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } } }
+                });
+
+                const sortedTransports = Object.entries(dna.transports).sort((a, b) => b[1] - a[1]).slice(0, 7);
+                charts.transport = new Chart(document.getElementById('transportChart'), {
+                    type: 'bar', data: { labels: sortedTransports.map(t => t[0]), datasets: [{ label: '# Nodes', data: sortedTransports.map(t => t[1]), backgroundColor: '#f472b6', borderRadius: 4 }] },
+                    options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } } }
+                });
+                
+                document.getElementById('dnaLoadingState').classList.add('hidden');
+                document.getElementById('dnaResultsContainer').classList.remove('hidden');
+            } catch (error) {
+                const modalContent = document.getElementById('dnaModalContent');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => dnaModal.classList.add('hidden'), 200);
+                showMessageBox(`Analysis Failed: ${error.message}`);
+            }
+        });
+
+        dnaModalCloseButton.addEventListener('click', () => {
+            const modalContent = document.getElementById('dnaModalContent');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => dnaModal.classList.add('hidden'), 200);
+            Object.values(charts).forEach(chart => { if (chart) chart.destroy(); });
+        });
 
         // --- COMPOSER LOGIC ---
         function populateComposerSources() {
