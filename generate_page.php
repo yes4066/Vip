@@ -916,9 +916,9 @@ function generate_full_html(
             button.textContent = isSelectAll ? 'Deselect All' : 'Select All';
         }
         
-                function parseProxyUri(uri) {
+        function parseProxyUri(uri) {
             try {
-                // Handle VMess separately as it's a base64 encoded JSON
+                // --- Handle VMess ---
                 if (uri.startsWith('vmess://')) {
                     const b64 = uri.substring(8);
                     const decoded = JSON.parse(atob(b64));
@@ -937,8 +937,17 @@ function generate_full_html(
                     };
                 }
 
-                // Handle other URI-based protocols
-                const url = new URL(uri);
+                // --- Handle all other URI-based protocols with a dedicated try-catch ---
+                let url;
+                try {
+                    // This is the critical part that can fail
+                    url = new URL(uri);
+                } catch (urlError) {
+                    // If new URL() fails, it's a malformed URI. Skip it.
+                    console.warn("Skipping malformed URI:", uri, urlError.message);
+                    return null;
+                }
+
                 const protocol = url.protocol.slice(0, -1);
                 const name = decodeURIComponent(url.hash.substring(1)) || `${url.hostname}:${url.port}`;
                 const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
@@ -961,8 +970,10 @@ function generate_full_html(
                     country: countryMatch ? (countryMatch[1] || countryMatch[2])?.toUpperCase() : null,
                     details: details
                 };
+
             } catch (e) {
-                console.warn("Could not parse URI:", uri, e);
+                // General catch-all for any other unexpected errors during parsing
+                console.warn("Could not parse URI due to an unexpected error:", uri, e);
                 return null;
             }
         }
