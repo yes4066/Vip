@@ -94,7 +94,6 @@
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇯🇵 JP | 🔴 | trojan | @hope_net | 16",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 5",
@@ -112,12 +111,16 @@
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 7",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 8",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 9",
+                "🇺🇸 US | 🟢 | trojan | @configshubplus | 14",
+                "🇺🇸 US | 🔴 | trojan | @configshubplus | 15",
+                "🇺🇸 US | 🟢 | trojan | @configshubplus | 17",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 16",
-                "🇬🇧 GB | 🔴 | trojan | @entrynet | 17",
+                "🇫🇷 FR | 🟢 | trojan | @entrynet | 16",
+                "🇦🇲 AM | 🔴 | trojan | @entrynet | 18",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 5",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 7",
@@ -162,7 +165,6 @@
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇯🇵 JP | 🔴 | trojan | @hope_net | 16",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 5",
@@ -180,12 +182,16 @@
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 7",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 8",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 9",
+                "🇺🇸 US | 🟢 | trojan | @configshubplus | 14",
+                "🇺🇸 US | 🔴 | trojan | @configshubplus | 15",
+                "🇺🇸 US | 🟢 | trojan | @configshubplus | 17",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 16",
-                "🇬🇧 GB | 🔴 | trojan | @entrynet | 17",
+                "🇫🇷 FR | 🟢 | trojan | @entrynet | 16",
+                "🇦🇲 AM | 🔴 | trojan | @entrynet | 18",
                 "🇩🇪 DE | 🟢 | trojan | @freakconfig | 5",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 7",
@@ -320,22 +326,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "t3.teslacdn2.live",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇯🇵 JP | 🔴 | trojan | @hope_net | 16",
-            "type": "trojan",
-            "server": "tw01.trojanyyds.xyz",
-            "server_port": 443,
-            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
-            "tls": {
-                "enabled": true,
-                "server_name": "tw01.trojanyyds.xyz",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -632,6 +622,52 @@
             "password": "T9xcEjdUWx"
         },
         {
+            "tag": "🇺🇸 US | 🟢 | trojan | @configshubplus | 14",
+            "type": "trojan",
+            "server": "52.84.18.5",
+            "server_port": 443,
+            "password": "0000000",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.lovelive-anime.jp",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @configshubplus | 15",
+            "type": "trojan",
+            "server": "192.200.160.35",
+            "server_port": 2083,
+            "password": "Aimer"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @configshubplus | 17",
+            "type": "trojan",
+            "server": "38.59.242.169",
+            "server_port": 27738,
+            "password": "Aimer",
+            "tls": {
+                "enabled": true,
+                "server_name": "ngep.ambercc.filegear-sg.me",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed",
+                "headers": {
+                    "Host": "ngep.ambercc.filegear-sg.me"
+                }
+            }
+        },
+        {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 12",
             "type": "trojan",
             "server": "13.37.140.67",
@@ -712,11 +748,27 @@
             }
         },
         {
-            "tag": "🇬🇧 GB | 🔴 | trojan | @entrynet | 17",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @entrynet | 16",
             "type": "trojan",
-            "server": "51.24.50.148",
+            "server": "13.36.146.141",
             "server_port": 22222,
-            "password": "telegram-id-privatevpns"
+            "password": "telegram-id-v2rayvpnchannel",
+            "tls": {
+                "enabled": true,
+                "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇦🇲 AM | 🔴 | trojan | @entrynet | 18",
+            "type": "trojan",
+            "server": "188.164.159.25",
+            "server_port": 2053,
+            "password": "Aimer"
         },
         {
             "tag": "🇩🇪 DE | 🟢 | trojan | @freakconfig | 5",

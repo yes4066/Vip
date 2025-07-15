@@ -91,6 +91,7 @@
                 "direct",
                 "❔ XX | 🟢 | vless | @Fr33C0nfig | 51",
                 "🇩🇪 DE | 🟢 | vless | @aminaqafarzane | 12",
+                "🇮🇳 IN | 🟢 | vless | @argo_vpn1 | 3",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 0",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 1",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 2",
@@ -102,7 +103,6 @@
                 "🇩🇪 DE | 🟢 | vless | @confing_chanel | 22",
                 "🇩🇪 DE | 🟢 | vless | @confing_chanel | 23",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇫🇷 FR | 🟢 | vless | @dailyv2ry | 160",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 60",
@@ -141,7 +141,7 @@
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
-                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 11",
+                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 9",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
                 "❔ XX | 🟢 | vless | @proxysudo | 1",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
@@ -200,6 +200,7 @@
             "outbounds": [
                 "❔ XX | 🟢 | vless | @Fr33C0nfig | 51",
                 "🇩🇪 DE | 🟢 | vless | @aminaqafarzane | 12",
+                "🇮🇳 IN | 🟢 | vless | @argo_vpn1 | 3",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 0",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 1",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 2",
@@ -211,7 +212,6 @@
                 "🇩🇪 DE | 🟢 | vless | @confing_chanel | 22",
                 "🇩🇪 DE | 🟢 | vless | @confing_chanel | 23",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇫🇷 FR | 🟢 | vless | @dailyv2ry | 160",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 60",
@@ -250,7 +250,7 @@
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
-                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 11",
+                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 9",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
                 "❔ XX | 🟢 | vless | @proxysudo | 1",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
@@ -352,6 +352,29 @@
                 "reality": {
                     "enabled": true,
                     "public_key": "3WnHdv9A0tNParChTLxPnDteRD841h8thOGR7MBgAhY",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "🇮🇳 IN | 🟢 | vless | @argo_vpn1 | 3",
+            "type": "vless",
+            "server": "india.aparat-movies-download.ir",
+            "server_port": 4450,
+            "uuid": "ec129df4-ddfd-4d54-be9a-5029d6052fa9",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zhaket.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "y6JSkggQ__RA_nmCJpX1_ddSQC6vzDUPaN7KyvjVuic",
                     "short_id": ""
                 }
             }
@@ -623,29 +646,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram:"
-            }
-        },
-        {
-            "tag": "🇫🇷 FR | 🟢 | vless | @dailyv2ry | 160",
-            "type": "vless",
-            "server": "amazon-4.cristiano.name.ng",
-            "server_port": 443,
-            "uuid": "4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "store.steampowered.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "TGlPtfVzGIVpMauPRMGJj2Uu6GUiCpu5ZizIIjw-wx4",
-                    "short_id": "f5"
-                }
             }
         },
         {
@@ -1602,7 +1602,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 11",
+            "tag": "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 9",
             "type": "vless",
             "server": "real-all3-2.sdcards.ir",
             "server_port": 8501,
