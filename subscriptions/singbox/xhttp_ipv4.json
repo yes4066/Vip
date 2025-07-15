@@ -97,8 +97,6 @@
                 "🇺🇸 US | 🔴 | vless | @configms | 16",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
-                "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 15",
-                "🇩🇪 DE | 🟢 | vless | @expressvpn_420 | 17",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 11",
                 "🇺🇸 US | 🔴 | vless | @flyv2ray | 11",
                 "🇹🇷 TR | 🔴 | vless | @freakconfig | 6",
@@ -112,11 +110,11 @@
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 8",
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
-                "🇺🇸 US | 🔴 | vless | @lranonline_new | 8",
+                "🇺🇸 US | 🔴 | vless | @lranonline_new | 4",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 124",
+                "🇳🇱 NL | 🟢 | vless | @prrofile_purple | 126",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇺🇸 US | 🔴 | vless | @summertimeus | 12",
                 "🇳🇱 NL | 🟢 | vless | @trueproxy | 2",
@@ -145,8 +143,6 @@
                 "🇺🇸 US | 🔴 | vless | @configms | 16",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
-                "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 15",
-                "🇩🇪 DE | 🟢 | vless | @expressvpn_420 | 17",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 11",
                 "🇺🇸 US | 🔴 | vless | @flyv2ray | 11",
                 "🇹🇷 TR | 🔴 | vless | @freakconfig | 6",
@@ -160,11 +156,11 @@
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 8",
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
-                "🇺🇸 US | 🔴 | vless | @lranonline_new | 8",
+                "🇺🇸 US | 🔴 | vless | @lranonline_new | 4",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 124",
+                "🇳🇱 NL | 🟢 | vless | @prrofile_purple | 126",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇺🇸 US | 🔴 | vless | @summertimeus | 12",
                 "🇳🇱 NL | 🟢 | vless | @trueproxy | 2",
@@ -259,38 +255,6 @@
             "uuid": "Parsashonam-262",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 15",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "3393f0eb-437f-45d5-abd0-a39728f974fc",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @expressvpn_420 | 17",
-            "type": "vless",
-            "server": "91.107.248.47",
-            "server_port": 8443,
-            "uuid": "dd7550e3-59ef-4d01-aa9b-a3dabd37d66b",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zhaket.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "VLg1hlNgjDvtzxM8MahS__jfBMPvggedc8-XcDyn-zM",
-                    "short_id": "a508"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @fastkanfig | 11",
@@ -433,7 +397,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @lranonline_new | 8",
+            "tag": "🇺🇸 US | 🔴 | vless | @lranonline_new | 4",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
@@ -511,16 +475,16 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 124",
+            "tag": "🇳🇱 NL | 🟢 | vless | @prrofile_purple | 126",
             "type": "vless",
-            "server": "185.127.94.27",
-            "server_port": 8443,
-            "uuid": "2d37cd89-d6e5-4d58-a688-8b0208a48e6e",
+            "server": "62.212.70.229",
+            "server_port": 80,
+            "uuid": "c256ce5f-9b2b-43a0-946a-cceeadf0d5b0",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "drive.google.com",
+                "server_name": "ea.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -528,8 +492,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "BG0noERXu_3wOPcZOeu9vl35QIFilTAWFXMZx-nzpVY",
-                    "short_id": "58b2fc"
+                    "public_key": "tGORZqRxnUHzC46UYNRlydnkDlbA06OlkhPFZrxeLCE",
+                    "short_id": "3df4"
                 }
             }
         },
