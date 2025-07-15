@@ -1351,14 +1351,41 @@ function generate_full_html(
 
             if (qrBtn) {
                 const dataUri = qrBtn.previousElementSibling.dataset.uri;
-                // Reuse DNA modal for QR display
+                const MAX_QR_LENGTH = 2500; // Define a safe max length
+
+                // Reuse DNA modal for display
                 const modalContent = document.getElementById('dnaModalContent');
-                document.getElementById('dnaLoadingState').innerHTML = `<div class="p-4 bg-white"><div id="splitterQrCodeContainer"></div></div>`;
+                const loadingStateDiv = document.getElementById('dnaLoadingState');
+                
+                // Always reset the modal content
+                loadingStateDiv.innerHTML = `<div class="p-4 bg-white"><div id="splitterQrCodeContainer"></div></div>`;
                 document.getElementById('dnaResultsContainer').classList.add('hidden');
                 document.getElementById('modalSubscriptionName').textContent = `QR Code`;
                 dnaModal.classList.remove('hidden');
                 setTimeout(() => modalContent.classList.remove('scale-95', 'opacity-0'), 50);
-                new QRCode(document.getElementById('splitterQrCodeContainer'), { text: dataUri, width: 256, height: 256 });
+
+                const qrContainer = document.getElementById('splitterQrCodeContainer');
+
+                if (dataUri.length > MAX_QR_LENGTH) {
+                    // If content is too long, display a message instead
+                    qrContainer.innerHTML = `
+                        <div class="h-64 flex items-center justify-center text-center text-lg text-slate-600 bg-slate-50 rounded-md p-4">
+                            Content is too large for a QR code.<br><br>Please use the "Copy Link" button instead.
+                        </div>
+                    `;
+                } else {
+                    // If content length is okay, generate the QR code
+                    try {
+                        new QRCode(qrContainer, { 
+                            text: dataUri, 
+                            width: 256, 
+                            height: 256 
+                        });
+                    } catch (e) {
+                        console.error("QR Code generation failed:", e);
+                        qrContainer.innerHTML = `<div class="h-64 flex items-center justify-center text-red-500">Error generating QR Code.</div>`;
+                    }
+                }
             }
         });
 
