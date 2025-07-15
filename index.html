@@ -51,6 +51,7 @@
                 <div class="flex border-b border-slate-200 mb-6">
                     <button id="simpleModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md -mb-px border mode-button-active">Simple Mode</button>
                     <button id="composerModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">✨ Subscription Composer</button>
+                    <button id="splitterModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">✂️ Subscription Splitter</button>
                 </div>
 
                 <!-- Container for "Simple Mode" -->
@@ -130,6 +131,65 @@
                     </div>
                 </div>
 
+                <!-- Container for "Subscription Splitter Mode" -->
+                <div id="splitterModeContainer" class="hidden">
+                    <div class="space-y-6 max-w-2xl mx-auto">
+                        <p class="text-center text-slate-600">Paste any large subscription link (from here or anywhere else) to split it into smaller, more manageable lists.</p>
+                        
+                        <!-- Step 1: Input -->
+                        <div>
+                            <label for="splitterUrlInput" class="block text-sm font-medium text-slate-700 mb-2">Subscription URL to Split:</label>
+                            <input type="url" id="splitterUrlInput" placeholder="https://..." class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800 placeholder-slate-400">
+                        </div>
+
+                        <!-- Step 2: Options -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Splitting Strategy:</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <div>
+                                    <input type="radio" name="split_strategy" id="split_by_country" value="country" class="hidden peer" checked>
+                                    <label for="split_by_country" class="block text-center p-4 rounded-lg border border-slate-300 cursor-pointer peer-checked:border-indigo-600 peer-checked:ring-2 peer-checked:ring-indigo-500 peer-checked:text-indigo-600">
+                                        <i data-lucide="map-pinned" class="mx-auto h-6 w-6 mb-1"></i>
+                                        <span class="font-semibold">By Country</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="split_strategy" id="split_by_protocol" value="protocol" class="hidden peer">
+                                    <label for="split_by_protocol" class="block text-center p-4 rounded-lg border border-slate-300 cursor-pointer peer-checked:border-indigo-600 peer-checked:ring-2 peer-checked:ring-indigo-500 peer-checked:text-indigo-600">
+                                        <i data-lucide="file-cog" class="mx-auto h-6 w-6 mb-1"></i>
+                                        <span class="font-semibold">By Protocol</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="split_strategy" id="split_by_chunk" value="chunk" class="hidden peer">
+                                    <label for="split_by_chunk" class="block text-center p-4 rounded-lg border border-slate-300 cursor-pointer peer-checked:border-indigo-600 peer-checked:ring-2 peer-checked:ring-indigo-500 peer-checked:text-indigo-600">
+                                        <i data-lucide="grip" class="mx-auto h-6 w-6 mb-1"></i>
+                                        <span class="font-semibold">By Chunks</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="chunkSizeContainer" class="hidden mt-4">
+                                <label for="chunkSizeInput" class="block text-sm font-medium text-slate-700 mb-2">Nodes per chunk:</label>
+                                <input type="number" id="chunkSizeInput" value="50" min="5" class="block w-full max-w-xs mx-auto rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800">
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Action -->
+                        <button id="splitSubscriptionButton" class="w-full flex items-center justify-center gap-2 bg-purple-600 text-white px-4 py-3 rounded-md hover:bg-purple-700 transition-colors duration-200 disabled:bg-purple-300">
+                            <i data-lucide="scissors" class="w-5 h-5"></i>
+                            <span id="splitButtonText" class="font-semibold">Split Subscription</span>
+                        </button>
+                    </div>
+
+                    <!-- Splitter Result Area -->
+                    <div id="splitterResultArea" class="hidden mt-8 pt-6 border-t border-slate-200">
+                        <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-4 text-center">Your Split Subscriptions:</h3>
+                        <div id="splitterResultList" class="space-y-3 max-w-2xl mx-auto">
+                            <!-- Results will be injected here -->
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Result Area for Simple Mode -->
                 <div id="resultArea" class="hidden bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200 mt-6">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-8 items-start">
@@ -186,7 +246,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-15 22:11:37 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-15 22:29:03 +0330</p>
         </footer>
     </div>
     
@@ -1818,6 +1878,175 @@
             composerResultArea.classList.remove('hidden');
             button.disabled = false; buttonText.textContent = 'Generate Composed Subscription';
         }
+
+                // ====================================================================
+        // SUBSCRIPTION SPLITTER LOGIC
+        // ====================================================================
+
+        // --- DOM REFERENCES for Splitter ---
+        const splitterModeButton = document.getElementById('splitterModeButton');
+        const splitterModeContainer = document.getElementById('splitterModeContainer');
+        const splitterUrlInput = document.getElementById('splitterUrlInput');
+        const splitSubscriptionButton = document.getElementById('splitSubscriptionButton');
+        const splitterResultArea = document.getElementById('splitterResultArea');
+        const splitterResultList = document.getElementById('splitterResultList');
+        const chunkSizeContainer = document.getElementById('chunkSizeContainer');
+        const chunkSizeInput = document.getElementById('chunkSizeInput');
+
+        // --- Event Listeners for Splitter ---
+        splitterModeButton.addEventListener('click', () => {
+            simpleModeContainer.classList.add('hidden');
+            composerModeContainer.classList.add('hidden');
+            splitterModeContainer.classList.remove('hidden');
+
+            resultArea.classList.add('hidden');
+            composerResultArea.classList.add('hidden');
+
+            simpleModeButton.classList.replace('mode-button-active', 'mode-button-inactive');
+            composerModeButton.classList.replace('mode-button-active', 'mode-button-inactive');
+            splitterModeButton.classList.replace('mode-button-inactive', 'mode-button-active');
+        });
+
+        // Show/hide chunk size input based on strategy
+        document.querySelectorAll('input[name="split_strategy"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                if (e.target.value === 'chunk') {
+                    chunkSizeContainer.classList.remove('hidden');
+                } else {
+                    chunkSizeContainer.classList.add('hidden');
+                }
+            });
+        });
+
+        splitSubscriptionButton.addEventListener('click', async () => {
+            const url = splitterUrlInput.value;
+            if (!url) {
+                showMessageBox('Please paste a subscription URL to split.');
+                return;
+            }
+
+            const button = splitSubscriptionButton;
+            const buttonText = document.getElementById('splitButtonText');
+            button.disabled = true;
+            buttonText.textContent = 'Parsing...';
+            splitterResultArea.classList.add('hidden');
+            splitterResultList.innerHTML = '';
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
+                
+                const content = await response.text();
+                // We assume most external subs are base64 encoded text
+                const decoded = atob(content);
+                const uris = decoded.split(/[\n\r]+/).filter(Boolean);
+
+                if (uris.length === 0) throw new Error('No proxy nodes found in the subscription.');
+                
+                buttonText.textContent = 'Splitting...';
+
+                const nodes = uris.map(uri => {
+                    const parsed = configParse(uri);
+                    return parsed ? { uri, parsed } : null;
+                }).filter(Boolean);
+                
+                const strategy = document.querySelector('input[name="split_strategy"]:checked').value;
+                let groupedNodes = {};
+
+                if (strategy === 'country') {
+                    nodes.forEach(node => {
+                        const name = node.parsed.ps || node.parsed.hash || 'Unknown';
+                        const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
+                        const countryCode = countryMatch ? (countryMatch[1] || countryMatch[2]).toUpperCase() : 'Unknown';
+                        if (!groupedNodes[countryCode]) groupedNodes[countryCode] = [];
+                        groupedNodes[countryCode].push(node);
+                    });
+                } else if (strategy === 'protocol') {
+                    nodes.forEach(node => {
+                        const protocol = node.parsed.protocol || 'unknown';
+                        if (!groupedNodes[protocol]) groupedNodes[protocol] = [];
+                        groupedNodes[protocol].push(node);
+                    });
+                } else { // chunk
+                    const chunkSize = parseInt(chunkSizeInput.value, 10) || 50;
+                    for (let i = 0; i < nodes.length; i += chunkSize) {
+                        const chunk = nodes.slice(i, i + chunkSize);
+                        const chunkName = `Chunk ${Math.floor(i / chunkSize) + 1}`;
+                        groupedNodes[chunkName] = chunk;
+                    }
+                }
+
+                // Render the results
+                Object.entries(groupedNodes).sort((a,b) => a[0].localeCompare(b[0])).forEach(([groupName, groupNodes]) => {
+                    const nodeCount = groupNodes.length;
+                    const base64Content = btoa(groupNodes.map(n => n.uri).join('\n'));
+                    const dataUri = `data:text/plain;base64,${base64Content}`;
+                    
+                    let displayName = groupName;
+                    if (strategy === 'country' && groupName !== 'Unknown') {
+                        displayName = `${getFlagEmoji(groupName)} ${getCountryName(groupName)}`;
+                    } else if (strategy === 'protocol') {
+                        displayName = formatDisplayName(groupName);
+                    }
+
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'bg-white border rounded-lg p-3 flex items-center justify-between';
+                    resultItem.innerHTML = `
+                        <div class="font-semibold text-slate-800">${displayName} <span class="text-sm text-slate-500 font-normal">(${nodeCount} nodes)</span></div>
+                        <div class="flex items-center gap-2">
+                            <button class="splitter-copy-btn p-2 rounded-md bg-indigo-50 text-indigo-700 hover:bg-indigo-100" title="Copy Data URI" data-uri="${dataUri}">
+                                <i data-lucide="copy" class="h-5 w-5"></i>
+                            </button>
+                            <div class="splitter-qr-btn p-2 rounded-md bg-slate-100 hover:bg-slate-200" title="Show QR Code">
+                                <i data-lucide="qr-code" class="h-5 w-5"></i>
+                            </div>
+                        </div>
+                    `;
+                    splitterResultList.appendChild(resultItem);
+                });
+
+                splitterResultArea.classList.remove('hidden');
+
+            } catch (error) {
+                showMessageBox(`Splitting Failed: ${error.message}`);
+            } finally {
+                button.disabled = false;
+                buttonText.textContent = 'Split Subscription';
+                lucide.createIcons(); // Re-render icons for new buttons
+            }
+        });
+
+        // Add event delegation for copy and QR buttons
+        splitterResultList.addEventListener('click', e => {
+            const copyBtn = e.target.closest('.splitter-copy-btn');
+            const qrBtn = e.target.closest('.splitter-qr-btn');
+
+            if (copyBtn) {
+                navigator.clipboard.writeText(copyBtn.dataset.uri).then(() => {
+                    showMessageBox('Data URI copied to clipboard!');
+                });
+            }
+
+            if (qrBtn) {
+                const dataUri = qrBtn.previousElementSibling.dataset.uri;
+                // Reuse DNA modal for QR display
+                const modalContent = document.getElementById('dnaModalContent');
+                document.getElementById('dnaLoadingState').innerHTML = `<div class="p-4 bg-white"><div id="splitterQrCodeContainer"></div></div>`;
+                document.getElementById('dnaResultsContainer').classList.add('hidden');
+                document.getElementById('modalSubscriptionName').textContent = `QR Code`;
+                dnaModal.classList.remove('hidden');
+                setTimeout(() => modalContent.classList.remove('scale-95', 'opacity-0'), 50);
+                new QRCode(document.getElementById('splitterQrCodeContainer'), { text: dataUri, width: 256, height: 256 });
+            }
+        });
+
+        // Add event listener to the simple mode button to ensure splitter is hidden
+        simpleModeButton.addEventListener('click', () => {
+            splitterModeContainer.classList.add('hidden');
+        });
+        composerModeButton.addEventListener('click', () => {
+             splitterModeContainer.classList.add('hidden');
+        });
 
         // --- EVENT LISTENERS ---
         simpleModeButton.addEventListener('click', () => { simpleModeContainer.classList.remove('hidden'); composerModeContainer.classList.add('hidden'); composerResultArea.classList.add('hidden'); simpleModeButton.classList.replace('mode-button-inactive', 'mode-button-active'); composerModeButton.classList.replace('mode-button-active', 'mode-button-inactive'); });
