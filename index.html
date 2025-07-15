@@ -187,7 +187,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-15 21:26:14 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-15 21:34:48 +0330</p>
         </footer>
     </div>
     
@@ -1597,45 +1597,127 @@
         
         function parseProxyUri(uri) {
             try {
-                const protocolMatch = uri.match(/^([a-z0-9]+):\/\//);
-                if (!protocolMatch) return null;
-                const protocol = protocolMatch[1];
-                const nameMatch = uri.match(/#(.+)$/);
-                const name = nameMatch ? decodeURIComponent(nameMatch[1].trim()) : 'Unnamed Node';
+                // Handle VMess separately as it's a base64 encoded JSON
+                if (uri.startsWith('vmess://')) {
+                    const decoded = JSON.parse(atob(uri.substring(8)));
+                    const name = decoded.ps || `${decoded.add}:${decoded.port}`;
+                    const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
+                    return {
+                        uri: uri,
+                        protocol: 'vmess',
+                        name: name,
+                        country: countryMatch ? (countryMatch[1] || countryMatch[2])?.toUpperCase() : null,
+                        details: decoded
+                    };
+                }
+
+                // Handle other URI-based protocols
+                const url = new URL(uri);
+                const protocol = url.protocol.slice(0, -1); // remove ":"
+                const name = decodeURIComponent(url.hash.substring(1)) || `${url.hostname}:${url.port}`;
                 const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
-                const country = countryMatch ? (countryMatch[1] || countryMatch[2])?.toUpperCase() : null;
-                const isReality = (uri.includes('security=reality') || name.toLowerCase().includes('reality'));
+
+                const details = {
+                    server: url.hostname,
+                    server_port: parseInt(url.port, 10),
+                    uuid: url.username, // For VLESS/Trojan
+                    password: url.username, // For Trojan
+                };
                 
-                return { uri, protocol: isReality ? 'reality' : protocol, name, country };
-            } catch { return null; }
+                // Extract all search parameters
+                url.searchParams.forEach((value, key) => {
+                    details[key] = value;
+                });
+                
+                const isReality = details.security === 'reality';
+
+                return {
+                    uri: uri,
+                    protocol: isReality ? 'reality' : protocol,
+                    name: name,
+                    country: countryMatch ? (countryMatch[1] || countryMatch[2])?.toUpperCase() : null,
+                    details: details
+                };
+            } catch (e) {
+                console.warn("Could not parse URI:", uri, e);
+                return null;
+            }
         }
 
-        function generateBase64Output(nodes) { return btoa(nodes.map(n => n.uri).join('\\n')); }
+                function generateBase64Output(nodes) {
+            // This function remains the same as it doesn't use a template.
+            return btoa(nodes.map(n => n.uri).join('\n'));
+        }
 
-        function generateClashOutput(nodes) {
-            const proxyNames = nodes.map(p => p.name);
-            const clashConfig = {
-                'mixed-port': 7890,
-                'allow-lan': false,
-                'mode': 'rule',
-                'log-level': 'info',
-                'proxies': nodes.map(node => {
-                    const params = new URL(node.uri);
-                    const common = { name: node.name, server: params.hostname, port: parseInt(params.port), udp: true };
-                    switch (node.protocol) {
-                        case 'vmess': return { ...common, type: 'vmess', uuid: params.username, alterId: 0, cipher: 'auto', network: params.searchParams.get('type') || 'tcp', 'ws-opts': { path: params.searchParams.get('path') } };
-                        case 'vless': case 'reality': return { ...common, type: 'vless', uuid: params.username, network: params.searchParams.get('type') || 'tcp', tls: params.searchParams.get('security') === 'tls', 'ws-opts': { path: params.searchParams.get('path') }, 'reality-opts': node.protocol === 'reality' ? { 'public-key': params.searchParams.get('pbk'), 'short-id': params.searchParams.get('sid') } : undefined };
-                        case 'trojan': return { ...common, type: 'trojan', password: params.username };
-                        default: return common;
-                    }
-                }),
-                'proxy-groups': [{'name': 'PROXY', 'type': 'select', 'proxies': proxyNames }, { 'name': '🚀 Auto-Select', 'type': 'url-test', 'proxies': proxyNames, 'url': 'http://www.gstatic.com/generate_204', 'interval': 300 }],
-                'rules': [ 'MATCH,PROXY' ]
-            };
-            return jsyaml.dump(clashConfig, { noArrayIndent: true });
+        async function generateClashOutput(nodes) {
+            // 1. Fetch your custom template
+            const templateURL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/templates/clash.yaml';
+            const response = await fetch(templateURL);
+            if (!response.ok) throw new Error('Could not fetch Clash template.');
+            let templateContent = await response.text();
+            
+            // 2. Format the proxies into YAML format
+            const proxyDetails = nodes.map(node => {
+                const p = { name: node.name, ...node.details };
+                let clashNode = null;
+                switch(node.protocol) {
+                    case 'vmess': clashNode = { type: 'vmess', name: p.name, server: p.add, port: parseInt(p.port), uuid: p.id, alterId: parseInt(p.aid) || 0, cipher: 'auto', udp: true, network: p.net, 'ws-opts': p.net === 'ws' ? { path: p.path, headers: { Host: p.host } } : undefined }; break;
+                    case 'vless':
+                    case 'reality':
+                        clashNode = { type: 'vless', name: p.name, server: p.server, port: p.server_port, uuid: p.uuid, udp: true, network: p.type, tls: p.security === 'tls' || p.security === 'reality', 'client-fingerprint': 'chrome', 'ws-opts': p.type === 'ws' ? { path: p.path } : undefined, 'reality-opts': p.security === 'reality' ? { 'public-key': p.pbk, 'short-id': p.sid } : undefined, 'servername': p.sni }; break;
+                    case 'trojan': clashNode = { type: 'trojan', name: p.name, server: p.server, port: p.server_port, password: p.password, udp: true, sni: p.sni }; break;
+                }
+                return clashNode;
+            }).filter(Boolean);
+
+            const proxiesYAML = jsyaml.dump(proxyDetails, { indent: 2, noArrayIndent: true });
+            
+            // 3. Get the list of proxy names for the proxy-group
+            const proxyNamesYAML = proxyDetails.map(p => `      - ${p.name}`).join('\n');
+
+            // 4. Replace the placeholders in the template
+            templateContent = templateContent.replace('##PROXIES##', proxiesYAML);
+            templateContent = templateContent.replace('##PROXY_NAMES##', proxyNamesYAML);
+
+            return templateContent;
         }
         
-        function generateSingboxOutput(nodes) { return JSON.stringify({"outbounds": nodes.map(node => ({ "type": node.protocol, "tag": node.name }))}, null, 2); }
+        async function generateSingboxOutput(nodes) {
+            // 1. Fetch your custom template
+            const templateURL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/templates/structure.json';
+            const response = await fetch(templateURL);
+            if (!response.ok) throw new Error('Could not fetch Sing-box template.');
+            // Using jsonc-parser to handle potential comments in your JSON template
+            const templateJson = jsonc.parse(await response.text());
+
+            // 2. Format the nodes into Sing-box outbound format
+            const outbounds = nodes.map(node => {
+                const p = node.details;
+                const base = { tag: node.name };
+                let singboxNode = null;
+                switch (node.protocol) {
+                    case 'vmess': singboxNode = { ...base, type: 'vmess', server: p.add, server_port: parseInt(p.port), uuid: p.id, alter_id: parseInt(p.aid), security: 'auto', transport: p.net ? { type: p.net, path: p.path, headers: { Host: p.host } } : undefined }; break;
+                    case 'vless':
+                    case 'reality':
+                        const transport = p.type ? { type: p.type, path: p.path } : undefined;
+                        const tls = (p.security === 'tls' || p.security === 'reality') ? { enabled: true, server_name: p.sni, reality: p.security === 'reality' ? { enabled: true, public_key: p.pbk, short_id: p.sid } : undefined } : undefined;
+                        singboxNode = { ...base, type: 'vless', server: p.server, server_port: p.server_port, uuid: p.uuid, transport, tls }; break;
+                    case 'trojan': singboxNode = { ...base, type: 'trojan', server: p.server, server_port: p.server_port, password: p.password }; break;
+                }
+                return singboxNode;
+            }).filter(Boolean);
+
+            // 3. Find the 'auto' url-test group and add the proxy names to it
+            const urlTestGroup = templateJson.outbounds.find(o => o.tag === 'auto');
+            if (urlTestGroup) {
+                urlTestGroup.outbounds = outbounds.map(o => o.tag);
+            }
+            
+            // 4. Insert the generated outbounds at the beginning of the existing outbounds array
+            templateJson.outbounds.unshift(...outbounds);
+
+            return JSON.stringify(templateJson, null, 2);
+        }
 
         async function handleGenerateComposition() {
             const button = generateCompositionButton;
