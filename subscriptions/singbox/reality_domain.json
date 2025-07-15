@@ -105,9 +105,9 @@
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
+                "🇩🇪 DE | 🟢 | vless | @flyv2ray | 14",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
-                "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 11",
-                "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 14",
+                "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 13",
                 "🇩🇪 DE | 🟢 | vless | @freeconfigsplus | 14",
                 "🇩🇪 DE | 🟢 | vless | @freeiranianv2rey | 17",
                 "❔ XX | 🟢 | vless | @fsv2ray | 0",
@@ -169,7 +169,7 @@
                 "🇫🇮 FI | 🟢 | vless | @v2reay | 10",
                 "🇹🇷 TR | 🟢 | vless | @v2source | 16",
                 "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
-                "🇩🇪 DE | 🟢 | vless | @vmessorg | 10",
+                "🇩🇪 DE | 🟢 | vless | @vmessorg | 9",
                 "❔ XX | 🟢 | vless | @vmessraygan | 7",
                 "❔ XX | 🟢 | vless | @vmessraygan | 8",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
@@ -213,9 +213,9 @@
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
+                "🇩🇪 DE | 🟢 | vless | @flyv2ray | 14",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
-                "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 11",
-                "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 14",
+                "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 13",
                 "🇩🇪 DE | 🟢 | vless | @freeconfigsplus | 14",
                 "🇩🇪 DE | 🟢 | vless | @freeiranianv2rey | 17",
                 "❔ XX | 🟢 | vless | @fsv2ray | 0",
@@ -277,7 +277,7 @@
                 "🇫🇮 FI | 🟢 | vless | @v2reay | 10",
                 "🇹🇷 TR | 🟢 | vless | @v2source | 16",
                 "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
-                "🇩🇪 DE | 🟢 | vless | @vmessorg | 10",
+                "🇩🇪 DE | 🟢 | vless | @vmessorg | 9",
                 "❔ XX | 🟢 | vless | @vmessraygan | 7",
                 "❔ XX | 🟢 | vless | @vmessraygan | 8",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
@@ -693,6 +693,33 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🟢 | vless | @flyv2ray | 14",
+            "type": "vless",
+            "server": "www.zooboming.com",
+            "server_port": 443,
+            "uuid": "ItsLegendaryking",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "tgju.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QsFe8MVmOTUzhtPSOetpRwAJxwzrqqpRvpda_QzzbhQ",
+                    "short_id": ""
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers"
+            }
+        },
+        {
             "tag": "❔ XX | 🟢 | vless | @free_omega | 0",
             "type": "vless",
             "server": "free.omegav.fun",
@@ -716,30 +743,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 11",
-            "type": "vless",
-            "server": "de.gy-nt.shop",
-            "server_port": 443,
-            "uuid": "3488f5ea-47f8-4d6c-b1af-289c010c57cd",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "miro.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "randomized"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "B65r_UBsBFSlwq7XbrrWI0SuCxkB8KhQEYaGrB54mTc",
-                    "short_id": ""
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 14",
+            "tag": "🇩🇪 DE | 🟢 | vless | @free_vpn02 | 13",
             "type": "vless",
             "server": "real-all3-2.sdcards.ir",
             "server_port": 8501,
@@ -2276,7 +2280,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vmessorg | 10",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vmessorg | 9",
             "type": "vless",
             "server": "vip1.proxystore11.news",
             "server_port": 2052,

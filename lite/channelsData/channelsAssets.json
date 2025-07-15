@@ -72,7 +72,8 @@
     "argo_vpn1": {
         "types": [
             "ss",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "𝐀𝐫𝐠𝐨_𝐕𝐏𝐍1 /پل فالکن/هیدیفای",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/argo_vpn1.jpg"
@@ -424,8 +425,8 @@
     },
     "deamnet_proxy": {
         "types": [
-            "vmess",
             "vless",
+            "vmess",
             "ss",
             "trojan"
         ],
@@ -589,9 +590,9 @@
     },
     "fastkanfig": {
         "types": [
-            "vmess",
             "vless",
-            "ss"
+            "ss",
+            "vmess"
         ],
         "title": "کانفیگ سرعتی",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/fastkanfig.jpg"
@@ -971,8 +972,9 @@
     "hope_net": {
         "types": [
             "vless",
+            "ss",
             "trojan",
-            "ss"
+            "vmess"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1577,8 +1579,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1797,13 +1799,6 @@
         ],
         "title": "NovaVPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/novavpn1984.jpg"
-    },
-    "noviin_tel": {
-        "types": [
-            "vless"
-        ],
-        "title": "نوین تل",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/noviin_tel.jpg"
     },
     "novinology": {
         "types": [
@@ -2141,7 +2136,8 @@
     },
     "sezar_sec": {
         "types": [
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "Sezar | تیم امنیتی سزار",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/sezar_sec.jpg"
@@ -2400,10 +2396,10 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "ss",
             "trojan",
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
