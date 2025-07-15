@@ -922,10 +922,14 @@ function generate_full_html(
                 if (uri.startsWith('vmess://')) {
                     const b64 = uri.substring(8);
                     const decoded = JSON.parse(atob(b64));
-                    // Sanitize path: remove any query strings from the path itself
+                    
+                    // --- AGGRESSIVE PATH SANITIZATION ---
+                    // This is the critical fix. If a path exists, we take ONLY the part before the first '?'
+                    // This correctly handles malformed paths like "/connect/?ed=1024/?JOKERRVPN" -> "/connect/"
                     if (decoded.path) {
                         decoded.path = decoded.path.split('?')[0];
                     }
+
                     const name = decoded.ps || `${decoded.add}:${decoded.port}`;
                     const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
                     return {
@@ -937,13 +941,11 @@ function generate_full_html(
                     };
                 }
 
-                // --- Handle all other URI-based protocols with a dedicated try-catch ---
+                // --- Handle all other URI-based protocols ---
                 let url;
                 try {
-                    // This is the critical part that can fail
                     url = new URL(uri);
                 } catch (urlError) {
-                    // If new URL() fails, it's a malformed URI. Skip it.
                     console.warn("Skipping malformed URI:", uri, urlError.message);
                     return null;
                 }
@@ -972,7 +974,6 @@ function generate_full_html(
                 };
 
             } catch (e) {
-                // General catch-all for any other unexpected errors during parsing
                 console.warn("Could not parse URI due to an unexpected error:", uri, e);
                 return null;
             }
