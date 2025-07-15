@@ -246,7 +246,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-15 22:59:37 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-15 23:20:11 +0330</p>
         </footer>
     </div>
     
@@ -1752,6 +1752,29 @@
                 console.error("Fatal error parsing config:", uri, e);
                 return null;
             }
+        }
+
+        function generateBase64Output(nodes) {
+            // This function takes the parsed node objects and extracts their original URI for encoding.
+            const uris = nodes.map(n => {
+                // The 'parsed' object is nested inside the node object we created
+                const p = n.parsed;
+                // Reconstruct the original URI string from the parsed object
+                if (p.protocol === 'vmess') {
+                    // For vmess, we must re-encode the JSON part
+                    const vmessJson = { ...p };
+                    delete vmessJson.protocol; // Remove the protocol key we added
+                    return `vmess://${btoa(JSON.stringify(vmessJson))}`;
+                } else if (p.uri) {
+                     // If the original URI was stored, use it. This is the most reliable.
+                    return p.uri;
+                } else {
+                    // Fallback to reconstructing from parts, though less ideal
+                    const params = new URLSearchParams(p.params).toString();
+                    return `${p.protocol}://${p.username}@${p.hostname}:${p.port}?${params}#${encodeURIComponent(p.hash)}`;
+                }
+            });
+            return btoa(uris.join('\n'));
         }
 
         async function generateClashOutput(nodes) {
