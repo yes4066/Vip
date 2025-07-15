@@ -677,6 +677,24 @@ function generate_full_html(
             });
             lucide.createIcons();
         }
+        function updateOtherElementOptions() {
+            const selectedConfigType = configTypeSelect.value;
+            const selectedIpType = ipTypeSelect.value;
+            const searchTerm = searchBar.value.toLowerCase();
+            
+            resetSelect(otherElementSelect, 'Select Subscription');
+            subscriptionDetailsContainer.classList.add('hidden');
+            
+            if (selectedIpType && structuredData[selectedConfigType]?.[selectedIpType]) {
+                const allElements = structuredData[selectedConfigType][selectedIpType];
+                const filteredAndSortedKeys = Object.keys(allElements)
+                    .filter(key => formatDisplayName(key).toLowerCase().includes(searchTerm))
+                    .sort((a, b) => a.localeCompare(b));
+                    
+                populateSelect(otherElementSelect, filteredAndSortedKeys, filteredAndSortedKeys.length > 0 ? 'Select Subscription' : 'No matches found');
+                otherElementSelect.disabled = false;
+            }
+        }
 
         // --- COMPOSER LOGIC ---
         function populateComposerSources() {
@@ -836,7 +854,7 @@ function generate_full_html(
         composerModeButton.addEventListener('click', () => { simpleModeContainer.classList.add('hidden'); composerModeContainer.classList.remove('hidden'); resultArea.classList.add('hidden'); simpleModeButton.classList.replace('mode-button-active', 'mode-button-inactive'); composerModeButton.classList.replace('mode-button-inactive', 'mode-button-active'); });
         configTypeSelect.addEventListener('change', () => { resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription'); searchBar.value = ''; searchBar.disabled = true; resultArea.classList.add('hidden'); if (configTypeSelect.value && structuredData[configTypeSelect.value]) { populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), 'Select Client/Core'); ipTypeSelect.disabled = false; } });
         ipTypeSelect.addEventListener('change', () => { searchBar.value = ''; if (ipTypeSelect.value) { updateClientInfo(ipTypeSelect.value); resultArea.classList.remove('hidden'); subscriptionDetailsContainer.classList.add('hidden'); searchBar.disabled = false; updateOtherElementOptions(); } else { resultArea.classList.add('hidden'); searchBar.disabled = true; resetSelect(otherElementSelect, 'Select Subscription'); } });
-        searchBar.addEventListener('input', () => { document.getElementById('otherElement').dispatchEvent(new Event('change')); updateOtherElementOptions(); });
+        searchBar.addEventListener('input', updateOtherElementOptions);
         otherElementSelect.addEventListener('change', () => { const url = structuredData[configTypeSelect.value]?.[ipTypeSelect.value]?.[otherElementSelect.value]; if (url) { subscriptionUrlInput.value = url; updateQRCode(qrcodeDiv, url); subscriptionDetailsContainer.classList.remove('hidden'); } else { subscriptionDetailsContainer.classList.add('hidden'); } });
         copyButton.addEventListener('click', () => { navigator.clipboard.writeText(subscriptionUrlInput.value).then(() => { const icon = copyButton.querySelector('.copy-icon'), check = copyButton.querySelector('.check-icon'); icon.classList.add('hidden'); check.classList.remove('hidden'); setTimeout(() => { icon.classList.remove('hidden'); check.classList.add('hidden'); }, 2000); }); });
         messageBoxClose.addEventListener('click', () => messageBox.classList.add('hidden'));
