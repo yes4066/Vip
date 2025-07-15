@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇨🇳 CN | 🟢 | trojan | @NamiraNet | 66",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
@@ -100,6 +101,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇨🇳 CN | 🟢 | trojan | @NamiraNet | 66",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
@@ -113,6 +115,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇨🇳 CN | 🟢 | trojan | @NamiraNet | 66",
+            "type": "trojan",
+            "server": "official.tokyometropolis.chernigov.ua",
+            "server_port": 2053,
+            "password": "96983eb4-c8f1-316e-ab00-500014ed3d8b",
+            "tls": {
+                "enabled": true,
+                "server_name": "official.tokyometropolis.chernigov.ua",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",

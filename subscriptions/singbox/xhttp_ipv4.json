@@ -95,6 +95,7 @@
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 18",
                 "🇺🇸 US | 🔴 | vless | @configms | 14",
                 "🇺🇸 US | 🔴 | vless | @configms | 16",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 13",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 11",
@@ -113,7 +114,6 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @mowjproxy | 4",
-                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇳🇱 NL | 🟢 | vless | @prrofile_purple | 126",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
@@ -126,8 +126,7 @@
                 "🇳🇱 NL | 🟢 | vless | @v2rayexpress | 10",
                 "🇺🇸 US | 🔴 | vless | @v2raymelliii | 5",
                 "🇺🇸 US | 🔴 | vless | @v2rayng_channel_vpn | 7",
-                "🇺🇸 US | 🔴 | vless | @vpncostumer | 6",
-                "🇺🇸 US | 🔴 | vless | @vpncostumer | 7",
+                "🇺🇸 US | 🔴 | vless | @vpncostumer | 11",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 14"
             ],
             "tag": "proxy",
@@ -142,6 +141,7 @@
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 18",
                 "🇺🇸 US | 🔴 | vless | @configms | 14",
                 "🇺🇸 US | 🔴 | vless | @configms | 16",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 13",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 11",
@@ -160,7 +160,6 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @mowjproxy | 4",
-                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇳🇱 NL | 🟢 | vless | @prrofile_purple | 126",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
@@ -173,8 +172,7 @@
                 "🇳🇱 NL | 🟢 | vless | @v2rayexpress | 10",
                 "🇺🇸 US | 🔴 | vless | @v2raymelliii | 5",
                 "🇺🇸 US | 🔴 | vless | @v2rayng_channel_vpn | 7",
-                "🇺🇸 US | 🔴 | vless | @vpncostumer | 6",
-                "🇺🇸 US | 🔴 | vless | @vpncostumer | 7",
+                "🇺🇸 US | 🔴 | vless | @vpncostumer | 11",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 14"
             ],
             "tag": "auto",
@@ -239,6 +237,24 @@
             "uuid": "526984f4-f84e-4933-acc7-efa38b92c552",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @configshubplus | 13",
+            "type": "vless",
+            "server": "206.71.158.10",
+            "server_port": 443,
+            "uuid": "7c63f43f-f526-49bb-b5c8-2be26e11ef00",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "statue.lnmarketplace.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @dailytek | 10",
@@ -446,24 +462,6 @@
         },
         {
             "tag": "🇳🇱 NL | 🟢 | vless | @mowjproxy | 4",
-            "type": "vless",
-            "server": "206.71.158.10",
-            "server_port": 443,
-            "uuid": "7c63f43f-f526-49bb-b5c8-2be26e11ef00",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "statue.lnmarketplace.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @mowjproxy | 5",
             "type": "vless",
             "server": "159.223.212.67",
             "server_port": 32930,
@@ -692,20 +690,11 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @vpncostumer | 6",
+            "tag": "🇺🇸 US | 🔴 | vless | @vpncostumer | 11",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
-            "uuid": "259923b6-756d-4b33-9ea9-73e55378018a",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @vpncostumer | 7",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "e81bd425-7f2a-480c-8a62-858a1bab5f93",
+            "uuid": "64eabf2c-f24a-492c-bdfa-b02a7ebda17c",
             "flow": "",
             "packet_encoding": "xudp"
         },

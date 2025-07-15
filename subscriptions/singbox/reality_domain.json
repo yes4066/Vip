@@ -102,7 +102,7 @@
                 "❔ XX | 🟢 | vless | @catvpns | 10",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 11",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇺🇸 US | 🟢 | vless | @dailyv2ry | 157",
+                "🇸🇬 SG | 🟢 | vless | @dailyv2ry | 157",
                 "🇫🇮 FI | 🟢 | vless | @dailyv2ry | 160",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
@@ -166,11 +166,11 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "🇫🇮 FI | 🟢 | vless | @v2rayvpn2 | 2",
-                "🇩🇪 DE | 🟢 | vless | @v2rayweb | 19",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
+                "🇫🇮 FI | 🟢 | vless | @v2reay | 10",
                 "🇹🇷 TR | 🟢 | vless | @v2source | 16",
-                "🇩🇪 DE | 🟢 | vless | @vmessorg | 11",
+                "🇩🇪 DE | 🟢 | vless | @vmessorg | 10",
                 "❔ XX | 🟢 | vless | @vmessraygan | 7",
                 "❔ XX | 🟢 | vless | @vmessraygan | 8",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
@@ -211,7 +211,7 @@
                 "❔ XX | 🟢 | vless | @catvpns | 10",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 11",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇺🇸 US | 🟢 | vless | @dailyv2ry | 157",
+                "🇸🇬 SG | 🟢 | vless | @dailyv2ry | 157",
                 "🇫🇮 FI | 🟢 | vless | @dailyv2ry | 160",
                 "🇫🇮 FI | 🟢 | vless | @dnsforyou | 1",
                 "🇩🇪 DE | 🟢 | vless | @dnsforyou | 4",
@@ -275,11 +275,11 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 11",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "🇫🇮 FI | 🟢 | vless | @v2rayvpn2 | 2",
-                "🇩🇪 DE | 🟢 | vless | @v2rayweb | 19",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
+                "🇫🇮 FI | 🟢 | vless | @v2reay | 10",
                 "🇹🇷 TR | 🟢 | vless | @v2source | 16",
-                "🇩🇪 DE | 🟢 | vless | @vmessorg | 11",
+                "🇩🇪 DE | 🟢 | vless | @vmessorg | 10",
                 "❔ XX | 🟢 | vless | @vmessraygan | 7",
                 "❔ XX | 🟢 | vless | @vmessraygan | 8",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
@@ -626,7 +626,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @dailyv2ry | 157",
+            "tag": "🇸🇬 SG | 🟢 | vless | @dailyv2ry | 157",
             "type": "vless",
             "server": "amazon-15.cristiano.name.ng",
             "server_port": 443,
@@ -2205,29 +2205,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayweb | 19",
-            "type": "vless",
-            "server": "upstream.lonup.org",
-            "server_port": 60600,
-            "uuid": "405fed0f-6cef-44a7-a848-685b350f07d7",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "edge"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "jH08UU9id-Q8i17ltvHPO3sfGL6YTJIFveAJGgNjNl8",
-                    "short_id": "190d32b118caf07f"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
             "type": "vless",
             "server": "accpremium.outlineprivate.store",
@@ -2278,6 +2255,33 @@
             }
         },
         {
+            "tag": "🇫🇮 FI | 🟢 | vless | @v2reay | 10",
+            "type": "vless",
+            "server": "toofan.zeroa.store",
+            "server_port": 8681,
+            "uuid": "b4f1d581-ece1-45c2-a990-f743c45bf8cd",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "LjaEpIQZyga0txhwf7JRHlqFOrImB4dEpkw3-AASWUI",
+                    "short_id": "be"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Tahmznilana"
+            }
+        },
+        {
             "tag": "🇹🇷 TR | 🟢 | vless | @v2source | 16",
             "type": "vless",
             "server": "tr.g2games.ir",
@@ -2301,7 +2305,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vmessorg | 11",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vmessorg | 10",
             "type": "vless",
             "server": "vip1.proxystore11.news",
             "server_port": 2052,
