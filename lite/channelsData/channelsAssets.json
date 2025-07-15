@@ -971,9 +971,10 @@
     },
     "hope_net": {
         "types": [
-            "vless",
             "ss",
-            "trojan"
+            "vless",
+            "trojan",
+            "vmess"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1577,9 +1578,9 @@
     },
     "mowjproxy": {
         "types": [
+            "ss",
             "vless",
-            "vmess",
-            "ss"
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
