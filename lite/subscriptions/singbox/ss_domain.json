@@ -90,8 +90,10 @@
                 "auto",
                 "direct",
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
+                "🇬🇧 GB | 🟢 | ss | @NamiraNet | 69",
                 "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
+                "🇨🇳 CN | 🟢 | ss | @hope_net | 19",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
@@ -109,8 +111,10 @@
             "interval": "10m",
             "outbounds": [
                 "🇬🇧 GB | 🟢 | ss | @Fr33C0nfig | 55",
+                "🇬🇧 GB | 🟢 | ss | @NamiraNet | 69",
                 "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
+                "🇨🇳 CN | 🟢 | ss | @hope_net | 19",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "❔ XX | 🟢 | ss | @outlines_vpn | 5",
@@ -139,6 +143,14 @@
             "password": "69MUii7VDwMqh7Hz"
         },
         {
+            "tag": "🇬🇧 GB | 🟢 | ss | @NamiraNet | 69",
+            "type": "shadowsocks",
+            "server": "Peweza1.digipedia.shop",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "mps3FwmDjLrWaOVg"
+        },
+        {
             "tag": "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
             "type": "shadowsocks",
             "server": "Peweza3.digipedia.shop",
@@ -153,6 +165,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "W74XFALLLuw6m5IA"
+        },
+        {
+            "tag": "🇨🇳 CN | 🟢 | ss | @hope_net | 19",
+            "type": "shadowsocks",
+            "server": "qh62onjn.slashdevslashnetslashtun.net",
+            "server_port": 16009,
+            "method": "aes-256-gcm",
+            "password": "LQVGZB307SUYK23Y"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",

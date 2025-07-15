@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🟢 | vless | @NamiraNet | 68",
                 "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
                 "🇮🇳 IN | 🟢 | vless | @argo_vpn1 | 3",
                 "🇩🇪 DE | 🔴 | vless | @argotaz | 0",
@@ -112,7 +111,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -191,7 +190,7 @@
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
-                "🇮🇷 IR | 🔴 | vless | @proxycrone | 10",
+                "🇮🇷 IR | 🔴 | vless | @proxycrone | 9",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🔴 | vless | @realvpnmaster | 14",
                 "❔ XX | 🔴 | vless | @red2ray | 13",
@@ -246,7 +245,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🟢 | vless | @NamiraNet | 68",
                 "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
                 "🇮🇳 IN | 🟢 | vless | @argo_vpn1 | 3",
                 "🇩🇪 DE | 🔴 | vless | @argotaz | 0",
@@ -269,7 +267,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -348,7 +346,7 @@
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
-                "🇮🇷 IR | 🔴 | vless | @proxycrone | 10",
+                "🇮🇷 IR | 🔴 | vless | @proxycrone | 9",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🔴 | vless | @realvpnmaster | 14",
                 "❔ XX | 🔴 | vless | @red2ray | 13",
@@ -405,31 +403,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @NamiraNet | 68",
-            "type": "vless",
-            "server": "openai.com",
-            "server_port": 443,
-            "uuid": "101e6a7d-7d10-4859-a626-8a76daab4547",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "nkAnG2rEpLACE.airlineSHoma.Com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "nkAnG2rEpLACE.airlineSHoma.Com"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
@@ -775,7 +748,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
@@ -2089,7 +2062,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @proxycrone | 10",
+            "tag": "🇮🇷 IR | 🔴 | vless | @proxycrone | 9",
             "type": "vless",
             "server": "dash.imgdownload.sbs",
             "server_port": 4384,

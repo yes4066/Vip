@@ -96,7 +96,7 @@
                 "🇩🇪 DE | 🔴 | vless | @avaalvpn | 4",
                 "🇺🇸 US | 🟢 | vless | @azarbayjab1 | 39",
                 "🇺🇸 US | 🟢 | vless | @buffalo_vpn | 7",
-                "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
+                "🇫🇮 FI | 🔴 | vless | @club_profsor | 16",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇺🇸 US | 🔴 | vless | @customizev2ray | 27",
                 "🇮🇷 IR | 🔴 | vless | @customvpnserver | 22",
@@ -106,7 +106,6 @@
                 "🇸🇪 SE | 🔴 | vless | @deli_servers | 2",
                 "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 5",
                 "🇺🇸 US | 🟢 | vless | @drvpn_net | 1",
-                "🇺🇸 US | 🟢 | vless | @expressvpn_420 | 18",
                 "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
                 "🇺🇸 US | 🟢 | vless | @farahvpn | 19",
                 "🇮🇷 IR | 🔴 | vless | @fasst_vpn | 0",
@@ -153,7 +152,6 @@
                 "🇺🇸 US | 🟢 | vless | @mt_proxy | 7",
                 "🇩🇪 DE | 🔴 | vless | @narco_nett | 18",
                 "🇩🇪 DE | 🔴 | vless | @narcod_ping | 14",
-                "🇫🇮 FI | 🔴 | vless | @netmellianti | 15",
                 "🇺🇸 US | 🟢 | vless | @netspeedservice | 4",
                 "🇺🇸 US | 🟢 | vless | @new_proxy_channel | 8",
                 "🇺🇸 US | 🔴 | vless | @nitrovpne | 1",
@@ -224,7 +222,7 @@
                 "🇩🇪 DE | 🔴 | vless | @avaalvpn | 4",
                 "🇺🇸 US | 🟢 | vless | @azarbayjab1 | 39",
                 "🇺🇸 US | 🟢 | vless | @buffalo_vpn | 7",
-                "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
+                "🇫🇮 FI | 🔴 | vless | @club_profsor | 16",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇺🇸 US | 🔴 | vless | @customizev2ray | 27",
                 "🇮🇷 IR | 🔴 | vless | @customvpnserver | 22",
@@ -234,7 +232,6 @@
                 "🇸🇪 SE | 🔴 | vless | @deli_servers | 2",
                 "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 5",
                 "🇺🇸 US | 🟢 | vless | @drvpn_net | 1",
-                "🇺🇸 US | 🟢 | vless | @expressvpn_420 | 18",
                 "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
                 "🇺🇸 US | 🟢 | vless | @farahvpn | 19",
                 "🇮🇷 IR | 🔴 | vless | @fasst_vpn | 0",
@@ -281,7 +278,6 @@
                 "🇺🇸 US | 🟢 | vless | @mt_proxy | 7",
                 "🇩🇪 DE | 🔴 | vless | @narco_nett | 18",
                 "🇩🇪 DE | 🔴 | vless | @narcod_ping | 14",
-                "🇫🇮 FI | 🔴 | vless | @netmellianti | 15",
                 "🇺🇸 US | 🟢 | vless | @netspeedservice | 4",
                 "🇺🇸 US | 🟢 | vless | @new_proxy_channel | 8",
                 "🇺🇸 US | 🔴 | vless | @nitrovpne | 1",
@@ -458,30 +454,21 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
+            "tag": "🇫🇮 FI | 🔴 | vless | @club_profsor | 16",
             "type": "vless",
-            "server": "5.75.197.120",
-            "server_port": 2025,
-            "uuid": "54b4c039-7be6-448f-b704-820251b079db",
-            "flow": "xtls-rprx-vision",
+            "server": "65.109.201.108",
+            "server_port": 443,
+            "uuid": "b17ec18e-99af-40af-962b-0ad1b987d740",
+            "flow": "",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "www.cloudflare.com",
+                "server_name": "65.109.201.108",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "AUNIYov4R2TvNmC0cF0NiKWYGqzikosOu4g2wcCALlw",
-                    "short_id": "8d9c20be72b4"
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram : @PouRia_Cheat"
             }
         },
         {
@@ -645,31 +632,6 @@
                 "path": "/@vemessvpn-channel-telegram",
                 "headers": {
                     "Host": "cf-wkrs-pages-vless-aoy.pages.dev"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @expressvpn_420 | 18",
-            "type": "vless",
-            "server": "104.16.243.59",
-            "server_port": 443,
-            "uuid": "75fde681-ec64-4654-86fa-30732e8e179c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "NGINX.NSCl.IR",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/assets",
-                "headers": {
-                    "Host": "NGINX.NSCl.IR"
                 }
             }
         },
@@ -1437,24 +1399,6 @@
             "uuid": "@narcod_ping",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇫🇮 FI | 🔴 | vless | @netmellianti | 15",
-            "type": "vless",
-            "server": "65.109.201.108",
-            "server_port": 443,
-            "uuid": "b17ec18e-99af-40af-962b-0ad1b987d740",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "65.109.201.108",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🟢 | vless | @netspeedservice | 4",

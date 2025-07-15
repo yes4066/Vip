@@ -10,6 +10,7 @@
     },
     "NamiraNet": {
         "types": [
+            "ss",
             "trojan",
             "vless",
             "vmess"
@@ -687,9 +688,10 @@
     },
     "entrynet": {
         "types": [
+            "trojan",
             "vless",
             "ss",
-            "trojan"
+            "vmess"
         ],
         "title": ".::entryNET::. Free v2ray vpn &amp; proxy | وی پی ان و پروکسی رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/entrynet.jpg"
@@ -1269,9 +1271,9 @@
     "hope_net": {
         "types": [
             "vless",
+            "vmess",
             "ss",
-            "trojan",
-            "vmess"
+            "trojan"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -2419,9 +2421,8 @@
     },
     "proxy_mtproto_vpns_free": {
         "types": [
-            "vmess",
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxy_mtproto_vpns_free.jpg"
@@ -3110,8 +3111,8 @@
     },
     "v2ray_collector": {
         "types": [
-            "vless",
             "trojan",
+            "vless",
             "hysteria"
         ],
         "title": "V2rayCollector",
@@ -3253,8 +3254,8 @@
     },
     "v2raych": {
         "types": [
-            "ss",
             "trojan",
+            "ss",
             "vless"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
@@ -3283,9 +3284,8 @@
     },
     "v2rayfree": {
         "types": [
-            "vmess",
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayfree.jpg"
@@ -3580,7 +3580,8 @@
     },
     "v2rayweb": {
         "types": [
-            "vless"
+            "vless",
+            "trojan"
         ],
         "title": "V2ray | VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayweb.jpg"
