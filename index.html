@@ -246,7 +246,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-15 22:40:35 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-15 22:45:03 +0330</p>
         </footer>
     </div>
     
@@ -1981,7 +1981,7 @@
                 Object.entries(groupedNodes).sort((a,b) => a[0].localeCompare(b[0])).forEach(([groupName, groupNodes]) => {
                     const nodeCount = groupNodes.length;
                     const base64Content = btoa(groupNodes.map(n => n.uri).join('\n'));
-                    const dataUri = `data:text/plain;base64,${base64Content}`;
+                    const dataUri = `${base64Content}`;
                     
                     let displayName = groupName;
                     if (strategy === 'country' && groupName !== 'Unknown') {
