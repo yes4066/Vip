@@ -110,7 +110,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 13",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
             ],
@@ -141,7 +140,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 13",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
             ],
@@ -663,33 +661,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "chessgame"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 13",
-            "type": "vless",
-            "server": "88.198.200.124",
-            "server_port": 3050,
-            "uuid": "Telegram-TokaVpn-TokaVpn",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "acQCk6WdIC33WE2wIoljrxmzkBoPKIsUUlk1lKbtIEY",
-                    "short_id": "cd75474e165417fb"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "23145vless"
             }
         },
         {

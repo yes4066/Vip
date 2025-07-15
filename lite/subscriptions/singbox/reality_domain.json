@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇮🇳 IN | 🟢 | vless | @argo_vpn1 | 3",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @info_2it_channel | 13",
@@ -102,7 +101,6 @@
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
-                "🇫🇮 FI | 🟢 | vless | @v2rayng_fars | 17",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngvpn_1 | 6",
@@ -116,7 +114,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇮🇳 IN | 🟢 | vless | @argo_vpn1 | 3",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @info_2it_channel | 13",
@@ -129,7 +126,6 @@
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
-                "🇫🇮 FI | 🟢 | vless | @v2rayng_fars | 17",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngvpn_1 | 6",
@@ -145,29 +141,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇮🇳 IN | 🟢 | vless | @argo_vpn1 | 3",
-            "type": "vless",
-            "server": "india.aparat-movies-download.ir",
-            "server_port": 4450,
-            "uuid": "ec129df4-ddfd-4d54-be9a-5029d6052fa9",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zhaket.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "y6JSkggQ__RA_nmCJpX1_ddSQC6vzDUPaN7KyvjVuic",
-                    "short_id": ""
-                }
-            }
         },
         {
             "tag": "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -471,33 +444,6 @@
                     "public_key": "YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E",
                     "short_id": "ea1058117be12087"
                 }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @v2rayng_fars | 17",
-            "type": "vless",
-            "server": "toofan.zeroa.store",
-            "server_port": 8681,
-            "uuid": "b4f1d581-ece1-45c2-a990-f743c45bf8cd",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "LjaEpIQZyga0txhwf7JRHlqFOrImB4dEpkw3-AASWUI",
-                    "short_id": "be"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Tahmznilana"
             }
         },
         {

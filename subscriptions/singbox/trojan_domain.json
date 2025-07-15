@@ -89,8 +89,12 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 56",
+                "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 57",
+                "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 58",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇭🇰 HK | 🟢 | trojan | @connect_sho | 21",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
@@ -114,8 +118,12 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 56",
+                "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 57",
+                "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 58",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇭🇰 HK | 🟢 | trojan | @connect_sho | 21",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 17",
                 "🇺🇸 US | 🟢 | trojan | @deamnet_proxy | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
@@ -141,6 +149,54 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 56",
+            "type": "trojan",
+            "server": "jp.liangyuandian.top",
+            "server_port": 443,
+            "password": "cc55e294-b76f-425a-9301-c18afbecaa22",
+            "tls": {
+                "enabled": true,
+                "server_name": "jp.liangyuandian.top",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 57",
+            "type": "trojan",
+            "server": "sg.liangyuandian.top",
+            "server_port": 443,
+            "password": "b341f309-7e2b-45c4-a316-9e23037e3711",
+            "tls": {
+                "enabled": true,
+                "server_name": "sg.liangyuandian.top",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇸🇬 SG | 🟢 | trojan | @NamiraNet | 58",
+            "type": "trojan",
+            "server": "usa.liangyuandian.top",
+            "server_port": 443,
+            "password": "58dcd460-65df-47b1-b062-517df30bef29",
+            "tls": {
+                "enabled": true,
+                "server_name": "usa.liangyuandian.top",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @armodchannel | 59",
@@ -176,6 +232,22 @@
                 "path": "/trojan-ntls",
                 "headers": {
                     "Host": "asia.artunnel57.host"
+                }
+            }
+        },
+        {
+            "tag": "🇭🇰 HK | 🟢 | trojan | @connect_sho | 21",
+            "type": "trojan",
+            "server": "ni.mjt000.com",
+            "server_port": 443,
+            "password": "172b2279-f7f5-4542-ab6c-9e96ad7dd5be",
+            "tls": {
+                "enabled": true,
+                "server_name": "ni.mjt000.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },
