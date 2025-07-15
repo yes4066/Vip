@@ -1255,7 +1255,8 @@ function generate_full_html(
             splitterResultList.innerHTML = '';
 
             try {
-                const response = await fetch(url);
+                const proxiedUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+                const response = await fetch(proxiedUrl);
                 if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
                 
                 const content = await response.text();
