@@ -71,7 +71,6 @@
     },
     "argo_vpn1": {
         "types": [
-            "ss",
             "vless",
             "vmess"
         ],
@@ -701,8 +700,8 @@
     },
     "free1ss": {
         "types": [
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "🍊Aperto Shadowsocks Outline Vless VPN 🍊",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/free1ss.jpg"
@@ -726,8 +725,8 @@
     },
     "free_outline_keys": {
         "types": [
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "FREE Outline VPN keys",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/free_outline_keys.jpg"
@@ -973,7 +972,6 @@
     "hope_net": {
         "types": [
             "ss",
-            "vmess",
             "trojan",
             "vless"
         ],
@@ -1579,8 +1577,9 @@
     },
     "mowjproxy": {
         "types": [
+            "vless",
             "vmess",
-            "vless"
+            "ss"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1841,7 +1840,6 @@
     },
     "orange_vpns": {
         "types": [
-            "ss",
             "vless"
         ],
         "title": "V2ray سرور و کانفیگ رایگان",
@@ -1856,8 +1854,8 @@
     },
     "outline_ir": {
         "types": [
-            "vless",
             "trojan",
+            "vless",
             "ss"
         ],
         "title": "سرور اوتلاین ا سرور V2ray",
@@ -2395,10 +2393,10 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "trojan",
             "vless",
             "vmess",
-            "ss"
+            "ss",
+            "trojan"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
@@ -2866,9 +2864,10 @@
     },
     "vpn_ioss": {
         "types": [
-            "vmess",
             "vless",
-            "ss"
+            "vmess",
+            "ss",
+            "trojan"
         ],
         "title": "کانفیگ سرور V2rayng🔐",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vpn_ioss.jpg"
