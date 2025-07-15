@@ -1303,7 +1303,7 @@ function generate_full_html(
                 Object.entries(groupedNodes).sort((a,b) => a[0].localeCompare(b[0])).forEach(([groupName, groupNodes]) => {
                     const nodeCount = groupNodes.length;
                     const base64Content = btoa(groupNodes.map(n => n.uri).join('\n'));
-                    const dataUri = `data:text/plain;base64,${base64Content}`;
+                    const dataUri = `${base64Content}`;
                     
                     let displayName = groupName;
                     if (strategy === 'country' && groupName !== 'Unknown') {
