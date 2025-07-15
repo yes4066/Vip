@@ -916,146 +916,155 @@ function generate_full_html(
             button.textContent = isSelectAll ? 'Deselect All' : 'Select All';
         }
         
-        function parseProxyUri(uri) {
+        // ====================================================================
+        // NEW, ROBUST PARSING LOGIC (Directly converted from your PHP)
+        // ====================================================================
+
+        /**
+         * Parses a configuration link into an object, mirroring the PHP logic.
+         * @param {string} uri The configuration link.
+         * @returns {object|null} The parsed configuration or null on failure.
+         */
+        function configParse(uri) {
             try {
-                // --- Handle VMess ---
-                if (uri.startsWith('vmess://')) {
-                    const b64 = uri.substring(8);
-                    const decoded = JSON.parse(atob(b64));
-                    
-                    // --- AGGRESSIVE PATH SANITIZATION ---
-                    // This is the critical fix. If a path exists, we take ONLY the part before the first '?'
-                    // This correctly handles malformed paths like "/connect/?ed=1024/?JOKERRVPN" -> "/connect/"
-                    if (decoded.path) {
-                        decoded.path = decoded.path.split('?')[0];
+                const protocolMatch = uri.match(/^([a-z0-9]+):\/\//);
+                if (!protocolMatch) return null;
+                const protocol = protocolMatch[1];
+
+                switch (protocol) {
+                    case 'vmess': {
+                        const b64 = uri.substring(8);
+                        const decoded = JSON.parse(atob(b64));
+                        decoded.protocol = 'vmess';
+                        return decoded;
                     }
 
-                    const name = decoded.ps || `${decoded.add}:${decoded.port}`;
-                    const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
-                    return {
-                        uri: uri,
-                        protocol: 'vmess',
-                        name: name,
-                        country: countryMatch ? (countryMatch[1] || countryMatch[2])?.toUpperCase() : null,
-                        details: decoded
-                    };
+                    case 'vless':
+                    case 'trojan':
+                    case 'tuic':
+                    case 'hy2': {
+                        let url;
+                        try {
+                            url = new URL(uri);
+                        } catch (e) {
+                            console.warn("Skipping malformed URI:", uri, e.message);
+                            return null;
+                        }
+
+                        const params = {};
+                        url.searchParams.forEach((value, key) => {
+                            params[key.toLowerCase()] = value;
+                        });
+
+                        const output = {
+                            protocol: protocol,
+                            username: decodeURIComponent(url.username),
+                            hostname: url.hostname,
+                            port: parseInt(url.port, 10),
+                            params: params,
+                            hash: decodeURIComponent(url.hash.substring(1)) || `PSG_${Math.random().toString(36).substring(2, 8)}`,
+                        };
+
+                        if (protocol === 'tuic') {
+                            output.password = decodeURIComponent(url.password);
+                        }
+                        return output;
+                    }
+
+                    case 'ss': {
+                        let url;
+                        try {
+                           url = new URL(uri);
+                        } catch (e) {
+                            console.warn("Skipping malformed SS URI:", uri, e.message);
+                            return null;
+                        }
+
+                        let userInfo = decodeURIComponent(url.username);
+                        // Check if the user info part might be base64 encoded
+                        try {
+                            // A common pattern is base64(method:password)
+                            const decodedUserInfo = atob(userInfo);
+                            if (decodedUserInfo.includes(':')) {
+                                userInfo = decodedUserInfo;
+                            }
+                        } catch (e) {
+                            // Not valid base64, proceed as is
+                        }
+                        
+                        if (!userInfo.includes(':')) return null;
+
+                        const [method, password] = userInfo.split(':', 2);
+
+                        return {
+                            protocol: 'ss',
+                            encryption_method: method,
+                            password: password,
+                            hostname: url.hostname,
+                            port: parseInt(url.port, 10),
+                            hash: decodeURIComponent(url.hash.substring(1)) || `PSG_${Math.random().toString(36).substring(2, 8)}`,
+                        };
+                    }
+                    default:
+                        return null;
                 }
-
-                // --- Handle all other URI-based protocols ---
-                let url;
-                try {
-                    url = new URL(uri);
-                } catch (urlError) {
-                    console.warn("Skipping malformed URI:", uri, urlError.message);
-                    return null;
-                }
-
-                const protocol = url.protocol.slice(0, -1);
-                const name = decodeURIComponent(url.hash.substring(1)) || `${url.hostname}:${url.port}`;
-                const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
-
-                const details = {
-                    server: url.hostname,
-                    server_port: parseInt(url.port, 10),
-                    uuid: url.username,
-                    password: url.username, 
-                };
-                
-                url.searchParams.forEach((value, key) => { details[key.toLowerCase()] = value; });
-                
-                const isReality = details.security === 'reality';
-
-                return {
-                    uri: uri,
-                    protocol: isReality ? 'reality' : protocol,
-                    name: name,
-                    country: countryMatch ? (countryMatch[1] || countryMatch[2])?.toUpperCase() : null,
-                    details: details
-                };
-
             } catch (e) {
-                console.warn("Could not parse URI due to an unexpected error:", uri, e);
+                console.error("Fatal error parsing config:", uri, e);
                 return null;
             }
         }
 
-        function generateBase64Output(nodes) {
-            // This function remains the same as it doesn't use a template.
-            return btoa(nodes.map(n => n.uri).join('\n'));
-        }
-
         async function generateClashOutput(nodes) {
-            // 1. Fetch your custom template
             const templateURL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/templates/clash.yaml';
             const response = await fetch(templateURL);
             if (!response.ok) throw new Error('Could not fetch Clash template.');
             let templateContent = await response.text();
             
-            // 2. Format the proxies into YAML format
             const proxyDetails = nodes.map(node => {
-                const p = { name: node.name, ...node.details };
+                const p = node.parsed;
                 let clashNode = null;
-                switch(node.protocol) {
-                    case 'vmess': clashNode = { type: 'vmess', name: p.name, server: p.add, port: parseInt(p.port), uuid: p.id, alterId: parseInt(p.aid) || 0, cipher: 'auto', udp: true, network: p.net, 'ws-opts': p.net === 'ws' ? { path: p.path, headers: { Host: p.host } } : undefined }; break;
-                    case 'vless':
-                    case 'reality':
-                        clashNode = { type: 'vless', name: p.name, server: p.server, port: p.server_port, uuid: p.uuid, udp: true, network: p.type, tls: p.security === 'tls' || p.security === 'reality', 'client-fingerprint': 'chrome', 'ws-opts': p.type === 'ws' ? { path: p.path } : undefined, 'reality-opts': p.security === 'reality' ? { 'public-key': p.pbk, 'short-id': p.sid } : undefined, 'servername': p.sni }; break;
-                    case 'trojan': clashNode = { type: 'trojan', name: p.name, server: p.server, port: p.server_port, password: p.password, udp: true, sni: p.sni }; break;
+                switch(p.protocol) {
+                    case 'vmess': clashNode = { type: 'vmess', name: p.ps, server: p.add, port: parseInt(p.port), uuid: p.id, alterId: parseInt(p.aid) || 0, cipher: 'auto', udp: true, network: p.net, 'ws-opts': p.net === 'ws' ? { path: p.path.split('?')[0], headers: { Host: p.host } } : undefined }; break;
+                    case 'vless': clashNode = { type: 'vless', name: p.hash, server: p.hostname, port: p.port, uuid: p.username, udp: true, network: p.params.type, tls: p.params.security === 'tls' || p.params.security === 'reality', 'client-fingerprint': 'chrome', 'ws-opts': p.params.type === 'ws' ? { path: p.params.path } : undefined, 'reality-opts': p.params.security === 'reality' ? { 'public-key': p.params.pbk, 'short-id': p.params.sid } : undefined, 'servername': p.params.sni }; break;
+                    case 'trojan': clashNode = { type: 'trojan', name: p.hash, server: p.hostname, port: p.port, password: p.username, udp: true, sni: p.params.sni }; break;
+                    case 'ss': clashNode = { type: 'ss', name: p.hash, server: p.hostname, port: p.port, cipher: p.encryption_method, password: p.password, udp: true }; break;
                 }
                 return clashNode;
             }).filter(Boolean);
 
-            const proxiesYAML = jsyaml.dump(proxyDetails, { indent: 2, noArrayIndent: true });
-            
-            // 3. Get the list of proxy names for the proxy-group
+            const proxiesYAML = jsyaml.dump(proxyDetails, { indent: 2, noArrayIndent: true }).trim();
             const proxyNamesYAML = proxyDetails.map(p => `      - ${p.name}`).join('\n');
-
-            // 4. Replace the placeholders in the template
             templateContent = templateContent.replace('##PROXIES##', proxiesYAML);
             templateContent = templateContent.replace('##PROXY_NAMES##', proxyNamesYAML);
-
             return templateContent;
         }
         
         async function generateSingboxOutput(nodes) {
-            // 1. Fetch your custom template
             const templateURL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/templates/structure.json';
             const response = await fetch(templateURL);
             if (!response.ok) throw new Error('Could not fetch Sing-box template.');
-            let templateString = await response.text();
-
-            // 2. Remove comments from the JSONC string before parsing
-            // This regex handles both single-line (//) and multi-line (/* */) comments
+            const templateString = await response.text();
             const jsonString = templateString.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m);
-
             const templateJson = JSON.parse(jsonString);
 
-            // 3. Format the nodes into Sing-box outbound format
             const outbounds = nodes.map(node => {
-                const p = node.details;
-                const base = { tag: node.name };
+                const p = node.parsed;
                 let singboxNode = null;
-                switch (node.protocol) {
-                    case 'vmess': singboxNode = { ...base, type: 'vmess', server: p.add, server_port: parseInt(p.port), uuid: p.id, alter_id: parseInt(p.aid), security: 'auto', transport: p.net ? { type: p.net, path: p.path, headers: { Host: p.host } } : undefined }; break;
-                    case 'vless':
-                    case 'reality':
-                        const transport = p.type ? { type: p.type, path: p.path } : undefined;
-                        const tls = (p.security === 'tls' || p.security === 'reality') ? { enabled: true, server_name: p.sni, reality: p.security === 'reality' ? { enabled: true, public_key: p.pbk, short_id: p.sid } : undefined } : undefined;
-                        singboxNode = { ...base, type: 'vless', server: p.server, server_port: p.server_port, uuid: p.uuid, transport, tls }; break;
-                    case 'trojan': singboxNode = { ...base, type: 'trojan', server: p.server, server_port: p.server_port, password: p.password }; break;
+                switch (p.protocol) {
+                    case 'vmess': singboxNode = { tag: p.ps, type: 'vmess', server: p.add, server_port: parseInt(p.port), uuid: p.id, alter_id: parseInt(p.aid), security: 'auto', transport: p.net ? { type: p.net, path: p.path.split('?')[0], headers: { Host: p.host } } : undefined }; break;
+                    case 'vless': 
+                        const transport = p.params.type ? { type: p.params.type, path: p.params.path } : undefined;
+                        const tls = (p.params.security === 'tls' || p.params.security === 'reality') ? { enabled: true, server_name: p.params.sni, reality: p.params.security === 'reality' ? { enabled: true, public_key: p.params.pbk, short_id: p.params.sid } : undefined } : undefined;
+                        singboxNode = { tag: p.hash, type: 'vless', server: p.hostname, server_port: p.port, uuid: p.username, transport, tls }; break;
+                    case 'trojan': singboxNode = { tag: p.hash, type: 'trojan', server: p.hostname, server_port: p.port, password: p.username }; break;
+                    case 'ss': singboxNode = { tag: p.hash, type: 'shadowsocks', server: p.hostname, server_port: p.port, method: p.encryption_method, password: p.password }; break;
                 }
                 return singboxNode;
             }).filter(Boolean);
 
-            // 4. Find the 'auto' url-test group and add the proxy names to it
             const urlTestGroup = templateJson.outbounds.find(o => o.tag === 'auto');
-            if (urlTestGroup) {
-                urlTestGroup.outbounds = outbounds.map(o => o.tag);
-            }
-            
-            // 5. Insert the generated outbounds at the beginning of the existing outbounds array
+            if (urlTestGroup) { urlTestGroup.outbounds = outbounds.map(o => o.tag); }
             templateJson.outbounds.unshift(...outbounds);
-
             return JSON.stringify(templateJson, null, 2);
         }
 
@@ -1081,8 +1090,20 @@ function generate_full_html(
                     try {
                         const decoded = atob(await response.value.text());
                         const uris = decoded.split(/[\n\r]+/).filter(Boolean);
-                        uris.forEach(uri => { const parsedNode = parseProxyUri(uri); if (parsedNode) allNodes.push(parsedNode); });
-                    } catch (e) { console.warn(`Failed to parse source:`, e); }
+                        uris.forEach(uri => {
+                            const parsed = configParse(uri);
+                            if (parsed) {
+                                const name = parsed.ps || parsed.hash;
+                                const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
+                                allNodes.push({
+                                    parsed: parsed,
+                                    protocol: parsed.protocol,
+                                    name: name,
+                                    country: countryMatch ? (countryMatch[1] || countryMatch[2])?.toUpperCase() : null,
+                                });
+                            }
+                        });
+                    } catch (e) { console.warn(`Failed to process source:`, e); }
                 }
             }
             
@@ -1103,9 +1124,16 @@ function generate_full_html(
 
             const targetClient = document.getElementById('composerTargetClient').value;
             let outputContent = '', fileExtension = 'txt';
-            if (targetClient === 'clash') { outputContent = generateClashOutput(finalNodes); fileExtension = 'yaml'; }
-            else if (targetClient === 'singbox') { outputContent = generateSingboxOutput(finalNodes); fileExtension = 'json'; }
-            else { outputContent = generateBase64Output(finalNodes); }
+
+            try {
+                if (targetClient === 'clash') { outputContent = await generateClashOutput(finalNodes); fileExtension = 'yaml'; }
+                else if (targetClient === 'singbox') { outputContent = await generateSingboxOutput(finalNodes); fileExtension = 'json'; }
+                else { outputContent = generateBase64Output(finalNodes.map(n => n.parsed)); } // Base64 still needs raw URIs, let's re-evaluate this if needed
+            } catch (e) {
+                showMessageBox(`Error generating config: ${e.message}`);
+                console.error(e);
+                button.disabled = false; buttonText.textContent = 'Generate Composed Subscription'; return;
+            }
             
             composedResultText.value = outputContent;
             composedResultText.setAttribute('data-filename', `PSG-composed-config.${fileExtension}`);
