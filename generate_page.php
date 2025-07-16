@@ -398,6 +398,7 @@ function generate_full_html(
                     <button id="simpleModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md -mb-px border mode-button-active">Simple Mode</button>
                     <button id="composerModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">✨ Subscription Composer</button>
                     <button id="splitterModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">✂️ Subscription Splitter</button>
+                    <button id="compilerModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">🔄 Cross-Compiler</button>
                 </div>
 
                 <!-- Container for "Simple Mode" -->
@@ -533,6 +534,59 @@ function generate_full_html(
                         <div id="splitterResultList" class="space-y-3 max-w-2xl mx-auto">
                             <!-- Results will be injected here -->
                         </div>
+                    </div>
+                </div>
+
+                <!-- Container for "Proxy Cross-Compiler Mode" -->
+                <div id="compilerModeContainer" class="hidden">
+                    <div class="space-y-6">
+                        <p class="text-center text-slate-600">Convert any subscription or configuration file from one format to another.</p>
+
+                        <!-- Input Section -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="compilerInputFormat" class="block text-sm font-medium text-slate-700 mb-2">Input Format:</label>
+                                <select id="compilerInputFormat" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800">
+                                    <option value="base64" selected>Base64 URI List (Sub Link)</option>
+                                    <option value="clash">Clash Profile (YAML)</option>
+                                    <option value="singbox">Sing-box Profile (JSON)</option>
+                                </select>
+                            </div>
+                             <div>
+                                <label for="compilerOutputFormat" class="block text-sm font-medium text-slate-700 mb-2">Output Format:</label>
+                                <select id="compilerOutputFormat" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800">
+                                    <option value="clash" selected>Clash Profile (YAML)</option>
+                                    <option value="singbox">Sing-box Profile (JSON)</option>
+                                    <option value="base64">Base64 URI List</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="compilerInputText" class="block text-sm font-medium text-slate-700 mb-2">Input URL or Raw Text:</label>
+                            <textarea id="compilerInputText" rows="6" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800 placeholder-slate-400 font-mono" placeholder="Paste subscription URL or raw config text here..."></textarea>
+                        </div>
+                        
+                        <!-- Action Button -->
+                        <button id="convertButton" class="w-full flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-3 rounded-md hover:bg-blue-700 transition-colors duration-200 disabled:bg-blue-300">
+                            <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                            <span id="convertButtonText" class="font-semibold">Convert</span>
+                        </button>
+                    </div>
+
+                    <!-- Compiler Result Area -->
+                    <div id="compilerResultArea" class="hidden mt-8 pt-6 border-t border-slate-200">
+                        <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Conversion Complete:</h3>
+                        <p id="compilerResultTitle" class="text-sm text-slate-500 mb-4"></p>
+                        <textarea id="compilerResultText" readonly class="w-full h-64 font-mono text-xs bg-white border border-slate-300 rounded-lg p-3 outline-none resize-vertical"></textarea>
+                        <div class="flex items-center gap-2 mt-2">
+                           <button id="copyConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">
+                               <i data-lucide="copy"></i> Copy
+                           </button>
+                           <button id="downloadConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-700 transition-colors duration-200">
+                               <i data-lucide="download"></i> Download
+                           </button>
+                       </div>
                     </div>
                 </div>
 
@@ -1495,6 +1549,158 @@ function generate_full_html(
         configTypeSelect.disabled = false;
         populateComposerSources();
         lucide.createIcons();
+
+        // ====================================================================
+        // PROXY CROSS-COMPILER LOGIC
+        // ====================================================================
+
+        // --- DOM REFERENCES for Compiler ---
+        const compilerModeButton = document.getElementById('compilerModeButton');
+        const compilerModeContainer = document.getElementById('compilerModeContainer');
+        const compilerInputFormat = document.getElementById('compilerInputFormat');
+        const compilerOutputFormat = document.getElementById('compilerOutputFormat');
+        const compilerInputText = document.getElementById('compilerInputText');
+        const convertButton = document.getElementById('convertButton');
+        const compilerResultArea = document.getElementById('compilerResultArea');
+        const compilerResultTitle = document.getElementById('compilerResultTitle');
+        const compilerResultText = document.getElementById('compilerResultText');
+        const copyConvertedButton = document.getElementById('copyConvertedButton');
+        const downloadConvertedButton = document.getElementById('downloadConvertedButton');
+
+        // --- Event Listeners for Compiler ---
+        compilerModeButton.addEventListener('click', () => {
+            simpleModeContainer.classList.add('hidden');
+            composerModeContainer.classList.add('hidden');
+            splitterModeContainer.classList.add('hidden');
+            compilerModeContainer.classList.remove('hidden');
+
+            resultArea.classList.add('hidden');
+            composerResultArea.classList.add('hidden');
+            splitterResultArea.classList.add('hidden');
+            compilerResultArea.classList.add('hidden');
+
+            simpleModeButton.classList.replace('mode-button-active', 'mode-button-inactive');
+            composerModeButton.classList.replace('mode-button-active', 'mode-button-inactive');
+            splitterModeButton.classList.replace('mode-button-active', 'mode-button-inactive');
+            compilerModeButton.classList.replace('mode-button-inactive', 'mode-button-active');
+        });
+
+        convertButton.addEventListener('click', async () => {
+            const buttonText = document.getElementById('convertButtonText');
+            let inputText = compilerInputText.value.trim();
+
+            if (!inputText) {
+                showMessageBox('Please paste a URL or raw config text.');
+                return;
+            }
+
+            convertButton.disabled = true;
+            buttonText.textContent = 'Working...';
+            compilerResultArea.classList.add('hidden');
+
+            try {
+                // Step 1: Get the raw config content
+                let rawContent = '';
+                const isUrl = inputText.startsWith('http://') || inputText.startsWith('https://');
+                
+                if (isUrl) {
+                    buttonText.textContent = 'Fetching URL...';
+                    const response = await fetchWithCorsFallback(inputText);
+                    if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
+                    rawContent = await response.text();
+                } else {
+                    rawContent = inputText;
+                }
+
+                // Step 2: Parse the input content into a universal node list
+                buttonText.textContent = 'Parsing...';
+                const inputFormat = compilerInputFormat.value;
+                let universalNodes = [];
+
+                if (inputFormat === 'base64') {
+                    const decoded = atob(rawContent);
+                    const uris = decoded.split(/[\n\r]+/).filter(Boolean);
+                    uris.forEach(uri => {
+                        const parsed = configParse(uri);
+                        if(parsed) universalNodes.push({ uri, parsed });
+                    });
+                } else if (inputFormat === 'clash') {
+                    const parsedYaml = jsyaml.load(rawContent);
+                    if (!parsedYaml.proxies || !Array.isArray(parsedYaml.proxies)) throw new Error('Invalid Clash file: "proxies" array not found.');
+                    // We need to reverse-engineer the URIs. This is an approximation.
+                    parsedYaml.proxies.forEach(p => {
+                        // This is a simplified reconstruction; it may not capture all details perfectly
+                        // but is good enough for cross-compilation.
+                        let uri = `${p.type}://${p.uuid || p.password}@${p.server}:${p.port}#${encodeURIComponent(p.name)}`;
+                        const parsed = configParse(uri); // Re-parse to standardize
+                        if(parsed) universalNodes.push({ uri, parsed });
+                    });
+                } else if (inputFormat === 'singbox') {
+                    const jsonString = rawContent.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m);
+                    const parsedJson = JSON.parse(jsonString);
+                    if (!parsedJson.outbounds || !Array.isArray(parsedJson.outbounds)) throw new Error('Invalid Sing-box file: "outbounds" array not found.');
+                    const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
+                    parsedJson.outbounds
+                        .filter(o => o.type && !utilityTypes.includes(o.type))
+                        .forEach(o => {
+                            let uri = `${o.type}://${o.uuid || o.password}@${o.server}:${o.server_port}#${encodeURIComponent(o.tag)}`;
+                             const parsed = configParse(uri);
+                             if(parsed) universalNodes.push({ uri, parsed });
+                        });
+                }
+
+                if (universalNodes.length === 0) throw new Error("No compatible proxy nodes could be extracted from the input.");
+
+                // Step 3: Generate the output in the desired format
+                buttonText.textContent = 'Compiling...';
+                const outputFormat = compilerOutputFormat.value;
+                let outputContent = '';
+                let fileExtension = 'txt';
+                
+                if (outputFormat === 'base64') {
+                    outputContent = generateBase64Output(universalNodes);
+                } else if (outputFormat === 'clash') {
+                    outputContent = await generateClashOutput(universalNodes);
+                    fileExtension = 'yaml';
+                } else if (outputFormat === 'singbox') {
+                    outputContent = await generateSingboxOutput(universalNodes);
+                    fileExtension = 'json';
+                }
+                
+                // Step 4: Display results
+                compilerResultTitle.textContent = `Successfully converted ${universalNodes.length} nodes from ${inputFormat.toUpperCase()} to ${outputFormat.toUpperCase()}.`;
+                compilerResultText.value = outputContent;
+                downloadConvertedButton.setAttribute('data-filename', `PSG-converted-config.${fileExtension}`);
+                compilerResultArea.classList.remove('hidden');
+
+            } catch (error) {
+                showMessageBox(`Conversion Failed: ${error.message}`);
+                console.error(error);
+            } finally {
+                convertButton.disabled = false;
+                buttonText.textContent = 'Convert';
+            }
+        });
+
+        copyConvertedButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(compilerResultText.value).then(() => showMessageBox('Copied to clipboard!'));
+        });
+        downloadConvertedButton.addEventListener('click', (e) => {
+            const blob = new Blob([compilerResultText.value], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = e.currentTarget.getAttribute('data-filename') || 'psg-converted.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        // Hide compiler when other modes are selected
+        simpleModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
+        composerModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
+        splitterModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
     });
     </script>
 </body>
