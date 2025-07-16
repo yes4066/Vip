@@ -52,6 +52,7 @@
                     <button id="simpleModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md -mb-px border mode-button-active">Simple Mode</button>
                     <button id="composerModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">✨ Subscription Composer</button>
                     <button id="splitterModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">✂️ Subscription Splitter</button>
+                    <button id="compilerModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">🔄 Cross-Compiler</button>
                 </div>
 
                 <!-- Container for "Simple Mode" -->
@@ -127,10 +128,6 @@
                                 <i data-lucide="git-merge" class="w-5 h-5"></i>
                                 <span id="generateCompositionButtonText" class="font-semibold">Generate Composed Subscription</span>
                             </button>
-                            <button id="testComposerLatencyButton" class="hidden w-full mt-2 flex items-center justify-center gap-2 bg-sky-500 text-white px-4 py-2 rounded-md hover:bg-sky-600 transition-colors duration-200">
-                                <i data-lucide="zap" class="w-5 h-5"></i>
-                                <span class="font-semibold">Test Latency</span>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -183,10 +180,6 @@
                             <i data-lucide="scissors" class="w-5 h-5"></i>
                             <span id="splitButtonText" class="font-semibold">Split Subscription</span>
                         </button>
-                        <button id="testSplitterLatencyButton" class="hidden w-full mt-2 flex items-center justify-center gap-2 bg-sky-500 text-white px-4 py-2 rounded-md hover:bg-sky-600 transition-colors duration-200">
-                            <i data-lucide="zap" class="w-5 h-5"></i>
-                            <span class="font-semibold">Test Latency of All Split Groups</span>
-                        </button>
                     </div>
 
                     <!-- Splitter Result Area -->
@@ -195,6 +188,59 @@
                         <div id="splitterResultList" class="space-y-3 max-w-2xl mx-auto">
                             <!-- Results will be injected here -->
                         </div>
+                    </div>
+                </div>
+
+                <!-- Container for "Proxy Cross-Compiler Mode" -->
+                <div id="compilerModeContainer" class="hidden">
+                    <div class="space-y-6">
+                        <p class="text-center text-slate-600">Convert any subscription or configuration file from one format to another.</p>
+
+                        <!-- Input Section -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="compilerInputFormat" class="block text-sm font-medium text-slate-700 mb-2">Input Format:</label>
+                                <select id="compilerInputFormat" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800">
+                                    <option value="base64" selected>Base64 URI List (Sub Link)</option>
+                                    <option value="clash">Clash Profile (YAML)</option>
+                                    <option value="singbox">Sing-box Profile (JSON)</option>
+                                </select>
+                            </div>
+                             <div>
+                                <label for="compilerOutputFormat" class="block text-sm font-medium text-slate-700 mb-2">Output Format:</label>
+                                <select id="compilerOutputFormat" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800">
+                                    <option value="clash" selected>Clash Profile (YAML)</option>
+                                    <option value="singbox">Sing-box Profile (JSON)</option>
+                                    <option value="base64">Base64 URI List</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="compilerInputText" class="block text-sm font-medium text-slate-700 mb-2">Input URL or Raw Text:</label>
+                            <textarea id="compilerInputText" rows="6" class="block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2.5 bg-slate-100 text-slate-800 placeholder-slate-400 font-mono" placeholder="Paste subscription URL or raw config text here..."></textarea>
+                        </div>
+                        
+                        <!-- Action Button -->
+                        <button id="convertButton" class="w-full flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-3 rounded-md hover:bg-blue-700 transition-colors duration-200 disabled:bg-blue-300">
+                            <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                            <span id="convertButtonText" class="font-semibold">Convert</span>
+                        </button>
+                    </div>
+
+                    <!-- Compiler Result Area -->
+                    <div id="compilerResultArea" class="hidden mt-8 pt-6 border-t border-slate-200">
+                        <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Conversion Complete:</h3>
+                        <p id="compilerResultTitle" class="text-sm text-slate-500 mb-4"></p>
+                        <textarea id="compilerResultText" readonly class="w-full h-64 font-mono text-xs bg-white border border-slate-300 rounded-lg p-3 outline-none resize-vertical"></textarea>
+                        <div class="flex items-center gap-2 mt-2">
+                           <button id="copyConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">
+                               <i data-lucide="copy"></i> Copy
+                           </button>
+                           <button id="downloadConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-700 transition-colors duration-200">
+                               <i data-lucide="download"></i> Download
+                           </button>
+                       </div>
                     </div>
                 </div>
 
@@ -254,7 +300,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 22:25:03 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 22:35:56 +0330</p>
         </footer>
     </div>
     
@@ -1891,7 +1937,9 @@
                 button.disabled = false; buttonText.textContent = 'Generate Composed Subscription'; return;
             }
             
-            showComposerResults(finalNodes, outputContent, fileExtension);
+            composedResultText.value = outputContent;
+            composedResultText.setAttribute('data-filename', `PSG-composed-config.${fileExtension}`);
+            composerResultArea.classList.remove('hidden');
             button.disabled = false; buttonText.textContent = 'Generate Composed Subscription';
         }
 
@@ -2019,9 +2067,10 @@
                             </div>
                         </div>
                     `;
+                    splitterResultList.appendChild(resultItem);
                 });
 
-                showSplitterResults(groupedNodes);
+                splitterResultArea.classList.remove('hidden');
 
             } catch (error) {
                 showMessageBox(`Splitting Failed: ${error.message}`);
@@ -2158,198 +2207,156 @@
         lucide.createIcons();
 
         // ====================================================================
-        // REAL-TIME WEBSOCKET LATENCY TESTER LOGIC
+        // PROXY CROSS-COMPILER LOGIC
         // ====================================================================
 
-        // --- DOM REFERENCES for Latency Tester ---
-        const testComposerLatencyButton = document.getElementById('testComposerLatencyButton');
-        const testSplitterLatencyButton = document.getElementById('testSplitterLatencyButton');
+        // --- DOM REFERENCES for Compiler ---
+        const compilerModeButton = document.getElementById('compilerModeButton');
+        const compilerModeContainer = document.getElementById('compilerModeContainer');
+        const compilerInputFormat = document.getElementById('compilerInputFormat');
+        const compilerOutputFormat = document.getElementById('compilerOutputFormat');
+        const compilerInputText = document.getElementById('compilerInputText');
+        const convertButton = document.getElementById('convertButton');
+        const compilerResultArea = document.getElementById('compilerResultArea');
+        const compilerResultTitle = document.getElementById('compilerResultTitle');
+        const compilerResultText = document.getElementById('compilerResultText');
+        const copyConvertedButton = document.getElementById('copyConvertedButton');
+        const downloadConvertedButton = document.getElementById('downloadConvertedButton');
 
-        // This will store the generated nodes to be tested later
-        let nodesToTestInComposer = [];
-        let nodesToTestInSplitter = {}; // Use an object for splitter groups
+        // --- Event Listeners for Compiler ---
+        compilerModeButton.addEventListener('click', () => {
+            simpleModeContainer.classList.add('hidden');
+            composerModeContainer.classList.add('hidden');
+            splitterModeContainer.classList.add('hidden');
+            compilerModeContainer.classList.remove('hidden');
 
-        /**
-         * The core function to test latency of a single WebSocket proxy.
-         * @param {object} node - A parsed node object.
-         * @returns {Promise<string|number>} - Resolves with latency in ms or a status string.
-         */
-        function testWebSocketLatency(node) {
-            const p = node.parsed;
-            // We only test nodes that use WebSocket
-            const isVmessWs = p.protocol === 'vmess' && p.net === 'ws';
-            const isVlessWs = p.protocol === 'vless' && p.params?.type === 'ws';
+            resultArea.classList.add('hidden');
+            composerResultArea.classList.add('hidden');
+            splitterResultArea.classList.add('hidden');
+            compilerResultArea.classList.add('hidden');
 
-            if (!isVmessWs && !isVlessWs) {
-                return Promise.resolve('N/A');
-            }
-        
-            const serverAddress = p.add || p.hostname;
-            const port = p.port;
-            const path = (p.path || p.params?.path || '/').split('?')[0]; // Sanitize path
-            const isTls = p.tls === 'tls' || p.params?.security === 'tls';
-            const protocol = isTls ? 'wss://' : 'ws://';
-        
-            const wsUrl = `${protocol}${serverAddress}:${port}${path}`;
-            
-            return new Promise(resolve => {
-                const startTime = performance.now();
-                const timeout = setTimeout(() => {
-                    if (socket.readyState !== WebSocket.OPEN) {
-                       socket.close();
-                       resolve('Timeout');
-                    }
-                }, 3000); // 3-second timeout
-        
-                let socket;
-                try {
-                    socket = new WebSocket(wsUrl);
-                } catch (e) {
-                    clearTimeout(timeout);
-                    resolve('Invalid');
-                    return;
-                }
-        
-                socket.onopen = () => {
-                    const endTime = performance.now();
-                    clearTimeout(timeout);
-                    socket.close();
-                    resolve(Math.round(endTime - startTime)); // Latency in ms
-                };
-        
-                socket.onerror = (err) => {
-                    clearTimeout(timeout);
-                    resolve('Failed');
-                };
-            });
-        }
-        
-        // --- Logic for Composer Latency Test ---
-
-        // Modify the composer's result display to store nodes and add a placeholder for latency
-        function showComposerResults(finalNodes, outputContent, fileExtension) {
-            composedResultText.value = outputContent;
-            composedResultText.setAttribute('data-filename', `PSG-composed-config.${fileExtension}`);
-            composerResultArea.classList.remove('hidden');
-            
-            // Show the latency test button if there are nodes
-            if (finalNodes.length > 0) {
-                testComposerLatencyButton.classList.remove('hidden');
-                nodesToTestInComposer = finalNodes; // Store nodes for testing
-            } else {
-                testComposerLatencyButton.classList.add('hidden');
-            }
-        }
-        
-        testComposerLatencyButton.addEventListener('click', async (e) => {
-            const button = e.currentTarget;
-            button.disabled = true;
-            button.querySelector('span').textContent = 'Testing...';
-
-            // To display results, we'll append them to the textarea
-            composedResultText.value += '\n\n--- LATENCY TEST RESULTS ---\n';
-            
-            for (const node of nodesToTestInComposer) {
-                const latency = await testWebSocketLatency(node);
-                const nodeName = node.name || 'Unnamed';
-                let resultText = 'N/A';
-                
-                if (typeof latency === 'number') {
-                    resultText = `${latency} ms`;
-                } else if (latency !== 'N/A') {
-                    resultText = latency; // e.g., "Failed", "Timeout"
-                }
-                
-                if (resultText !== 'N/A') {
-                   composedResultText.value += `${nodeName}: ${resultText}\n`;
-                   // Scroll to the bottom to show progress
-                   composedResultText.scrollTop = composedResultText.scrollHeight;
-                }
-            }
-
-            composedResultText.value += '--- TEST COMPLETE ---';
-            composedResultText.scrollTop = composedResultText.scrollHeight;
-            button.disabled = false;
-            button.querySelector('span').textContent = 'Test Latency';
+            simpleModeButton.classList.replace('mode-button-active', 'mode-button-inactive');
+            composerModeButton.classList.replace('mode-button-active', 'mode-button-inactive');
+            splitterModeButton.classList.replace('mode-button-active', 'mode-button-inactive');
+            compilerModeButton.classList.replace('mode-button-inactive', 'mode-button-active');
         });
 
+        convertButton.addEventListener('click', async () => {
+            const buttonText = document.getElementById('convertButtonText');
+            let inputText = compilerInputText.value.trim();
 
-        // --- Logic for Splitter Latency Test ---
-
-        // Modify the splitter's result display to store nodes and add a placeholder for latency
-        function showSplitterResults(groupedNodes) {
-             splitterResultList.innerHTML = '';
-             nodesToTestInSplitter = groupedNodes; // Store the grouped nodes
-
-             Object.entries(groupedNodes).sort((a,b) => a[0].localeCompare(b[0])).forEach(([groupName, groupNodes]) => {
-                const nodeCount = groupNodes.length;
-                const base64Content = btoa(groupNodes.map(n => n.uri).join('\n'));
-                const dataUri = `data:text/plain;base64,${base64Content}`;
-                let displayName = groupName;
-                if (document.querySelector('input[name="split_strategy"]:checked').value === 'country' && groupName !== 'Unknown') {
-                    displayName = `${getFlagEmoji(groupName)} ${getCountryName(groupName)}`;
-                } else if (document.querySelector('input[name="split_strategy"]:checked').value === 'protocol') {
-                    displayName = formatDisplayName(groupName);
-                }
-
-                const resultItem = document.createElement('div');
-                resultItem.className = 'bg-white border rounded-lg p-3';
-                resultItem.innerHTML = `
-                    <div class="flex items-center justify-between">
-                        <div class="font-semibold text-slate-800">${displayName} <span class="text-sm text-slate-500 font-normal">(${nodeCount} nodes)</span></div>
-                        <div class="flex items-center gap-2">
-                            <button class="splitter-copy-btn p-2 rounded-md bg-indigo-50 text-indigo-700 hover:bg-indigo-100" title="Copy Data URI" data-uri="${dataUri}">
-                                <i data-lucide="copy" class="h-5 w-5"></i>
-                            </button>
-                            <div class="splitter-qr-btn p-2 rounded-md bg-slate-100 hover:bg-slate-200" title="Show QR Code">
-                                <i data-lucide="qr-code" class="h-5 w-5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="latency-results-container text-xs text-slate-500 mt-2 pl-1" data-group-name="${groupName}"></div>
-                `;
-                splitterResultList.appendChild(resultItem);
-            });
-            splitterResultArea.classList.remove('hidden');
-            testSplitterLatencyButton.classList.remove('hidden');
-        }
-
-        testSplitterLatencyButton.addEventListener('click', async (e) => {
-            const button = e.currentTarget;
-            button.disabled = true;
-            button.querySelector('span').textContent = 'Testing... (This may take a while)';
-
-            for (const groupName in nodesToTestInSplitter) {
-                const groupNodes = nodesToTestInSplitter[groupName];
-                const resultsContainer = document.querySelector(`.latency-results-container[data-group-name="${groupName}"]`);
-                if (resultsContainer) {
-                    resultsContainer.innerHTML = 'Testing...';
-                    let resultsHTML = '<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-1 mt-1">';
-                    let testedCount = 0;
-                    
-                    for (const node of groupNodes) {
-                        const latency = await testWebSocketLatency(node);
-                        if (typeof latency === 'number') {
-                            testedCount++;
-                            resultsHTML += `<div>${node.name.substring(0, 20)}...: <span class="font-semibold text-green-600">${latency}ms</span></div>`;
-                        } else if (latency !== 'N/A') {
-                             testedCount++;
-                             resultsHTML += `<div>${node.name.substring(0, 20)}...: <span class="font-semibold text-red-500">${latency}</span></div>`;
-                        }
-                    }
-                    resultsHTML += '</div>';
-                    
-                    if (testedCount > 0) {
-                        resultsContainer.innerHTML = resultsHTML;
-                    } else {
-                        resultsContainer.innerHTML = 'No compatible (WebSocket) nodes to test in this group.';
-                    }
-                }
+            if (!inputText) {
+                showMessageBox('Please paste a URL or raw config text.');
+                return;
             }
 
-            button.disabled = false;
-            button.querySelector('span').textContent = 'Test Latency of All Split Groups';
+            convertButton.disabled = true;
+            buttonText.textContent = 'Working...';
+            compilerResultArea.classList.add('hidden');
+
+            try {
+                // Step 1: Get the raw config content
+                let rawContent = '';
+                const isUrl = inputText.startsWith('http://') || inputText.startsWith('https://');
+                
+                if (isUrl) {
+                    buttonText.textContent = 'Fetching URL...';
+                    const response = await fetchWithCorsFallback(inputText);
+                    if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
+                    rawContent = await response.text();
+                } else {
+                    rawContent = inputText;
+                }
+
+                // Step 2: Parse the input content into a universal node list
+                buttonText.textContent = 'Parsing...';
+                const inputFormat = compilerInputFormat.value;
+                let universalNodes = [];
+
+                if (inputFormat === 'base64') {
+                    const decoded = atob(rawContent);
+                    const uris = decoded.split(/[\n\r]+/).filter(Boolean);
+                    uris.forEach(uri => {
+                        const parsed = configParse(uri);
+                        if(parsed) universalNodes.push({ uri, parsed });
+                    });
+                } else if (inputFormat === 'clash') {
+                    const parsedYaml = jsyaml.load(rawContent);
+                    if (!parsedYaml.proxies || !Array.isArray(parsedYaml.proxies)) throw new Error('Invalid Clash file: "proxies" array not found.');
+                    // We need to reverse-engineer the URIs. This is an approximation.
+                    parsedYaml.proxies.forEach(p => {
+                        // This is a simplified reconstruction; it may not capture all details perfectly
+                        // but is good enough for cross-compilation.
+                        let uri = `${p.type}://${p.uuid || p.password}@${p.server}:${p.port}#${encodeURIComponent(p.name)}`;
+                        const parsed = configParse(uri); // Re-parse to standardize
+                        if(parsed) universalNodes.push({ uri, parsed });
+                    });
+                } else if (inputFormat === 'singbox') {
+                    const jsonString = rawContent.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m);
+                    const parsedJson = JSON.parse(jsonString);
+                    if (!parsedJson.outbounds || !Array.isArray(parsedJson.outbounds)) throw new Error('Invalid Sing-box file: "outbounds" array not found.');
+                    const utilityTypes = ['selector', 'urltest', 'direct', 'block', 'dns'];
+                    parsedJson.outbounds
+                        .filter(o => o.type && !utilityTypes.includes(o.type))
+                        .forEach(o => {
+                            let uri = `${o.type}://${o.uuid || o.password}@${o.server}:${o.server_port}#${encodeURIComponent(o.tag)}`;
+                             const parsed = configParse(uri);
+                             if(parsed) universalNodes.push({ uri, parsed });
+                        });
+                }
+
+                if (universalNodes.length === 0) throw new Error("No compatible proxy nodes could be extracted from the input.");
+
+                // Step 3: Generate the output in the desired format
+                buttonText.textContent = 'Compiling...';
+                const outputFormat = compilerOutputFormat.value;
+                let outputContent = '';
+                let fileExtension = 'txt';
+                
+                if (outputFormat === 'base64') {
+                    outputContent = generateBase64Output(universalNodes);
+                } else if (outputFormat === 'clash') {
+                    outputContent = await generateClashOutput(universalNodes);
+                    fileExtension = 'yaml';
+                } else if (outputFormat === 'singbox') {
+                    outputContent = await generateSingboxOutput(universalNodes);
+                    fileExtension = 'json';
+                }
+                
+                // Step 4: Display results
+                compilerResultTitle.textContent = `Successfully converted ${universalNodes.length} nodes from ${inputFormat.toUpperCase()} to ${outputFormat.toUpperCase()}.`;
+                compilerResultText.value = outputContent;
+                downloadConvertedButton.setAttribute('data-filename', `PSG-converted-config.${fileExtension}`);
+                compilerResultArea.classList.remove('hidden');
+
+            } catch (error) {
+                showMessageBox(`Conversion Failed: ${error.message}`);
+                console.error(error);
+            } finally {
+                convertButton.disabled = false;
+                buttonText.textContent = 'Convert';
+            }
         });
+
+        copyConvertedButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(compilerResultText.value).then(() => showMessageBox('Copied to clipboard!'));
+        });
+        downloadConvertedButton.addEventListener('click', (e) => {
+            const blob = new Blob([compilerResultText.value], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = e.currentTarget.getAttribute('data-filename') || 'psg-converted.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        // Hide compiler when other modes are selected
+        simpleModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
+        composerModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
+        splitterModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
     });
     </script>
 </body>
