@@ -94,7 +94,6 @@
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 17",
                 "🇺🇸 US | 🔴 | vless | @configms | 15",
-                "🇳🇱 NL | 🟢 | vless | @configshubplus | 17",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -124,7 +123,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2rayng_channel_vpn | 7",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
                 "🇩🇪 DE | 🟢 | vless | @vistav2ray | 10",
-                "🇳🇱 NL | 🟢 | vless | @vmess_ir | 16",
+                "🇳🇱 NL | 🟢 | vless | @vmess_ir | 14",
                 "🇺🇸 US | 🔴 | vless | @vpncostumer | 9",
                 "🇺🇸 US | 🔴 | vless | @vpncostumer | 11"
             ],
@@ -139,7 +138,6 @@
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 17",
                 "🇺🇸 US | 🔴 | vless | @configms | 15",
-                "🇳🇱 NL | 🟢 | vless | @configshubplus | 17",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -169,7 +167,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2rayng_channel_vpn | 7",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
                 "🇩🇪 DE | 🟢 | vless | @vistav2ray | 10",
-                "🇳🇱 NL | 🟢 | vless | @vmess_ir | 16",
+                "🇳🇱 NL | 🟢 | vless | @vmess_ir | 14",
                 "🇺🇸 US | 🔴 | vless | @vpncostumer | 9",
                 "🇺🇸 US | 🔴 | vless | @vpncostumer | 11"
             ],
@@ -226,29 +224,6 @@
             "uuid": "526984f4-f84e-4933-acc7-efa38b92c552",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @configshubplus | 17",
-            "type": "vless",
-            "server": "5.255.120.217",
-            "server_port": 80,
-            "uuid": "ab9f05f2-e2f7-4cea-bf0d-e90f36ff92ac",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "C4LNbOB3Ar0cntu528Jtn5ivsMZhyk9tkuAlU-jeCio",
-                    "short_id": "8c"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @dailytek | 10",
@@ -684,7 +659,7 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @vmess_ir | 16",
+            "tag": "🇳🇱 NL | 🟢 | vless | @vmess_ir | 14",
             "type": "vless",
             "server": "206.71.158.10",
             "server_port": 443,

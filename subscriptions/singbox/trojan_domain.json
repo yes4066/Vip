@@ -91,7 +91,6 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "❔ XX | 🔴 | trojan | @configshubplus | 15",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -105,9 +104,7 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
-                "🇳🇱 NL | 🟢 | trojan | @v2rayweb | 14",
-                "🇬🇧 GB | 🟢 | trojan | @v2rayweb | 15",
-                "❔ XX | 🔴 | trojan | @v2trayproxy | 14",
+                "❔ XX | 🔴 | trojan | @v2trayproxy | 11",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -119,7 +116,6 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "❔ XX | 🔴 | trojan | @configshubplus | 15",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -133,9 +129,7 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
-                "🇳🇱 NL | 🟢 | trojan | @v2rayweb | 14",
-                "🇬🇧 GB | 🟢 | trojan | @v2rayweb | 15",
-                "❔ XX | 🔴 | trojan | @v2trayproxy | 14",
+                "❔ XX | 🔴 | trojan | @v2trayproxy | 11",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -182,22 +176,6 @@
                 "path": "/trojan-ntls",
                 "headers": {
                     "Host": "asia.artunnel57.host"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🔴 | trojan | @configshubplus | 15",
-            "type": "trojan",
-            "server": "patient-emu.shiner427.skin",
-            "server_port": 443,
-            "password": "68711066374000300",
-            "tls": {
-                "enabled": true,
-                "server_name": "patient-emu.shiner427.skin",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },
@@ -446,39 +424,7 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | trojan | @v2rayweb | 14",
-            "type": "trojan",
-            "server": "stirring-parakeet.shiner427.skin",
-            "server_port": 443,
-            "password": "74260628090146500",
-            "tls": {
-                "enabled": true,
-                "server_name": "stirring-parakeet.shiner427.skin",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | trojan | @v2rayweb | 15",
-            "type": "trojan",
-            "server": "huge-turkey.shiner427.skin",
-            "server_port": 443,
-            "password": "74260628090146500",
-            "tls": {
-                "enabled": true,
-                "server_name": "huge-turkey.shiner427.skin",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🔴 | trojan | @v2trayproxy | 14",
+            "tag": "❔ XX | 🔴 | trojan | @v2trayproxy | 11",
             "type": "trojan",
             "server": "0RiSuJPsug",
             "server_port": 0,
