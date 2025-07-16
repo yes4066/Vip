@@ -698,6 +698,29 @@ function generate_full_html(
             const textName = displayNameParts.join(' ');
             return flag ? `${flag} ${textName.trim()}` : textName.trim();
         }
+        /**
+         * Fetches a URL, attempting a direct request first and falling back
+         * to a CORS proxy if a network error (likely CORS) occurs.
+         * @param {string} url The URL to fetch.
+         * @returns {Promise<Response>} A promise that resolves with the response.
+         */
+        async function fetchWithCorsFallback(url) {
+            try {
+                // First, try a direct fetch.
+                const directResponse = await fetch(url);
+                return directResponse;
+            } catch (error) {
+                // A TypeError on fetch is a strong indicator of a CORS issue.
+                if (error instanceof TypeError) {
+                    console.warn(`Direct fetch for ${url} failed (likely CORS). Retrying with proxy.`);
+                    const proxiedUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+                    const proxiedResponse = await fetch(proxiedUrl);
+                    return proxiedResponse;
+                }
+                // If it's not a TypeError, it's a different issue, so re-throw it.
+                throw error;
+            }
+        }
 
         // --- SIMPLE MODE & DNA LOGIC (largely unchanged) ---
         function populateSelect(selectElement, sortedKeys, defaultOptionText) { selectElement.innerHTML = `<option value="">${defaultOptionText}</option>`; sortedKeys.forEach(key => { const option = document.createElement('option'); option.value = key; option.textContent = formatDisplayName(key); selectElement.appendChild(option); }); }
@@ -1265,7 +1288,7 @@ function generate_full_html(
 
             try {
                 const proxiedUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-                const response = await fetch(proxiedUrl);
+                const response = await fetchWithCorsFallback(url);
                 if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
                 
                 const content = await response.text();
