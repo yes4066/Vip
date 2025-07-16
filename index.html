@@ -300,7 +300,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 22:47:06 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 23:00:39 +0330</p>
         </footer>
     </div>
     
@@ -1839,7 +1839,7 @@
             return templateContent;
         }
         
-                async function generateSingboxOutput(nodes) {
+        async function generateSingboxOutput(nodes) {
             const templateURL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/templates/structure.json';
             const response = await fetch(templateURL);
             if (!response.ok) throw new Error('Could not fetch Sing-box template.');
@@ -1847,23 +1847,31 @@
             const jsonString = templateString.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m);
             const templateJson = JSON.parse(jsonString);
 
+            const ALLOWED_ADVANCED_TRANSPORTS = ['http', 'ws', 'quic', 'grpc', 'httpupgrade'];
+
             const outbounds = nodes.map(node => {
                 const p = node.parsed;
-                let singboxNode = null;
-                
-                // --- THIS IS THE NEW, ADVANCED TRANSPORT LOGIC ---
+                const transportType = (p.net || p.params?.type || 'tcp').toLowerCase();
+                const isTlsEnabled = p.tls === 'tls' || p.params?.security === 'tls' || p.params?.security === 'reality';
+
+                // --- NEW REFINED FILTERING LOGIC ---
+                // Keep the node if:
+                // 1. It uses an allowed advanced transport.
+                // OR
+                // 2. Its transport is 'tcp' AND it's using TLS.
+                if (!ALLOWED_ADVANCED_TRANSPORTS.includes(transportType) && !(transportType === 'tcp' && isTlsEnabled)) {
+                    return null; // Discard plain, unencrypted TCP and other unsupported transports.
+                }
+
                 let transport = null;
-                const transportType = p.net || p.params?.type;
-                if (transportType) {
+                // Only create a transport object for the advanced, non-tcp types
+                if (transportType !== 'tcp') {
                     transport = { type: transportType };
                     switch (transportType) {
                         case 'ws':
-                        case 'http': // Often just called 'ws' in vmess links, but can be http
+                        case 'http':
                             transport.path = (p.path || p.params?.path || '/').split('?')[0];
                             transport.headers = { Host: p.host || p.params?.host || p.hostname };
-                            break;
-                        case 'quic':
-                            // QUIC doesn't have extra path/host params in the same way
                             break;
                         case 'grpc':
                             transport.service_name = p.params?.serviceName || '';
@@ -1874,24 +1882,29 @@
                              break;
                     }
                 }
-                
+
+                let singboxNode = null;
+                const tlsSettings = isTlsEnabled ? { 
+                    enabled: true, 
+                    server_name: p.sni || p.params?.sni, 
+                    reality: p.params?.security === 'reality' ? { enabled: true, public_key: p.params.pbk, short_id: p.params.sid } : undefined 
+                } : undefined;
+
                 switch (p.protocol) {
                     case 'vmess': 
-                        singboxNode = { tag: p.ps, type: 'vmess', server: p.add, server_port: parseInt(p.port), uuid: p.id, alter_id: parseInt(p.aid), security: 'auto' };
+                        singboxNode = { tag: p.ps, type: 'vmess', server: p.add, server_port: parseInt(p.port), uuid: p.id, alter_id: parseInt(p.aid), security: 'auto', tls: tlsSettings };
                         break;
                     case 'vless': 
-                        const tls = (p.params?.security === 'tls' || p.params?.security === 'reality') ? { enabled: true, server_name: p.params.sni, reality: p.params.security === 'reality' ? { enabled: true, public_key: p.params.pbk, short_id: p.params.sid } : undefined } : undefined;
-                        singboxNode = { tag: p.hash, type: 'vless', server: p.hostname, server_port: p.port, uuid: p.username, tls }; 
+                        singboxNode = { tag: p.hash, type: 'vless', server: p.hostname, server_port: p.port, uuid: p.username, tls: tlsSettings }; 
                         break;
                     case 'trojan': 
-                        singboxNode = { tag: p.hash, type: 'trojan', server: p.hostname, server_port: p.port, password: p.username }; 
+                        singboxNode = { tag: p.hash, type: 'trojan', server: p.hostname, server_port: p.port, password: p.username, tls: tlsSettings }; 
                         break;
-                    case 'ss': 
-                        singboxNode = { tag: p.hash, type: 'shadowsocks', server: p.hostname, server_port: p.port, method: p.encryption_method, password: p.password }; 
-                        break;
+                    case 'ss':
+                         singboxNode = { tag: p.hash, type: 'shadowsocks', server: p.hostname, server_port: p.port, method: p.encryption_method, password: p.password, tls: tlsSettings };
+                         break;
                 }
                 
-                // If a node was created, attach the transport object
                 if (singboxNode && transport) {
                     singboxNode.transport = transport;
                 }
@@ -1899,6 +1912,10 @@
                 return singboxNode;
 
             }).filter(Boolean);
+
+            if (outbounds.length === 0) {
+                throw new Error("No nodes with supported Sing-box transports (WebSocket, gRPC, TLS, etc.) were found in the source.");
+            }
 
             const urlTestGroup = templateJson.outbounds.find(o => o.tag === 'auto');
             if (urlTestGroup) { urlTestGroup.outbounds = outbounds.map(o => o.tag); }
