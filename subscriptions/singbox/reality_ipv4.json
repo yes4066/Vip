@@ -92,6 +92,8 @@
                 "🇩🇪 DE | 🟢 | vless | @abiidar_server | 2",
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 10",
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 8",
+                "🇫🇮 FI | 🟢 | vless | @config_proxy | 73",
+                "🇫🇮 FI | 🟢 | vless | @config_proxy | 76",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -105,6 +107,7 @@
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 4",
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 4",
+                "🇫🇮 FI | 🟢 | vless | @entrynet | 16",
                 "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 20",
                 "🇨🇿 CZ | 🟢 | vless | @farahvpn | 15",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
@@ -226,6 +229,8 @@
                 "🇩🇪 DE | 🟢 | vless | @abiidar_server | 2",
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 10",
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 8",
+                "🇫🇮 FI | 🟢 | vless | @config_proxy | 73",
+                "🇫🇮 FI | 🟢 | vless | @config_proxy | 76",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -239,6 +244,7 @@
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 4",
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 4",
+                "🇫🇮 FI | 🟢 | vless | @entrynet | 16",
                 "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 20",
                 "🇨🇿 CZ | 🟢 | vless | @farahvpn | 15",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
@@ -431,6 +437,56 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @config_proxy | 73",
+            "type": "vless",
+            "server": "65.109.208.13",
+            "server_port": 443,
+            "uuid": "d4853b78-6ab5-4da0-a434-bcb475a0e54c",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "CM7AaS7XYEohx4ZNbecHqTqhyX9-Q4MQKlHji1xxI2I",
+                    "short_id": "4b272f845593"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @config_proxy | 76",
+            "type": "vless",
+            "server": "65.109.184.88",
+            "server_port": 443,
+            "uuid": "2e8360f7-3b0d-457c-91f3-0b8a03601732",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "zT6tM7lUqiWV_KuA1hp-ckrXDCA0d9_DG40JQGlh6zo",
+                    "short_id": "a27ce1b2604c96"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Tel:@NT_Safe"
             }
         },
         {
@@ -750,6 +806,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON"
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @entrynet | 16",
+            "type": "vless",
+            "server": "65.109.184.88",
+            "server_port": 443,
+            "uuid": "2e8360f7-3b0d-457c-91f3-0b8a03601732",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "zT6tM7lUqiWV_KuA1hp-ckrXDCA0d9_DG40JQGlh6zo",
+                    "short_id": "a27ce1b2604c96"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "t.me/entryNET"
             }
         },
         {

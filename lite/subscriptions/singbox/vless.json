@@ -126,7 +126,7 @@
                 "🇮🇷 IR | 🔴 | vless | @ghotb_scarf | 9",
                 "🇮🇷 IR | 🔴 | vless | @goldenvpn_v2rayy | 3",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇺🇸 US | 🔴 | vless | @hope_net | 19",
+                "🏳️  | 🟢 | vless | @hope_net | 19",
                 "🇮🇷 IR | 🔴 | vless | @hormozvpn | 3",
                 "🇮🇷 IR | 🔴 | vless | @hoshmasnoiyfarsi | 13",
                 "🇺🇸 US | 🔴 | vless | @icv2ray | 9",
@@ -396,7 +396,7 @@
                 "🇮🇷 IR | 🔴 | vless | @ghotb_scarf | 9",
                 "🇮🇷 IR | 🔴 | vless | @goldenvpn_v2rayy | 3",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇺🇸 US | 🔴 | vless | @hope_net | 19",
+                "🏳️  | 🟢 | vless | @hope_net | 19",
                 "🇮🇷 IR | 🔴 | vless | @hormozvpn | 3",
                 "🇮🇷 IR | 🔴 | vless | @hoshmasnoiyfarsi | 13",
                 "🇺🇸 US | 🔴 | vless | @icv2ray | 9",
@@ -1306,18 +1306,20 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @hope_net | 19",
+            "tag": "🏳️  | 🟢 | vless | @hope_net | 19",
             "type": "vless",
-            "server": "172.67.28.26",
-            "server_port": 2052,
-            "uuid": "2737560d-1867-47fa-aa80-351c36d771c7",
+            "server": "127.0.0.1",
+            "server_port": 1080,
+            "uuid": "acbacba-caab-aabc-adbc-aaacbbbcccba",
             "flow": "",
             "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/?ed=2560",
-                "headers": {
-                    "Host": "172.67.28.26"
+            "tls": {
+                "enabled": true,
+                "server_name": "127.0.0.1",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },

@@ -92,7 +92,6 @@
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 5",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 6",
-                "🇬🇧 GB | 🔴 | trojan | @configshubplus | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
@@ -125,7 +124,8 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 15",
-                "🇺🇸 US | 🔴 | trojan | @v2rayweb | 17",
+                "🇭🇰 HK | 🔴 | trojan | @v2rayweb | 16",
+                "🇭🇰 HK | 🔴 | trojan | @v2rayweb | 18",
                 "🇫🇷 FR | 🔴 | trojan | @yxjnode | 23"
             ],
             "tag": "proxy",
@@ -137,7 +137,6 @@
                 "🇯🇵 JP | 🟢 | trojan | @awlix_ir | 9",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 5",
                 "🇺🇸 US | 🔴 | trojan | @bored_vpn | 6",
-                "🇬🇧 GB | 🔴 | trojan | @configshubplus | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 12",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
@@ -170,7 +169,8 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 15",
-                "🇺🇸 US | 🔴 | trojan | @v2rayweb | 17",
+                "🇭🇰 HK | 🔴 | trojan | @v2rayweb | 16",
+                "🇭🇰 HK | 🔴 | trojan | @v2rayweb | 18",
                 "🇫🇷 FR | 🔴 | trojan | @yxjnode | 23"
             ],
             "tag": "auto",
@@ -211,22 +211,6 @@
             "server": "62.60.176.240",
             "server_port": 36557,
             "password": "T9xcEjdUWx"
-        },
-        {
-            "tag": "🇬🇧 GB | 🔴 | trojan | @configshubplus | 19",
-            "type": "trojan",
-            "server": "13.43.156.128",
-            "server_port": 443,
-            "password": "3763495894587285504",
-            "tls": {
-                "enabled": true,
-                "server_name": "useful-honeybee.treefrog761.one",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 12",
@@ -735,10 +719,17 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @v2rayweb | 17",
+            "tag": "🇭🇰 HK | 🔴 | trojan | @v2rayweb | 16",
             "type": "trojan",
-            "server": "54.176.205.20",
-            "server_port": 80,
+            "server": "27.50.49.156",
+            "server_port": 2096,
+            "password": "Aimer"
+        },
+        {
+            "tag": "🇭🇰 HK | 🔴 | trojan | @v2rayweb | 18",
+            "type": "trojan",
+            "server": "27.50.48.126",
+            "server_port": 2083,
             "password": "Aimer"
         },
         {
