@@ -92,6 +92,7 @@
                 "🇩🇪 DE | 🟢 | vless | @abiidar_server | 2",
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 10",
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 8",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -203,6 +204,7 @@
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 8",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 9",
                 "🇫🇮 FI | 🟢 | vless | @vpn_ocean | 0",
+                "🇨🇿 CZ | 🟢 | vless | @vpnaloo | 15",
                 "🇸🇪 SE | 🟢 | vless | @vpneti | 7",
                 "🇩🇪 DE | 🟢 | vless | @vpnia1 | 6",
                 "🇩🇪 DE | 🟢 | vless | @vpnkafing | 1",
@@ -225,6 +227,7 @@
                 "🇩🇪 DE | 🟢 | vless | @abiidar_server | 2",
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 10",
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 8",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -336,6 +339,7 @@
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 8",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 9",
                 "🇫🇮 FI | 🟢 | vless | @vpn_ocean | 0",
+                "🇨🇿 CZ | 🟢 | vless | @vpnaloo | 15",
                 "🇸🇪 SE | 🟢 | vless | @vpneti | 7",
                 "🇩🇪 DE | 🟢 | vless | @vpnia1 | 6",
                 "🇩🇪 DE | 🟢 | vless | @vpnkafing | 1",
@@ -429,6 +433,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
+            "type": "vless",
+            "server": "91.99.7.227",
+            "server_port": 44666,
+            "uuid": "0fe270d2-ddae-4d90-b415-818c57710cc5",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "IoFzzRce9vslGGZsfrwzoIbgv_OglekC2xAhwiMhewg",
+                    "short_id": "2fb7c7018a233465"
+                }
             }
         },
         {
@@ -3204,6 +3231,33 @@
                     "public_key": "RELg-Z1AXhG9945I_8hN884Z5Txd9ZxI92sl4jHzXWU",
                     "short_id": "ec01ceda"
                 }
+            }
+        },
+        {
+            "tag": "🇨🇿 CZ | 🟢 | vless | @vpnaloo | 15",
+            "type": "vless",
+            "server": "194.182.79.72",
+            "server_port": 32827,
+            "uuid": "4ac9748e-ab31-499e-9221-3e75c314b503",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Q-zmZ8W_ZN8ua7qt2xGR9EHG56TfC4LL39V7pNcM0gM",
+                    "short_id": "e69d8702eba67ed7"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON"
             }
         },
         {
