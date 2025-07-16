@@ -108,8 +108,6 @@
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
                 "🇵🇹 PT | 🟢 | ss | @shadowsockskeys | 16",
-                "❔ XX | 🟢 | ss | @srovpn | 13",
-                "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
                 "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 4",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
@@ -118,7 +116,8 @@
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇬🇧 GB | 🟢 | ss | @vip_freevpn1 | 1",
                 "🇳🇱 NL | 🟢 | ss | @vpn451 | 10",
-                "🇳🇱 NL | 🟢 | ss | @vpn451 | 11"
+                "🇳🇱 NL | 🟢 | ss | @vpn451 | 11",
+                "❔ XX | 🟢 | ss | @vpn_meliii | 5"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -145,8 +144,6 @@
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
                 "🇵🇹 PT | 🟢 | ss | @shadowsockskeys | 16",
-                "❔ XX | 🟢 | ss | @srovpn | 13",
-                "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
                 "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 4",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
@@ -155,7 +152,8 @@
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
                 "🇬🇧 GB | 🟢 | ss | @vip_freevpn1 | 1",
                 "🇳🇱 NL | 🟢 | ss | @vpn451 | 10",
-                "🇳🇱 NL | 🟢 | ss | @vpn451 | 11"
+                "🇳🇱 NL | 🟢 | ss | @vpn451 | 11",
+                "❔ XX | 🟢 | ss | @vpn_meliii | 5"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -319,22 +317,6 @@
             "password": "tunnel-rtr6i7o8o8o7"
         },
         {
-            "tag": "❔ XX | 🟢 | ss | @srovpn | 13",
-            "type": "shadowsocks",
-            "server": "2FreakConfig.usecharge.ir",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "W74XFALLLuw6m5IA"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | ss | @strongprotocol | 7",
-            "type": "shadowsocks",
-            "server": "push4.p-ko.ru",
-            "server_port": 39448,
-            "method": "chacha20-ietf-poly1305",
-            "password": "1U5MUwZqVsFkDGXQfabJP9"
-        },
-        {
             "tag": "🇬🇧 GB | 🟢 | ss | @ultrasurf_12 | 4",
             "type": "shadowsocks",
             "server": "admin.c1.webramz.co",
@@ -405,6 +387,14 @@
             "server_port": 19609,
             "method": "chacha20-ietf-poly1305",
             "password": "vmbNCUhVDMTb3WRKkSG0SD"
+        },
+        {
+            "tag": "❔ XX | 🟢 | ss | @vpn_meliii | 5",
+            "type": "shadowsocks",
+            "server": "2FreakConfig.usecharge.ir",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "W74XFALLLuw6m5IA"
         }
     ],
     "route": {
