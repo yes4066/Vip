@@ -92,7 +92,6 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇯🇵 JP | 🔴 | trojan | @hope_net | 17",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 4",
@@ -101,11 +100,11 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "❔ XX | 🟢 | trojan | @mtpv2ray | 5",
-                "🇫🇷 FR | 🟢 | trojan | @netmellianti | 12",
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
                 "❔ XX | 🔴 | trojan | @v2trayproxy | 11",
+                "🇫🇷 FR | 🟢 | trojan | @vmesc | 15",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -118,7 +117,6 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇯🇵 JP | 🔴 | trojan | @hope_net | 17",
                 "🇺🇸 US | 🟢 | trojan | @hopev2ray | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 4",
@@ -127,11 +125,11 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "❔ XX | 🟢 | trojan | @mtpv2ray | 5",
-                "🇫🇷 FR | 🟢 | trojan | @netmellianti | 12",
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
                 "❔ XX | 🔴 | trojan | @v2trayproxy | 11",
+                "🇫🇷 FR | 🟢 | trojan | @vmesc | 15",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -190,22 +188,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "t3.teslacdn2.live",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇯🇵 JP | 🔴 | trojan | @hope_net | 17",
-            "type": "trojan",
-            "server": "in01.trojanyyds.xyz",
-            "server_port": 443,
-            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
-            "tls": {
-                "enabled": true,
-                "server_name": "in01.trojanyyds.xyz",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -371,22 +353,6 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @netmellianti | 12",
-            "type": "trojan",
-            "server": "x5-france-scaleway-v2.devefun.org",
-            "server_port": 1935,
-            "password": "DHvyBZAYmM",
-            "tls": {
-                "enabled": true,
-                "server_name": "x5-france-scaleway-v2.devefun.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
             "type": "trojan",
             "server": "chatbuzzteambhm.chatbuzzt7150.workers.dev",
@@ -447,6 +413,22 @@
             "server": "0RiSuJPsug",
             "server_port": 0,
             "password": ""
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | trojan | @vmesc | 15",
+            "type": "trojan",
+            "server": "x5-france-scaleway-v2.devefun.org",
+            "server_port": 1935,
+            "password": "DHvyBZAYmM",
+            "tls": {
+                "enabled": true,
+                "server_name": "x5-france-scaleway-v2.devefun.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @xrayzxn | 4",
