@@ -300,7 +300,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 23:00:39 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 23:10:21 +0330</p>
         </footer>
     </div>
     
@@ -2189,59 +2189,41 @@
 
         // --- EVENT LISTENERS ---
 
-        // Helper function to manage tab styling robustly
-        function setActiveTab(activeButton) {
-            const allButtons = [simpleModeButton, composerModeButton, splitterModeButton];
-            allButtons.forEach(button => {
-                button.classList.remove('mode-button-active');
-                button.classList.add('mode-button-inactive');
+        // Centralized function to manage all tabs and containers
+        function switchMode(activeMode) {
+            const modes = {
+                simple: { button: simpleModeButton, container: simpleModeContainer },
+                composer: { button: composerModeButton, container: composerModeContainer },
+                splitter: { button: splitterModeButton, container: splitterModeContainer },
+                compiler: { button: compilerModeButton, container: compilerModeContainer }
+            };
+
+            // Deactivate all modes
+            Object.values(modes).forEach(mode => {
+                mode.button.classList.remove('mode-button-active');
+                mode.button.classList.add('mode-button-inactive');
+                mode.container.classList.add('hidden');
             });
-            activeButton.classList.remove('mode-button-inactive');
-            activeButton.classList.add('mode-button-active');
+
+            // Hide all result areas
+            resultArea.classList.add('hidden');
+            composerResultArea.classList.add('hidden');
+            splitterResultArea.classList.add('hidden');
+            compilerResultArea.classList.add('hidden');
+
+            // Activate the selected mode
+            if (modes[activeMode]) {
+                modes[activeMode].button.classList.add('mode-button-active');
+                modes[activeMode].button.classList.remove('mode-button-inactive');
+                modes[activeMode].container.classList.remove('hidden');
+            }
         }
 
-        simpleModeButton.addEventListener('click', () => {
-            // Set active tab style
-            setActiveTab(simpleModeButton);
-
-            // Manage container visibility
-            simpleModeContainer.classList.remove('hidden');
-            composerModeContainer.classList.add('hidden');
-            splitterModeContainer.classList.add('hidden');
-            
-            // Manage result area visibility
-            composerResultArea.classList.add('hidden');
-            splitterResultArea.classList.add('hidden');
-            // 'resultArea' visibility is handled by other logic, so we leave it alone.
-        });
-
-        composerModeButton.addEventListener('click', () => {
-            // Set active tab style
-            setActiveTab(composerModeButton);
-
-            // Manage container visibility
-            simpleModeContainer.classList.add('hidden');
-            composerModeContainer.classList.remove('hidden');
-            splitterModeContainer.classList.add('hidden');
-
-            // Manage result area visibility
-            resultArea.classList.add('hidden');
-            splitterResultArea.classList.add('hidden');
-        });
-        
-        splitterModeButton.addEventListener('click', () => {
-            // Set active tab style
-            setActiveTab(splitterModeButton);
-
-            // Manage container visibility
-            simpleModeContainer.classList.add('hidden');
-            composerModeContainer.classList.add('hidden');
-            splitterModeContainer.classList.remove('hidden');
-
-            // Manage result area visibility
-            resultArea.classList.add('hidden');
-            composerResultArea.classList.add('hidden');
-        });
+        // Assign the new function to each button's click event
+        simpleModeButton.addEventListener('click', () => switchMode('simple'));
+        composerModeButton.addEventListener('click', () => switchMode('composer'));
+        splitterModeButton.addEventListener('click', () => switchMode('splitter'));
+        compilerModeButton.addEventListener('click', () => switchMode('compiler'));
 
         // --- ALL OTHER EVENT LISTENERS (UNCHANGED) ---
         configTypeSelect.addEventListener('change', () => { resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription'); searchBar.value = ''; searchBar.disabled = true; resultArea.classList.add('hidden'); if (configTypeSelect.value && structuredData[configTypeSelect.value]) { populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), 'Select Client/Core'); ipTypeSelect.disabled = false; } });
@@ -2407,11 +2389,6 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
         });
-
-        // Hide compiler when other modes are selected
-        simpleModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
-        composerModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
-        splitterModeButton.addEventListener('click', () => compilerModeContainer.classList.add('hidden'));
     });
     </script>
 </body>
