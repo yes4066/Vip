@@ -165,7 +165,7 @@
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "🇹🇷 TR | 🟢 | vless | @v2source | 16",
-                "🇺🇸 US | 🟢 | vless | @vistav2ray | 11",
+                "🇩🇪 DE | 🟢 | vless | @vistav2ray | 11",
                 "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
                 "🇩🇪 DE | 🟢 | vless | @vmessorg | 7",
                 "❔ XX | 🟢 | vless | @vmessraygan | 7",
@@ -290,7 +290,6 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayngconfings | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
                 "🇩🇪 DE | 🟢 | vless | @v2rayo7ybv67i76 | 13",
-                "🇬🇧 GB | 🟢 | vless | @v2rayweb | 13",
                 "🇩🇪 DE | 🟢 | vless | @v2rayxservers | 13",
                 "🇺🇸 US | 🟢 | vless | @v2ry_proxy | 9",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 10",
@@ -309,6 +308,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vpnkafing | 1",
                 "🇫🇷 FR | 🟢 | vless | @vpnpacket | 3",
                 "🇫🇷 FR | 🟢 | vless | @vpnpacket | 4",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 15",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 13",
                 "🇳🇴 NO | 🟢 | vless | @vpnv2rayonline | 8",
                 "🇫🇮 FI | 🟢 | vless | @x4azadi | 11",
@@ -401,7 +401,7 @@
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "🇹🇷 TR | 🟢 | vless | @v2source | 16",
-                "🇺🇸 US | 🟢 | vless | @vistav2ray | 11",
+                "🇩🇪 DE | 🟢 | vless | @vistav2ray | 11",
                 "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
                 "🇩🇪 DE | 🟢 | vless | @vmessorg | 7",
                 "❔ XX | 🟢 | vless | @vmessraygan | 7",
@@ -526,7 +526,6 @@
                 "🇩🇪 DE | 🟢 | vless | @v2rayngconfings | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
                 "🇩🇪 DE | 🟢 | vless | @v2rayo7ybv67i76 | 13",
-                "🇬🇧 GB | 🟢 | vless | @v2rayweb | 13",
                 "🇩🇪 DE | 🟢 | vless | @v2rayxservers | 13",
                 "🇺🇸 US | 🟢 | vless | @v2ry_proxy | 9",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 10",
@@ -545,6 +544,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vpnkafing | 1",
                 "🇫🇷 FR | 🟢 | vless | @vpnpacket | 3",
                 "🇫🇷 FR | 🟢 | vless | @vpnpacket | 4",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 15",
                 "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 13",
                 "🇳🇴 NO | 🟢 | vless | @vpnv2rayonline | 8",
                 "🇫🇮 FI | 🟢 | vless | @x4azadi | 11",
@@ -2432,7 +2432,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @vistav2ray | 11",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vistav2ray | 11",
             "type": "vless",
             "server": "amazon-4.cristiano.name.ng",
             "server_port": 443,
@@ -5537,29 +5537,6 @@
             }
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | vless | @v2rayweb | 13",
-            "type": "vless",
-            "server": "109.120.128.109",
-            "server_port": 51337,
-            "uuid": "644fdf71-5d76-4f28-b3d6-b1c386172f32",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "ZWXfXGAelQor0PVvHSTmN4P6gjeEvnWdeEbB4jcauzY",
-                    "short_id": "5c21278a0b"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @v2rayxservers | 13",
             "type": "vless",
             "server": "116.202.1.160",
@@ -6007,6 +5984,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@VPNPacket"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 15",
+            "type": "vless",
+            "server": "91.107.180.100",
+            "server_port": 443,
+            "uuid": "8ba6c101-8e27-4561-ae32-474a40139a30",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zula.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "eZs1Yn6wbXV2RPT47_szgepN6lNKseOb9nprDMrpNmE",
+                    "short_id": "f3"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@SobyV2ray"
             }
         },
         {
