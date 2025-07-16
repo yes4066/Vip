@@ -71,8 +71,8 @@
     },
     "argo_vpn1": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "𝐀𝐫𝐠𝐨_𝐕𝐏𝐍1 /پل فالکن/هیدیفای",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/argo_vpn1.jpg"
@@ -819,9 +819,9 @@
     },
     "freevpnatm": {
         "types": [
-            "trojan",
-            "vless",
             "vmess",
+            "vless",
+            "trojan",
             "hy2"
         ],
         "title": "科學上网 free configs",
@@ -871,13 +871,6 @@
         ],
         "title": "فیلترشکن رایگان | GER VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/gervpn.jpg"
-    },
-    "ghalagyann2": {
-        "types": [
-            "vless"
-        ],
-        "title": "V2rayng",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ghalagyann2.jpg"
     },
     "ghotb_scarf": {
         "types": [
@@ -950,10 +943,9 @@
     },
     "hope_net": {
         "types": [
-            "trojan",
-            "vmess",
+            "vless",
             "ss",
-            "vless"
+            "trojan"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1000,7 +992,6 @@
     },
     "info_2it_channel": {
         "types": [
-            "vmess",
             "vless"
         ],
         "title": "2IT | اینترنت آزاد",
@@ -1558,7 +1549,8 @@
     "mowjproxy": {
         "types": [
             "vmess",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -2371,8 +2363,8 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vmess",
             "ss",
+            "vmess",
             "vless",
             "trojan"
         ],

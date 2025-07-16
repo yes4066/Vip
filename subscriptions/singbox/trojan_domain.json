@@ -103,6 +103,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @netmellianti | 15",
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
+                "❔ XX | 🔴 | trojan | @v2raych | 15",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
                 "❔ XX | 🔴 | trojan | @v2trayproxy | 14",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
@@ -128,6 +129,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @netmellianti | 15",
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
+                "❔ XX | 🔴 | trojan | @v2raych | 15",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
                 "❔ XX | 🔴 | trojan | @v2trayproxy | 14",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
@@ -400,6 +402,22 @@
             "tls": {
                 "enabled": true,
                 "server_name": "chatbuzzteambhm.chatbuzzt7150.workers.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | trojan | @v2raych | 15",
+            "type": "trojan",
+            "server": "sg.235261.xyz",
+            "server_port": 443,
+            "password": "m3fdSqqtcr",
+            "tls": {
+                "enabled": true,
+                "server_name": "sg.235261.xyz",
                 "insecure": true,
                 "utls": {
                     "enabled": true,

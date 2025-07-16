@@ -93,7 +93,6 @@
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 17",
-                "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
                 "🇺🇸 US | 🔴 | vless | @configms | 15",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
@@ -110,6 +109,7 @@
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
+                "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇺🇸 US | 🔴 | vless | @v2ray_one1 | 9",
@@ -120,9 +120,9 @@
                 "🇺🇸 US | 🔴 | vless | @v2raymelliii | 5",
                 "🇺🇸 US | 🔴 | vless | @v2rayng_channel_vpn | 7",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
+                "🇩🇪 DE | 🟢 | vless | @vistav2ray | 14",
                 "🇺🇸 US | 🔴 | vless | @vpncostumer | 9",
-                "🇺🇸 US | 🔴 | vless | @vpncostumer | 11",
-                "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 13"
+                "🇺🇸 US | 🔴 | vless | @vpncostumer | 11"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -134,7 +134,6 @@
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 17",
-                "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
                 "🇺🇸 US | 🔴 | vless | @configms | 15",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
@@ -151,6 +150,7 @@
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
+                "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇺🇸 US | 🔴 | vless | @v2ray_one1 | 9",
@@ -161,9 +161,9 @@
                 "🇺🇸 US | 🔴 | vless | @v2raymelliii | 5",
                 "🇺🇸 US | 🔴 | vless | @v2rayng_channel_vpn | 7",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
+                "🇩🇪 DE | 🟢 | vless | @vistav2ray | 14",
                 "🇺🇸 US | 🔴 | vless | @vpncostumer | 9",
-                "🇺🇸 US | 🔴 | vless | @vpncostumer | 11",
-                "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 13"
+                "🇺🇸 US | 🔴 | vless | @vpncostumer | 11"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -209,29 +209,6 @@
             "uuid": "724383d8-33c6-4e8d-9db4-0184a89efa33",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 62",
-            "type": "vless",
-            "server": "91.99.7.227",
-            "server_port": 44666,
-            "uuid": "0fe270d2-ddae-4d90-b415-818c57710cc5",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "IoFzzRce9vslGGZsfrwzoIbgv_OglekC2xAhwiMhewg",
-                    "short_id": "2fb7c7018a233465"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @configms | 15",
@@ -429,6 +406,24 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | vless | @proxie | 15",
+            "type": "vless",
+            "server": "188.114.97.3",
+            "server_port": 443,
+            "uuid": "c9dfdf12-85b3-4adc-8837-e9259f2a99a9",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "Varda.Manwe.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
             "type": "vless",
             "server": "147.182.183.207",
@@ -589,6 +584,29 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇩🇪 DE | 🟢 | vless | @vistav2ray | 14",
+            "type": "vless",
+            "server": "185.127.94.27",
+            "server_port": 8443,
+            "uuid": "2d37cd89-d6e5-4d58-a688-8b0208a48e6e",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "drive.google.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "BG0noERXu_3wOPcZOeu9vl35QIFilTAWFXMZx-nzpVY",
+                    "short_id": "58b2fc"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @vpncostumer | 9",
             "type": "vless",
             "server": "151.101.3.8",
@@ -605,29 +623,6 @@
             "uuid": "64eabf2c-f24a-492c-bdfa-b02a7ebda17c",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @vpnstorefast | 13",
-            "type": "vless",
-            "server": "65.109.211.154",
-            "server_port": 443,
-            "uuid": "d76542c9-916e-41bb-ad0d-fa37971a8b2e",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "CM7AaS7XYEohx4ZNbecHqTqhyX9-Q4MQKlHji1xxI2I",
-                    "short_id": "4b272f845593"
-                }
-            }
         }
     ],
     "route": {

@@ -91,7 +91,6 @@
                 "direct",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
-                "🇫🇷 FR | 🟢 | trojan | @netmellianti | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
             "tag": "proxy",
@@ -102,7 +101,6 @@
             "outbounds": [
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
-                "🇫🇷 FR | 🟢 | trojan | @netmellianti | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
             "tag": "auto",
@@ -155,22 +153,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "grpc20337"
-            }
-        },
-        {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @netmellianti | 15",
-            "type": "trojan",
-            "server": "x5-france-scaleway-v2.devefun.org",
-            "server_port": 1935,
-            "password": "DHvyBZAYmM",
-            "tls": {
-                "enabled": true,
-                "server_name": "x5-france-scaleway-v2.devefun.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
             }
         },
         {
