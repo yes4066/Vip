@@ -93,6 +93,7 @@
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 17",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 93",
                 "🇺🇸 US | 🔴 | vless | @configms | 15",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
@@ -134,6 +135,7 @@
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 17",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 93",
                 "🇺🇸 US | 🔴 | vless | @configms | 15",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
@@ -209,6 +211,24 @@
             "uuid": "724383d8-33c6-4e8d-9db4-0184a89efa33",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 93",
+            "type": "vless",
+            "server": "104.17.165.13",
+            "server_port": 443,
+            "uuid": "e016b7d6-f779-4bd4-a28b-de599b01be70",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "z.softmeto.site",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @configms | 15",
