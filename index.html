@@ -127,6 +127,10 @@
                                 <i data-lucide="git-merge" class="w-5 h-5"></i>
                                 <span id="generateCompositionButtonText" class="font-semibold">Generate Composed Subscription</span>
                             </button>
+                            <button id="testComposerLatencyButton" class="hidden w-full mt-2 flex items-center justify-center gap-2 bg-sky-500 text-white px-4 py-2 rounded-md hover:bg-sky-600 transition-colors duration-200">
+                                <i data-lucide="zap" class="w-5 h-5"></i>
+                                <span class="font-semibold">Test Latency</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -178,6 +182,10 @@
                         <button id="splitSubscriptionButton" class="w-full flex items-center justify-center gap-2 bg-purple-600 text-white px-4 py-3 rounded-md hover:bg-purple-700 transition-colors duration-200 disabled:bg-purple-300">
                             <i data-lucide="scissors" class="w-5 h-5"></i>
                             <span id="splitButtonText" class="font-semibold">Split Subscription</span>
+                        </button>
+                        <button id="testSplitterLatencyButton" class="hidden w-full mt-2 flex items-center justify-center gap-2 bg-sky-500 text-white px-4 py-2 rounded-md hover:bg-sky-600 transition-colors duration-200">
+                            <i data-lucide="zap" class="w-5 h-5"></i>
+                            <span class="font-semibold">Test Latency of All Split Groups</span>
                         </button>
                     </div>
 
@@ -246,7 +254,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 22:14:56 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 22:25:03 +0330</p>
         </footer>
     </div>
     
@@ -1883,9 +1891,7 @@
                 button.disabled = false; buttonText.textContent = 'Generate Composed Subscription'; return;
             }
             
-            composedResultText.value = outputContent;
-            composedResultText.setAttribute('data-filename', `PSG-composed-config.${fileExtension}`);
-            composerResultArea.classList.remove('hidden');
+            showComposerResults(finalNodes, outputContent, fileExtension);
             button.disabled = false; buttonText.textContent = 'Generate Composed Subscription';
         }
 
@@ -2013,10 +2019,9 @@
                             </div>
                         </div>
                     `;
-                    splitterResultList.appendChild(resultItem);
                 });
 
-                splitterResultArea.classList.remove('hidden');
+                showSplitterResults(groupedNodes);
 
             } catch (error) {
                 showMessageBox(`Splitting Failed: ${error.message}`);
@@ -2151,6 +2156,200 @@
         configTypeSelect.disabled = false;
         populateComposerSources();
         lucide.createIcons();
+
+        // ====================================================================
+        // REAL-TIME WEBSOCKET LATENCY TESTER LOGIC
+        // ====================================================================
+
+        // --- DOM REFERENCES for Latency Tester ---
+        const testComposerLatencyButton = document.getElementById('testComposerLatencyButton');
+        const testSplitterLatencyButton = document.getElementById('testSplitterLatencyButton');
+
+        // This will store the generated nodes to be tested later
+        let nodesToTestInComposer = [];
+        let nodesToTestInSplitter = {}; // Use an object for splitter groups
+
+        /**
+         * The core function to test latency of a single WebSocket proxy.
+         * @param {object} node - A parsed node object.
+         * @returns {Promise<string|number>} - Resolves with latency in ms or a status string.
+         */
+        function testWebSocketLatency(node) {
+            const p = node.parsed;
+            // We only test nodes that use WebSocket
+            const isVmessWs = p.protocol === 'vmess' && p.net === 'ws';
+            const isVlessWs = p.protocol === 'vless' && p.params?.type === 'ws';
+
+            if (!isVmessWs && !isVlessWs) {
+                return Promise.resolve('N/A');
+            }
+        
+            const serverAddress = p.add || p.hostname;
+            const port = p.port;
+            const path = (p.path || p.params?.path || '/').split('?')[0]; // Sanitize path
+            const isTls = p.tls === 'tls' || p.params?.security === 'tls';
+            const protocol = isTls ? 'wss://' : 'ws://';
+        
+            const wsUrl = `${protocol}${serverAddress}:${port}${path}`;
+            
+            return new Promise(resolve => {
+                const startTime = performance.now();
+                const timeout = setTimeout(() => {
+                    if (socket.readyState !== WebSocket.OPEN) {
+                       socket.close();
+                       resolve('Timeout');
+                    }
+                }, 3000); // 3-second timeout
+        
+                let socket;
+                try {
+                    socket = new WebSocket(wsUrl);
+                } catch (e) {
+                    clearTimeout(timeout);
+                    resolve('Invalid');
+                    return;
+                }
+        
+                socket.onopen = () => {
+                    const endTime = performance.now();
+                    clearTimeout(timeout);
+                    socket.close();
+                    resolve(Math.round(endTime - startTime)); // Latency in ms
+                };
+        
+                socket.onerror = (err) => {
+                    clearTimeout(timeout);
+                    resolve('Failed');
+                };
+            });
+        }
+        
+        // --- Logic for Composer Latency Test ---
+
+        // Modify the composer's result display to store nodes and add a placeholder for latency
+        function showComposerResults(finalNodes, outputContent, fileExtension) {
+            composedResultText.value = outputContent;
+            composedResultText.setAttribute('data-filename', `PSG-composed-config.${fileExtension}`);
+            composerResultArea.classList.remove('hidden');
+            
+            // Show the latency test button if there are nodes
+            if (finalNodes.length > 0) {
+                testComposerLatencyButton.classList.remove('hidden');
+                nodesToTestInComposer = finalNodes; // Store nodes for testing
+            } else {
+                testComposerLatencyButton.classList.add('hidden');
+            }
+        }
+        
+        testComposerLatencyButton.addEventListener('click', async (e) => {
+            const button = e.currentTarget;
+            button.disabled = true;
+            button.querySelector('span').textContent = 'Testing...';
+
+            // To display results, we'll append them to the textarea
+            composedResultText.value += '\n\n--- LATENCY TEST RESULTS ---\n';
+            
+            for (const node of nodesToTestInComposer) {
+                const latency = await testWebSocketLatency(node);
+                const nodeName = node.name || 'Unnamed';
+                let resultText = 'N/A';
+                
+                if (typeof latency === 'number') {
+                    resultText = `${latency} ms`;
+                } else if (latency !== 'N/A') {
+                    resultText = latency; // e.g., "Failed", "Timeout"
+                }
+                
+                if (resultText !== 'N/A') {
+                   composedResultText.value += `${nodeName}: ${resultText}\n`;
+                   // Scroll to the bottom to show progress
+                   composedResultText.scrollTop = composedResultText.scrollHeight;
+                }
+            }
+
+            composedResultText.value += '--- TEST COMPLETE ---';
+            composedResultText.scrollTop = composedResultText.scrollHeight;
+            button.disabled = false;
+            button.querySelector('span').textContent = 'Test Latency';
+        });
+
+
+        // --- Logic for Splitter Latency Test ---
+
+        // Modify the splitter's result display to store nodes and add a placeholder for latency
+        function showSplitterResults(groupedNodes) {
+             splitterResultList.innerHTML = '';
+             nodesToTestInSplitter = groupedNodes; // Store the grouped nodes
+
+             Object.entries(groupedNodes).sort((a,b) => a[0].localeCompare(b[0])).forEach(([groupName, groupNodes]) => {
+                const nodeCount = groupNodes.length;
+                const base64Content = btoa(groupNodes.map(n => n.uri).join('\n'));
+                const dataUri = `data:text/plain;base64,${base64Content}`;
+                let displayName = groupName;
+                if (document.querySelector('input[name="split_strategy"]:checked').value === 'country' && groupName !== 'Unknown') {
+                    displayName = `${getFlagEmoji(groupName)} ${getCountryName(groupName)}`;
+                } else if (document.querySelector('input[name="split_strategy"]:checked').value === 'protocol') {
+                    displayName = formatDisplayName(groupName);
+                }
+
+                const resultItem = document.createElement('div');
+                resultItem.className = 'bg-white border rounded-lg p-3';
+                resultItem.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <div class="font-semibold text-slate-800">${displayName} <span class="text-sm text-slate-500 font-normal">(${nodeCount} nodes)</span></div>
+                        <div class="flex items-center gap-2">
+                            <button class="splitter-copy-btn p-2 rounded-md bg-indigo-50 text-indigo-700 hover:bg-indigo-100" title="Copy Data URI" data-uri="${dataUri}">
+                                <i data-lucide="copy" class="h-5 w-5"></i>
+                            </button>
+                            <div class="splitter-qr-btn p-2 rounded-md bg-slate-100 hover:bg-slate-200" title="Show QR Code">
+                                <i data-lucide="qr-code" class="h-5 w-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latency-results-container text-xs text-slate-500 mt-2 pl-1" data-group-name="${groupName}"></div>
+                `;
+                splitterResultList.appendChild(resultItem);
+            });
+            splitterResultArea.classList.remove('hidden');
+            testSplitterLatencyButton.classList.remove('hidden');
+        }
+
+        testSplitterLatencyButton.addEventListener('click', async (e) => {
+            const button = e.currentTarget;
+            button.disabled = true;
+            button.querySelector('span').textContent = 'Testing... (This may take a while)';
+
+            for (const groupName in nodesToTestInSplitter) {
+                const groupNodes = nodesToTestInSplitter[groupName];
+                const resultsContainer = document.querySelector(`.latency-results-container[data-group-name="${groupName}"]`);
+                if (resultsContainer) {
+                    resultsContainer.innerHTML = 'Testing...';
+                    let resultsHTML = '<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-1 mt-1">';
+                    let testedCount = 0;
+                    
+                    for (const node of groupNodes) {
+                        const latency = await testWebSocketLatency(node);
+                        if (typeof latency === 'number') {
+                            testedCount++;
+                            resultsHTML += `<div>${node.name.substring(0, 20)}...: <span class="font-semibold text-green-600">${latency}ms</span></div>`;
+                        } else if (latency !== 'N/A') {
+                             testedCount++;
+                             resultsHTML += `<div>${node.name.substring(0, 20)}...: <span class="font-semibold text-red-500">${latency}</span></div>`;
+                        }
+                    }
+                    resultsHTML += '</div>';
+                    
+                    if (testedCount > 0) {
+                        resultsContainer.innerHTML = resultsHTML;
+                    } else {
+                        resultsContainer.innerHTML = 'No compatible (WebSocket) nodes to test in this group.';
+                    }
+                }
+            }
+
+            button.disabled = false;
+            button.querySelector('span').textContent = 'Test Latency of All Split Groups';
+        });
     });
     </script>
 </body>
