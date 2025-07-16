@@ -1177,6 +1177,7 @@ function generate_full_html(
             if (!response.ok) throw new Error('Could not fetch Clash template.');
             let templateContent = await response.text();
             
+            // 1. Convert all parsed nodes into the correct Clash JSON object format
             const proxyDetails = nodes.map(node => {
                 const p = node.parsed;
                 let clashNode = null;
@@ -1186,13 +1187,23 @@ function generate_full_html(
                     case 'trojan': clashNode = { type: 'trojan', name: p.hash, server: p.hostname, port: p.port, password: p.username, udp: true, sni: p.params.sni }; break;
                     case 'ss': clashNode = { type: 'ss', name: p.hash, server: p.hostname, port: p.port, cipher: p.encryption_method, password: p.password, udp: true }; break;
                 }
+                // Clean up any undefined properties from the final object
+                if (clashNode) {
+                    Object.keys(clashNode).forEach(key => clashNode[key] === undefined && delete clashNode[key]);
+                }
                 return clashNode;
             }).filter(Boolean);
 
-            const proxiesYAML = jsyaml.dump(proxyDetails, { indent: 2, noArrayIndent: true }).trim();
-            const proxyNamesYAML = proxyDetails.map(p => `      - ${p.name}`).join('\n');
-            templateContent = templateContent.replace('##PROXIES##', proxiesYAML);
+            // 2. Format the proxies section as single-line JSON strings
+            const proxiesJSONLines = proxyDetails.map(p => `  - ${JSON.stringify(p)}`).join('\n');
+
+            // 3. Format the proxy names for the proxy-group
+            const proxyNamesYAML = proxyDetails.map(p => `      - '${p.name.replace(/'/g, "''")}'`).join('\n'); // Safely quote names
+
+            // 4. Replace placeholders
+            templateContent = templateContent.replace('##PROXIES##', proxiesJSONLines);
             templateContent = templateContent.replace('##PROXY_NAMES##', proxyNamesYAML);
+            
             return templateContent;
         }
         
