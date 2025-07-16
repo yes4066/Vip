@@ -91,7 +91,6 @@
                 "direct",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
-                "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 4",
                 "🇬🇧 GB | 🟢 | vless | @farahvpn | 19",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
@@ -102,8 +101,9 @@
                 "🇷🇺 RU | 🟢 | vless | @kanfig_majani | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇨🇿 CZ | 🟢 | vless | @outlinev2rayng | 12",
+                "🇩🇪 DE | 🟢 | vless | @outline_ir | 17",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
+                "🇨🇿 CZ | 🟢 | vless | @prrofile_purple | 130",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇳🇱 NL | 🟢 | vless | @v2aryng_vpn | 10",
                 "🇨🇿 CZ | 🟢 | vless | @v2pedia | 20",
@@ -125,7 +125,7 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇫🇷 FR | 🟢 | vless | @v2rayngrit | 15",
+                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "❔ XX | 🟢 | vless | @kesslervpn | 2"
@@ -138,7 +138,6 @@
             "outbounds": [
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
-                "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 4",
                 "🇬🇧 GB | 🟢 | vless | @farahvpn | 19",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
@@ -149,8 +148,9 @@
                 "🇷🇺 RU | 🟢 | vless | @kanfig_majani | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇨🇿 CZ | 🟢 | vless | @outlinev2rayng | 12",
+                "🇩🇪 DE | 🟢 | vless | @outline_ir | 17",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
+                "🇨🇿 CZ | 🟢 | vless | @prrofile_purple | 130",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇳🇱 NL | 🟢 | vless | @v2aryng_vpn | 10",
                 "🇨🇿 CZ | 🟢 | vless | @v2pedia | 20",
@@ -172,7 +172,7 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇫🇷 FR | 🟢 | vless | @v2rayngrit | 15",
+                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "❔ XX | 🟢 | vless | @kesslervpn | 2"
@@ -230,33 +230,6 @@
                     "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
                     "short_id": ""
                 }
-            }
-        },
-        {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 4",
-            "type": "vless",
-            "server": "194.182.79.72",
-            "server_port": 32826,
-            "uuid": "2dc62e43-90f5-4d72-815b-c64b40d19088",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "viVxJfUpCBYia6ZwmuHkuS19C1ARC3OCaaRG9VvOIhg",
-                    "short_id": "e8f24f79"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON"
             }
         },
         {
@@ -498,16 +471,16 @@
             }
         },
         {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @outlinev2rayng | 12",
+            "tag": "🇩🇪 DE | 🟢 | vless | @outline_ir | 17",
             "type": "vless",
-            "server": "194.182.79.70",
-            "server_port": 31516,
-            "uuid": "6fc3195e-e1ad-4e1b-8552-ac88e2780364",
+            "server": "185.127.94.27",
+            "server_port": 8443,
+            "uuid": "2d37cd89-d6e5-4d58-a688-8b0208a48e6e",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "sourceforge.net",
+                "server_name": "drive.google.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -515,13 +488,9 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "tUuTbwQPiJSQXexLrOXTo6DsoOsXw_TTRSormnX8emk",
-                    "short_id": "5f3c96"
+                    "public_key": "BG0noERXu_3wOPcZOeu9vl35QIFilTAWFXMZx-nzpVY",
+                    "short_id": "58b2fc"
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON"
             }
         },
         {
@@ -545,6 +514,33 @@
                     "public_key": "z--KbBlQtkBgTcrtdBJeGeCymIrLdaUDwkb44pAp6nY",
                     "short_id": "4c"
                 }
+            }
+        },
+        {
+            "tag": "🇨🇿 CZ | 🟢 | vless | @prrofile_purple | 130",
+            "type": "vless",
+            "server": "194.182.79.64",
+            "server_port": 14073,
+            "uuid": "8b39daa8-01e0-4054-8271-0630cd517f10",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "k8x94p4pxXmLjNWkgLRsdi_raiVGIX0EPGyP70CyBVs",
+                    "short_id": "f11c49ff"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
             }
         },
         {
@@ -1075,7 +1071,7 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | vless | @v2rayngrit | 15",
+            "tag": "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
             "type": "vless",
             "server": "amazon-4.cristiano.name.ng",
             "server_port": 443,
