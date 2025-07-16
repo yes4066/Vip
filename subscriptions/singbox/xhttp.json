@@ -91,7 +91,6 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 8",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 13",
-                "🇳🇱 NL | 🟢 | vless | @config_proxy | 67",
                 "🇺🇸 US | 🔴 | vless | @configfa | 11",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -120,7 +119,7 @@
                 "🇺🇸 US | 🟢 | vless | @proxie | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 10",
-                "🇺🇸 US | 🔴 | vless | @proxygodratmand | 7",
+                "🇺🇸 US | 🔴 | vless | @proxygodratmand | 6",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
@@ -187,7 +186,6 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 8",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 13",
-                "🇳🇱 NL | 🟢 | vless | @config_proxy | 67",
                 "🇺🇸 US | 🔴 | vless | @configfa | 11",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 4",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -216,7 +214,7 @@
                 "🇺🇸 US | 🟢 | vless | @proxie | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 10",
-                "🇺🇸 US | 🔴 | vless | @proxygodratmand | 7",
+                "🇺🇸 US | 🔴 | vless | @proxygodratmand | 6",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
@@ -301,29 +299,6 @@
             "uuid": "8db68448-6ebb-4361-bcbe-519a1f20fca1",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @config_proxy | 67",
-            "type": "vless",
-            "server": "v2raybluecrystal.v2raybluecrystal.dynv6.net",
-            "server_port": 80,
-            "uuid": "e5c3ce9a-91a7-45f0-a526-2d01c028e9cb",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "0cGE8r11iI_iAWgLyvUvt8kAKuUpEMP6xU4ZSkco8Q8",
-                    "short_id": "ebfef96e18"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @configfa | 11",
@@ -633,7 +608,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @proxygodratmand | 7",
+            "tag": "🇺🇸 US | 🔴 | vless | @proxygodratmand | 6",
             "type": "vless",
             "server": "sjdsnsj.varzesh3.com.tr",
             "server_port": 80,

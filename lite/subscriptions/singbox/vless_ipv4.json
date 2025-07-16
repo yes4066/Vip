@@ -126,6 +126,7 @@
                 "🇮🇷 IR | 🔴 | vless | @ghotb_scarf | 9",
                 "🇮🇷 IR | 🔴 | vless | @goldenvpn_v2rayy | 3",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇺🇸 US | 🟢 | vless | @hope_net | 19",
                 "🇮🇷 IR | 🔴 | vless | @hormozvpn | 3",
                 "🇮🇷 IR | 🔴 | vless | @hoshmasnoiyfarsi | 13",
                 "🇺🇸 US | 🔴 | vless | @icv2ray | 9",
@@ -193,6 +194,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇫🇷 FR | 🟢 | vless | @vlessconfig | 16",
+                "🇺🇸 US | 🟢 | vless | @vmess_ir | 17",
                 "🇫🇮 FI | 🔴 | vless | @vpn_ioss | 18",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -245,6 +247,7 @@
                 "🇮🇷 IR | 🔴 | vless | @ghotb_scarf | 9",
                 "🇮🇷 IR | 🔴 | vless | @goldenvpn_v2rayy | 3",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇺🇸 US | 🟢 | vless | @hope_net | 19",
                 "🇮🇷 IR | 🔴 | vless | @hormozvpn | 3",
                 "🇮🇷 IR | 🔴 | vless | @hoshmasnoiyfarsi | 13",
                 "🇺🇸 US | 🔴 | vless | @icv2ray | 9",
@@ -312,6 +315,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇫🇷 FR | 🟢 | vless | @vlessconfig | 16",
+                "🇺🇸 US | 🟢 | vless | @vmess_ir | 17",
                 "🇫🇮 FI | 🔴 | vless | @vpn_ioss | 18",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -1000,6 +1004,31 @@
                     "enabled": true,
                     "public_key": "YqHW8a4iAc1SZYpTrFVoOQg1F3yAdX1tWXuROZUCsEU",
                     "short_id": "6ba85179e30d4fc2"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @hope_net | 19",
+            "type": "vless",
+            "server": "151.101.66.133",
+            "server_port": 443,
+            "uuid": "2801c04f-b57d-4eb1-9f60-036f320eff97",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "mio.splashthat.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/CANALTELEGRAM--@jet_config--CANALTELEGRAM--@jet_config",
+                "headers": {
+                    "Host": "mio.splashthat.com"
                 }
             }
         },
@@ -2201,6 +2230,31 @@
                 "path": "/telegram-channel-vlessconfig",
                 "headers": {
                     "Host": "trojan.burgerip.co.uk"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @vmess_ir | 17",
+            "type": "vless",
+            "server": "104.16.243.59",
+            "server_port": 443,
+            "uuid": "75fde681-ec64-4654-86fa-30732e8e179c",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "NGINX.NSCl.IR",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/assets",
+                "headers": {
+                    "Host": "NGINX.NSCl.IR"
                 }
             }
         },
