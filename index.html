@@ -300,7 +300,7 @@
                     <a href="https://x.com/yebekhe" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 transition-colors" title="X (Twitter)"><i data-lucide="twitter" class="h-5 w-5"></i></a>
                 </div>
             </div>
-            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 23:11:15 +0330</p>
+            <p id="lastGenerated" class="text-xs text-slate-400 mt-4">Last Generated: 2025-07-16 23:20:36 +0330</p>
         </footer>
     </div>
     
@@ -1381,6 +1381,19 @@
         const copyComposedButton = document.getElementById('copyComposedButton');
         const downloadComposedButton = document.getElementById('downloadComposedButton');
 
+        // --- DOM REFERENCES for Compiler ---
+        const compilerModeButton = document.getElementById('compilerModeButton');
+        const compilerModeContainer = document.getElementById('compilerModeContainer');
+        const compilerInputFormat = document.getElementById('compilerInputFormat');
+        const compilerOutputFormat = document.getElementById('compilerOutputFormat');
+        const compilerInputText = document.getElementById('compilerInputText');
+        const convertButton = document.getElementById('convertButton');
+        const compilerResultArea = document.getElementById('compilerResultArea');
+        const compilerResultTitle = document.getElementById('compilerResultTitle');
+        const compilerResultText = document.getElementById('compilerResultText');
+        const copyConvertedButton = document.getElementById('copyConvertedButton');
+        const downloadConvertedButton = document.getElementById('downloadConvertedButton');
+
         let charts = {};
 
         // --- UTILITY FUNCTIONS ---
@@ -2247,18 +2260,7 @@
         // PROXY CROSS-COMPILER LOGIC
         // ====================================================================
 
-        // --- DOM REFERENCES for Compiler ---
-        const compilerModeButton = document.getElementById('compilerModeButton');
-        const compilerModeContainer = document.getElementById('compilerModeContainer');
-        const compilerInputFormat = document.getElementById('compilerInputFormat');
-        const compilerOutputFormat = document.getElementById('compilerOutputFormat');
-        const compilerInputText = document.getElementById('compilerInputText');
-        const convertButton = document.getElementById('convertButton');
-        const compilerResultArea = document.getElementById('compilerResultArea');
-        const compilerResultTitle = document.getElementById('compilerResultTitle');
-        const compilerResultText = document.getElementById('compilerResultText');
-        const copyConvertedButton = document.getElementById('copyConvertedButton');
-        const downloadConvertedButton = document.getElementById('downloadConvertedButton');
+        
 
         // --- Event Listeners for Compiler ---
         compilerModeButton.addEventListener('click', () => {
