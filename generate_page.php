@@ -725,6 +725,19 @@ function generate_full_html(
         const copyComposedButton = document.getElementById('copyComposedButton');
         const downloadComposedButton = document.getElementById('downloadComposedButton');
 
+        // --- DOM REFERENCES for Compiler ---
+        const compilerModeButton = document.getElementById('compilerModeButton');
+        const compilerModeContainer = document.getElementById('compilerModeContainer');
+        const compilerInputFormat = document.getElementById('compilerInputFormat');
+        const compilerOutputFormat = document.getElementById('compilerOutputFormat');
+        const compilerInputText = document.getElementById('compilerInputText');
+        const convertButton = document.getElementById('convertButton');
+        const compilerResultArea = document.getElementById('compilerResultArea');
+        const compilerResultTitle = document.getElementById('compilerResultTitle');
+        const compilerResultText = document.getElementById('compilerResultText');
+        const copyConvertedButton = document.getElementById('copyConvertedButton');
+        const downloadConvertedButton = document.getElementById('downloadConvertedButton');
+
         let charts = {};
 
         // --- UTILITY FUNCTIONS ---
@@ -1591,18 +1604,7 @@ function generate_full_html(
         // PROXY CROSS-COMPILER LOGIC
         // ====================================================================
 
-        // --- DOM REFERENCES for Compiler ---
-        const compilerModeButton = document.getElementById('compilerModeButton');
-        const compilerModeContainer = document.getElementById('compilerModeContainer');
-        const compilerInputFormat = document.getElementById('compilerInputFormat');
-        const compilerOutputFormat = document.getElementById('compilerOutputFormat');
-        const compilerInputText = document.getElementById('compilerInputText');
-        const convertButton = document.getElementById('convertButton');
-        const compilerResultArea = document.getElementById('compilerResultArea');
-        const compilerResultTitle = document.getElementById('compilerResultTitle');
-        const compilerResultText = document.getElementById('compilerResultText');
-        const copyConvertedButton = document.getElementById('copyConvertedButton');
-        const downloadConvertedButton = document.getElementById('downloadConvertedButton');
+        
 
         // --- Event Listeners for Compiler ---
         compilerModeButton.addEventListener('click', () => {
