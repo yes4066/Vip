@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
+                "🇨🇳 CN | 🟢 | ss | @hope_net | 19",
                 "🇸🇬 SG | 🟢 | ss | @meli_proxyy | 20",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
@@ -109,6 +110,7 @@
             "interval": "10m",
             "outbounds": [
                 "❔ XX | 🟢 | ss | @chestertm | 12",
+                "🇨🇳 CN | 🟢 | ss | @hope_net | 19",
                 "🇸🇬 SG | 🟢 | ss | @meli_proxyy | 20",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 4",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
@@ -137,6 +139,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "W74XFALLLuw6m5IA"
+        },
+        {
+            "tag": "🇨🇳 CN | 🟢 | ss | @hope_net | 19",
+            "type": "shadowsocks",
+            "server": "w72tapyb.slashdevslashnetslashtun.net",
+            "server_port": 18012,
+            "method": "aes-256-gcm",
+            "password": "2T2TOL67SAUD3SME"
         },
         {
             "tag": "🇸🇬 SG | 🟢 | ss | @meli_proxyy | 20",

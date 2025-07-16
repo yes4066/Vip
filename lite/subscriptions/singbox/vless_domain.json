@@ -154,7 +154,6 @@
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇩🇪 DE | 🔴 | vless | @jeyksatan | 16",
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
-                "🇩🇪 DE | 🟢 | vless | @kingofilter | 7",
                 "🇺🇸 US | 🔴 | vless | @kopltall_vpn | 8",
                 "🇺🇸 US | 🔴 | vless | @kurdvpn1 | 4",
                 "🇫🇮 FI | 🔴 | vless | @lakvpn1 | 7",
@@ -204,6 +203,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
+                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 18",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -305,7 +305,6 @@
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇩🇪 DE | 🔴 | vless | @jeyksatan | 16",
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
-                "🇩🇪 DE | 🟢 | vless | @kingofilter | 7",
                 "🇺🇸 US | 🔴 | vless | @kopltall_vpn | 8",
                 "🇺🇸 US | 🔴 | vless | @kurdvpn1 | 4",
                 "🇫🇮 FI | 🔴 | vless | @lakvpn1 | 7",
@@ -355,6 +354,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
+                "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 18",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -1466,29 +1466,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @kingofilter | 7",
-            "type": "vless",
-            "server": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
-            "server_port": 443,
-            "uuid": "1584806e-f63d-4f9b-a0b3-abe64b35a09c",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "GpgfsA-U8Y8M3LRcTfsaBViDtp2VlN5riSLLZ2kxEiQ",
-                    "short_id": "974a74bf"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @kopltall_vpn | 8",
             "type": "vless",
             "server": "www.speedtest.net",
@@ -2277,6 +2254,29 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2rayng_fars | 18",
+            "type": "vless",
+            "server": "PARMIS.CROCODILESERVER.IR",
+            "server_port": 443,
+            "uuid": "8353df77-8e39-426f-ac44-bb12ae192f99",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "sw.crocodileserver.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "bNqWVghgIlng83CQFziNhIA8TTKUFsv0gHkVxbBOmh8",
+                    "short_id": "1da8d08f24e92861"
                 }
             }
         },
