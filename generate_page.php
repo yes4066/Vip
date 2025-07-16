@@ -1399,17 +1399,63 @@ function generate_full_html(
             }
         });
 
-        // Add event listener to the simple mode button to ensure splitter is hidden
+        // --- EVENT LISTENERS ---
+
+        // Helper function to manage tab styling robustly
+        function setActiveTab(activeButton) {
+            const allButtons = [simpleModeButton, composerModeButton, splitterModeButton];
+            allButtons.forEach(button => {
+                button.classList.remove('mode-button-active');
+                button.classList.add('mode-button-inactive');
+            });
+            activeButton.classList.remove('mode-button-inactive');
+            activeButton.classList.add('mode-button-active');
+        }
+
         simpleModeButton.addEventListener('click', () => {
+            // Set active tab style
+            setActiveTab(simpleModeButton);
+
+            // Manage container visibility
+            simpleModeContainer.classList.remove('hidden');
+            composerModeContainer.classList.add('hidden');
             splitterModeContainer.classList.add('hidden');
-        });
-        composerModeButton.addEventListener('click', () => {
-             splitterModeContainer.classList.add('hidden');
+            
+            // Manage result area visibility
+            composerResultArea.classList.add('hidden');
+            splitterResultArea.classList.add('hidden');
+            // 'resultArea' visibility is handled by other logic, so we leave it alone.
         });
 
-        // --- EVENT LISTENERS ---
-        simpleModeButton.addEventListener('click', () => { simpleModeContainer.classList.remove('hidden'); composerModeContainer.classList.add('hidden'); composerResultArea.classList.add('hidden'); simpleModeButton.classList.replace('mode-button-inactive', 'mode-button-active'); composerModeButton.classList.replace('mode-button-active', 'mode-button-inactive'); });
-        composerModeButton.addEventListener('click', () => { simpleModeContainer.classList.add('hidden'); composerModeContainer.classList.remove('hidden'); resultArea.classList.add('hidden'); simpleModeButton.classList.replace('mode-button-active', 'mode-button-inactive'); composerModeButton.classList.replace('mode-button-inactive', 'mode-button-active'); });
+        composerModeButton.addEventListener('click', () => {
+            // Set active tab style
+            setActiveTab(composerModeButton);
+
+            // Manage container visibility
+            simpleModeContainer.classList.add('hidden');
+            composerModeContainer.classList.remove('hidden');
+            splitterModeContainer.classList.add('hidden');
+
+            // Manage result area visibility
+            resultArea.classList.add('hidden');
+            splitterResultArea.classList.add('hidden');
+        });
+        
+        splitterModeButton.addEventListener('click', () => {
+            // Set active tab style
+            setActiveTab(splitterModeButton);
+
+            // Manage container visibility
+            simpleModeContainer.classList.add('hidden');
+            composerModeContainer.classList.add('hidden');
+            splitterModeContainer.classList.remove('hidden');
+
+            // Manage result area visibility
+            resultArea.classList.add('hidden');
+            composerResultArea.classList.add('hidden');
+        });
+
+        // --- ALL OTHER EVENT LISTENERS (UNCHANGED) ---
         configTypeSelect.addEventListener('change', () => { resetSelect(ipTypeSelect, 'Select Client/Core'); resetSelect(otherElementSelect, 'Select Subscription'); searchBar.value = ''; searchBar.disabled = true; resultArea.classList.add('hidden'); if (configTypeSelect.value && structuredData[configTypeSelect.value]) { populateSelect(ipTypeSelect, Object.keys(structuredData[configTypeSelect.value]), 'Select Client/Core'); ipTypeSelect.disabled = false; } });
         ipTypeSelect.addEventListener('change', () => { searchBar.value = ''; if (ipTypeSelect.value) { updateClientInfo(ipTypeSelect.value); resultArea.classList.remove('hidden'); subscriptionDetailsContainer.classList.add('hidden'); searchBar.disabled = false; updateOtherElementOptions(); } else { resultArea.classList.add('hidden'); searchBar.disabled = true; resetSelect(otherElementSelect, 'Select Subscription'); } });
         searchBar.addEventListener('input', updateOtherElementOptions);
@@ -1419,6 +1465,7 @@ function generate_full_html(
         generateCompositionButton.addEventListener('click', handleGenerateComposition);
         copyComposedButton.addEventListener('click', () => { navigator.clipboard.writeText(composedResultText.value).then(() => showMessageBox('Copied to clipboard!')); });
         downloadComposedButton.addEventListener('click', () => { const blob = new Blob([composedResultText.value], { type: 'text/plain' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = composedResultText.dataset.filename || 'psg-config.txt'; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url); });
+
 
         // --- INITIALIZATION ---
         populateSelect(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
