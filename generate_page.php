@@ -1183,7 +1183,7 @@ function generate_full_html(
             return templateContent;
         }
         
-        async function generateSingboxOutput(nodes) {
+                async function generateSingboxOutput(nodes) {
             const templateURL = 'https://raw.githubusercontent.com/itsyebekhe/PSG/main/templates/structure.json';
             const response = await fetch(templateURL);
             if (!response.ok) throw new Error('Could not fetch Sing-box template.');
@@ -1194,16 +1194,54 @@ function generate_full_html(
             const outbounds = nodes.map(node => {
                 const p = node.parsed;
                 let singboxNode = null;
-                switch (p.protocol) {
-                    case 'vmess': singboxNode = { tag: p.ps, type: 'vmess', server: p.add, server_port: parseInt(p.port), uuid: p.id, alter_id: parseInt(p.aid), security: 'auto', transport: p.net ? { type: p.net, path: p.path.split('?')[0], headers: { Host: p.host } } : undefined }; break;
-                    case 'vless': 
-                        const transport = p.params.type ? { type: p.params.type, path: p.params.path } : undefined;
-                        const tls = (p.params.security === 'tls' || p.params.security === 'reality') ? { enabled: true, server_name: p.params.sni, reality: p.params.security === 'reality' ? { enabled: true, public_key: p.params.pbk, short_id: p.params.sid } : undefined } : undefined;
-                        singboxNode = { tag: p.hash, type: 'vless', server: p.hostname, server_port: p.port, uuid: p.username, transport, tls }; break;
-                    case 'trojan': singboxNode = { tag: p.hash, type: 'trojan', server: p.hostname, server_port: p.port, password: p.username }; break;
-                    case 'ss': singboxNode = { tag: p.hash, type: 'shadowsocks', server: p.hostname, server_port: p.port, method: p.encryption_method, password: p.password }; break;
+                
+                // --- THIS IS THE NEW, ADVANCED TRANSPORT LOGIC ---
+                let transport = null;
+                const transportType = p.net || p.params?.type;
+                if (transportType) {
+                    transport = { type: transportType };
+                    switch (transportType) {
+                        case 'ws':
+                        case 'http': // Often just called 'ws' in vmess links, but can be http
+                            transport.path = (p.path || p.params?.path || '/').split('?')[0];
+                            transport.headers = { Host: p.host || p.params?.host || p.hostname };
+                            break;
+                        case 'quic':
+                            // QUIC doesn't have extra path/host params in the same way
+                            break;
+                        case 'grpc':
+                            transport.service_name = p.params?.serviceName || '';
+                            break;
+                        case 'httpupgrade':
+                             transport.path = p.params?.path || '/';
+                             transport.headers = { Host: p.params?.host || p.hostname };
+                             break;
+                    }
                 }
+                
+                switch (p.protocol) {
+                    case 'vmess': 
+                        singboxNode = { tag: p.ps, type: 'vmess', server: p.add, server_port: parseInt(p.port), uuid: p.id, alter_id: parseInt(p.aid), security: 'auto' };
+                        break;
+                    case 'vless': 
+                        const tls = (p.params?.security === 'tls' || p.params?.security === 'reality') ? { enabled: true, server_name: p.params.sni, reality: p.params.security === 'reality' ? { enabled: true, public_key: p.params.pbk, short_id: p.params.sid } : undefined } : undefined;
+                        singboxNode = { tag: p.hash, type: 'vless', server: p.hostname, server_port: p.port, uuid: p.username, tls }; 
+                        break;
+                    case 'trojan': 
+                        singboxNode = { tag: p.hash, type: 'trojan', server: p.hostname, server_port: p.port, password: p.username }; 
+                        break;
+                    case 'ss': 
+                        singboxNode = { tag: p.hash, type: 'shadowsocks', server: p.hostname, server_port: p.port, method: p.encryption_method, password: p.password }; 
+                        break;
+                }
+                
+                // If a node was created, attach the transport object
+                if (singboxNode && transport) {
+                    singboxNode.transport = transport;
+                }
+                
                 return singboxNode;
+
             }).filter(Boolean);
 
             const urlTestGroup = templateJson.outbounds.find(o => o.tag === 'auto');
