@@ -392,7 +392,6 @@
     "configshubplus": {
         "types": [
             "vless",
-            "ss",
             "vmess"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
@@ -552,16 +551,6 @@
         "title": "DashV2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/dashv2ray.jpg"
     },
-    "deamnet_proxy": {
-        "types": [
-            "vmess",
-            "vless",
-            "ss",
-            "trojan"
-        ],
-        "title": "DeamNet_proxy",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/deamnet_proxy.jpg"
-    },
     "deli_servers": {
         "types": [
             "vless"
@@ -659,8 +648,7 @@
     },
     "entrynet": {
         "types": [
-            "vless",
-            "trojan"
+            "vless"
         ],
         "title": ".::entryNET::. Free v2ray vpn &amp; proxy | وی پی ان و پروکسی رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/entrynet.jpg"
@@ -933,9 +921,8 @@
     },
     "freeconfigsplus": {
         "types": [
-            "vless",
             "ss",
-            "vmess"
+            "vless"
         ],
         "title": "CONFIGS",
         "logo": ""
@@ -1225,7 +1212,6 @@
     },
     "hope_net": {
         "types": [
-            "trojan",
             "vless"
         ],
         "title": "🕊 Hope Net",
@@ -1924,7 +1910,6 @@
     },
     "mowjproxy": {
         "types": [
-            "ss",
             "vmess",
             "vless"
         ],
@@ -2201,9 +2186,8 @@
     },
     "outline_ir": {
         "types": [
-            "trojan",
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "سرور اوتلاین ا سرور V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outline_ir.jpg"
@@ -2232,7 +2216,8 @@
     },
     "outlinev2rayng": {
         "types": [
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outlinev2rayng.jpg"
@@ -3041,10 +3026,10 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vless",
-            "ss",
             "vmess",
-            "trojan"
+            "ss",
+            "trojan",
+            "vless"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
@@ -3460,7 +3445,7 @@
     "v2rayweb": {
         "types": [
             "vless",
-            "vmess"
+            "trojan"
         ],
         "title": "V2ray | VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayweb.jpg"
@@ -3790,8 +3775,8 @@
     "vpn_ioss": {
         "types": [
             "vless",
-            "vmess",
             "ss",
+            "vmess",
             "trojan"
         ],
         "title": "کانفیگ سرور V2rayng🔐",
