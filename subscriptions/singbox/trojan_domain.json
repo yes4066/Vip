@@ -89,12 +89,12 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 63",
+                "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 66",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
-                "❔ XX | 🟢 | trojan | @jiedianf | 4",
+                "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 6",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
@@ -103,7 +103,8 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
-                "❔ XX | 🔴 | trojan | @v2trayproxy | 11",
+                "🇻🇳 VN | 🔴 | trojan | @v2source | 16",
+                "❔ XX | 🔴 | trojan | @v2trayproxy | 10",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -113,12 +114,12 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 63",
+                "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 66",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
-                "❔ XX | 🟢 | trojan | @jiedianf | 4",
+                "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 6",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 7",
@@ -127,7 +128,8 @@
                 "🇺🇸 US | 🟢 | trojan | @teamvpnpro | 3",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "❔ XX | 🟢 | trojan | @v2rayngconfig | 41",
-                "❔ XX | 🔴 | trojan | @v2trayproxy | 11",
+                "🇻🇳 VN | 🔴 | trojan | @v2source | 16",
+                "❔ XX | 🔴 | trojan | @v2trayproxy | 10",
                 "❔ XX | 🟢 | trojan | @xrayzxn | 4",
                 "🇨🇳 CN | 🟢 | trojan | @zdyz2 | 5"
             ],
@@ -141,14 +143,14 @@
             "type": "direct"
         },
         {
-            "tag": "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 63",
+            "tag": "🇭🇰 HK | 🟢 | trojan | @NamiraNet | 66",
             "type": "trojan",
-            "server": "ni.mjt000.com",
+            "server": "usla.mjt000.com",
             "server_port": 443,
-            "password": "172b2279-f7f5-4542-ab6c-9e96ad7dd5be",
+            "password": "e4af2638-bb12-4e4a-84f1-a032e23ca63f",
             "tls": {
                 "enabled": true,
-                "server_name": "ni.mjt000.com",
+                "server_name": "usla.mjt000.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -230,7 +232,7 @@
             }
         },
         {
-            "tag": "❔ XX | 🟢 | trojan | @jiedianf | 4",
+            "tag": "❔ XX | 🟢 | trojan | @jiedianf | 3",
             "type": "trojan",
             "server": "e312e558-sxusg0-t3f7qr-141tv.cu.plebai.net",
             "server_port": 15229,
@@ -406,7 +408,23 @@
             }
         },
         {
-            "tag": "❔ XX | 🔴 | trojan | @v2trayproxy | 11",
+            "tag": "🇻🇳 VN | 🔴 | trojan | @v2source | 16",
+            "type": "trojan",
+            "server": "cmc6.5gsieuvip.vn",
+            "server_port": 443,
+            "password": "34ec6bdf-602c-4bbe-933a-5c0823524201",
+            "tls": {
+                "enabled": true,
+                "server_name": "cmc6.5gsieuvip.vn",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | trojan | @v2trayproxy | 10",
             "type": "trojan",
             "server": "0RiSuJPsug",
             "server_port": 0,

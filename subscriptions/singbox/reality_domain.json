@@ -134,7 +134,7 @@
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
-                "🇸🇪 SE | 🟢 | vless | @proxy_mtproto_vpns_free | 13",
+                "🇸🇪 SE | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 5",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 7",
                 "❔ XX | 🟢 | vless | @proxysudo | 1",
@@ -162,7 +162,6 @@
                 "🇫🇮 FI | 🟢 | vless | @v2rayvpn2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
-                "🇳🇱 NL | 🟢 | vless | @v2source | 16",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -232,7 +231,7 @@
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
-                "🇸🇪 SE | 🟢 | vless | @proxy_mtproto_vpns_free | 13",
+                "🇸🇪 SE | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 5",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 7",
                 "❔ XX | 🟢 | vless | @proxysudo | 1",
@@ -260,7 +259,6 @@
                 "🇫🇮 FI | 🟢 | vless | @v2rayvpn2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
-                "🇳🇱 NL | 🟢 | vless | @v2source | 16",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -1411,7 +1409,7 @@
             }
         },
         {
-            "tag": "🇸🇪 SE | 🟢 | vless | @proxy_mtproto_vpns_free | 13",
+            "tag": "🇸🇪 SE | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
             "type": "vless",
             "server": "se.panelmarzban.com",
             "server_port": 3039,
@@ -2075,29 +2073,6 @@
                     "enabled": true,
                     "public_key": "COh8PaOebru8HlshEfNEN3_6pXREyUPQvyLWfX0zT3Y",
                     "short_id": "5e"
-                }
-            }
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @v2source | 16",
-            "type": "vless",
-            "server": "yofree.top",
-            "server_port": 443,
-            "uuid": "45fc8a9c-62d3-11f0-9a4c-52540015866d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yofree.top",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "AWyicEDYi7KB3qzo8OEvEd1HK0gZhCHAENBd_buyhQk",
-                    "short_id": "fa2f"
                 }
             }
         },
