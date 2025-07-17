@@ -115,7 +115,7 @@
                 "❔ XX | 🟢 | vless | @eleutheriavpn | 1",
                 "🇺🇸 US | 🔴 | vless | @elfv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
-                "🇨🇦 CA | 🔴 | vless | @elitevpnv2 | 9",
+                "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 21",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 3",
@@ -170,7 +170,6 @@
                 "❔ XX | 🔴 | vless | @mtpv2ray | 8",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
-                "🇮🇷 IR | 🔴 | vless | @netmellianti | 15",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -210,6 +209,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
+                "🇮🇷 IR | 🔴 | vless | @v2source | 19",
                 "🇺🇸 US | 🟢 | vless | @v2trayproxy | 12",
                 "🇮🇷 IR | 🔴 | vless | @vip_vpn_2022 | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
@@ -261,7 +261,7 @@
                 "❔ XX | 🟢 | vless | @eleutheriavpn | 1",
                 "🇺🇸 US | 🔴 | vless | @elfv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
-                "🇨🇦 CA | 🔴 | vless | @elitevpnv2 | 9",
+                "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 21",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 3",
@@ -316,7 +316,6 @@
                 "❔ XX | 🔴 | vless | @mtpv2ray | 8",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
-                "🇮🇷 IR | 🔴 | vless | @netmellianti | 15",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -356,6 +355,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
+                "🇮🇷 IR | 🔴 | vless | @v2source | 19",
                 "🇺🇸 US | 🟢 | vless | @v2trayproxy | 12",
                 "🇮🇷 IR | 🔴 | vless | @vip_vpn_2022 | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
@@ -791,7 +791,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇨🇦 CA | 🔴 | vless | @elitevpnv2 | 9",
+            "tag": "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 9",
             "type": "vless",
             "server": "mtn.venzo.com.tr",
             "server_port": 2095,
@@ -1695,15 +1695,6 @@
             }
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @netmellianti | 15",
-            "type": "vless",
-            "server": "Host.iranservers.space",
-            "server_port": 1020,
-            "uuid": "b999801f-c751-484c-bb04-51e417e4bb7a",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "❔ XX | 🔴 | vless | @next_serverpanel | 4",
             "type": "vless",
             "server": "salar.mohad.sbs",
@@ -2397,6 +2388,15 @@
                     "Host": "confignginxV2rayng.vpncustomize.Website"
                 }
             }
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vless | @v2source | 19",
+            "type": "vless",
+            "server": "ro.dtmezon.com",
+            "server_port": 49750,
+            "uuid": "cef149e8-73a9-4802-8f9e-a51edbdb6889",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🟢 | vless | @v2trayproxy | 12",
