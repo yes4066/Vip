@@ -394,7 +394,7 @@ function generate_full_html(
             <div class="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-200 mb-8 sm:mb-10">
                 
                 <!-- Mode Toggle Buttons -->
-                <div class="flex border-b border-slate-200 mb-6">
+                <div class="flex flex-wrap border-b border-slate-200 mb-6">
                     <button id="simpleModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md -mb-px border mode-button-active">Simple Mode</button>
                     <button id="composerModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">✨ Subscription Composer</button>
                     <button id="splitterModeButton" class="px-4 py-2 text-sm font-semibold rounded-t-md hover:bg-slate-100 mode-button-inactive">✂️ Subscription Splitter</button>
