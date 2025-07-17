@@ -91,8 +91,8 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇸🇬 SG | 🔴 | trojan | @entrynet | 16",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
+                "🇯🇵 JP | 🔴 | trojan | @hope_net | 18",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 4",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -115,6 +115,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇺🇸 US | 🟢 | trojan | @dnsforyou | 8",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 6",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -136,7 +137,6 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 15",
-                "🇺🇸 US | 🟢 | trojan | @v2source | 19",
                 "🇫🇷 FR | 🟢 | trojan | @vpnaloo | 14"
             ],
             "tag": "proxy",
@@ -147,8 +147,8 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇸🇬 SG | 🔴 | trojan | @entrynet | 16",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
+                "🇯🇵 JP | 🔴 | trojan | @hope_net | 18",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 4",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -171,6 +171,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇺🇸 US | 🟢 | trojan | @dnsforyou | 8",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 6",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -192,7 +193,6 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 15",
-                "🇺🇸 US | 🟢 | trojan | @v2source | 19",
                 "🇫🇷 FR | 🟢 | trojan | @vpnaloo | 14"
             ],
             "tag": "auto",
@@ -242,22 +242,6 @@
             }
         },
         {
-            "tag": "🇸🇬 SG | 🔴 | trojan | @entrynet | 16",
-            "type": "trojan",
-            "server": "us01.trojanyyds.xyz",
-            "server_port": 443,
-            "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
-            "tls": {
-                "enabled": true,
-                "server_name": "us01.trojanyyds.xyz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | trojan | @fati_ffx | 1",
             "type": "trojan",
             "server": "t3.teslacdn2.live",
@@ -272,6 +256,13 @@
                     "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "🇯🇵 JP | 🔴 | trojan | @hope_net | 18",
+            "type": "trojan",
+            "server": "jp006.421421.xyz",
+            "server_port": 20230,
+            "password": "b44da489-fc70-4fd0-8997-a83b51f59267"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -649,6 +640,13 @@
             "password": "ziIjOlyGbM"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
+            "type": "trojan",
+            "server": "104.19.86.120",
+            "server_port": 2096,
+            "password": "SSorg"
+        },
+        {
             "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 6",
             "type": "trojan",
             "server": "15.236.173.146",
@@ -982,22 +980,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @v2source | 19",
-            "type": "trojan",
-            "server": "51.81.203.233",
-            "server_port": 443,
-            "password": "2ee85121-31de-4581-a492-eb00f606e392",
-            "tls": {
-                "enabled": true,
-                "server_name": "rs4.freeguard.org",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
