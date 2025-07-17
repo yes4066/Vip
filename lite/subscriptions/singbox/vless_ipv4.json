@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "🇮🇷 IR | 🔴 | vless | @Fr33C0nfig | 49",
+                "🇺🇸 US | 🔴 | vless | @NamiraNet | 65",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇬🇧 GB | 🔴 | vless | @aminaqafarzane | 16",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 2",
@@ -182,6 +183,7 @@
                 "🇫🇮 FI | 🔴 | vless | @v2rayprotocol | 12",
                 "🇩🇪 DE | 🔴 | vless | @v2rayvmess | 17",
                 "🇺🇸 US | 🔴 | vless | @v2rayvx | 4",
+                "🇩🇪 DE | 🔴 | vless | @v2source | 19",
                 "🇺🇸 US | 🟢 | vless | @vaiking_vpn | 0",
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
@@ -205,6 +207,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇮🇷 IR | 🔴 | vless | @Fr33C0nfig | 49",
+                "🇺🇸 US | 🔴 | vless | @NamiraNet | 65",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇬🇧 GB | 🔴 | vless | @aminaqafarzane | 16",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 2",
@@ -297,6 +300,7 @@
                 "🇫🇮 FI | 🔴 | vless | @v2rayprotocol | 12",
                 "🇩🇪 DE | 🔴 | vless | @v2rayvmess | 17",
                 "🇺🇸 US | 🔴 | vless | @v2rayvx | 4",
+                "🇩🇪 DE | 🔴 | vless | @v2source | 19",
                 "🇺🇸 US | 🟢 | vless | @vaiking_vpn | 0",
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
@@ -330,6 +334,22 @@
             "uuid": "a804bb53-7504-4f06-96d8-ff56fb71539d",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @NamiraNet | 65",
+            "type": "vless",
+            "server": "188.114.98.94",
+            "server_port": 8880,
+            "uuid": "89780139-39db-4ae9-adc5-00d9da4bb8b3",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "188.114.98.94"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
@@ -1955,6 +1975,24 @@
                 "path": "/http",
                 "headers": {
                     "Host": "104.16.61.8"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @v2source | 19",
+            "type": "vless",
+            "server": "91.99.167.254",
+            "server_port": 443,
+            "uuid": "04bb5055-bc44-4d21-85c7-42317dd5fd37",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "91.99.167.254",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },
