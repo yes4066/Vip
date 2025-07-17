@@ -921,16 +921,6 @@
         "title": "Happ Turkmenistan",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/happ_tm_official.jpg"
     },
-    "hope_net": {
-        "types": [
-            "trojan",
-            "vmess",
-            "vless",
-            "ss"
-        ],
-        "title": "🕊 Hope Net",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
-    },
     "hormozvpn": {
         "types": [
             "vless"
@@ -1820,7 +1810,8 @@
     "outlinev2rayng": {
         "types": [
             "vless",
-            "ss"
+            "ss",
+            "vmess"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outlinev2rayng.jpg"
@@ -2327,10 +2318,10 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vmess",
             "ss",
-            "vless",
-            "trojan"
+            "vmess",
+            "trojan",
+            "vless"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
@@ -2439,7 +2430,6 @@
     },
     "v2rayng_fars": {
         "types": [
-            "ss",
             "vless"
         ],
         "title": "v2rayng fars",
@@ -2532,14 +2522,6 @@
         ],
         "title": "W 🇩🇪 VPN 🇦🇪 &#036;/Y",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayngrr13.jpg"
-    },
-    "v2rayngvpn_1": {
-        "types": [
-            "vless",
-            "vmess"
-        ],
-        "title": "سرور کانفیگ|v2ray🌍",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayngvpn_1.jpg"
     },
     "v2rayngvpnn": {
         "types": [
@@ -2941,8 +2923,8 @@
     },
     "vpnv2rayngv": {
         "types": [
-            "ss",
             "vless",
+            "ss",
             "trojan"
         ],
         "title": "کانفینگ پروکسی وی توری نت ملی اسکوئید گیم خرید سرورفیلترشکن بازی مرکب وی پی ان اسکویید گیم ایران vpn v2rayNG vmess vless proxy",
