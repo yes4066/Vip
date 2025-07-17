@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇺🇸 US | 🔴 | vless | @NamiraNet | 68",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 8",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 13",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
@@ -102,7 +103,6 @@
                 "🇺🇸 US | 🔴 | vless | @elfv2ray | 3",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 16",
-                "🇺🇸 US | 🔴 | vless | @falcunargo | 4",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 0",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 1",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 2",
@@ -141,6 +141,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇺🇸 US | 🔴 | vless | @NamiraNet | 68",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 8",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 13",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
@@ -154,7 +155,6 @@
                 "🇺🇸 US | 🔴 | vless | @elfv2ray | 3",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 16",
-                "🇺🇸 US | 🔴 | vless | @falcunargo | 4",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 0",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 1",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 2",
@@ -195,6 +195,15 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @NamiraNet | 68",
+            "type": "vless",
+            "server": "bos.lebasnoo.ir",
+            "server_port": 80,
+            "uuid": "9c2e1da7-8e50-4899-ad69-ad0b52de696c",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @appsooner | 8",
@@ -310,15 +319,6 @@
             "server": "Evay.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "e02a83a6-16c9-4eaf-d40e-1387028d93a0",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @falcunargo | 4",
-            "type": "vless",
-            "server": "bos.lebasnoo.ir",
-            "server_port": 80,
-            "uuid": "9c2e1da7-8e50-4899-ad69-ad0b52de696c",
             "flow": "",
             "packet_encoding": "xudp"
         },
