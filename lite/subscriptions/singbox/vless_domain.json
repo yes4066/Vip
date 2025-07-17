@@ -162,6 +162,7 @@
                 "❔ XX | 🔴 | vless | @marzazad | 1",
                 "❔ XX | 🟢 | vless | @mastervpnshop1 | 17",
                 "❔ XX | 🔴 | vless | @maxvpnc | 9",
+                "🇺🇸 US | 🔴 | vless | @meli_proxyy | 18",
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
@@ -171,6 +172,7 @@
                 "❔ XX | 🔴 | vless | @mtpv2ray | 8",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
+                "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -307,6 +309,7 @@
                 "❔ XX | 🔴 | vless | @marzazad | 1",
                 "❔ XX | 🟢 | vless | @mastervpnshop1 | 17",
                 "❔ XX | 🔴 | vless | @maxvpnc | 9",
+                "🇺🇸 US | 🔴 | vless | @meli_proxyy | 18",
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
@@ -316,6 +319,7 @@
                 "❔ XX | 🔴 | vless | @mtpv2ray | 8",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
+                "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -1567,6 +1571,22 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @meli_proxyy | 18",
+            "type": "vless",
+            "server": "MAgicaL-fISh.sEOtoolsfOryoU.co.UK",
+            "server_port": 80,
+            "uuid": "edb4c373-ac92-4430-8f42-94439ca829b9",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "MAgicaL-fISh.sEOtoolsfOryoU.co.UK"
+                }
+            }
+        },
+        {
             "tag": "❔ XX | 🔴 | vless | @miov2ray | 11",
             "type": "vless",
             "server": "vip1.blackhats.shop",
@@ -1708,6 +1728,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "ZEDMODEON-ZEDMODEON-ZEDMODEON"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
+            "type": "vless",
+            "server": "specxtech.ticketdatabase.info",
+            "server_port": 56658,
+            "uuid": "dfe4a8e3-609b-43f1-92d3-9921d09b875f",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "kUfdhVe33Uv2-_kjmI97xkOCo_mWJlSigF3NCNJyGRk",
+                    "short_id": "15a19f76"
+                }
             }
         },
         {
