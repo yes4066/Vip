@@ -96,6 +96,8 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
+                "🇬🇧 GB | 🟢 | vless | @configshubplus | 13",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
                 "🇮🇷 IR | 🟢 | vless | @dargiiriis | 0",
                 "🇫🇷 FR | 🟢 | vless | @darkfiilter | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
@@ -103,7 +105,8 @@
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 4",
                 "🇳🇱 NL | 🟢 | vless | @dnsforyou | 5",
-                "🇨🇿 CZ | 🟢 | vless | @falcunargo | 12",
+                "🇬🇧 GB | 🟢 | vless | @entrynet | 15",
+                "🇨🇿 CZ | 🟢 | vless | @falcunargo | 10",
                 "🇬🇧 GB | 🟢 | vless | @farahvpn | 19",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇺🇸 US | 🟢 | vless | @filtershekan_channel | 10",
@@ -230,6 +233,8 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
+                "🇬🇧 GB | 🟢 | vless | @configshubplus | 13",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
                 "🇮🇷 IR | 🟢 | vless | @dargiiriis | 0",
                 "🇫🇷 FR | 🟢 | vless | @darkfiilter | 0",
                 "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
@@ -237,7 +242,8 @@
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "🇨🇿 CZ | 🟢 | vless | @dnsforyou | 4",
                 "🇳🇱 NL | 🟢 | vless | @dnsforyou | 5",
-                "🇨🇿 CZ | 🟢 | vless | @falcunargo | 12",
+                "🇬🇧 GB | 🟢 | vless | @entrynet | 15",
+                "🇨🇿 CZ | 🟢 | vless | @falcunargo | 10",
                 "🇬🇧 GB | 🟢 | vless | @farahvpn | 19",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇺🇸 US | 🟢 | vless | @filtershekan_channel | 10",
@@ -534,6 +540,56 @@
             }
         },
         {
+            "tag": "🇬🇧 GB | 🟢 | vless | @configshubplus | 13",
+            "type": "vless",
+            "server": "57.128.164.24",
+            "server_port": 1210,
+            "uuid": "37cf2c43-d1af-4282-86e3-62583a832798",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "ubuntu.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E",
+                    "short_id": "7fe29733"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@@jet_config-@jet_config-@jet_config"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
+            "type": "vless",
+            "server": "91.107.189.115",
+            "server_port": 443,
+            "uuid": "a15d08d9-a61c-4b7e-9c9c-47a520e78643",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.tjgu.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "lRikN_UN7-xcX5w8Mt8JuEsvLRkBvkvjp2JD8vDn9hs",
+                    "short_id": "5a1cc3"
+                }
+            }
+        },
+        {
             "tag": "🇮🇷 IR | 🟢 | vless | @dargiiriis | 0",
             "type": "vless",
             "server": "185.239.2.101",
@@ -703,7 +759,34 @@
             }
         },
         {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @falcunargo | 12",
+            "tag": "🇬🇧 GB | 🟢 | vless | @entrynet | 15",
+            "type": "vless",
+            "server": "57.128.164.24",
+            "server_port": 1210,
+            "uuid": "37cf2c43-d1af-4282-86e3-62583a832798",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "ubuntu.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E",
+                    "short_id": "7fe29733"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "t.me/entryNET"
+            }
+        },
+        {
+            "tag": "🇨🇿 CZ | 🟢 | vless | @falcunargo | 10",
             "type": "vless",
             "server": "194.182.79.117",
             "server_port": 35307,

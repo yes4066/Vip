@@ -113,7 +113,6 @@
                 "🇺🇸 US | 🔴 | vless | @freakconfig | 5",
                 "🇺🇸 US | 🔴 | vless | @free_serverir | 66",
                 "🇩🇪 DE | 🟢 | vless | @game_file2020 | 2",
-                "🇺🇸 US | 🔴 | vless | @getconfigir | 16",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
                 "🇳🇱 NL | 🟢 | vless | @nofiltering2 | 18",
@@ -140,6 +139,7 @@
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 17",
                 "🇺🇸 US | 🔴 | vless | @configms | 15",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -202,7 +202,6 @@
                 "🇺🇸 US | 🔴 | vless | @freakconfig | 5",
                 "🇺🇸 US | 🔴 | vless | @free_serverir | 66",
                 "🇩🇪 DE | 🟢 | vless | @game_file2020 | 2",
-                "🇺🇸 US | 🔴 | vless | @getconfigir | 16",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
                 "🇳🇱 NL | 🟢 | vless | @nofiltering2 | 18",
@@ -229,6 +228,7 @@
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 17",
                 "🇺🇸 US | 🔴 | vless | @configms | 15",
+                "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🔴 | vless | @elitevpnv2 | 6",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -499,15 +499,6 @@
                     "short_id": "f8fcb589"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @getconfigir | 16",
-            "type": "vless",
-            "server": "bos.lebasnoo.ir",
-            "server_port": 80,
-            "uuid": "9c2e1da7-8e50-4899-ad69-ad0b52de696c",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
@@ -815,6 +806,29 @@
             "uuid": "526984f4-f84e-4933-acc7-efa38b92c552",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 14",
+            "type": "vless",
+            "server": "91.107.189.115",
+            "server_port": 443,
+            "uuid": "a15d08d9-a61c-4b7e-9c9c-47a520e78643",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.tjgu.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "lRikN_UN7-xcX5w8Mt8JuEsvLRkBvkvjp2JD8vDn9hs",
+                    "short_id": "5a1cc3"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @dailytek | 10",
