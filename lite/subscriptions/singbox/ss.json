@@ -89,13 +89,12 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇪🇪 EE | 🟢 | ss | @NamiraNet | 69",
                 "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
                 "🇦🇹 AT | 🟢 | ss | @argo_vpn1 | 7",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇺🇸 US | 🟢 | ss | @customvpnserver | 27",
-                "🇫🇮 FI | 🟢 | ss | @free1ss | 17",
+                "🇫🇮 FI | 🟢 | ss | @free1ss | 16",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
                 "🇳🇱 NL | 🟢 | ss | @jiedianf | 7",
@@ -113,6 +112,7 @@
                 "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
                 "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
                 "🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27",
+                "🇺🇸 US | 🟢 | ss | @v2source | 19",
                 "🇵🇱 PL | 🟢 | ss | @vipufovpn | 19",
                 "🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19",
                 "🇦🇲 AM | 🟢 | ss | @vpnod | 18",
@@ -134,13 +134,12 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇪🇪 EE | 🟢 | ss | @NamiraNet | 69",
                 "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
                 "🇦🇹 AT | 🟢 | ss | @argo_vpn1 | 7",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇺🇸 US | 🟢 | ss | @customvpnserver | 27",
-                "🇫🇮 FI | 🟢 | ss | @free1ss | 17",
+                "🇫🇮 FI | 🟢 | ss | @free1ss | 16",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
                 "🇳🇱 NL | 🟢 | ss | @jiedianf | 7",
@@ -158,6 +157,7 @@
                 "🇫🇮 FI | 🟢 | ss | @strongprotocol | 10",
                 "🇫🇷 FR | 🟢 | ss | @tm_vpn_ogrysy | 7",
                 "🇹🇷 TR | 🟢 | ss | @v2rayngvvpn | 27",
+                "🇺🇸 US | 🟢 | ss | @v2source | 19",
                 "🇵🇱 PL | 🟢 | ss | @vipufovpn | 19",
                 "🇺🇸 US | 🟢 | ss | @vmessiranproxy | 19",
                 "🇦🇲 AM | 🟢 | ss | @vpnod | 18",
@@ -181,14 +181,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇪🇪 EE | 🟢 | ss | @NamiraNet | 69",
-            "type": "shadowsocks",
-            "server": "188.214.36.155",
-            "server_port": 990,
-            "method": "chacha20-ietf-poly1305",
-            "password": "f8f7aCzcPKbsF8p3"
         },
         {
             "tag": "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
@@ -231,7 +223,7 @@
             "password": "OUERiyxvrzTJi5kftx980G"
         },
         {
-            "tag": "🇫🇮 FI | 🟢 | ss | @free1ss | 17",
+            "tag": "🇫🇮 FI | 🟢 | ss | @free1ss | 16",
             "type": "shadowsocks",
             "server": "83.147.216.70",
             "server_port": 64519,
@@ -373,6 +365,14 @@
             "server_port": 7383,
             "method": "chacha20-ietf-poly1305",
             "password": "eSHEdJz96rqNkOCAzd5Csv"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | ss | @v2source | 19",
+            "type": "shadowsocks",
+            "server": "213.111.142.157",
+            "server_port": 8443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "bRvU8CRl6QkMIFCjtlgGVR"
         },
         {
             "tag": "🇵🇱 PL | 🟢 | ss | @vipufovpn | 19",
