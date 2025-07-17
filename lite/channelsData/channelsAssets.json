@@ -714,8 +714,9 @@
     },
     "freeconfigsplus": {
         "types": [
+            "vless",
             "ss",
-            "vless"
+            "vmess"
         ],
         "title": "CONFIGS",
         "logo": ""
@@ -1507,7 +1508,8 @@
     "mowjproxy": {
         "types": [
             "vless",
-            "ss"
+            "ss",
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1644,7 +1646,6 @@
     },
     "netmellianti": {
         "types": [
-            "trojan",
             "vless",
             "vmess"
         ],
