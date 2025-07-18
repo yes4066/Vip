@@ -91,12 +91,12 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 11",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 13",
-                "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
+                "🇺🇸 US | 🔴 | vless | @arv2ray | 14",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 16",
-                "🇺🇸 US | 🟢 | vless | @configshubplus | 19",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
+                "🇺🇸 US | 🟢 | vless | @falcunargo | 4",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
-                "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 18",
+                "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 3",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 4",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 5",
@@ -137,12 +137,12 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 11",
                 "🇺🇸 US | 🔴 | vless | @argooo_vpn | 13",
-                "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
+                "🇺🇸 US | 🔴 | vless | @arv2ray | 14",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 16",
-                "🇺🇸 US | 🟢 | vless | @configshubplus | 19",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
+                "🇺🇸 US | 🟢 | vless | @falcunargo | 4",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
-                "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 18",
+                "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 3",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 4",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 5",
@@ -203,7 +203,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @arv2ray | 15",
+            "tag": "🇺🇸 US | 🔴 | vless | @arv2ray | 14",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
@@ -221,7 +221,16 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @configshubplus | 19",
+            "tag": "🇺🇸 US | 🔴 | vless | @dailytek | 10",
+            "type": "vless",
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "0b4e0f6a-98a2-468a-910f-4a0b3fbeec36",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @falcunargo | 4",
             "type": "vless",
             "server": "104.21.48.1",
             "server_port": 2083,
@@ -237,15 +246,6 @@
                     "fingerprint": "chrome"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "0b4e0f6a-98a2-468a-910f-4a0b3fbeec36",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -266,7 +266,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 18",
+            "tag": "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
             "type": "vless",
             "server": "151.101.67.8",
             "server_port": 80,
