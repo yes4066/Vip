@@ -107,7 +107,6 @@
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
@@ -126,6 +125,7 @@
                 "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 13",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
+                "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
@@ -154,7 +154,6 @@
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
@@ -173,6 +172,7 @@
                 "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 13",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
+                "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1"
@@ -625,29 +625,6 @@
             }
         },
         {
-            "tag": "🇦🇪 AE | 🟢 | vless | @darkfiilter | 2",
-            "type": "vless",
-            "server": "51.112.101.2",
-            "server_port": 3040,
-            "uuid": "b44067d6-8476-4135-9807-5fc1819e533c",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
-                    "short_id": ""
-                }
-            }
-        },
-        {
             "tag": "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
             "type": "vless",
             "server": "37.27.191.27",
@@ -1078,6 +1055,29 @@
                     "enabled": true,
                     "public_key": "Qdg7LVP5VmLr7xzv556ry5RNc3QaeAj4TwOUxndA23M",
                     "short_id": "e3f89b63"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
+            "type": "vless",
+            "server": "80.71.157.175",
+            "server_port": 8443,
+            "uuid": "8a2a95af-8d31-40e0-aaf0-f4b99ed8ae59",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "DEDUso.su",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "I4ckWGs37sBXSBq3lGP79HqOhZ1eOjqaikCsDJXTaw0",
+                    "short_id": "a4eed13ebbf2f9d2"
                 }
             }
         },
