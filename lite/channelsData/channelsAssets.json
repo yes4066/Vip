@@ -964,10 +964,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
-            "trojan",
             "vmess",
-            "vless"
+            "vless",
+            "ss",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1088,14 +1088,6 @@
         ],
         "title": "𝗶𝗧𝗩𝟮𝗥𝗔𝗬 / 𝗩𝗣𝗡",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/itv2ray.jpg"
-    },
-    "jedal_vpn": {
-        "types": [
-            "vmess",
-            "vless"
-        ],
-        "title": "خریدفیلترشکن خرید فیلترشکن پرسرعت خرید وی پی ان خرید vpn کانفینگ v2ray فروش فیلترشکن | Jedal vpn v2rayng369",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/jedal_vpn.jpg"
     },
     "jetupnet": {
         "types": [
@@ -1791,8 +1783,8 @@
     },
     "outlinev2rayng": {
         "types": [
-            "vless",
             "vmess",
+            "vless",
             "ss"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
@@ -2300,8 +2292,8 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vmess",
             "trojan",
+            "vmess",
             "ss",
             "vless"
         ],
@@ -2602,7 +2594,8 @@
     },
     "v2source": {
         "types": [
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "Free V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2source.jpg"
