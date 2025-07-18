@@ -103,7 +103,7 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 15",
+                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -122,8 +122,7 @@
                 "🇩🇪 DE | 🟢 | vless | @sinavm | 2",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
-                "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 13",
-                "🇬🇧 GB | 🟢 | vless | @v2source | 19",
+                "🇹🇼 TW | 🟢 | vless | @v2source | 19",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
@@ -151,7 +150,7 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 15",
+                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -170,8 +169,7 @@
                 "🇩🇪 DE | 🟢 | vless | @sinavm | 2",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
-                "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 13",
-                "🇬🇧 GB | 🟢 | vless | @v2source | 19",
+                "🇹🇼 TW | 🟢 | vless | @v2source | 19",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
@@ -535,7 +533,7 @@
             }
         },
         {
-            "tag": "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 15",
+            "tag": "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
             "type": "vless",
             "server": "amazon-4.cristiano.name.ng",
             "server_port": 443,
@@ -988,16 +986,16 @@
             }
         },
         {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 13",
+            "tag": "🇹🇼 TW | 🟢 | vless | @v2source | 19",
             "type": "vless",
-            "server": "194.182.79.142",
-            "server_port": 11744,
-            "uuid": "31865946-8488-4edc-88e3-6a26d35bf72d",
+            "server": "103.236.227.21",
+            "server_port": 25558,
+            "uuid": "510b4f04-18a6-4a31-bb89-76d2931701c4",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "sourceforge.net",
+                "server_name": "tesla.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -1005,35 +1003,8 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "pglxO6QdgE1SmjPijag4CbRZND--yCn-EoKagGTm6Cw",
-                    "short_id": "55"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
-            }
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | vless | @v2source | 19",
-            "type": "vless",
-            "server": "83.147.18.179",
-            "server_port": 443,
-            "uuid": "845292c5-703c-434d-8c78-06fa1a4d5b42",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "snapp.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "NVzXDuB9PZECzVgRWCVZJ4rCujQ5d2tw64Ufftci8C4",
-                    "short_id": "5bef46444e87"
+                    "public_key": "ZvSggY7I0Rd9KrverThNzrHZftq7Kkt9YBix9SPDnG0",
+                    "short_id": "b4"
                 }
             }
         },
