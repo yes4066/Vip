@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "❔ XX | 🔴 | vless | @configshubplus | 14",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
@@ -99,6 +98,7 @@
                 "❔ XX | 🔴 | vless | @internet_nor | 1",
                 "❔ XX | 🔴 | vless | @internet_nor | 2",
                 "❔ XX | 🟢 | vless | @kesslervpn | 1",
+                "❔ XX | 🔴 | vless | @lranonline_new | 3",
                 "❔ XX | 🔴 | vless | @parsashonam | 29",
                 "❔ XX | 🔴 | vless | @parsashonam | 31",
                 "❔ XX | 🟢 | vless | @v2raytg | 73",
@@ -114,7 +114,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "❔ XX | 🔴 | vless | @configshubplus | 14",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
@@ -124,6 +123,7 @@
                 "❔ XX | 🔴 | vless | @internet_nor | 1",
                 "❔ XX | 🔴 | vless | @internet_nor | 2",
                 "❔ XX | 🟢 | vless | @kesslervpn | 1",
+                "❔ XX | 🔴 | vless | @lranonline_new | 3",
                 "❔ XX | 🔴 | vless | @parsashonam | 29",
                 "❔ XX | 🔴 | vless | @parsashonam | 31",
                 "❔ XX | 🟢 | vless | @v2raytg | 73",
@@ -141,15 +141,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "❔ XX | 🔴 | vless | @configshubplus | 14",
-            "type": "vless",
-            "server": "[2a01:4f8:1c1a:dc2b::1]",
-            "server_port": 8888,
-            "uuid": "Parsashonam-286",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "❔ XX | 🟢 | vless | @deli_servers | 1",
@@ -318,6 +309,15 @@
                     "short_id": ""
                 }
             }
+        },
+        {
+            "tag": "❔ XX | 🔴 | vless | @lranonline_new | 3",
+            "type": "vless",
+            "server": "[2a01:4f8:1c1a:dc2b::1]",
+            "server_port": 8888,
+            "uuid": "Parsashonam-286",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "❔ XX | 🔴 | vless | @parsashonam | 29",
