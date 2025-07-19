@@ -100,6 +100,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇬🇧 GB | 🟢 | vless | @dailyv2ry | 170",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
+                "🇩🇪 DE | 🟢 | vless | @entrynet | 17",
                 "🇩🇪 DE | 🟢 | vless | @farahvpn | 17",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
@@ -147,6 +148,7 @@
                 "🇳🇱 NL | 🟢 | vless | @turboo_server | 2",
                 "🇳🇱 NL | 🟢 | vless | @v2ray_v_vpn | 6",
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
+                "🇩🇪 DE | 🟢 | vless | @v2raych | 19",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
@@ -188,6 +190,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇬🇧 GB | 🟢 | vless | @dailyv2ry | 170",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
+                "🇩🇪 DE | 🟢 | vless | @entrynet | 17",
                 "🇩🇪 DE | 🟢 | vless | @farahvpn | 17",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
@@ -235,6 +238,7 @@
                 "🇳🇱 NL | 🟢 | vless | @turboo_server | 2",
                 "🇳🇱 NL | 🟢 | vless | @v2ray_v_vpn | 6",
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
+                "🇩🇪 DE | 🟢 | vless | @v2raych | 19",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
@@ -531,6 +535,33 @@
                     "public_key": "wOXPafr4Gl6wXtw8c8T2juUCauBi25GVAfe4SMc4VEM",
                     "short_id": "c7bc4d"
                 }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @entrynet | 17",
+            "type": "vless",
+            "server": "api.node.snap.com.digi-gamingzone.koalavault.servers807.ir",
+            "server_port": 2025,
+            "uuid": "9705cfd1-d9b6-4d46-831e-ad06550d8e9a",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "fhNhrO00QDSDI1CBmJY8RwK9t-zFmTjERgbgqcj8NTI",
+                    "short_id": ""
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "t.me/entryNET"
             }
         },
         {
@@ -1691,6 +1722,33 @@
                     "public_key": "2dIWbgD8nbCd1YBs-IiQ6vgA7mse9PA9DWqaIMFsTmc",
                     "short_id": "cb333964"
                 }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2raych | 19",
+            "type": "vless",
+            "server": "api.node.snap.com.digi-gamingzone.koalavault.servers807.ir",
+            "server_port": 2025,
+            "uuid": "9705cfd1-d9b6-4d46-831e-ad06550d8e9a",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "fhNhrO00QDSDI1CBmJY8RwK9t-zFmTjERgbgqcj8NTI",
+                    "short_id": ""
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "sadf2341sad"
             }
         },
         {
