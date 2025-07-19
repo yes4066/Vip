@@ -89,14 +89,13 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 19",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 2",
-                "🇺🇸 US | 🔴 | vless | @fnet00 | 8",
+                "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 3",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
@@ -112,14 +111,13 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 19",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 2",
-                "🇺🇸 US | 🔴 | vless | @fnet00 | 8",
+                "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 3",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 6",
@@ -137,29 +135,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 19",
-            "type": "vless",
-            "server": "de6rt.samsungmarketshop.ir",
-            "server_port": 2083,
-            "uuid": "bf989dce-7af7-423b-a499-71da71cdcef1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "53XOEMg4ftOAn_gSdlNndT5Xrfj4PB5J-YKOZoqTODk",
-                    "short_id": "aeba"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @configscenter | 2",
@@ -216,7 +191,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @fnet00 | 8",
+            "tag": "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
             "type": "vless",
             "server": "speedtest.net",
             "server_port": 80,

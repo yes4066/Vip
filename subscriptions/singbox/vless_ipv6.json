@@ -105,8 +105,7 @@
                 "❔ XX | 🔴 | vless | @v2ryngfree | 6",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 8",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 10",
-                "❔ XX | 🔴 | vless | @vpn_matin_best1 | 0",
-                "❔ XX | 🟢 | vless | @yekoyekvpn | 0"
+                "❔ XX | 🔴 | vless | @vpn_matin_best1 | 0"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -130,8 +129,7 @@
                 "❔ XX | 🔴 | vless | @v2ryngfree | 6",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 8",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 10",
-                "❔ XX | 🔴 | vless | @vpn_matin_best1 | 0",
-                "❔ XX | 🟢 | vless | @yekoyekvpn | 0"
+                "❔ XX | 🔴 | vless | @vpn_matin_best1 | 0"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -411,31 +409,6 @@
             "uuid": "3700cc9f-b8c0-4ada-a45d-9913835d3cc2",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @yekoyekvpn | 0",
-            "type": "vless",
-            "server": "[::ffff:3207:55dd]",
-            "server_port": 443,
-            "uuid": "89b3cbba-e6ac-485a-9481-976a0415eab9",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tEstBp.fIBiDOB9775921.woRkeRS.DEV",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/xUnw05Z6MV3NG29U?ed=2560",
-                "headers": {
-                    "Host": "tEstBp.fIBiDOB9775921.woRkeRS.DEV"
-                }
-            }
         }
     ],
     "route": {
