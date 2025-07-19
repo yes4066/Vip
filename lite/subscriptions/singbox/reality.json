@@ -104,7 +104,7 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
+                "🇨🇦 CA | 🟢 | vless | @v2rayngrit | 15",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -119,11 +119,11 @@
                 "🇷🇺 RU | 🟢 | vless | @kanfig_majani | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇨🇿 CZ | 🟢 | vless | @mowjproxy | 3",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @sinavm | 2",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
+                "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 12",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
@@ -152,7 +152,7 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
+                "🇨🇦 CA | 🟢 | vless | @v2rayngrit | 15",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -167,11 +167,11 @@
                 "🇷🇺 RU | 🟢 | vless | @kanfig_majani | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇨🇿 CZ | 🟢 | vless | @mowjproxy | 3",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @sinavm | 2",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
+                "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 12",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
@@ -558,7 +558,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @v2rayngrit | 15",
+            "tag": "🇨🇦 CA | 🟢 | vless | @v2rayngrit | 15",
             "type": "vless",
             "server": "amazon-4.cristiano.name.ng",
             "server_port": 443,
@@ -919,33 +919,6 @@
             }
         },
         {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @mowjproxy | 3",
-            "type": "vless",
-            "server": "194.182.79.250",
-            "server_port": 52611,
-            "uuid": "211bdee3-b5dc-43d3-b2a5-3716359fc79c",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "d027uiA4v1a-8IWN8T1Tjgdw4aUVkxPhDX-2UpojtB8",
-                    "short_id": "27e90618"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
             "type": "vless",
             "server": "147.182.183.207",
@@ -1043,6 +1016,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 12",
+            "type": "vless",
+            "server": "5.75.198.47",
+            "server_port": 443,
+            "uuid": "1584806e-f63d-4f9b-a0b3-abe64b35a09c",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "GpgfsA-U8Y8M3LRcTfsaBViDtp2VlN5riSLLZ2kxEiQ",
+                    "short_id": "974a74bf"
+                }
             }
         },
         {
