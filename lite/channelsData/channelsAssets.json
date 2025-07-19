@@ -940,10 +940,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
             "vless",
             "ss",
-            "vmess"
+            "vmess",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1455,8 +1455,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1906,8 +1906,8 @@
     },
     "pydriclub": {
         "types": [
-            "vmess",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "pydari_club",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/pydriclub.jpg"
@@ -2552,8 +2552,8 @@
     "v2source": {
         "types": [
             "vless",
-            "ss",
-            "trojan"
+            "trojan",
+            "ss"
         ],
         "title": "Free V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2source.jpg"
