@@ -190,7 +190,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇫🇷 FR | 🟢 | vless | @vlessconfig | 15",
-                "🇮🇷 IR | 🔴 | vless | @vmess_ir | 18",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
                 "🇺🇸 US | 🟢 | vless | @vpn_ioss | 17",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
@@ -312,7 +312,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇫🇷 FR | 🟢 | vless | @vlessconfig | 15",
-                "🇮🇷 IR | 🔴 | vless | @vmess_ir | 18",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
                 "🇺🇸 US | 🟢 | vless | @vpn_ioss | 17",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
@@ -2122,13 +2122,20 @@
             }
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @vmess_ir | 18",
+            "tag": "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
             "type": "vless",
-            "server": "85.133.233.59",
-            "server_port": 8080,
-            "uuid": "bf742aa8-0168-4081-b01f-3c3e994b054f",
+            "server": "172.67.65.158",
+            "server_port": 8880,
+            "uuid": "e9979910-79d1-4621-a93c-b2a579c44ba7",
             "flow": "",
-            "packet_encoding": "xudp"
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/Etb1L6YUdZFZuTOr?ed=2560",
+                "headers": {
+                    "Host": "172.67.65.158"
+                }
+            }
         },
         {
             "tag": "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",

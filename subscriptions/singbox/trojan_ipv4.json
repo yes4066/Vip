@@ -96,9 +96,9 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇺🇸 US | 🟢 | trojan | @dnsforyou | 8",
-                "🇬🇧 GB | 🟢 | trojan | @entrynet | 16",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
+                "🇭🇰 HK | 🔴 | trojan | @hope_net | 17",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 9",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 7",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -135,9 +135,9 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇺🇸 US | 🟢 | trojan | @dnsforyou | 8",
-                "🇬🇧 GB | 🟢 | trojan | @entrynet | 16",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
+                "🇭🇰 HK | 🔴 | trojan | @hope_net | 17",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 9",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 7",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -290,22 +290,6 @@
             }
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | trojan | @entrynet | 16",
-            "type": "trojan",
-            "server": "18.170.94.221",
-            "server_port": 22222,
-            "password": "telegram-id-directvpn",
-            "tls": {
-                "enabled": true,
-                "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
             "type": "trojan",
             "server": "91.107.141.0",
@@ -313,7 +297,14 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
+            "tag": "🇭🇰 HK | 🔴 | trojan | @hope_net | 17",
+            "type": "trojan",
+            "server": "18.162.246.4",
+            "server_port": 18443,
+            "password": "ouo"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 9",
             "type": "trojan",
             "server": "198.23.229.250",
             "server_port": 443,
