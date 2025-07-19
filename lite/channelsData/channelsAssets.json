@@ -7,6 +7,16 @@
         "title": "کانفیگ رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/Fr33C0nfig.jpg"
     },
+    "NamiraNet": {
+        "title": "NamiraNet",
+        "logo": "",
+        "types": [
+            "ss",
+            "trojan",
+            "vless",
+            "vmess"
+        ]
+    },
     "ai_duet": {
         "types": [
             "vless",
@@ -929,10 +939,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
+            "vmess",
             "trojan",
             "vless",
-            "vmess"
+            "ss"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1582,8 +1592,8 @@
     },
     "netmellianti": {
         "types": [
-            "vmess",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "VPN | V2rayNG | نت ملی",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/netmellianti.jpg"
@@ -1979,8 +1989,8 @@
     },
     "selinc": {
         "types": [
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "فیلترشکنV2rayng",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/selinc.jpg"
@@ -2254,16 +2264,6 @@
         "title": "فیلترشکن کانفیگ رایگان v2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_fd.jpg"
     },
-    "v2ray_free_conf": {
-        "types": [
-            "ss",
-            "vmess",
-            "trojan",
-            "vless"
-        ],
-        "title": "🌍 V2Ray Free Config 🇮🇷",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
-    },
     "v2ray_inter": {
         "types": [
             "vless",
@@ -2343,8 +2343,8 @@
     },
     "v2raying": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "v2rayNG_VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raying.jpg"
@@ -2549,9 +2549,9 @@
     },
     "v2source": {
         "types": [
-            "trojan",
             "vless",
-            "ss"
+            "ss",
+            "trojan"
         ],
         "title": "Free V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2source.jpg"
