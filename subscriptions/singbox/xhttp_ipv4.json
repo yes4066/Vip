@@ -89,10 +89,8 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🔴 | vless | @argooo_vpn | 12",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 13",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 16",
-                "🇩🇪 DE | 🟢 | vless | @config_proxy | 53",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -106,7 +104,6 @@
                 "🇳🇱 NL | 🟢 | vless | @irv2rey | 4",
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
-                "🇳🇱 NL | 🟢 | vless | @lranonline_new | 2",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
@@ -138,10 +135,8 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🔴 | vless | @argooo_vpn | 12",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 13",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 16",
-                "🇩🇪 DE | 🟢 | vless | @config_proxy | 53",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -155,7 +150,6 @@
                 "🇳🇱 NL | 🟢 | vless | @irv2rey | 4",
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
-                "🇳🇱 NL | 🟢 | vless | @lranonline_new | 2",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
@@ -191,15 +185,6 @@
             "type": "direct"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @argooo_vpn | 12",
-            "type": "vless",
-            "server": "151.101.67.8",
-            "server_port": 80,
-            "uuid": "ad5e7710-15f4-4cb8-c3bd-302bb5540263",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @arv2ray | 13",
             "type": "vless",
             "server": "151.101.3.8",
@@ -216,29 +201,6 @@
             "uuid": "724383d8-33c6-4e8d-9db4-0184a89efa33",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 53",
-            "type": "vless",
-            "server": "91.107.254.202",
-            "server_port": 2096,
-            "uuid": "a20a281b-7f72-42e7-a1fd-73ed063c5681",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "firebase.googleapis.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "sPEQ8mlkuJQsGrMZux2g9EmXKztuXHwnyORJPwwznDQ",
-                    "short_id": "a0e13102"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @dailytek | 10",
@@ -425,29 +387,6 @@
             "uuid": "turboo-server",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @lranonline_new | 2",
-            "type": "vless",
-            "server": "77.110.103.21",
-            "server_port": 50810,
-            "uuid": "826bf006-c9c5-46fe-b0d9-8c459c814be7",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zhaket.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "MCx8u0S8L-ugMhcNC-u2WteqvI_oaM9_0-5jP6atIx4",
-                    "short_id": "19dc3c81"
-                }
-            }
         },
         {
             "tag": "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
