@@ -39,6 +39,7 @@ proxies:
   - {"name":"❔ XX | 🟢 | vless | @v2rayngconfings | 17","type":"vless","server":"618-Join.V2RayTz.sbs","port":8080,"uuid":"42873f71-9718-4f3d-9907-de43001e2284","tls":true,"network":"grpc","client-fingerprint":"chrome","udp":true,"servername":"www.speedtest.net","grpc-opts":{"grpc-service-name":"@LIGHTNING6"},"reality-opts":{"public-key":"4OTfR6IQ_6Z-5EiAi08sSfUjZtC30c2x6jl9BE9KFwg","short-id":"356dc0"}}
   - {"name":"🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13","type":"vless","server":"online-chat.webboosterpro.co.uk","port":443,"uuid":"f72e4aa8-36c2-4dd6-b19d-dfe6be679e44","tls":true,"network":"xhttp","client-fingerprint":"chrome","udp":true,"servername":"www.fastly.com","reality-opts":{"public-key":"QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U","short-id":"1eaf5214"}}
   - {"name":"❔ XX | 🟢 | vless | @vp22ray | 10","type":"vless","server":"German.vp22ray.site","port":40130,"uuid":"eb7f17f3-4715-4b2d-87e5-39d12b1c962c","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"Seed.cloudflare.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"XEpHiKs6YbcMrBR4YTRXLlIlO5RfGcVUUcbt4KZc7TY","short-id":"d90b293e"}}
+  - {"name":"🇭🇰 HK | 🟢 | vless | @vpnaloo | 16","type":"vless","server":"ko1.xservers.ir","port":81,"uuid":"ce02ef89-4a22-40d3-a962-9a8e12c252fe","tls":true,"network":"xhttp","client-fingerprint":"firefox","udp":true,"servername":"tgju.org","reality-opts":{"public-key":"A-8wmBnGrz4ny7CB9Zfnjz66cbS83uOMdH61CsI-rm8","short-id":"200de4ca48fb1731"}}
   - {"name":"🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 20","type":"vless","server":"zn.boshrachoice.ir","port":9944,"uuid":"8ec07b8c-289b-41df-a0c5-2b5f8c941e5f","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"sourceforge.net","reality-opts":{"public-key":"IUk4LR6VI6CnvLMY_ks1KdOHvB1_byMvQM3gZfuU5S0"}}
 
 proxy-groups:
@@ -69,6 +70,7 @@ proxy-groups:
       - '❔ XX | 🟢 | vless | @v2rayngconfings | 17'
       - '🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13'
       - '❔ XX | 🟢 | vless | @vp22ray | 10'
+      - '🇭🇰 HK | 🟢 | vless | @vpnaloo | 16'
       - '🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 20'
 
   - name: 🌍 Global Media

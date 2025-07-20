@@ -49,7 +49,6 @@
     },
     "angus_vpn": {
         "types": [
-            "vless",
             "vmess"
         ],
         "title": "• AnGuS VPN •",
@@ -938,10 +937,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
             "vless",
-            "trojan",
-            "vmess"
+            "ss",
+            "vmess",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1850,7 +1849,6 @@
     },
     "proxyandvpnofficial1": {
         "types": [
-            "ss",
             "vless"
         ],
         "title": "🧿 کانال رسمی پروکسی و فیلترشکن (VPN) دائمی و رایگان و امن🧿",
@@ -2551,6 +2549,7 @@
     },
     "v2source": {
         "types": [
+            "trojan",
             "vless"
         ],
         "title": "Free V2ray",
@@ -2723,7 +2722,6 @@
     },
     "vpnaloo": {
         "types": [
-            "ss",
             "vless",
             "trojan"
         ],

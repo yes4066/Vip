@@ -89,17 +89,15 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🟢 | ss | @NamiraNet | 60",
                 "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
-                "🇰🇷 KR | 🟢 | ss | @argo_vpn1 | 8",
+                "🇰🇷 KR | 🟢 | ss | @argo_vpn1 | 6",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇸🇪 SE | 🟢 | ss | @azarbayjab1 | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇵🇹 PT | 🟢 | ss | @filtershekan_channel | 12",
-                "🇫🇷 FR | 🟢 | ss | @free1ss | 15",
+                "🇫🇷 FR | 🟢 | ss | @free1ss | 14",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
-                "🇺🇸 US | 🟢 | ss | @ip_cf_config | 15",
                 "🇳🇱 NL | 🟢 | ss | @jiedianf | 7",
                 "🇬🇧 GB | 🟢 | ss | @key_outline | 19",
                 "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
@@ -122,17 +120,15 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🟢 | ss | @NamiraNet | 60",
                 "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
-                "🇰🇷 KR | 🟢 | ss | @argo_vpn1 | 8",
+                "🇰🇷 KR | 🟢 | ss | @argo_vpn1 | 6",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇸🇪 SE | 🟢 | ss | @azarbayjab1 | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇵🇹 PT | 🟢 | ss | @filtershekan_channel | 12",
-                "🇫🇷 FR | 🟢 | ss | @free1ss | 15",
+                "🇫🇷 FR | 🟢 | ss | @free1ss | 14",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
-                "🇺🇸 US | 🟢 | ss | @ip_cf_config | 15",
                 "🇳🇱 NL | 🟢 | ss | @jiedianf | 7",
                 "🇬🇧 GB | 🟢 | ss | @key_outline | 19",
                 "🇬🇧 GB | 🟢 | ss | @megavpn_link | 14",
@@ -159,14 +155,6 @@
             "type": "direct"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | ss | @NamiraNet | 60",
-            "type": "shadowsocks",
-            "server": "45.87.175.190",
-            "server_port": 8080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "cvII85TrW6n0OGyfpHVS1u"
-        },
-        {
             "tag": "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
             "type": "shadowsocks",
             "server": "194.87.216.189",
@@ -175,7 +163,7 @@
             "password": "Ib9hxFZxUH4m"
         },
         {
-            "tag": "🇰🇷 KR | 🟢 | ss | @argo_vpn1 | 8",
+            "tag": "🇰🇷 KR | 🟢 | ss | @argo_vpn1 | 6",
             "type": "shadowsocks",
             "server": "220.124.31.130",
             "server_port": 19378,
@@ -215,7 +203,7 @@
             "password": "f8f7aCzcPKbsF8p3"
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | ss | @free1ss | 15",
+            "tag": "🇫🇷 FR | 🟢 | ss | @free1ss | 14",
             "type": "shadowsocks",
             "server": "62.210.88.22",
             "server_port": 443,
@@ -237,14 +225,6 @@
             "server_port": 49499,
             "method": "chacha20-ietf-poly1305",
             "password": "kTjlLxrncKx4i2HIjxfA3M"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | ss | @ip_cf_config | 15",
-            "type": "shadowsocks",
-            "server": "45.87.175.164",
-            "server_port": 8080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "4a2rfixophdjffa8KVA4Aa"
         },
         {
             "tag": "🇳🇱 NL | 🟢 | ss | @jiedianf | 7",
