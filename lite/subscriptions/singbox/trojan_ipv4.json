@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
                 "🇺🇸 US | 🟢 | trojan | @dnsforyou | 8",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -97,7 +96,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11"
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 11"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -105,7 +104,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
                 "🇺🇸 US | 🟢 | trojan | @dnsforyou | 8",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -113,7 +111,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11"
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 11"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -123,22 +121,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
-            "type": "trojan",
-            "server": "74.63.241.25",
-            "server_port": 443,
-            "password": "4863e1b2-ec2f-4c71-b862-ce533028e57e",
-            "tls": {
-                "enabled": true,
-                "server_name": "trus.moonfree.top",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
         },
         {
             "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
@@ -267,9 +249,9 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 11",
             "type": "trojan",
-            "server": "35.180.162.247",
+            "server": "18.156.59.108",
             "server_port": 22223,
             "password": "telegram-id-v2rayvpnchannel",
             "tls": {

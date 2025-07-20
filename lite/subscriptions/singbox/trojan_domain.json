@@ -90,7 +90,9 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇳🇱 NL | 🔴 | trojan | @ip_cf_config | 13",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
+                "🇫🇷 FR | 🟢 | trojan | @outlinev2rayng | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
             "tag": "proxy",
@@ -100,7 +102,9 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
+                "🇳🇱 NL | 🔴 | trojan | @ip_cf_config | 13",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
+                "🇫🇷 FR | 🟢 | trojan | @outlinev2rayng | 15",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6"
             ],
             "tag": "auto",
@@ -136,6 +140,22 @@
             }
         },
         {
+            "tag": "🇳🇱 NL | 🔴 | trojan | @ip_cf_config | 13",
+            "type": "trojan",
+            "server": "stirring-parakeet.shiner427.skin",
+            "server_port": 443,
+            "password": "74260628090146500",
+            "tls": {
+                "enabled": true,
+                "server_name": "stirring-parakeet.shiner427.skin",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
             "tag": "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
             "type": "trojan",
             "server": "maradona_vpn.history-paint.art",
@@ -153,6 +173,17 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "grpc20337"
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | trojan | @outlinev2rayng | 15",
+            "type": "trojan",
+            "server": "join-dailyconfigs.resurrection-time.sbs",
+            "server_port": 56807,
+            "password": "DBMhoSEBXa",
+            "transport": {
+                "type": "grpc",
+                "service_name": "DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs-DailyConfigs?ed=2060"
             }
         },
         {

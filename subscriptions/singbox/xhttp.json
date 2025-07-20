@@ -91,6 +91,7 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 8",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 42",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
@@ -106,7 +107,7 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
-                "PSGvimmoltulg",
+                "PSGdxvfhkihbx",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
@@ -125,7 +126,7 @@
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 160",
+                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 145",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
@@ -174,6 +175,7 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 8",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 42",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
@@ -189,7 +191,7 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
-                "PSGvimmoltulg",
+                "PSGdxvfhkihbx",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
@@ -208,7 +210,7 @@
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 160",
+                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 145",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
@@ -287,6 +289,24 @@
                     "enabled": true,
                     "public_key": "53XOEMg4ftOAn_gSdlNndT5Xrfj4PB5J-YKOZoqTODk",
                     "short_id": "aeba"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 42",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "server_port": 443,
+            "uuid": "4e0a435a-65d6-4e4e-a4ed-dfa8bdd732f5",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "ashil.tas-bazi.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },
@@ -426,7 +446,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "PSGvimmoltulg",
+            "tag": "PSGdxvfhkihbx",
             "type": "vless",
             "server": "hibbb.fast.hosting-ip.com",
             "server_port": 80,
@@ -666,7 +686,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @dailyv2ry | 160",
+            "tag": "🇺🇸 US | 🔴 | vless | @dailyv2ry | 145",
             "type": "vless",
             "server": "192.155.93.240",
             "server_port": 443,
