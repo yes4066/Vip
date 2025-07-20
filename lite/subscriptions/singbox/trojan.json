@@ -99,8 +99,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
-                "🇺🇸 US | 🟢 | trojan | @v2source | 19"
+                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -118,8 +117,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
-                "🇺🇸 US | 🟢 | trojan | @v2source | 19"
+                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -192,7 +190,7 @@
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
             "type": "trojan",
-            "server": "13.38.160.98",
+            "server": "15.188.128.163",
             "server_port": 22223,
             "password": "telegram-id-directvpn",
             "tls": {
@@ -267,7 +265,7 @@
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
             "type": "trojan",
-            "server": "13.38.160.98",
+            "server": "15.188.128.163",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {
@@ -315,28 +313,12 @@
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 13",
             "type": "trojan",
-            "server": "13.38.160.98",
+            "server": "15.188.128.163",
             "server_port": 22223,
             "password": "telegram-id-v2rayvpnchannel",
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @v2source | 19",
-            "type": "trojan",
-            "server": "15.197.162.184",
-            "server_port": 443,
-            "password": "7778e684-f435-4166-bf9e-0256cb28bf10",
-            "tls": {
-                "enabled": true,
-                "server_name": "download2hkt.windowsupdate.lol",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
