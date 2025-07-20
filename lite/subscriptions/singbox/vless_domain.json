@@ -107,7 +107,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -159,6 +159,7 @@
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
+                "🇺🇸 US | 🟢 | vless | @mowjproxy | 4",
                 "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇺🇸 US | 🔴 | vless | @mtproxy22_v2ray | 77",
@@ -211,6 +212,7 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
+                "🇳🇱 NL | 🔴 | vless | @vpnv2rayngv | 18",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "🇺🇸 US | 🔴 | vless | @womanlifefreedomvpn | 16",
@@ -242,7 +244,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -294,6 +296,7 @@
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
+                "🇺🇸 US | 🟢 | vless | @mowjproxy | 4",
                 "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇺🇸 US | 🔴 | vless | @mtproxy22_v2ray | 77",
@@ -346,6 +349,7 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
+                "🇳🇱 NL | 🔴 | vless | @vpnv2rayngv | 18",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "🇺🇸 US | 🔴 | vless | @womanlifefreedomvpn | 16",
@@ -642,7 +646,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
@@ -1477,6 +1481,31 @@
             "uuid": "13b0c901-3fbe-bb19-c6b8-89b2c314e975",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @mowjproxy | 4",
+            "type": "vless",
+            "server": "wouldyoumarriemepleasefuckthesystem5.siasia.ir",
+            "server_port": 2053,
+            "uuid": "ce62ee5e-e316-46af-b967-4588a5e8e66c",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "hheydudethisworldisshet.siasia.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/apiii",
+                "headers": {
+                    "Host": "hheydudethisworldisshet.siasia.ir"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
@@ -2465,6 +2494,24 @@
             "uuid": "0eab9ab8-d0f0-4823-8af9-d1f95db842e8",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇳🇱 NL | 🔴 | vless | @vpnv2rayngv | 18",
+            "type": "vless",
+            "server": "portal12.saladshirazi.com",
+            "server_port": 443,
+            "uuid": "484d4e5b-7ec0-84bc-98fc-b55bb8037f38",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "portal12.saladshirazi.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | vless | @vpnwlf | 10",

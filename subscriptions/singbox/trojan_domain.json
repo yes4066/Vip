@@ -92,7 +92,9 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 14",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -114,7 +116,9 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 14",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -190,9 +194,9 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
             "type": "trojan",
-            "server": "sullivan.ns.cloudflare.com",
+            "server": "otto.ns.cloudflare.com",
             "server_port": 443,
             "password": "blue2024",
             "tls": {
@@ -204,6 +208,29 @@
                     "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
+            "type": "trojan",
+            "server": "damien.ns.cloudflare.com",
+            "server_port": 443,
+            "password": "blue2024",
+            "tls": {
+                "enabled": true,
+                "server_name": "ta.promote.icu",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 14",
+            "type": "trojan",
+            "server": "13c2c931-swin40-swy6li-tni2.cu.plebai.net",
+            "server_port": 15229,
+            "password": "5e2f888c-68ef-11ef-96ca-f23c9164ca5d"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @iraniv2ray | 3",

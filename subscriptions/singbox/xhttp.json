@@ -123,8 +123,6 @@
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
-                "🇺🇸 US | 🔴 | vless | @chanel_v2ray_2 | 3",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇦🇪 AE | 🟢 | vless | @dnsforyou | 25",
@@ -132,15 +130,15 @@
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 8",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
-                "🇩🇪 DE | 🟢 | vless | @free_serverir | 50",
                 "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
                 "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
-                "🇩🇪 DE | 🟢 | vless | @ghalagyann | 23",
+                "🇩🇪 DE | 🟢 | vless | @ghalagyann | 22",
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 8",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 2",
                 "🇳🇱 NL | 🟢 | vless | @irv2rey | 3",
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
+                "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 23",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
@@ -208,8 +206,6 @@
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
-                "🇺🇸 US | 🔴 | vless | @chanel_v2ray_2 | 3",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇦🇪 AE | 🟢 | vless | @dnsforyou | 25",
@@ -217,15 +213,15 @@
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 8",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
-                "🇩🇪 DE | 🟢 | vless | @free_serverir | 50",
                 "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
                 "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
-                "🇩🇪 DE | 🟢 | vless | @ghalagyann | 23",
+                "🇩🇪 DE | 🟢 | vless | @ghalagyann | 22",
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 8",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 2",
                 "🇳🇱 NL | 🟢 | vless | @irv2rey | 3",
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
+                "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 23",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
@@ -652,38 +648,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @chanel_v2ray_2 | 3",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "telegram-id-ArV2ray",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
-            "type": "vless",
-            "server": "188.245.54.60",
-            "server_port": 57510,
-            "uuid": "59aaca9a-5aa7-492f-bb29-7abc6bfbebdb",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "a-CPvNEP2Lo6Gh9RaoBVPa79akbtiz2zY9EtUdmVmUA",
-                    "short_id": "4516"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
             "type": "vless",
             "server": "91.107.254.202",
@@ -816,29 +780,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @free_serverir | 50",
-            "type": "vless",
-            "server": "91.107.254.202",
-            "server_port": 2096,
-            "uuid": "5b1d06b0-4193-4a73-8bda-8fc5535cfbbd",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "firebase.googleapis.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "sPEQ8mlkuJQsGrMZux2g9EmXKztuXHwnyORJPwwznDQ",
-                    "short_id": "a0e13102"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
             "type": "vless",
             "server": "5.161.151.225",
@@ -871,7 +812,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @ghalagyann | 23",
+            "tag": "🇩🇪 DE | 🟢 | vless | @ghalagyann | 22",
             "type": "vless",
             "server": "78.47.65.38",
             "server_port": 12365,
@@ -963,6 +904,15 @@
             "server": "151.101.67.8",
             "server_port": 80,
             "uuid": "turboo-server",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 23",
+            "type": "vless",
+            "server": "45.150.33.157",
+            "server_port": 50810,
+            "uuid": "412dce1a-f2b6-4603-9fb9-be8a848bc855",
             "flow": "",
             "packet_encoding": "xudp"
         },
