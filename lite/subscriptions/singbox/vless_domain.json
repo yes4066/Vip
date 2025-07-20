@@ -202,7 +202,6 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
-                "🇺🇸 US | 🟢 | vless | @v2source | 19",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpn_meliii | 8",
@@ -339,7 +338,6 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
-                "🇺🇸 US | 🟢 | vless | @v2source | 19",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpn_meliii | 8",
@@ -2301,31 +2299,6 @@
                 "path": "/?ed=2048",
                 "headers": {
                     "Host": "confignginxV2rayng.vpncustomize.Website"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @v2source | 19",
-            "type": "vless",
-            "server": "aliakb3435.pages.dev",
-            "server_port": 443,
-            "uuid": "97c4550f-8ecc-42fa-ae66-3b550c986cd2",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "aLiAkB3435.paGES.dEV",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "aLiAkB3435.paGES.dEV"
                 }
             }
         },

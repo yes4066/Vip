@@ -89,8 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 68",
-                "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 10",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
@@ -98,8 +96,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇺🇸 US | 🟢 | trojan | @freakconfig | 11",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇬🇷 GR | 🔴 | trojan | @hope_net | 18",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+                "🇺🇸 US | 🟢 | trojan | @hope_net | 15",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 6",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -113,6 +110,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 17",
                 "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 18",
                 "🇺🇸 US | 🔴 | trojan | @v2raych | 15",
+                "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -130,8 +128,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 68",
-                "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 10",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 11",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 12",
@@ -139,8 +135,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇺🇸 US | 🟢 | trojan | @freakconfig | 11",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇬🇷 GR | 🔴 | trojan | @hope_net | 18",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+                "🇺🇸 US | 🟢 | trojan | @hope_net | 15",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 6",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -154,6 +149,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 17",
                 "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 18",
                 "🇺🇸 US | 🔴 | trojan | @v2raych | 15",
+                "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -173,38 +169,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 68",
-            "type": "trojan",
-            "server": "82.192.82.226",
-            "server_port": 443,
-            "password": "4863e1b2-ec2f-4c71-b862-ce533028e57e",
-            "tls": {
-                "enabled": true,
-                "server_name": "trus.moonfree.top",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
-            "type": "trojan",
-            "server": "104.21.47.176",
-            "server_port": 443,
-            "password": "52701795-3c3b-46b4-b7cf-c5978b3a4cf2",
-            "tls": {
-                "enabled": true,
-                "server_name": "hdfyc1.achaemenidempireofpersia.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 10",
@@ -317,30 +281,14 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🇬🇷 GR | 🔴 | trojan | @hope_net | 18",
+            "tag": "🇺🇸 US | 🟢 | trojan | @hope_net | 15",
             "type": "trojan",
-            "server": "31.22.116.151",
-            "server_port": 443,
-            "password": "NISHIKUITAN111",
+            "server": "54.144.186.40",
+            "server_port": 22222,
+            "password": "telegram-id-directvpn",
             "tls": {
                 "enabled": true,
-                "server_name": "31.22.116.151",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
-            "type": "trojan",
-            "server": "192.3.107.252",
-            "server_port": 443,
-            "password": "2ee85121-31de-4581-a492-eb00f606e392",
-            "tls": {
-                "enabled": true,
-                "server_name": "rc8.freeguard.org",
+                "server_name": "trojan.burgerip.co.uk",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -557,12 +505,28 @@
         {
             "tag": "🇺🇸 US | 🔴 | trojan | @v2raych | 15",
             "type": "trojan",
-            "server": "104.18.215.209",
+            "server": "168.100.6.46",
             "server_port": 443,
-            "password": "blue2024",
+            "password": "NISHIKUITAN111",
             "tls": {
                 "enabled": true,
-                "server_name": "ta.promote.icu",
+                "server_name": "168.100.6.46",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
+            "type": "trojan",
+            "server": "104.24.183.134",
+            "server_port": 443,
+            "password": "NISHIKUITAN111",
+            "tls": {
+                "enabled": true,
+                "server_name": "104.24.183.134",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
