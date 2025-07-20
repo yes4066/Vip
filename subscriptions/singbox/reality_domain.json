@@ -97,12 +97,13 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 47",
                 "🇺🇸 US | 🟢 | vless | @configfa | 9",
-                "🇳🇱 NL | 🟢 | vless | @configshubplus | 13",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 15",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
                 "🇳🇱 NL | 🟢 | vless | @dalton_ping | 8",
-                "🇩🇪 DE | 🟢 | vless | @farahvpn | 16",
+                "❔ XX | 🟢 | vless | @farahvpn | 16",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
                 "❔ XX | 🟢 | vless | @fsv2ray | 0",
@@ -186,12 +187,13 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 47",
                 "🇺🇸 US | 🟢 | vless | @configfa | 9",
-                "🇳🇱 NL | 🟢 | vless | @configshubplus | 13",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 15",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
                 "🇳🇱 NL | 🟢 | vless | @dalton_ping | 8",
-                "🇩🇪 DE | 🟢 | vless | @farahvpn | 16",
+                "❔ XX | 🟢 | vless | @farahvpn | 16",
                 "🇩🇪 DE | 🟢 | vless | @filter_breaker | 55",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
                 "❔ XX | 🟢 | vless | @fsv2ray | 0",
@@ -463,6 +465,29 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 47",
+            "type": "vless",
+            "server": "p.faraghost.sbs",
+            "server_port": 28338,
+            "uuid": "98f787cf-bc1c-4044-881e-a1f858f5f28b",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.cloudflare.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "iNpnCGDf4E4ZR-_STyfA3Unh-zK8c2gJbtshJ_QZsnY",
+                    "short_id": "c3a7aaac59"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | vless | @configfa | 9",
             "type": "vless",
             "server": "adsth27.netpilotserverne22twork.ir",
@@ -486,16 +511,16 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @configshubplus | 13",
+            "tag": "🇳🇱 NL | 🟢 | vless | @configshubplus | 15",
             "type": "vless",
             "server": "tg.fast2rayng.sbs",
-            "server_port": 25150,
-            "uuid": "069cc1ce-7e5a-4263-803d-33ecd7b82fe6",
+            "server_port": 8625,
+            "uuid": "f9b504b1-20df-43f4-89cc-64612a8eec6f",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "www.zula.ir",
+                "server_name": "www.bing.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -503,13 +528,9 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "fBW2wtjDNj9teo01a9sWRj13_T9wy9cbts0gNASzggM",
-                    "short_id": "8a"
+                    "public_key": "QMqqKA3T6oF1mP9IctF5EXqk8h3TJKLyh5Q3Yr5gjh4",
+                    "short_id": "95"
                 }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@Fast2RayNG_ViP"
             }
         },
         {
@@ -590,7 +611,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @farahvpn | 16",
+            "tag": "❔ XX | 🟢 | vless | @farahvpn | 16",
             "type": "vless",
             "server": "micro.slumbo.com",
             "server_port": 443,

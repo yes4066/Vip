@@ -91,7 +91,9 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 48",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 15",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -174,7 +176,9 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 48",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 15",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -291,6 +295,15 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 48",
+            "type": "vless",
+            "server": "mci.dl101movis.ir",
+            "server_port": 80,
+            "uuid": "9e8c0b71-1e9e-4a4d-9e86-4ea9772ef534",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @configscenter | 2",
             "type": "vless",
             "server": "2sudo.winapp3.ir",
@@ -298,6 +311,29 @@
             "uuid": "5b0e1347-1e9b-4b83-a27b-468e3dafb69b",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @configshubplus | 15",
+            "type": "vless",
+            "server": "tg.fast2rayng.sbs",
+            "server_port": 8625,
+            "uuid": "f9b504b1-20df-43f4-89cc-64612a8eec6f",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.bing.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QMqqKA3T6oF1mP9IctF5EXqk8h3TJKLyh5Q3Yr5gjh4",
+                    "short_id": "95"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @dailytek | 9",
