@@ -9,6 +9,7 @@
     },
     "NamiraNet": {
         "types": [
+            "ss",
             "trojan",
             "vless",
             "vmess"
@@ -604,7 +605,6 @@
     },
     "fnet00": {
         "types": [
-            "vmess",
             "vless"
         ],
         "title": "🗽 FNET00 | همه چیز آزاد 🤍",
@@ -762,7 +762,7 @@
         "types": [
             "vless",
             "vmess",
-            "hy2"
+            "trojan"
         ],
         "title": "科學上网 free configs",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/freevpnatm.jpg"
@@ -939,10 +939,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
+            "vmess",
             "ss",
-            "vless",
-            "vmess"
+            "trojan",
+            "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1454,8 +1454,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -2551,8 +2551,8 @@
     "v2source": {
         "types": [
             "vless",
-            "ss",
-            "trojan"
+            "trojan",
+            "ss"
         ],
         "title": "Free V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2source.jpg"

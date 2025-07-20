@@ -107,6 +107,7 @@
                 "❔ XX | 🟢 | vless | @fsv2ray | 1",
                 "❔ XX | 🟢 | vless | @fsv2ray | 2",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
+                "❔ XX | 🟢 | vless | @ip_cf_config | 7",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iran_mehr_vpn | 15",
                 "🇺🇸 US | 🟢 | vless | @iranbaxvpn | 4",
@@ -132,6 +133,7 @@
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
+                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 16",
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 4",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
@@ -194,6 +196,7 @@
                 "❔ XX | 🟢 | vless | @fsv2ray | 1",
                 "❔ XX | 🟢 | vless | @fsv2ray | 2",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
+                "❔ XX | 🟢 | vless | @ip_cf_config | 7",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iran_mehr_vpn | 15",
                 "🇺🇸 US | 🟢 | vless | @iranbaxvpn | 4",
@@ -219,6 +222,7 @@
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
+                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 16",
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 4",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
@@ -710,6 +714,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@FsV2ray"
+            }
+        },
+        {
+            "tag": "❔ XX | 🟢 | vless | @ip_cf_config | 7",
+            "type": "vless",
+            "server": "WLF-V-P-N-ID2.dnsfree.one",
+            "server_port": 443,
+            "uuid": "---WLFVPN---",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "GAUjNf1wQnDm5ziCGqRmb3yVfU9bg_UPwZ2_QU4JWRU",
+                    "short_id": "6bb85179e30d4fc2"
+                }
             }
         },
         {
@@ -1344,6 +1371,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@VPNCUSTOMIZE"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 16",
+            "type": "vless",
+            "server": "gr.globalunlimitedinternet.xyz",
+            "server_port": 1911,
+            "uuid": "9bab8b74-de2e-486e-82f8-0b6b1744298c",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "VCwUyNFL_IMTZfEKeIUYEuXbPfzCpuUBGNW1kAu2VW4",
+                    "short_id": "32aaf12b"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "grpc.reality"
             }
         },
         {

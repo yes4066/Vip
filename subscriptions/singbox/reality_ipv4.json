@@ -174,11 +174,9 @@
                 "🇦🇹 AT | 🟢 | vless | @rnrifci | 4",
                 "🇬🇧 GB | 🟢 | vless | @sinavm | 1",
                 "🇩🇪 DE | 🟢 | vless | @sinavm | 2",
-                "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 1",
-                "🇹🇷 TR | 🟢 | vless | @sobyv2ray | 2",
-                "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 4",
-                "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 34",
-                "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
+                "🇹🇷 TR | 🟢 | vless | @sobyv2ray | 1",
+                "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 3",
+                "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 5",
                 "🇳🇱 NL | 🟢 | vless | @summertimeus | 12",
                 "🇳🇱 NL | 🟢 | vless | @tehranfreevpn | 4",
                 "🇳🇱 NL | 🟢 | vless | @tehranfreevpn | 5",
@@ -307,11 +305,9 @@
                 "🇦🇹 AT | 🟢 | vless | @rnrifci | 4",
                 "🇬🇧 GB | 🟢 | vless | @sinavm | 1",
                 "🇩🇪 DE | 🟢 | vless | @sinavm | 2",
-                "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 1",
-                "🇹🇷 TR | 🟢 | vless | @sobyv2ray | 2",
-                "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 4",
-                "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 34",
-                "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
+                "🇹🇷 TR | 🟢 | vless | @sobyv2ray | 1",
+                "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 3",
+                "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 5",
                 "🇳🇱 NL | 🟢 | vless | @summertimeus | 12",
                 "🇳🇱 NL | 🟢 | vless | @tehranfreevpn | 4",
                 "🇳🇱 NL | 🟢 | vless | @tehranfreevpn | 5",
@@ -2473,34 +2469,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 1",
-            "type": "vless",
-            "server": "91.107.180.100",
-            "server_port": 443,
-            "uuid": "Join-Tell-SobyV2ray",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zula.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "eZs1Yn6wbXV2RPT47_szgepN6lNKseOb9nprDMrpNmE",
-                    "short_id": "f3"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "@SobyV2ray"
-            }
-        },
-        {
-            "tag": "🇹🇷 TR | 🟢 | vless | @sobyv2ray | 2",
+            "tag": "🇹🇷 TR | 🟢 | vless | @sobyv2ray | 1",
             "type": "vless",
             "server": "84.32.230.122",
             "server_port": 17349,
@@ -2527,7 +2496,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 4",
+            "tag": "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 3",
             "type": "vless",
             "server": "91.107.180.100",
             "server_port": 443,
@@ -2554,16 +2523,16 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 34",
+            "tag": "🇩🇪 DE | 🟢 | vless | @sobyv2ray | 5",
             "type": "vless",
-            "server": "88.99.87.227",
-            "server_port": 2080,
-            "uuid": "63fa5580-1bb7-4cc1-a6ee-0ed4eaa52308",
+            "server": "91.107.180.100",
+            "server_port": 443,
+            "uuid": "a0445355-3959-4454-9235-cee5a7b86a64",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
+                "server_name": "zula.ir",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -2571,40 +2540,13 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "MqY81IaljluV2NXyLqPzt7PL12knwUuBiX0ru_KSLCM",
-                    "short_id": "aa0dd5ba"
+                    "public_key": "eZs1Yn6wbXV2RPT47_szgepN6lNKseOb9nprDMrpNmE",
+                    "short_id": "f3"
                 }
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "32135vless"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
-            "type": "vless",
-            "server": "88.99.87.227",
-            "server_port": 2090,
-            "uuid": "Telegram--SRCVPN-",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "MqY81IaljluV2NXyLqPzt7PL12knwUuBiX0ru_KSLCM",
-                    "short_id": "aa0dd5ba"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "32135vless"
+                "service_name": "@SobyV2ray"
             }
         },
         {
