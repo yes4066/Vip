@@ -107,7 +107,6 @@
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇭🇰 HK | 🟢 | vless | @vpnaloo | 16",
-                "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 20",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
@@ -117,7 +116,7 @@
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
-                "🇦🇪 AE | 🟢 | vless | @irv2rey | 5",
+                "🇦🇪 AE | 🟢 | vless | @irv2rey | 6",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇳🇱 NL | 🟢 | vless | @lranonline_new | 3",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -158,7 +157,6 @@
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇭🇰 HK | 🟢 | vless | @vpnaloo | 16",
-                "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 20",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
@@ -168,7 +166,7 @@
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
-                "🇦🇪 AE | 🟢 | vless | @irv2rey | 5",
+                "🇦🇪 AE | 🟢 | vless | @irv2rey | 6",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇳🇱 NL | 🟢 | vless | @lranonline_new | 3",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -633,29 +631,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vpnv2rayngv | 20",
-            "type": "vless",
-            "server": "zn.boshrachoice.ir",
-            "server_port": 9944,
-            "uuid": "8ec07b8c-289b-41df-a0c5-2b5f8c941e5f",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "IUk4LR6VI6CnvLMY_ks1KdOHvB1_byMvQM3gZfuU5S0",
-                    "short_id": ""
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @vpnwlf | 10",
             "type": "vless",
             "server": "WLF-V-P-N-ID2.dnsfree.one",
@@ -875,11 +850,11 @@
             }
         },
         {
-            "tag": "🇦🇪 AE | 🟢 | vless | @irv2rey | 5",
+            "tag": "🇦🇪 AE | 🟢 | vless | @irv2rey | 6",
             "type": "vless",
             "server": "91.98.21.58",
             "server_port": 18606,
-            "uuid": "10bf842c-ff96-4460-b18c-55d4c3740fc9",
+            "uuid": "518edad1-5001-4692-ea61-fb03dc665825",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {

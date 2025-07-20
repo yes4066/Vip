@@ -937,10 +937,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
+            "trojan",
             "ss",
-            "vmess",
-            "trojan"
+            "vless",
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1148,8 +1148,8 @@
     },
     "kingofilter": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "خدمات کینگو فیلتر | فیلترشکن رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/kingofilter.jpg"
@@ -1452,8 +1452,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -2342,7 +2342,6 @@
     "v2raying": {
         "types": [
             "vless",
-            "vmess",
             "ss"
         ],
         "title": "v2rayNG_VPN",
@@ -2549,8 +2548,8 @@
     },
     "v2source": {
         "types": [
-            "trojan",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "Free V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2source.jpg"
