@@ -96,7 +96,6 @@
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 6",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 5",
@@ -111,7 +110,6 @@
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
-                "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 29",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇷🇺 RU | 🟢 | vless | @free1_vpn | 7",
@@ -146,7 +144,6 @@
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 6",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 5",
@@ -161,7 +158,6 @@
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
-                "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 29",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇷🇺 RU | 🟢 | vless | @free1_vpn | 7",
@@ -363,29 +359,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Hossien"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @mowjproxy | 6",
-            "type": "vless",
-            "server": "de1.xservers.ir",
-            "server_port": 8585,
-            "uuid": "ce02ef89-4a22-40d3-a962-9a8e12c252fe",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "A-8wmBnGrz4ny7CB9Zfnjz66cbS83uOMdH61CsI-rm8",
-                    "short_id": "200de4ca48fb1731"
-                }
             }
         },
         {
@@ -719,29 +692,6 @@
                     "enabled": true,
                     "public_key": "4Xu_jqRD-mbhEwNyntlz_6zU4VhsE0-QWCxAbhEL_H4",
                     "short_id": "7ab467"
-                }
-            }
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @expressvpn_420 | 29",
-            "type": "vless",
-            "server": "62.212.70.94",
-            "server_port": 2026,
-            "uuid": "b962948d-6d78-4810-a8df-1b062a23cafe",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zhaket.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "U3dj7hcbexG-SmeG88Mdzr7-4aHk-r_IShG2EXTvXFI",
-                    "short_id": "e9"
                 }
             }
         },

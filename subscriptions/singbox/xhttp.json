@@ -92,7 +92,6 @@
                 "🇺🇸 US | 🔴 | vless | @appsooner | 8",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
-                "🇭🇰 HK | 🟢 | vless | @configshubplus | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -107,10 +106,10 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 1",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
-                "PSGkxwekibymq",
+                "PSGfkicyzqmkc",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 6",
+                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 5",
                 "🇳🇱 NL | 🟢 | vless | @proxycrone | 1",
@@ -127,7 +126,7 @@
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 145",
+                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 159",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
@@ -177,7 +176,6 @@
                 "🇺🇸 US | 🔴 | vless | @appsooner | 8",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
-                "🇭🇰 HK | 🟢 | vless | @configshubplus | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -192,10 +190,10 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 1",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
-                "PSGkxwekibymq",
+                "PSGfkicyzqmkc",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 6",
+                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 5",
                 "🇳🇱 NL | 🟢 | vless | @proxycrone | 1",
@@ -212,7 +210,7 @@
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 145",
+                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 159",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
@@ -302,29 +300,6 @@
             "uuid": "5b0e1347-1e9b-4b83-a27b-468e3dafb69b",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇭🇰 HK | 🟢 | vless | @configshubplus | 12",
-            "type": "vless",
-            "server": "ko1.xservers.ir",
-            "server_port": 8585,
-            "uuid": "ce02ef89-4a22-40d3-a962-9a8e12c252fe",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "A-8wmBnGrz4ny7CB9Zfnjz66cbS83uOMdH61CsI-rm8",
-                    "short_id": "200de4ca48fb1731"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -453,7 +428,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "PSGkxwekibymq",
+            "tag": "PSGfkicyzqmkc",
             "type": "vless",
             "server": "hibbb.fast.hosting-ip.com",
             "server_port": 80,
@@ -480,7 +455,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @mowjproxy | 6",
+            "tag": "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
             "type": "vless",
             "server": "de1.xservers.ir",
             "server_port": 8585,
@@ -716,16 +691,16 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @dailyv2ry | 145",
+            "tag": "🇺🇸 US | 🔴 | vless | @dailyv2ry | 159",
             "type": "vless",
-            "server": "192.155.93.240",
+            "server": "137.220.39.221",
             "server_port": 443,
-            "uuid": "1a921231-3cae-4948-9088-cfb18d0bf87c",
+            "uuid": "4bf96dd2-f451-4938-8fa4-1a2251290920",
             "flow": "",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "192.155.93.240",
+                "server_name": "137.220.39.221",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
