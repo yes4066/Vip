@@ -100,7 +100,7 @@
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇺🇸 US | 🟢 | vmess | @freevpnatm | 15",
+                "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 14",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -120,7 +120,7 @@
                 "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
                 "🇺🇸 US | 🔴 | vmess | @royal_shop87 | 17",
                 "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
-                "🇩🇪 DE | 🔴 | vmess | @sezar_sec | 1",
+                "🇩🇪 DE | 🔴 | vmess | @sezar_sec | 2",
                 "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
                 "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 3",
                 "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
@@ -134,7 +134,7 @@
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇩🇪 DE | 🔴 | vmess | @vpn_ioss | 18",
-                "🇨🇭 CH | 🔴 | vmess | @vpnfail_v2ray | 16",
+                "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 17",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -157,7 +157,7 @@
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇺🇸 US | 🟢 | vmess | @freevpnatm | 15",
+                "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 14",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -177,7 +177,7 @@
                 "🇦🇹 AT | 🔴 | vmess | @rnrifci | 5",
                 "🇺🇸 US | 🔴 | vmess | @royal_shop87 | 17",
                 "🇮🇷 IR | 🔴 | vmess | @savagenet | 1",
-                "🇩🇪 DE | 🔴 | vmess | @sezar_sec | 1",
+                "🇩🇪 DE | 🔴 | vmess | @sezar_sec | 2",
                 "🇺🇸 US | 🟢 | vmess | @shadowsocksservers | 12",
                 "🇨🇳 CN | 🔴 | vmess | @sharecentrepro | 3",
                 "🇳🇱 NL | 🟢 | vmess | @tehranfreevpn | 7",
@@ -191,7 +191,7 @@
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇩🇪 DE | 🔴 | vmess | @vpn_ioss | 18",
-                "🇨🇭 CH | 🔴 | vmess | @vpnfail_v2ray | 16",
+                "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 17",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -389,27 +389,18 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vmess | @freevpnatm | 15",
+            "tag": "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 14",
             "type": "vmess",
-            "server": "172.67.170.147",
-            "server_port": 443,
-            "uuid": "ffcf7ec1-3e09-4821-b3d9-b426a107b73b",
+            "server": "8.214.33.158",
+            "server_port": 80,
+            "uuid": "cb81e6ab-1d83-4ac1-f0ad-ae5c2a7c29ef",
             "security": "auto",
             "alter_id": 0,
-            "tls": {
-                "enabled": true,
-                "server_name": "XCvfGt6.999854.xyz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
             "transport": {
                 "type": "ws",
-                "path": "/4Bp70NdrJV3xr1D40NK",
+                "path": "/",
                 "headers": {
-                    "Host": "XCvfGt6.999854.xyz"
+                    "Host": ""
                 }
             }
         },
@@ -692,7 +683,7 @@
             "alter_id": 0
         },
         {
-            "tag": "🇩🇪 DE | 🔴 | vmess | @sezar_sec | 1",
+            "tag": "🇩🇪 DE | 🔴 | vmess | @sezar_sec | 2",
             "type": "vmess",
             "server": "panel3.ipyar.org",
             "server_port": 32017,
@@ -894,13 +885,29 @@
             "alter_id": 0
         },
         {
-            "tag": "🇨🇭 CH | 🔴 | vmess | @vpnfail_v2ray | 16",
+            "tag": "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 17",
             "type": "vmess",
-            "server": "186.190.215.193",
-            "server_port": 22324,
-            "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
+            "server": "15.235.50.172",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
-            "alter_id": 0
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkvws",
+                "headers": {
+                    "Host": ""
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",

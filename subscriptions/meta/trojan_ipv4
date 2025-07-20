@@ -23,8 +23,6 @@ dns:
     - '+.pool.ntp.org'
 
 proxies: 
-  - {"name":"🇺🇸 US | 🟢 | trojan | @NamiraNet | 65","type":"trojan","server":"69.162.95.5","port":443,"password":"4863e1b2-ec2f-4c71-b862-ce533028e57e","skip-cert-verify":true}
-  - {"name":"🇺🇸 US | 🟢 | trojan | @NamiraNet | 67","type":"trojan","server":"162.210.196.168","port":443,"password":"4863e1b2-ec2f-4c71-b862-ce533028e57e","skip-cert-verify":true}
   - {"name":"🇩🇪 DE | 🟢 | trojan | @directvpn | 8","type":"trojan","server":"3.74.12.246","port":22223,"password":"telegram-id-directvpn","skip-cert-verify":false}
   - {"name":"🇫🇷 FR | 🟢 | trojan | @directvpn | 9","type":"trojan","server":"51.44.197.229","port":22223,"password":"telegram-id-directvpn","skip-cert-verify":false}
   - {"name":"🇫🇷 FR | 🟢 | trojan | @directvpn | 10","type":"trojan","server":"35.180.162.247","port":22223,"password":"telegram-id-directvpn","skip-cert-verify":false}
@@ -32,7 +30,6 @@ proxies:
   - {"name":"🇩🇪 DE | 🟢 | trojan | @directvpn | 12","type":"trojan","server":"3.64.91.90","port":22223,"password":"telegram-id-directvpn","skip-cert-verify":false}
   - {"name":"🇺🇸 US | 🟢 | trojan | @dnsforyou | 8","type":"trojan","server":"172.67.181.173","port":443,"password":"f282b878-8711-45a1-8c69-5564172123c1","skip-cert-verify":false}
   - {"name":"🇩🇪 DE | 🔴 | trojan | @freev2raym | 7","type":"trojan","server":"91.107.141.0","port":23825,"password":"ziIjOlyGbM","skip-cert-verify":false}
-  - {"name":"🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12","type":"trojan","server":"198.23.229.250","port":443,"password":"2ee85121-31de-4581-a492-eb00f606e392","skip-cert-verify":false}
   - {"name":"🇫🇷 FR | 🟢 | trojan | @jiedianf | 5","type":"trojan","server":"15.236.173.146","port":22222,"password":"telegram-id-privatevpns","skip-cert-verify":true}
   - {"name":"🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 6","type":"trojan","server":"172.67.181.173","port":443,"password":"f282b878-8711-45a1-8c69-5564172123c1","skip-cert-verify":false}
   - {"name":"🇸🇬 SG | 🟢 | trojan | @mpmehi | 0","type":"trojan","server":"146.190.87.238","port":443,"password":"oZAugtgF5T","skip-cert-verify":false}
@@ -67,8 +64,6 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies: 
-      - '🇺🇸 US | 🟢 | trojan | @NamiraNet | 65'
-      - '🇺🇸 US | 🟢 | trojan | @NamiraNet | 67'
       - '🇩🇪 DE | 🟢 | trojan | @directvpn | 8'
       - '🇫🇷 FR | 🟢 | trojan | @directvpn | 9'
       - '🇫🇷 FR | 🟢 | trojan | @directvpn | 10'
@@ -76,7 +71,6 @@ proxy-groups:
       - '🇩🇪 DE | 🟢 | trojan | @directvpn | 12'
       - '🇺🇸 US | 🟢 | trojan | @dnsforyou | 8'
       - '🇩🇪 DE | 🔴 | trojan | @freev2raym | 7'
-      - '🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12'
       - '🇫🇷 FR | 🟢 | trojan | @jiedianf | 5'
       - '🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 6'
       - '🇸🇬 SG | 🟢 | trojan | @mpmehi | 0'
