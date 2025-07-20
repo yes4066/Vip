@@ -89,13 +89,14 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇬🇧 GB | 🟢 | ss | @NamiraNet | 64",
+                "🇬🇧 GB | 🟢 | ss | @NamiraNet | 65",
+                "🇷🇺 RU | 🟢 | ss | @NamiraNet | 67",
                 "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
-                "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
-                "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
                 "🇬🇧 GB | 🟢 | ss | @imhdiyvp | 5",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
@@ -125,13 +126,14 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇬🇧 GB | 🟢 | ss | @NamiraNet | 64",
+                "🇬🇧 GB | 🟢 | ss | @NamiraNet | 65",
+                "🇷🇺 RU | 🟢 | ss | @NamiraNet | 67",
                 "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
                 "🇺🇸 US | 🟢 | ss | @chestertm | 10",
                 "❔ XX | 🟢 | ss | @chestertm | 12",
                 "🇬🇧 GB | 🟢 | ss | @config_proxy_ir | 17",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
-                "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
-                "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
                 "🇬🇧 GB | 🟢 | ss | @imhdiyvp | 5",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
@@ -163,6 +165,30 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @NamiraNet | 64",
+            "type": "shadowsocks",
+            "server": "series-a2-mec.varzesh360.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "u17T3BvpYaaiuW2c"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @NamiraNet | 65",
+            "type": "shadowsocks",
+            "server": "series-a2.varzesh360.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "mps3FwmDjLrWaOVg"
+        },
+        {
+            "tag": "🇷🇺 RU | 🟢 | ss | @NamiraNet | 67",
+            "type": "shadowsocks",
+            "server": "ct.uigame.space",
+            "server_port": 2024,
+            "method": "chacha20-ietf-poly1305",
+            "password": "33LpoU8X/xHnCD+cbNe+7p0pK/JngDLM+5+RILrxyfVFRW/niKz5Eu0rWyVcDho="
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
@@ -203,22 +229,6 @@
             "server_port": 10107,
             "method": "aes-256-gcm",
             "password": "M2E4ZGY2ZjI5MzU2ODAxMjEwYzgyNzQ0MGM5NGUy"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
-            "type": "shadowsocks",
-            "server": "series-a2.varzesh360.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "mps3FwmDjLrWaOVg"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
-            "type": "shadowsocks",
-            "server": "series-a2-mec.varzesh360.co",
-            "server_port": 443,
-            "method": "chacha20-ietf-poly1305",
-            "password": "u17T3BvpYaaiuW2c"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @imhdiyvp | 5",

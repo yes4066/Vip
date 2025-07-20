@@ -89,12 +89,12 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @v2source | 19"
+                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -102,12 +102,12 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
-                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
-                "🇺🇸 US | 🔴 | vless | @v2source | 19"
+                "🇺🇸 US | 🔴 | vless | @qeshmserver | 12"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -117,6 +117,29 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
+            "type": "vless",
+            "server": "91.107.254.202",
+            "server_port": 8443,
+            "uuid": "a6580107-b1e0-4057-9f47-ac7f28de457a",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "firebase.googleapis.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "4Xu_jqRD-mbhEwNyntlz_6zU4VhsE0-QWCxAbhEL_H4",
+                    "short_id": "7ab467"
+                }
+            }
         },
         {
             "tag": "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -197,15 +220,6 @@
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "qeshmserver",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2source | 19",
-            "type": "vless",
-            "server": "151.101.2.219",
-            "server_port": 80,
-            "uuid": "09094697-6036-4097-a906-7a8ddb7ef839",
             "flow": "",
             "packet_encoding": "xudp"
         }
