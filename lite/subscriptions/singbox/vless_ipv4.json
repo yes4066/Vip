@@ -90,7 +90,6 @@
                 "auto",
                 "direct",
                 "🇮🇷 IR | 🔴 | vless | @Fr33C0nfig | 49",
-                "🇺🇸 US | 🔴 | vless | @NamiraNet | 64",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 1",
                 "🇮🇷 IR | 🔴 | vless | @ansel_team | 1",
@@ -105,7 +104,7 @@
                 "🇸🇪 SE | 🔴 | vless | @deli_servers | 2",
                 "🇺🇸 US | 🟢 | vless | @dnsforyou | 17",
                 "🇺🇸 US | 🟢 | vless | @drvpn_net | 1",
-                "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 27",
+                "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 29",
                 "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
                 "🇩🇪 DE | 🔴 | vless | @farahvpn | 19",
                 "🇮🇷 IR | 🔴 | vless | @fasst_vpn | 0",
@@ -148,6 +147,7 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
+                "🇮🇹 IT | 🔴 | vless | @mowjproxy | 6",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
                 "🇺🇸 US | 🟢 | vless | @mt_proxy | 7",
@@ -187,6 +187,7 @@
                 "🇳🇱 NL | 🔴 | vless | @v2rayprotocol | 11",
                 "🇩🇪 DE | 🔴 | vless | @v2rayvmess | 17",
                 "🇺🇸 US | 🔴 | vless | @v2rayvx | 4",
+                "🇺🇸 US | 🔴 | vless | @v2source | 18",
                 "🇺🇸 US | 🟢 | vless | @vaiking_vpn | 0",
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
@@ -209,7 +210,6 @@
             "interval": "10m",
             "outbounds": [
                 "🇮🇷 IR | 🔴 | vless | @Fr33C0nfig | 49",
-                "🇺🇸 US | 🔴 | vless | @NamiraNet | 64",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 1",
                 "🇮🇷 IR | 🔴 | vless | @ansel_team | 1",
@@ -224,7 +224,7 @@
                 "🇸🇪 SE | 🔴 | vless | @deli_servers | 2",
                 "🇺🇸 US | 🟢 | vless | @dnsforyou | 17",
                 "🇺🇸 US | 🟢 | vless | @drvpn_net | 1",
-                "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 27",
+                "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 29",
                 "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
                 "🇩🇪 DE | 🔴 | vless | @farahvpn | 19",
                 "🇮🇷 IR | 🔴 | vless | @fasst_vpn | 0",
@@ -267,6 +267,7 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
+                "🇮🇹 IT | 🔴 | vless | @mowjproxy | 6",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
                 "🇺🇸 US | 🟢 | vless | @mt_proxy | 7",
@@ -306,6 +307,7 @@
                 "🇳🇱 NL | 🔴 | vless | @v2rayprotocol | 11",
                 "🇩🇪 DE | 🔴 | vless | @v2rayvmess | 17",
                 "🇺🇸 US | 🔴 | vless | @v2rayvx | 4",
+                "🇺🇸 US | 🔴 | vless | @v2source | 18",
                 "🇺🇸 US | 🟢 | vless | @vaiking_vpn | 0",
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
@@ -338,22 +340,6 @@
             "uuid": "a804bb53-7504-4f06-96d8-ff56fb71539d",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @NamiraNet | 64",
-            "type": "vless",
-            "server": "172.67.179.79",
-            "server_port": 8880,
-            "uuid": "e9979910-79d1-4621-a93c-b2a579c44ba7",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/pGBzWmXLHFXw6oHR?ed=2560",
-                "headers": {
-                    "Host": "172.67.179.79"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
@@ -618,7 +604,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 27",
+            "tag": "🇺🇸 US | 🔴 | vless | @expressvpn_420 | 29",
             "type": "vless",
             "server": "104.21.112.1",
             "server_port": 80,
@@ -1381,6 +1367,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇮🇹 IT | 🔴 | vless | @mowjproxy | 6",
+            "type": "vless",
+            "server": "151.101.242.172",
+            "server_port": 80,
+            "uuid": "3d1b7cfd-0019-4b71-9c8e-b922e5e262c3",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
             "type": "vless",
             "server": "151.101.128.223",
@@ -1442,7 +1437,7 @@
             "type": "vless",
             "server": "87.120.92.135",
             "server_port": 8080,
-            "uuid": "3d61026b-b1b6-4f71-b91f-9771e29eb3e3",
+            "uuid": "d8359f3c-d28f-4fc5-a94f-da4fc11850f5",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -2058,6 +2053,22 @@
                 "path": "/http",
                 "headers": {
                     "Host": "104.16.61.8"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @v2source | 18",
+            "type": "vless",
+            "server": "188.114.97.2",
+            "server_port": 8080,
+            "uuid": "6a18162e-42c1-40e4-aede-16bcd367abd9",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/gs",
+                "headers": {
+                    "Host": "188.114.97.2"
                 }
             }
         },
