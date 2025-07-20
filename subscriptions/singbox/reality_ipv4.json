@@ -129,7 +129,6 @@
                 "🇩🇪 DE | 🟢 | vless | @goodbyefiltering | 4",
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 8",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇺🇸 US | 🟢 | vless | @hope_net | 16",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 2",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 3",
                 "🇸🇪 SE | 🟢 | vless | @icv2ray | 8",
@@ -196,7 +195,6 @@
                 "🇳🇱 NL | 🟢 | vless | @v2rayexpress | 10",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngconfings | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
-                "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 5",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 10",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 12",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 13",
@@ -262,7 +260,6 @@
                 "🇩🇪 DE | 🟢 | vless | @goodbyefiltering | 4",
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 8",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
-                "🇺🇸 US | 🟢 | vless | @hope_net | 16",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 2",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 3",
                 "🇸🇪 SE | 🟢 | vless | @icv2ray | 8",
@@ -329,7 +326,6 @@
                 "🇳🇱 NL | 🟢 | vless | @v2rayexpress | 10",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngconfings | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2rayngninja | 8",
-                "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 5",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 10",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 12",
                 "🇹🇷 TR | 🟢 | vless | @v2starvip | 13",
@@ -1355,29 +1351,6 @@
                     "enabled": true,
                     "public_key": "YqHW8a4iAc1SZYpTrFVoOQg1F3yAdX1tWXuROZUCsEU",
                     "short_id": "6ba85179e30d4fc2"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @hope_net | 16",
-            "type": "vless",
-            "server": "172.233.174.78",
-            "server_port": 80,
-            "uuid": "ef27e62d-91bd-4676-b9ce-8743a73eda07",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zula.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "BVimgXtKkQ2Q6EpG8uKYTpySrNxEeIqVhdsxi5U5qRU",
-                    "short_id": "94aa1bdc"
                 }
             }
         },
@@ -3011,33 +2984,6 @@
                     "www.speedtest.net"
                 ],
                 "path": "/"
-            }
-        },
-        {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 5",
-            "type": "vless",
-            "server": "194.182.79.142",
-            "server_port": 11744,
-            "uuid": "31865946-8488-4edc-88e3-6a26d35bf72d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "pglxO6QdgE1SmjPijag4CbRZND--yCn-EoKagGTm6Cw",
-                    "short_id": "55"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
             }
         },
         {

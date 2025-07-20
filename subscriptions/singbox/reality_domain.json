@@ -148,13 +148,14 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
+                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 14",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngseven | 5",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 7",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
-                "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 13",
+                "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 12",
+                "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -235,13 +236,14 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
+                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 14",
                 "🇩🇪 DE | 🟢 | vless | @v2rayngseven | 5",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 7",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
-                "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 13",
+                "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 12",
+                "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -1723,7 +1725,7 @@
             }
         },
         {
-            "tag": "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
+            "tag": "🇺🇸 US | 🟢 | vless | @v2rayngrit | 14",
             "type": "vless",
             "server": "amazon-4.cristiano.name.ng",
             "server_port": 443,
@@ -1865,7 +1867,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 13",
+            "tag": "🇩🇪 DE | 🟢 | vless | @v2trayproxy | 12",
             "type": "vless",
             "server": "api.node.snap.com.digi-gamingzone.koalavault.servers807.ir",
             "server_port": 2025,
@@ -1889,6 +1891,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "sadf2341sad"
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
+            "type": "vless",
+            "server": "online-chat.webboosterpro.co.uk",
+            "server_port": 443,
+            "uuid": "f72e4aa8-36c2-4dd6-b19d-dfe6be679e44",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.fastly.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U",
+                    "short_id": "1eaf5214"
+                }
             }
         },
         {

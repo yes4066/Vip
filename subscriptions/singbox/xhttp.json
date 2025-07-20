@@ -106,7 +106,7 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
-                "PSGkhvobkqdlz",
+                "PSGvimmoltulg",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
@@ -118,6 +118,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
+                "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 13",
@@ -188,7 +189,7 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 4",
                 "🇺🇸 US | 🔴 | vless | @father_vpn | 2",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
-                "PSGkhvobkqdlz",
+                "PSGvimmoltulg",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
@@ -200,6 +201,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
+                "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 13",
@@ -424,7 +426,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "PSGkhvobkqdlz",
+            "tag": "PSGvimmoltulg",
             "type": "vless",
             "server": "hibbb.fast.hosting-ip.com",
             "server_port": 80,
@@ -571,6 +573,29 @@
             "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
+            "type": "vless",
+            "server": "online-chat.webboosterpro.co.uk",
+            "server_port": 443,
+            "uuid": "f72e4aa8-36c2-4dd6-b19d-dfe6be679e44",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.fastly.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U",
+                    "short_id": "1eaf5214"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",

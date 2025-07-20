@@ -89,12 +89,12 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
+                "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
+                "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
                 "🇺🇸 US | 🟢 | trojan | @dnsforyou | 8",
-                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 14",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
-                "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
+                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11"
@@ -105,12 +105,12 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
+                "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
+                "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
                 "🇺🇸 US | 🟢 | trojan | @dnsforyou | 8",
-                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 14",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
-                "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
+                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11"
@@ -125,9 +125,25 @@
             "type": "direct"
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
+            "tag": "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
             "type": "trojan",
-            "server": "35.180.162.247",
+            "server": "74.63.241.25",
+            "server_port": 443,
+            "password": "4863e1b2-ec2f-4c71-b862-ce533028e57e",
+            "tls": {
+                "enabled": true,
+                "server_name": "trus.moonfree.top",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 14",
+            "type": "trojan",
+            "server": "18.156.59.108",
             "server_port": 22223,
             "password": "telegram-id-directvpn",
             "tls": {
@@ -161,26 +177,6 @@
                 "headers": {
                     "Host": "vpn.stupidworld.web.id"
                 }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @freevpnatm | 14",
-            "type": "trojan",
-            "server": "104.21.30.37",
-            "server_port": 443,
-            "password": "ffcf7ec1-3e09-4821-b3d9-b426a107b73b",
-            "tls": {
-                "enabled": true,
-                "server_name": "88ikKMhGtY.444682.XYz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "XmTzATQPJv9ROgWK0XsfKF93"
             }
         },
         {
@@ -223,9 +219,9 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @privatevpns | 14",
             "type": "trojan",
-            "server": "35.180.162.247",
+            "server": "18.156.59.108",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {
