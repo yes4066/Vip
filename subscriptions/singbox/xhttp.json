@@ -125,15 +125,17 @@
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 13",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 48",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
+                "🇦🇪 AE | 🟢 | vless | @dnsforyou | 25",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 8",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @flyv2ray | 0",
                 "🇩🇪 DE | 🟢 | vless | @free_serverir | 55",
                 "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
-                "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 12",
+                "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 14",
                 "🇩🇪 DE | 🟢 | vless | @ghalagyann | 23",
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 8",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 2",
@@ -212,15 +214,17 @@
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
                 "🇺🇸 US | 🔴 | vless | @arv2ray | 13",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 48",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
+                "🇦🇪 AE | 🟢 | vless | @dnsforyou | 25",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 8",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @flyv2ray | 0",
                 "🇩🇪 DE | 🟢 | vless | @free_serverir | 55",
                 "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
-                "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 12",
+                "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 14",
                 "🇩🇪 DE | 🟢 | vless | @ghalagyann | 23",
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 8",
                 "🇺🇸 US | 🔴 | vless | @irv2rey | 2",
@@ -674,6 +678,29 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 48",
+            "type": "vless",
+            "server": "138.199.168.187",
+            "server_port": 28153,
+            "uuid": "MdVpnSec",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zhaket.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "wIyC9CuOB33Hx1HbHnx_0JZXypmEink7icN0rWmzTlE",
+                    "short_id": "b6f9"
+                }
+            }
+        },
+        {
             "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
             "type": "vless",
             "server": "91.107.254.202",
@@ -704,6 +731,29 @@
             "uuid": "0b4e0f6a-98a2-468a-910f-4a0b3fbeec36",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇦🇪 AE | 🟢 | vless | @dnsforyou | 25",
+            "type": "vless",
+            "server": "130.185.122.139",
+            "server_port": 16380,
+            "uuid": "a84f0ac2-0a3d-4ad4-bd9e-9b9ed0f7a603",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "microsoft.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "fcCCo3amb6xSdqw_NPVERN8TF-Noy4DRHLNFM9ee4DQ",
+                    "short_id": "7821497e5d"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
@@ -829,7 +879,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 12",
+            "tag": "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 14",
             "type": "vless",
             "server": "151.101.67.8",
             "server_port": 80,

@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇳🇱 NL | 🟢 | ss | @NamiraNet | 68",
                 "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇸🇪 SE | 🟢 | ss | @azarbayjab1 | 7",
@@ -132,7 +131,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇳🇱 NL | 🟢 | ss | @NamiraNet | 68",
                 "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇸🇪 SE | 🟢 | ss | @azarbayjab1 | 7",
@@ -177,14 +175,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | ss | @NamiraNet | 68",
-            "type": "shadowsocks",
-            "server": "147.45.114.160",
-            "server_port": 45651,
-            "method": "chacha20-ietf-poly1305",
-            "password": "M8QlxO4xR2Aor3nI4nnojF"
         },
         {
             "tag": "🇳🇱 NL | 🟢 | ss | @ai_duet | 8",
