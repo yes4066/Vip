@@ -150,6 +150,7 @@
                 "🇱🇰 LK | 🔴 | vless | @mtpv2ray | 11",
                 "🇩🇪 DE | 🔴 | vless | @narco_nett | 18",
                 "🇩🇪 DE | 🔴 | vless | @narcod_ping | 14",
+                "🇺🇸 US | 🔴 | vless | @netmellianti | 16",
                 "🇺🇸 US | 🟢 | vless | @netspeedservice | 4",
                 "🇺🇸 US | 🟢 | vless | @new_proxy_channel | 8",
                 "🇺🇸 US | 🔴 | vless | @nitrovpne | 1",
@@ -184,7 +185,6 @@
                 "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 9",
                 "🇳🇱 NL | 🔴 | vless | @v2rayprotocol | 11",
                 "🇩🇪 DE | 🔴 | vless | @v2rayvmess | 17",
-                "🇺🇸 US | 🔴 | vless | @v2rayvx | 4",
                 "🇺🇸 US | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🟢 | vless | @vaiking_vpn | 0",
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
@@ -194,6 +194,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
+                "🇺🇸 US | 🔴 | vless | @vpnaloo | 15",
                 "🇺🇸 US | 🟢 | vless | @vpnfreeo | 33",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇷🇺 RU | 🟢 | vless | @vpnod | 18",
@@ -270,6 +271,7 @@
                 "🇱🇰 LK | 🔴 | vless | @mtpv2ray | 11",
                 "🇩🇪 DE | 🔴 | vless | @narco_nett | 18",
                 "🇩🇪 DE | 🔴 | vless | @narcod_ping | 14",
+                "🇺🇸 US | 🔴 | vless | @netmellianti | 16",
                 "🇺🇸 US | 🟢 | vless | @netspeedservice | 4",
                 "🇺🇸 US | 🟢 | vless | @new_proxy_channel | 8",
                 "🇺🇸 US | 🔴 | vless | @nitrovpne | 1",
@@ -304,7 +306,6 @@
                 "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 9",
                 "🇳🇱 NL | 🔴 | vless | @v2rayprotocol | 11",
                 "🇩🇪 DE | 🔴 | vless | @v2rayvmess | 17",
-                "🇺🇸 US | 🔴 | vless | @v2rayvx | 4",
                 "🇺🇸 US | 🟢 | vless | @v2source | 19",
                 "🇺🇸 US | 🟢 | vless | @vaiking_vpn | 0",
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
@@ -314,6 +315,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
+                "🇺🇸 US | 🔴 | vless | @vpnaloo | 15",
                 "🇺🇸 US | 🟢 | vless | @vpnfreeo | 33",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇷🇺 RU | 🟢 | vless | @vpnod | 18",
@@ -1385,6 +1387,22 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @netmellianti | 16",
+            "type": "vless",
+            "server": "188.114.97.2",
+            "server_port": 8080,
+            "uuid": "56772702-2095-42d4-b761-24c59166b4bc",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/gs",
+                "headers": {
+                    "Host": "188.114.97.2"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | vless | @netspeedservice | 4",
             "type": "vless",
             "server": "104.21.28.62",
@@ -2004,22 +2022,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2rayvx | 4",
-            "type": "vless",
-            "server": "104.16.61.8",
-            "server_port": 80,
-            "uuid": "378ac207-38d3-4401-ba96-3a7931968bc5",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/http",
-                "headers": {
-                    "Host": "104.16.61.8"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | vless | @v2source | 19",
             "type": "vless",
             "server": "162.251.82.187",
@@ -2214,6 +2216,22 @@
                 "path": "/",
                 "headers": {
                     "Host": "104.18.14.19"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @vpnaloo | 15",
+            "type": "vless",
+            "server": "172.67.207.54",
+            "server_port": 8880,
+            "uuid": "e9979910-79d1-4621-a93c-b2a579c44ba7",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/34COh9NCiin5SJMk?ed=2560",
+                "headers": {
+                    "Host": "172.67.207.54"
                 }
             }
         },

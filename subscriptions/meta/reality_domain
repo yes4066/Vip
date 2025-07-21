@@ -86,7 +86,7 @@ proxies:
   - {"name":"❔ XX | 🟢 | vless | @vp22ray | 8","type":"vless","server":"german.vp22ray.site","port":2087,"uuid":"2179abfc-2435-4b64-8c96-cb39184a4348","tls":true,"network":"tcp","client-fingerprint":"firefox","udp":true,"servername":"Ftp.debian.org","reality-opts":{"public-key":"54z0hCTglWDmCFnDBU4JmzqjJtFgbhM3x45l-B5If1I","short-id":"32c43ca1"}}
   - {"name":"❔ XX | 🟢 | vless | @vp22ray | 9","type":"vless","server":"german.vp22ray.site","port":2087,"uuid":"290719bc-bd21-4467-bdcd-33396fa88394","tls":true,"network":"tcp","client-fingerprint":"firefox","udp":true,"servername":"Ftp.debian.org","reality-opts":{"public-key":"54z0hCTglWDmCFnDBU4JmzqjJtFgbhM3x45l-B5If1I","short-id":"32c43ca1"}}
   - {"name":"❔ XX | 🟢 | vless | @vp22ray | 10","type":"vless","server":"German.vp22ray.site","port":40130,"uuid":"eb7f17f3-4715-4b2d-87e5-39d12b1c962c","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"Seed.cloudflare.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"XEpHiKs6YbcMrBR4YTRXLlIlO5RfGcVUUcbt4KZc7TY","short-id":"d90b293e"}}
-  - {"name":"🇭🇰 HK | 🟢 | vless | @vpnaloo | 15","type":"vless","server":"ko1.xservers.ir","port":81,"uuid":"ce02ef89-4a22-40d3-a962-9a8e12c252fe","tls":true,"network":"xhttp","client-fingerprint":"firefox","udp":true,"servername":"tgju.org","reality-opts":{"public-key":"A-8wmBnGrz4ny7CB9Zfnjz66cbS83uOMdH61CsI-rm8","short-id":"200de4ca48fb1731"}}
+  - {"name":"🇭🇰 HK | 🟢 | vless | @vpnaloo | 14","type":"vless","server":"ko1.xservers.ir","port":81,"uuid":"ce02ef89-4a22-40d3-a962-9a8e12c252fe","tls":true,"network":"xhttp","client-fingerprint":"firefox","udp":true,"servername":"tgju.org","reality-opts":{"public-key":"A-8wmBnGrz4ny7CB9Zfnjz66cbS83uOMdH61CsI-rm8","short-id":"200de4ca48fb1731"}}
   - {"name":"❔ XX | 🟢 | vless | @webshecan | 9","type":"vless","server":"webshecan.webredirect.org","port":2087,"uuid":"f6b91664-0903-4063-8e15-dba1bc9ee9a2","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"www.speedtest.net","flow":"xtls-rprx-vision","reality-opts":{"public-key":"2M6UwPCIFyRuf41xzoiHRo_5DUDNBs8lfe-sK3c8-Dw","short-id":"53242a95"}}
   - {"name":"❔ XX | 🟢 | vless | @webshecan | 10","type":"vless","server":"webshecan.webredirect.org","port":2083,"uuid":"89eeb27d-1a8c-4d84-9ca4-75d614d19900","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"www.theverge.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"TTyvgA7WXFTrzGfnc3n2thNNEcWc_GWReVsvs5Gd9D4","short-id":"7f321171"}}
   - {"name":"❔ XX | 🟢 | vless | @webshecan | 11","type":"vless","server":"webshecan.webredirect.org","port":2087,"uuid":"8f646a01-2cc1-4270-ad43-f87e157e4d44","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"www.speedtest.net","flow":"xtls-rprx-vision","reality-opts":{"public-key":"2M6UwPCIFyRuf41xzoiHRo_5DUDNBs8lfe-sK3c8-Dw","short-id":"53242a95"}}
@@ -167,7 +167,7 @@ proxy-groups:
       - '❔ XX | 🟢 | vless | @vp22ray | 8'
       - '❔ XX | 🟢 | vless | @vp22ray | 9'
       - '❔ XX | 🟢 | vless | @vp22ray | 10'
-      - '🇭🇰 HK | 🟢 | vless | @vpnaloo | 15'
+      - '🇭🇰 HK | 🟢 | vless | @vpnaloo | 14'
       - '❔ XX | 🟢 | vless | @webshecan | 9'
       - '❔ XX | 🟢 | vless | @webshecan | 10'
       - '❔ XX | 🟢 | vless | @webshecan | 11'

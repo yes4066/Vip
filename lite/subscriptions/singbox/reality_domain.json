@@ -98,14 +98,12 @@
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
-                "🇩🇪 DE | 🟢 | vless | @proxycrone | 5",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
-                "🇭🇰 HK | 🟢 | vless | @vpnaloo | 15",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "proxy",
@@ -123,14 +121,12 @@
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
-                "🇩🇪 DE | 🟢 | vless | @proxycrone | 5",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
-                "🇭🇰 HK | 🟢 | vless | @vpnaloo | 15",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "auto",
@@ -370,29 +366,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxycrone | 5",
-            "type": "vless",
-            "server": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
-            "server_port": 443,
-            "uuid": "1584806e-f63d-4f9b-a0b3-abe64b35a09c",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "GpgfsA-U8Y8M3LRcTfsaBViDtp2VlN5riSLLZ2kxEiQ",
-                    "short_id": "974a74bf"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @proxysudo | 2",
             "type": "vless",
             "server": "proxysudochannel.ddns.net",
@@ -531,29 +504,6 @@
                     "enabled": true,
                     "public_key": "XEpHiKs6YbcMrBR4YTRXLlIlO5RfGcVUUcbt4KZc7TY",
                     "short_id": "d90b293e"
-                }
-            }
-        },
-        {
-            "tag": "🇭🇰 HK | 🟢 | vless | @vpnaloo | 15",
-            "type": "vless",
-            "server": "ko1.xservers.ir",
-            "server_port": 81,
-            "uuid": "ce02ef89-4a22-40d3-a962-9a8e12c252fe",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "A-8wmBnGrz4ny7CB9Zfnjz66cbS83uOMdH61CsI-rm8",
-                    "short_id": "200de4ca48fb1731"
                 }
             }
         },
