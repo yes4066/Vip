@@ -105,7 +105,6 @@
                 "🇳🇱 NL | 🟢 | vless | @irv2rey | 3",
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
-                "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 23",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
@@ -118,7 +117,6 @@
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇮🇹 IT | 🔴 | vless | @server_nekobox | 5",
-                "🇳🇱 NL | 🟢 | vless | @summertimeus | 12",
                 "🇺🇸 US | 🔴 | vless | @turboo_server | 3",
                 "🇳🇱 NL | 🟢 | vless | @v2aryng_vpn | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_vmes | 13",
@@ -130,7 +128,9 @@
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
                 "🇫🇮 FI | 🔴 | vless | @v2rayngfreee | 4",
                 "🇺🇸 US | 🟢 | vless | @v2reay | 8",
+                "🇩🇪 DE | 🔴 | vless | @vaynora | 12",
                 "🇺🇸 US | 🔴 | vless | @vpncostumer | 10",
+                "🇳🇱 NL | 🟢 | vless | @vpncostumer | 12",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 13"
             ],
             "tag": "proxy",
@@ -155,7 +155,6 @@
                 "🇳🇱 NL | 🟢 | vless | @irv2rey | 3",
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
-                "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 23",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
@@ -168,7 +167,6 @@
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇮🇹 IT | 🔴 | vless | @server_nekobox | 5",
-                "🇳🇱 NL | 🟢 | vless | @summertimeus | 12",
                 "🇺🇸 US | 🔴 | vless | @turboo_server | 3",
                 "🇳🇱 NL | 🟢 | vless | @v2aryng_vpn | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_vmes | 13",
@@ -180,7 +178,9 @@
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
                 "🇫🇮 FI | 🔴 | vless | @v2rayngfreee | 4",
                 "🇺🇸 US | 🟢 | vless | @v2reay | 8",
+                "🇩🇪 DE | 🔴 | vless | @vaynora | 12",
                 "🇺🇸 US | 🔴 | vless | @vpncostumer | 10",
+                "🇳🇱 NL | 🟢 | vless | @vpncostumer | 12",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 13"
             ],
             "tag": "auto",
@@ -462,15 +462,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 23",
-            "type": "vless",
-            "server": "45.150.33.157",
-            "server_port": 50810,
-            "uuid": "412dce1a-f2b6-4603-9fb9-be8a848bc855",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
             "type": "vless",
             "server": "49.13.199.174",
@@ -680,29 +671,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @summertimeus | 12",
-            "type": "vless",
-            "server": "77.110.103.21",
-            "server_port": 50810,
-            "uuid": "72059c29-a302-4bbd-a67a-ed0119fb754e",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zhaket.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "MCx8u0S8L-ugMhcNC-u2WteqvI_oaM9_0-5jP6atIx4",
-                    "short_id": "19dc3c81"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @turboo_server | 3",
             "type": "vless",
             "server": "151.101.3.8",
@@ -867,6 +835,15 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🔴 | vless | @vaynora | 12",
+            "type": "vless",
+            "server": "91.99.183.30",
+            "server_port": 8443,
+            "uuid": "bb7b030f-fd37-488a-be1f-1a26d874cb26",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @vpncostumer | 10",
             "type": "vless",
             "server": "151.101.3.8",
@@ -874,6 +851,29 @@
             "uuid": "64eabf2c-f24a-492c-bdfa-b02a7ebda17c",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @vpncostumer | 12",
+            "type": "vless",
+            "server": "77.110.103.21",
+            "server_port": 50810,
+            "uuid": "72059c29-a302-4bbd-a67a-ed0119fb754e",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zhaket.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "MCx8u0S8L-ugMhcNC-u2WteqvI_oaM9_0-5jP6atIx4",
+                    "short_id": "19dc3c81"
+                }
+            }
         },
         {
             "tag": "🇳🇱 NL | 🟢 | vless | @vpncostumer | 13",

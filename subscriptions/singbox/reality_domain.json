@@ -97,7 +97,6 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇺🇸 US | 🟢 | vless | @configfa | 5",
                 "🇫🇮 FI | 🟢 | vless | @configfa | 8",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
@@ -131,8 +130,8 @@
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
+                "🇩🇪 DE | 🟢 | vless | @proxycrone | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 4",
-                "🇩🇪 DE | 🟢 | vless | @proxycrone | 5",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
                 "❔ XX | 🟢 | vless | @proxysudo | 1",
@@ -186,7 +185,6 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇺🇸 US | 🟢 | vless | @configfa | 5",
                 "🇫🇮 FI | 🟢 | vless | @configfa | 8",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
@@ -220,8 +218,8 @@
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 3",
                 "❔ XX | 🟢 | vless | @proxy_iranv2 | 3",
+                "🇩🇪 DE | 🟢 | vless | @proxycrone | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 4",
-                "🇩🇪 DE | 🟢 | vless | @proxycrone | 5",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
                 "❔ XX | 🟢 | vless | @proxysudo | 1",
@@ -460,29 +458,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns"
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @configfa | 5",
-            "type": "vless",
-            "server": "adsth27.netpilotserverne22twork.ir",
-            "server_port": 8080,
-            "uuid": "8ab33d56-3288-40fa-9f4f-8e438119941c",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "chatgpt.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "D8uvi--0Aq7Hjc7cYnfcJGY0h4SSBCrPh7wEp1mvFlw",
-                    "short_id": "b7b70c104ad267b8"
-                }
             }
         },
         {
@@ -1332,7 +1307,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxycrone | 4",
+            "tag": "🇩🇪 DE | 🟢 | vless | @proxycrone | 3",
             "type": "vless",
             "server": "specxtech.ticketdatabase.info",
             "server_port": 56658,
@@ -1355,7 +1330,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxycrone | 5",
+            "tag": "🇩🇪 DE | 🟢 | vless | @proxycrone | 4",
             "type": "vless",
             "server": "vpn_proxy_channel_vpn_proxy_channel.hohod.ir",
             "server_port": 443,

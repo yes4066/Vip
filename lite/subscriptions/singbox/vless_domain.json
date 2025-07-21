@@ -174,7 +174,6 @@
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
-                "🇮🇷 IR | 🔴 | vless | @proxycrone | 6",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🔴 | vless | @realvpnmaster | 14",
                 "❔ XX | 🔴 | vless | @red2ray | 13",
@@ -201,6 +200,7 @@
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -307,7 +307,6 @@
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
-                "🇮🇷 IR | 🔴 | vless | @proxycrone | 6",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🔴 | vless | @realvpnmaster | 14",
                 "❔ XX | 🔴 | vless | @red2ray | 13",
@@ -334,6 +333,7 @@
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -1765,15 +1765,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @proxycrone | 6",
-            "type": "vless",
-            "server": "dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir",
-            "server_port": 29183,
-            "uuid": "2f622084-d2a9-4b7c-cffb-137397c2b855",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @proxysudo | 2",
             "type": "vless",
             "server": "proxysudochannel.ddns.net",
@@ -2275,6 +2266,22 @@
                     "enabled": true,
                     "public_key": "QxGoAQpy2zri2JRkXmPfESKjAMHpsrJPmjbkJuZCz3U",
                     "short_id": "1eaf5214"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
+            "type": "vless",
+            "server": "brainy-party.seotoolsforyou.co.uk",
+            "server_port": 80,
+            "uuid": "34797f17-09a1-400c-9f4b-275718d62a0f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "brainy-party.seotoolsforyou.co.uk"
                 }
             }
         },
