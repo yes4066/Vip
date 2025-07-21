@@ -92,15 +92,14 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇫🇷 FR | 🟢 | trojan | @directvpn | 16",
+                "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 15",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
-                "🇫🇷 FR | 🟢 | trojan | @privatevpns | 16",
+                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 12"
+                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -111,15 +110,14 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇫🇷 FR | 🟢 | trojan | @directvpn | 16",
+                "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 15",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
-                "🇫🇷 FR | 🟢 | trojan | @privatevpns | 16",
+                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 12"
+                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -190,9 +188,9 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 16",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
             "type": "trojan",
-            "server": "15.237.98.61",
+            "server": "18.192.149.77",
             "server_port": 22223,
             "password": "telegram-id-directvpn",
             "tls": {
@@ -229,25 +227,18 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 14",
+            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
             "type": "trojan",
-            "server": "104.25.165.81",
-            "server_port": 8443,
-            "password": "123456",
+            "server": "104.149.155.13",
+            "server_port": 443,
+            "password": "79c935c0-27dc-4383-b307-dcac1b8e5509",
             "tls": {
                 "enabled": true,
-                "server_name": "top-azx.pages.dev",
+                "server_name": "vzwzasc.cn",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/Az1.vpn.33.TOP/?ed=2560",
-                "headers": {
-                    "Host": "top-azx.pages.dev"
                 }
             }
         },
@@ -291,9 +282,9 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @privatevpns | 16",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
             "type": "trojan",
-            "server": "15.237.98.61",
+            "server": "18.192.149.77",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {
@@ -323,23 +314,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-            "type": "trojan",
-            "server": "104.149.155.13",
-            "server_port": 443,
-            "password": "79c935c0-27dc-4383-b307-dcac1b8e5509",
-            "tls": {
-                "enabled": true,
-                "server_name": "vzwzasc.cn",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 12",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11",
             "type": "trojan",
             "server": "15.237.98.61",
             "server_port": 22223,

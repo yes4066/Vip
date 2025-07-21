@@ -92,6 +92,8 @@
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
+                "🇺🇸 US | 🟢 | vless | @configshubplus | 15",
+                "🇺🇸 US | 🔴 | vless | @confing_chanel | 21",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -115,9 +117,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
-                "🇺🇸 US | 🔴 | vless | @v2raych | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 4",
-                "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 13",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "🇭🇰 HK | 🟢 | vless | @vpnaloo | 13",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
@@ -155,7 +155,6 @@
                 "🇺🇸 US | 🔴 | vless | @turboo_server | 3",
                 "🇳🇱 NL | 🟢 | vless | @v2aryng_vpn | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_vmes | 13",
-                "🇺🇸 US | 🔴 | vless | @v2raych | 17",
                 "🇪🇸 ES | 🟢 | vless | @v2rayexpress | 8",
                 "🇳🇱 NL | 🟢 | vless | @v2rayexpress | 10",
                 "🇺🇸 US | 🔴 | vless | @v2raymelliii | 3",
@@ -179,6 +178,8 @@
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
+                "🇺🇸 US | 🟢 | vless | @configshubplus | 15",
+                "🇺🇸 US | 🔴 | vless | @confing_chanel | 21",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -202,9 +203,7 @@
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
-                "🇺🇸 US | 🔴 | vless | @v2raych | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 4",
-                "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 13",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "🇭🇰 HK | 🟢 | vless | @vpnaloo | 13",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
@@ -242,7 +241,6 @@
                 "🇺🇸 US | 🔴 | vless | @turboo_server | 3",
                 "🇳🇱 NL | 🟢 | vless | @v2aryng_vpn | 7",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_vmes | 13",
-                "🇺🇸 US | 🔴 | vless | @v2raych | 17",
                 "🇪🇸 ES | 🟢 | vless | @v2rayexpress | 8",
                 "🇳🇱 NL | 🟢 | vless | @v2rayexpress | 10",
                 "🇺🇸 US | 🔴 | vless | @v2raymelliii | 3",
@@ -304,6 +302,33 @@
             "server": "2sudo.winapp3.ir",
             "server_port": 80,
             "uuid": "5b0e1347-1e9b-4b83-a27b-468e3dafb69b",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @configshubplus | 15",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "server_port": 443,
+            "uuid": "4e0a435a-65d6-4e4e-a4ed-dfa8bdd732f5",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "auto.tas-bazi.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @confing_chanel | 21",
+            "type": "vless",
+            "server": "CoNFiGLiNE.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "caec9a80-f2eb-461b-8cac-7d7909779a3f",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -524,15 +549,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2raych | 16",
-            "type": "vless",
-            "server": "CoNFiGLiNE.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "caec9a80-f2eb-461b-8cac-7d7909779a3f",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 4",
             "type": "vless",
             "server": "statue.lnmarketplace.net",
@@ -549,15 +565,6 @@
                     "fingerprint": "chrome"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2ry_proxy | 13",
-            "type": "vless",
-            "server": "CoNFiGLiNE.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "caec9a80-f2eb-461b-8cac-7d7909779a3f",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
@@ -1192,15 +1199,6 @@
                     "short_id": "5426024033df45"
                 }
             }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2raych | 17",
-            "type": "vless",
-            "server": "151.101.3.8",
-            "server_port": 80,
-            "uuid": "54ede3a6-b4b2-4f8a-884d-c9845bb9bb33",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇪🇸 ES | 🟢 | vless | @v2rayexpress | 8",
