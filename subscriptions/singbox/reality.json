@@ -93,6 +93,7 @@
                 "🇸🇬 SG | 🟢 | vless | @abiidar_server | 1",
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 9",
                 "🇫🇮 FI | 🟢 | vless | @appsooner | 11",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 23",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -208,6 +209,7 @@
                 "❔ XX | 🟢 | vless | @catvpns | 10",
                 "🇺🇸 US | 🟢 | vless | @configfa | 7",
                 "🇫🇮 FI | 🟢 | vless | @configfa | 10",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 19",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
                 "🇳🇱 NL | 🟢 | vless | @dalton_ping | 8",
@@ -294,6 +296,7 @@
                 "🇸🇬 SG | 🟢 | vless | @abiidar_server | 1",
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 9",
                 "🇫🇮 FI | 🟢 | vless | @appsooner | 11",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 23",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
@@ -409,6 +412,7 @@
                 "❔ XX | 🟢 | vless | @catvpns | 10",
                 "🇺🇸 US | 🟢 | vless | @configfa | 7",
                 "🇫🇮 FI | 🟢 | vless | @configfa | 10",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 19",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
                 "🇳🇱 NL | 🟢 | vless | @dalton_ping | 8",
@@ -583,6 +587,29 @@
                     "enabled": true,
                     "public_key": "0r5rlmvACX09qUTPuxrbuKWSAn66NnNyHIfIMwalYAA",
                     "short_id": "33"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 23",
+            "type": "vless",
+            "server": "172.233.189.188",
+            "server_port": 80,
+            "uuid": "ef27e62d-91bd-4676-b9ce-8743a73eda07",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zula.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "BVimgXtKkQ2Q6EpG8uKYTpySrNxEeIqVhdsxi5U5qRU",
+                    "short_id": "94aa1bdc"
                 }
             }
         },
@@ -3415,6 +3442,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers"
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @configshubplus | 19",
+            "type": "vless",
+            "server": "tg.fast2rayng.sbs",
+            "server_port": 25150,
+            "uuid": "b293e7ae-5808-4023-a60f-29a8d0859cfc",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.zula.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "fBW2wtjDNj9teo01a9sWRj13_T9wy9cbts0gNASzggM",
+                    "short_id": "8a"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@Fast2RayNG_ViP"
             }
         },
         {

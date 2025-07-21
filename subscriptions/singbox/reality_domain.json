@@ -99,6 +99,7 @@
                 "❔ XX | 🟢 | vless | @catvpns | 10",
                 "🇺🇸 US | 🟢 | vless | @configfa | 7",
                 "🇫🇮 FI | 🟢 | vless | @configfa | 10",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 19",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
                 "🇳🇱 NL | 🟢 | vless | @dalton_ping | 8",
@@ -188,6 +189,7 @@
                 "❔ XX | 🟢 | vless | @catvpns | 10",
                 "🇺🇸 US | 🟢 | vless | @configfa | 7",
                 "🇫🇮 FI | 🟢 | vless | @configfa | 10",
+                "🇳🇱 NL | 🟢 | vless | @configshubplus | 19",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 7",
                 "🇳🇱 NL | 🟢 | vless | @dalton_ping | 8",
@@ -510,6 +512,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers,telegram-@LegenderY_Servers"
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @configshubplus | 19",
+            "type": "vless",
+            "server": "tg.fast2rayng.sbs",
+            "server_port": 25150,
+            "uuid": "b293e7ae-5808-4023-a60f-29a8d0859cfc",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.zula.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "fBW2wtjDNj9teo01a9sWRj13_T9wy9cbts0gNASzggM",
+                    "short_id": "8a"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@Fast2RayNG_ViP"
             }
         },
         {

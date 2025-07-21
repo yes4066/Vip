@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇨🇦 CA | 🔴 | vmess | @NamiraNet | 69",
                 "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 0",
                 "❔ XX | 🔴 | vmess | @armodchannel | 62",
                 "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
@@ -97,7 +96,6 @@
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
                 "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
                 "🇺🇸 US | 🟢 | vmess | @darkfiilter | 1",
-                "🇩🇪 DE | 🔴 | vmess | @father_vpn | 2",
                 "🇨🇳 CN | 🔴 | vmess | @freakconfig | 12",
                 "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
@@ -134,7 +132,7 @@
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇩🇪 DE | 🔴 | vmess | @vpn_ioss | 17",
-                "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 15",
+                "🇰🇷 KR | 🔴 | vmess | @vpnfail_v2ray | 16",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -146,7 +144,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇨🇦 CA | 🔴 | vmess | @NamiraNet | 69",
                 "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 0",
                 "❔ XX | 🔴 | vmess | @armodchannel | 62",
                 "❔ XX | 🔴 | vmess | @bluevpn111 | 2",
@@ -154,7 +151,6 @@
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
                 "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
                 "🇺🇸 US | 🟢 | vmess | @darkfiilter | 1",
-                "🇩🇪 DE | 🔴 | vmess | @father_vpn | 2",
                 "🇨🇳 CN | 🔴 | vmess | @freakconfig | 12",
                 "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
@@ -191,7 +187,7 @@
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
                 "🇩🇪 DE | 🔴 | vmess | @vpn_ioss | 17",
-                "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 15",
+                "🇰🇷 KR | 🔴 | vmess | @vpnfail_v2ray | 16",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -205,22 +201,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "🇨🇦 CA | 🔴 | vmess | @NamiraNet | 69",
-            "type": "vmess",
-            "server": "15.235.41.200",
-            "server_port": 80,
-            "uuid": "58fe1542-5290-40ad-815a-77707a81afe5",
-            "security": "auto",
-            "alter_id": 0,
-            "transport": {
-                "type": "ws",
-                "path": "/IOebhLMhl1CTbFHbL95myfRX2",
-                "headers": {
-                    "Host": ""
-                }
-            }
         },
         {
             "tag": "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 0",
@@ -330,15 +310,6 @@
                     "fingerprint": "chrome"
                 }
             }
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | vmess | @father_vpn | 2",
-            "type": "vmess",
-            "server": "91.99.209.224",
-            "server_port": 32821,
-            "uuid": "94440946-20d3-48e3-9acc-bca519c6791f",
-            "security": "auto",
-            "alter_id": 0
         },
         {
             "tag": "🇨🇳 CN | 🔴 | vmess | @freakconfig | 12",
@@ -869,13 +840,29 @@
             "alter_id": 0
         },
         {
-            "tag": "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 15",
+            "tag": "🇰🇷 KR | 🔴 | vmess | @vpnfail_v2ray | 16",
             "type": "vmess",
-            "server": "5.182.37.231",
-            "server_port": 49664,
-            "uuid": "9395474c-e2a1-4565-ba56-c16e7373c4c4",
+            "server": "202.79.160.164",
+            "server_port": 443,
+            "uuid": "418048af-a293-4b99-9b0c-98ca3580dd24",
             "security": "auto",
-            "alter_id": 0
+            "alter_id": 64,
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/path/191019072927",
+                "headers": {
+                    "Host": ""
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
