@@ -104,6 +104,7 @@
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇷🇺 RU | 🟢 | vless | @v2trayproxy | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
+                "🇫🇮 FI | 🟢 | vless | @vpnaloo | 15",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "proxy",
@@ -127,6 +128,7 @@
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇷🇺 RU | 🟢 | vless | @v2trayproxy | 11",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
+                "🇫🇮 FI | 🟢 | vless | @vpnaloo | 15",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "auto",
@@ -504,6 +506,29 @@
                     "enabled": true,
                     "public_key": "XEpHiKs6YbcMrBR4YTRXLlIlO5RfGcVUUcbt4KZc7TY",
                     "short_id": "d90b293e"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @vpnaloo | 15",
+            "type": "vless",
+            "server": "speedtest.net.zula.ir.nobitex.ir.shakhle.ir",
+            "server_port": 39001,
+            "uuid": "15449e06-b519-414a-9e0d-fbb4a0fd2780",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "7ERFDeEmVmljmV6PdMNl0Menauhchi-JfYYkiw15y1o",
+                    "short_id": "f23547"
                 }
             }
         },
