@@ -111,14 +111,16 @@
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
-                "🇺🇸 US | 🔴 | vless | @proxy_v2box | 5",
-                "🇪🇪 EE | 🔴 | vless | @prrofile_purple | 129",
+                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 16",
+                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 17",
+                "🇺🇸 US | 🔴 | vless | @proxy_v2box | 4",
+                "🇩🇪 DE | 🔴 | vless | @prrofile_purple | 129",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 4",
-                "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
+                "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 10",
                 "🇭🇰 HK | 🟢 | vless | @vpnaloo | 12",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
@@ -151,14 +153,16 @@
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
-                "🇺🇸 US | 🔴 | vless | @proxy_v2box | 5",
-                "🇪🇪 EE | 🔴 | vless | @prrofile_purple | 129",
+                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 16",
+                "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 17",
+                "🇺🇸 US | 🔴 | vless | @proxy_v2box | 4",
+                "🇩🇪 DE | 🔴 | vless | @prrofile_purple | 129",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 4",
-                "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
+                "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 10",
                 "🇭🇰 HK | 🟢 | vless | @vpnaloo | 12",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
@@ -385,7 +389,25 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @proxy_v2box | 5",
+            "tag": "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 16",
+            "type": "vless",
+            "server": "cdn.irancdngame.com",
+            "server_port": 80,
+            "uuid": "3a65dd17-60d4-469c-b554-11cf94db74e7",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @proxy_mtproto_vpns_free | 17",
+            "type": "vless",
+            "server": "cdn.irancdngame.com",
+            "server_port": 80,
+            "uuid": "3a65dd17-60d4-469c-b554-11cf94db74e7",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @proxy_v2box | 4",
             "type": "vless",
             "server": "bos.lebasnoo.ir",
             "server_port": 80,
@@ -394,7 +416,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇪🇪 EE | 🔴 | vless | @prrofile_purple | 129",
+            "tag": "🇩🇪 DE | 🔴 | vless | @prrofile_purple | 129",
             "type": "vless",
             "server": "be.kimjo.ir",
             "server_port": 8080,
@@ -466,7 +488,7 @@
             }
         },
         {
-            "tag": "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
+            "tag": "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 10",
             "type": "vless",
             "server": "online-chat.webboosterpro.co.uk",
             "server_port": 443,
