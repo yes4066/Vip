@@ -108,6 +108,7 @@
                 "❔ XX | 🟢 | vless | @fsv2ray | 1",
                 "❔ XX | 🟢 | vless | @fsv2ray | 2",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
+                "❔ XX | 🟢 | vless | @ip_cf_config | 13",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iran_mehr_vpn | 15",
                 "🇺🇸 US | 🟢 | vless | @iranbaxvpn | 4",
@@ -133,7 +134,7 @@
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 2",
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
-                "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
+                "🇩🇪 DE | 🟢 | vless | @proxystore11 | 9",
                 "❔ XX | 🟢 | vless | @proxysudo | 1",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @public504 | 9",
@@ -195,6 +196,7 @@
                 "❔ XX | 🟢 | vless | @fsv2ray | 1",
                 "❔ XX | 🟢 | vless | @fsv2ray | 2",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
+                "❔ XX | 🟢 | vless | @ip_cf_config | 13",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iran_mehr_vpn | 15",
                 "🇺🇸 US | 🟢 | vless | @iranbaxvpn | 4",
@@ -220,7 +222,7 @@
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 2",
                 "🇩🇪 DE | 🟢 | vless | @proxycrone | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
-                "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
+                "🇩🇪 DE | 🟢 | vless | @proxystore11 | 9",
                 "❔ XX | 🟢 | vless | @proxysudo | 1",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @public504 | 9",
@@ -737,6 +739,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@FsV2ray"
+            }
+        },
+        {
+            "tag": "❔ XX | 🟢 | vless | @ip_cf_config | 13",
+            "type": "vless",
+            "server": "WLF-V-P-N-ID2.dnsfree.one",
+            "server_port": 443,
+            "uuid": "---WLFVPN---",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "GAUjNf1wQnDm5ziCGqRmb3yVfU9bg_UPwZ2_QU4JWRU",
+                    "short_id": "6bb85179e30d4fc2"
+                }
             }
         },
         {
@@ -1354,13 +1379,13 @@
             "tag": "🇩🇪 DE | 🟢 | vless | @proxystore11 | 6",
             "type": "vless",
             "server": "vip1.proxystore11.news",
-            "server_port": 2052,
-            "uuid": "ffab2209-312c-4042-899d-478eb8f21c8e",
+            "server_port": 10358,
+            "uuid": "92c7897a-6494-4719-aefd-aea8280314ce",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "vultr.com",
+                "server_name": "zula.ir",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -1368,17 +1393,17 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "-4S95rjoZIG_AeUxIlwedx89e7C_X4jnePY3RsiF4io",
-                    "short_id": "f8fcb589"
+                    "public_key": "axD7U8DCmchSVZemN_DTRYdnNZ141CxTSkTabDdzNEk",
+                    "short_id": "b373044d"
                 }
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxystore11 | 8",
+            "tag": "🇩🇪 DE | 🟢 | vless | @proxystore11 | 9",
             "type": "vless",
             "server": "vip1.proxystore11.news",
             "server_port": 10358,
-            "uuid": "92c7897a-6494-4719-aefd-aea8280314ce",
+            "uuid": "ec76d7ac-f8dd-40f5-b28a-223bab8217ae",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
