@@ -936,10 +936,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
-            "vmess",
+            "vless",
             "ss",
-            "vless"
+            "trojan",
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1452,9 +1452,9 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
+            "ss",
             "vmess",
-            "ss"
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1524,8 +1524,8 @@
     },
     "mtproxy22_v2ray": {
         "types": [
-            "vmess",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "پروکسی تلگرام| vpn v2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mtproxy22_v2ray.jpg"
@@ -2331,8 +2331,9 @@
     },
     "v2raying": {
         "types": [
+            "ss",
             "vless",
-            "ss"
+            "vmess"
         ],
         "title": "v2rayNG_VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raying.jpg"
@@ -2602,8 +2603,8 @@
     },
     "vmess_ir": {
         "types": [
-            "ss",
             "trojan",
+            "ss",
             "vless"
         ],
         "title": "🚀سرور رایگان و اختصاصی vmess_ir🚀",

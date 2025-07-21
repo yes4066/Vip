@@ -100,7 +100,6 @@
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 14",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -154,7 +153,6 @@
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 14",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -377,31 +375,6 @@
             "transport": {
                 "type": "ws",
                 "path": "/telegram-id-@privatevpns",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 14",
-            "type": "vmess",
-            "server": "134.195.198.147",
-            "server_port": 443,
-            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "security": "auto",
-            "alter_id": 0,
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
                 "headers": {
                     "Host": ""
                 }
@@ -847,18 +820,11 @@
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 16",
             "type": "vmess",
-            "server": "2112e4.7d79233c.shop",
-            "server_port": 80,
-            "uuid": "952797b6-21a0-4e66-9239-30ef5c0efcdf",
+            "server": "15.204.234.200",
+            "server_port": 41100,
+            "uuid": "c7f169a3-2e9a-4894-ba53-7b2fa6fd08b4",
             "security": "auto",
-            "alter_id": 0,
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": ""
-                }
-            }
+            "alter_id": 0
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",

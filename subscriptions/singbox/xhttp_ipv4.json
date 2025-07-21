@@ -90,10 +90,12 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
+                "🇺🇸 US | 🔴 | vless | @configshubplus | 15",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
-                "🇩🇪 DE | 🟢 | vless | @falcunargo | 5",
+                "🇩🇪 DE | 🟢 | vless | @falcunargo | 4",
+                "🇩🇪 DE | 🔴 | vless | @falcunargo | 5",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
                 "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
@@ -144,10 +146,12 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
+                "🇺🇸 US | 🔴 | vless | @configshubplus | 15",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
-                "🇩🇪 DE | 🟢 | vless | @falcunargo | 5",
+                "🇩🇪 DE | 🟢 | vless | @falcunargo | 4",
+                "🇩🇪 DE | 🔴 | vless | @falcunargo | 5",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
                 "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
                 "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
@@ -210,6 +214,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @configshubplus | 15",
+            "type": "vless",
+            "server": "151.101.3.8",
+            "server_port": 80,
+            "uuid": "23f340e3-1709-40e2-b4ec-c42cd57a05dd",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
             "type": "vless",
             "server": "91.107.254.202",
@@ -260,7 +273,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @falcunargo | 5",
+            "tag": "🇩🇪 DE | 🟢 | vless | @falcunargo | 4",
             "type": "vless",
             "server": "91.107.254.202",
             "server_port": 443,
@@ -281,6 +294,15 @@
                     "short_id": "54705fe6"
                 }
             }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @falcunargo | 5",
+            "type": "vless",
+            "server": "91.99.183.30",
+            "server_port": 8443,
+            "uuid": "bb7b030f-fd37-488a-be1f-1a26d874cb26",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
