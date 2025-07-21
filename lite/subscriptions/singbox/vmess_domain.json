@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇱🇻 LV | 🔴 | vmess | @NamiraNet | 69",
                 "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 0",
                 "❔ XX | 🔴 | vmess | @armodchannel | 62",
                 "❔ XX | 🟢 | vmess | @cattvpn | 0",
@@ -99,7 +100,6 @@
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 15",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -130,7 +130,7 @@
                 "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇮🇳 IN | 🔴 | vmess | @vpnfail_v2ray | 16",
+                "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 18",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -142,6 +142,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇱🇻 LV | 🔴 | vmess | @NamiraNet | 69",
                 "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 0",
                 "❔ XX | 🔴 | vmess | @armodchannel | 62",
                 "❔ XX | 🟢 | vmess | @cattvpn | 0",
@@ -152,7 +153,6 @@
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 15",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -183,7 +183,7 @@
                 "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇮🇳 IN | 🔴 | vmess | @vpnfail_v2ray | 16",
+                "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 18",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -197,6 +197,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇱🇻 LV | 🔴 | vmess | @NamiraNet | 69",
+            "type": "vmess",
+            "server": "216.173.69.250",
+            "server_port": 8443,
+            "uuid": "91382092-2330-455b-8a1c-9c129cfe661a",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": ""
+                }
+            }
         },
         {
             "tag": "🇮🇷 IR | 🔴 | vmess | @angus_vpn | 0",
@@ -366,22 +382,6 @@
             "transport": {
                 "type": "ws",
                 "path": "/telegram-id-@privatevpns",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 15",
-            "type": "vmess",
-            "server": "8.214.33.158",
-            "server_port": 80,
-            "uuid": "cb81e6ab-1d83-4ac1-f0ad-ae5c2a7c29ef",
-            "security": "auto",
-            "alter_id": 0,
-            "transport": {
-                "type": "ws",
-                "path": "/",
                 "headers": {
                     "Host": ""
                 }
@@ -825,11 +825,11 @@
             "alter_id": 0
         },
         {
-            "tag": "🇮🇳 IN | 🔴 | vmess | @vpnfail_v2ray | 16",
+            "tag": "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 18",
             "type": "vmess",
-            "server": "94.136.185.230",
-            "server_port": 10534,
-            "uuid": "b01c7ef9-33ec-41f6-bfbf-77ddc4d21649",
+            "server": "5.182.37.231",
+            "server_port": 49664,
+            "uuid": "9395474c-e2a1-4565-ba56-c16e7373c4c4",
             "security": "auto",
             "alter_id": 0
         },

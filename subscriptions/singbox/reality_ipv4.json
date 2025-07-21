@@ -96,7 +96,6 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇸🇪 SE | 🟢 | vless | @dailyv2ry | 119",
                 "🇮🇷 IR | 🟢 | vless | @dargiiriis | 0",
@@ -184,7 +183,6 @@
                 "🇷🇺 RU | 🟢 | vless | @vipnetmeli | 1",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇷🇺 RU | 🟢 | vless | @vistav2ray | 14",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 9",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 12",
@@ -213,7 +211,6 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 2",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇸🇪 SE | 🟢 | vless | @dailyv2ry | 119",
                 "🇮🇷 IR | 🟢 | vless | @dargiiriis | 0",
@@ -301,7 +298,6 @@
                 "🇷🇺 RU | 🟢 | vless | @vipnetmeli | 1",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇷🇺 RU | 🟢 | vless | @vistav2ray | 14",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 9",
                 "🇩🇪 DE | 🟢 | vless | @vpn451 | 11",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 12",
@@ -492,29 +488,6 @@
                     "enabled": true,
                     "public_key": "PTlW40u-tHGDlObhSKFN4tntrfHLgNPlHqg1oYqyY1o",
                     "short_id": "b5ecd44d"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
-            "type": "vless",
-            "server": "188.245.54.60",
-            "server_port": 57510,
-            "uuid": "59aaca9a-5aa7-492f-bb29-7abc6bfbebdb",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "a-CPvNEP2Lo6Gh9RaoBVPa79akbtiz2zY9EtUdmVmUA",
-                    "short_id": "4516"
                 }
             }
         },
@@ -2667,33 +2640,6 @@
                     "public_key": "Qdg7LVP5VmLr7xzv556ry5RNc3QaeAj4TwOUxndA23M",
                     "short_id": "e3f89b63"
                 }
-            }
-        },
-        {
-            "tag": "🇷🇺 RU | 🟢 | vless | @vistav2ray | 14",
-            "type": "vless",
-            "server": "213.183.41.63",
-            "server_port": 443,
-            "uuid": "3c631fef-c28c-4dfe-aacc-9e67ace7d5b3",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "skyroom.online",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "9tNnOU3bIHtyZfWaPv1J1ns78jDfzCdh6dRLjhQGlX8",
-                    "short_id": "1f"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "free"
             }
         },
         {

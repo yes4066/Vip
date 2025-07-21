@@ -921,10 +921,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
+            "vmess",
             "ss",
-            "trojan",
-            "vmess"
+            "vless",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1132,7 +1132,6 @@
     },
     "kingofilter": {
         "types": [
-            "ss",
             "vless"
         ],
         "title": "خدمات کینگو فیلتر | فیلترشکن رایگان",

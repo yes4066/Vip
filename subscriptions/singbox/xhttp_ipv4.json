@@ -89,8 +89,8 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇫🇮 FI | 🔴 | vless | @NamiraNet | 66",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
@@ -144,8 +144,8 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇫🇮 FI | 🔴 | vless | @NamiraNet | 66",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
@@ -203,6 +203,15 @@
             "type": "direct"
         },
         {
+            "tag": "🇫🇮 FI | 🔴 | vless | @NamiraNet | 66",
+            "type": "vless",
+            "server": "65.109.215.10",
+            "server_port": 39585,
+            "uuid": "4268bc86-b252-45f3-9c6e-5cf95aba3284",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
             "type": "vless",
             "server": "151.101.3.8",
@@ -210,29 +219,6 @@
             "uuid": "724383d8-33c6-4e8d-9db4-0184a89efa33",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 17",
-            "type": "vless",
-            "server": "188.245.54.60",
-            "server_port": 57510,
-            "uuid": "59aaca9a-5aa7-492f-bb29-7abc6bfbebdb",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "a-CPvNEP2Lo6Gh9RaoBVPa79akbtiz2zY9EtUdmVmUA",
-                    "short_id": "4516"
-                }
-            }
         },
         {
             "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
