@@ -936,10 +936,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vmess",
             "trojan",
-            "ss",
-            "vless"
+            "vmess",
+            "vless",
+            "ss"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1261,7 +1261,8 @@
     },
     "lranonline_new": {
         "types": [
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "Iran Online New",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/lranonline_new.jpg"
@@ -1451,9 +1452,9 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess",
             "vless",
-            "ss"
+            "ss",
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"

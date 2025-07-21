@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇺🇸 US | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
                 "🇩🇪 DE | 🔴 | vless | @argotaz | 0",
                 "🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1",
@@ -151,7 +152,6 @@
                 "❔ XX | 🔴 | vless | @lemonshopvpn | 8",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🔴 | vless | @lion_channel_vpn2 | 7",
-                "🇺🇸 US | 🔴 | vless | @lranonline_new | 2",
                 "🇳🇱 NL | 🔴 | vless | @luckyvpn | 0",
                 "❔ XX | 🔴 | vless | @mafiav2ray | 16",
                 "🇺🇸 US | 🔴 | vless | @magicvpn_shop | 1",
@@ -212,7 +212,6 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
-                "🇮🇷 IR | 🔴 | vless | @vpnv2rayngv | 18",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "🇺🇸 US | 🔴 | vless | @womanlifefreedomvpn | 16",
@@ -226,6 +225,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇺🇸 US | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
                 "🇩🇪 DE | 🔴 | vless | @argotaz | 0",
                 "🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1",
@@ -288,7 +288,6 @@
                 "❔ XX | 🔴 | vless | @lemonshopvpn | 8",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🔴 | vless | @lion_channel_vpn2 | 7",
-                "🇺🇸 US | 🔴 | vless | @lranonline_new | 2",
                 "🇳🇱 NL | 🔴 | vless | @luckyvpn | 0",
                 "❔ XX | 🔴 | vless | @mafiav2ray | 16",
                 "🇺🇸 US | 🔴 | vless | @magicvpn_shop | 1",
@@ -349,7 +348,6 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
-                "🇮🇷 IR | 🔴 | vless | @vpnv2rayngv | 18",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "🇺🇸 US | 🔴 | vless | @womanlifefreedomvpn | 16",
@@ -365,6 +363,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @NamiraNet | 69",
+            "type": "vless",
+            "server": "modern-promise.seotoolsforyou.co.uk",
+            "server_port": 80,
+            "uuid": "bd9b0366-e5dd-4665-bd5b-9896bc7327ae",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "modern-promise.seotoolsforyou.co.uk"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
@@ -1378,15 +1392,6 @@
             "server": "lion_channel_vpn3.li3ion.lol",
             "server_port": 41922,
             "uuid": "894eea14-bd9c-4cd9-a32e-e591bfc45e49",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @lranonline_new | 2",
-            "type": "vless",
-            "server": "CoNFiGLiNE.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "caec9a80-f2eb-461b-8cac-7d7909779a3f",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -2466,15 +2471,6 @@
             "server": "arno1.hypernet.top",
             "server_port": 3013,
             "uuid": "0eab9ab8-d0f0-4823-8af9-d1f95db842e8",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇮🇷 IR | 🔴 | vless | @vpnv2rayngv | 18",
-            "type": "vless",
-            "server": "a-configazad.shop",
-            "server_port": 23244,
-            "uuid": "581e1473-2465-4e0b-b4ec-990e81e2e358",
             "flow": "",
             "packet_encoding": "xudp"
         },
