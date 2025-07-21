@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 68",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
@@ -103,6 +104,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 68",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
@@ -119,6 +121,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | trojan | @NamiraNet | 68",
+            "type": "trojan",
+            "server": "82.192.82.226",
+            "server_port": 443,
+            "password": "4863e1b2-ec2f-4c71-b862-ce533028e57e",
+            "tls": {
+                "enabled": true,
+                "server_name": "trus.moonfree.top",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 14",

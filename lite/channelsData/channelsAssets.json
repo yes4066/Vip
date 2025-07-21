@@ -939,9 +939,9 @@
     },
     "ip_cf_config": {
         "types": [
+            "vless",
             "trojan",
             "vmess",
-            "vless",
             "ss"
         ],
         "title": "IP_CF | V2ray Config Pool",
@@ -1454,8 +1454,9 @@
     },
     "mowjproxy": {
         "types": [
+            "vless",
             "vmess",
-            "vless"
+            "ss"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1684,7 +1685,6 @@
     },
     "ntconfig": {
         "types": [
-            "ss",
             "vless"
         ],
         "title": "NTConfig | ان تي کانفیگ",
@@ -2345,15 +2345,6 @@
         ],
         "title": "کانفینگ وی پی ان | V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raymelliii.jpg"
-    },
-    "v2rayng3": {
-        "types": [
-            "ss",
-            "vmess",
-            "vless"
-        ],
-        "title": "V2rayNG | Fair vpn",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayng3.jpg"
     },
     "v2rayng_my2": {
         "types": [
