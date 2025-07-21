@@ -90,13 +90,12 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 19",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇦🇪 AE | 🟢 | vless | @dnsforyou | 25",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
+                "🇩🇪 DE | 🟢 | vless | @falcunargo | 3",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
-                "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
                 "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
                 "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
                 "🇩🇪 DE | 🟢 | vless | @ghalagyann | 22",
@@ -108,12 +107,16 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
+                "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇳🇱 NL | 🟢 | vless | @nofiltering2 | 21",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
                 "🇺🇸 US | 🟢 | vless | @proxie | 13",
                 "🇺🇸 US | 🟢 | vless | @proxie | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
+                "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 5",
+                "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 6",
+                "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇮🇹 IT | 🔴 | vless | @server_nekobox | 5",
@@ -140,13 +143,12 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
-                "🇩🇪 DE | 🟢 | vless | @configshubplus | 19",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇦🇪 AE | 🟢 | vless | @dnsforyou | 25",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
+                "🇩🇪 DE | 🟢 | vless | @falcunargo | 3",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
-                "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
                 "🇺🇸 US | 🟢 | vless | @game_file2020 | 9",
                 "🇺🇸 US | 🔴 | vless | @gh_v2rayng | 15",
                 "🇩🇪 DE | 🟢 | vless | @ghalagyann | 22",
@@ -158,12 +160,16 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
+                "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇳🇱 NL | 🟢 | vless | @nofiltering2 | 21",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
                 "🇺🇸 US | 🟢 | vless | @proxie | 13",
                 "🇺🇸 US | 🟢 | vless | @proxie | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
+                "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 5",
+                "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 6",
+                "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇮🇹 IT | 🔴 | vless | @server_nekobox | 5",
@@ -200,29 +206,6 @@
             "uuid": "724383d8-33c6-4e8d-9db4-0184a89efa33",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @configshubplus | 19",
-            "type": "vless",
-            "server": "91.107.254.202",
-            "server_port": 443,
-            "uuid": "Telegram---V2RAYNGCLOUD---",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "firebase.googleapis.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "ios"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "VaX6bp_MHNDUuqYS7vbyXiw-ptqGCTutnV6K_jYE-3A",
-                    "short_id": "54705fe6"
-                }
-            }
         },
         {
             "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
@@ -298,6 +281,29 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🟢 | vless | @falcunargo | 3",
+            "type": "vless",
+            "server": "91.107.254.202",
+            "server_port": 443,
+            "uuid": "Telegram---V2RAYNGCLOUD---",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "firebase.googleapis.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "ios"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "VaX6bp_MHNDUuqYS7vbyXiw-ptqGCTutnV6K_jYE-3A",
+                    "short_id": "54705fe6"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
             "type": "vless",
             "server": "216.22.5.96",
@@ -308,24 +314,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "216.22.5.96",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @flyv2ray | 1",
-            "type": "vless",
-            "server": "104.21.48.1",
-            "server_port": 2083,
-            "uuid": "c4e6a6ef-d782-4a12-a38a-906a61ee5bc1",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "cho.chonon.sbs",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -517,6 +505,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
+            "type": "vless",
+            "server": "185.18.250.67",
+            "server_port": 8080,
+            "uuid": "4d263c1a-fbb9-4946-a639-1de531120cde",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇳🇱 NL | 🟢 | vless | @nofiltering2 | 21",
             "type": "vless",
             "server": "77.110.103.21",
@@ -628,6 +625,33 @@
                     "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 5",
+            "type": "vless",
+            "server": "91.99.181.47",
+            "server_port": 8443,
+            "uuid": "bb7b030f-fd37-488a-be1f-1a26d874cb26",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 6",
+            "type": "vless",
+            "server": "91.99.85.185",
+            "server_port": 8443,
+            "uuid": "e66beedb-dd44-47f0-baf8-7ba947d919d0",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @proxy_mtproto_vpns_free | 7",
+            "type": "vless",
+            "server": "91.99.218.14",
+            "server_port": 8443,
+            "uuid": "bb7b030f-fd37-488a-be1f-1a26d874cb26",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",

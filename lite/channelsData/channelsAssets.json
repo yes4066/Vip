@@ -542,8 +542,7 @@
     },
     "father_vpn": {
         "types": [
-            "vless",
-            "vmess"
+            "vless"
         ],
         "title": "Father vpn | Proxy | V2rayNg",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/father_vpn.jpg"
@@ -938,10 +937,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
             "vless",
-            "vmess",
-            "ss"
+            "ss",
+            "trojan",
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1119,9 +1118,9 @@
     },
     "kanfig_majani": {
         "types": [
-            "vless",
             "ss",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "کانفیگ رایگان | کانفیگ مجانی",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/kanfig_majani.jpg"
@@ -1453,8 +1452,9 @@
     },
     "mowjproxy": {
         "types": [
+            "vmess",
             "vless",
-            "vmess"
+            "ss"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1591,7 +1591,8 @@
     },
     "netmellianti": {
         "types": [
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "VPN | V2rayNG | نت ملی",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/netmellianti.jpg"
@@ -1727,8 +1728,8 @@
     },
     "outline_ir": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "سرور اوتلاین ا سرور V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outline_ir.jpg"
@@ -2601,9 +2602,9 @@
     },
     "vmess_ir": {
         "types": [
-            "vless",
             "ss",
-            "trojan"
+            "trojan",
+            "vless"
         ],
         "title": "🚀سرور رایگان و اختصاصی vmess_ir🚀",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vmess_ir.jpg"
