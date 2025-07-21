@@ -161,7 +161,6 @@
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
-                "🇬🇧 GB | 🟢 | vless | @mowjproxy | 5",
                 "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇺🇸 US | 🔴 | vless | @mtproxy22_v2ray | 75",
@@ -204,8 +203,9 @@
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
-                "🇺🇸 US | 🔴 | vless | @vpn_meliii | 8",
+                "🇨🇦 CA | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
+                "🇩🇪 DE | 🔴 | vless | @vpnaloo | 15",
                 "❔ XX | 🟢 | vless | @vpncostume | 8",
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
@@ -296,7 +296,6 @@
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
-                "🇬🇧 GB | 🟢 | vless | @mowjproxy | 5",
                 "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇺🇸 US | 🔴 | vless | @mtproxy22_v2ray | 75",
@@ -339,8 +338,9 @@
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
-                "🇺🇸 US | 🔴 | vless | @vpn_meliii | 8",
+                "🇨🇦 CA | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
+                "🇩🇪 DE | 🔴 | vless | @vpnaloo | 15",
                 "❔ XX | 🟢 | vless | @vpncostume | 8",
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
@@ -1511,29 +1511,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | vless | @mowjproxy | 5",
-            "type": "vless",
-            "server": "uk.marzban-locations.com",
-            "server_port": 3033,
-            "uuid": "b847c699-a570-4357-88fa-62789a29fee2",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "21V_VkMUD2XRbyRDg7hjpblUAwxHvlLmbarATdhhJQI",
-                    "short_id": ""
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
             "type": "vless",
             "server": "mrvpn1403.rightel001.chaghooosazi.shop",
@@ -2345,7 +2322,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @vpn_meliii | 8",
+            "tag": "🇨🇦 CA | 🔴 | vless | @vpn_meliii | 8",
             "type": "vless",
             "server": "add.ski1plag.ir",
             "server_port": 80,
@@ -2383,6 +2360,19 @@
                 "headers": {
                     "Host": "cv.rxteam.xyz"
                 }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @vpnaloo | 15",
+            "type": "vless",
+            "server": "sn.lunarmc.ir",
+            "server_port": 8082,
+            "uuid": "c5faf134-bade-4e16-96de-a33a24c51cce",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "grpc",
+                "service_name": "sn.lunarmc.ir"
             }
         },
         {
