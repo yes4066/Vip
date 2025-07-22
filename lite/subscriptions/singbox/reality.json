@@ -102,7 +102,7 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇷🇺 RU | 🟢 | vless | @v2trayproxy | 11",
+                "🇷🇺 RU | 🟢 | vless | @v2trayproxy | 10",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
@@ -119,6 +119,7 @@
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
+                "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 8",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 12",
@@ -147,7 +148,7 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇷🇺 RU | 🟢 | vless | @v2trayproxy | 11",
+                "🇷🇺 RU | 🟢 | vless | @v2trayproxy | 10",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
@@ -164,6 +165,7 @@
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
+                "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 8",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 12",
@@ -506,7 +508,7 @@
             }
         },
         {
-            "tag": "🇷🇺 RU | 🟢 | vless | @v2trayproxy | 11",
+            "tag": "🇷🇺 RU | 🟢 | vless | @v2trayproxy | 10",
             "type": "vless",
             "server": "ru01-vlr01.tcp-reset-club.net",
             "server_port": 443,
@@ -914,6 +916,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn-@V_2rayngVpn"
+            }
+        },
+        {
+            "tag": "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 8",
+            "type": "vless",
+            "server": "194.182.79.142",
+            "server_port": 11745,
+            "uuid": "f278037e-ce36-4634-9b4d-fca93e345a35",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "hgaeyKQWo1Cf0fDhXVD2AZKI6DfOhBhjsSSfccW7ADo",
+                    "short_id": "26a52325"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
             }
         },
         {
