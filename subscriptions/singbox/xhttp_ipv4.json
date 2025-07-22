@@ -90,11 +90,10 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
-                "🇳🇱 NL | 🟢 | vless | @config_proxy | 50",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 133",
-                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 135",
+                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 132",
+                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 134",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 3",
                 "🇩🇪 DE | 🔴 | vless | @falcunargo | 4",
@@ -121,7 +120,7 @@
                 "🇺🇸 US | 🟢 | vless | @proxie | 13",
                 "🇺🇸 US | 🟢 | vless | @proxie | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
-                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
+                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇮🇹 IT | 🔴 | vless | @server_nekobox | 4",
@@ -148,11 +147,10 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @canfing_vpn | 15",
-                "🇳🇱 NL | 🟢 | vless | @config_proxy | 50",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 133",
-                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 135",
+                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 132",
+                "🇺🇸 US | 🔴 | vless | @dailyv2ry | 134",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 3",
                 "🇩🇪 DE | 🔴 | vless | @falcunargo | 4",
@@ -179,7 +177,7 @@
                 "🇺🇸 US | 🟢 | vless | @proxie | 13",
                 "🇺🇸 US | 🟢 | vless | @proxie | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
-                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
+                "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
                 "🇮🇹 IT | 🔴 | vless | @server_nekobox | 4",
@@ -218,29 +216,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @config_proxy | 50",
-            "type": "vless",
-            "server": "199.247.28.17",
-            "server_port": 44914,
-            "uuid": "da4cdd5f-7df9-47da-a63d-1d9309115f5d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "black-moai.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "o1n1Qj_IBvl3xGDkMPzmuRJzKKW31L_r9kEeyW7e3F8",
-                    "short_id": "1ac2a2dde288"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
             "type": "vless",
             "server": "91.107.254.202",
@@ -273,7 +248,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @dailyv2ry | 133",
+            "tag": "🇺🇸 US | 🔴 | vless | @dailyv2ry | 132",
             "type": "vless",
             "server": "74.207.237.192",
             "server_port": 443,
@@ -291,7 +266,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @dailyv2ry | 135",
+            "tag": "🇺🇸 US | 🔴 | vless | @dailyv2ry | 134",
             "type": "vless",
             "server": "198.58.105.8",
             "server_port": 443,
@@ -746,7 +721,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 12",
+            "tag": "🇩🇪 DE | 🟢 | vless | @proxy_mtproto_vpns_free | 7",
             "type": "vless",
             "server": "188.245.54.60",
             "server_port": 57510,

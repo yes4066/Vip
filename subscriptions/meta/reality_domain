@@ -30,6 +30,7 @@ proxies:
   - {"name":"🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 1","type":"vless","server":"telegrambermuda24.jahanmataleb.ir","port":443,"uuid":"e7eba81e-3887-4973-bf43-bb92af38cfe7","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"www.refersion.com","reality-opts":{"public-key":"QYWJdS4JDdSmQKeMkJfPshFuz0bC3jhm9yW3uJfQFmw","short-id":"b4"}}
   - {"name":"🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 2","type":"vless","server":"telegrambermuda24.jahanmataleb.ir","port":443,"uuid":"48735946-f706-4873-b9b6-d9f0255475cc","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"www.refersion.com","reality-opts":{"public-key":"QYWJdS4JDdSmQKeMkJfPshFuz0bC3jhm9yW3uJfQFmw","short-id":"b4"}}
   - {"name":"🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18","type":"vless","server":"de6rt.samsungmarketshop.ir","port":2083,"uuid":"bf989dce-7af7-423b-a499-71da71cdcef1","tls":true,"network":"xhttp","client-fingerprint":"firefox","udp":true,"servername":"refersion.com","reality-opts":{"public-key":"53XOEMg4ftOAn_gSdlNndT5Xrfj4PB5J-YKOZoqTODk","short-id":"aeba"}}
+  - {"name":"🇩🇪 DE | 🟢 | vless | @config_proxy | 51","type":"vless","server":"zn.boshrachoice.ir","port":4433,"uuid":"f5bb0c7f-57e1-44ab-b544-f1db76319c20","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"sourceforge.net","reality-opts":{"public-key":"IUk4LR6VI6CnvLMY_ks1KdOHvB1_byMvQM3gZfuU5S0","short-id":"6762f9cf85154ca2"}}
   - {"name":"🇷🇺 RU | 🟢 | vless | @configfa | 9","type":"vless","server":"ru01-vlr01.tcp-reset-club.net","port":443,"uuid":"2a02cb25-0f58-4b19-a7a6-8c205fdb9042","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"hls-svod.itunes.apple.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg","short-id":"48720c"}}
   - {"name":"🇦🇪 AE | 🟢 | vless | @confing_chanel | 17","type":"vless","server":"direct.yasharteam.com","port":443,"uuid":"95dd1a77-89e1-4448-9763-514cc79168ed","tls":true,"network":"tcp","client-fingerprint":"firefox","udp":true,"servername":"tgju.org","flow":"xtls-rprx-vision","reality-opts":{"public-key":"tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8","short-id":"e54b5ad736ae4c38"}}
   - {"name":"❔ XX | 🟢 | vless | @custom_14 | 7","type":"vless","server":"usa-join.outline-vpn.fun","port":443,"uuid":"fc6395b9-8060-41b2-82f1-a55419093fe9","tls":true,"network":"grpc","client-fingerprint":"firefox","udp":true,"grpc-opts":{"grpc-service-name":"Telegram:"},"reality-opts":{"public-key":"U79mwBYXYzaNs1L57EDyJNC5p8HSrQYx1GDnBdttgmw"}}
@@ -113,6 +114,7 @@ proxy-groups:
       - '🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 1'
       - '🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 2'
       - '🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18'
+      - '🇩🇪 DE | 🟢 | vless | @config_proxy | 51'
       - '🇷🇺 RU | 🟢 | vless | @configfa | 9'
       - '🇦🇪 AE | 🟢 | vless | @confing_chanel | 17'
       - '❔ XX | 🟢 | vless | @custom_14 | 7'
