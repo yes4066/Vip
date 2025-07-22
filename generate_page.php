@@ -1689,109 +1689,106 @@ async function handleShare(contentToUpload, buttonElement) {
             });
         });
 
-        splitSubscriptionButton.addEventListener('click', async () => {
-            const url = splitterUrlInput.value;
-            if (!url) {
-                showMessageBox('Please paste a subscription URL to split.');
-                return;
+        // AFTER (The corrected code):
+
+splitSubscriptionButton.addEventListener('click', async () => {
+    const url = splitterUrlInput.value;
+    if (!url) {
+        showMessageBox('Please paste a subscription URL to split.');
+        return;
+    }
+
+    const button = splitSubscriptionButton;
+    const buttonText = document.getElementById('splitButtonText');
+    button.disabled = true;
+    buttonText.textContent = 'Parsing...';
+    splitterResultArea.classList.add('hidden');
+    splitterResultList.innerHTML = '';
+
+    try {
+        const response = await fetchWithCorsFallback(url);
+        if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
+        
+        const content = await response.text();
+        const decoded = atob(content);
+        const uris = decoded.split(/[\n\r]+/).filter(Boolean);
+
+        if (uris.length === 0) throw new Error('No proxy nodes found in the subscription.');
+        
+        buttonText.textContent = 'Splitting...';
+
+        const nodes = uris.map(uri => {
+            const parsed = configParse(uri);
+            return parsed ? { uri, parsed } : null;
+        }).filter(Boolean);
+        
+        const strategy = document.querySelector('input[name="split_strategy"]:checked').value;
+        let groupedNodes = {};
+
+        if (strategy === 'country') {
+            nodes.forEach(node => {
+                const name = node.parsed.ps || node.parsed.hash || 'Unknown';
+                const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
+                const countryCode = countryMatch ? (countryMatch[1] || countryMatch[2]).toUpperCase() : 'Unknown';
+                if (!groupedNodes[countryCode]) groupedNodes[countryCode] = [];
+                groupedNodes[countryCode].push(node);
+            });
+        } else if (strategy === 'protocol') {
+            nodes.forEach(node => {
+                const protocol = node.parsed.protocol || 'unknown';
+                if (!groupedNodes[protocol]) groupedNodes[protocol] = [];
+                groupedNodes[protocol].push(node);
+            });
+        } else { // chunk
+            const chunkSize = parseInt(chunkSizeInput.value, 10) || 50;
+            for (let i = 0; i < nodes.length; i += chunkSize) {
+                const chunk = nodes.slice(i, i + chunkSize);
+                const chunkName = `Chunk ${Math.floor(i / chunkSize) + 1}`;
+                groupedNodes[chunkName] = chunk;
+            }
+        }
+
+        // Render the results
+        Object.entries(groupedNodes).sort((a,b) => a[0].localeCompare(b[0])).forEach(([groupName, groupNodes]) => {
+            const nodeCount = groupNodes.length;
+            const base64Content = btoa(groupNodes.map(n => n.uri).join('\n'));
+            
+            let displayName = groupName;
+            if (strategy === 'country' && groupName !== 'Unknown') {
+                displayName = `${getFlagEmoji(groupName)} ${getCountryName(groupName)}`;
+            } else if (strategy === 'protocol') {
+                displayName = formatDisplayName(groupName);
             }
 
-            const button = splitSubscriptionButton;
-            const buttonText = document.getElementById('splitButtonText');
-            button.disabled = true;
-            buttonText.textContent = 'Parsing...';
-            splitterResultArea.classList.add('hidden');
-            splitterResultList.innerHTML = '';
+            const resultItem = document.createElement('div');
+            resultItem.className = 'bg-white border rounded-lg p-3 flex items-center justify-between';
+            resultItem.innerHTML = `
+                <div class="font-semibold text-slate-800">${displayName} <span class="text-sm text-slate-500 font-normal">(${nodeCount} nodes)</span></div>
+                <div class="flex items-center gap-2">
+                    <button class="splitter-copy-btn p-2 rounded-md bg-indigo-50 text-indigo-700 hover:bg-indigo-100" title="Copy Base64 Content" data-uri="${base64Content}">
+                        <i data-lucide="copy" class="h-5 w-5"></i>
+                    </button>
+                    <button class="splitter-share-btn p-2 rounded-md bg-teal-50 text-teal-700 hover:bg-teal-100" title="Generate Share Link" data-uri="${base64Content}">
+                        <i data-lucide="share-2" class="h-5 w-5"></i>
+                    </button>
+                    <div class="splitter-qr-btn p-2 rounded-md bg-slate-100 hover:bg-slate-200" title="Show QR Code">
+                        <i data-lucide="qr-code" class="h-5 w-5"></i>
+                    </div>
+                </div>
+            `;
+            splitterResultList.appendChild(resultItem);
+        }); // <-- FIX #1: The forEach loop is now correctly closed with a parenthesis and brace.
 
-            try {
-                const proxiedUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-                const response = await fetchWithCorsFallback(url);
-                if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
-                
-                const content = await response.text();
-                // We assume most external subs are base64 encoded text
-                const decoded = atob(content);
-                const uris = decoded.split(/[\n\r]+/).filter(Boolean);
+        splitterResultArea.classList.remove('hidden'); // <-- FIX #2: This is now outside the loop, so it only runs once.
 
-                if (uris.length === 0) throw new Error('No proxy nodes found in the subscription.');
-                
-                buttonText.textContent = 'Splitting...';
-
-                const nodes = uris.map(uri => {
-                    const parsed = configParse(uri);
-                    return parsed ? { uri, parsed } : null;
-                }).filter(Boolean);
-                
-                const strategy = document.querySelector('input[name="split_strategy"]:checked').value;
-                let groupedNodes = {};
-
-                if (strategy === 'country') {
-                    nodes.forEach(node => {
-                        const name = node.parsed.ps || node.parsed.hash || 'Unknown';
-                        const countryMatch = name.match(/\[([A-Z]{2})\]|\b([A-Z]{2})\b/i);
-                        const countryCode = countryMatch ? (countryMatch[1] || countryMatch[2]).toUpperCase() : 'Unknown';
-                        if (!groupedNodes[countryCode]) groupedNodes[countryCode] = [];
-                        groupedNodes[countryCode].push(node);
-                    });
-                } else if (strategy === 'protocol') {
-                    nodes.forEach(node => {
-                        const protocol = node.parsed.protocol || 'unknown';
-                        if (!groupedNodes[protocol]) groupedNodes[protocol] = [];
-                        groupedNodes[protocol].push(node);
-                    });
-                } else { // chunk
-                    const chunkSize = parseInt(chunkSizeInput.value, 10) || 50;
-                    for (let i = 0; i < nodes.length; i += chunkSize) {
-                        const chunk = nodes.slice(i, i + chunkSize);
-                        const chunkName = `Chunk ${Math.floor(i / chunkSize) + 1}`;
-                        groupedNodes[chunkName] = chunk;
-                    }
-                }
-
-                // Render the results
-                Object.entries(groupedNodes).sort((a,b) => a[0].localeCompare(b[0])).forEach(([groupName, groupNodes]) => {
-                    const nodeCount = groupNodes.length;
-                    const base64Content = btoa(groupNodes.map(n => n.uri).join('\n'));
-                    const dataUri = `${base64Content}`;
-                    
-                    let displayName = groupName;
-                    if (strategy === 'country' && groupName !== 'Unknown') {
-                        displayName = `${getFlagEmoji(groupName)} ${getCountryName(groupName)}`;
-                    } else if (strategy === 'protocol') {
-                        displayName = formatDisplayName(groupName);
-                    }
-
-                    // Inside the splitSubscriptionButton 'click' event listener...
-
-const resultItem = document.createElement('div');
-resultItem.className = 'bg-white border rounded-lg p-3 flex items-center justify-between';
-// EDIT: STEP 2-B - ADD THE SPLITTER SHARE BUTTON TO THE TEMPLATE
-resultItem.innerHTML = `
-    <div class="font-semibold text-slate-800">${displayName} <span class="text-sm text-slate-500 font-normal">(${nodeCount} nodes)</span></div>
-    <div class="flex items-center gap-2">
-        <button class="splitter-copy-btn p-2 rounded-md bg-indigo-50 text-indigo-700 hover:bg-indigo-100" title="Copy Base64 Content" data-uri="${dataUri}">
-            <i data-lucide="copy" class="h-5 w-5"></i>
-        </button>
-        <button class="splitter-share-btn p-2 rounded-md bg-teal-50 text-teal-700 hover:bg-teal-100" title="Generate Share Link" data-uri="${dataUri}">
-            <i data-lucide="share-2" class="h-5 w-5"></i>
-        </button>
-        <div class="splitter-qr-btn p-2 rounded-md bg-slate-100 hover:bg-slate-200" title="Show QR Code">
-            <i data-lucide="qr-code" class="h-5 w-5"></i>
-        </div>
-    </div>
-`;
-splitterResultList.appendChild(resultItem);
-
-                splitterResultArea.classList.remove('hidden');
-
-            } catch (error) {
-                showMessageBox(`Splitting Failed: ${error.message}`);
-            } finally {
-                button.disabled = false;
-                buttonText.textContent = 'Split Subscription';
-                lucide.createIcons(); // Re-render icons for new buttons
-            }
-        });
+    } catch (error) { // <-- This is now in the correct position.
+        showMessageBox(`Splitting Failed: ${error.message}`);
+    } finally {
+        button.disabled = false;
+        buttonText.textContent = 'Split Subscription';
+        lucide.createIcons(); // Re-render icons for new buttons
+    }
+});
 
         // Add event delegation for copy and QR buttons
         splitterResultList.addEventListener('click', e => {
