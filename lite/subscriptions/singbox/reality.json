@@ -100,7 +100,6 @@
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxyandvpnofficial1 | 4",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
@@ -110,11 +109,10 @@
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 12",
                 "🇩🇪 DE | 🟢 | vless | @vpn_ioss | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇷🇺 RU | 🟢 | vless | @vpnod | 18",
+                "🇷🇺 RU | 🟢 | vless | @vpnod | 17",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -148,7 +146,6 @@
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
-                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxyandvpnofficial1 | 4",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
@@ -158,11 +155,10 @@
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 12",
                 "🇩🇪 DE | 🟢 | vless | @vpn_ioss | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇷🇺 RU | 🟢 | vless | @vpnod | 18",
+                "🇷🇺 RU | 🟢 | vless | @vpnod | 17",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -454,29 +450,6 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @mowjproxy | 3",
-            "type": "vless",
-            "server": "62.212.70.229",
-            "server_port": 80,
-            "uuid": "c256ce5f-9b2b-43a0-946a-cceeadf0d5b0",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "ea.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tGORZqRxnUHzC46UYNRlydnkDlbA06OlkhPFZrxeLCE",
-                    "short_id": "3df4"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @proxyandvpnofficial1 | 4",
             "type": "vless",
             "server": "138.199.168.187",
@@ -700,7 +673,7 @@
             }
         },
         {
-            "tag": "🇷🇺 RU | 🟢 | vless | @vpnod | 18",
+            "tag": "🇷🇺 RU | 🟢 | vless | @vpnod | 17",
             "type": "vless",
             "server": "213.183.41.63",
             "server_port": 443,
@@ -801,29 +774,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram:"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
-            "type": "vless",
-            "server": "micro.slumbo.com",
-            "server_port": 443,
-            "uuid": "60bc841c-cfbd-408f-889b-473f90bb4a26",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "random"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "jH08UU9id-Q8i17ltvHPO3sfGL6YTJIFveAJGgNjNl8",
-                    "short_id": "190d32b118caf07f"
-                }
             }
         },
         {
