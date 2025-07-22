@@ -23,6 +23,7 @@ dns:
     - '+.pool.ntp.org'
 
 proxies: 
+  - {"name":"🇩🇪 DE | 🔴 | vmess | @NamiraNet | 69","type":"vmess","server":"panel3.ipyar.org","port":32017,"cipher":"auto","uuid":"c0ccdeb9-784c-4d67-b904-20dcaac9902a","alterId":"0","tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇮🇷 IR | 🔴 | vmess | @angus_vpn | 0","type":"vmess","server":"tu.shoptx.sbs","port":15400,"cipher":"auto","uuid":"cc660614-1172-4988-9647-3846502d0e4f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"❔ XX | 🔴 | vmess | @armodchannel | 62","type":"vmess","server":"asia.artunnel57.host","port":80,"cipher":"auto","uuid":"65e44501-defd-4609-a4e3-7028dc417b50","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess-ntls","headers":{"Host":"asia.artunnel57.host"}}}
   - {"name":"❔ XX | 🔴 | vmess | @configforvpn | 9","type":"vmess","server":"shahinnet-freenetcdn.melodyshopone2.ir","port":8080,"cipher":"auto","uuid":"96588912-3bcb-491c-8ce3-7a965bbec07f","alterId":"0","tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"sog.shahinnet.shop"}}}
@@ -67,6 +68,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies: 
+      - '🇩🇪 DE | 🔴 | vmess | @NamiraNet | 69'
       - '🇮🇷 IR | 🔴 | vmess | @angus_vpn | 0'
       - '❔ XX | 🔴 | vmess | @armodchannel | 62'
       - '❔ XX | 🔴 | vmess | @configforvpn | 9'
