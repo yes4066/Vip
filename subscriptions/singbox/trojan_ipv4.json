@@ -89,8 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "🇺🇸 US | 🔴 | trojan | @configshubplus | 15",
-                "🇸🇪 SE | 🟢 | trojan | @configshubplus | 17",
+                "🇺🇸 US | 🔴 | trojan | @configshubplus | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 9",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 10",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 11",
@@ -99,7 +98,9 @@
                 "🇺🇸 US | 🟢 | trojan | @freakconfig | 9",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
-                "🇺🇸 US | 🟢 | trojan | @hope_net | 17",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
+                "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 11",
+                "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 12",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -109,6 +110,9 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 12",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
+                "🇺🇸 US | 🔴 | trojan | @v2raych | 15",
+                "🇺🇸 US | 🔴 | trojan | @v2raych | 18",
+                "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -126,8 +130,7 @@
         {
             "interval": "10m",
             "outbounds": [
-                "🇺🇸 US | 🔴 | trojan | @configshubplus | 15",
-                "🇸🇪 SE | 🟢 | trojan | @configshubplus | 17",
+                "🇺🇸 US | 🔴 | trojan | @configshubplus | 19",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 9",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 10",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 11",
@@ -136,7 +139,9 @@
                 "🇺🇸 US | 🟢 | trojan | @freakconfig | 9",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
                 "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
-                "🇺🇸 US | 🟢 | trojan | @hope_net | 17",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
+                "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 11",
+                "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 12",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -146,6 +151,9 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 12",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
+                "🇺🇸 US | 🔴 | trojan | @v2raych | 15",
+                "🇺🇸 US | 🔴 | trojan | @v2raych | 18",
+                "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -167,9 +175,9 @@
             "type": "direct"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @configshubplus | 15",
+            "tag": "🇺🇸 US | 🔴 | trojan | @configshubplus | 19",
             "type": "trojan",
-            "server": "188.114.97.99",
+            "server": "172.67.176.104",
             "server_port": 443,
             "password": "blue2024",
             "tls": {
@@ -179,29 +187,6 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇸🇪 SE | 🟢 | trojan | @configshubplus | 17",
-            "type": "trojan",
-            "server": "185.146.173.69",
-            "server_port": 443,
-            "password": "b697183d-288b-40ab-98ae-8e3eb85f371c",
-            "tls": {
-                "enabled": true,
-                "server_name": "uk1.trojanvpn.xyz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "uk1.trojanvpn.xyz"
                 }
             }
         },
@@ -318,12 +303,12 @@
         {
             "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
             "type": "trojan",
-            "server": "104.20.76.165",
+            "server": "104.20.18.113",
             "server_port": 443,
-            "password": "NISHIKUITAN111",
+            "password": "blue2024",
             "tls": {
                 "enabled": true,
-                "server_name": "104.20.76.165",
+                "server_name": "td.promote.icu",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -332,27 +317,43 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @hope_net | 17",
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
             "type": "trojan",
-            "server": "104.17.116.87",
+            "server": "104.19.204.38",
             "server_port": 443,
-            "password": "bpb-trojan",
+            "password": "blue2024",
             "tls": {
                 "enabled": true,
-                "server_name": "bpb.my79801.com",
+                "server_name": "td.promote.icu",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
                 }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/tr?ed=2560",
-                "headers": {
-                    "Host": "bpb.my79801.com"
+            }
+        },
+        {
+            "tag": "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 11",
+            "type": "trojan",
+            "server": "176.32.39.29",
+            "server_port": 443,
+            "password": "8OXD5VVt8s",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 12",
+            "type": "trojan",
+            "server": "155.117.228.70",
+            "server_port": 26193,
+            "password": "7367d04e-4c59-4dff-a50e-12e730a09891"
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
@@ -498,6 +499,54 @@
             "tls": {
                 "enabled": true,
                 "server_name": "speedtest.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @v2raych | 15",
+            "type": "trojan",
+            "server": "198.41.221.124",
+            "server_port": 443,
+            "password": "blue2024",
+            "tls": {
+                "enabled": true,
+                "server_name": "td.promote.icu",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @v2raych | 18",
+            "type": "trojan",
+            "server": "173.245.59.6",
+            "server_port": 443,
+            "password": "blue2024",
+            "tls": {
+                "enabled": true,
+                "server_name": "td.promote.icu",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
+            "type": "trojan",
+            "server": "104.19.217.93",
+            "server_port": 443,
+            "password": "blue2024",
+            "tls": {
+                "enabled": true,
+                "server_name": "td.promote.icu",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
