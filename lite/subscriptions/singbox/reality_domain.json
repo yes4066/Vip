@@ -92,12 +92,10 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
-                "❔ XX | 🟢 | vless | @ip_cf_config | 14",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇩🇪 DE | 🟢 | vless | @netmellianti | 17",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -105,7 +103,8 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "❔ XX | 🟢 | vless | @vp22ray | 10"
+                "❔ XX | 🟢 | vless | @vp22ray | 10",
+                "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -116,12 +115,10 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
-                "❔ XX | 🟢 | vless | @ip_cf_config | 14",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇩🇪 DE | 🟢 | vless | @netmellianti | 17",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -129,7 +126,8 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "❔ XX | 🟢 | vless | @vp22ray | 10"
+                "❔ XX | 🟢 | vless | @vp22ray | 10",
+                "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -215,29 +213,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@FsV2ray"
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @ip_cf_config | 14",
-            "type": "vless",
-            "server": "WLF-V-P-N-ID2.dnsfree.one",
-            "server_port": 443,
-            "uuid": "---WLFVPN---",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "GAUjNf1wQnDm5ziCGqRmb3yVfU9bg_UPwZ2_QU4JWRU",
-                    "short_id": "6bb85179e30d4fc2"
-                }
             }
         },
         {
@@ -334,33 +309,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Hossien"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
-            "type": "vless",
-            "server": "gr.globalunlimitedinternet.xyz",
-            "server_port": 1911,
-            "uuid": "ab51a2b9-eafd-48e9-8ee1-55aba32f6ab4",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "VCwUyNFL_IMTZfEKeIUYEuXbPfzCpuUBGNW1kAu2VW4",
-                    "short_id": "32aaf12b"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "grpc.reality"
             }
         },
         {
@@ -556,6 +504,29 @@
                     "enabled": true,
                     "public_key": "XEpHiKs6YbcMrBR4YTRXLlIlO5RfGcVUUcbt4KZc7TY",
                     "short_id": "d90b293e"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🟢 | vless | @vpnwlf | 10",
+            "type": "vless",
+            "server": "WLF-V-P-N-ID2.dnsfree.one",
+            "server_port": 443,
+            "uuid": "---WLFVPN---",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "GAUjNf1wQnDm5ziCGqRmb3yVfU9bg_UPwZ2_QU4JWRU",
+                    "short_id": "6bb85179e30d4fc2"
                 }
             }
         }

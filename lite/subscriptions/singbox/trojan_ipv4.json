@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 13",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 17",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -104,6 +105,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 13",
                 "🇺🇸 US | 🟢 | trojan | @freevpnatm | 17",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -121,6 +123,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @NamiraNet | 69",
+            "type": "trojan",
+            "server": "172.67.188.77",
+            "server_port": 443,
+            "password": "1c5b4508-7f18-47bf-9bce-e7ec19fb31cb",
+            "tls": {
+                "enabled": true,
+                "server_name": "dddfghnju.890604.dpdns.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 13",
