@@ -99,6 +99,7 @@
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
+                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxyandvpnofficial1 | 3",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
@@ -106,6 +107,7 @@
                 "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 8",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
+                "🇬🇧 GB | 🟢 | vless | @vmess_ir | 18",
                 "🇫🇮 FI | 🟢 | vless | @vpn_ioss | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇷🇺 RU | 🟢 | vless | @vpnod | 17",
@@ -128,6 +130,7 @@
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
+                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxyandvpnofficial1 | 3",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
@@ -135,6 +138,7 @@
                 "🇨🇿 CZ | 🟢 | vless | @v2rayopen | 8",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
+                "🇬🇧 GB | 🟢 | vless | @vmess_ir | 18",
                 "🇫🇮 FI | 🟢 | vless | @vpn_ioss | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
                 "🇷🇺 RU | 🟢 | vless | @vpnod | 17",
@@ -393,6 +397,29 @@
             }
         },
         {
+            "tag": "🇳🇱 NL | 🟢 | vless | @mowjproxy | 3",
+            "type": "vless",
+            "server": "209.38.45.230",
+            "server_port": 21624,
+            "uuid": "3a1228c5-ddf9-4430-ac88-57c889712cdd",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "N5HSrXmFSFmCmp38i_FtGh00Cfmyh3E4M6n5bdg97GE",
+                    "short_id": "7bacf6051ced"
+                }
+            }
+        },
+        {
             "tag": "🇩🇪 DE | 🟢 | vless | @proxyandvpnofficial1 | 3",
             "type": "vless",
             "server": "138.199.168.187",
@@ -562,6 +589,29 @@
                     "enabled": true,
                     "public_key": "Qdg7LVP5VmLr7xzv556ry5RNc3QaeAj4TwOUxndA23M",
                     "short_id": "e3f89b63"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | vless | @vmess_ir | 18",
+            "type": "vless",
+            "server": "158.41.108.215",
+            "server_port": 34045,
+            "uuid": "d8dd94fd-540e-461d-b5d4-acebef02c22a",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA",
+                    "short_id": "e8ab71d0"
                 }
             }
         },
