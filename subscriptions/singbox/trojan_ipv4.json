@@ -96,8 +96,8 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇺🇸 US | 🟢 | trojan | @freakconfig | 8",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🏳️  | 🟢 | trojan | @hope_net | 16",
-                "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 14",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -107,9 +107,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 17",
-                "🏳️  | 🟢 | trojan | @v2raych | 16",
-                "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
+                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 15",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -134,8 +132,8 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇺🇸 US | 🟢 | trojan | @freakconfig | 8",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🏳️  | 🟢 | trojan | @hope_net | 16",
-                "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 14",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -145,9 +143,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 17",
-                "🏳️  | 🟢 | trojan | @v2raych | 16",
-                "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
+                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 15",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -279,14 +275,14 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🏳️  | 🟢 | trojan | @hope_net | 16",
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 18",
             "type": "trojan",
-            "server": "127.0.0.1",
-            "server_port": 8080,
-            "password": "ccaaabb-caba-caab-adbc-cbbcbaaccbaa",
+            "server": "108.162.195.203",
+            "server_port": 443,
+            "password": "blue2024",
             "tls": {
                 "enabled": true,
-                "server_name": "127.0.0.1",
+                "server_name": "td.promote.icu",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -295,14 +291,14 @@
             }
         },
         {
-            "tag": "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 14",
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
             "type": "trojan",
-            "server": "176.32.39.29",
+            "server": "104.24.224.209",
             "server_port": 443,
-            "password": "8OXD5VVt8s",
+            "password": "blue2024",
             "tls": {
                 "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
+                "server_name": "td.promote.icu",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -462,7 +458,7 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 17",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 15",
             "type": "trojan",
             "server": "51.44.135.215",
             "server_port": 22222,
@@ -470,38 +466,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🏳️  | 🟢 | trojan | @v2raych | 16",
-            "type": "trojan",
-            "server": "127.0.0.1",
-            "server_port": 1080,
-            "password": "aacbbca-caba-acba-cabd-aabccbccbbaa",
-            "tls": {
-                "enabled": true,
-                "server_name": "127.0.0.1",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | trojan | @v2raych | 19",
-            "type": "trojan",
-            "server": "108.162.195.203",
-            "server_port": 443,
-            "password": "blue2024",
-            "tls": {
-                "enabled": true,
-                "server_name": "td.promote.icu",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
