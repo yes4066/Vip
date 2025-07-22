@@ -335,11 +335,11 @@ function generate_full_html(
 ): string {
     $json_structured_data = json_encode(
         $structured_data,
-        JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
+        JSON_UNESCAPED_SLASHES
     );
     $json_client_info_data = json_encode(
         $client_info_data,
-        JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
+        JSON_UNESCAPED_SLASHES
     );
 
     // The entire HTML template with the composer and full JS logic is now here.
