@@ -92,13 +92,13 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇩🇪 DE | 🟢 | trojan | @directvpn | 15",
+                "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
+                "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 15",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
-                "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
-                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 15",
+                "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 11"
+                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -109,13 +109,13 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇩🇪 DE | 🟢 | trojan | @directvpn | 15",
+                "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
+                "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 15",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
-                "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
-                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 15",
+                "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 11"
+                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -186,14 +186,30 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 15",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
             "type": "trojan",
-            "server": "3.68.1.93",
+            "server": "15.188.178.145",
             "server_port": 22223,
             "password": "telegram-id-directvpn",
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 15",
+            "type": "trojan",
+            "server": "176.32.39.29",
+            "server_port": 443,
+            "password": "8OXD5VVt8s",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -225,25 +241,9 @@
             }
         },
         {
-            "tag": "🇷🇺 RU | 🟢 | trojan | @noforcedheaven | 15",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
             "type": "trojan",
-            "server": "176.32.39.29",
-            "server_port": 443,
-            "password": "8OXD5VVt8s",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @privatevpns | 15",
-            "type": "trojan",
-            "server": "3.68.1.93",
+            "server": "15.188.178.145",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {
@@ -289,9 +289,9 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 11",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11",
             "type": "trojan",
-            "server": "3.68.1.93",
+            "server": "15.188.178.145",
             "server_port": 22223,
             "password": "telegram-id-v2rayvpnchannel",
             "tls": {
