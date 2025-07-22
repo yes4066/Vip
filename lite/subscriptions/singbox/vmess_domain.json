@@ -95,12 +95,11 @@
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
                 "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
                 "🇺🇸 US | 🟢 | vmess | @darkfiilter | 1",
-                "🇺🇸 US | 🟢 | vmess | @freakconfig | 12",
+                "🇺🇸 US | 🟢 | vmess | @freakconfig | 14",
                 "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 16",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -150,12 +149,11 @@
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
                 "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
                 "🇺🇸 US | 🟢 | vmess | @darkfiilter | 1",
-                "🇺🇸 US | 🟢 | vmess | @freakconfig | 12",
+                "🇺🇸 US | 🟢 | vmess | @freakconfig | 14",
                 "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
                 "🇩🇪 DE | 🔴 | vmess | @freevmess | 4",
-                "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 16",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 13",
                 "🇺🇸 US | 🔴 | vmess | @iran_mehr_vpn | 17",
                 "🇺🇸 US | 🟢 | vmess | @iranvpnet | 0",
@@ -303,7 +301,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vmess | @freakconfig | 12",
+            "tag": "🇺🇸 US | 🟢 | vmess | @freakconfig | 14",
             "type": "vmess",
             "server": "172.67.131.27",
             "server_port": 2053,
@@ -395,22 +393,6 @@
             "transport": {
                 "type": "ws",
                 "path": "/telegram-id-@privatevpns",
-                "headers": {
-                    "Host": ""
-                }
-            }
-        },
-        {
-            "tag": "🇨🇦 CA | 🔴 | vmess | @ip_cf_config | 16",
-            "type": "vmess",
-            "server": "51.79.102.253",
-            "server_port": 80,
-            "uuid": "58fe1542-5290-40ad-815a-77707a81afe5",
-            "security": "auto",
-            "alter_id": 0,
-            "transport": {
-                "type": "ws",
-                "path": "/IOebhLMhl1CTbFHbL95myfRX2",
                 "headers": {
                     "Host": ""
                 }

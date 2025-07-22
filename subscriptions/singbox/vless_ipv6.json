@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "❔ XX | 🔴 | vless | @bored_vpn | 7",
+                "❔ XX | 🔴 | vless | @configshubplus | 16",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
@@ -114,6 +115,7 @@
             "interval": "10m",
             "outbounds": [
                 "❔ XX | 🔴 | vless | @bored_vpn | 7",
+                "❔ XX | 🔴 | vless | @configshubplus | 16",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
@@ -146,6 +148,15 @@
             "server": "[2a01:4f8:c014:b8b0::1]",
             "server_port": 8880,
             "uuid": "ip6-HqV2rayNG",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "❔ XX | 🔴 | vless | @configshubplus | 16",
+            "type": "vless",
+            "server": "[2a01:4f9:c010:66a7::1]",
+            "server_port": 36100,
+            "uuid": "304de70b-0002-4100-82e1-610ff306a538",
             "flow": "",
             "packet_encoding": "xudp"
         },
