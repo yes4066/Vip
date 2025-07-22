@@ -100,6 +100,7 @@
                 "🇩🇪 DE | 🔴 | vless | @prrofile_purple | 122",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇺🇸 US | 🔴 | vless | @v2trayproxy | 12",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
@@ -127,6 +128,7 @@
                 "🇩🇪 DE | 🔴 | vless | @prrofile_purple | 122",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇺🇸 US | 🔴 | vless | @v2trayproxy | 12",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 26",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
@@ -242,6 +244,15 @@
             "server": "configline.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "TELEGRAM-CONFiGLiNE",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
+            "type": "vless",
+            "server": "speedtestcustom.com",
+            "server_port": 80,
+            "uuid": "c95e1271-871f-44ad-bbe9-e05d028d3d40",
             "flow": "",
             "packet_encoding": "xudp"
         },
