@@ -591,7 +591,6 @@ function generate_full_html(
    <button id="shareConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors duration-200">
         <i data-lucide="share-2"></i> Share
     </button>
-</div>
                     </div>
                 </div>
 
@@ -640,11 +639,9 @@ function generate_full_html(
     <button id="shareComposedButton" class="flex-grow flex items-center justify-center gap-2 bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors duration-200">
         <i data-lucide="share-2"></i> Share
     </button>
-</div>
                         </div>
                      </div>
                 </div>
-
             </div>
         </main>
         
