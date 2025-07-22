@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
                 "🇩🇪 DE | 🔴 | vless | @argotaz | 0",
                 "🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1",
@@ -106,7 +107,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -223,6 +224,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
                 "🇩🇪 DE | 🔴 | vless | @argotaz | 0",
                 "🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1",
@@ -240,7 +242,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @custom_v2ray | 5",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -359,6 +361,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
+            "type": "vless",
+            "server": "182910.www.11338899.servers801.ir",
+            "server_port": 2096,
+            "uuid": "09f1d928-05ab-4ba2-80c5-f33edc244024",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/fscsxfVgdzhrefjgsBgaa?ed=80",
+                "headers": {
+                    "Host": "182910.www.11338899.servers801.ir"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
@@ -615,7 +633,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
