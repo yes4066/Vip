@@ -91,7 +91,6 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
-                "🇩🇪 DE | 🔴 | vless | @config_proxy | 45",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @confing_chanel | 21",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -112,8 +111,8 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
-                "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 4",
+                "🇩🇪 DE | 🔴 | vless | @prrofile_purple | 129",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
@@ -133,7 +132,6 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 18",
-                "🇩🇪 DE | 🔴 | vless | @config_proxy | 45",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @confing_chanel | 21",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -154,8 +152,8 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 2",
-                "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 4",
+                "🇩🇪 DE | 🔴 | vless | @prrofile_purple | 129",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 6",
@@ -207,15 +205,6 @@
                     "short_id": "aeba"
                 }
             }
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | vless | @config_proxy | 45",
-            "type": "vless",
-            "server": "be.kimjo.ir",
-            "server_port": 8080,
-            "uuid": "3a95905b-0ee1-494b-bda8-79c20dc41be5",
-            "flow": "",
-            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @configscenter | 2",
@@ -398,20 +387,20 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
-            "type": "vless",
-            "server": "nl-fa.adm-cll.ir",
-            "server_port": 80,
-            "uuid": "fee253e9-b903-5c7a-e7f7-2a557718c810",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @proxy_v2box | 4",
             "type": "vless",
             "server": "bos.lebasnoo.ir",
             "server_port": 80,
             "uuid": "9c2e1da7-8e50-4899-ad69-ad0b52de696c",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @prrofile_purple | 129",
+            "type": "vless",
+            "server": "be.kimjo.ir",
+            "server_port": 8080,
+            "uuid": "3a95905b-0ee1-494b-bda8-79c20dc41be5",
             "flow": "",
             "packet_encoding": "xudp"
         },

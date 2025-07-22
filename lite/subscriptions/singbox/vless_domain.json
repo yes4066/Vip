@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇺🇸 US | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
                 "🇩🇪 DE | 🔴 | vless | @argotaz | 0",
                 "🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1",
@@ -129,6 +130,7 @@
                 "❔ XX | 🔴 | vless | @goodbyefiltering | 7",
                 "🇮🇷 IR | 🔴 | vless | @guard_revil | 3",
                 "Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=cdn39030.marzban-l.ir&type=ws#🇺🇸 US | 🔴 | vless | @info_2it_channel | 13",
+                "🇺🇸 US | 🟢 | vless | @ip_cf_config | 15",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iranbaxvpn | 8",
                 "🇷🇺 RU | 🔴 | vless | @iranbfilter | 6",
@@ -223,6 +225,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇺🇸 US | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
                 "🇩🇪 DE | 🔴 | vless | @argotaz | 0",
                 "🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1",
@@ -263,6 +266,7 @@
                 "❔ XX | 🔴 | vless | @goodbyefiltering | 7",
                 "🇮🇷 IR | 🔴 | vless | @guard_revil | 3",
                 "Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=cdn39030.marzban-l.ir&type=ws#🇺🇸 US | 🔴 | vless | @info_2it_channel | 13",
+                "🇺🇸 US | 🟢 | vless | @ip_cf_config | 15",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iranbaxvpn | 8",
                 "🇷🇺 RU | 🔴 | vless | @iranbfilter | 6",
@@ -359,6 +363,22 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @NamiraNet | 69",
+            "type": "vless",
+            "server": "confident-club.seotoolsforyou.co.uk",
+            "server_port": 80,
+            "uuid": "9926ee97-4398-48dd-b263-2863c62f5c41",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "confident-club.seotoolsforyou.co.uk"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @alo_v2rayng | 0",
@@ -963,6 +983,31 @@
             "uuid": "9fb80a5f-f898-476f-8504-4cf36a1d69c7",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @ip_cf_config | 15",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "server_port": 2096,
+            "uuid": "00b4785b-6ae1-496c-ad87-9dc4f89b7b3e",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "638879176706376779.amsterdam-prx-dnraaal.info",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/gflzprws",
+                "headers": {
+                    "Host": "638879176706376779.amsterdam-prx-dnraaal.info"
+                }
+            }
         },
         {
             "tag": "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
