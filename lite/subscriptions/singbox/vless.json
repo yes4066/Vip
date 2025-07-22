@@ -90,7 +90,7 @@
                 "auto",
                 "direct",
                 "🇮🇷 IR | 🔴 | vless | @Fr33C0nfig | 49",
-                "🇷🇺 RU | 🔴 | vless | @NamiraNet | 69",
+                "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 1",
                 "🇮🇷 IR | 🔴 | vless | @ansel_team | 1",
@@ -144,6 +144,7 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
                 "🇳🇱 NL | 🔴 | vless | @msv2flyng | 14",
@@ -271,7 +272,6 @@
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
-                "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
                 "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
@@ -340,7 +340,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇮🇷 IR | 🔴 | vless | @Fr33C0nfig | 49",
-                "🇷🇺 RU | 🔴 | vless | @NamiraNet | 69",
+                "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 1",
                 "🇮🇷 IR | 🔴 | vless | @ansel_team | 1",
@@ -394,6 +394,7 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
                 "🇳🇱 NL | 🔴 | vless | @msv2flyng | 14",
@@ -521,7 +522,6 @@
                 "❔ XX | 🔴 | vless | @miov2ray | 11",
                 "❔ XX | 🔴 | vless | @miyanbor_vpn | 0",
                 "🇩🇪 DE | 🔴 | vless | @moon_ping | 0",
-                "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
                 "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
@@ -602,13 +602,22 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇷🇺 RU | 🔴 | vless | @NamiraNet | 69",
+            "tag": "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
             "type": "vless",
-            "server": "95.141.205.39",
-            "server_port": 7557,
-            "uuid": "2e3bb27c-ab28-4ddb-9e33-7c5874b4d25a",
+            "server": "178.162.244.224",
+            "server_port": 443,
+            "uuid": "83a85a41-fb7f-43e0-9c15-d199509a9624",
             "flow": "",
-            "packet_encoding": "xudp"
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "178.162.244.224",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
@@ -1557,6 +1566,22 @@
             "uuid": "936f64b8-4045-4cb1-80ea-54315ea40709",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
+            "type": "vless",
+            "server": "104.16.53.11",
+            "server_port": 80,
+            "uuid": "b221eccb-6823-4940-8980-59db5ee0dbf1",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/?ed",
+                "headers": {
+                    "Host": "104.16.53.11"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
@@ -3685,22 +3710,6 @@
             "uuid": "13b0c901-3fbe-bb19-c6b8-89b2c314e975",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
-            "type": "vless",
-            "server": "practical-complaint.seotoolsforyou.co.uk",
-            "server_port": 80,
-            "uuid": "aadbf0d6-6a32-4473-8a87-5b17db90e035",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "practical-complaint.seotoolsforyou.co.uk"
-                }
-            }
         },
         {
             "tag": "❔ XX | 🟢 | vless | @mrvpn1403 | 4",
