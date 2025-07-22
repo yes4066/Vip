@@ -98,7 +98,8 @@ function get_client_info(): array
             "ios" => [
                 [
                     "name" => "Stash (Recommended for Clash Meta)",
-                    "url" => "https://apps.apple.com/us/app/stash/id1596063349",
+                    "url" =>
+                        "https://apps.apple.com/us/app/stash/id1596063349",
                 ],
             ],
             "linux" => [
@@ -289,13 +290,13 @@ function process_files_to_structure(array $files_by_category): array
                 strpos($path_for_parsing, "channel/") === 0 ||
                 strpos($path_for_parsing, "location/") === 0
             ) {
-                $parts = explode("/", $path_for_parsing, 3);
+                $parts = explode('/', $path_for_parsing, 3);
                 $type_prefix = $parts[0];
 
-                if (count($parts) < 3 || $parts[1] !== "base64") {
-                    continue;
+                if (count($parts) < 3 || $parts[1] !== 'base64') {
+                    continue; 
                 }
-                $path_for_parsing = $type_prefix . "/" . $parts[2];
+                $path_for_parsing = $type_prefix . '/' . $parts[2];
             }
 
             $parts = explode("/", $path_for_parsing);
@@ -305,7 +306,7 @@ function process_files_to_structure(array $files_by_category): array
 
             $type = array_shift($parts);
             $remaining_path = implode("/", $parts);
-            $name = preg_replace('/\\.[^.\\/]+$/', "", $remaining_path);
+            $name = preg_replace('/\\.[^.\\/]+$/', '', $remaining_path);
 
             $url = GITHUB_REPO_URL . "/" . $path;
 
