@@ -98,8 +98,7 @@ function get_client_info(): array
             "ios" => [
                 [
                     "name" => "Stash (Recommended for Clash Meta)",
-                    "url" =>
-                        "https://apps.apple.com/us/app/stash/id1596063349",
+                    "url" => "https://apps.apple.com/us/app/stash/id1596063349",
                 ],
             ],
             "linux" => [
@@ -290,13 +289,13 @@ function process_files_to_structure(array $files_by_category): array
                 strpos($path_for_parsing, "channel/") === 0 ||
                 strpos($path_for_parsing, "location/") === 0
             ) {
-                $parts = explode('/', $path_for_parsing, 3);
+                $parts = explode("/", $path_for_parsing, 3);
                 $type_prefix = $parts[0];
 
-                if (count($parts) < 3 || $parts[1] !== 'base64') {
-                    continue; 
+                if (count($parts) < 3 || $parts[1] !== "base64") {
+                    continue;
                 }
-                $path_for_parsing = $type_prefix . '/' . $parts[2];
+                $path_for_parsing = $type_prefix . "/" . $parts[2];
             }
 
             $parts = explode("/", $path_for_parsing);
@@ -306,7 +305,7 @@ function process_files_to_structure(array $files_by_category): array
 
             $type = array_shift($parts);
             $remaining_path = implode("/", $parts);
-            $name = preg_replace('/\\.[^.\\/]+$/', '', $remaining_path);
+            $name = preg_replace('/\\.[^.\\/]+$/', "", $remaining_path);
 
             $url = GITHUB_REPO_URL . "/" . $path;
 
@@ -579,14 +578,19 @@ function generate_full_html(
                         <h3 class="text-lg sm:text-xl font-semibold text-slate-800 mb-2">Conversion Complete:</h3>
                         <p id="compilerResultTitle" class="text-sm text-slate-500 mb-4"></p>
                         <textarea id="compilerResultText" readonly class="w-full h-64 font-mono text-xs bg-white border border-slate-300 rounded-lg p-3 outline-none resize-vertical"></textarea>
-                        <div class="flex items-center gap-2 mt-2">
-                           <button id="copyConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">
-                               <i data-lucide="copy"></i> Copy
-                           </button>
-                           <button id="downloadConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-700 transition-colors duration-200">
-                               <i data-lucide="download"></i> Download
-                           </button>
-                       </div>
+                        <!-- Inside #compilerResultArea -->
+<div class="flex items-center gap-2 mt-2">
+   <button id="copyConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">
+       <i data-lucide="copy"></i> Copy
+   </button>
+   <button id="downloadConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-700 transition-colors duration-200">
+       <i data-lucide="download"></i> Download
+   </button>
+   <!-- EDIT: STEP 2-C - ADD THE COMPILER SHARE BUTTON -->
+   <button id="shareConvertedButton" class="flex-grow flex items-center justify-center gap-2 bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors duration-200">
+        <i data-lucide="share-2"></i> Share
+    </button>
+</div>
                     </div>
                 </div>
 
@@ -623,14 +627,19 @@ function generate_full_html(
                      <div class="grid grid-cols-1 gap-y-8 items-start">
                         <div>
                              <textarea id="composedResultText" readonly class="w-full h-48 font-mono text-xs bg-white border border-slate-300 rounded-lg p-3 outline-none resize-vertical"></textarea>
-                             <div class="flex items-center gap-2 mt-2">
-                                <button id="copyComposedButton" class="flex-grow flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">
-                                    <i data-lucide="copy"></i> Copy
-                                </button>
-                                <button id="downloadComposedButton" class="flex-grow flex items-center justify-center gap-2 bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-700 transition-colors duration-200">
-                                    <i data-lucide="download"></i> Download
-                                </button>
-                            </div>
+                             <!-- Inside #composerResultArea -->
+<div class="flex items-center gap-2 mt-2">
+    <button id="copyComposedButton" class="flex-grow flex items-center justify-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200">
+        <i data-lucide="copy"></i> Copy
+    </button>
+    <button id="downloadComposedButton" class="flex-grow flex items-center justify-center gap-2 bg-slate-600 text-white px-4 py-2 rounded-md hover:bg-slate-700 transition-colors duration-200">
+        <i data-lucide="download"></i> Download
+    </button>
+    <!-- EDIT: STEP 2-A - ADD THE COMPOSER SHARE BUTTON -->
+    <button id="shareComposedButton" class="flex-grow flex items-center justify-center gap-2 bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors duration-200">
+        <i data-lucide="share-2"></i> Share
+    </button>
+</div>
                         </div>
                      </div>
                 </div>
@@ -687,6 +696,243 @@ function generate_full_html(
     
     <script>
     document.addEventListener('DOMContentLoaded', () => {
+		/**
+ * A JavaScript client for the shz.al pastebin API.
+ * This class provides methods to interact with all endpoints of the API.
+ * @see API Reference: https://shz.al
+ */
+class ShzAlClient {
+  /**
+   * Creates an instance of the ShzAlClient.
+   * @param {string} [baseURL='https://shz.al'] - The base URL of the API.
+   */
+  constructor(baseURL = 'https://shz.al') {
+    // Ensure the base URL does not have a trailing slash
+    this.baseURL = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL;
+  }
+
+  /**
+   * Handles the response from the fetch API, throwing an error for non-successful status codes.
+   * @private
+   * @param {Response} response - The response object from a fetch call.
+   * @returns {Promise<Response>} - The original response object if it's successful.
+   * @throws {Error} If the response status is not ok (e.g., 404, 500).
+   */
+  async _handleResponse(response) {
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API Error: ${response.status} ${response.statusText} - ${errorText}`);
+    }
+    return response;
+  }
+
+  /**
+   * Fetches the index page.
+   * @returns {Promise<string>} A promise that resolves to the HTML content of the index page.
+   */
+  async getIndexPage() {
+    const response = await fetch(this.baseURL);
+    await this._handleResponse(response);
+    return response.text();
+  }
+
+  /**
+   * Fetches a paste's content.
+   * @param {string} name - The name of the paste.
+   * @param {object} [options={}] - Optional parameters for the request.
+   * @param {string} [options.ext] - An extension to append to the name (e.g., 'js', 'txt').
+   * @param {string} [options.filename] - A filename to append to the path (e.g., 'image.jpg').
+   * @param {boolean} [options.asAttachment=false] - If true, set Content-Disposition to 'attachment'.
+   * @param {string} [options.mime] - Overrides the inferred MIME type.
+   * @param {string} [options.lang] - Specifies a language for syntax highlighting (results in HTML).
+   * @returns {Promise<Response>} A promise that resolves to the raw fetch Response object.
+   *                               You can then use .text(), .json(), .blob(), etc., to get the content.
+   */
+  async getPaste(name, options = {}) {
+    const { ext, filename, asAttachment, mime, lang } = options;
+    let path = `/${name}`;
+    if (filename) {
+      path += `/${filename}`;
+    } else if (ext) {
+      path += `.${ext}`;
+    }
+
+    const params = new URLSearchParams();
+    if (asAttachment) params.set('a', '');
+    if (mime) params.set('mime', mime);
+    if (lang) params.set('lang', lang);
+
+    const url = `${this.baseURL}${path}${params.toString() ? '?' + params.toString() : ''}`;
+    const response = await fetch(url);
+    
+    return this._handleResponse(response);
+  }
+
+  /**
+   * Fetches the URL where a short link redirects.
+   * @param {string} name - The name of the URL paste.
+   * @returns {Promise<string>} A promise that resolves to the final destination URL after redirection.
+   */
+  async getRedirectUrl(name) {
+    const response = await fetch(`${this.baseURL}/u/${name}`);
+    await this._handleResponse(response);
+    // After following redirects, the response.url will be the final destination.
+    return response.url;
+  }
+
+  /**
+   * Gets the URL to the web page for displaying a paste.
+   * This method constructs the URL without making a network request.
+   * @param {string} name - The name of the paste.
+   * @param {string} [decryptionKey] - The key to decrypt the paste in the browser.
+   * @returns {string} The full URL to the display page.
+   */
+  getDisplayPageUrl(name, decryptionKey = null) {
+    let url = `${this.baseURL}/d/${name}`;
+    if (decryptionKey) {
+      url += `#${decryptionKey}`;
+    }
+    return url;
+  }
+  
+  /**
+   * Fetches the metadata for a given paste.
+   * @param {string} name - The name of the paste.
+   * @returns {Promise<object>} A promise that resolves to the metadata JSON object.
+   */
+  async getMetadata(name) {
+    const response = await fetch(`${this.baseURL}/m/${name}`);
+    await this._handleResponse(response);
+    return response.json();
+  }
+
+  /**
+   * Fetches the rendered HTML from a markdown paste.
+   * @param {string} name - The name of the markdown paste.
+   * @returns {Promise<string>} A promise that resolves to the rendered HTML.
+   */
+  async getMarkdownAsHtml(name) {
+    const response = await fetch(`${this.baseURL}/a/${name}`);
+    await this._handleResponse(response);
+    return response.text();
+  }
+
+  /**
+   * Makes a HEAD request to get headers for a paste without fetching the body.
+   * @param {string} name - The name of the paste.
+   * @param {object} [options={}] - Same options as getPaste.
+   * @returns {Promise<Headers>} A promise that resolves to the Headers object.
+   */
+  async headPaste(name, options = {}) {
+    const { ext, filename, asAttachment, mime, lang } = options;
+    let path = `/${name}`;
+    if (filename) path += `/${filename}`;
+    else if (ext) path += `.${ext}`;
+
+    const params = new URLSearchParams();
+    if (asAttachment) params.set('a', '');
+    if (mime) params.set('mime', mime);
+    if (lang) params.set('lang', lang);
+
+    const url = `${this.baseURL}${path}${params.toString() ? '?' + params.toString() : ''}`;
+    const response = await fetch(url, { method: 'HEAD' });
+    await this._handleResponse(response);
+    return response.headers;
+  }
+
+  /**
+   * Uploads a new paste.
+   * @param {string|Blob|File} content - The content of the paste (text or binary).
+   * @param {object} [options={}] - Optional parameters for the upload.
+   * @param {string} [options.expiration] - Expiration time (e.g., '300s', '1h', '25d').
+   * @param {string} [options.password] - A password to manage the paste.
+   * @param {string} [options.name] - A custom name for the paste (will be prefixed with ~).
+   * @param {boolean} [options.private=false] - If true, generates a long, private name.
+   * @param {string} [options.encryptionScheme] - The client-side encryption scheme used.
+   * @param {string} [options.lang] - The language for syntax highlighting.
+   * @returns {Promise<object>} A promise that resolves to the API response JSON.
+   */
+  async uploadPaste(content, options = {}) {
+    const { expiration, password, name, isPrivate, encryptionScheme, lang } = options;
+    const formData = new FormData();
+
+    // The API expects 'c' for content. If content is a File object, its filename will be used.
+    formData.append('c', content);
+
+    if (expiration) formData.append('e', expiration);
+    if (password) formData.append('s', password);
+    if (name) formData.append('n', name);
+    if (isPrivate) formData.append('p', '1');
+    if (encryptionScheme) formData.append('encryption-scheme', encryptionScheme);
+    if (lang) formData.append('lang', lang);
+
+    const response = await fetch(this.baseURL + '/', {
+      method: 'POST',
+      body: formData,
+    });
+    
+    await this._handleResponse(response);
+    return response.json();
+  }
+
+  /**
+   * Updates an existing paste.
+   * @param {string} name - The name of the paste to update.
+   * @param {string} password - The password for the paste.
+   * @param {string|Blob|File} content - The new content for the paste.
+   * @param {object} [options={}] - Optional parameters for the update.
+   * @param {string} [options.expiration] - A new expiration time.
+   * @param {string} [options.newPassword] - A new password for the paste.
+   * @returns {Promise<object>} A promise that resolves to the API response JSON.
+   */
+  async updatePaste(name, password, content, options = {}) {
+    const { expiration, newPassword } = options;
+    const formData = new FormData();
+    
+    formData.append('c', content);
+    if (expiration) formData.append('e', expiration);
+    if (newPassword) formData.append('s', newPassword);
+
+    const url = `${this.baseURL}/${name}:${password}`;
+    const response = await fetch(url, {
+      method: 'PUT',
+      body: formData,
+    });
+    
+    await this._handleResponse(response);
+    return response.json();
+  }
+
+  /**
+   * Deletes a paste.
+   * @param {string} name - The name of the paste to delete.
+   * @param {string} password - The password for the paste.
+   * @returns {Promise<string>} A promise that resolves to the confirmation message from the API.
+   */
+  async deletePaste(name, password) {
+    const url = `${this.baseURL}/${name}:${password}`;
+    const response = await fetch(url, {
+      method: 'DELETE',
+    });
+    
+    await this._handleResponse(response);
+    return response.text();
+  }
+
+  /**
+   * Fetches the web page to edit a paste.
+   * NOTE: This is likely for browser use, as it returns an HTML page.
+   * @param {string} name - The name of the paste.
+   * @param {string} password - The password for the paste.
+   * @returns {Promise<string>} A promise that resolves to the HTML content of the edit page.
+   */
+  async getEditPage(name, password) {
+    const url = `${this.baseURL}/${name}:${password}`;
+    const response = await fetch(url);
+    await this._handleResponse(response);
+    return response.text();
+  }
+}
         // --- DATA (Injected by PHP) ---
         const structuredData = __JSON_DATA_PLACEHOLDER__;
         const clientInfoData = __CLIENT_INFO_PLACEHOLDER__;
@@ -741,6 +987,43 @@ function generate_full_html(
         let charts = {};
 
         // --- UTILITY FUNCTIONS ---
+/**
+ * Uploads content to shz.al and shows the user the shareable URL.
+ * @param {string} contentToUpload The text content to upload.
+ * @param {HTMLElement} buttonElement The button that was clicked.
+ */
+async function handleShare(contentToUpload, buttonElement) {
+    if (!contentToUpload) {
+        showMessageBox('There is nothing to share.');
+        return;
+    }
+
+    const originalButtonText = buttonElement.innerHTML;
+    buttonElement.disabled = true;
+    buttonElement.innerHTML = `<i data-lucide="loader-2" class="animate-spin w-5 h-5"></i> Sharing...`;
+    lucide.createIcons();
+
+    try {
+        const client = new ShzAlClient();
+        // Upload as a private paste that expires in 7 days
+        const result = await client.uploadPaste(contentToUpload, {
+            expiration: '7d',
+            isPrivate: true
+        });
+
+        // Prompt the user with the URL, which is easy to copy.
+        prompt('Share this URL (expires in 7 days):', result.url);
+
+    } catch (error) {
+        console.error('Share failed:', error);
+        showMessageBox(`Upload failed: ${error.message}`);
+    } finally {
+        // Restore the button to its original state
+        buttonElement.disabled = false;
+        buttonElement.innerHTML = originalButtonText;
+        lucide.createIcons();
+    }
+}
         const countryCodeMap = { US: 'United States', SG: 'Singapore', JP: 'Japan', KR: 'S. Korea', DE: 'Germany', NL: 'Netherlands', GB: 'UK', FR: 'France', CA: 'Canada', AU: 'Australia', HK: 'Hong Kong', TW: 'Taiwan', RU: 'Russia', IN: 'India', TR: 'Turkey', IR: 'Iran', AE: 'UAE' };
         function getCountryName(code) { return countryCodeMap[code.toUpperCase()] || code.toUpperCase(); }
         function getFlagEmoji(countryCode) { if (!/^[A-Z]{2}$/.test(countryCode)) return '🏳️'; return String.fromCodePoint(...countryCode.toUpperCase().split('').map(char => 127397 + char.charCodeAt())); }
@@ -1477,21 +1760,26 @@ function generate_full_html(
                         displayName = formatDisplayName(groupName);
                     }
 
-                    const resultItem = document.createElement('div');
-                    resultItem.className = 'bg-white border rounded-lg p-3 flex items-center justify-between';
-                    resultItem.innerHTML = `
-                        <div class="font-semibold text-slate-800">${displayName} <span class="text-sm text-slate-500 font-normal">(${nodeCount} nodes)</span></div>
-                        <div class="flex items-center gap-2">
-                            <button class="splitter-copy-btn p-2 rounded-md bg-indigo-50 text-indigo-700 hover:bg-indigo-100" title="Copy Data URI" data-uri="${dataUri}">
-                                <i data-lucide="copy" class="h-5 w-5"></i>
-                            </button>
-                            <div class="splitter-qr-btn p-2 rounded-md bg-slate-100 hover:bg-slate-200" title="Show QR Code">
-                                <i data-lucide="qr-code" class="h-5 w-5"></i>
-                            </div>
-                        </div>
-                    `;
-                    splitterResultList.appendChild(resultItem);
-                });
+                    // Inside the splitSubscriptionButton 'click' event listener...
+
+const resultItem = document.createElement('div');
+resultItem.className = 'bg-white border rounded-lg p-3 flex items-center justify-between';
+// EDIT: STEP 2-B - ADD THE SPLITTER SHARE BUTTON TO THE TEMPLATE
+resultItem.innerHTML = `
+    <div class="font-semibold text-slate-800">${displayName} <span class="text-sm text-slate-500 font-normal">(${nodeCount} nodes)</span></div>
+    <div class="flex items-center gap-2">
+        <button class="splitter-copy-btn p-2 rounded-md bg-indigo-50 text-indigo-700 hover:bg-indigo-100" title="Copy Base64 Content" data-uri="${dataUri}">
+            <i data-lucide="copy" class="h-5 w-5"></i>
+        </button>
+        <button class="splitter-share-btn p-2 rounded-md bg-teal-50 text-teal-700 hover:bg-teal-100" title="Generate Share Link" data-uri="${dataUri}">
+            <i data-lucide="share-2" class="h-5 w-5"></i>
+        </button>
+        <div class="splitter-qr-btn p-2 rounded-md bg-slate-100 hover:bg-slate-200" title="Show QR Code">
+            <i data-lucide="qr-code" class="h-5 w-5"></i>
+        </div>
+    </div>
+`;
+splitterResultList.appendChild(resultItem);
 
                 splitterResultArea.classList.remove('hidden');
 
@@ -1508,12 +1796,17 @@ function generate_full_html(
         splitterResultList.addEventListener('click', e => {
             const copyBtn = e.target.closest('.splitter-copy-btn');
             const qrBtn = e.target.closest('.splitter-qr-btn');
-
+			const shareBtn = e.target.closest('.splitter-share-btn');
             if (copyBtn) {
                 navigator.clipboard.writeText(copyBtn.dataset.uri).then(() => {
                     showMessageBox('Data URI copied to clipboard!');
                 });
             }
+			
+			if (shareBtn) {
+        const content = shareBtn.dataset.uri; // This is the base64 content
+        handleShare(content, shareBtn);
+    }
 
             if (qrBtn) {
                 const dataUri = qrBtn.previousElementSibling.dataset.uri;
@@ -1603,7 +1896,15 @@ function generate_full_html(
         generateCompositionButton.addEventListener('click', handleGenerateComposition);
         copyComposedButton.addEventListener('click', () => { navigator.clipboard.writeText(composedResultText.value).then(() => showMessageBox('Copied to clipboard!')); });
         downloadComposedButton.addEventListener('click', () => { const blob = new Blob([composedResultText.value], { type: 'text/plain' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = composedResultText.dataset.filename || 'psg-config.txt'; document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url); });
+		document.getElementById('shareComposedButton').addEventListener('click', (e) => {
+    const content = document.getElementById('composedResultText').value;
+    handleShare(content, e.currentTarget);
+});
 
+document.getElementById('shareConvertedButton').addEventListener('click', (e) => {
+    const content = document.getElementById('compilerResultText').value;
+    handleShare(content, e.currentTarget);
+});
 
         // --- INITIALIZATION ---
         populateSelect(configTypeSelect, Object.keys(structuredData), 'Select Config Type');
@@ -1746,6 +2047,7 @@ function generate_full_html(
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
         });
+		
     });
     </script>
 </body>
