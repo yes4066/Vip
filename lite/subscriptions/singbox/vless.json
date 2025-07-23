@@ -311,7 +311,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
-                "🇺🇸 US | 🔴 | vless | @v2trayproxy | 12",
+                "🇩🇪 DE | 🔴 | vless | @v2trayproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -558,7 +558,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
-                "🇺🇸 US | 🔴 | vless | @v2trayproxy | 12",
+                "🇩🇪 DE | 🔴 | vless | @v2trayproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -4435,13 +4435,17 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2trayproxy | 12",
+            "tag": "🇩🇪 DE | 🔴 | vless | @v2trayproxy | 13",
             "type": "vless",
-            "server": "configline.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "TELEGRAM-CONFiGLiNE",
+            "server": "sn.lunarmc.ir",
+            "server_port": 8082,
+            "uuid": "c5faf134-bade-4e16-96de-a33a24c51cce",
             "flow": "",
-            "packet_encoding": "xudp"
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "grpc",
+                "service_name": "sn.lunarmc.ir"
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",

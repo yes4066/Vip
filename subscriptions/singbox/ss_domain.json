@@ -108,9 +108,9 @@
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
                 "❔ XX | 🟢 | ss | @shadowsockskeys | 15",
-                "🇬🇧 GB | 🟢 | ss | @v2ray_free_conf | 16",
-                "🇱🇻 LV | 🟢 | ss | @v2ray_free_conf | 18",
+                "🇺🇸 US | 🟢 | ss | @v2ray_free_conf | 19",
                 "🇹🇷 TR | 🟢 | ss | @v2ray_v_vpn | 19",
+                "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
@@ -141,9 +141,9 @@
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
                 "❔ XX | 🟢 | ss | @shadowsockskeys | 15",
-                "🇬🇧 GB | 🟢 | ss | @v2ray_free_conf | 16",
-                "🇱🇻 LV | 🟢 | ss | @v2ray_free_conf | 18",
+                "🇺🇸 US | 🟢 | ss | @v2ray_free_conf | 19",
                 "🇹🇷 TR | 🟢 | ss | @v2ray_v_vpn | 19",
+                "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
@@ -311,20 +311,12 @@
             "password": "CH5xv3A7JA6sLKzEhLpm81Y4GHi9nUiHWxtYU4eMLabhpX8DrCaveoqhTTNVkZdHe3ocQFx843hnCNpRdPeibgvM1mYNPRuM"
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | ss | @v2ray_free_conf | 16",
+            "tag": "🇺🇸 US | 🟢 | ss | @v2ray_free_conf | 19",
             "type": "shadowsocks",
-            "server": "series-a1.samanehha.co",
-            "server_port": 443,
+            "server": "ltnl16.saint.ydns.eu",
+            "server_port": 8080,
             "method": "chacha20-ietf-poly1305",
-            "password": "W74XFALLLuw6m5IA"
-        },
-        {
-            "tag": "🇱🇻 LV | 🟢 | ss | @v2ray_free_conf | 18",
-            "type": "shadowsocks",
-            "server": "lv.vpnsparta.pro",
-            "server_port": 57456,
-            "method": "chacha20-ietf-poly1305",
-            "password": "360e21d21977dc11"
+            "password": "oZIoA69Q8yhcQV8ka3Pa3A"
         },
         {
             "tag": "🇹🇷 TR | 🟢 | ss | @v2ray_v_vpn | 19",
@@ -333,6 +325,14 @@
             "server_port": 57456,
             "method": "chacha20-ietf-poly1305",
             "password": "c40641c1f89e7acb"
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
+            "type": "shadowsocks",
+            "server": "series-a1.samanehha.co",
+            "server_port": 443,
+            "method": "chacha20-ietf-poly1305",
+            "password": "W74XFALLLuw6m5IA"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
