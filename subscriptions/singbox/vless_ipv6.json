@@ -89,7 +89,8 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "❔ XX | 🔴 | vless | @bored_vpn | 7",
+                "❔ XX | 🔴 | vless | @bored_vpn | 6",
+                "❔ XX | 🔴 | vless | @config_proxy | 53",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
@@ -99,9 +100,8 @@
                 "❔ XX | 🔴 | vless | @internet_nor | 1",
                 "❔ XX | 🔴 | vless | @internet_nor | 2",
                 "❔ XX | 🟢 | vless | @kesslervpn | 1",
-                "❔ XX | 🔴 | vless | @parsashonam | 14",
-                "❔ XX | 🔴 | vless | @parsashonam | 16",
-                "❔ XX | 🔴 | vless | @parsashonam | 18",
+                "❔ XX | 🔴 | vless | @lranonline_new | 7",
+                "❔ XX | 🔴 | vless | @parsashonam | 12",
                 "❔ XX | 🟢 | vless | @v2raytg | 73",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 6",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 8",
@@ -113,7 +113,8 @@
         {
             "interval": "10m",
             "outbounds": [
-                "❔ XX | 🔴 | vless | @bored_vpn | 7",
+                "❔ XX | 🔴 | vless | @bored_vpn | 6",
+                "❔ XX | 🔴 | vless | @config_proxy | 53",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
@@ -123,9 +124,8 @@
                 "❔ XX | 🔴 | vless | @internet_nor | 1",
                 "❔ XX | 🔴 | vless | @internet_nor | 2",
                 "❔ XX | 🟢 | vless | @kesslervpn | 1",
-                "❔ XX | 🔴 | vless | @parsashonam | 14",
-                "❔ XX | 🔴 | vless | @parsashonam | 16",
-                "❔ XX | 🔴 | vless | @parsashonam | 18",
+                "❔ XX | 🔴 | vless | @lranonline_new | 7",
+                "❔ XX | 🔴 | vless | @parsashonam | 12",
                 "❔ XX | 🟢 | vless | @v2raytg | 73",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 6",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 8",
@@ -141,11 +141,20 @@
             "type": "direct"
         },
         {
-            "tag": "❔ XX | 🔴 | vless | @bored_vpn | 7",
+            "tag": "❔ XX | 🔴 | vless | @bored_vpn | 6",
             "type": "vless",
             "server": "[2a01:4f8:c014:b8b0::1]",
             "server_port": 8880,
             "uuid": "ip6-HqV2rayNG",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "❔ XX | 🔴 | vless | @config_proxy | 53",
+            "type": "vless",
+            "server": "[2a01:4f8:1c1a:dc2b::1]",
+            "server_port": 8888,
+            "uuid": "Parsashonam-288",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -318,29 +327,20 @@
             }
         },
         {
-            "tag": "❔ XX | 🔴 | vless | @parsashonam | 14",
+            "tag": "❔ XX | 🔴 | vless | @lranonline_new | 7",
             "type": "vless",
             "server": "[2a01:4f8:1c1a:dc2b::1]",
             "server_port": 8888,
-            "uuid": "Parsashonam-286",
+            "uuid": "Parsashonam-289",
             "flow": "",
             "packet_encoding": "xudp"
         },
         {
-            "tag": "❔ XX | 🔴 | vless | @parsashonam | 16",
+            "tag": "❔ XX | 🔴 | vless | @parsashonam | 12",
             "type": "vless",
             "server": "[2a01:4f8:1c1a:dc2b::1]",
             "server_port": 8888,
             "uuid": "Parsashonam-287",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "❔ XX | 🔴 | vless | @parsashonam | 18",
-            "type": "vless",
-            "server": "[2a01:4f8:1c1a:dc2b::1]",
-            "server_port": 8888,
-            "uuid": "Parsashonam-288",
             "flow": "",
             "packet_encoding": "xudp"
         },
