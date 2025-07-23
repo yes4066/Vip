@@ -885,10 +885,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vmess",
-            "ss",
             "trojan",
-            "vless"
+            "vless",
+            "ss",
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1377,8 +1377,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1638,7 +1638,8 @@
         "types": [
             "vless",
             "vmess",
-            "ss"
+            "ss",
+            "trojan"
         ],
         "title": "V2ray سرور و کانفیگ رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/orange_vpns.jpg"

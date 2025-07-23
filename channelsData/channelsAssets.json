@@ -297,9 +297,8 @@
     },
     "configshubplus": {
         "types": [
-            "ss",
             "vless",
-            "vmess",
+            "ss",
             "trojan"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
@@ -397,16 +396,6 @@
         ],
         "title": "سرور رایگان V2RAY",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/dailyv2ray.jpg"
-    },
-    "dailyv2ry": {
-        "types": [
-            "vless",
-            "ss",
-            "vmess",
-            "trojan"
-        ],
-        "title": "Daily V2ray",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/dailyv2ry.jpg"
     },
     "dalton_ping": {
         "types": [
@@ -696,7 +685,8 @@
     "flyv2ray": {
         "types": [
             "vless",
-            "ss"
+            "ss",
+            "trojan"
         ],
         "title": "FlyV2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/flyv2ray.jpg"
@@ -1042,8 +1032,8 @@
     },
     "hope_net": {
         "types": [
-            "trojan",
             "vmess",
+            "trojan",
             "ss",
             "vless"
         ],
@@ -1115,10 +1105,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
             "vmess",
-            "ss",
-            "vless"
+            "vless",
+            "trojan",
+            "ss"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1712,8 +1702,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1949,7 +1939,8 @@
         "types": [
             "vless",
             "vmess",
-            "ss"
+            "ss",
+            "trojan"
         ],
         "title": "V2ray سرور و کانفیگ رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/orange_vpns.jpg"
@@ -2108,7 +2099,8 @@
     "proxy_mtproto_vpns_free": {
         "types": [
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxy_mtproto_vpns_free.jpg"
@@ -2408,15 +2400,6 @@
         "title": "𝙎𝙊𝘽𝙄𝙓 𝙑𝙋𝙉 | 𝙁𝙍𝙀𝙀 𝘾𝙊𝙉𝙁𝙄𝙂",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/sobyv2ray.jpg"
     },
-    "socks5tobefree": {
-        "types": [
-            "vless",
-            "trojan",
-            "vmess"
-        ],
-        "title": "real free | v2rayNG | foxray 🌐",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/socks5tobefree.jpg"
-    },
     "spikevpn": {
         "types": [
             "vless"
@@ -2628,9 +2611,9 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "trojan",
-            "ss",
             "vmess",
+            "ss",
+            "trojan",
             "vless"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
@@ -2732,8 +2715,8 @@
     },
     "v2raych": {
         "types": [
-            "vless",
             "vmess",
+            "vless",
             "trojan"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
@@ -2763,7 +2746,8 @@
     "v2rayfree": {
         "types": [
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "VPNs Proxy Mtproto",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayfree.jpg"
@@ -3189,8 +3173,8 @@
     },
     "vmesc": {
         "types": [
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "Free V2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vmesc.jpg"

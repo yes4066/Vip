@@ -92,7 +92,6 @@
                 "🇺🇸 US | 🔴 | vless | @configfa | 40",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 10",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-                "🇬🇧 GB | 🟢 | vless | @dailyv2ry | 103",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 8",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -111,8 +110,6 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
-                "🇩🇪 DE | 🔴 | vless | @orange_vpns | 12",
-                "🇩🇪 DE | 🔴 | vless | @orange_vpns | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
                 "🇺🇸 US | 🟢 | vless | @proxie | 13",
@@ -133,7 +130,7 @@
                 "🇫🇮 FI | 🔴 | vless | @v2rayngfreee | 4",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 14",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 16",
-                "🇦🇪 AE | 🟢 | vless | @vpnplusee_free | 10"
+                "🇦🇪 AE | 🟢 | vless | @vpnplusee_free | 9"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -144,7 +141,6 @@
                 "🇺🇸 US | 🔴 | vless | @configfa | 40",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 10",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
-                "🇬🇧 GB | 🟢 | vless | @dailyv2ry | 103",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
                 "🇩🇪 DE | 🟢 | vless | @falcunargo | 8",
                 "🇺🇸 US | 🔴 | vless | @fastkanfig | 10",
@@ -163,8 +159,6 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
-                "🇩🇪 DE | 🔴 | vless | @orange_vpns | 12",
-                "🇩🇪 DE | 🔴 | vless | @orange_vpns | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
                 "🇺🇸 US | 🟢 | vless | @proxie | 13",
@@ -185,7 +179,7 @@
                 "🇫🇮 FI | 🔴 | vless | @v2rayngfreee | 4",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 14",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 16",
-                "🇦🇪 AE | 🟢 | vless | @vpnplusee_free | 10"
+                "🇦🇪 AE | 🟢 | vless | @vpnplusee_free | 9"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -245,29 +239,6 @@
             "uuid": "0b4e0f6a-98a2-468a-910f-4a0b3fbeec36",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | vless | @dailyv2ry | 103",
-            "type": "vless",
-            "server": "159.65.24.214",
-            "server_port": 44486,
-            "uuid": "bddee8f2-784e-47b4-a7a5-65557bf813ff",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zhaket.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "4Iu8Qa-XePGCSkg0_W_KEUV7bJj7ysmfAYsOJvZsFxM",
-                    "short_id": "1b74288a"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🟢 | vless | @elfv2ray | 3",
@@ -600,24 +571,6 @@
             "server": "185.18.250.67",
             "server_port": 8080,
             "uuid": "4d263c1a-fbb9-4946-a639-1de531120cde",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | vless | @orange_vpns | 12",
-            "type": "vless",
-            "server": "91.99.183.30",
-            "server_port": 8443,
-            "uuid": "bb7b030f-fd37-488a-be1f-1a26d874cb26",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | vless | @orange_vpns | 14",
-            "type": "vless",
-            "server": "91.99.98.90",
-            "server_port": 8443,
-            "uuid": "bb7b030f-fd37-488a-be1f-1a26d874cb26",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -973,7 +926,7 @@
             }
         },
         {
-            "tag": "🇦🇪 AE | 🟢 | vless | @vpnplusee_free | 10",
+            "tag": "🇦🇪 AE | 🟢 | vless | @vpnplusee_free | 9",
             "type": "vless",
             "server": "130.185.122.252",
             "server_port": 28964,
