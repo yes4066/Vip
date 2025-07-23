@@ -885,10 +885,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vmess",
+            "trojan",
             "vless",
             "ss",
-            "trojan"
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1377,9 +1377,9 @@
     },
     "mowjproxy": {
         "types": [
+            "ss",
             "vless",
-            "vmess",
-            "ss"
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1516,7 +1516,6 @@
     },
     "netmellianti": {
         "types": [
-            "ss",
             "vless",
             "vmess"
         ],
@@ -2250,7 +2249,6 @@
     "v2raying": {
         "types": [
             "vless",
-            "ss",
             "vmess"
         ],
         "title": "v2rayNG_VPN",
