@@ -93,7 +93,6 @@
                 "🇸🇬 SG | 🟢 | vless | @abiidar_server | 1",
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 9",
                 "🇫🇮 FI | 🟢 | vless | @appsooner | 11",
-                "🇩🇪 DE | 🟢 | vless | @config_proxy | 53",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 43",
@@ -228,7 +227,7 @@
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇺🇸 US | 🟢 | vless | @mowjproxy | 1",
+                "🇺🇸 US | 🟢 | vless | @mowjproxy | 0",
                 "🇺🇸 US | 🟢 | vless | @netmellianti | 14",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -252,7 +251,7 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
+                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 14",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 7",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
@@ -286,7 +285,6 @@
                 "🇸🇬 SG | 🟢 | vless | @abiidar_server | 1",
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 9",
                 "🇫🇮 FI | 🟢 | vless | @appsooner | 11",
-                "🇩🇪 DE | 🟢 | vless | @config_proxy | 53",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 43",
@@ -421,7 +419,7 @@
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇺🇸 US | 🟢 | vless | @mowjproxy | 1",
+                "🇺🇸 US | 🟢 | vless | @mowjproxy | 0",
                 "🇺🇸 US | 🟢 | vless | @netmellianti | 14",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -445,7 +443,7 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
+                "🇺🇸 US | 🟢 | vless | @v2rayngrit | 14",
                 "🇩🇪 DE | 🟢 | vless | @v2rayprotocol | 7",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
@@ -568,33 +566,6 @@
                     "public_key": "0r5rlmvACX09qUTPuxrbuKWSAn66NnNyHIfIMwalYAA",
                     "short_id": "33"
                 }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 53",
-            "type": "vless",
-            "server": "104.248.136.27",
-            "server_port": 28338,
-            "uuid": "0b9ee474-19f6-4d7f-9281-96f239e6cebc",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "cloudflare.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "randomized"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "MJwVQS7Qs5U_FYJn_osHZJSQ9ioxZRHC2HDPVwt7nmw",
-                    "short_id": "9ecc4615ce"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@FergalVpnMod"
             }
         },
         {
@@ -3917,7 +3888,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @mowjproxy | 1",
+            "tag": "🇺🇸 US | 🟢 | vless | @mowjproxy | 0",
             "type": "vless",
             "server": "uuk3v.tok8888.com",
             "server_port": 8443,
@@ -4489,7 +4460,7 @@
             }
         },
         {
-            "tag": "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
+            "tag": "🇺🇸 US | 🟢 | vless | @v2rayngrit | 14",
             "type": "vless",
             "server": "amazon-4.cristiano.name.ng",
             "server_port": 443,

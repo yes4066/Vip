@@ -112,10 +112,8 @@
                 "🇩🇪 DE | 🟢 | trojan | @falcunargo | 3",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 7",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
-                "🇫🇷 FR | 🟢 | trojan | @hope_net | 19",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 10",
-                "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 13",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
+                "🇫🇷 FR | 🟢 | trojan | @hope_net | 17",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -125,6 +123,8 @@
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
+                "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
+                "🇩🇪 DE | 🟢 | trojan | @v2raych | 15",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -165,10 +165,8 @@
                 "🇩🇪 DE | 🟢 | trojan | @falcunargo | 3",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 7",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
-                "🇫🇷 FR | 🟢 | trojan | @hope_net | 19",
-                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 10",
-                "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 13",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
+                "🇫🇷 FR | 🟢 | trojan | @hope_net | 17",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -178,6 +176,8 @@
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
+                "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
+                "🇩🇪 DE | 🟢 | trojan | @v2raych | 15",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -254,9 +254,9 @@
         {
             "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 11",
             "type": "trojan",
-            "server": "13c2c931-swin40-swy6li-tni2.cu.plebai.net",
+            "server": "391907cc-swgsg0-t1bnjq-1krtb.cu.plebai.net",
             "server_port": 15229,
-            "password": "5e2f888c-68ef-11ef-96ca-f23c9164ca5d"
+            "password": "60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -604,7 +604,7 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
             "type": "trojan",
             "server": "162.159.22.29",
             "server_port": 443,
@@ -620,7 +620,7 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @hope_net | 19",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @hope_net | 17",
             "type": "trojan",
             "server": "13.36.72.191",
             "server_port": 22222,
@@ -628,45 +628,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 10",
-            "type": "trojan",
-            "server": "104.25.165.81",
-            "server_port": 8443,
-            "password": "123456",
-            "tls": {
-                "enabled": true,
-                "server_name": "top-azx.pages.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/Az1.vpn.33.TOP/?ed=2560",
-                "headers": {
-                    "Host": "top-azx.pages.dev"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 13",
-            "type": "trojan",
-            "server": "51.91.11.29",
-            "server_port": 80,
-            "password": "598c19f3-a48e-47cd-8451-1ba04ea094d0",
-            "tls": {
-                "enabled": true,
-                "server_name": "speedtest.net",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -820,6 +781,38 @@
             "tag": "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
             "type": "trojan",
             "server": "15.236.67.13",
+            "server_port": 22222,
+            "password": "telegram-id-privatevpns",
+            "tls": {
+                "enabled": true,
+                "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
+            "type": "trojan",
+            "server": "51.91.11.29",
+            "server_port": 80,
+            "password": "598c19f3-a48e-47cd-8451-1ba04ea094d0",
+            "tls": {
+                "enabled": true,
+                "server_name": "speedtest.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | trojan | @v2raych | 15",
+            "type": "trojan",
+            "server": "63.176.235.247",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {
