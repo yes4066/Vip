@@ -162,14 +162,13 @@
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
-                "🇩🇪 DE | 🟢 | vless | @netmellianti | 17",
+                "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇩🇪 DE | 🔴 | vless | @nofilter_v2rayng | 6",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 16",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
@@ -179,6 +178,7 @@
                 "❔ XX | 🔴 | vless | @red2ray | 13",
                 "🇺🇸 US | 🔴 | vless | @rez1vpn | 1",
                 "🇺🇸 US | 🔴 | vless | @satellitenewspersian | 13",
+                "🇮🇷 IR | 🔴 | vless | @selinc | 6",
                 "🇺🇸 US | 🟢 | vless | @shadowsocksshop | 0",
                 "🇺🇸 US | 🔴 | vless | @shahedtec | 4",
                 "🇫🇮 FI | 🔴 | vless | @summertimeus | 13",
@@ -294,14 +294,13 @@
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
-                "🇩🇪 DE | 🟢 | vless | @netmellianti | 17",
+                "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇩🇪 DE | 🔴 | vless | @nofilter_v2rayng | 6",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 16",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
@@ -311,6 +310,7 @@
                 "❔ XX | 🔴 | vless | @red2ray | 13",
                 "🇺🇸 US | 🔴 | vless | @rez1vpn | 1",
                 "🇺🇸 US | 🔴 | vless | @satellitenewspersian | 13",
+                "🇮🇷 IR | 🔴 | vless | @selinc | 6",
                 "🇺🇸 US | 🟢 | vless | @shadowsocksshop | 0",
                 "🇺🇸 US | 🔴 | vless | @shahedtec | 4",
                 "🇫🇮 FI | 🔴 | vless | @summertimeus | 13",
@@ -1554,7 +1554,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @netmellianti | 17",
+            "tag": "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
             "type": "vless",
             "server": "balanced-de.irancdngame.com",
             "server_port": 2012,
@@ -1682,22 +1682,6 @@
                 "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy?ed=2048",
                 "headers": {
                     "Host": "www.speedtest.net"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 16",
-            "type": "vless",
-            "server": "crazy-identity.oneeat.co",
-            "server_port": 80,
-            "uuid": "64d6d0d4-3706-4837-b154-cda2816adcc5",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "crazy-identity.oneeat.co"
                 }
             }
         },
@@ -1832,6 +1816,24 @@
             "uuid": "e4e82781-f854-4f5e-bfeb-8f34d8ab9fe7",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇮🇷 IR | 🔴 | vless | @selinc | 6",
+            "type": "vless",
+            "server": "turkey3.v2shop2.xyz",
+            "server_port": 443,
+            "uuid": "261d2049-2152-449e-bbc8-0e25a8e08fa2",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "turkey3.v2shop2.xyz",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🟢 | vless | @shadowsocksshop | 0",

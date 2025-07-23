@@ -91,6 +91,7 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
+                "🇫🇷 FR | 🟢 | vless | @config_proxy | 19",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @confing_chanel | 17",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -131,6 +132,7 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
+                "🇫🇷 FR | 🟢 | vless | @config_proxy | 19",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @confing_chanel | 17",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -201,6 +203,29 @@
                     "enabled": true,
                     "public_key": "53XOEMg4ftOAn_gSdlNndT5Xrfj4PB5J-YKOZoqTODk",
                     "short_id": "aeba"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | vless | @config_proxy | 19",
+            "type": "vless",
+            "server": "hp.mastertunnel.shop",
+            "server_port": 2096,
+            "uuid": "474494eb-e8ef-402e-be1c-f9670fcf3f33",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Un5haKCXEnekiryaRDLmOHCGEufZfseV6IpdKHnav3M",
+                    "short_id": "089604fd79ac01fd"
                 }
             }
         },
