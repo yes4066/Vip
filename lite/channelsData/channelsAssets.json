@@ -883,10 +883,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
             "vmess",
             "vless",
-            "ss"
+            "ss",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1375,8 +1375,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
             "vmess",
+            "vless",
             "ss"
         ],
         "title": "Mowj Proxy",
@@ -1997,8 +1997,8 @@
     },
     "summertimeus": {
         "types": [
-            "vless",
             "vmess",
+            "vless",
             "ss"
         ],
         "title": "V2rayng/vpn",
