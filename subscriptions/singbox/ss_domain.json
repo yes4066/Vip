@@ -95,7 +95,6 @@
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
-                "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 14",
                 "🇬🇧 GB | 🟢 | ss | @kafing_2 | 15",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
@@ -104,6 +103,7 @@
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "🇳🇱 NL | 🟢 | ss | @outline_vpn | 27",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
+                "🇨🇭 CH | 🟢 | ss | @proxy_mtproto_vpns_free | 13",
                 "🇬🇧 GB | 🟢 | ss | @prroxyng | 0",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -114,8 +114,8 @@
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇹🇷 TR | 🟢 | ss | @vmesc | 17",
-                "🇫🇷 FR | 🟢 | ss | @vmesc | 19",
+                "🇹🇷 TR | 🟢 | ss | @vmesc | 16",
+                "🇫🇷 FR | 🟢 | ss | @vmesc | 18",
                 "🇺🇸 US | 🟢 | ss | @vpn451 | 9"
             ],
             "tag": "proxy",
@@ -130,7 +130,6 @@
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
-                "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 14",
                 "🇬🇧 GB | 🟢 | ss | @kafing_2 | 15",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
@@ -139,6 +138,7 @@
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
                 "🇳🇱 NL | 🟢 | ss | @outline_vpn | 27",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
+                "🇨🇭 CH | 🟢 | ss | @proxy_mtproto_vpns_free | 13",
                 "🇬🇧 GB | 🟢 | ss | @prroxyng | 0",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -149,8 +149,8 @@
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇹🇷 TR | 🟢 | ss | @vmesc | 17",
-                "🇫🇷 FR | 🟢 | ss | @vmesc | 19",
+                "🇹🇷 TR | 🟢 | ss | @vmesc | 16",
+                "🇫🇷 FR | 🟢 | ss | @vmesc | 18",
                 "🇺🇸 US | 🟢 | ss | @vpn451 | 9"
             ],
             "tag": "auto",
@@ -209,14 +209,6 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "u17T3BvpYaaiuW2c"
-        },
-        {
-            "tag": "🇸🇪 SE | 🟢 | ss | @ip_cf_config | 14",
-            "type": "shadowsocks",
-            "server": "azure-sto.edgeservers.org",
-            "server_port": 48172,
-            "method": "chacha20-ietf-poly1305",
-            "password": "51yloQC8D9w1Wae7FHtI65"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @kafing_2 | 15",
@@ -281,6 +273,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "u17T3BvpYaaiuW2c"
+        },
+        {
+            "tag": "🇨🇭 CH | 🟢 | ss | @proxy_mtproto_vpns_free | 13",
+            "type": "shadowsocks",
+            "server": "h110vpnch.outlinekeys.net",
+            "server_port": 4248,
+            "method": "chacha20-ietf-poly1305",
+            "password": "tvJLOSEM3yglvGFCh57q0G"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @prroxyng | 0",
@@ -363,7 +363,7 @@
             "password": "WVU27LquAMOeXmYeStI897"
         },
         {
-            "tag": "🇹🇷 TR | 🟢 | ss | @vmesc | 17",
+            "tag": "🇹🇷 TR | 🟢 | ss | @vmesc | 16",
             "type": "shadowsocks",
             "server": "tur.fastsoonlink.com",
             "server_port": 40019,
@@ -371,7 +371,7 @@
             "password": "78e36312-16d4-49c2-ad18-610bf6d05d63"
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | ss | @vmesc | 19",
+            "tag": "🇫🇷 FR | 🟢 | ss | @vmesc | 18",
             "type": "shadowsocks",
             "server": "fr.fastsoonlink.com",
             "server_port": 40034,

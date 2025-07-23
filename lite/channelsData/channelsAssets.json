@@ -883,10 +883,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
-            "vmess",
             "trojan",
-            "vless"
+            "vmess",
+            "vless",
+            "ss"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1375,8 +1375,9 @@
     },
     "mowjproxy": {
         "types": [
+            "vless",
             "vmess",
-            "vless"
+            "ss"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1454,9 +1455,9 @@
     },
     "mtpv2ray": {
         "types": [
-            "vmess",
             "vless",
-            "trojan"
+            "trojan",
+            "vmess"
         ],
         "title": "V2ray فروش فیلترشکن",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mtpv2ray.jpg"
@@ -2440,8 +2441,7 @@
     },
     "v2trayproxy": {
         "types": [
-            "vless",
-            "trojan"
+            "vless"
         ],
         "title": "V2ray Proxy💎",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2trayproxy.jpg"
@@ -2510,7 +2510,8 @@
     },
     "vmess_ir": {
         "types": [
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "🚀سرور رایگان و اختصاصی vmess_ir🚀",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vmess_ir.jpg"
