@@ -90,7 +90,6 @@
                 "auto",
                 "direct",
                 "🇮🇷 IR | 🔴 | vless | @Fr33C0nfig | 49",
-                "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 1",
                 "🇮🇷 IR | 🔴 | vless | @ansel_team | 1",
@@ -144,7 +143,6 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
                 "🇳🇱 NL | 🔴 | vless | @msv2flyng | 14",
@@ -197,7 +195,6 @@
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
                 "🇳🇱 NL | 🔴 | vless | @vpnaloo | 15",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇷🇺 RU | 🟢 | vless | @vpnod | 15",
                 "🇮🇷 IR | 🔴 | vless | @vpnpopular2023 | 3",
                 "🇺🇸 US | 🟢 | vless | @vpnstorefast | 17",
                 "/Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=vngsupply.ip-ddns.com&type=ws#🇺🇸 US | 🔴 | vless | @vpnv2raytop | 3",
@@ -211,7 +208,6 @@
             "interval": "10m",
             "outbounds": [
                 "🇮🇷 IR | 🔴 | vless | @Fr33C0nfig | 49",
-                "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
                 "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
                 "🇩🇪 DE | 🔴 | vless | @amirinventor2010 | 1",
                 "🇮🇷 IR | 🔴 | vless | @ansel_team | 1",
@@ -265,7 +261,6 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
-                "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
                 "🇳🇱 NL | 🔴 | vless | @msv2flyng | 14",
@@ -318,7 +313,6 @@
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
                 "🇳🇱 NL | 🔴 | vless | @vpnaloo | 15",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇷🇺 RU | 🟢 | vless | @vpnod | 15",
                 "🇮🇷 IR | 🔴 | vless | @vpnpopular2023 | 3",
                 "🇺🇸 US | 🟢 | vless | @vpnstorefast | 17",
                 "/Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=vngsupply.ip-ddns.com&type=ws#🇺🇸 US | 🔴 | vless | @vpnv2raytop | 3",
@@ -342,24 +336,6 @@
             "uuid": "a804bb53-7504-4f06-96d8-ff56fb71539d",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | vless | @NamiraNet | 69",
-            "type": "vless",
-            "server": "178.162.244.224",
-            "server_port": 443,
-            "uuid": "83a85a41-fb7f-43e0-9c15-d199509a9624",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "178.162.244.224",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @airdroplandcod | 5",
@@ -1310,22 +1286,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 5",
-            "type": "vless",
-            "server": "104.16.53.11",
-            "server_port": 80,
-            "uuid": "b221eccb-6823-4940-8980-59db5ee0dbf1",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/?ed",
-                "headers": {
-                    "Host": "104.16.53.11"
-                }
-            }
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
             "type": "vless",
             "server": "151.101.128.223",
@@ -2233,33 +2193,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "chessgame"
-            }
-        },
-        {
-            "tag": "🇷🇺 RU | 🟢 | vless | @vpnod | 15",
-            "type": "vless",
-            "server": "213.183.41.63",
-            "server_port": 443,
-            "uuid": "3c631fef-c28c-4dfe-aacc-9e67ace7d5b3",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "skyroom.online",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "9tNnOU3bIHtyZfWaPv1J1ns78jDfzCdh6dRLjhQGlX8",
-                    "short_id": "1f"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "free"
             }
         },
         {
