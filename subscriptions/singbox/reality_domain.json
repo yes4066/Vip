@@ -97,7 +97,6 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇳🇱 NL | 🟢 | vless | @config_proxy | 30",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇫🇮 FI | 🟢 | vless | @configfa | 44",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -142,11 +141,12 @@
                 "❔ XX | 🟢 | vless | @public504 | 11",
                 "❔ XX | 🟢 | vless | @rezaw_server | 0",
                 "❔ XX | 🟢 | vless | @rezaw_server | 1",
-                "🇬🇧 GB | 🟢 | vless | @savagenet | 0",
+                "❔ XX | 🟢 | vless | @savagenet | 0",
                 "❔ XX | 🟢 | vless | @tc_v2ray | 1",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇳🇱 NL | 🟢 | vless | @turboo_server | 2",
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
+                "🇬🇧 GB | 🟢 | vless | @v2raych | 17",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇺🇸 US | 🟢 | vless | @v2rayngrit | 14",
@@ -185,7 +185,6 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇳🇱 NL | 🟢 | vless | @config_proxy | 30",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇫🇮 FI | 🟢 | vless | @configfa | 44",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -230,11 +229,12 @@
                 "❔ XX | 🟢 | vless | @public504 | 11",
                 "❔ XX | 🟢 | vless | @rezaw_server | 0",
                 "❔ XX | 🟢 | vless | @rezaw_server | 1",
-                "🇬🇧 GB | 🟢 | vless | @savagenet | 0",
+                "❔ XX | 🟢 | vless | @savagenet | 0",
                 "❔ XX | 🟢 | vless | @tc_v2ray | 1",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇳🇱 NL | 🟢 | vless | @turboo_server | 2",
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
+                "🇬🇧 GB | 🟢 | vless | @v2raych | 17",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
                 "🇺🇸 US | 🟢 | vless | @v2rayngrit | 14",
@@ -458,29 +458,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns"
-            }
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @config_proxy | 30",
-            "type": "vless",
-            "server": "z.encoder.site",
-            "server_port": 38534,
-            "uuid": "d2b1e111-d743-40ce-8dd5-75a4fccfd7fd",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "google.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "Q969Np5Re88k8wZ6W8f1WMq9-MYs_qnSQ98UCln1pDU",
-                    "short_id": "0eed0d"
-                }
             }
         },
         {
@@ -1587,7 +1564,7 @@
             }
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | vless | @savagenet | 0",
+            "tag": "❔ XX | 🟢 | vless | @savagenet | 0",
             "type": "vless",
             "server": "dash.svgspeedtest.net",
             "server_port": 7852,
@@ -1699,6 +1676,33 @@
                     "public_key": "2dIWbgD8nbCd1YBs-IiQ6vgA7mse9PA9DWqaIMFsTmc",
                     "short_id": "cb333964"
                 }
+            }
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | vless | @v2raych | 17",
+            "type": "vless",
+            "server": "DailyConfigs.resurrection-time.sbs",
+            "server_port": 40735,
+            "uuid": "7b58c33c-92f9-4a8f-97cc-e9460e060e68",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "github.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "randomized"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "zOCZ24y2Y3T5D1v69NJ15rDUp1WZJOSWHTM1I0hqOTc",
+                    "short_id": "10"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Dailyconfigs-Dailyconfigs-Dailyconfigs-Dailyconfigs-Dailyconfigs-Dailyconfigs-Dailyconfigs-Dailyconfigs?ed=443"
             }
         },
         {

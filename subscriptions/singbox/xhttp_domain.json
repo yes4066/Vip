@@ -91,8 +91,8 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 41",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
-                "🇺🇸 US | 🔴 | vless | @configshubplus | 19",
                 "🇺🇸 US | 🔴 | vless | @confing_chanel | 17",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
@@ -120,7 +120,6 @@
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 9",
                 "🇺🇸 US | 🔴 | vless | @v2trayproxy | 11",
-                "🇺🇸 US | 🔴 | vless | @vmess_ir | 14",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
             ],
@@ -132,8 +131,8 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "🇩🇪 DE | 🟢 | vless | @canfing_vpn | 17",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 41",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
-                "🇺🇸 US | 🔴 | vless | @configshubplus | 19",
                 "🇺🇸 US | 🔴 | vless | @confing_chanel | 17",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
@@ -161,7 +160,6 @@
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
                 "🇫🇮 FI | 🟢 | vless | @v2trayproxy | 9",
                 "🇺🇸 US | 🔴 | vless | @v2trayproxy | 11",
-                "🇺🇸 US | 🔴 | vless | @vmess_ir | 14",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
             ],
@@ -207,20 +205,20 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 41",
+            "type": "vless",
+            "server": "server2.ultra-irancell.com",
+            "server_port": 80,
+            "uuid": "454a0861-1b7c-4b20-bc91-16c1a2266654",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @configscenter | 2",
             "type": "vless",
             "server": "2sudo.winapp3.ir",
             "server_port": 80,
             "uuid": "5b0e1347-1e9b-4b83-a27b-468e3dafb69b",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @configshubplus | 19",
-            "type": "vless",
-            "server": "bos.lebasnoo.ir",
-            "server_port": 80,
-            "uuid": "SERVERNETT-SERVERNETT1",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -496,15 +494,6 @@
             "server": "CoNFiGLiNE.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "TELEGRAM-CONFiGLiNE",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @vmess_ir | 14",
-            "type": "vless",
-            "server": "speedtestcustom.com",
-            "server_port": 80,
-            "uuid": "c95e1271-871f-44ad-bbe9-e05d028d3d40",
             "flow": "",
             "packet_encoding": "xudp"
         },
