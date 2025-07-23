@@ -883,8 +883,8 @@
     },
     "ip_cf_config": {
         "types": [
-            "vmess",
             "ss",
+            "vmess",
             "trojan",
             "vless"
         ],
@@ -1057,9 +1057,9 @@
     },
     "kanfig_majani": {
         "types": [
-            "ss",
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "کانفیگ رایگان | کانفیگ مجانی",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/kanfig_majani.jpg"
@@ -1421,9 +1421,9 @@
     },
     "msv2flyng": {
         "types": [
+            "vmess",
             "ss",
-            "vless",
-            "vmess"
+            "vless"
         ],
         "title": "Msv2flyNG",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/msv2flyng.jpg"
@@ -2241,8 +2241,7 @@
     },
     "v2raying": {
         "types": [
-            "vless",
-            "vmess"
+            "vless"
         ],
         "title": "v2rayNG_VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raying.jpg"
