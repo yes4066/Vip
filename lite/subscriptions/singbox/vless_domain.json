@@ -162,7 +162,7 @@
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
-                "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
+                "🇩🇪 DE | 🔴 | vless | @netmellianti | 16",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -201,8 +201,8 @@
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇩🇪 DE | 🔴 | vless | @v2trayproxy | 13",
-                "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
+                "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
                 "❔ XX | 🟢 | vless | @vpncostume | 8",
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
@@ -294,7 +294,7 @@
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
-                "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
+                "🇩🇪 DE | 🔴 | vless | @netmellianti | 16",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -333,8 +333,8 @@
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇩🇪 DE | 🔴 | vless | @v2trayproxy | 13",
-                "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
+                "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
                 "❔ XX | 🟢 | vless | @vpncostume | 8",
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
@@ -1554,27 +1554,13 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @netmellianti | 16",
+            "tag": "🇩🇪 DE | 🔴 | vless | @netmellianti | 16",
             "type": "vless",
-            "server": "balanced-de.irancdngame.com",
-            "server_port": 2012,
-            "uuid": "ab513a36-abe6-46ff-a356-edb8c280e28d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.pcmag.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "I9RNJ9pJ1WzWsYnRFk7u1XWsFhWBS03iUDjQXwWsERY",
-                    "short_id": ""
-                }
-            }
+            "server": "300232332.webnama.com.tr",
+            "server_port": 1517,
+            "uuid": "faeba5b7-b0a4-4e49-b017-35088ebe0d4e",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "❔ XX | 🔴 | vless | @next_serverpanel | 4",
@@ -2260,22 +2246,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @vmess_ir | 18",
-            "type": "vless",
-            "server": "www.speedtest.net.cdn.cloudflare.net",
-            "server_port": 80,
-            "uuid": "6b3b071f-096b-4e4c-8d70-0e0b53f27434",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/?ed",
-                "headers": {
-                    "Host": "www.speedtest.net.cdn.cloudflare.net"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | vless | @vp22ray | 10",
             "type": "vless",
             "server": "German.vp22ray.site",
@@ -2297,6 +2267,15 @@
                     "short_id": "d90b293e"
                 }
             }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
+            "type": "vless",
+            "server": "meli_proxyy.vip-plan.org",
+            "server_port": 29947,
+            "uuid": "7ad891be-5fad-4cca-b6d6-d67a3a881590",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "❔ XX | 🟢 | vless | @vpn_storm | 0",
