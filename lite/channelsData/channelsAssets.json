@@ -884,9 +884,9 @@
     "ip_cf_config": {
         "types": [
             "ss",
-            "vmess",
+            "trojan",
             "vless",
-            "trojan"
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1057,8 +1057,8 @@
     },
     "kanfig_majani": {
         "types": [
-            "vless",
             "ss",
+            "vless",
             "vmess"
         ],
         "title": "کانفیگ رایگان | کانفیگ مجانی",
@@ -1987,8 +1987,8 @@
     },
     "strongprotocol": {
         "types": [
-            "ss",
             "trojan",
+            "ss",
             "vless"
         ],
         "title": "پروکسی VPN سرور v2ray openvpn فیلترشکن",
@@ -2194,7 +2194,8 @@
     },
     "v2ray_sub": {
         "types": [
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "V2rayn servers",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_sub.jpg"
@@ -2510,7 +2511,6 @@
     },
     "vmess_ir": {
         "types": [
-            "ss",
             "vless"
         ],
         "title": "🚀سرور رایگان و اختصاصی vmess_ir🚀",
@@ -2783,13 +2783,6 @@
         ],
         "title": "یک و یک",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/yekoyekvpn.jpg"
-    },
-    "yuproxytelegram": {
-        "types": [
-            "vless"
-        ],
-        "title": "MT proxy",
-        "logo": ""
     },
     "zdyz2": {
         "types": [

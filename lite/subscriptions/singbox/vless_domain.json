@@ -106,7 +106,7 @@
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -202,6 +202,7 @@
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇩🇪 DE | 🔴 | vless | @v2trayproxy | 13",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -214,8 +215,7 @@
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "🇺🇸 US | 🔴 | vless | @womanlifefreedomvpn | 16",
                 "🇮🇷 IR | 🔴 | vless | @xnxv2ray | 14",
-                "❔ XX | 🟢 | vless | @xrayzxn | 6",
-                "❔ XX | 🔴 | vless | @yuproxytelegram | 0"
+                "❔ XX | 🟢 | vless | @xrayzxn | 6"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -240,7 +240,7 @@
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -336,6 +336,7 @@
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
                 "🇩🇪 DE | 🔴 | vless | @v2trayproxy | 13",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -348,8 +349,7 @@
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "🇺🇸 US | 🔴 | vless | @womanlifefreedomvpn | 16",
                 "🇮🇷 IR | 🔴 | vless | @xnxv2ray | 14",
-                "❔ XX | 🟢 | vless | @xrayzxn | 6",
-                "❔ XX | 🔴 | vless | @yuproxytelegram | 0"
+                "❔ XX | 🟢 | vless | @xrayzxn | 6"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -622,7 +622,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
@@ -2278,6 +2278,22 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
+            "type": "vless",
+            "server": "creativE-coMPUter.Oneeat.Co",
+            "server_port": 80,
+            "uuid": "f1fe4963-66f7-4f71-a038-9e07ea6cf20f",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "creativE-coMPUter.Oneeat.Co"
+                }
+            }
+        },
+        {
             "tag": "❔ XX | 🟢 | vless | @vp22ray | 10",
             "type": "vless",
             "server": "German.vp22ray.site",
@@ -2507,15 +2523,6 @@
                 "type": "grpc",
                 "service_name": "EJUVVd6sh0f9J6drcXIcStL"
             }
-        },
-        {
-            "tag": "❔ XX | 🔴 | vless | @yuproxytelegram | 0",
-            "type": "vless",
-            "server": "Ir1.zarping.sbs",
-            "server_port": 887,
-            "uuid": "c6f20cf5-9cc2-404e-95d2-1a45b7df29bc",
-            "flow": "",
-            "packet_encoding": "xudp"
         }
     ],
     "route": {
