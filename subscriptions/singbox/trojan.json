@@ -92,7 +92,7 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇺🇸 US | 🟢 | trojan | @hope_net | 15",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 14",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -112,11 +112,13 @@
                 "🇩🇪 DE | 🟢 | trojan | @falcunargo | 5",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 7",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
                 "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
-                "🇺🇸 US | 🟢 | trojan | @orange_vpns | 18",
+                "🇺🇸 US | 🟢 | trojan | @orange_vpns | 17",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 11",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 12",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
@@ -133,7 +135,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 11",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 12",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
-                "🇺🇸 US | 🟢 | trojan | @vmesc | 16"
+                "🇺🇸 US | 🟢 | trojan | @vmesc | 15"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -144,7 +146,7 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇺🇸 US | 🟢 | trojan | @hope_net | 15",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 14",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -164,11 +166,13 @@
                 "🇩🇪 DE | 🟢 | trojan | @falcunargo | 5",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 7",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
                 "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
-                "🇺🇸 US | 🟢 | trojan | @orange_vpns | 18",
+                "🇺🇸 US | 🟢 | trojan | @orange_vpns | 17",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 11",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 12",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
@@ -185,7 +189,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 11",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 12",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
-                "🇺🇸 US | 🟢 | trojan | @vmesc | 16"
+                "🇺🇸 US | 🟢 | trojan | @vmesc | 15"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -250,27 +254,11 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @hope_net | 15",
+            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 14",
             "type": "trojan",
-            "server": "pscresearch.faculty.ucdavis.edu",
-            "server_port": 443,
-            "password": "d6b6ea41-0950-4611-8246-224583e4ed1e",
-            "tls": {
-                "enabled": true,
-                "server_name": "pscresearch.faculty.ucdavis.edu",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/ws/?ed=2048",
-                "headers": {
-                    "Host": "pscresearch.faculty.ucdavis.edu"
-                }
-            }
+            "server": "391907cc-swgsg0-t1bnjq-1krtb.cu.plebai.net",
+            "server_port": 15229,
+            "password": "60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
@@ -618,7 +606,7 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
             "type": "trojan",
             "server": "172.64.35.161",
             "server_port": 443,
@@ -626,6 +614,38 @@
             "tls": {
                 "enabled": true,
                 "server_name": "tb.promote.icu",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+            "type": "trojan",
+            "server": "198.41.223.136",
+            "server_port": 443,
+            "password": "NISHIKUITAN111",
+            "tls": {
+                "enabled": true,
+                "server_name": "198.41.223.136",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+            "type": "trojan",
+            "server": "198.23.229.250",
+            "server_port": 443,
+            "password": "2ee85121-31de-4581-a492-eb00f606e392",
+            "tls": {
+                "enabled": true,
+                "server_name": "rc6.freeguard.org",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -689,7 +709,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @orange_vpns | 18",
+            "tag": "🇺🇸 US | 🟢 | trojan | @orange_vpns | 17",
             "type": "trojan",
             "server": "172.67.181.173",
             "server_port": 443,
@@ -959,7 +979,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @vmesc | 16",
+            "tag": "🇺🇸 US | 🟢 | trojan | @vmesc | 15",
             "type": "trojan",
             "server": "104.25.197.102",
             "server_port": 8443,

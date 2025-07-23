@@ -96,6 +96,7 @@
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 13",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
+                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16"
             ],
             "tag": "proxy",
@@ -111,6 +112,7 @@
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 13",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
+                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16"
             ],
             "tag": "auto",
@@ -184,6 +186,24 @@
             "uuid": "bf3c99e7-68b4-4bad-b110-ebaf2ecab772",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @mowjproxy | 5",
+            "type": "vless",
+            "server": "statue.lnmarketplace.net",
+            "server_port": 443,
+            "uuid": "7c63f43f-f526-49bb-b5c8-2be26e11ef00",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "statue.lnmarketplace.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
