@@ -162,6 +162,7 @@
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
+                "🇩🇪 DE | 🔴 | vless | @netmellianti | 16",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -204,6 +205,7 @@
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
+                "🇫🇷 FR | 🟢 | vless | @vpnaloo | 15",
                 "❔ XX | 🟢 | vless | @vpncostume | 8",
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
@@ -294,6 +296,7 @@
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇨🇦 CA | 🟢 | vless | @n2vpn | 9",
                 "🇺🇸 US | 🟢 | vless | @nepo_v2ray | 23",
+                "🇩🇪 DE | 🔴 | vless | @netmellianti | 16",
                 "❔ XX | 🔴 | vless | @next_serverpanel | 4",
                 "🇮🇷 IR | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -336,6 +339,7 @@
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
+                "🇫🇷 FR | 🟢 | vless | @vpnaloo | 15",
                 "❔ XX | 🟢 | vless | @vpncostume | 8",
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
@@ -1554,6 +1558,15 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🔴 | vless | @netmellianti | 16",
+            "type": "vless",
+            "server": "em-4.webnama.com.tr",
+            "server_port": 3789,
+            "uuid": "faeba5b7-b0a4-4e49-b017-35088ebe0d4e",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "❔ XX | 🔴 | vless | @next_serverpanel | 4",
             "type": "vless",
             "server": "salar.mohad.sbs",
@@ -2306,6 +2319,29 @@
                 "path": "/?ed=2048",
                 "headers": {
                     "Host": "cv.rxteam.xyz"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | vless | @vpnaloo | 15",
+            "type": "vless",
+            "server": "fr.momashost.ir",
+            "server_port": 8086,
+            "uuid": "f48ce62c-85cb-422f-9478-7d049b781ac7",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "cBiruUOymQvzSQnjAD7aaFXgZ45EDbVAEaxf3zxbg1o",
+                    "short_id": "fd7cbbe42ad29796"
                 }
             }
         },
