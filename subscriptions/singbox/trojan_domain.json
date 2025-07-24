@@ -91,6 +91,8 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 18",
+                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
@@ -112,6 +114,8 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 18",
+                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
@@ -168,6 +172,38 @@
                 "path": "/trojan-ntls",
                 "headers": {
                     "Host": "asia.artunnel57.host"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | trojan | @configshubplus | 18",
+            "type": "trojan",
+            "server": "srwes1-confeg.sbs",
+            "server_port": 56679,
+            "password": "f4107ed1e1016be",
+            "tls": {
+                "enabled": true,
+                "server_name": "srwes1-confeg.sbs",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇷 FR | 🟢 | trojan | @configshubplus | 19",
+            "type": "trojan",
+            "server": "srwes1-confeg.sbs",
+            "server_port": 56679,
+            "password": "4ad0f58ba916627",
+            "tls": {
+                "enabled": true,
+                "server_name": "srwes1-confeg.sbs",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
                 }
             }
         },

@@ -105,6 +105,7 @@
                 "🇮🇷 IR | 🔴 | vless | @confingv2raay | 1",
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
+                "🇺🇸 US | 🟢 | vless | @customvpnserver | 10",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
@@ -167,7 +168,7 @@
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 12",
+                "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 11",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
@@ -234,6 +235,7 @@
                 "🇮🇷 IR | 🔴 | vless | @confingv2raay | 1",
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
+                "🇺🇸 US | 🟢 | vless | @customvpnserver | 10",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
@@ -296,7 +298,7 @@
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 12",
+                "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 11",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
@@ -600,6 +602,31 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram:"
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @customvpnserver | 10",
+            "type": "vless",
+            "server": "www.bankonbasak.com",
+            "server_port": 443,
+            "uuid": "30f2d443-af46-4dd6-83c9-b5e17299ebd2",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "carlotta.shoorekeeper.cloudns.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/proxyip=zani.yaemiko.ggff.net",
+                "headers": {
+                    "Host": "carlotta.shoorekeeper.cloudns.org"
+                }
             }
         },
         {
@@ -1650,7 +1677,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 12",
+            "tag": "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 11",
             "type": "vless",
             "server": "OBEDiENT-detAiL.SEOTOOlSFOrYou.co.uk",
             "server_port": 80,
