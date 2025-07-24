@@ -106,7 +106,7 @@
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -147,7 +147,6 @@
                 "🇮🇷 IR | 🟢 | vless | @lax_vpn | 0",
                 "❔ XX | 🔴 | vless | @lemonshopvpn | 8",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇫🇮 FI | 🟢 | vless | @lranonline_new | 7",
                 "🇳🇱 NL | 🔴 | vless | @luckyvpn | 0",
                 "❔ XX | 🔴 | vless | @mafiav2ray | 16",
                 "🇺🇸 US | 🔴 | vless | @magicvpn_shop | 1",
@@ -171,7 +170,6 @@
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇺🇸 US | 🔴 | vless | @outline_ir | 19",
                 "🇺🇸 US | 🟢 | vless | @outlinev2rayng | 11",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
@@ -239,7 +237,7 @@
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -280,7 +278,6 @@
                 "🇮🇷 IR | 🟢 | vless | @lax_vpn | 0",
                 "❔ XX | 🔴 | vless | @lemonshopvpn | 8",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇫🇮 FI | 🟢 | vless | @lranonline_new | 7",
                 "🇳🇱 NL | 🔴 | vless | @luckyvpn | 0",
                 "❔ XX | 🔴 | vless | @mafiav2ray | 16",
                 "🇺🇸 US | 🔴 | vless | @magicvpn_shop | 1",
@@ -304,7 +301,6 @@
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇺🇸 US | 🔴 | vless | @outline_ir | 19",
                 "🇺🇸 US | 🟢 | vless | @outlinev2rayng | 11",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
@@ -620,7 +616,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
@@ -1308,33 +1304,6 @@
             }
         },
         {
-            "tag": "🇫🇮 FI | 🟢 | vless | @lranonline_new | 7",
-            "type": "vless",
-            "server": "freedam.wirecard.store",
-            "server_port": 2053,
-            "uuid": "ce3acfb7-a0e8-4f96-b9ff-75c2657997fa",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "freedom.wirecard.store",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "hRwCV7x14uQ7jdsLqsxvklkR4Mtf7kRsZhboIKRbsR4",
-                    "short_id": "c531427f9b41"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "bing"
-            }
-        },
-        {
             "tag": "🇳🇱 NL | 🔴 | vless | @luckyvpn | 0",
             "type": "vless",
             "server": "paris.get.raskolnikov.ir",
@@ -1715,22 +1684,6 @@
                 "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy?ed=2048",
                 "headers": {
                     "Host": "www.speedtest.net"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @outline_ir | 19",
-            "type": "vless",
-            "server": "famous-danger.oneeat.co",
-            "server_port": 80,
-            "uuid": "ddc27bd6-6efa-47cf-8bfc-acaf973ba6b3",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "famous-danger.oneeat.co"
                 }
             }
         },

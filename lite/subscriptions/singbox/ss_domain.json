@@ -97,7 +97,8 @@
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "🇨🇭 CH | 🟢 | ss | @v2raying | 15",
-                "🇬🇧 GB | 🟢 | ss | @vmess_iran | 0"
+                "🇬🇧 GB | 🟢 | ss | @vmess_iran | 0",
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 14"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -113,7 +114,8 @@
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "🇨🇭 CH | 🟢 | ss | @v2raying | 15",
-                "🇬🇧 GB | 🟢 | ss | @vmess_iran | 0"
+                "🇬🇧 GB | 🟢 | ss | @vmess_iran | 0",
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 14"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -195,6 +197,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "1xO2cqPazqjGfCfd"
+        },
+        {
+            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 14",
+            "type": "shadowsocks",
+            "server": "sakura.outlinekeys.net",
+            "server_port": 1235,
+            "method": "chacha20-ietf-poly1305",
+            "password": "FGHwtC6cjw1zSSiRbEg5T4"
         }
     ],
     "route": {
