@@ -882,10 +882,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vmess",
-            "trojan",
             "ss",
-            "vless"
+            "vless",
+            "vmess",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1367,8 +1367,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1503,14 +1503,6 @@
         "title": "Net Azad | نت آزاد",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/netazadchannel.jpg"
     },
-    "netmellianti": {
-        "types": [
-            "vless",
-            "vmess"
-        ],
-        "title": "VPN | V2rayNG | نت ملی",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/netmellianti.jpg"
-    },
     "netspeedservice": {
         "types": [
             "vless",
@@ -1626,9 +1618,9 @@
     },
     "orange_vpns": {
         "types": [
+            "ss",
             "vless",
             "vmess",
-            "ss",
             "trojan"
         ],
         "title": "V2ray سرور و کانفیگ رایگان",
@@ -1672,7 +1664,8 @@
     },
     "outlinev2rayng": {
         "types": [
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outlinev2rayng.jpg"
