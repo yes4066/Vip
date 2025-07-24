@@ -107,7 +107,6 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 0",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 0",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 3",
                 "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 0",
@@ -144,7 +143,6 @@
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🔴 | vless | @ghotb_scarf | 7",
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 0",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 0",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 3",
                 "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 0",
@@ -341,29 +339,6 @@
             "uuid": "f353fbf3-b6a1-4524-b916-f65bc077511f",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @mowjproxy | 0",
-            "type": "vless",
-            "server": "Service-2.SalarvandService.org",
-            "server_port": 443,
-            "uuid": "88755bd8-72fc-404a-b97a-ffaf1e9fd914",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "mdundo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "g23nq_R9TIMbMIGQHB6gjDNewFzrHXPcj72bTS-RtX8",
-                    "short_id": "6ba85179e30d4fc2"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
