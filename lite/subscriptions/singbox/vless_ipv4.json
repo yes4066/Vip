@@ -157,6 +157,7 @@
                 "🇺🇸 US | 🟢 | vless | @ntconfig | 0",
                 "🇮🇷 IR | 🔴 | vless | @orgempirenet | 1",
                 "🇭🇰 HK | 🟢 | vless | @outline_ir | 19",
+                "🇩🇪 DE | 🔴 | vless | @outlinev2rayng | 12",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇩🇪 DE | 🟢 | vless | @proxyandvpnofficial1 | 1",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
@@ -183,7 +184,7 @@
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
+                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 13",
                 "🇮🇷 IR | 🔴 | vless | @vmess_ir | 19",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 13",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
@@ -271,6 +272,7 @@
                 "🇺🇸 US | 🟢 | vless | @ntconfig | 0",
                 "🇮🇷 IR | 🔴 | vless | @orgempirenet | 1",
                 "🇭🇰 HK | 🟢 | vless | @outline_ir | 19",
+                "🇩🇪 DE | 🔴 | vless | @outlinev2rayng | 12",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇩🇪 DE | 🟢 | vless | @proxyandvpnofficial1 | 1",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
@@ -297,7 +299,7 @@
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
+                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 13",
                 "🇮🇷 IR | 🔴 | vless | @vmess_ir | 19",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 13",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
@@ -1514,6 +1516,28 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🔴 | vless | @outlinev2rayng | 12",
+            "type": "vless",
+            "server": "91.107.155.155",
+            "server_port": 443,
+            "uuid": "d4363b0e-8672-43c6-af2a-30824d60e435",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "91.107.155.155",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "@Silver_v2ray@Silver_v2ray@Silver_v2ray@Silver_v2ray"
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | vless | @proxie | 15",
             "type": "vless",
             "server": "188.114.97.3",
@@ -1991,9 +2015,9 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vlessconfig | 13",
             "type": "vless",
-            "server": "3.77.178.12",
+            "server": "63.178.189.3",
             "server_port": 22224,
             "uuid": "05519058-d2ac-4f28-9e4a-2b2a1386749e",
             "flow": "",

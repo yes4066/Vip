@@ -883,9 +883,9 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
             "vmess",
             "ss",
+            "vless",
             "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
@@ -1375,9 +1375,9 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess",
             "vless",
-            "ss"
+            "ss",
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1681,8 +1681,8 @@
     },
     "outlinev2rayng": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outlinev2rayng.jpg"
