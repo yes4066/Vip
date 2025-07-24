@@ -114,6 +114,7 @@
                 "🇺🇸 US | 🔴 | vless | @filterk0sh | 16",
                 "🇩🇪 DE | 🔴 | vless | @filtershkan2 | 4",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
+                "🇩🇪 DE | 🔴 | vless | @freakconfig | 16",
                 "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
                 "🇺🇸 US | 🔴 | vless | @freev2flyng | 17",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
@@ -125,7 +126,7 @@
                 "🇮🇷 IR | 🔴 | vless | @hormozvpn | 2",
                 "🇮🇷 IR | 🔴 | vless | @hoshmasnoiyfarsi | 13",
                 "🇺🇸 US | 🔴 | vless | @icv2ray | 14",
-                "🇺🇸 US | 🟢 | vless | @info_2it_channel | 11",
+                "🇺🇸 US | 🟢 | vless | @info_2it_channel | 9",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇫🇷 FR | 🔴 | vless | @iranmedicalvpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
@@ -185,7 +186,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
-                "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -228,6 +228,7 @@
                 "🇺🇸 US | 🔴 | vless | @filterk0sh | 16",
                 "🇩🇪 DE | 🔴 | vless | @filtershkan2 | 4",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
+                "🇩🇪 DE | 🔴 | vless | @freakconfig | 16",
                 "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
                 "🇺🇸 US | 🔴 | vless | @freev2flyng | 17",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
@@ -239,7 +240,7 @@
                 "🇮🇷 IR | 🔴 | vless | @hormozvpn | 2",
                 "🇮🇷 IR | 🔴 | vless | @hoshmasnoiyfarsi | 13",
                 "🇺🇸 US | 🔴 | vless | @icv2ray | 14",
-                "🇺🇸 US | 🟢 | vless | @info_2it_channel | 11",
+                "🇺🇸 US | 🟢 | vless | @info_2it_channel | 9",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇫🇷 FR | 🔴 | vless | @iranmedicalvpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
@@ -299,7 +300,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
-                "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -781,6 +781,15 @@
             }
         },
         {
+            "tag": "🇩🇪 DE | 🔴 | vless | @freakconfig | 16",
+            "type": "vless",
+            "server": "171.22.173.206",
+            "server_port": 28931,
+            "uuid": "881043ca-4194-439b-ffad-c7bb552b3edb",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
             "type": "vless",
             "server": "185.146.173.58",
@@ -954,7 +963,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @info_2it_channel | 11",
+            "tag": "🇺🇸 US | 🟢 | vless | @info_2it_channel | 9",
             "type": "vless",
             "server": "104.26.6.18",
             "server_port": 443,
@@ -2012,31 +2021,6 @@
                 "path": "/telegram-channel-vlessconfig",
                 "headers": {
                     "Host": "trojan.burgerip.co.uk"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
-            "type": "vless",
-            "server": "104.17.210.171",
-            "server_port": 443,
-            "uuid": "c98a16e4-0dc5-42f0-b3db-30f04525c123",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "vless10-9sc.pages.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "vless10-9sc.pages.dev"
                 }
             }
         },

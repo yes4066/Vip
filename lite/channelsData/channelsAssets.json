@@ -859,7 +859,6 @@
     },
     "info_2it_channel": {
         "types": [
-            "vmess",
             "vless"
         ],
         "title": "2IT | اینترنت آزاد",
@@ -883,9 +882,9 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
             "vmess",
             "ss",
+            "trojan",
             "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
@@ -2234,7 +2233,8 @@
     "v2raying": {
         "types": [
             "vless",
-            "ss"
+            "ss",
+            "trojan"
         ],
         "title": "v2rayNG_VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raying.jpg"
@@ -2352,7 +2352,6 @@
     },
     "v2rayopen": {
         "types": [
-            "vmess",
             "vless"
         ],
         "title": "🛡️ اکانت های رایگان V2RAY",
