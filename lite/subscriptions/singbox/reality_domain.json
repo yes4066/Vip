@@ -97,12 +97,13 @@
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
-                "🇺🇸 US | 🟢 | vless | @netmellianti | 15",
+                "🇩🇪 DE | 🟢 | vless | @netmellianti | 17",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
+                "🇷🇺 RU | 🟢 | vless | @v2rayopen | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
@@ -120,12 +121,13 @@
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
-                "🇺🇸 US | 🟢 | vless | @netmellianti | 15",
+                "🇩🇪 DE | 🟢 | vless | @netmellianti | 17",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
+                "🇷🇺 RU | 🟢 | vless | @v2rayopen | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
@@ -339,25 +341,25 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @netmellianti | 15",
+            "tag": "🇩🇪 DE | 🟢 | vless | @netmellianti | 17",
             "type": "vless",
-            "server": "uuk3v.tok8888.com",
-            "server_port": 8443,
-            "uuid": "6e719400-b88e-4ab0-a05b-089d6cd3bcaa",
+            "server": "cert.gamberonvps.ir",
+            "server_port": 28076,
+            "uuid": "b4a5c9ba-0cd1-462a-ab34-6683cf8f25fa",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "www.thewilliamvale.com",
+                "server_name": "www.zula.ir",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "firefox"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "yDkCTYl7Ap0XeU9PNv_kBY9BwQrgYZPIov-MXvpf7R8",
-                    "short_id": ""
+                    "public_key": "aFAL9AlapF2P4VEIiGOf4O_E-Z1wryr1AnACoBgpgCg",
+                    "short_id": "1e8badb2"
                 }
             }
         },
@@ -482,6 +484,29 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@LIGHTNING6"
+            }
+        },
+        {
+            "tag": "🇷🇺 RU | 🟢 | vless | @v2rayopen | 7",
+            "type": "vless",
+            "server": "a.ru.maviks.ru",
+            "server_port": 443,
+            "uuid": "04bd2301-8fea-462f-b74b-e244c514135d",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "maviks.ru",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "cGzNRbN_zruI3CVTDukB2nOqWWEj7kgkay24f2fdLmQ",
+                    "short_id": "0f917152a871e9c0"
+                }
             }
         },
         {

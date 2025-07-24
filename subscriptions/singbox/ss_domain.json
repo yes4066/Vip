@@ -108,14 +108,12 @@
                 "❔ XX | 🟢 | ss | @public504 | 8",
                 "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
                 "❔ XX | 🟢 | ss | @shadowsockskeys | 15",
-                "🇩🇪 DE | 🟢 | ss | @v2ray_free_conf | 17",
                 "🇹🇷 TR | 🟢 | ss | @v2ray_v_vpn | 19",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇺🇸 US | 🟢 | ss | @vpn451 | 9",
-                "❔ XX | 🟢 | ss | @zerobaipiao | 41"
+                "🇺🇸 US | 🟢 | ss | @vpn451 | 9"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -142,14 +140,12 @@
                 "❔ XX | 🟢 | ss | @public504 | 8",
                 "🇬🇧 GB | 🟢 | ss | @serverv2ray00 | 19",
                 "❔ XX | 🟢 | ss | @shadowsockskeys | 15",
-                "🇩🇪 DE | 🟢 | ss | @v2ray_free_conf | 17",
                 "🇹🇷 TR | 🟢 | ss | @v2ray_v_vpn | 19",
                 "🇬🇧 GB | 🟢 | ss | @v2rayang201 | 7",
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇺🇸 US | 🟢 | ss | @vpn451 | 9",
-                "❔ XX | 🟢 | ss | @zerobaipiao | 41"
+                "🇺🇸 US | 🟢 | ss | @vpn451 | 9"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -313,14 +309,6 @@
             "password": "CH5xv3A7JA6sLKzEhLpm81Y4GHi9nUiHWxtYU4eMLabhpX8DrCaveoqhTTNVkZdHe3ocQFx843hnCNpRdPeibgvM1mYNPRuM"
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | ss | @v2ray_free_conf | 17",
-            "type": "shadowsocks",
-            "server": "de-freevmess.privateip.net",
-            "server_port": 8443,
-            "method": "aes-256-gcm",
-            "password": "5bda2736-81e7-43b4-86fc-286f8f8e6578"
-        },
-        {
             "tag": "🇹🇷 TR | 🟢 | ss | @v2ray_v_vpn | 19",
             "type": "shadowsocks",
             "server": "tr.vpnsparta.pro",
@@ -367,14 +355,6 @@
             "server_port": 34868,
             "method": "chacha20-ietf-poly1305",
             "password": "hKz1zPVzgdJ2mFXEqLuQnD"
-        },
-        {
-            "tag": "❔ XX | 🟢 | ss | @zerobaipiao | 41",
-            "type": "shadowsocks",
-            "server": "iepl.huli168.com",
-            "server_port": 42277,
-            "method": "aes-256-gcm",
-            "password": "cj3STx+0NwLUQFvJWHbKmQ=="
         }
     ],
     "route": {

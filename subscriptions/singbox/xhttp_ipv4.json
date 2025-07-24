@@ -128,6 +128,8 @@
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 2",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
                 "🇫🇮 FI | 🔴 | vless | @v2rayngfreee | 4",
+                "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
+                "🇺🇸 US | 🔴 | vless | @vistav2ray | 16",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 14",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 16"
             ],
@@ -176,6 +178,8 @@
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 2",
                 "🇺🇸 US | 🔴 | vless | @v2rayngfreee | 3",
                 "🇫🇮 FI | 🔴 | vless | @v2rayngfreee | 4",
+                "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
+                "🇺🇸 US | 🔴 | vless | @vistav2ray | 16",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 14",
                 "🇳🇱 NL | 🟢 | vless | @vpncostumer | 16"
             ],
@@ -857,6 +861,42 @@
             "uuid": "joinshotoV2rayNGFreee",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @vistav2ray | 15",
+            "type": "vless",
+            "server": "96.126.118.94",
+            "server_port": 443,
+            "uuid": "6b32299a-472f-44e2-94e5-380d6dbbcbc7",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "96.126.118.94",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @vistav2ray | 16",
+            "type": "vless",
+            "server": "172.236.250.139",
+            "server_port": 443,
+            "uuid": "4414fd58-952b-4c7e-bb1d-f75f76d1c752",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "172.236.250.139",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇳🇱 NL | 🟢 | vless | @vpncostumer | 14",
