@@ -108,7 +108,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 13",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇺🇸 US | 🟢 | vless | @vpnv2rayngv | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
@@ -119,7 +118,6 @@
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "🇫🇮 FI | 🟢 | vless | @lranonline_new | 7",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
@@ -155,7 +153,6 @@
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇳🇱 NL | 🟢 | vless | @vpn451 | 13",
                 "🇩🇪 DE | 🟢 | vless | @vpnhouse_official | 0",
-                "🇺🇸 US | 🟢 | vless | @vpnv2rayngv | 18",
                 "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
                 "🇩🇪 DE | 🟢 | vless | @zerov2shop | 1",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
@@ -166,7 +163,6 @@
                 "🇩🇪 DE | 🟢 | vless | @kesslervpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
                 "🇫🇮 FI | 🟢 | vless | @lranonline_new | 7",
-                "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
                 "❔ XX | 🟢 | vless | @mt_team_iran | 4",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
@@ -648,29 +644,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @vpnv2rayngv | 18",
-            "type": "vless",
-            "server": "18.188.59.45",
-            "server_port": 443,
-            "uuid": "4c26ebc3-7784-46d8-b52a-7b0ccae6f4b4",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "store.steampowered.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "TGlPtfVzGIVpMauPRMGJj2Uu6GUiCpu5ZizIIjw-wx4",
-                    "short_id": "f5"
-                }
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @vpnvg | 14",
             "type": "vless",
             "server": "49.13.74.158",
@@ -918,29 +891,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "bing"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @mowjproxy | 4",
-            "type": "vless",
-            "server": "Service-2.SalarvandService.org",
-            "server_port": 443,
-            "uuid": "88755bd8-72fc-404a-b97a-ffaf1e9fd914",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "mdundo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "g23nq_R9TIMbMIGQHB6gjDNewFzrHXPcj72bTS-RtX8",
-                    "short_id": "6ba85179e30d4fc2"
-                }
             }
         },
         {
