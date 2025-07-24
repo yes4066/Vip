@@ -105,6 +105,7 @@
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 13",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
+                "🇨🇭 CH | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16"
             ],
@@ -130,6 +131,7 @@
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 13",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
+                "🇨🇭 CH | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16"
             ],
@@ -234,7 +236,7 @@
             "type": "vless",
             "server": "188.114.97.3",
             "server_port": 443,
-            "uuid": "8ab49bb8-ea28-4107-8b2d-d6b1a5db141a",
+            "uuid": "dc4ed804-2ffb-4354-bd97-ad7b6ccf99b4",
             "flow": "",
             "packet_encoding": "xudp",
             "tls": {
@@ -362,6 +364,15 @@
             "server": "speedtest.net",
             "server_port": 80,
             "uuid": "bf3c99e7-68b4-4bad-b110-ebaf2ecab772",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇨🇭 CH | 🔴 | vless | @mowjproxy | 5",
+            "type": "vless",
+            "server": "s2.1dnt.k-l.cloud",
+            "server_port": 80,
+            "uuid": "f353fbf3-b6a1-4524-b916-f65bc077511f",
             "flow": "",
             "packet_encoding": "xudp"
         },
