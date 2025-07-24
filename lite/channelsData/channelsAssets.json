@@ -883,10 +883,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
-            "trojan",
+            "ss",
             "vmess",
-            "ss"
+            "trojan",
+            "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1050,9 +1050,9 @@
     },
     "kanfig_majani": {
         "types": [
-            "ss",
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "کانفیگ رایگان | کانفیگ مجانی",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/kanfig_majani.jpg"
@@ -1368,9 +1368,9 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess",
+            "ss",
             "vless",
-            "ss"
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1415,9 +1415,9 @@
     },
     "msv2flyng": {
         "types": [
+            "vmess",
             "ss",
-            "vless",
-            "vmess"
+            "vless"
         ],
         "title": "Msv2flyNG",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/msv2flyng.jpg"

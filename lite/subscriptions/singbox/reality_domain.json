@@ -103,7 +103,6 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇷🇺 RU | 🟢 | vless | @v2rayopen | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
@@ -127,7 +126,6 @@
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇷🇺 RU | 🟢 | vless | @v2rayopen | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10"
             ],
@@ -488,29 +486,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@LIGHTNING6"
-            }
-        },
-        {
-            "tag": "🇷🇺 RU | 🟢 | vless | @v2rayopen | 6",
-            "type": "vless",
-            "server": "a.ru.maviks.ru",
-            "server_port": 443,
-            "uuid": "04bd2301-8fea-462f-b74b-e244c514135d",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "maviks.ru",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "cGzNRbN_zruI3CVTDukB2nOqWWEj7kgkay24f2fdLmQ",
-                    "short_id": "0f917152a871e9c0"
-                }
             }
         },
         {
