@@ -96,7 +96,9 @@
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 7",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇨🇳 CN | 🔴 | trojan | @hope_net | 17",
+                "🇨🇳 CN | 🔴 | trojan | @hope_net | 15",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
+                "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 14",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -107,7 +109,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 12",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇩🇪 DE | 🟢 | trojan | @v2raych | 19",
+                "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 19",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -116,7 +118,8 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 10",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 12",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13"
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -131,7 +134,9 @@
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 7",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇨🇳 CN | 🔴 | trojan | @hope_net | 17",
+                "🇨🇳 CN | 🔴 | trojan | @hope_net | 15",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
+                "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 14",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -142,7 +147,7 @@
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 12",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇩🇪 DE | 🟢 | trojan | @v2raych | 19",
+                "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 19",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -151,7 +156,8 @@
                 "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 10",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 11",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 12",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13"
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -266,11 +272,50 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🇨🇳 CN | 🔴 | trojan | @hope_net | 17",
+            "tag": "🇨🇳 CN | 🔴 | trojan | @hope_net | 15",
             "type": "trojan",
             "server": "36.151.192.242",
             "server_port": 6985,
             "password": "QwwHvrnN"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 12",
+            "type": "trojan",
+            "server": "104.25.165.81",
+            "server_port": 8443,
+            "password": "123456",
+            "tls": {
+                "enabled": true,
+                "server_name": "top-azx.pages.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Az1.vpn.33.TOP/?ed=2560",
+                "headers": {
+                    "Host": "top-azx.pages.dev"
+                }
+            }
+        },
+        {
+            "tag": "🇷🇺 RU | 🟢 | trojan | @ip_cf_config | 14",
+            "type": "trojan",
+            "server": "176.32.39.29",
+            "server_port": 443,
+            "password": "8OXD5VVt8s",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
@@ -447,11 +492,11 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @v2raych | 19",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 19",
             "type": "trojan",
-            "server": "63.178.189.3",
+            "server": "18.153.120.71",
             "server_port": 22223,
-            "password": "telegram-id-v2rayvpnchannel",
+            "password": "telegram-id-directvpn",
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
@@ -585,6 +630,22 @@
             "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
             "type": "trojan",
             "server": "3.77.178.12",
+            "server_port": 22223,
+            "password": "telegram-id-v2rayvpnchannel",
+            "tls": {
+                "enabled": true,
+                "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
+            "type": "trojan",
+            "server": "63.178.189.3",
             "server_port": 22223,
             "password": "telegram-id-v2rayvpnchannel",
             "tls": {
