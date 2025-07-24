@@ -105,7 +105,6 @@
                 "🇺🇸 US | 🔴 | vless | @dnsforyou | 37",
                 "🇺🇸 US | 🟢 | vless | @drvpn_net | 1",
                 "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
-                "🇺🇸 US | 🟢 | vless | @farahvpn | 19",
                 "🇮🇷 IR | 🔴 | vless | @fasst_vpn | 0",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇺🇸 US | 🟢 | vless | @fastkanfig | 13",
@@ -216,7 +215,6 @@
                 "🇺🇸 US | 🔴 | vless | @dnsforyou | 37",
                 "🇺🇸 US | 🟢 | vless | @drvpn_net | 1",
                 "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
-                "🇺🇸 US | 🟢 | vless | @farahvpn | 19",
                 "🇮🇷 IR | 🔴 | vless | @fasst_vpn | 0",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇺🇸 US | 🟢 | vless | @fastkanfig | 13",
@@ -591,31 +589,6 @@
                 "path": "/NiREvilxXx",
                 "headers": {
                     "Host": "TURKISH.NSCL.ir"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🟢 | vless | @farahvpn | 19",
-            "type": "vless",
-            "server": "172.66.47.175",
-            "server_port": 2083,
-            "uuid": "4d794980-54c0-4fcb-8def-c2beaecadbad",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "azadnet05.pages.dev",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/lZU7WqWIDqC1jRn6?ed=2560",
-                "headers": {
-                    "Host": "azadnet05.pages.dev"
                 }
             }
         },

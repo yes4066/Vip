@@ -91,9 +91,8 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 18",
-                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 13",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -114,9 +113,8 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
-                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 18",
-                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 19",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
+                "❔ XX | 🔴 | trojan | @ip_cf_config | 13",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -176,38 +174,6 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @configshubplus | 18",
-            "type": "trojan",
-            "server": "srwes1-confeg.sbs",
-            "server_port": 56679,
-            "password": "f4107ed1e1016be",
-            "tls": {
-                "enabled": true,
-                "server_name": "srwes1-confeg.sbs",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @configshubplus | 19",
-            "type": "trojan",
-            "server": "srwes1-confeg.sbs",
-            "server_port": 56679,
-            "password": "4ad0f58ba916627",
-            "tls": {
-                "enabled": true,
-                "server_name": "srwes1-confeg.sbs",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🟢 | trojan | @fati_ffx | 1",
             "type": "trojan",
             "server": "t3.teslacdn2.live",
@@ -222,6 +188,13 @@
                     "fingerprint": "chrome"
                 }
             }
+        },
+        {
+            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 13",
+            "type": "trojan",
+            "server": "391907cc-swgsg0-t1bnjq-1krtb.cu.plebai.net",
+            "server_port": 15229,
+            "password": "60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d"
         },
         {
             "tag": "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
