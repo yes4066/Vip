@@ -93,10 +93,6 @@
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 9",
                 "🇫🇮 FI | 🟢 | vless | @appsooner | 11",
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 10",
-                "🇩🇪 DE | 🟢 | vless | @config_proxy | 39",
-                "🇹🇷 TR | 🟢 | vless | @config_proxy | 40",
-                "🇫🇮 FI | 🟢 | vless | @config_proxy | 41",
-                "🇦🇺 AU | 🟢 | vless | @config_proxy | 42",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 9",
@@ -105,6 +101,9 @@
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 4",
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
+                "🇹🇷 TR | 🟢 | vless | @filter_breaker | 46",
+                "🇫🇮 FI | 🟢 | vless | @filter_breaker | 48",
+                "🇦🇺 AU | 🟢 | vless | @filter_breaker | 50",
                 "🇺🇸 US | 🟢 | vless | @filtershekan_channel | 9",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇷🇺 RU | 🟢 | vless | @free1_vpn | 0",
@@ -208,10 +207,6 @@
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 9",
                 "🇫🇮 FI | 🟢 | vless | @appsooner | 11",
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 10",
-                "🇩🇪 DE | 🟢 | vless | @config_proxy | 39",
-                "🇹🇷 TR | 🟢 | vless | @config_proxy | 40",
-                "🇫🇮 FI | 🟢 | vless | @config_proxy | 41",
-                "🇦🇺 AU | 🟢 | vless | @config_proxy | 42",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 9",
@@ -220,6 +215,9 @@
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 4",
                 "🇺🇦 UA | 🟢 | vless | @dashv2ray | 7",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
+                "🇹🇷 TR | 🟢 | vless | @filter_breaker | 46",
+                "🇫🇮 FI | 🟢 | vless | @filter_breaker | 48",
+                "🇦🇺 AU | 🟢 | vless | @filter_breaker | 50",
                 "🇺🇸 US | 🟢 | vless | @filtershekan_channel | 9",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇷🇺 RU | 🟢 | vless | @free1_vpn | 0",
@@ -419,106 +417,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 39",
-            "type": "vless",
-            "server": "91.107.187.51",
-            "server_port": 54844,
-            "uuid": "8b2aa8a0-ddea-4296-bc19-c46db6271fb1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "lBSp_MNQGZU1-FYDUuawhTlmFod--MmfemLlde7G7V8",
-                    "short_id": "c2941b0081be2486"
-                }
-            }
-        },
-        {
-            "tag": "🇹🇷 TR | 🟢 | vless | @config_proxy | 40",
-            "type": "vless",
-            "server": "91.228.186.195",
-            "server_port": 54843,
-            "uuid": "8b2aa8a0-ddea-4296-bc19-c46db6271fb1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "B3F8lbh4WaeM7vZzkJWrGp-TSRCW_EGMmUQyLCUbxXM",
-                    "short_id": "c8123d09fda87235"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇮 FI | 🟢 | vless | @config_proxy | 41",
-            "type": "vless",
-            "server": "65.109.193.248",
-            "server_port": 54842,
-            "uuid": "8b2aa8a0-ddea-4296-bc19-c46db6271fb1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "pYzjnYlMREoojzgXQfTeCr3wPZX6iIUgj1eUMJCj9DI",
-                    "short_id": "264b2d03a6e6e78a"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Ahadhsksfhdg"
-            }
-        },
-        {
-            "tag": "🇦🇺 AU | 🟢 | vless | @config_proxy | 42",
-            "type": "vless",
-            "server": "1.1.1.1",
-            "server_port": 54842,
-            "uuid": "8b2aa8a0-ddea-4296-bc19-c46db6271fb1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "journalofbigdata.springeropen.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "pYzjnYlMREoojzgXQfTeCr3wPZX6iIUgj1eUMJCj9DI",
-                    "short_id": "264b2d03a6e6e78a"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Ahadhsksfhdg"
-            }
-        },
-        {
             "tag": "🇩🇪 DE | 🟢 | vless | @configasli | 4",
             "type": "vless",
             "server": "91.107.183.90",
@@ -712,6 +610,83 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "chessgame"
+            }
+        },
+        {
+            "tag": "🇹🇷 TR | 🟢 | vless | @filter_breaker | 46",
+            "type": "vless",
+            "server": "91.228.186.195",
+            "server_port": 54843,
+            "uuid": "8b2aa8a0-ddea-4296-bc19-c46db6271fb1",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "B3F8lbh4WaeM7vZzkJWrGp-TSRCW_EGMmUQyLCUbxXM",
+                    "short_id": "c8123d09fda87235"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @filter_breaker | 48",
+            "type": "vless",
+            "server": "65.109.193.248",
+            "server_port": 54842,
+            "uuid": "8b2aa8a0-ddea-4296-bc19-c46db6271fb1",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "pYzjnYlMREoojzgXQfTeCr3wPZX6iIUgj1eUMJCj9DI",
+                    "short_id": "264b2d03a6e6e78a"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Ahadhsksfhdg"
+            }
+        },
+        {
+            "tag": "🇦🇺 AU | 🟢 | vless | @filter_breaker | 50",
+            "type": "vless",
+            "server": "1.1.1.1",
+            "server_port": 54842,
+            "uuid": "8b2aa8a0-ddea-4296-bc19-c46db6271fb1",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "pYzjnYlMREoojzgXQfTeCr3wPZX6iIUgj1eUMJCj9DI",
+                    "short_id": "264b2d03a6e6e78a"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Ahadhsksfhdg"
             }
         },
         {

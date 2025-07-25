@@ -91,6 +91,7 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 32",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
@@ -110,14 +111,11 @@
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 3",
                 "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 0",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
-                "🇩🇪 DE | 🔴 | vless | @v2ray_free_conf | 15",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
-                "🇩🇪 DE | 🟢 | vless | @v2ray_v_vpn | 27",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
                 "🇺🇸 US | 🔴 | vless | @v2trayproxy | 7",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
-                "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 14",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
             ],
             "tag": "proxy",
@@ -128,6 +126,7 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+                "🇺🇸 US | 🔴 | vless | @config_proxy | 32",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
@@ -147,14 +146,11 @@
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 3",
                 "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 0",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
-                "🇩🇪 DE | 🔴 | vless | @v2ray_free_conf | 15",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
-                "🇩🇪 DE | 🟢 | vless | @v2ray_v_vpn | 27",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
                 "🇺🇸 US | 🔴 | vless | @v2trayproxy | 7",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
-                "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 14",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
             ],
             "tag": "auto",
@@ -197,6 +193,15 @@
                     "short_id": "aeba"
                 }
             }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 32",
+            "type": "vless",
+            "server": "test.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "2c8aaf87-b1e3-4fc6-915b-0e48a26b1cd6",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @configscenter | 2",
@@ -379,15 +384,6 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🔴 | vless | @v2ray_free_conf | 15",
-            "type": "vless",
-            "server": "speedy.mooo.info",
-            "server_port": 80,
-            "uuid": "9e8c0b71-1e9e-4a4d-9e86-4ea9772ef534",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
             "type": "vless",
             "server": "test.fast.hosting-ip.com",
@@ -395,29 +391,6 @@
             "uuid": "bb57d265-b716-4092-bd0a-68f3988db63c",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @v2ray_v_vpn | 27",
-            "type": "vless",
-            "server": "meli_proxyy.vip-plan.org",
-            "server_port": 54474,
-            "uuid": "c8fae2e1-bffc-4e20-94f2-8bee7ba14ccd",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "random"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "mVptIpBcUtMqN2tfYE8eNwBrhqNdb0lWJoeRvYen8TY",
-                    "short_id": "2cb4454d18"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
@@ -461,15 +434,6 @@
             "server": "netmeli.noytads.ir",
             "server_port": 80,
             "uuid": "e018bfab-0902-47a0-abfc-7efbd017ec73",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 14",
-            "type": "vless",
-            "server": "speedy.mooo.info",
-            "server_port": 80,
-            "uuid": "9e8c0b71-1e9e-4a4d-9e86-4ea9772ef534",
             "flow": "",
             "packet_encoding": "xudp"
         },

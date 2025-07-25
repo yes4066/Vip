@@ -882,9 +882,9 @@
     },
     "ip_cf_config": {
         "types": [
+            "ss",
             "vmess",
             "trojan",
-            "ss",
             "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
@@ -2288,8 +2288,8 @@
     },
     "v2rayngconfiig": {
         "types": [
-            "trojan",
-            "vless"
+            "vless",
+            "trojan"
         ],
         "title": "V2ray | Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayngconfiig.jpg"
