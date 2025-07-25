@@ -116,7 +116,8 @@
                 "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
-                "🇺🇸 US | 🔴 | vless | @bored_vpn | 9",
+                "🇺🇸 US | 🔴 | vless | @bored_vpn | 8",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 72",
                 "🇩🇪 DE | 🔴 | vless | @configfa | 13",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
@@ -130,7 +131,7 @@
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
                 "🇩🇪 DE | 🔴 | vless | @lranonline_new | 5",
-                "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 20",
+                "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 19",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
@@ -190,7 +191,8 @@
                 "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
-                "🇺🇸 US | 🔴 | vless | @bored_vpn | 9",
+                "🇺🇸 US | 🔴 | vless | @bored_vpn | 8",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 72",
                 "🇩🇪 DE | 🔴 | vless | @configfa | 13",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
@@ -204,7 +206,7 @@
                 "🇺🇸 US | 🔴 | vless | @komail315 | 1",
                 "🇺🇸 US | 🔴 | vless | @lexernet | 7",
                 "🇩🇪 DE | 🔴 | vless | @lranonline_new | 5",
-                "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 20",
+                "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 19",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
@@ -530,13 +532,36 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @bored_vpn | 9",
+            "tag": "🇺🇸 US | 🔴 | vless | @bored_vpn | 8",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "0134428a-02d8-4f94-8221-a1e858552212",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 72",
+            "type": "vless",
+            "server": "89.169.55.79",
+            "server_port": 80,
+            "uuid": "84bdd0fc-5a87-496c-b891-0e1e54555e7b",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "y-B_A_2wfiVJOEEFkssaY6Q29sSmJ-ukPlLoMmRz7m8",
+                    "short_id": "5426024033df45"
+                }
+            }
         },
         {
             "tag": "🇩🇪 DE | 🔴 | vless | @configfa | 13",
@@ -744,7 +769,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 20",
+            "tag": "🇳🇱 NL | 🔴 | vless | @manzariyeh_rasht | 19",
             "type": "vless",
             "server": "45.150.33.157",
             "server_port": 50810,

@@ -125,7 +125,6 @@
                 "🇮🇷 IR | 🔴 | vless | @hormozvpn | 2",
                 "🇮🇷 IR | 🔴 | vless | @hoshmasnoiyfarsi | 13",
                 "🇩🇪 DE | 🔴 | vless | @icv2ray | 15",
-                "🇺🇸 US | 🟢 | vless | @info_2it_channel | 9",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇫🇷 FR | 🔴 | vless | @iranmedicalvpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
@@ -162,7 +161,7 @@
                 "🇺🇸 US | 🟢 | vless | @sobi_vpn | 9",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🔴 | vless | @srovpn | 15",
-                "🇬🇧 GB | 🔴 | vless | @summertimeus | 12",
+                "🇺🇸 US | 🟢 | vless | @summertimeus | 12",
                 "🇮🇷 IR | 🔴 | vless | @tc_v2ray | 5",
                 "🇺🇸 US | 🟢 | vless | @telmavpn | 25",
                 "🇺🇸 US | 🔴 | vless | @topvpn02 | 0",
@@ -236,7 +235,6 @@
                 "🇮🇷 IR | 🔴 | vless | @hormozvpn | 2",
                 "🇮🇷 IR | 🔴 | vless | @hoshmasnoiyfarsi | 13",
                 "🇩🇪 DE | 🔴 | vless | @icv2ray | 15",
-                "🇺🇸 US | 🟢 | vless | @info_2it_channel | 9",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇫🇷 FR | 🔴 | vless | @iranmedicalvpn | 0",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
@@ -273,7 +271,7 @@
                 "🇺🇸 US | 🟢 | vless | @sobi_vpn | 9",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🔴 | vless | @srovpn | 15",
-                "🇬🇧 GB | 🔴 | vless | @summertimeus | 12",
+                "🇺🇸 US | 🟢 | vless | @summertimeus | 12",
                 "🇮🇷 IR | 🔴 | vless | @tc_v2ray | 5",
                 "🇺🇸 US | 🟢 | vless | @telmavpn | 25",
                 "🇺🇸 US | 🔴 | vless | @topvpn02 | 0",
@@ -929,31 +927,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @info_2it_channel | 9",
-            "type": "vless",
-            "server": "104.26.6.18",
-            "server_port": 443,
-            "uuid": "004ba5d4-d448-4960-a762-e5190ab415f2",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "albedoalbedochan.violetchaan.ip-ddns.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/?JOKERRVPN_BIA_CHANEL@JOKERRVPN",
-                "headers": {
-                    "Host": "albedoalbedochan.violetchaan.ip-ddns.com"
-                }
-            }
-        },
-        {
             "tag": "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
             "type": "vless",
             "server": "188.165.122.11",
@@ -1552,13 +1525,29 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇬🇧 GB | 🔴 | vless | @summertimeus | 12",
+            "tag": "🇺🇸 US | 🟢 | vless | @summertimeus | 12",
             "type": "vless",
-            "server": "54.38.214.56",
-            "server_port": 37171,
-            "uuid": "19199927-fb46-4203-8872-672fd1daca14",
+            "server": "172.67.69.216",
+            "server_port": 2053,
+            "uuid": "39a91eaf-a379-4fff-a9c8-1cb01442b76f",
             "flow": "",
-            "packet_encoding": "xudp"
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "iran.akcovufun.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "iran.akcovufun.ir"
+                }
+            }
         },
         {
             "tag": "🇮🇷 IR | 🔴 | vless | @tc_v2ray | 5",
