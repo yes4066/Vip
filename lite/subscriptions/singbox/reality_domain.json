@@ -91,6 +91,7 @@
                 "direct",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
+                "🇸🇬 SG | 🟢 | vless | @freevpnatm | 19",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -113,6 +114,7 @@
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
+                "🇸🇬 SG | 🟢 | vless | @freevpnatm | 19",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -184,6 +186,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Telegram:"
+            }
+        },
+        {
+            "tag": "🇸🇬 SG | 🟢 | vless | @freevpnatm | 19",
+            "type": "vless",
+            "server": "sg002.421421.xyz",
+            "server_port": 20230,
+            "uuid": "8d3b917e-6520-4725-b284-a369f14a5315",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.nvidia.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "1cs7mxEcoVKwcYepAnKgqHAFhRxPv6aO3tv7lNhwLDQ",
+                    "short_id": "46bf6ea0"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "tj"
             }
         },
         {

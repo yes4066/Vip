@@ -1072,10 +1072,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
             "vless",
-            "vmess",
-            "trojan"
+            "ss",
+            "trojan",
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1662,7 +1662,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -2058,7 +2059,6 @@
     "proxy_mtproto_vpns_free": {
         "types": [
             "vless",
-            "ss",
             "vmess"
         ],
         "title": "VPNs Proxy Mtproto",
@@ -2078,13 +2078,6 @@
         ],
         "title": "سرور کانفیگ رایگان v2ray",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxy_v2box.jpg"
-    },
-    "proxyandvpnofficial1": {
-        "types": [
-            "vless"
-        ],
-        "title": "🧿 کانال رسمی پروکسی و فیلترشکن (VPN) دائمی و رایگان و امن🧿",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/proxyandvpnofficial1.jpg"
     },
     "proxycrone": {
         "types": [
@@ -2496,7 +2489,8 @@
     "v2graphy": {
         "types": [
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "v2rayNG config",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2graphy.jpg"
@@ -2566,8 +2560,9 @@
     "v2ray_free_conf": {
         "types": [
             "vmess",
+            "ss",
             "vless",
-            "ss"
+            "trojan"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_free_conf.jpg"
@@ -2659,6 +2654,7 @@
     "v2raych": {
         "types": [
             "vless",
+            "vmess",
             "trojan"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
@@ -2688,7 +2684,6 @@
     "v2rayfree": {
         "types": [
             "vless",
-            "ss",
             "vmess"
         ],
         "title": "VPNs Proxy Mtproto",
@@ -2875,8 +2870,8 @@
     },
     "v2rayprotocol": {
         "types": [
-            "vless",
-            "ss"
+            "ss",
+            "vless"
         ],
         "title": "V2raynG |outline | foxray | streisand | Nv | fair |رفع فیلتر",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2rayprotocol.jpg"
@@ -3325,7 +3320,8 @@
     },
     "vpnv2raytop": {
         "types": [
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "فیلتر شکن پر سرعت و ارزان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vpnv2raytop.jpg"
@@ -3432,8 +3428,8 @@
     "zerobaipiao": {
         "types": [
             "vmess",
-            "ss",
-            "trojan"
+            "trojan",
+            "ss"
         ],
         "title": "免费节点 🏆【1小时前更新】",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/zerobaipiao.jpg"

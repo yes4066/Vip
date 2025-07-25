@@ -90,9 +90,8 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
-                "🏳️  | 🟢 | vless | @canfing_vpn | 17",
+                "❔ XX | 🟢 | vless | @canfing_vpn | 17",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
-                "🇺🇸 US | 🔴 | vless | @configshubplus | 13",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -110,11 +109,11 @@
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 0",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 3",
-                "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 0",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
+                "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
             ],
@@ -125,9 +124,8 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
-                "🏳️  | 🟢 | vless | @canfing_vpn | 17",
+                "❔ XX | 🟢 | vless | @canfing_vpn | 17",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
-                "🇺🇸 US | 🔴 | vless | @configshubplus | 13",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -145,11 +143,11 @@
                 "🇩🇪 DE | 🔴 | vless | @iseqaro | 0",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 20",
                 "🇺🇸 US | 🔴 | vless | @proxy_v2box | 3",
-                "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 0",
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
+                "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
             ],
@@ -172,7 +170,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🏳️  | 🟢 | vless | @canfing_vpn | 17",
+            "tag": "❔ XX | 🟢 | vless | @canfing_vpn | 17",
             "type": "vless",
             "server": "de6rt.samsungmarketshop.ir",
             "server_port": 2083,
@@ -200,15 +198,6 @@
             "server": "2sudo.winapp3.ir",
             "server_port": 80,
             "uuid": "5b0e1347-1e9b-4b83-a27b-468e3dafb69b",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @configshubplus | 13",
-            "type": "vless",
-            "server": "EVAY_VPN.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "41f52408-143d-40ba-8e09-82df8b72a6d0",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -366,15 +355,6 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @proxyandvpnofficial1 | 0",
-            "type": "vless",
-            "server": "CoNFiGLiNE.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "b0dc0687-a93b-48e0-b80c-e7604d3a3f05",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
             "type": "vless",
             "server": "optmaze.speegy.club",
@@ -425,6 +405,29 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
+            "type": "vless",
+            "server": "speedtest.net.zula.ir.nobitex.ir.shakhle.ir",
+            "server_port": 39001,
+            "uuid": "15449e06-b519-414a-9e0d-fbb4a0fd2780",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "7ERFDeEmVmljmV6PdMNl0Menauhchi-JfYYkiw15y1o",
+                    "short_id": "f23547"
                 }
             }
         },

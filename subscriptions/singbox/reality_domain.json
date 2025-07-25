@@ -95,13 +95,13 @@
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 1",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 2",
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
-                "🏳️  | 🟢 | vless | @canfing_vpn | 17",
+                "❔ XX | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇳🇱 NL | 🟢 | vless | @dalton_ping | 2",
-                "🇳🇱 NL | 🟢 | vless | @farahvpn | 16",
+                "🇳🇱 NL | 🟢 | vless | @farahvpn | 15",
                 "🇳🇱 NL | 🟢 | vless | @flyv2ray | 4",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
                 "❔ XX | 🟢 | vless | @fsv2ray | 0",
@@ -152,6 +152,8 @@
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "🇫🇮 FI | 🟢 | vless | @vaynora | 9",
+                "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
+                "🇮🇹 IT | 🟢 | vless | @vistav2ray | 12",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -178,13 +180,13 @@
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 1",
                 "🇩🇪 DE | 🟢 | vless | @bermudavpn24 | 2",
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
-                "🏳️  | 🟢 | vless | @canfing_vpn | 17",
+                "❔ XX | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇳🇱 NL | 🟢 | vless | @dalton_ping | 2",
-                "🇳🇱 NL | 🟢 | vless | @farahvpn | 16",
+                "🇳🇱 NL | 🟢 | vless | @farahvpn | 15",
                 "🇳🇱 NL | 🟢 | vless | @flyv2ray | 4",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
                 "❔ XX | 🟢 | vless | @fsv2ray | 0",
@@ -235,6 +237,8 @@
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "🇫🇮 FI | 🟢 | vless | @vaynora | 9",
+                "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
+                "🇮🇹 IT | 🟢 | vless | @vistav2ray | 12",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -401,7 +405,7 @@
             }
         },
         {
-            "tag": "🏳️  | 🟢 | vless | @canfing_vpn | 17",
+            "tag": "❔ XX | 🟢 | vless | @canfing_vpn | 17",
             "type": "vless",
             "server": "de6rt.samsungmarketshop.ir",
             "server_port": 2083,
@@ -551,7 +555,7 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @farahvpn | 16",
+            "tag": "🇳🇱 NL | 🟢 | vless | @farahvpn | 15",
             "type": "vless",
             "server": "server2.fergalvpnmod.com",
             "server_port": 25126,
@@ -1816,6 +1820,52 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "bing"
+            }
+        },
+        {
+            "tag": "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
+            "type": "vless",
+            "server": "speedtest.net.zula.ir.nobitex.ir.shakhle.ir",
+            "server_port": 39001,
+            "uuid": "15449e06-b519-414a-9e0d-fbb4a0fd2780",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "stackoverflow.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "7ERFDeEmVmljmV6PdMNl0Menauhchi-JfYYkiw15y1o",
+                    "short_id": "f23547"
+                }
+            }
+        },
+        {
+            "tag": "🇮🇹 IT | 🟢 | vless | @vistav2ray | 12",
+            "type": "vless",
+            "server": "itmi-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz",
+            "server_port": 443,
+            "uuid": "1ae544de-4b19-4bd0-a7d6-e47e2e19a057",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "itgetsbetter.org",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "u13aSU1om7Mc67RxQHmVQx7iALWAUCn_j38zQ5LpYXc",
+                    "short_id": "462c73aef9f448"
+                }
             }
         },
         {
