@@ -107,7 +107,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🟢 | vless | @customvpnserver | 10",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -167,10 +167,9 @@
                 "🇱🇹 LT | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇩🇪 DE | 🔴 | vless | @nofilter_v2rayng | 6",
-                "🇺🇸 US | 🟢 | vless | @noforcedheaven | 15",
+                "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇷🇺 RU | 🟢 | vless | @outline_ir | 18",
                 "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 11",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
@@ -238,7 +237,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🟢 | vless | @customvpnserver | 10",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -298,10 +297,9 @@
                 "🇱🇹 LT | 🔴 | vless | @nitroserver_ir | 1",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇩🇪 DE | 🔴 | vless | @nofilter_v2rayng | 6",
-                "🇺🇸 US | 🟢 | vless | @noforcedheaven | 15",
+                "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇷🇺 RU | 🟢 | vless | @outline_ir | 18",
                 "🇺🇸 US | 🔴 | vless | @outlinev2rayng | 11",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
@@ -641,7 +639,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
@@ -1656,20 +1654,25 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @noforcedheaven | 15",
+            "tag": "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
             "type": "vless",
-            "server": "www.speedtest.net",
-            "server_port": 443,
-            "uuid": "25cff889-0921-40a9-814b-15d3af3bbc58",
-            "flow": "",
+            "server": "ru2.asc-sam.ir",
+            "server_port": 8443,
+            "uuid": "7715f3b0-9661-4c92-8b32-1c4c1f79bb5c",
+            "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "ru2.asc-sam.ir",
+                "server_name": "journalofbigdata.springeropen.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "VuL69lz3WqpGe-rhAvd2-M2-KaZpG10iDu71aTVMx2Y",
+                    "short_id": "d3044a6aa923a9"
                 }
             }
         },
@@ -1711,31 +1714,6 @@
                 "path": "/@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy?ed=2048",
                 "headers": {
                     "Host": "www.speedtest.net"
-                }
-            }
-        },
-        {
-            "tag": "🇷🇺 RU | 🟢 | vless | @outline_ir | 18",
-            "type": "vless",
-            "server": "wouldyoumarriemepleasefuckthesystem4.siasia.ir",
-            "server_port": 2053,
-            "uuid": "ce62ee5e-e316-46af-b967-4588a5e8e66c",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "hheydudethisworldisshet.siasia.ir",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/apiii",
-                "headers": {
-                    "Host": "hheydudethisworldisshet.siasia.ir"
                 }
             }
         },
