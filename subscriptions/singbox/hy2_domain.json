@@ -89,7 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "❔ XX | 🟢 | hy2 | @filter_breaker | 43"
+                "❔ XX | 🟢 | hy2 | @filter_breaker | 38"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -97,7 +97,7 @@
         {
             "interval": "10m",
             "outbounds": [
-                "❔ XX | 🟢 | hy2 | @filter_breaker | 43"
+                "❔ XX | 🟢 | hy2 | @filter_breaker | 38"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -109,7 +109,7 @@
             "type": "direct"
         },
         {
-            "tag": "❔ XX | 🟢 | hy2 | @filter_breaker | 43",
+            "tag": "❔ XX | 🟢 | hy2 | @filter_breaker | 38",
             "type": "hysteria2",
             "server": "nlnl.yinheyz.cfd",
             "server_port": 33856,

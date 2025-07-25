@@ -876,9 +876,9 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
             "trojan",
             "vmess",
+            "ss",
             "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
@@ -1352,8 +1352,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1650,7 +1650,8 @@
     "outlinev2rayng": {
         "types": [
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outlinev2rayng.jpg"
@@ -1882,7 +1883,6 @@
     },
     "sezar_sec": {
         "types": [
-            "vless",
             "vmess"
         ],
         "title": "Sezar | تیم امنیتی سزار",
@@ -2197,8 +2197,6 @@
     "v2raying": {
         "types": [
             "vless",
-            "ss",
-            "trojan",
             "vmess"
         ],
         "title": "v2rayNG_VPN",
