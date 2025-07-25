@@ -107,7 +107,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🟢 | vless | @customvpnserver | 10",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -170,6 +170,7 @@
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
+                "🇺🇸 US | 🟢 | vless | @outline_ir | 19",
                 "🇸🇪 SE | 🔴 | vless | @outlinev2rayng | 10",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
@@ -201,6 +202,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
+                "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -238,7 +240,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🟢 | vless | @customvpnserver | 10",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -301,6 +303,7 @@
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
+                "🇺🇸 US | 🟢 | vless | @outline_ir | 19",
                 "🇸🇪 SE | 🔴 | vless | @outlinev2rayng | 10",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
@@ -332,6 +335,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
+                "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -641,7 +645,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
@@ -1713,6 +1717,31 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | vless | @outline_ir | 19",
+            "type": "vless",
+            "server": "wouldyoumarriemepleasefuckthesystem5.siasia.ir",
+            "server_port": 2053,
+            "uuid": "ce62ee5e-e316-46af-b967-4588a5e8e66c",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "hheydudethisworldisshet.siasia.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/apiii",
+                "headers": {
+                    "Host": "hheydudethisworldisshet.siasia.ir"
+                }
+            }
+        },
+        {
             "tag": "🇸🇪 SE | 🔴 | vless | @outlinev2rayng | 10",
             "type": "vless",
             "server": "http.gozaroshloreshin.ir",
@@ -2268,6 +2297,31 @@
                 "path": "/?ed=2048",
                 "headers": {
                     "Host": "confignginxV2rayng.vpncustomize.Website"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
+            "type": "vless",
+            "server": "wouldyoumarriemepleasefuckthesystem3.siasia.ir",
+            "server_port": 2053,
+            "uuid": "ce62ee5e-e316-46af-b967-4588a5e8e66c",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "hheydudethisworldisshet.siasia.ir",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/apiii",
+                "headers": {
+                    "Host": "hheydudethisworldisshet.siasia.ir"
                 }
             }
         },

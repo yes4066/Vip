@@ -89,11 +89,12 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "🇵🇱 PL | 🟢 | ss | @argo_vpn1 | 6",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇵🇹 PT | 🟢 | ss | @filtershekan_channel | 12",
                 "🇷🇺 RU | 🟢 | ss | @free1_vpn | 4",
-                "🇵🇱 PL | 🟢 | ss | @free1ss | 17",
+                "🇫🇮 FI | 🟢 | ss | @free1ss | 18",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
                 "🇳🇱 NL | 🟢 | ss | @jiedianf | 7",
@@ -119,11 +120,12 @@
         {
             "interval": "10m",
             "outbounds": [
+                "🇵🇱 PL | 🟢 | ss | @argo_vpn1 | 6",
                 "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
                 "🇬🇧 GB | 🟢 | ss | @bislullproxy | 18",
                 "🇵🇹 PT | 🟢 | ss | @filtershekan_channel | 12",
                 "🇷🇺 RU | 🟢 | ss | @free1_vpn | 4",
-                "🇵🇱 PL | 🟢 | ss | @free1ss | 17",
+                "🇫🇮 FI | 🟢 | ss | @free1ss | 18",
                 "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",
                 "🇬🇧 GB | 🟢 | ss | @injectormconf | 39",
                 "🇳🇱 NL | 🟢 | ss | @jiedianf | 7",
@@ -151,6 +153,14 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "🇵🇱 PL | 🟢 | ss | @argo_vpn1 | 6",
+            "type": "shadowsocks",
+            "server": "45.144.49.140",
+            "server_port": 57456,
+            "method": "chacha20-ietf-poly1305",
+            "password": "360e21d21977dc11"
         },
         {
             "tag": "🇦🇹 AT | 🟢 | ss | @arv2ra | 7",
@@ -185,12 +195,12 @@
             "password": "360e21d21977dc11"
         },
         {
-            "tag": "🇵🇱 PL | 🟢 | ss | @free1ss | 17",
+            "tag": "🇫🇮 FI | 🟢 | ss | @free1ss | 18",
             "type": "shadowsocks",
-            "server": "45.144.49.140",
-            "server_port": 57456,
+            "server": "64.137.109.212",
+            "server_port": 44884,
             "method": "chacha20-ietf-poly1305",
-            "password": "360e21d21977dc11"
+            "password": "2DGq3jvVRg5n3CcxmysGK2kmrgJeSNof12A76cZvVxqPpetyC1XEciCFufq5xKvRWGGnKVembpThuUSQhbZ7GMsZY4UVxEBw"
         },
         {
             "tag": "🇫🇷 FR | 🟢 | ss | @freevirgoolnet | 7",

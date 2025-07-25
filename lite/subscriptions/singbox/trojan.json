@@ -92,13 +92,12 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
-                "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 15",
+                "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
-                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
-                "🇺🇸 US | 🟢 | trojan | @v2raying | 13",
+                "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
+                "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
+                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "❔ XX | 🔴 | trojan | @freevpnatm | 19"
             ],
             "tag": "proxy",
@@ -110,13 +109,12 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
-                "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 15",
+                "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
-                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
-                "🇺🇸 US | 🟢 | trojan | @v2raying | 13",
+                "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
+                "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
+                "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
                 "❔ XX | 🔴 | trojan | @freevpnatm | 19"
             ],
             "tag": "auto",
@@ -188,30 +186,14 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @directvpn | 17",
             "type": "trojan",
-            "server": "63.178.129.186",
+            "server": "15.188.237.53",
             "server_port": 22223,
             "password": "telegram-id-directvpn",
             "tls": {
                 "enabled": true,
                 "server_name": "trojan.burgerip.co.uk",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @ip_cf_config | 15",
-            "type": "trojan",
-            "server": "51.91.11.29",
-            "server_port": 80,
-            "password": "598c19f3-a48e-47cd-8451-1ba04ea094d0",
-            "tls": {
-                "enabled": true,
-                "server_name": "speedtest.net",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -243,9 +225,9 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @privatevpns | 17",
             "type": "trojan",
-            "server": "63.178.129.186",
+            "server": "15.188.237.53",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {
@@ -259,25 +241,18 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @v2raying | 13",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
             "type": "trojan",
-            "server": "172.67.181.173",
-            "server_port": 443,
-            "password": "f282b878-8711-45a1-8c69-5564172123c1",
+            "server": "51.91.11.29",
+            "server_port": 80,
+            "password": "598c19f3-a48e-47cd-8451-1ba04ea094d0",
             "tls": {
                 "enabled": true,
-                "server_name": "vpn.stupidworld.web.id",
+                "server_name": "speedtest.net",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/Stupid-World/103.106.228.126-2053",
-                "headers": {
-                    "Host": "vpn.stupidworld.web.id"
                 }
             }
         },
@@ -298,9 +273,9 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @v2rayvpnchannel | 14",
             "type": "trojan",
-            "server": "63.178.129.186",
+            "server": "15.188.237.53",
             "server_port": 22223,
             "password": "telegram-id-v2rayvpnchannel",
             "tls": {
