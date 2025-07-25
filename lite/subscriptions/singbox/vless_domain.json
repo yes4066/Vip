@@ -94,6 +94,7 @@
                 "🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1",
                 "🇺🇸 US | 🔴 | vless | @aryoovpn | 4",
                 "🇮🇷 IR | 🔴 | vless | @asak_vpn | 11",
+                "🇺🇸 US | 🔴 | vless | @azarbayjab1 | 4",
                 "🇺🇸 US | 🔴 | vless | @befreewithus | 1",
                 "❔ XX | 🔴 | vless | @castom_v2ray | 4",
                 "❔ XX | 🔴 | vless | @ch_a2l | 5",
@@ -206,7 +207,7 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
-                "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 3",
+                "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 2",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "❔ XX | 🔴 | vless | @womanlifefreedomvpn | 16",
@@ -224,6 +225,7 @@
                 "🇺🇸 US | 🔴 | vless | @artemis_vpn_free | 1",
                 "🇺🇸 US | 🔴 | vless | @aryoovpn | 4",
                 "🇮🇷 IR | 🔴 | vless | @asak_vpn | 11",
+                "🇺🇸 US | 🔴 | vless | @azarbayjab1 | 4",
                 "🇺🇸 US | 🔴 | vless | @befreewithus | 1",
                 "❔ XX | 🔴 | vless | @castom_v2ray | 4",
                 "❔ XX | 🔴 | vless | @ch_a2l | 5",
@@ -336,7 +338,7 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
-                "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 3",
+                "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 2",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "❔ XX | 🔴 | vless | @womanlifefreedomvpn | 16",
@@ -417,6 +419,22 @@
             "uuid": "1d845272-528e-4d76-a721-9de31bf1326f",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @azarbayjab1 | 4",
+            "type": "vless",
+            "server": "obedient-detail.seotoolsforyou.co.uk",
+            "server_port": 80,
+            "uuid": "1dd49fb8-6570-4a2a-a236-f410b63159cf",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "obedient-detail.seotoolsforyou.co.uk"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @befreewithus | 1",
@@ -2363,7 +2381,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 3",
+            "tag": "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 2",
             "type": "vless",
             "server": "www.visa.com.sg",
             "server_port": 2087,

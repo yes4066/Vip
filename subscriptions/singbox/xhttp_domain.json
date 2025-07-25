@@ -91,6 +91,7 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+                "🇩🇪 DE | 🔴 | vless | @config_proxy | 43",
                 "🇷🇺 RU | 🟢 | vless | @configfa | 15",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -128,6 +129,7 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+                "🇩🇪 DE | 🔴 | vless | @config_proxy | 43",
                 "🇷🇺 RU | 🟢 | vless | @configfa | 15",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
@@ -197,6 +199,15 @@
                     "short_id": "aeba"
                 }
             }
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @config_proxy | 43",
+            "type": "vless",
+            "server": "s1.1dnt.k-l.cloud",
+            "server_port": 80,
+            "uuid": "f353fbf3-b6a1-4524-b916-f65bc077511f",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "🇷🇺 RU | 🟢 | vless | @configfa | 15",
