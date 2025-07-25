@@ -127,7 +127,7 @@
                 "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 18",
+                "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 18",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -177,7 +177,7 @@
                 "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 18",
+                "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 18",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -776,13 +776,29 @@
             "alter_id": 0
         },
         {
-            "tag": "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 18",
+            "tag": "🇨🇦 CA | 🔴 | vmess | @vpnfail_v2ray | 18",
             "type": "vmess",
-            "server": "135.125.182.74",
-            "server_port": 28213,
-            "uuid": "81852771-76fb-4e94-e4f1-4e37a698a49a",
+            "server": "134.195.198.147",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "security": "auto",
-            "alter_id": 0
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "134.195.198.147",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkvws",
+                "headers": {
+                    "Host": "134.195.198.147"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",

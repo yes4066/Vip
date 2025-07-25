@@ -118,6 +118,7 @@
                 "❔ XX | 🟢 | vless | @flash_proxies | 0",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🔴 | vless | @freakconfig1 | 2",
+                "🇬🇧 GB | 🟢 | vless | @free1_vpn | 6",
                 "🇺🇸 US | 🟢 | vless | @free_vpn_for_all_of_us | 19",
                 "❔ XX | 🔴 | vless | @freedom_config | 9",
                 "❔ XX | 🟢 | vless | @freev2raym | 10",
@@ -249,6 +250,7 @@
                 "❔ XX | 🟢 | vless | @flash_proxies | 0",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🔴 | vless | @freakconfig1 | 2",
+                "🇬🇧 GB | 🟢 | vless | @free1_vpn | 6",
                 "🇺🇸 US | 🟢 | vless | @free_vpn_for_all_of_us | 19",
                 "❔ XX | 🔴 | vless | @freedom_config | 9",
                 "❔ XX | 🟢 | vless | @freev2raym | 10",
@@ -770,6 +772,29 @@
                 "path": "/@VPNCUSTOMIZE",
                 "headers": {
                     "Host": "discord.gg"
+                }
+            }
+        },
+        {
+            "tag": "🇬🇧 GB | 🟢 | vless | @free1_vpn | 6",
+            "type": "vless",
+            "server": "v05.vxlimir.com",
+            "server_port": 1370,
+            "uuid": "f0050c31-06b1-4ebd-a10c-fe1e73632067",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "_N3KecwB9Ck28IIMxIck00ivkq3_ZEUvU3KXELnfvHw",
+                    "short_id": "e1afb93bfe75a34b"
                 }
             }
         },

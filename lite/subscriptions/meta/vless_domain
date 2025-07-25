@@ -51,6 +51,7 @@ proxies:
   - {"name":"❔ XX | 🟢 | vless | @filter5050 | 2","type":"vless","server":"Filter5050.nabxcsjghjs2004.shop","port":27940,"uuid":"2fb8383b-2b12-463e-a20d-674c36d9b7d3","tls":true,"network":"grpc","client-fingerprint":"firefox","udp":true,"servername":"cdn.discordapp.com","reality-opts":{"public-key":"NY4vf2xmEysVkOcgDnGASs9E_kJS1QxqRo7uFSzwh3g","short-id":"a7cf4983"}}
   - {"name":"❔ XX | 🟢 | vless | @flash_proxies | 0","type":"vless","server":"ham.nv10.sbs","port":2087,"uuid":"286bc77c-7296-4f5c-abe5-feb0803ef31f","tls":true,"network":"grpc","client-fingerprint":"chrome","udp":true,"grpc-opts":{"grpc-service-name":"@nv_configs"}}
   - {"name":"🇺🇸 US | 🔴 | vless | @fnet00 | 7","type":"vless","server":"speedtest.net","port":80,"uuid":"bf3c99e7-68b4-4bad-b110-ebaf2ecab772","tls":false,"network":"xhttp","client-fingerprint":"chrome","udp":true}
+  - {"name":"🇬🇧 GB | 🟢 | vless | @free1_vpn | 6","type":"vless","server":"v05.vxlimir.com","port":1370,"uuid":"f0050c31-06b1-4ebd-a10c-fe1e73632067","tls":true,"network":"tcp","client-fingerprint":"chrome","udp":true,"servername":"refersion.com","flow":"xtls-rprx-vision","reality-opts":{"public-key":"_N3KecwB9Ck28IIMxIck00ivkq3_ZEUvU3KXELnfvHw","short-id":"e1afb93bfe75a34b"}}
   - {"name":"🇺🇸 US | 🟢 | vless | @free_vpn_for_all_of_us | 19","type":"vless","server":"www.speedtest.net","port":443,"uuid":"8b7efacf-8e83-4e51-ab55-1263baccd4b2","tls":true,"network":"ws","client-fingerprint":"chrome","udp":true,"servername":"7f905f51.garywelch.pages.dev","ws-opts":{"path":"/","headers":{"Host":"7f905f51.garywelch.pages.dev"}}}
   - {"name":"❔ XX | 🔴 | vless | @freedom_config | 9","type":"vless","server":"online.4zkaban.xyz","port":80,"uuid":"85ed7efa-aa83-419a-8210-29919a7669e8","tls":false,"network":"ws","client-fingerprint":"chrome","udp":true,"ws-opts":{"path":"/@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config,@Freedom_Config","headers":{"Host":"13.ok-config-20.buzz"}}}
   - {"name":"❔ XX | 🟢 | vless | @freev2raym | 10","type":"vless","server":"antipingchannel.antiping.click","port":2096,"uuid":"222badf2-8e87-479a-8b77-1a3c952edac2","tls":true,"network":"grpc","client-fingerprint":"chrome","udp":true,"servername":"vipping.antiping.click","grpc-opts":{"grpc-service-name":"sourceforge.net"}}
@@ -173,6 +174,7 @@ proxy-groups:
       - '❔ XX | 🟢 | vless | @filter5050 | 2'
       - '❔ XX | 🟢 | vless | @flash_proxies | 0'
       - '🇺🇸 US | 🔴 | vless | @fnet00 | 7'
+      - '🇬🇧 GB | 🟢 | vless | @free1_vpn | 6'
       - '🇺🇸 US | 🟢 | vless | @free_vpn_for_all_of_us | 19'
       - '❔ XX | 🔴 | vless | @freedom_config | 9'
       - '❔ XX | 🟢 | vless | @freev2raym | 10'
