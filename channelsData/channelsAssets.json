@@ -271,6 +271,7 @@
     },
     "configshubplus": {
         "types": [
+            "ss",
             "vless",
             "vmess"
         ],
@@ -998,7 +999,6 @@
     },
     "hope_net": {
         "types": [
-            "vmess",
             "vless",
             "trojan",
             "ss"
@@ -1070,10 +1070,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vmess",
+            "vless",
             "ss",
             "trojan",
-            "vless"
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1644,13 +1644,6 @@
         "title": "کانال MinoVpn",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/minovpnch.jpg"
     },
-    "miov2ray": {
-        "types": [
-            "vless"
-        ],
-        "title": "MioV2ray",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/miov2ray.jpg"
-    },
     "miyanbor_vpn": {
         "types": [
             "vless"
@@ -1667,7 +1660,6 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
             "vmess"
         ],
         "title": "Mowj Proxy",
@@ -2577,9 +2569,9 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "trojan",
-            "ss",
             "vmess",
+            "ss",
+            "trojan",
             "vless"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
@@ -2671,9 +2663,9 @@
     },
     "v2raych": {
         "types": [
-            "vless",
             "trojan",
             "vmess",
+            "vless",
             "ss"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",

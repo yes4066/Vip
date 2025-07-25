@@ -97,7 +97,7 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇨🇦 CA | 🟢 | vless | @config_proxy | 31",
+                "🇸🇮 SI | 🟢 | vless | @config_proxy | 22",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -149,7 +149,7 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇯🇵 JP | 🟢 | vless | @v2rayngrit | 14",
+                "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
@@ -183,7 +183,7 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇨🇦 CA | 🟢 | vless | @config_proxy | 31",
+                "🇸🇮 SI | 🟢 | vless | @config_proxy | 22",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -235,7 +235,7 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇯🇵 JP | 🟢 | vless | @v2rayngrit | 14",
+                "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
@@ -457,25 +457,25 @@
             }
         },
         {
-            "tag": "🇨🇦 CA | 🟢 | vless | @config_proxy | 31",
+            "tag": "🇸🇮 SI | 🟢 | vless | @config_proxy | 22",
             "type": "vless",
-            "server": "www.vanboss.work",
-            "server_port": 56565,
-            "uuid": "cfa392db-7445-4aa6-964f-2a3e20103936",
+            "server": "tunnyl.ru",
+            "server_port": 443,
+            "uuid": "48ca5947-d3b7-4716-b51a-ef1df1c47ecc",
             "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "www.samsung.com",
+                "server_name": "yahoo.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "safari"
+                    "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "59iI-5g0yQ3r6ZaoBOQSWOCnMw6_t_q0oS4gXngXhW0",
-                    "short_id": "2e3b0488"
+                    "public_key": "suqEZ-Y0ekSa7F_zGFeRhCLIJqZbnmBbnZJ-zYT7iQI",
+                    "short_id": "5c0333ed45b1"
                 }
             }
         },
@@ -1748,7 +1748,7 @@
             }
         },
         {
-            "tag": "🇯🇵 JP | 🟢 | vless | @v2rayngrit | 14",
+            "tag": "🇸🇬 SG | 🟢 | vless | @v2rayngrit | 14",
             "type": "vless",
             "server": "amazon-4.cristiano.name.ng",
             "server_port": 443,

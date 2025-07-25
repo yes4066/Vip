@@ -93,6 +93,7 @@
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 9",
                 "🇫🇮 FI | 🟢 | vless | @appsooner | 11",
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 10",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 25",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 9",
@@ -207,6 +208,7 @@
                 "🇮🇪 IE | 🟢 | vless | @appsooner | 9",
                 "🇫🇮 FI | 🟢 | vless | @appsooner | 11",
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 10",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 25",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 9",
@@ -414,6 +416,33 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 25",
+            "type": "vless",
+            "server": "91.99.195.6",
+            "server_port": 80,
+            "uuid": "91a5d5b3-4b88-4359-aeec-e1532f535fd6",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "ZO276Z5WXIqCmNLXT8Lewzjhhgm365JUJXAKyKq8Rz4",
+                    "short_id": "bc063769cb"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "refersion.com"
             }
         },
         {
