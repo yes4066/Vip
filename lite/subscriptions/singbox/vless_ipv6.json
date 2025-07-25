@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "❔ XX | 🔴 | vless | @freevpnatm | 19",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 10",
                 "❔ XX | 🔴 | vless | @internet_nor | 2",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 10",
@@ -100,6 +101,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "❔ XX | 🔴 | vless | @freevpnatm | 19",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 10",
                 "❔ XX | 🔴 | vless | @internet_nor | 2",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 10",
@@ -113,6 +115,31 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "❔ XX | 🔴 | vless | @freevpnatm | 19",
+            "type": "vless",
+            "server": "[2606:4700:3034::ac43:d09b]",
+            "server_port": 443,
+            "uuid": "da128246-33b0-4c88-a44e-d91e9e0a1e05",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "[2606:4700:3034::ac43:d09b]",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "[2606:4700:3034::ac43:d09b]"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🔴 | vless | @freevv2rayng | 10",

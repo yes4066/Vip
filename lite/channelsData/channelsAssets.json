@@ -705,9 +705,9 @@
     },
     "freevpnatm": {
         "types": [
+            "trojan",
             "vless",
-            "vmess",
-            "trojan"
+            "vmess"
         ],
         "title": "科學上网 free configs",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/freevpnatm.jpg"
@@ -882,8 +882,8 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
             "trojan",
+            "ss",
             "vmess",
             "vless"
         ],
