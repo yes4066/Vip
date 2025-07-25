@@ -876,10 +876,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "vless",
-            "vmess",
+            "ss",
             "trojan",
-            "ss"
+            "vmess",
+            "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -2130,13 +2130,6 @@
         "title": "V2ray Extractor",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_extractor.jpg"
     },
-    "v2ray_fd": {
-        "types": [
-            "vmess"
-        ],
-        "title": "فیلترشکن کانفیگ رایگان v2ray",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_fd.jpg"
-    },
     "v2ray_inter": {
         "types": [
             "vless",
@@ -2532,8 +2525,8 @@
     },
     "vpn_ioss": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "کانفیگ سرور V2rayng🔐",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vpn_ioss.jpg"
@@ -2661,8 +2654,8 @@
     },
     "vpnv2rayngv": {
         "types": [
-            "vless",
             "ss",
+            "vless",
             "vmess"
         ],
         "title": "کانفینگ پروکسی وی توری نت ملی اسکوئید گیم خرید سرورفیلترشکن بازی مرکب وی پی ان اسکویید گیم ایران vpn v2rayNG vmess vless proxy",

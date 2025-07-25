@@ -104,8 +104,7 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
-                "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
-                "🇳🇱 NL | 🟢 | vless | @vpnv2rayngv | 22"
+                "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -128,8 +127,7 @@
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🟢 | vless | @noforcedheaven | 16",
-                "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
-                "🇳🇱 NL | 🟢 | vless | @vpnv2rayngv | 22"
+                "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -343,24 +341,6 @@
             "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @vpnv2rayngv | 22",
-            "type": "vless",
-            "server": "statue.lnmarketplace.net",
-            "server_port": 443,
-            "uuid": "7c63f43f-f526-49bb-b5c8-2be26e11ef00",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "statue.lnmarketplace.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
         }
     ],
     "route": {
