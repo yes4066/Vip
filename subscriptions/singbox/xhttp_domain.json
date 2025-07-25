@@ -91,7 +91,9 @@
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+                "🇷🇺 RU | 🟢 | vless | @configfa | 15",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
+                "🇩🇪 DE | 🔴 | vless | @configshubplus | 11",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -114,10 +116,10 @@
                 "🇺🇸 US | 🔴 | vless | @turboo_server | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
-                "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
+                "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 4",
                 "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
-                "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 14",
+                "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 13",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
             ],
             "tag": "proxy",
@@ -128,7 +130,9 @@
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+                "🇷🇺 RU | 🟢 | vless | @configfa | 15",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
+                "🇩🇪 DE | 🔴 | vless | @configshubplus | 11",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -151,10 +155,10 @@
                 "🇺🇸 US | 🔴 | vless | @turboo_server | 6",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
-                "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
+                "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 4",
                 "🇫🇮 FI | 🟢 | vless | @vistav2ray | 10",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
-                "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 14",
+                "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 13",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
             ],
             "tag": "auto",
@@ -199,11 +203,43 @@
             }
         },
         {
+            "tag": "🇷🇺 RU | 🟢 | vless | @configfa | 15",
+            "type": "vless",
+            "server": "ru2.asc-sam.ir",
+            "server_port": 8443,
+            "uuid": "7715f3b0-9661-4c92-8b32-1c4c1f79bb5c",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "journalofbigdata.springeropen.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "VuL69lz3WqpGe-rhAvd2-M2-KaZpG10iDu71aTVMx2Y",
+                    "short_id": "d3044a6aa923a9"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @configscenter | 2",
             "type": "vless",
             "server": "2sudo.winapp3.ir",
             "server_port": 80,
             "uuid": "5b0e1347-1e9b-4b83-a27b-468e3dafb69b",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @configshubplus | 11",
+            "type": "vless",
+            "server": "s1.1dnt.k-l.cloud",
+            "server_port": 80,
+            "uuid": "f353fbf3-b6a1-4524-b916-f65bc077511f",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -415,7 +451,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
+            "tag": "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 4",
             "type": "vless",
             "server": "statue.lnmarketplace.net",
             "server_port": 443,
@@ -465,7 +501,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 14",
+            "tag": "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 13",
             "type": "vless",
             "server": "EVAY_VPN.fast.hosting-ip.com",
             "server_port": 80,
