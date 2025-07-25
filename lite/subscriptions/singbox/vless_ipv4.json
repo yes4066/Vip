@@ -133,6 +133,7 @@
                 "🇺🇸 US | 🟢 | vless | @limootuursh | 0",
                 "🇮🇷 IR | 🔴 | vless | @loatvpn | 5",
                 "🇩🇪 DE | 🔴 | vless | @lombo_channel | 3",
+                "🇨🇿 CZ | 🟢 | vless | @lranonline_new | 9",
                 "🇺🇸 US | 🟢 | vless | @mahdivpn2 | 4",
                 "🇺🇸 US | 🔴 | vless | @manstervpn | 75",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -182,7 +183,7 @@
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
+                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 13",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -244,6 +245,7 @@
                 "🇺🇸 US | 🟢 | vless | @limootuursh | 0",
                 "🇮🇷 IR | 🔴 | vless | @loatvpn | 5",
                 "🇩🇪 DE | 🔴 | vless | @lombo_channel | 3",
+                "🇨🇿 CZ | 🟢 | vless | @lranonline_new | 9",
                 "🇺🇸 US | 🟢 | vless | @mahdivpn2 | 4",
                 "🇺🇸 US | 🔴 | vless | @manstervpn | 75",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
@@ -293,7 +295,7 @@
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
+                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 13",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -1076,6 +1078,33 @@
                     "enabled": true,
                     "fingerprint": "chrome"
                 }
+            }
+        },
+        {
+            "tag": "🇨🇿 CZ | 🟢 | vless | @lranonline_new | 9",
+            "type": "vless",
+            "server": "194.182.79.64",
+            "server_port": 14075,
+            "uuid": "f03e6b46-c993-478f-8523-075399595735",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "SRnfc3hHwI25Yz7EpNkYe6dGzH5UN4JoQa7FExTythI",
+                    "short_id": "99d6eba91e81"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
             }
         },
         {
@@ -1932,9 +1961,9 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vlessconfig | 13",
             "type": "vless",
-            "server": "3.123.67.61",
+            "server": "63.178.129.186",
             "server_port": 22224,
             "uuid": "05519058-d2ac-4f28-9e4a-2b2a1386749e",
             "flow": "",

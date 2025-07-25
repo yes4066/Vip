@@ -114,7 +114,7 @@
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "❔ XX | 🔴 | vless | @elitevpnv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
-                "🇳🇱 NL | 🟢 | vless | @farahvpn | 19",
+                "🇺🇸 US | 🟢 | vless | @farahvpn | 19",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "❔ XX | 🟢 | vless | @flash_proxies | 0",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
@@ -244,7 +244,7 @@
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "❔ XX | 🔴 | vless | @elitevpnv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
-                "🇳🇱 NL | 🟢 | vless | @farahvpn | 19",
+                "🇺🇸 US | 🟢 | vless | @farahvpn | 19",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 7",
                 "❔ XX | 🟢 | vless | @flash_proxies | 0",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
@@ -725,30 +725,28 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @farahvpn | 19",
+            "tag": "🇺🇸 US | 🟢 | vless | @farahvpn | 19",
             "type": "vless",
-            "server": "server2.fergalvpnmod.com",
-            "server_port": 25126,
-            "uuid": "bab6b157-a6e8-4756-a485-dcb4ca476eb9",
-            "flow": "xtls-rprx-vision",
+            "server": "www.visa.com.sg",
+            "server_port": 2087,
+            "uuid": "90c7ad5e-cd15-4314-b39b-aeabd397d592",
+            "flow": "",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "cloudflare.com",
+                "server_name": "vl.hongkong6.qzz.io",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "AtKTc84OxbQltdeNKIgGRpUBmO1nKRCyqV6OuZmGIik",
-                    "short_id": "1e"
                 }
             },
             "transport": {
-                "type": "grpc",
-                "service_name": "Telegram:@FergalVpnMod"
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "vl.hongkong6.qzz.io"
+                }
             }
         },
         {
