@@ -88,14 +88,17 @@
         {
             "outbounds": [
                 "auto",
-                "direct"
+                "direct",
+                "❔ XX | 🟢 | hy2 | @filter_breaker | 43"
             ],
             "tag": "proxy",
             "type": "selector"
         },
         {
             "interval": "10m",
-            "outbounds": [],
+            "outbounds": [
+                "❔ XX | 🟢 | hy2 | @filter_breaker | 43"
+            ],
             "tag": "auto",
             "tolerance": 50,
             "type": "urltest",
@@ -104,6 +107,25 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "❔ XX | 🟢 | hy2 | @filter_breaker | 43",
+            "type": "hysteria2",
+            "server": "nlnl.yinheyz.cfd",
+            "server_port": 33856,
+            "password": "ecb6728b-70e5-4b01-8cc1-19d6ffc84858",
+            "obfs": {
+                "type": "salamander",
+                "password": "ZDQxZDhjZDk4ZjAwYjIwNA=="
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "nlnl.yinheyz.cfd",
+                "insecure": true,
+                "alpn": [
+                    "h3"
+                ]
+            }
         }
     ],
     "route": {

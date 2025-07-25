@@ -97,7 +97,6 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇱🇰 LK | 🟢 | vless | @config_proxy | 32",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -124,7 +123,7 @@
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇮🇪 IE | 🟢 | vless | @netmellianti | 12",
+                "🇩🇪 DE | 🟢 | vless | @netmellianti | 11",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
@@ -164,7 +163,7 @@
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
                 "❔ XX | 🟢 | vless | @vp22ray | 9",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
-                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 15",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
                 "❔ XX | 🟢 | vless | @webshecan | 9",
                 "❔ XX | 🟢 | vless | @webshecan | 10",
                 "❔ XX | 🟢 | vless | @webshecan | 11",
@@ -188,7 +187,6 @@
                 "❔ XX | 🟢 | vless | @buffalo_vpn | 5",
                 "❔ XX | 🟢 | vless | @canfing_vpn | 17",
                 "❔ XX | 🟢 | vless | @catvpns | 10",
-                "🇱🇰 LK | 🟢 | vless | @config_proxy | 32",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇩🇪 DE | 🟢 | vless | @configfa | 17",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
@@ -215,7 +213,7 @@
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇮🇪 IE | 🟢 | vless | @netmellianti | 12",
+                "🇩🇪 DE | 🟢 | vless | @netmellianti | 11",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "❔ XX | 🟢 | vless | @persian_proxy6 | 0",
@@ -255,7 +253,7 @@
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
                 "❔ XX | 🟢 | vless | @vp22ray | 9",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
-                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 15",
+                "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
                 "❔ XX | 🟢 | vless | @webshecan | 9",
                 "❔ XX | 🟢 | vless | @webshecan | 10",
                 "❔ XX | 🟢 | vless | @webshecan | 11",
@@ -464,29 +462,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns@CatVpns"
-            }
-        },
-        {
-            "tag": "🇱🇰 LK | 🟢 | vless | @config_proxy | 32",
-            "type": "vless",
-            "server": "direct.yasharteam.com",
-            "server_port": 443,
-            "uuid": "58f72541-e3f3-489f-9258-dd335ca24ba1",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "tgju.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "tw6uAbjXzRSIKChb6pDbHVNjnU9Don4hbv6dHRkmJx8",
-                    "short_id": "e54b5ad736ae4c38"
-                }
             }
         },
         {
@@ -1163,7 +1138,7 @@
             }
         },
         {
-            "tag": "🇮🇪 IE | 🟢 | vless | @netmellianti | 12",
+            "tag": "🇩🇪 DE | 🟢 | vless | @netmellianti | 11",
             "type": "vless",
             "server": "amazon-15.cristiano.name.ng",
             "server_port": 443,
@@ -2111,7 +2086,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 15",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vpnplusee_free | 14",
             "type": "vless",
             "server": "carrot.bitiboot.com",
             "server_port": 443,
