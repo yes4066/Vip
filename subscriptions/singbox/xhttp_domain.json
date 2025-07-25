@@ -90,8 +90,9 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
-                "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+                "🏳️  | 🟢 | vless | @canfing_vpn | 17",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
+                "🇺🇸 US | 🔴 | vless | @configshubplus | 13",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -124,8 +125,9 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @appsooner | 7",
-                "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+                "🏳️  | 🟢 | vless | @canfing_vpn | 17",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
+                "🇺🇸 US | 🔴 | vless | @configshubplus | 13",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 9",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 12",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
@@ -170,7 +172,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "❔ XX | 🟢 | vless | @canfing_vpn | 17",
+            "tag": "🏳️  | 🟢 | vless | @canfing_vpn | 17",
             "type": "vless",
             "server": "de6rt.samsungmarketshop.ir",
             "server_port": 2083,
@@ -198,6 +200,15 @@
             "server": "2sudo.winapp3.ir",
             "server_port": 80,
             "uuid": "5b0e1347-1e9b-4b83-a27b-468e3dafb69b",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @configshubplus | 13",
+            "type": "vless",
+            "server": "EVAY_VPN.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "41f52408-143d-40ba-8e09-82df8b72a6d0",
             "flow": "",
             "packet_encoding": "xudp"
         },
