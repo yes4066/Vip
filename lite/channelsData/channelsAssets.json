@@ -876,10 +876,10 @@
     },
     "ip_cf_config": {
         "types": [
-            "ss",
-            "trojan",
             "vmess",
-            "vless"
+            "ss",
+            "vless",
+            "trojan"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1007,9 +1007,9 @@
     },
     "jiedianssr": {
         "types": [
-            "vmess",
             "vless",
             "trojan",
+            "vmess",
             "ss"
         ],
         "title": "ssr 小火箭 免费节点",
@@ -1352,8 +1352,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vmess",
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"

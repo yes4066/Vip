@@ -91,8 +91,8 @@
                 "direct",
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 15",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇭🇰 HK | 🔴 | trojan | @hope_net | 15",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -113,8 +113,8 @@
             "outbounds": [
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
+                "🇫🇷 FR | 🟢 | trojan | @configshubplus | 15",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "🇭🇰 HK | 🔴 | trojan | @hope_net | 15",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -174,14 +174,14 @@
             }
         },
         {
-            "tag": "❔ XX | 🟢 | trojan | @fati_ffx | 1",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @configshubplus | 15",
             "type": "trojan",
-            "server": "t3.teslacdn2.live",
-            "server_port": 443,
-            "password": "e1c12e6f-a555-4ff8-b071-1e09dd5d91e6",
+            "server": "srwes1-confeg.sbs",
+            "server_port": 56679,
+            "password": "4ad0f58ba916627",
             "tls": {
                 "enabled": true,
-                "server_name": "t3.teslacdn2.live",
+                "server_name": "srwes1-confeg.sbs",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -190,14 +190,14 @@
             }
         },
         {
-            "tag": "🇭🇰 HK | 🔴 | trojan | @hope_net | 15",
+            "tag": "❔ XX | 🟢 | trojan | @fati_ffx | 1",
             "type": "trojan",
-            "server": "usla.mjt000.com",
+            "server": "t3.teslacdn2.live",
             "server_port": 443,
-            "password": "1ba48a0e-af2e-45fb-9e15-2b2d4134657c",
+            "password": "e1c12e6f-a555-4ff8-b071-1e09dd5d91e6",
             "tls": {
                 "enabled": true,
-                "server_name": "usla.mjt000.com",
+                "server_name": "t3.teslacdn2.live",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
