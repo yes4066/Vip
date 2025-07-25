@@ -98,7 +98,8 @@
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2raying | 13",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14"
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
+                "❔ XX | 🔴 | trojan | @freevpnatm | 19"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -115,7 +116,8 @@
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2raying | 13",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14"
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
+                "❔ XX | 🔴 | trojan | @freevpnatm | 19"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -308,6 +310,29 @@
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "❔ XX | 🔴 | trojan | @freevpnatm | 19",
+            "type": "trojan",
+            "server": "[2606:4700:3030::6815:6001]",
+            "server_port": 443,
+            "password": "e4cbe8b8-37db-4aaa-8469-b84f34c51ebc",
+            "tls": {
+                "enabled": true,
+                "server_name": "[2606:4700:3030::6815:6001]",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "[2606:4700:3030::6815:6001]"
                 }
             }
         }

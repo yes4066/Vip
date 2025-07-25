@@ -99,6 +99,7 @@
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 12",
+                "🇺🇸 US | 🔴 | vless | @evay_vpn | 13",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 3",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 5",
@@ -112,6 +113,7 @@
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
+                "🇺🇸 US | 🔴 | vless | @v2raych | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
@@ -132,6 +134,7 @@
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 12",
+                "🇺🇸 US | 🔴 | vless | @evay_vpn | 13",
                 "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 3",
                 "🇺🇸 US | 🔴 | vless | @fastshovpn | 5",
@@ -145,6 +148,7 @@
                 "🇺🇸 US | 🟢 | vless | @sharecentrepro | 1",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
+                "🇺🇸 US | 🔴 | vless | @v2raych | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 3",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4"
@@ -263,9 +267,18 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
+            "tag": "🇺🇸 US | 🔴 | vless | @evay_vpn | 13",
             "type": "vless",
             "server": "Evay-vpn.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "bb57d265-b716-4092-bd0a-68f3988db63c",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
+            "type": "vless",
+            "server": "Evay_vpn.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "bb57d265-b716-4092-bd0a-68f3988db63c",
             "flow": "",
@@ -385,6 +398,15 @@
             "server": "viop.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "11f0eeb6-c9e9-49c7-8eda-7ee1a4904e9b",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | vless | @v2raych | 16",
+            "type": "vless",
+            "server": "EVAY_VPN.fast.hosting-ip.com",
+            "server_port": 80,
+            "uuid": "41f52408-143d-40ba-8e09-82df8b72a6d0",
             "flow": "",
             "packet_encoding": "xudp"
         },
