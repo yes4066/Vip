@@ -154,6 +154,7 @@
                 "🇺🇸 US | 🟢 | vless | @ntconfig | 0",
                 "🇮🇷 IR | 🔴 | vless | @orgempirenet | 1",
                 "🇳🇱 NL | 🔴 | vless | @outline_ir | 19",
+                "🇺🇸 US | 🟢 | vless | @outlinev2rayng | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇮🇷 IR | 🔴 | vless | @pusyvpn | 9",
@@ -176,12 +177,12 @@
                 "🇳🇱 NL | 🔴 | vless | @v2rayprotocol | 11",
                 "🇩🇪 DE | 🔴 | vless | @v2rayvmess | 17",
                 "🇺🇸 US | 🟢 | vless | @v2source | 19",
-                "🇳🇱 NL | 🟢 | vless | @v2trayproxy | 10",
+                "🇺🇸 US | 🔴 | vless | @v2trayproxy | 13",
                 "🇺🇸 US | 🟢 | vless | @vaiking_vpn | 0",
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇫🇷 FR | 🟢 | vless | @vlessconfig | 15",
+                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -264,6 +265,7 @@
                 "🇺🇸 US | 🟢 | vless | @ntconfig | 0",
                 "🇮🇷 IR | 🔴 | vless | @orgempirenet | 1",
                 "🇳🇱 NL | 🔴 | vless | @outline_ir | 19",
+                "🇺🇸 US | 🟢 | vless | @outlinev2rayng | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇮🇷 IR | 🔴 | vless | @pusyvpn | 9",
@@ -286,12 +288,12 @@
                 "🇳🇱 NL | 🔴 | vless | @v2rayprotocol | 11",
                 "🇩🇪 DE | 🔴 | vless | @v2rayvmess | 17",
                 "🇺🇸 US | 🟢 | vless | @v2source | 19",
-                "🇳🇱 NL | 🟢 | vless | @v2trayproxy | 10",
+                "🇺🇸 US | 🔴 | vless | @v2trayproxy | 13",
                 "🇺🇸 US | 🟢 | vless | @vaiking_vpn | 0",
                 "🇺🇸 US | 🔴 | vless | @vaslbemmonid | 5",
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
-                "🇫🇷 FR | 🟢 | vless | @vlessconfig | 15",
+                "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -1417,6 +1419,31 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | vless | @outlinev2rayng | 11",
+            "type": "vless",
+            "server": "172.66.44.253",
+            "server_port": 8443,
+            "uuid": "efed37ed-37e5-4100-a540-049dc7929984",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "net-aCcOUNt02.Pages.DEv",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/dy26vBaDi5RTblzP?ed=2560",
+                "headers": {
+                    "Host": "net-aCcOUNt02.Pages.DEv"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | vless | @proxie | 15",
             "type": "vless",
             "server": "188.114.97.3",
@@ -1805,25 +1832,18 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @v2trayproxy | 10",
+            "tag": "🇺🇸 US | 🔴 | vless | @v2trayproxy | 13",
             "type": "vless",
-            "server": "45.150.33.157",
-            "server_port": 50810,
-            "uuid": "1ea87307-1d00-4c15-af3f-b363f8562ac5",
-            "flow": "xtls-rprx-vision",
+            "server": "172.66.40.99",
+            "server_port": 8080,
+            "uuid": "4390049a-814c-4a60-a6a5-0ce8d0c87c55",
+            "flow": "",
             "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zhaket.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "J0pRUeUHMS_olwz0xLOMJxIxe-DhsCZA3qnAMRC4zTg",
-                    "short_id": "aa60a00122200b76"
+            "transport": {
+                "type": "ws",
+                "path": "/telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE,telegram-CONFiGLiNE?ed=80",
+                "headers": {
+                    "Host": "172.66.40.99"
                 }
             }
         },
@@ -1912,9 +1932,9 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | vless | @vlessconfig | 15",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vlessconfig | 15",
             "type": "vless",
-            "server": "35.181.218.101",
+            "server": "3.123.67.61",
             "server_port": 22224,
             "uuid": "05519058-d2ac-4f28-9e4a-2b2a1386749e",
             "flow": "",
