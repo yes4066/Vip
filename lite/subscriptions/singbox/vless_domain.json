@@ -168,6 +168,7 @@
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
+                "🇺🇸 US | 🔴 | vless | @outline_ir | 18",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
@@ -183,13 +184,12 @@
                 "🇮🇷 IR | 🔴 | vless | @tobevasl | 16",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇺🇸 US | 🟢 | vless | @v2logy | 10",
-                "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
+                "🇺🇸 US | 🔴 | vless | @v2pedia | 6",
                 "❔ XX | 🔴 | vless | @v2raxx | 9",
                 "🇺🇸 US | 🔴 | vless | @v2ray_extractor | 19",
                 "🇺🇸 US | 🟢 | vless | @v2ray_reality_new | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
-                "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 8",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -206,6 +206,7 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
+                "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 3",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "❔ XX | 🔴 | vless | @womanlifefreedomvpn | 16",
@@ -297,6 +298,7 @@
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
+                "🇺🇸 US | 🔴 | vless | @outline_ir | 18",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
@@ -312,13 +314,12 @@
                 "🇮🇷 IR | 🔴 | vless | @tobevasl | 16",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "🇺🇸 US | 🟢 | vless | @v2logy | 10",
-                "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
+                "🇺🇸 US | 🔴 | vless | @v2pedia | 6",
                 "❔ XX | 🔴 | vless | @v2raxx | 9",
                 "🇺🇸 US | 🔴 | vless | @v2ray_extractor | 19",
                 "🇺🇸 US | 🟢 | vless | @v2ray_reality_new | 8",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "❔ XX | 🟢 | vless | @v2raycollectordonate | 8",
-                "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 8",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "🇺🇸 US | 🔴 | vless | @v2rayngalpha | 6",
                 "🇮🇷 IR | 🟢 | vless | @v2rayngc | 18",
@@ -335,6 +336,7 @@
                 "🇮🇷 IR | 🔴 | vless | @vpnfree85 | 0",
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
+                "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 3",
                 "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "❔ XX | 🔴 | vless | @womanlifefreedomvpn | 16",
@@ -1682,6 +1684,22 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @outline_ir | 18",
+            "type": "vless",
+            "server": "crazy-identity.oneeat.co",
+            "server_port": 80,
+            "uuid": "64d6d0d4-3706-4837-b154-cda2816adcc5",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "crazy-identity.oneeat.co"
+                }
+            }
+        },
+        {
             "tag": "❔ XX | 🔴 | vless | @proxy48 | 14",
             "type": "vless",
             "server": "www.forcepower.monster",
@@ -1937,7 +1955,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2pedia | 7",
+            "tag": "🇺🇸 US | 🔴 | vless | @v2pedia | 6",
             "type": "vless",
             "server": "www.speedtest.net",
             "server_port": 80,
@@ -2037,24 +2055,6 @@
                 "path": "/",
                 "headers": {
                     "Host": "ShhProxyFreViP.xn--85-pv2cl2k5x3fipr.org."
-                }
-            }
-        },
-        {
-            "tag": "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 8",
-            "type": "vless",
-            "server": "statue.lnmarketplace.net",
-            "server_port": 443,
-            "uuid": "7c63f43f-f526-49bb-b5c8-2be26e11ef00",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "statue.lnmarketplace.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
                 }
             }
         },
@@ -2361,6 +2361,31 @@
             "uuid": "0eab9ab8-d0f0-4823-8af9-d1f95db842e8",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 3",
+            "type": "vless",
+            "server": "www.visa.com.sg",
+            "server_port": 2087,
+            "uuid": "90c7ad5e-cd15-4314-b39b-aeabd397d592",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "vl.hongkong6.qzz.io",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "vl.hongkong6.qzz.io"
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | vless | @vpnwlf | 10",

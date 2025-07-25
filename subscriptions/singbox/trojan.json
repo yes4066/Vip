@@ -92,8 +92,6 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 11",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 15",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -112,8 +110,9 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
                 "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -123,7 +122,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 16",
+                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 15",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -145,8 +144,6 @@
                 "❔ XX | 🟢 | trojan | @armodchannel | 59",
                 "❔ XX | 🔴 | trojan | @armodchannel | 60",
                 "❔ XX | 🟢 | trojan | @fati_ffx | 1",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 11",
-                "❔ XX | 🔴 | trojan | @ip_cf_config | 15",
                 "❔ XX | 🟢 | trojan | @iraniv2ray | 3",
                 "❔ XX | 🟢 | trojan | @jiedianf | 3",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 4",
@@ -165,8 +162,9 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
+                "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
                 "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+                "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -176,7 +174,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 14",
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
-                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 16",
+                "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 15",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -244,29 +242,6 @@
             "tls": {
                 "enabled": true,
                 "server_name": "t3.teslacdn2.live",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 11",
-            "type": "trojan",
-            "server": "13c2c931-swin40-swy6li-tni2.cu.plebai.net",
-            "server_port": 15229,
-            "password": "5e2f888c-68ef-11ef-96ca-f23c9164ca5d"
-        },
-        {
-            "tag": "❔ XX | 🔴 | trojan | @ip_cf_config | 15",
-            "type": "trojan",
-            "server": "stirring-parakeet.shiner427.skin",
-            "server_port": 443,
-            "password": "74260628090146500",
-            "tls": {
-                "enabled": true,
-                "server_name": "stirring-parakeet.shiner427.skin",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -604,23 +579,7 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 16",
-            "type": "trojan",
-            "server": "104.16.223.254",
-            "server_port": 443,
-            "password": "blue2024",
-            "tls": {
-                "enabled": true,
-                "server_name": "hb.lii2010.us.kg",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            }
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 17",
             "type": "trojan",
             "server": "190.93.244.159",
             "server_port": 443,
@@ -639,6 +598,45 @@
                 "path": "/",
                 "headers": {
                     "Host": "hb.lii2010.us.kg"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 19",
+            "type": "trojan",
+            "server": "198.41.205.148",
+            "server_port": 443,
+            "password": "NISHIKUITAN111",
+            "tls": {
+                "enabled": true,
+                "server_name": "198.41.205.148",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | trojan | @ip_cf_config | 13",
+            "type": "trojan",
+            "server": "104.25.165.81",
+            "server_port": 8443,
+            "password": "123456",
+            "tls": {
+                "enabled": true,
+                "server_name": "top-azx.pages.dev",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Az1.vpn.33.TOP/?ed=2560",
+                "headers": {
+                    "Host": "top-azx.pages.dev"
                 }
             }
         },
@@ -794,7 +792,7 @@
             }
         },
         {
-            "tag": "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 16",
+            "tag": "🇫🇷 FR | 🟢 | trojan | @v2ray_free_conf | 15",
             "type": "trojan",
             "server": "13.39.102.149",
             "server_port": 22222,
