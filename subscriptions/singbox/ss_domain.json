@@ -91,6 +91,7 @@
                 "direct",
                 "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
+                "🇦🇪 AE | 🟢 | ss | @configshubplus | 16",
                 "🇬🇧 GB | 🟢 | ss | @dalton_ping | 6",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
@@ -99,9 +100,10 @@
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 1",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
+                "🇹🇷 TR | 🟢 | ss | @outline_ir | 13",
                 "🇺🇸 US | 🟢 | ss | @outline_vpn | 23",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
-                "🇳🇱 NL | 🟢 | ss | @prrofile_purple | 126",
+                "🇳🇱 NL | 🟢 | ss | @prrofile_purple | 121",
                 "🇬🇧 GB | 🟢 | ss | @prroxyng | 0",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -122,6 +124,7 @@
             "outbounds": [
                 "🇬🇧 GB | 🟢 | ss | @ai_duet | 7",
                 "🇮🇷 IR | 🟢 | ss | @configscenter | 0",
+                "🇦🇪 AE | 🟢 | ss | @configshubplus | 16",
                 "🇬🇧 GB | 🟢 | ss | @dalton_ping | 6",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
@@ -130,9 +133,10 @@
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 1",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
+                "🇹🇷 TR | 🟢 | ss | @outline_ir | 13",
                 "🇺🇸 US | 🟢 | ss | @outline_vpn | 23",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
-                "🇳🇱 NL | 🟢 | ss | @prrofile_purple | 126",
+                "🇳🇱 NL | 🟢 | ss | @prrofile_purple | 121",
                 "🇬🇧 GB | 🟢 | ss | @prroxyng | 0",
                 "❔ XX | 🟢 | ss | @public504 | 7",
                 "❔ XX | 🟢 | ss | @public504 | 8",
@@ -169,6 +173,14 @@
             "server_port": 10107,
             "method": "aes-256-gcm",
             "password": "M2E4ZGY2ZjI5MzU2ODAxMjEwYzgyNzQ0MGM5NGUy"
+        },
+        {
+            "tag": "🇦🇪 AE | 🟢 | ss | @configshubplus | 16",
+            "type": "shadowsocks",
+            "server": "ae-1.stunnel.cc",
+            "server_port": 8444,
+            "method": "chacha20-ietf-poly1305",
+            "password": "tunnel-astrovpn_official_ae"
         },
         {
             "tag": "🇬🇧 GB | 🟢 | ss | @dalton_ping | 6",
@@ -235,6 +247,14 @@
             "password": "WstuSnlu4ieA9M0L"
         },
         {
+            "tag": "🇹🇷 TR | 🟢 | ss | @outline_ir | 13",
+            "type": "shadowsocks",
+            "server": "tr.vpnsparta.pro",
+            "server_port": 57456,
+            "method": "chacha20-ietf-poly1305",
+            "password": "c40641c1f89e7acb"
+        },
+        {
             "tag": "🇺🇸 US | 🟢 | ss | @outline_vpn | 23",
             "type": "shadowsocks",
             "server": "beesyar.org",
@@ -251,7 +271,7 @@
             "password": "u17T3BvpYaaiuW2c"
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | ss | @prrofile_purple | 126",
+            "tag": "🇳🇱 NL | 🟢 | ss | @prrofile_purple | 121",
             "type": "shadowsocks",
             "server": "h110vpnnl.outlinekeys.net",
             "server_port": 52571,
