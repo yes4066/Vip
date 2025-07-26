@@ -94,6 +94,7 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇭🇺 HU | 🟢 | vless | @freakconfig | 17",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
+                "🇨🇿 CZ | 🟢 | vless | @freevpnatm | 17",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
@@ -112,7 +113,6 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇬🇧 GB | 🟢 | vless | @free1_vpn | 6",
-                "🇸🇬 SG | 🟢 | vless | @freevpnatm | 19",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -139,6 +139,7 @@
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇭🇺 HU | 🟢 | vless | @freakconfig | 17",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
+                "🇨🇿 CZ | 🟢 | vless | @freevpnatm | 17",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
                 "🇫🇷 FR | 🟢 | vless | @ip_ramzi | 11",
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
@@ -157,7 +158,6 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇬🇧 GB | 🟢 | vless | @free1_vpn | 6",
-                "🇸🇬 SG | 🟢 | vless | @freevpnatm | 19",
                 "❔ XX | 🟢 | vless | @fsv2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @itv2ray | 29",
@@ -299,6 +299,33 @@
                     "public_key": "GGlKs0cQDaQoDkiDlpeIWE-h0K3ohsHr7u9B3A9GODU",
                     "short_id": "17ce7de25d262bbe"
                 }
+            }
+        },
+        {
+            "tag": "🇨🇿 CZ | 🟢 | vless | @freevpnatm | 17",
+            "type": "vless",
+            "server": "194.182.79.142",
+            "server_port": 11746,
+            "uuid": "f278037e-ce36-4634-9b4d-fca93e345a35",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "sourceforge.net",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "PY9ZPXQhuNSjQAaiSl5GL9-TiXHnILEcNeYEAejv7jw",
+                    "short_id": "c0f6f8b4"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
             }
         },
         {
@@ -737,33 +764,6 @@
                     "public_key": "_N3KecwB9Ck28IIMxIck00ivkq3_ZEUvU3KXELnfvHw",
                     "short_id": "e1afb93bfe75a34b"
                 }
-            }
-        },
-        {
-            "tag": "🇸🇬 SG | 🟢 | vless | @freevpnatm | 19",
-            "type": "vless",
-            "server": "sg002.421421.xyz",
-            "server_port": 20230,
-            "uuid": "8d3b917e-6520-4725-b284-a369f14a5315",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.nvidia.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "1cs7mxEcoVKwcYepAnKgqHAFhRxPv6aO3tv7lNhwLDQ",
-                    "short_id": "46bf6ea0"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "tj"
             }
         },
         {

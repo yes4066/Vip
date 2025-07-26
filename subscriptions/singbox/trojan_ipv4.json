@@ -96,7 +96,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
+                "🇭🇰 HK | 🟢 | trojan | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -107,6 +107,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 17",
+                "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 18",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -132,7 +133,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @directvpn | 15",
                 "🇩🇪 DE | 🟢 | trojan | @flyv2ray | 6",
                 "🇩🇪 DE | 🔴 | trojan | @freev2raym | 7",
-                "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
+                "🇭🇰 HK | 🟢 | trojan | @hope_net | 19",
                 "🇫🇷 FR | 🟢 | trojan | @jiedianf | 5",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @mt_proxy | 6",
@@ -143,6 +144,7 @@
                 "🇫🇷 FR | 🟢 | trojan | @privatevpns | 15",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 17",
+                "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 18",
                 "🇩🇪 DE | 🟢 | trojan | @v2rayngconfig | 42",
                 "🇨🇦 CA | 🟢 | trojan | @v2rayngconfig | 43",
                 "🇫🇷 FR | 🟢 | trojan | @v2rayngconfig | 44",
@@ -268,14 +270,14 @@
             "password": "ziIjOlyGbM"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | trojan | @hope_net | 15",
+            "tag": "🇭🇰 HK | 🟢 | trojan | @hope_net | 19",
             "type": "trojan",
-            "server": "198.41.205.148",
-            "server_port": 443,
-            "password": "NISHIKUITAN111",
+            "server": "43.198.225.231",
+            "server_port": 40091,
+            "password": "3e5cb4f5-8dcf-492a-b4c8-06bc06f158bb",
             "tls": {
                 "enabled": true,
-                "server_name": "198.41.205.148",
+                "server_name": "hk12.bilibili.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
@@ -437,7 +439,23 @@
         {
             "tag": "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 17",
             "type": "trojan",
-            "server": "63.178.129.186",
+            "server": "63.178.189.3",
+            "server_port": 22222,
+            "password": "telegram-id-privatevpns",
+            "tls": {
+                "enabled": true,
+                "server_name": "trojan.burgerip.co.uk",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | trojan | @v2ray_free_conf | 18",
+            "type": "trojan",
+            "server": "3.77.178.12",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {

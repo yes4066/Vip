@@ -95,7 +95,6 @@
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 9",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇨🇿 CZ | 🟢 | vless | @configshubplus | 14",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 4",
                 "🇫🇷 FR | 🟢 | vless | @darkfiilter | 0",
@@ -124,6 +123,7 @@
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 7",
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 9",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇵🇱 PL | 🟢 | vless | @hope_net | 17",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 2",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @icv2ray | 12",
@@ -160,7 +160,7 @@
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 4",
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 5",
-                "🇨🇿 CZ | 🟢 | vless | @proxy_mtproto_vpns_free | 11",
+                "🇨🇿 CZ | 🟢 | vless | @proxy_mtproto_vpns_free | 10",
                 "🇷🇺 RU | 🟢 | vless | @proxyfn | 16",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇦🇹 AT | 🟢 | vless | @rnrifci | 2",
@@ -207,7 +207,6 @@
                 "🇨🇿 CZ | 🟢 | vless | @bored_vpn | 9",
                 "🇩🇪 DE | 🟢 | vless | @configasli | 4",
                 "🇫🇷 FR | 🟢 | vless | @configasli | 6",
-                "🇨🇿 CZ | 🟢 | vless | @configshubplus | 14",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
                 "🇩🇪 DE | 🟢 | vless | @dalton_ping | 4",
                 "🇫🇷 FR | 🟢 | vless | @darkfiilter | 0",
@@ -236,6 +235,7 @@
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 7",
                 "🇦🇪 AE | 🟢 | vless | @grizzlyvpn | 9",
                 "🇺🇸 US | 🟢 | vless | @happ_tm_official | 1",
+                "🇵🇱 PL | 🟢 | vless | @hope_net | 17",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 2",
                 "🇩🇪 DE | 🟢 | vless | @hopev2ray | 3",
                 "🇦🇪 AE | 🟢 | vless | @icv2ray | 12",
@@ -272,7 +272,7 @@
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 3",
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 4",
                 "🇩🇪 DE | 🟢 | vless | @proxy_emperor | 5",
-                "🇨🇿 CZ | 🟢 | vless | @proxy_mtproto_vpns_free | 11",
+                "🇨🇿 CZ | 🟢 | vless | @proxy_mtproto_vpns_free | 10",
                 "🇷🇺 RU | 🟢 | vless | @proxyfn | 16",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇦🇹 AT | 🟢 | vless | @rnrifci | 2",
@@ -460,33 +460,6 @@
                     "public_key": "PTlW40u-tHGDlObhSKFN4tntrfHLgNPlHqg1oYqyY1o",
                     "short_id": "b5ecd44d"
                 }
-            }
-        },
-        {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @configshubplus | 14",
-            "type": "vless",
-            "server": "194.182.79.235",
-            "server_port": 28256,
-            "uuid": "b68ae076-1268-45f0-b82a-813732495724",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "sourceforge.net",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "JQ9ZfU_CeZbOD-vqkXuTPedLrJedK4h7Jzpffhza3EQ",
-                    "short_id": "70be4a908043"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "Join-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON"
             }
         },
         {
@@ -1190,6 +1163,29 @@
                     "enabled": true,
                     "public_key": "YqHW8a4iAc1SZYpTrFVoOQg1F3yAdX1tWXuROZUCsEU",
                     "short_id": "6ba85179e30d4fc2"
+                }
+            }
+        },
+        {
+            "tag": "🇵🇱 PL | 🟢 | vless | @hope_net | 17",
+            "type": "vless",
+            "server": "146.19.170.113",
+            "server_port": 443,
+            "uuid": "e380b385-c450-44ca-b34a-44e30ad377af",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.google.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "EsvkKogbRPn7YK-U5Rx5G5Q255VDmJMY4TU37KTVN14",
+                    "short_id": "1be095b3"
                 }
             }
         },
@@ -2097,7 +2093,7 @@
             }
         },
         {
-            "tag": "🇨🇿 CZ | 🟢 | vless | @proxy_mtproto_vpns_free | 11",
+            "tag": "🇨🇿 CZ | 🟢 | vless | @proxy_mtproto_vpns_free | 10",
             "type": "vless",
             "server": "194.182.79.142",
             "server_port": 11746,
