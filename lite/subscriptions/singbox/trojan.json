@@ -92,13 +92,13 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇩🇪 DE | 🟢 | trojan | @directvpn | 15",
-                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 17",
+                "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
+                "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 13",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
-                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 15",
+                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14"
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -109,13 +109,13 @@
                 "🇺🇸 US | 🟢 | trojan | @cryptoguardvpn | 2",
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
-                "🇩🇪 DE | 🟢 | trojan | @directvpn | 15",
-                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 17",
+                "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
+                "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 13",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
-                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 15",
+                "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
                 "🇺🇸 US | 🟢 | trojan | @v2rayngconfig | 45",
-                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14"
+                "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -186,9 +186,9 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 15",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
             "type": "trojan",
-            "server": "35.157.70.114",
+            "server": "3.120.254.90",
             "server_port": 22223,
             "password": "telegram-id-directvpn",
             "tls": {
@@ -202,27 +202,11 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | trojan | @freevpnatm | 17",
+            "tag": "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 13",
             "type": "trojan",
-            "server": "104.21.94.69",
-            "server_port": 443,
-            "password": "509ed9b7-8d64-4204-8ec8-6b749020ac3f",
-            "tls": {
-                "enabled": true,
-                "server_name": "OOO9876.000890604.xYz",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/5MkU0nARgHwk3aXBStn7",
-                "headers": {
-                    "Host": "OOO9876.000890604.xYz"
-                }
-            }
+            "server": "155.117.228.70",
+            "server_port": 26193,
+            "password": "7367d04e-4c59-4dff-a50e-12e730a09891"
         },
         {
             "tag": "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
@@ -248,9 +232,9 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @privatevpns | 15",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
             "type": "trojan",
-            "server": "35.157.70.114",
+            "server": "3.120.254.90",
             "server_port": 22222,
             "password": "telegram-id-privatevpns",
             "tls": {
@@ -296,9 +280,9 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 14",
+            "tag": "🇩🇪 DE | 🟢 | trojan | @v2rayvpnchannel | 13",
             "type": "trojan",
-            "server": "35.157.70.114",
+            "server": "3.120.254.90",
             "server_port": 22223,
             "password": "telegram-id-v2rayvpnchannel",
             "tls": {

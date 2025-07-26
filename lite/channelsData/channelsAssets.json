@@ -691,9 +691,9 @@
     },
     "freevpnatm": {
         "types": [
-            "vless",
             "trojan",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "科學上网 free configs",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/freevpnatm.jpg"
@@ -868,10 +868,10 @@
     },
     "ip_cf_config": {
         "types": [
+            "ss",
             "vless",
             "trojan",
-            "vmess",
-            "ss"
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1640,7 +1640,6 @@
     },
     "outlinev2rayng": {
         "types": [
-            "vmess",
             "vless",
             "ss"
         ],
