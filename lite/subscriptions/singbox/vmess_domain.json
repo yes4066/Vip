@@ -93,8 +93,8 @@
                 "❔ XX | 🔴 | vmess | @armodchannel | 62",
                 "❔ XX | 🟢 | vmess | @cattvpn | 0",
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
-                "🇷🇺 RU | 🟢 | vmess | @configsstore | 7",
-                "🇨🇦 CA | 🟢 | vmess | @darkfiilter | 1",
+                "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
+                "🇺🇸 US | 🟢 | vmess | @darkfiilter | 1",
                 "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
@@ -127,7 +127,7 @@
                 "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 15",
+                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 17",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -143,8 +143,8 @@
                 "❔ XX | 🔴 | vmess | @armodchannel | 62",
                 "❔ XX | 🟢 | vmess | @cattvpn | 0",
                 "❔ XX | 🔴 | vmess | @configforvpn | 9",
-                "🇷🇺 RU | 🟢 | vmess | @configsstore | 7",
-                "🇨🇦 CA | 🟢 | vmess | @darkfiilter | 1",
+                "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
+                "🇺🇸 US | 🟢 | vmess | @darkfiilter | 1",
                 "🇨🇦 CA | 🔴 | vmess | @free4allvpn | 14",
                 "🇫🇮 FI | 🔴 | vmess | @freeshadowsock | 4",
                 "🇺🇸 US | 🔴 | vmess | @freev2rays | 19",
@@ -177,7 +177,7 @@
                 "🇮🇷 IR | 🔴 | vmess | @v2rayngfast | 20",
                 "🇩🇪 DE | 🔴 | vmess | @v2rayngvpnn | 18",
                 "🇩🇪 DE | 🔴 | vmess | @vipv2rayvip | 0",
-                "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 15",
+                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 17",
                 "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",
                 "🇺🇸 US | 🟢 | vmess | @vpnv2rayonline | 10",
                 "🇩🇪 DE | 🔴 | vmess | @vpnzamin | 3",
@@ -259,7 +259,7 @@
             }
         },
         {
-            "tag": "🇷🇺 RU | 🟢 | vmess | @configsstore | 7",
+            "tag": "🇫🇷 FR | 🟢 | vmess | @configsstore | 7",
             "type": "vmess",
             "server": "193.187.175.111",
             "server_port": 8080,
@@ -275,7 +275,7 @@
             }
         },
         {
-            "tag": "🇨🇦 CA | 🟢 | vmess | @darkfiilter | 1",
+            "tag": "🇺🇸 US | 🟢 | vmess | @darkfiilter | 1",
             "type": "vmess",
             "server": "www.speedtest.net",
             "server_port": 443,
@@ -792,13 +792,20 @@
             "alter_id": 0
         },
         {
-            "tag": "🇷🇴 RO | 🔴 | vmess | @vpnfail_v2ray | 15",
+            "tag": "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 17",
             "type": "vmess",
-            "server": "5.182.37.231",
-            "server_port": 49664,
-            "uuid": "9395474c-e2a1-4565-ba56-c16e7373c4c4",
+            "server": "827f07.4c38f09e.shop",
+            "server_port": 80,
+            "uuid": "952797b6-21a0-4e66-9239-30ef5c0efcdf",
             "security": "auto",
-            "alter_id": 0
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": ""
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vmess | @vpngate_config | 18",

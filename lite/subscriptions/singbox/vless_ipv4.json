@@ -113,6 +113,7 @@
                 "🇩🇪 DE | 🔴 | vless | @filtershkan2 | 4",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇭🇺 HU | 🟢 | vless | @freakconfig | 17",
+                "🇱🇻 LV | 🔴 | vless | @free1ss | 15",
                 "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
                 "🇺🇸 US | 🔴 | vless | @freev2flyng | 17",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
@@ -184,7 +185,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇫🇷 FR | 🟢 | vless | @vlessconfig | 15",
-                "/Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=vngsupply.ip-ddns.com&type=ws#🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -225,6 +226,7 @@
                 "🇩🇪 DE | 🔴 | vless | @filtershkan2 | 4",
                 "🇬🇧 GB | 🟢 | vless | @fire_vpn_channel | 1",
                 "🇭🇺 HU | 🟢 | vless | @freakconfig | 17",
+                "🇱🇻 LV | 🔴 | vless | @free1ss | 15",
                 "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
                 "🇺🇸 US | 🔴 | vless | @freev2flyng | 17",
                 "🇬🇧 GB | 🟢 | vless | @freevlessvpn | 0",
@@ -296,7 +298,7 @@
                 "🇩🇪 DE | 🟢 | vless | @vipnetmeli | 2",
                 "🇩🇪 DE | 🟢 | vless | @vipv2rey | 39",
                 "🇫🇷 FR | 🟢 | vless | @vlessconfig | 15",
-                "/Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=vngsupply.ip-ddns.com&type=ws#🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
+                "🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
                 "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
                 "🇺🇸 US | 🟢 | vless | @vpn_ocean | 1",
                 "🇺🇸 US | 🔴 | vless | @vpn_zvpn | 13",
@@ -741,6 +743,15 @@
                     "short_id": "4ae260"
                 }
             }
+        },
+        {
+            "tag": "🇱🇻 LV | 🔴 | vless | @free1ss | 15",
+            "type": "vless",
+            "server": "37.233.82.140",
+            "server_port": 40478,
+            "uuid": "e977d854-33f3-4345-abee-bf3fa9a6d880",
+            "flow": "",
+            "packet_encoding": "xudp"
         },
         {
             "tag": "🇸🇪 SE | 🔴 | vless | @free_vip3 | 6",
@@ -1943,13 +1954,20 @@
             }
         },
         {
-            "tag": "/Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=vngsupply.ip-ddns.com&type=ws#🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
+            "tag": "🇺🇸 US | 🔴 | vless | @vmess_ir | 19",
             "type": "vless",
-            "server": "104.16.69.162",
-            "server_port": 8880,
-            "uuid": "e9979910-79d1-4621-a93c-b2a579c44ba7",
+            "server": "45.8.146.207",
+            "server_port": 80,
+            "uuid": "a6c4db3e-7785-429e-8bc5-9eaf7b1a79b1",
             "flow": "",
-            "packet_encoding": "xudp"
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/vless/",
+                "headers": {
+                    "Host": "45.8.146.207"
+                }
+            }
         },
         {
             "tag": "🇺🇸 US | 🔴 | vless | @vpn_bal0uch | 3",
