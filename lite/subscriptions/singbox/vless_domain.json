@@ -131,6 +131,7 @@
                 "🇮🇷 IR | 🔴 | vless | @golf_vpn | 14",
                 "❔ XX | 🔴 | vless | @goodbyefiltering | 7",
                 "❔ XX | 🔴 | vless | @guard_revil | 3",
+                "❔ XX | 🟢 | vless | @ip_cf_config | 16",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iranbaxvpn | 8",
                 "🇷🇺 RU | 🔴 | vless | @iranbfilter | 6",
@@ -169,7 +170,6 @@
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇺🇸 US | 🔴 | vless | @outline_ir | 18",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
@@ -200,6 +200,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
+                "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -208,7 +209,6 @@
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
                 "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 2",
-                "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "❔ XX | 🔴 | vless | @womanlifefreedomvpn | 16",
                 "🇮🇷 IR | 🔴 | vless | @xnxv2ray | 14",
@@ -262,6 +262,7 @@
                 "🇮🇷 IR | 🔴 | vless | @golf_vpn | 14",
                 "❔ XX | 🔴 | vless | @goodbyefiltering | 7",
                 "❔ XX | 🔴 | vless | @guard_revil | 3",
+                "❔ XX | 🟢 | vless | @ip_cf_config | 16",
                 "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
                 "❔ XX | 🟢 | vless | @iranbaxvpn | 8",
                 "🇷🇺 RU | 🔴 | vless | @iranbfilter | 6",
@@ -300,7 +301,6 @@
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "🇺🇸 US | 🟢 | vless | @ohvpn | 17",
                 "🇺🇸 US | 🔴 | vless | @oonfig | 1",
-                "🇺🇸 US | 🔴 | vless | @outline_ir | 18",
                 "❔ XX | 🔴 | vless | @proxy48 | 14",
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
@@ -331,6 +331,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
+                "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -339,7 +340,6 @@
                 "🇮🇹 IT | 🔴 | vless | @vpnfree_irann | 5",
                 "❔ XX | 🔴 | vless | @vpnv2rayng90 | 0",
                 "🇺🇸 US | 🟢 | vless | @vpnv2raytop | 2",
-                "❔ XX | 🟢 | vless | @vpnwlf | 10",
                 "🇺🇸 US | 🟢 | vless | @wbrovers | 0",
                 "❔ XX | 🔴 | vless | @womanlifefreedomvpn | 16",
                 "🇮🇷 IR | 🔴 | vless | @xnxv2ray | 14",
@@ -1003,6 +1003,29 @@
             "uuid": "10e7b4a9-1f80-48e2-b504-4da2c8415746",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "❔ XX | 🟢 | vless | @ip_cf_config | 16",
+            "type": "vless",
+            "server": "WLF-V-P-N-ID2.dnsfree.one",
+            "server_port": 443,
+            "uuid": "---WLFVPN---",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.yahoo.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "GAUjNf1wQnDm5ziCGqRmb3yVfU9bg_UPwZ2_QU4JWRU",
+                    "short_id": "6bb85179e30d4fc2"
+                }
+            }
         },
         {
             "tag": "🇦🇪 AE | 🟢 | vless | @iran_access | 13",
@@ -1698,22 +1721,6 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @outline_ir | 18",
-            "type": "vless",
-            "server": "crazy-identity.oneeat.co",
-            "server_port": 80,
-            "uuid": "64d6d0d4-3706-4837-b154-cda2816adcc5",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "crazy-identity.oneeat.co"
-                }
-            }
-        },
-        {
             "tag": "❔ XX | 🔴 | vless | @proxy48 | 14",
             "type": "vless",
             "server": "www.forcepower.monster",
@@ -2264,6 +2271,31 @@
             }
         },
         {
+            "tag": "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
+            "type": "vless",
+            "server": "www.visa.com.sg",
+            "server_port": 2087,
+            "uuid": "90c7ad5e-cd15-4314-b39b-aeabd397d592",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "vl.hongkong6.qzz.io",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/?ed=2560",
+                "headers": {
+                    "Host": "vl.hongkong6.qzz.io"
+                }
+            }
+        },
+        {
             "tag": "❔ XX | 🟢 | vless | @vp22ray | 10",
             "type": "vless",
             "server": "German.vp22ray.site",
@@ -2398,29 +2430,6 @@
                 "path": "/",
                 "headers": {
                     "Host": "vl.hongkong6.qzz.io"
-                }
-            }
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @vpnwlf | 10",
-            "type": "vless",
-            "server": "WLF-V-P-N-ID2.dnsfree.one",
-            "server_port": 443,
-            "uuid": "---WLFVPN---",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.yahoo.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "GAUjNf1wQnDm5ziCGqRmb3yVfU9bg_UPwZ2_QU4JWRU",
-                    "short_id": "6bb85179e30d4fc2"
                 }
             }
         },

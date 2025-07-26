@@ -96,6 +96,7 @@
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇩🇪 DE | 🔴 | vless | @vpnaloo | 14",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
@@ -119,6 +120,7 @@
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇺🇸 US | 🔴 | vless | @qeshmserver | 12",
+                "🇩🇪 DE | 🔴 | vless | @vpnaloo | 14",
                 "🇺🇸 US | 🔴 | vless | @configscenter | 2",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
@@ -249,6 +251,15 @@
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "qeshmserver",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @vpnaloo | 14",
+            "type": "vless",
+            "server": "91.99.218.14",
+            "server_port": 8443,
+            "uuid": "bb7b030f-fd37-488a-be1f-1a26d874cb26",
             "flow": "",
             "packet_encoding": "xudp"
         },
