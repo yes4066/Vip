@@ -100,7 +100,7 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇩🇪 DE | 🟢 | vless | @confing_chanel | 13",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇳🇱 NL | 🟢 | vless | @farahvpn | 15",
+                "🇳🇱 NL | 🟢 | vless | @farahvpn | 16",
                 "🇳🇱 NL | 🟢 | vless | @flyv2ray | 2",
                 "🇬🇧 GB | 🟢 | vless | @free1_vpn | 4",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
@@ -149,12 +149,11 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇨🇦 CA | 🟢 | vless | @v2rayngrit | 14",
+                "🇯🇵 JP | 🟢 | vless | @v2rayngrit | 14",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
-                "🇫🇮 FI | 🟢 | vless | @vaynora | 5",
-                "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
+                "🇩🇪 DE | 🟢 | vless | @vmess_ir | 15",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -187,7 +186,7 @@
                 "🇩🇪 DE | 🟢 | vless | @configasli | 7",
                 "🇩🇪 DE | 🟢 | vless | @confing_chanel | 13",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
-                "🇳🇱 NL | 🟢 | vless | @farahvpn | 15",
+                "🇳🇱 NL | 🟢 | vless | @farahvpn | 16",
                 "🇳🇱 NL | 🟢 | vless | @flyv2ray | 2",
                 "🇬🇧 GB | 🟢 | vless | @free1_vpn | 4",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
@@ -236,12 +235,11 @@
                 "❔ XX | 🟢 | vless | @v2rayang201 | 3",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
-                "🇨🇦 CA | 🟢 | vless | @v2rayngrit | 14",
+                "🇯🇵 JP | 🟢 | vless | @v2rayngrit | 14",
                 "❔ XX | 🟢 | vless | @v2rayturbo | 4",
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
-                "🇫🇮 FI | 🟢 | vless | @vaynora | 5",
-                "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
+                "🇩🇪 DE | 🟢 | vless | @vmess_ir | 15",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -532,7 +530,7 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🟢 | vless | @farahvpn | 15",
+            "tag": "🇳🇱 NL | 🟢 | vless | @farahvpn | 16",
             "type": "vless",
             "server": "server2.fergalvpnmod.com",
             "server_port": 25126,
@@ -1746,7 +1744,7 @@
             }
         },
         {
-            "tag": "🇨🇦 CA | 🟢 | vless | @v2rayngrit | 14",
+            "tag": "🇯🇵 JP | 🟢 | vless | @v2rayngrit | 14",
             "type": "vless",
             "server": "amazon-4.cristiano.name.ng",
             "server_port": 443,
@@ -1842,34 +1840,7 @@
             }
         },
         {
-            "tag": "🇫🇮 FI | 🟢 | vless | @vaynora | 5",
-            "type": "vless",
-            "server": "freedam.wirecard.store",
-            "server_port": 2053,
-            "uuid": "ce3acfb7-a0e8-4f96-b9ff-75c2657997fa",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "freedom.wirecard.store",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "firefox"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "hRwCV7x14uQ7jdsLqsxvklkR4Mtf7kRsZhboIKRbsR4",
-                    "short_id": "c531427f9b41"
-                }
-            },
-            "transport": {
-                "type": "grpc",
-                "service_name": "bing"
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vmess_ir | 15",
             "type": "vless",
             "server": "pouriacheat.fergalvpnmod.com",
             "server_port": 2025,

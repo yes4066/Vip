@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
+                "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -101,7 +102,6 @@
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
-                "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16"
@@ -113,6 +113,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
+                "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
@@ -124,7 +125,6 @@
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇺🇸 US | 🔴 | vless | @eliteproxyv2 | 9",
-                "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16"
@@ -158,6 +158,29 @@
                     "enabled": true,
                     "public_key": "8JLXaAVzfzBxustA4rSIJYXfbwgnarMBUiWghUe610s",
                     "short_id": "f58f"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
+            "type": "vless",
+            "server": "199.247.16.203",
+            "server_port": 17928,
+            "uuid": "71243590-61ff-46b9-816c-ec48ea9ea692",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zhaket.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "hP4TGbnaexWt-MKrFPd67DoFwSmr-o72GILwFvmZxiA",
+                    "short_id": "d3c49afc00"
                 }
             }
         },
@@ -294,15 +317,6 @@
             "server": "germany.fast.hosting-ip.com",
             "server_port": 80,
             "uuid": "55d7c587-7d65-4cd2-a51a-0a7fb6a63285",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @evay_vpn | 14",
-            "type": "vless",
-            "server": "Evay_vpn.fast.hosting-ip.com",
-            "server_port": 80,
-            "uuid": "bb57d265-b716-4092-bd0a-68f3988db63c",
             "flow": "",
             "packet_encoding": "xudp"
         },

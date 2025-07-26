@@ -264,7 +264,6 @@
     },
     "configshubplus": {
         "types": [
-            "ss",
             "vless",
             "vmess"
         ],
@@ -987,7 +986,6 @@
     },
     "hope_net": {
         "types": [
-            "vless",
             "trojan",
             "vmess"
         ],
@@ -1060,8 +1058,9 @@
     "ip_cf_config": {
         "types": [
             "vless",
+            "ss",
             "trojan",
-            "ss"
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1644,8 +1643,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1879,8 +1878,8 @@
     },
     "orange_vpns": {
         "types": [
-            "ss",
             "vless",
+            "ss",
             "trojan",
             "vmess"
         ],
@@ -2528,8 +2527,8 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vless",
             "trojan",
+            "vless",
             "vmess",
             "ss"
         ],
@@ -2623,8 +2622,8 @@
     "v2raych": {
         "types": [
             "vless",
-            "trojan",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "V2rayChallenge: V2RAY VPN Configs &amp; MTProto Proxies Free | پروکسی وی پی ان VPN رایگان وی تو ری چالش",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raych.jpg"
@@ -2660,8 +2659,7 @@
     },
     "v2raying": {
         "types": [
-            "vless",
-            "vmess"
+            "vless"
         ],
         "title": "v2rayNG_VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raying.jpg"
@@ -3052,7 +3050,8 @@
     "vmess_ir": {
         "types": [
             "vless",
-            "vmess"
+            "vmess",
+            "ss"
         ],
         "title": "🚀سرور رایگان و اختصاصی vmess_ir🚀",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vmess_ir.jpg"

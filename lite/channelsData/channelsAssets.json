@@ -861,9 +861,9 @@
     },
     "ip_cf_config": {
         "types": [
+            "vless",
             "ss",
             "trojan",
-            "vless",
             "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
@@ -1338,8 +1338,8 @@
     },
     "mowjproxy": {
         "types": [
-            "vless",
-            "vmess"
+            "vmess",
+            "vless"
         ],
         "title": "Mowj Proxy",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/mowjproxy.jpg"
@@ -1589,8 +1589,8 @@
     },
     "orange_vpns": {
         "types": [
-            "ss",
             "vless",
+            "ss",
             "trojan",
             "vmess"
         ],
@@ -1937,6 +1937,7 @@
     },
     "summertimeus": {
         "types": [
+            "vmess",
             "vless"
         ],
         "title": "V2rayng/vpn",
@@ -2174,8 +2175,7 @@
     },
     "v2raying": {
         "types": [
-            "vless",
-            "vmess"
+            "vless"
         ],
         "title": "v2rayNG_VPN",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2raying.jpg"

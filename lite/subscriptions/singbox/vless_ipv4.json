@@ -105,7 +105,9 @@
                 "🇸🇪 SE | 🔴 | vless | @deli_servers | 2",
                 "🇺🇸 US | 🔴 | vless | @dnsforyou | 37",
                 "🇺🇸 US | 🟢 | vless | @drvpn_net | 1",
+                "🇮🇷 IR | 🔴 | vless | @evay_vpn | 14",
                 "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
+                "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
                 "🇮🇷 IR | 🔴 | vless | @fasst_vpn | 0",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇺🇸 US | 🟢 | vless | @fastkanfig | 13",
@@ -150,9 +152,7 @@
                 "🇺🇸 US | 🔴 | vless | @nitrovpne | 1",
                 "🇮🇷 IR | 🔴 | vless | @norbertpro_vpn | 0",
                 "🇺🇸 US | 🟢 | vless | @ntconfig | 0",
-                "🇬🇧 GB | 🔴 | vless | @orange_vpns | 17",
                 "🇮🇷 IR | 🔴 | vless | @orgempirenet | 1",
-                "🇺🇸 US | 🔴 | vless | @outline_ir | 15",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇮🇷 IR | 🔴 | vless | @pusyvpn | 9",
@@ -170,7 +170,7 @@
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
                 "🇮🇷 IR | 🔴 | vless | @v2ray_iran88 | 9",
                 "🇺🇸 US | 🟢 | vless | @v2ray_swhil | 43",
-                "🇺🇸 US | 🔴 | vless | @v2raying | 14",
+                "🇺🇸 US | 🔴 | vless | @v2raying | 13",
                 "🇩🇪 DE | 🔴 | vless | @v2raymelliii | 8",
                 "🇩🇪 DE | 🔴 | vless | @v2rayngconfiig | 11",
                 "🇳🇱 NL | 🔴 | vless | @v2rayprotocol | 10",
@@ -215,7 +215,9 @@
                 "🇸🇪 SE | 🔴 | vless | @deli_servers | 2",
                 "🇺🇸 US | 🔴 | vless | @dnsforyou | 37",
                 "🇺🇸 US | 🟢 | vless | @drvpn_net | 1",
+                "🇮🇷 IR | 🔴 | vless | @evay_vpn | 14",
                 "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
+                "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
                 "🇮🇷 IR | 🔴 | vless | @fasst_vpn | 0",
                 "🇫🇮 FI | 🟢 | vless | @fastfreeconfig | 0",
                 "🇺🇸 US | 🟢 | vless | @fastkanfig | 13",
@@ -260,9 +262,7 @@
                 "🇺🇸 US | 🔴 | vless | @nitrovpne | 1",
                 "🇮🇷 IR | 🔴 | vless | @norbertpro_vpn | 0",
                 "🇺🇸 US | 🟢 | vless | @ntconfig | 0",
-                "🇬🇧 GB | 🔴 | vless | @orange_vpns | 17",
                 "🇮🇷 IR | 🔴 | vless | @orgempirenet | 1",
-                "🇺🇸 US | 🔴 | vless | @outline_ir | 15",
                 "🇺🇸 US | 🟢 | vless | @proxie | 15",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇮🇷 IR | 🔴 | vless | @pusyvpn | 9",
@@ -280,7 +280,7 @@
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
                 "🇮🇷 IR | 🔴 | vless | @v2ray_iran88 | 9",
                 "🇺🇸 US | 🟢 | vless | @v2ray_swhil | 43",
-                "🇺🇸 US | 🔴 | vless | @v2raying | 14",
+                "🇺🇸 US | 🔴 | vless | @v2raying | 13",
                 "🇩🇪 DE | 🔴 | vless | @v2raymelliii | 8",
                 "🇩🇪 DE | 🔴 | vless | @v2rayngconfiig | 11",
                 "🇳🇱 NL | 🔴 | vless | @v2rayprotocol | 10",
@@ -584,6 +584,15 @@
             }
         },
         {
+            "tag": "🇮🇷 IR | 🔴 | vless | @evay_vpn | 14",
+            "type": "vless",
+            "server": "212.23.214.148",
+            "server_port": 47534,
+            "uuid": "bbfe34ff-1ca2-4ed9-8ac9-6ef9fd799320",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇹🇷 TR | 🟢 | vless | @f_nirevil | 2",
             "type": "vless",
             "server": "185.8.129.187",
@@ -605,6 +614,29 @@
                 "path": "/NiREvilxXx",
                 "headers": {
                     "Host": "TURKISH.NSCL.ir"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
+            "type": "vless",
+            "server": "199.247.16.203",
+            "server_port": 17928,
+            "uuid": "71243590-61ff-46b9-816c-ec48ea9ea692",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zhaket.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "hP4TGbnaexWt-MKrFPd67DoFwSmr-o72GILwFvmZxiA",
+                    "short_id": "d3c49afc00"
                 }
             }
         },
@@ -1344,22 +1376,6 @@
             }
         },
         {
-            "tag": "🇬🇧 GB | 🔴 | vless | @orange_vpns | 17",
-            "type": "vless",
-            "server": "95.164.18.5",
-            "server_port": 2082,
-            "uuid": "9e769ce1-34be-4e3f-b0a6-823f30eb8f69",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "95.164.18.5"
-                }
-            }
-        },
-        {
             "tag": "🇮🇷 IR | 🔴 | vless | @orgempirenet | 1",
             "type": "vless",
             "server": "195.190.144.155",
@@ -1367,22 +1383,6 @@
             "uuid": "4cd9af1f-7362-4a67-a0ac-d298ea1aa1c7",
             "flow": "",
             "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @outline_ir | 15",
-            "type": "vless",
-            "server": "104.16.69.162",
-            "server_port": 8880,
-            "uuid": "e9979910-79d1-4621-a93c-b2a579c44ba7",
-            "flow": "",
-            "packet_encoding": "xudp",
-            "transport": {
-                "type": "ws",
-                "path": "/fgvtHUpS6R8Rv8s5?ed=2560",
-                "headers": {
-                    "Host": "104.16.69.162"
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🟢 | vless | @proxie | 15",
@@ -1689,18 +1689,18 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @v2raying | 14",
+            "tag": "🇺🇸 US | 🔴 | vless | @v2raying | 13",
             "type": "vless",
-            "server": "172.67.141.140",
+            "server": "104.16.69.162",
             "server_port": 8880,
-            "uuid": "7e948e09-fa6f-4b8e-8c5d-181fa15fbec5",
+            "uuid": "e9979910-79d1-4621-a93c-b2a579c44ba7",
             "flow": "",
             "packet_encoding": "xudp",
             "transport": {
                 "type": "ws",
-                "path": "/QaaLdIiGgWNoIxOF?ed=2560",
+                "path": "/---@External_Net---@External_Net---@External_Net---@External_Net---@External_Net",
                 "headers": {
-                    "Host": "172.67.141.140"
+                    "Host": "104.16.69.162"
                 }
             }
         },
