@@ -94,12 +94,12 @@
                 "🇬🇧 GB | 🟢 | ss | @dalton_ping | 6",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
-                "🇺🇸 US | 🟢 | ss | @ip_cf_config | 12",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 1",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
+                "🇺🇸 US | 🟢 | ss | @outline_vpn | 23",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
                 "🇳🇱 NL | 🟢 | ss | @prrofile_purple | 121",
                 "🇬🇧 GB | 🟢 | ss | @prroxyng | 0",
@@ -111,9 +111,9 @@
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 14",
-                "🇺🇸 US | 🟢 | ss | @vpn451 | 15",
-                "❔ XX | 🟢 | ss | @zerobaipiao | 38"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 13",
+                "🇺🇸 US | 🟢 | ss | @vpn451 | 14",
+                "❔ XX | 🟢 | ss | @zerobaipiao | 35"
             ],
             "tag": "proxy",
             "type": "selector"
@@ -126,12 +126,12 @@
                 "🇬🇧 GB | 🟢 | ss | @dalton_ping | 6",
                 "🇬🇧 GB | 🟢 | ss | @fastvpnorummobile | 0",
                 "🇬🇧 GB | 🟢 | ss | @freevirgoolnet | 4",
-                "🇺🇸 US | 🟢 | ss | @ip_cf_config | 12",
                 "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
                 "🇨🇳 CN | 🟢 | ss | @mftizi | 17",
                 "❔ XX | 🟢 | ss | @mt_proxy | 4",
                 "🇬🇧 GB | 🟢 | ss | @nationalproxytelegram | 1",
                 "🇬🇧 GB | 🟢 | ss | @ntgreenplus | 0",
+                "🇺🇸 US | 🟢 | ss | @outline_vpn | 23",
                 "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
                 "🇳🇱 NL | 🟢 | ss | @prrofile_purple | 121",
                 "🇬🇧 GB | 🟢 | ss | @prroxyng | 0",
@@ -143,9 +143,9 @@
                 "🇬🇧 GB | 🟢 | ss | @v2raybe | 6",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 23",
                 "❔ XX | 🟢 | ss | @v2rayngvvpn | 26",
-                "🇯🇵 JP | 🟢 | ss | @vpn451 | 14",
-                "🇺🇸 US | 🟢 | ss | @vpn451 | 15",
-                "❔ XX | 🟢 | ss | @zerobaipiao | 38"
+                "🇯🇵 JP | 🟢 | ss | @vpn451 | 13",
+                "🇺🇸 US | 🟢 | ss | @vpn451 | 14",
+                "❔ XX | 🟢 | ss | @zerobaipiao | 35"
             ],
             "tag": "auto",
             "tolerance": 50,
@@ -197,14 +197,6 @@
             "password": "u17T3BvpYaaiuW2c"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | ss | @ip_cf_config | 12",
-            "type": "shadowsocks",
-            "server": "beesyar.org",
-            "server_port": 8080,
-            "method": "chacha20-ietf-poly1305",
-            "password": "4a2rfixophdjffa8KVA4Aa"
-        },
-        {
             "tag": "🇺🇸 US | 🟢 | ss | @mester_v2ray | 15",
             "type": "shadowsocks",
             "server": "api.namasha.co",
@@ -243,6 +235,14 @@
             "server_port": 443,
             "method": "chacha20-ietf-poly1305",
             "password": "WstuSnlu4ieA9M0L"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | ss | @outline_vpn | 23",
+            "type": "shadowsocks",
+            "server": "beesyar.org",
+            "server_port": 8080,
+            "method": "chacha20-ietf-poly1305",
+            "password": "4a2rfixophdjffa8KVA4Aa"
         },
         {
             "tag": "❔ XX | 🟢 | ss | @proxy_confiingir | 1",
@@ -333,7 +333,7 @@
             "password": "WVU27LquAMOeXmYeStI897"
         },
         {
-            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 14",
+            "tag": "🇯🇵 JP | 🟢 | ss | @vpn451 | 13",
             "type": "shadowsocks",
             "server": "sakura.outlinekeys.net",
             "server_port": 1235,
@@ -341,7 +341,7 @@
             "password": "FGHwtC6cjw1zSSiRbEg5T4"
         },
         {
-            "tag": "🇺🇸 US | 🟢 | ss | @vpn451 | 15",
+            "tag": "🇺🇸 US | 🟢 | ss | @vpn451 | 14",
             "type": "shadowsocks",
             "server": "fox-usa.outlinekeys.net",
             "server_port": 34868,
@@ -349,7 +349,7 @@
             "password": "TiiaduS9VbEHgfkRugj3xO"
         },
         {
-            "tag": "❔ XX | 🟢 | ss | @zerobaipiao | 38",
+            "tag": "❔ XX | 🟢 | ss | @zerobaipiao | 35",
             "type": "shadowsocks",
             "server": "iepl.huli168.com",
             "server_port": 17273,

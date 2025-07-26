@@ -861,10 +861,10 @@
     },
     "ip_cf_config": {
         "types": [
+            "ss",
             "trojan",
-            "vmess",
             "vless",
-            "ss"
+            "vmess"
         ],
         "title": "IP_CF | V2ray Config Pool",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/ip_cf_config.jpg"
@@ -1637,7 +1637,9 @@
     "outlinev2rayng": {
         "types": [
             "vless",
-            "ss"
+            "ss",
+            "trojan",
+            "vmess"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outlinev2rayng.jpg"
@@ -2439,7 +2441,9 @@
     },
     "vmess_ir": {
         "types": [
-            "vless"
+            "vless",
+            "vmess",
+            "ss"
         ],
         "title": "🚀سرور رایگان و اختصاصی vmess_ir🚀",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vmess_ir.jpg"
@@ -2469,8 +2473,8 @@
     },
     "vpn451": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "451°F VPN || НОВОСТИ",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vpn451.jpg"

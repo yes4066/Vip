@@ -102,7 +102,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇳🇱 NL | 🟢 | vless | @farahvpn | 15",
                 "🇳🇱 NL | 🟢 | vless | @flyv2ray | 2",
-                "🇬🇧 GB | 🟢 | vless | @free1_vpn | 5",
+                "🇬🇧 GB | 🟢 | vless | @free1_vpn | 4",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
                 "❔ XX | 🟢 | vless | @fsv2ray | 0",
                 "❔ XX | 🟢 | vless | @fsv2ray | 1",
@@ -124,7 +124,6 @@
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇮🇹 IT | 🟢 | vless | @manzariyeh_rasht | 21",
                 "🇬🇧 GB | 🟢 | vless | @netmellianti | 11",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -155,7 +154,7 @@
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "🇫🇮 FI | 🟢 | vless | @vaynora | 5",
-                "🇩🇪 DE | 🟢 | vless | @vmess_ir | 18",
+                "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -190,7 +189,7 @@
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇳🇱 NL | 🟢 | vless | @farahvpn | 15",
                 "🇳🇱 NL | 🟢 | vless | @flyv2ray | 2",
-                "🇬🇧 GB | 🟢 | vless | @free1_vpn | 5",
+                "🇬🇧 GB | 🟢 | vless | @free1_vpn | 4",
                 "❔ XX | 🟢 | vless | @free_omega | 0",
                 "❔ XX | 🟢 | vless | @fsv2ray | 0",
                 "❔ XX | 🟢 | vless | @fsv2ray | 1",
@@ -212,7 +211,6 @@
                 "🇮🇹 IT | 🟢 | vless | @khalaa_vpn | 1",
                 "❔ XX | 🟢 | vless | @kkkkkoabvbbvbvv | 9",
                 "🇩🇪 DE | 🟢 | vless | @lexernet | 11",
-                "🇮🇹 IT | 🟢 | vless | @manzariyeh_rasht | 21",
                 "🇬🇧 GB | 🟢 | vless | @netmellianti | 11",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 2",
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
@@ -243,7 +241,7 @@
                 "❔ XX | 🟢 | vless | @v2rayy_vpn13 | 8",
                 "❔ XX | 🟢 | vless | @v2rayza | 18",
                 "🇫🇮 FI | 🟢 | vless | @vaynora | 5",
-                "🇩🇪 DE | 🟢 | vless | @vmess_ir | 18",
+                "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
                 "❔ XX | 🟢 | vless | @vp22ray | 6",
                 "❔ XX | 🟢 | vless | @vp22ray | 7",
                 "❔ XX | 🟢 | vless | @vp22ray | 8",
@@ -588,7 +586,7 @@
             }
         },
         {
-            "tag": "🇬🇧 GB | 🟢 | vless | @free1_vpn | 5",
+            "tag": "🇬🇧 GB | 🟢 | vless | @free1_vpn | 4",
             "type": "vless",
             "server": "v05.vxlimir.com",
             "server_port": 1370,
@@ -1150,29 +1148,6 @@
             "transport": {
                 "type": "grpc",
                 "service_name": "Hossien"
-            }
-        },
-        {
-            "tag": "🇮🇹 IT | 🟢 | vless | @manzariyeh_rasht | 21",
-            "type": "vless",
-            "server": "itmi-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz",
-            "server_port": 443,
-            "uuid": "1ae544de-4b19-4bd0-a7d6-e47e2e19a057",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "itgetsbetter.org",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "u13aSU1om7Mc67RxQHmVQx7iALWAUCn_j38zQ5LpYXc",
-                    "short_id": "462c73aef9f448"
-                }
             }
         },
         {
@@ -1894,7 +1869,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @vmess_ir | 18",
+            "tag": "🇩🇪 DE | 🟢 | vless | @vmess_ir | 16",
             "type": "vless",
             "server": "pouriacheat.fergalvpnmod.com",
             "server_port": 2025,

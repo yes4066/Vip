@@ -264,9 +264,8 @@
     },
     "configshubplus": {
         "types": [
-            "vless",
             "ss",
-            "trojan",
+            "vless",
             "vmess"
         ],
         "title": "𝘾𝙤𝙣𝙛𝙞𝙜𝙨𝙃𝙪𝙗🔮",
@@ -950,6 +949,7 @@
     },
     "grizzlyvpn": {
         "types": [
+            "vmess",
             "vless"
         ],
         "title": "Grizzly VPN فیلتر شکن |پروکسی رایگان",
@@ -987,9 +987,9 @@
     },
     "hope_net": {
         "types": [
-            "vmess",
             "vless",
-            "trojan"
+            "trojan",
+            "vmess"
         ],
         "title": "🕊 Hope Net",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/hope_net.jpg"
@@ -1059,9 +1059,8 @@
     },
     "ip_cf_config": {
         "types": [
-            "trojan",
-            "vmess",
             "vless",
+            "trojan",
             "ss"
         ],
         "title": "IP_CF | V2ray Config Pool",
@@ -1157,13 +1156,6 @@
         ],
         "title": "Iran Free V2ray فیلترشکن رایگان",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/iranvpnet.jpg"
-    },
-    "irlast": {
-        "types": [
-            "vless"
-        ],
-        "title": "IR.LAST",
-        "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/irlast.jpg"
     },
     "irv2rey": {
         "types": [
@@ -1936,7 +1928,9 @@
     "outlinev2rayng": {
         "types": [
             "vless",
-            "ss"
+            "ss",
+            "trojan",
+            "vmess"
         ],
         "title": "پروکسی تله کد | فیلترشکن رایگان V2ray - Outline",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/outlinev2rayng.jpg"
@@ -2517,9 +2511,9 @@
     },
     "v2ray_collector": {
         "types": [
-            "trojan",
             "vless",
-            "hysteria"
+            "hysteria",
+            "trojan"
         ],
         "title": "V2rayCollector",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/v2ray_collector.jpg"
@@ -2534,9 +2528,9 @@
     },
     "v2ray_free_conf": {
         "types": [
-            "vmess",
-            "trojan",
             "vless",
+            "trojan",
+            "vmess",
             "ss"
         ],
         "title": "🌍 V2Ray Free Config 🇮🇷",
@@ -2629,7 +2623,6 @@
     "v2raych": {
         "types": [
             "vless",
-            "ss",
             "trojan",
             "vmess"
         ],
@@ -3058,7 +3051,8 @@
     },
     "vmess_ir": {
         "types": [
-            "vless"
+            "vless",
+            "vmess"
         ],
         "title": "🚀سرور رایگان و اختصاصی vmess_ir🚀",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vmess_ir.jpg"
@@ -3103,8 +3097,8 @@
     },
     "vpn451": {
         "types": [
-            "ss",
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "451°F VPN || НОВОСТИ",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/vpn451.jpg"
@@ -3386,8 +3380,8 @@
     "zerobaipiao": {
         "types": [
             "vmess",
-            "trojan",
-            "ss"
+            "ss",
+            "trojan"
         ],
         "title": "免费节点 🏆【1小时前更新】",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/zerobaipiao.jpg"
