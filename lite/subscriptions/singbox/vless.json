@@ -137,9 +137,10 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
+                "🇳🇱 NL | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
-                "🇳🇱 NL | 🔴 | vless | @msv2flyng | 11",
+                "🇳🇱 NL | 🔴 | vless | @msv2flyng | 10",
                 "🇺🇸 US | 🟢 | vless | @mt_proxy | 7",
                 "🇸🇪 SE | 🔴 | vless | @mtpv2ray | 12",
                 "🇩🇪 DE | 🔴 | vless | @narco_nett | 17",
@@ -209,7 +210,7 @@
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -374,9 +375,10 @@
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @moiinmk | 2",
+                "🇳🇱 NL | 🔴 | vless | @mowjproxy | 5",
                 "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
                 "🇺🇸 US | 🔴 | vless | @mr_vpn123 | 7",
-                "🇳🇱 NL | 🔴 | vless | @msv2flyng | 11",
+                "🇳🇱 NL | 🔴 | vless | @msv2flyng | 10",
                 "🇺🇸 US | 🟢 | vless | @mt_proxy | 7",
                 "🇸🇪 SE | 🔴 | vless | @mtpv2ray | 12",
                 "🇩🇪 DE | 🔴 | vless | @narco_nett | 17",
@@ -446,7 +448,7 @@
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -1383,6 +1385,22 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇳🇱 NL | 🔴 | vless | @mowjproxy | 5",
+            "type": "vless",
+            "server": "185.218.86.102",
+            "server_port": 44140,
+            "uuid": "fa1216ee-27f2-4435-a21f-a71ecef1f4a8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "transport": {
+                "type": "ws",
+                "path": "/",
+                "headers": {
+                    "Host": "185.218.86.102"
+                }
+            }
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @mpproxy | 13",
             "type": "vless",
             "server": "151.101.128.223",
@@ -1415,7 +1433,7 @@
             }
         },
         {
-            "tag": "🇳🇱 NL | 🔴 | vless | @msv2flyng | 11",
+            "tag": "🇳🇱 NL | 🔴 | vless | @msv2flyng | 10",
             "type": "vless",
             "server": "91.198.77.59",
             "server_port": 17415,
@@ -2599,7 +2617,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,

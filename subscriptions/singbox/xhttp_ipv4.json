@@ -90,7 +90,6 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @bored_vpn | 8",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 46",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 0",
@@ -107,7 +106,7 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
-                "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 3",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 23",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
@@ -139,7 +138,6 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @bored_vpn | 8",
-                "🇺🇸 US | 🔴 | vless | @config_proxy | 46",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 0",
@@ -156,7 +154,7 @@
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
-                "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
+                "🇺🇸 US | 🔴 | vless | @mowjproxy | 3",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 23",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
@@ -196,15 +194,6 @@
             "server": "151.101.3.8",
             "server_port": 80,
             "uuid": "0134428a-02d8-4f94-8221-a1e858552212",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
-            "tag": "🇺🇸 US | 🔴 | vless | @config_proxy | 46",
-            "type": "vless",
-            "server": "151.101.67.8",
-            "server_port": 80,
-            "uuid": "turboo-server",
             "flow": "",
             "packet_encoding": "xudp"
         },
@@ -483,7 +472,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 4",
+            "tag": "🇺🇸 US | 🔴 | vless | @mowjproxy | 3",
             "type": "vless",
             "server": "172.236.103.104",
             "server_port": 443,
