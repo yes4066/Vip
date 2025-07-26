@@ -136,7 +136,6 @@
                 "🇫🇷 FR | 🔴 | vmess | @garnet_free | 9",
                 "🇺🇸 US | 🔴 | vmess | @ghotb_scarf | 6",
                 "🇮🇷 IR | 🔴 | vmess | @goldenvpn_v2rayy | 1",
-                "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 11",
                 "🇺🇸 US | 🟢 | vmess | @ir_netproxy | 9",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 10",
                 "🇺🇸 US | 🔴 | vmess | @ir_netproxy | 11",
@@ -251,11 +250,11 @@
                 "❔ XX | 🔴 | vmess | @vpn_proxy_v2ry | 3",
                 "❔ XX | 🔴 | vmess | @vpncostume | 4",
                 "❔ XX | 🟢 | vmess | @vpncostume | 5",
-                "🇨🇭 CH | 🔴 | vmess | @vpnfail_v2ray | 15",
-                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 16",
-                "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 17",
-                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
-                "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 19",
+                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 15",
+                "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 16",
+                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 17",
+                "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 18",
+                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 19",
                 "🇮🇷 IR | 🔴 | vmess | @vpnfree_irann | 3",
                 "🇦🇺 AU | 🟢 | vmess | @vpngate_config | 14",
                 "❔ XX | 🟢 | vmess | @vpngate_config | 15",
@@ -329,7 +328,6 @@
                 "🇫🇷 FR | 🔴 | vmess | @garnet_free | 9",
                 "🇺🇸 US | 🔴 | vmess | @ghotb_scarf | 6",
                 "🇮🇷 IR | 🔴 | vmess | @goldenvpn_v2rayy | 1",
-                "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 11",
                 "🇺🇸 US | 🟢 | vmess | @ir_netproxy | 9",
                 "🇫🇷 FR | 🔴 | vmess | @ir_netproxy | 10",
                 "🇺🇸 US | 🔴 | vmess | @ir_netproxy | 11",
@@ -444,11 +442,11 @@
                 "❔ XX | 🔴 | vmess | @vpn_proxy_v2ry | 3",
                 "❔ XX | 🔴 | vmess | @vpncostume | 4",
                 "❔ XX | 🟢 | vmess | @vpncostume | 5",
-                "🇨🇭 CH | 🔴 | vmess | @vpnfail_v2ray | 15",
-                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 16",
-                "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 17",
-                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
-                "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 19",
+                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 15",
+                "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 16",
+                "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 17",
+                "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 18",
+                "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 19",
                 "🇮🇷 IR | 🔴 | vmess | @vpnfree_irann | 3",
                 "🇦🇺 AU | 🟢 | vmess | @vpngate_config | 14",
                 "❔ XX | 🟢 | vmess | @vpngate_config | 15",
@@ -1240,31 +1238,6 @@
             "uuid": "f29ea77c-6842-4ee0-9fc1-9c7a871566b2",
             "security": "auto",
             "alter_id": 0
-        },
-        {
-            "tag": "🇸🇬 SG | 🔴 | vmess | @ip_cf_config | 11",
-            "type": "vmess",
-            "server": "103.253.26.20",
-            "server_port": 443,
-            "uuid": "aba50dd4-5484-3b05-b14a-4661caf862d5",
-            "security": "auto",
-            "alter_id": 4,
-            "tls": {
-                "enabled": true,
-                "server_name": "",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/ws",
-                "headers": {
-                    "Host": ""
-                }
-            }
         },
         {
             "tag": "🇺🇸 US | 🟢 | vmess | @ir_netproxy | 9",
@@ -3019,16 +2992,7 @@
             }
         },
         {
-            "tag": "🇨🇭 CH | 🔴 | vmess | @vpnfail_v2ray | 15",
-            "type": "vmess",
-            "server": "186.190.215.193",
-            "server_port": 22324,
-            "uuid": "04621bae-ab36-11ec-b909-0242ac120002",
-            "security": "auto",
-            "alter_id": 0
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 16",
+            "tag": "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 15",
             "type": "vmess",
             "server": "57.129.64.238",
             "server_port": 443,
@@ -3053,7 +3017,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 17",
+            "tag": "🇺🇸 US | 🟢 | vmess | @vpnfail_v2ray | 16",
             "type": "vmess",
             "server": "38.99.82.193",
             "server_port": 443,
@@ -3078,7 +3042,7 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 18",
+            "tag": "🇺🇸 US | 🔴 | vmess | @vpnfail_v2ray | 17",
             "type": "vmess",
             "server": "827f07.4c38f09e.shop",
             "server_port": 80,
@@ -3094,7 +3058,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 19",
+            "tag": "🇩🇪 DE | 🔴 | vmess | @vpnfail_v2ray | 18",
             "type": "vmess",
             "server": "57.129.24.125",
             "server_port": 443,
@@ -3115,6 +3079,31 @@
                 "path": "/linkvws",
                 "headers": {
                     "Host": "57.129.24.125"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vmess | @vpnfail_v2ray | 19",
+            "type": "vmess",
+            "server": "57.129.28.65",
+            "server_port": 443,
+            "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "security": "auto",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "kapelleng.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/linkvws",
+                "headers": {
+                    "Host": "kapelleng.com"
                 }
             }
         },
