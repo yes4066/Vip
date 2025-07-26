@@ -98,6 +98,7 @@
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
+                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
@@ -119,7 +120,7 @@
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
-                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
+                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 131",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
@@ -142,6 +143,7 @@
                 "🇩🇪 DE | 🟢 | vless | @jokerv2ray | 16",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇩🇪 DE | 🟢 | vless | @merdesert | 3",
+                "🇳🇱 NL | 🟢 | vless | @mowjproxy | 7",
                 "🇺🇸 US | 🟢 | vless | @proxygrizzly | 0",
                 "🇩🇪 DE | 🟢 | vless | @speedconfig00 | 35",
                 "🇩🇪 DE | 🟢 | vless | @v2ray_inter | 8",
@@ -163,7 +165,7 @@
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
-                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
+                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 131",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
@@ -391,6 +393,29 @@
                 "reality": {
                     "enabled": true,
                     "public_key": "W0BYEeLEqNRk8Bn2G27x5G9ALICJxePV6hxZG2A4Jmg",
+                    "short_id": ""
+                }
+            }
+        },
+        {
+            "tag": "🇳🇱 NL | 🟢 | vless | @mowjproxy | 7",
+            "type": "vless",
+            "server": "152.42.134.154",
+            "server_port": 20410,
+            "uuid": "1021e906-bc49-4961-8e67-1164a83c45ea",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "firefox"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo",
                     "short_id": ""
                 }
             }
@@ -915,7 +940,7 @@
             }
         },
         {
-            "tag": "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
+            "tag": "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 131",
             "type": "vless",
             "server": "aiteam.lonup.org",
             "server_port": 55900,
