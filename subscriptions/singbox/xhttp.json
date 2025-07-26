@@ -112,12 +112,16 @@
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 12",
                 "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 127",
                 "🇺🇸 US | 🔴 | vless | @turboo_server | 6",
+                "🇩🇪 DE | 🔴 | vless | @v2ray_free_conf | 15",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 7",
                 "Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=lake10.global.ssl.fastly.net&type=xhttp#🇺🇸 US | 🔴 | vless | @vmess_ir | 15",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
+                "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 15",
+                "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 16",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 49",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 0",
@@ -188,12 +192,16 @@
                 "🇩🇪 DE | 🟢 | vless | @proxystore11 | 12",
                 "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 127",
                 "🇺🇸 US | 🔴 | vless | @turboo_server | 6",
+                "🇩🇪 DE | 🔴 | vless | @v2ray_free_conf | 15",
                 "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
                 "🇺🇸 US | 🔴 | vless | @v2ray_vmes | 16",
                 "🇳🇱 NL | 🟢 | vless | @v2raymelliii | 7",
                 "Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI---Join---MARAMBASHI?ed=2560&security=none&encryption=none&host=lake10.global.ssl.fastly.net&type=xhttp#🇺🇸 US | 🔴 | vless | @vmess_ir | 15",
                 "🇺🇸 US | 🔴 | vless | @vpnfree_irann | 2",
+                "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 15",
+                "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 16",
                 "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
+                "🇩🇪 DE | 🟢 | vless | @config_proxy | 49",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 0",
@@ -522,6 +530,15 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇩🇪 DE | 🔴 | vless | @v2ray_free_conf | 15",
+            "type": "vless",
+            "server": "speedy.mooo.info",
+            "server_port": 80,
+            "uuid": "9e8c0b71-1e9e-4a4d-9e86-4ea9772ef534",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇺🇸 US | 🔴 | vless | @v2ray_sub | 5",
             "type": "vless",
             "server": "test.fast.hosting-ip.com",
@@ -576,6 +593,24 @@
             "packet_encoding": "xudp"
         },
         {
+            "tag": "🇺🇸 US | 🔴 | vless | @vpnplusee_free | 15",
+            "type": "vless",
+            "server": "mci.dl101movis.ir",
+            "server_port": 80,
+            "uuid": "9e8c0b71-1e9e-4a4d-9e86-4ea9772ef534",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🔴 | vless | @vpnplusee_free | 16",
+            "type": "vless",
+            "server": "speedy.mooo.info",
+            "server_port": 80,
+            "uuid": "9e8c0b71-1e9e-4a4d-9e86-4ea9772ef534",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
             "tag": "🇮🇹 IT | 🔴 | vless | @xsv2ray | 4",
             "type": "vless",
             "server": "fast-01.saitsazs.ir",
@@ -583,6 +618,29 @@
             "uuid": "34a4cfb4-8b42-42ba-b087-6a338c2b3b4a",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @config_proxy | 49",
+            "type": "vless",
+            "server": "138.199.168.187",
+            "server_port": 28153,
+            "uuid": "8611dbb2-fdd5-4ba3-b06f-bc10bb75deeb",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "zhaket.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "wIyC9CuOB33Hx1HbHnx_0JZXypmEink7icN0rWmzTlE",
+                    "short_id": "b6f9"
+                }
+            }
         },
         {
             "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",

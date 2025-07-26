@@ -108,7 +108,7 @@
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -117,7 +117,6 @@
                 "❔ XX | 🟢 | vless | @flash_proxies | 0",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🔴 | vless | @freakconfig1 | 2",
-                "🇬🇧 GB | 🟢 | vless | @free1_vpn | 4",
                 "🇺🇸 US | 🟢 | vless | @free_vpn_for_all_of_us | 19",
                 "❔ XX | 🔴 | vless | @freedom_config | 9",
                 "❔ XX | 🟢 | vless | @freev2raym | 10",
@@ -239,7 +238,7 @@
                 "🇺🇸 US | 🔴 | vless | @connectshu | 14",
                 "❔ XX | 🟢 | vless | @custom_14 | 7",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 13",
-                "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+                "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
                 "❔ XX | 🟢 | vless | @deragv2ray | 2",
                 "❔ XX | 🔴 | vless | @dgkbza | 21",
                 "🇮🇷 IR | 🔴 | vless | @easy_free_vpn | 2",
@@ -248,7 +247,6 @@
                 "❔ XX | 🟢 | vless | @flash_proxies | 0",
                 "🇺🇸 US | 🔴 | vless | @fnet00 | 7",
                 "🇺🇸 US | 🔴 | vless | @freakconfig1 | 2",
-                "🇬🇧 GB | 🟢 | vless | @free1_vpn | 4",
                 "🇺🇸 US | 🟢 | vless | @free_vpn_for_all_of_us | 19",
                 "❔ XX | 🔴 | vless | @freedom_config | 9",
                 "❔ XX | 🟢 | vless | @freev2raym | 10",
@@ -648,7 +646,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇮🇷 IR | 🔴 | vless | @darkma3ter24 | 13",
+            "tag": "🇺🇸 US | 🔴 | vless | @darkma3ter24 | 13",
             "type": "vless",
             "server": "www.parspack.com",
             "server_port": 8080,
@@ -768,29 +766,6 @@
                 "path": "/@VPNCUSTOMIZE",
                 "headers": {
                     "Host": "discord.gg"
-                }
-            }
-        },
-        {
-            "tag": "🇬🇧 GB | 🟢 | vless | @free1_vpn | 4",
-            "type": "vless",
-            "server": "v05.vxlimir.com",
-            "server_port": 1370,
-            "uuid": "f0050c31-06b1-4ebd-a10c-fe1e73632067",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "refersion.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "_N3KecwB9Ck28IIMxIck00ivkq3_ZEUvU3KXELnfvHw",
-                    "short_id": "e1afb93bfe75a34b"
                 }
             }
         },
