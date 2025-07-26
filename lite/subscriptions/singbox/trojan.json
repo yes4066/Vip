@@ -93,7 +93,7 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
-                "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 13",
+                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 18",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
@@ -110,7 +110,7 @@
                 "❔ XX | 🟢 | trojan | @maradona_vpn | 8",
                 "🇩🇪 DE | 🔴 | trojan | @teamvpnpro | 6",
                 "🇩🇪 DE | 🟢 | trojan | @directvpn | 13",
-                "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 13",
+                "🇺🇸 US | 🟢 | trojan | @freevpnatm | 18",
                 "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
                 "🇩🇪 DE | 🟢 | trojan | @privatevpns | 13",
                 "🇫🇷 FR | 🟢 | trojan | @proxyfn | 18",
@@ -202,11 +202,24 @@
             }
         },
         {
-            "tag": "🇭🇰 HK | 🔴 | trojan | @ip_cf_config | 13",
+            "tag": "🇺🇸 US | 🟢 | trojan | @freevpnatm | 18",
             "type": "trojan",
-            "server": "155.117.228.70",
-            "server_port": 26193,
-            "password": "7367d04e-4c59-4dff-a50e-12e730a09891"
+            "server": "104.21.96.1",
+            "server_port": 443,
+            "password": "bce0c7cb-08d1-46a7-b77b-7bff8b46252f",
+            "tls": {
+                "enabled": true,
+                "server_name": "XxXcdvfgTyy67.222569.XYz",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "grpc",
+                "service_name": "x9F83IcyjcEyBX5Ttq58yozYn"
+            }
         },
         {
             "tag": "🇸🇬 SG | 🟢 | trojan | @mpmehi | 0",
