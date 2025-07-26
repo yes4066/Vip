@@ -90,6 +90,7 @@
                 "auto",
                 "direct",
                 "🇺🇸 US | 🔴 | vless | @bored_vpn | 6",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 36",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 0",
@@ -108,7 +109,7 @@
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 23",
-                "🇺🇸 US | 🔴 | vless | @outline_ir | 15",
+                "🇺🇸 US | 🔴 | vless | @outline_ir | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
                 "🇺🇸 US | 🟢 | vless | @proxie | 13",
@@ -167,6 +168,7 @@
             "interval": "10m",
             "outbounds": [
                 "🇺🇸 US | 🔴 | vless | @bored_vpn | 6",
+                "🇺🇸 US | 🟢 | vless | @config_proxy | 36",
                 "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
                 "🇺🇸 US | 🔴 | vless | @dailytek | 10",
                 "🇺🇸 US | 🟢 | vless | @elfv2ray | 0",
@@ -185,7 +187,7 @@
                 "🇳🇱 NL | 🔴 | vless | @minovpnch | 13",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
                 "🇺🇸 US | 🔴 | vless | @nofiltering2 | 23",
-                "🇺🇸 US | 🔴 | vless | @outline_ir | 15",
+                "🇺🇸 US | 🔴 | vless | @outline_ir | 14",
                 "🇺🇸 US | 🟢 | vless | @proxie | 11",
                 "🇺🇸 US | 🟢 | vless | @proxie | 12",
                 "🇺🇸 US | 🟢 | vless | @proxie | 13",
@@ -254,6 +256,24 @@
             "uuid": "0134428a-02d8-4f94-8221-a1e858552212",
             "flow": "",
             "packet_encoding": "xudp"
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @config_proxy | 36",
+            "type": "vless",
+            "server": "104.21.48.1",
+            "server_port": 443,
+            "uuid": "9d847ad3-1896-48f9-b89c-13fe345e2b21",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "cho.chonon.sbs",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
         },
         {
             "tag": "🇩🇪 DE | 🟢 | vless | @customvpnserver | 8",
@@ -562,7 +582,7 @@
             "packet_encoding": "xudp"
         },
         {
-            "tag": "🇺🇸 US | 🔴 | vless | @outline_ir | 15",
+            "tag": "🇺🇸 US | 🔴 | vless | @outline_ir | 14",
             "type": "vless",
             "server": "151.101.3.8",
             "server_port": 80,
