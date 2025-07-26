@@ -860,9 +860,9 @@
     },
     "ip_cf_config": {
         "types": [
-            "vmess",
             "ss",
             "trojan",
+            "vmess",
             "vless"
         ],
         "title": "IP_CF | V2ray Config Pool",
@@ -1146,7 +1146,8 @@
     },
     "lranonline_new": {
         "types": [
-            "vless"
+            "vless",
+            "ss"
         ],
         "title": "Iran Online New",
         "logo": "https://raw.githubusercontent.com/itsyebekhe/PSG/main/channelsData/logos/lranonline_new.jpg"
@@ -1587,8 +1588,8 @@
     },
     "orange_vpns": {
         "types": [
-            "vless",
             "ss",
+            "vless",
             "trojan",
             "vmess"
         ],
@@ -1866,6 +1867,7 @@
     },
     "sezar_sec": {
         "types": [
+            "vless",
             "vmess"
         ],
         "title": "Sezar | تیم امنیتی سزار",
