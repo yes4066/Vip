@@ -90,7 +90,6 @@
                 "auto",
                 "direct",
                 "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
-                "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
                 "🇩🇪 DE | 🔴 | vless | @lranonline_new | 7",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
@@ -106,7 +105,6 @@
             "interval": "10m",
             "outbounds": [
                 "🇩🇪 DE | 🟢 | vless | @club_profsor | 16",
-                "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
                 "🇩🇪 DE | 🔴 | vless | @lranonline_new | 7",
                 "🇩🇪 DE | 🟢 | vless | @mehduox_vpn | 2",
                 "🇨🇭 CH | 🔴 | vless | @minovpnch | 14",
@@ -144,29 +142,6 @@
                     "enabled": true,
                     "public_key": "8JLXaAVzfzBxustA4rSIJYXfbwgnarMBUiWghUe610s",
                     "short_id": "f58f"
-                }
-            }
-        },
-        {
-            "tag": "🇩🇪 DE | 🟢 | vless | @farahvpn | 19",
-            "type": "vless",
-            "server": "199.247.16.203",
-            "server_port": 17928,
-            "uuid": "71243590-61ff-46b9-816c-ec48ea9ea692",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "zhaket.com",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "hP4TGbnaexWt-MKrFPd67DoFwSmr-o72GILwFvmZxiA",
-                    "short_id": "d3c49afc00"
                 }
             }
         },

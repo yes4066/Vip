@@ -101,6 +101,7 @@
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
+                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
@@ -126,6 +127,7 @@
                 "🇳🇱 NL | 🟢 | vless | @nn_vpn | 3",
                 "🇷🇺 RU | 🟢 | vless | @noforcedheaven | 15",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
+                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
                 "❔ XX | 🟢 | vless | @torang_vpn | 16",
                 "❔ XX | 🟢 | vless | @v2rayng_my2 | 1",
                 "❔ XX | 🟢 | vless | @v2rayngconfings | 17",
@@ -435,6 +437,29 @@
                     "enabled": true,
                     "public_key": "blF2p2FE_fexB29-tmU9HfVs6TwqsSQVxWAHIiP2KTk",
                     "short_id": "b28a0dd8"
+                }
+            }
+        },
+        {
+            "tag": "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
+            "type": "vless",
+            "server": "aiteam.lonup.org",
+            "server_port": 55900,
+            "uuid": "d196897a-006e-4454-9478-67b6fd8ce021",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "refersion.com",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "edge"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "jH08UU9id-Q8i17ltvHPO3sfGL6YTJIFveAJGgNjNl8",
+                    "short_id": "190d32b118caf07f"
                 }
             }
         },

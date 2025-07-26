@@ -89,7 +89,6 @@
             "outbounds": [
                 "auto",
                 "direct",
-                "❔ XX | 🟢 | vless | @configshubplus | 17",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
@@ -99,9 +98,9 @@
                 "❔ XX | 🔴 | vless | @internet_nor | 1",
                 "❔ XX | 🔴 | vless | @internet_nor | 2",
                 "❔ XX | 🟢 | vless | @kesslervpn | 1",
-                "❔ XX | 🔴 | vless | @lranonline_new | 1",
                 "❔ XX | 🔴 | vless | @parsashonam | 8",
                 "❔ XX | 🔴 | vless | @parsashonam | 10",
+                "❔ XX | 🔴 | vless | @parsashonam | 12",
                 "❔ XX | 🟢 | vless | @v2raytg | 73",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 6",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 8",
@@ -113,7 +112,6 @@
         {
             "interval": "10m",
             "outbounds": [
-                "❔ XX | 🟢 | vless | @configshubplus | 17",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🔴 | vless | @freevv2rayng | 6",
@@ -123,9 +121,9 @@
                 "❔ XX | 🔴 | vless | @internet_nor | 1",
                 "❔ XX | 🔴 | vless | @internet_nor | 2",
                 "❔ XX | 🟢 | vless | @kesslervpn | 1",
-                "❔ XX | 🔴 | vless | @lranonline_new | 1",
                 "❔ XX | 🔴 | vless | @parsashonam | 8",
                 "❔ XX | 🔴 | vless | @parsashonam | 10",
+                "❔ XX | 🔴 | vless | @parsashonam | 12",
                 "❔ XX | 🟢 | vless | @v2raytg | 73",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 6",
                 "❔ XX | 🔴 | vless | @v2ryngfree | 8",
@@ -139,29 +137,6 @@
         {
             "tag": "direct",
             "type": "direct"
-        },
-        {
-            "tag": "❔ XX | 🟢 | vless | @configshubplus | 17",
-            "type": "vless",
-            "server": "[2406:ef80:1:fe16:0000:0000:8d34:32f0]",
-            "server_port": 30537,
-            "uuid": "003ea07e-c699-4dd1-b144-84656e967122",
-            "flow": "xtls-rprx-vision",
-            "packet_encoding": "xudp",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.iij.ad.jp",
-                "insecure": true,
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "Devi5rbmdpKbT0Iqsi63Psh97YrAKzvvEA6RFHQVI1M",
-                    "short_id": ""
-                }
-            }
         },
         {
             "tag": "❔ XX | 🟢 | vless | @deli_servers | 1",
@@ -332,15 +307,6 @@
             }
         },
         {
-            "tag": "❔ XX | 🔴 | vless | @lranonline_new | 1",
-            "type": "vless",
-            "server": "[2a01:4f8:1c1a:dc2b::1]",
-            "server_port": 8888,
-            "uuid": "Parsashonam-290",
-            "flow": "",
-            "packet_encoding": "xudp"
-        },
-        {
             "tag": "❔ XX | 🔴 | vless | @parsashonam | 8",
             "type": "vless",
             "server": "[2a01:4f8:1c1a:dc2b::1]",
@@ -355,6 +321,15 @@
             "server": "[2a01:4f8:1c1a:dc2b::1]",
             "server_port": 8888,
             "uuid": "Parsashonam-289",
+            "flow": "",
+            "packet_encoding": "xudp"
+        },
+        {
+            "tag": "❔ XX | 🔴 | vless | @parsashonam | 12",
+            "type": "vless",
+            "server": "[2a01:4f8:1c1a:dc2b::1]",
+            "server_port": 8888,
+            "uuid": "Parsashonam-290",
             "flow": "",
             "packet_encoding": "xudp"
         },

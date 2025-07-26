@@ -172,7 +172,7 @@
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
-                "🇺🇸 US | 🟢 | vless | @prrofile_purple | 124",
+                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
                 "❔ XX | 🔴 | vless | @realvpnmaster | 14",
                 "❔ XX | 🔴 | vless | @red2ray | 13",
                 "🇺🇸 US | 🔴 | vless | @rez1vpn | 1",
@@ -197,6 +197,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
+                "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -302,7 +303,7 @@
                 "❔ XX | 🟢 | vless | @proxy_confiingir | 3",
                 "🇮🇷 IR | 🔴 | vless | @proxy_kuto | 0",
                 "❔ XX | 🟢 | vless | @proxysudo | 2",
-                "🇺🇸 US | 🟢 | vless | @prrofile_purple | 124",
+                "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
                 "❔ XX | 🔴 | vless | @realvpnmaster | 14",
                 "❔ XX | 🔴 | vless | @red2ray | 13",
                 "🇺🇸 US | 🔴 | vless | @rez1vpn | 1",
@@ -327,6 +328,7 @@
                 "❔ XX | 🔴 | vless | @v2rayturbo | 8",
                 "❔ XX | 🟢 | vless | @v2rayvpnclub | 20",
                 "🇺🇸 US | 🟢 | vless | @v2rayy_vpn13 | 12",
+                "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
                 "❔ XX | 🟢 | vless | @vp22ray | 10",
                 "🇩🇪 DE | 🔴 | vless | @vpn_meliii | 8",
                 "❔ XX | 🟢 | vless | @vpn_storm | 0",
@@ -1769,27 +1771,25 @@
             }
         },
         {
-            "tag": "🇺🇸 US | 🟢 | vless | @prrofile_purple | 124",
+            "tag": "🇩🇪 DE | 🟢 | vless | @prrofile_purple | 126",
             "type": "vless",
-            "server": "edt-f5k.pages.dev",
-            "server_port": 443,
-            "uuid": "98371613-b71d-4185-9e8a-eb7ba73373b4",
-            "flow": "",
+            "server": "aiteam.lonup.org",
+            "server_port": 55900,
+            "uuid": "d196897a-006e-4454-9478-67b6fd8ce021",
+            "flow": "xtls-rprx-vision",
             "packet_encoding": "xudp",
             "tls": {
                 "enabled": true,
-                "server_name": "edt-f5k.pages.dev",
+                "server_name": "refersion.com",
                 "insecure": true,
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome"
-                }
-            },
-            "transport": {
-                "type": "ws",
-                "path": "/",
-                "headers": {
-                    "Host": "edt-f5k.pages.dev"
+                    "fingerprint": "edge"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "jH08UU9id-Q8i17ltvHPO3sfGL6YTJIFveAJGgNjNl8",
+                    "short_id": "190d32b118caf07f"
                 }
             }
         },
@@ -2242,6 +2242,31 @@
                 "path": "/?ed=2048",
                 "headers": {
                     "Host": "confignginxV2rayng.vpncustomize.Website"
+                }
+            }
+        },
+        {
+            "tag": "🇺🇸 US | 🟢 | vless | @vmess_ir | 19",
+            "type": "vless",
+            "server": "privasi.turah.my.id",
+            "server_port": 443,
+            "uuid": "0fbf4f81-2598-4b6a-a623-0ead4cb9efa8",
+            "flow": "",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "privasi.turah.my.id",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "transport": {
+                "type": "ws",
+                "path": "/Free-CF-Proxy-AD192.3.113.4-19318",
+                "headers": {
+                    "Host": "privasi.turah.my.id"
                 }
             }
         },
