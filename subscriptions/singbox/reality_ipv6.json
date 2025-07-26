@@ -89,6 +89,7 @@
             "outbounds": [
                 "auto",
                 "direct",
+                "❔ XX | 🟢 | vless | @configshubplus | 17",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🟢 | vless | @kesslervpn | 1"
@@ -99,6 +100,7 @@
         {
             "interval": "10m",
             "outbounds": [
+                "❔ XX | 🟢 | vless | @configshubplus | 17",
                 "❔ XX | 🟢 | vless | @deli_servers | 1",
                 "❔ XX | 🟢 | vless | @fire_vpn_channel | 0",
                 "❔ XX | 🟢 | vless | @kesslervpn | 1"
@@ -111,6 +113,29 @@
         {
             "tag": "direct",
             "type": "direct"
+        },
+        {
+            "tag": "❔ XX | 🟢 | vless | @configshubplus | 17",
+            "type": "vless",
+            "server": "[2406:ef80:1:fe16:0000:0000:8d34:32f0]",
+            "server_port": 30537,
+            "uuid": "003ea07e-c699-4dd1-b144-84656e967122",
+            "flow": "xtls-rprx-vision",
+            "packet_encoding": "xudp",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.iij.ad.jp",
+                "insecure": true,
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Devi5rbmdpKbT0Iqsi63Psh97YrAKzvvEA6RFHQVI1M",
+                    "short_id": ""
+                }
+            }
         },
         {
             "tag": "❔ XX | 🟢 | vless | @deli_servers | 1",
